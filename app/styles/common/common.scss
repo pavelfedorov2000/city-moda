@@ -60,6 +60,63 @@ body {
 	flex: 1 0 auto; // Footer at bottom
 }
 
+.home-page {
+	>* {
+		&:first-child {
+			padding-bottom: 7rem;
+		}
+	}
+}
+
+.all-link {
+	@extend %vertical-align;
+	@extend %text-16;
+	color: #9B9B9B;
+	position: relative;
+
+	@media(max-width: 500px) {
+		font-size: 1.4rem;
+		line-height: 2.1rem;
+	}
+
+	svg {
+		width: 5.6rem;
+		height: 1.6rem;
+		margin-left: 1.6rem;
+
+		@media(max-width: 500px) {
+			width: 3.5rem;
+			height: 1rem;
+			margin-left: 1rem;
+		}
+
+		path {
+			transition: .3s fill;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			svg {
+				path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
+
+.section {
+	&:not(:last-child) {
+		padding-bottom: 8rem;
+	}
+
+	&__title {
+		@extend %flex-row-center;
+		margin-bottom: 3rem;
+	}
+}
+
 /* .footer {
 	z-index: 10;
 	flex-shrink: 0; // Footer at bottom
@@ -94,6 +151,10 @@ a {
 }
 
 .logo {
+
+	&__link {
+		@extend %vertical-align;
+	}
 
 	// .logo__img
 
