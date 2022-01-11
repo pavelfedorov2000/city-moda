@@ -83,6 +83,16 @@ img {
 	}
 }
 
+a {
+	transition: .3s color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $red;
+		}
+	}
+}
+
 .logo {
 
 	// .logo__img

@@ -3,7 +3,7 @@ app.dropMenu = {
 	description: 'your script description',
 	init() {
 		if ($(window).width() >= 1025) {
-			$('.header__list-link[data-category-link="clothes"]').hover(function () {
+			$('.header__list-link[data-category-link="clothes"]').on('mouseover', function () {
 				$(this).toggleClass('header__list-link--active');
 				$('.drop-menu').slideToggle('500');
 			});

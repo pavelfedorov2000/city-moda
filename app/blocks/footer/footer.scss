@@ -4,7 +4,9 @@
 
 	>* {
 		&:not(:last-child) {
-			border-bottom: 0.1rem solid #EFEFEF;
+			@media(min-width: 768px) {
+				border-bottom: 0.1rem solid #EFEFEF;
+			}
 		}
 	}
 
@@ -12,33 +14,98 @@
 
 	&__top {
 		padding: 4rem 0;
+
+		@media(max-width: 500px) {
+			padding: 2rem 0 3rem;
+		}
 	}
 
-	// .footer__top-inner
-
-	&__top-inner {
+	&__inner {
 		display: grid;
-		grid-template-columns: 16.7rem auto 33.6rem;
-		grid-gap: $footer-gap;
+		row-gap: 4rem;
+
+		@media(min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(min-width: 1025px) {
+			grid-template-columns: 16.7rem auto 33.6rem;
+			column-gap: 9.3rem;
+		}
+
+		&--top {
+			@media(min-width: 768px) {
+				grid-template-areas:
+					"logo soc"
+					"menu menu"
+				;
+			}
+
+			@media(min-width: 1025px) {
+				grid-template-areas: "logo menu soc";
+				align-items: center;
+			}
+		}
+
+		&--main {
+			@media(min-width: 768px) {
+				grid-template-areas:
+					"contact subscribe"
+					"links links"
+				;
+			}
+
+			@media(min-width: 1025px) {
+				grid-template-areas: ". contact ."
+					". links subscribe"
+				;
+			}
+		}
 	}
 
 	// .footer__logo
 
-	&__logo {}
+	&__logo {
+		@media(min-width: 768px) {
+			grid-area: logo;
+		}
+
+		@media(max-width: 767px) {
+			width: 12rem;
+			height: 1.7rem;
+		}
+	}
 
 	// .footer__menus
 
 	&__menus {
-		display: flex;
+		display: grid;
+		grid-template-columns: repeat(2, max-content);
+
+		@media(max-width: 1024px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(min-width: 768px) {
+			grid-area: menu;
+		}
+
+		@media(min-width: 1025px) {
+			grid-gap: 11.2rem;
+		}
 	}
 
 	// .footer__menu
 
 	&__menu {
-		display: flex;
+		@media(min-width: 768px) {
+			display: flex;
+		}
+	}
 
-		&:not(:last-child) {
-			margin-right: 11.2rem;
+	&__social {
+		@media(min-width: 768px) {
+			grid-area: soc;
 		}
 	}
 
@@ -47,16 +114,16 @@
 	&__link {
 		@extend %text-14;
 		font-weight: 600;
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
+		display: block;
 
 		&:not(:last-child) {
-			margin-right: 4rem;
+			@media(min-width: 768px) {
+				margin-right: 4rem;
+			}
+
+			@media(max-width: 767px) {
+				margin-bottom: 1.8rem;
+			}
 		}
 
 		&--red {
@@ -68,22 +135,17 @@
 
 	&__main {
 		padding: 4rem 0 5rem;
-	}
 
-	// .footer__main-inner
-
-	&__main-inner {
-		display: grid;
-		grid-template-columns: 16.7rem auto 33.6rem;
-		grid-gap: 4rem $footer-gap;
-		grid-template-areas:
-			". contact ."
-			". links subscribe"
-		;
+		@media(max-width: 500px) {
+			padding-top: 0;
+			padding-bottom: 1.9rem;
+		}
 	}
 
 	&__contact {
-		grid-area: contact;
+		@media(min-width: 768px) {
+			grid-area: contact;
+		}
 	}
 
 	&__phone {
@@ -91,13 +153,6 @@
 		@extend %text-18;
 		font-weight: 600;
 		letter-spacing: 0.1em;
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
 
 		&:not(:last-child) {
 			margin-bottom: 0.6rem;
@@ -118,8 +173,34 @@
 		display: grid;
 		grid-template-columns: repeat(3, max-content);
 		justify-content: space-between;
-		grid-area: links;
-		padding-right: 12.2rem - $footer-gap;
+
+		@media(min-width: 768px) {
+			grid-area: links;
+		}
+
+		@media(max-width: 767px) {
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 4rem;
+		}
+
+		@media(min-width: 1025px) {
+			padding-right: 12.2rem - $footer-gap;
+		}
+	}
+
+	&__col {
+		&:nth-child(2) {
+			@media(max-width: 767px) {
+				grid-column: 1 / 3;
+			}
+		}
+
+		&:nth-child(3) {
+			@media(max-width: 767px) {
+				grid-row: 1 / 2;
+				grid-column: 2 / 3;
+			}
+		}
 	}
 
 	// .footer__col-title
@@ -130,20 +211,22 @@
 		font-weight: 600;
 		margin-bottom: 3rem;
 
-		a {
-			transition: .3s color;
+		@media(max-width: 767px) {
+			margin-bottom: 2rem;
+		}
 
-			@media (any-hover: hover) {
-				&:hover {
-					color: $red;
-				}
+		&:nth-of-type(2) {
+			@media(max-width: 767px) {
+				display: none;
 			}
 		}
 	}
 
 	&__list {
 		&:not(:last-child) {
-			margin-bottom: 8.8rem;
+			@media(min-width: 768px) {
+				margin-bottom: 8.8rem;
+			}
 		}
 	}
 
@@ -152,6 +235,10 @@
 	&__list-item {
 		&:not(:last-child) {
 			margin-bottom: 1.6rem;
+
+			@media(max-width: 767px) {
+				margin-bottom: 1.2rem;
+			}
 		}
 	}
 
@@ -160,19 +247,14 @@
 	&__list-link {
 		@extend %text-13;
 		color: #505661;
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
 	}
 
 	// .footer__subscribe
 
 	&__subscribe {
-		grid-area: subscribe;
+		@media(min-width: 768px) {
+			grid-area: subscribe;
+		}
 	}
 
 	// .footer__bottom
@@ -182,14 +264,27 @@
 		font-weight: 500;
 		color: #505661;
 		padding: 3.1rem 0;
+
+		@media(max-width: 500px) {
+			padding: 2.1rem 0;
+		}
 	}
 
 	// .footer__bottom-inner
 
 	&__bottom-inner {
-		display: flex;
-		justify-content: space-around;
-		align-items: center;
+		display: grid;
+
+		@media(min-width: 768px) {
+			grid-template-columns: repeat(3, max-content);
+			grid-template-areas: "copy pay developer";
+			justify-content: space-between;
+			align-items: center;
+		}
+
+		@media(max-width: 767px) {
+			grid-gap: 3rem;
+		}
 	}
 
 	// .footer__copy
@@ -198,6 +293,16 @@
 		@extend %text-10;
 		font-weight: 500;
 		color: #505661;
+
+		@media(min-width: 768px) {
+			grid-area: copy;
+		}
+	}
+
+	&__payment {
+		@media(min-width: 768px) {
+			grid-area: pay;
+		}
 	}
 
 	// .footer__payment-list
@@ -221,13 +326,18 @@
 	// .footer__payment-descr
 
 	&__payment-descr {
-		text-align: center;
+		@media(min-width: 768px) {
+			text-align: center;
+		}
 	}
 
 	// .footer__developer
 
 	&__developer {
 
+		@media(min-width: 768px) {
+			grid-area: developer;
+		}
 
 		a {
 			@extend %text-11;
@@ -236,13 +346,6 @@
 			text-transform: uppercase;
 			color: #101112;
 			margin-left: 0.3rem;
-			transition: .3s color;
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: $red;
-				}
-			}
 		}
 	}
 }
@@ -255,6 +358,10 @@
 	&__item {
 		&:not(:last-child) {
 			margin-right: 4rem;
+
+			@media(max-width: 767px) {
+				margin-right: 2.5rem;
+			}
 		}
 
 		svg {
@@ -294,6 +401,7 @@
 	&__input {
 		@extend %vertical-align;
 		@extend %text-14;
+		width: 100%;
 		border: 0.1rem solid #101112;
 		border-right: none;
 		padding: 0 1.6rem;
