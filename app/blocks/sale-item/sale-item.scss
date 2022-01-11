@@ -1,0 +1,26 @@
+.sale-item {
+
+	// .sale-item__img
+
+	&__img {
+		img {
+			@extend %cover;
+		}
+
+		margin-bottom: 1.2rem;
+	}
+
+	// .sale-item__title
+
+	&__title {
+		@extend %text-20;
+		font-weight: 500;
+	}
+
+	// .sale-item__descr
+
+	&__descr {
+		@extend %text-16;
+		color: #777;
+	}
+}

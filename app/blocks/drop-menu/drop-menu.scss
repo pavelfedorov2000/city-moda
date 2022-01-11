@@ -1,0 +1,80 @@
+.drop-menu {
+
+	display: none;
+
+	@media(min-width: 1025px) {
+		padding: 3rem 0 4rem;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+		z-index: 100;
+		width: 100%;
+		background-color: #fff;
+	}
+
+	// .drop-menu__row
+
+	&__row {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-areas: "menu-1 menu-2 menu-3 . sale sale";
+	}
+
+	&__col {
+		&--1 {
+			grid-area: menu-1;
+		}
+
+		&--2 {
+			grid-area: menu-2;
+		}
+
+		&--3 {
+			grid-area: menu-3;
+		}
+	}
+
+	&__sale {
+		width: 33.6rem;
+		grid-area: sale;
+		justify-self: end;
+	}
+
+	&__sale-img {
+		height: 25rem;
+	}
+
+	// .drop-menu__col-title
+
+	&__col-title {
+		@extend %text-14;
+		font-weight: 600;
+		margin-bottom: 1.6rem;
+	}
+
+	// .drop-menu__list
+
+	&__list {}
+
+	// .drop-menu__list-item
+
+	&__list-item {
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	// .drop-menu__list-link
+
+	&__list-link {
+		@extend %text-13;
+		transition: .3s color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
+		}
+	}
+}
