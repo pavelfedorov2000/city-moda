@@ -1,3 +1,130 @@
 .catalog-card {
-  // your code
+
+	// .catalog-card__label
+
+	&__label {
+		@extend %flex-center;
+		@extend %text-14;
+		font-weight: 600;
+		color: #fff;
+		width: 4.5rem;
+		height: 4.5rem;
+		border-radius: 50%;
+		left: 1.5rem;
+		display: none;
+	}
+
+	&__label,
+	&__favorite {
+		position: absolute;
+		top: 1.5rem;
+	}
+
+	// .catalog-card__label--discount
+
+	&__label--discount {
+		background-color: $red;
+	}
+
+	// .catalog-card__label--new
+
+	&__label--new {
+		background-color: $green;
+	}
+
+	// .catalog-card__favorite
+
+	&__favorite {
+		@extend %bg-cover;
+		right: 1.5rem;
+		width: 3rem;
+		height: 3rem;
+		background-image: url(../images/icons/heart.svg);
+		transition: .3s transform;
+
+		&.animated {
+			transform: scale(1.25);
+		}
+	}
+
+	// .catalog-card__img
+
+	&__img {
+		height: 44.8rem;
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .catalog-card__title
+
+	&__title {
+		@extend %text-17;
+		font-weight: 600;
+
+		&:not(:last-child) {
+			margin-bottom: 0.3rem;
+		}
+	}
+
+	// .catalog-card__subtitle
+
+	&__subtitle {
+		@extend %text-14;
+		text-transform: uppercase;
+		color: #9B9B9B;
+		margin-bottom: 0.7rem;
+	}
+
+	// .catalog-card__prices
+
+	&__prices {
+		@extend %vertical-align;
+	}
+
+	&__price,
+	&__new-price {
+		@extend %text-16;
+		font-weight: 600;
+	}
+
+	// .catalog-card__new-price
+
+	&__new-price {
+		color: $red;
+		margin-right: 0.8rem;
+	}
+
+	// .catalog-card__old-price
+
+	&__old-price {
+		@extend %text-13;
+		font-weight: 500;
+		color: #9B9B9B;
+		text-decoration: line-through;
+	}
+
+	&.sale {
+		.catalog-card__label--discount {
+			display: flex;
+		}
+	}
+
+	&.new {
+		.catalog-card__label--new {
+			display: flex;
+		}
+	}
+
+	&.favorite {
+		.catalog-card__favorite {
+			background-image: url(../images/icons/heart-filled.svg);
+		}
+	}
 }

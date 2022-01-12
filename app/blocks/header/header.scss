@@ -109,12 +109,19 @@
 		@media(min-width: 1025px) {
 			background-color: #000;
 			color: #fff;
-			padding: 1rem;
+			padding: 1rem 3rem 1rem 1rem;
 		}
 
 		li {
 			white-space: nowrap;
 			cursor: pointer;
+			transition: .3s color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $red;
+				}
+			}
 
 			&:not(:last-child) {
 				margin-bottom: 1rem;
@@ -241,32 +248,30 @@
 			}
 		}
 
+		&.tab--active {
+			color: #101112;
+			position: relative;
+			padding-bottom: 0.6rem;
+
+			@media(max-width: 1024px) {
+				padding-bottom: 0.8rem;
+			}
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 0.2rem;
+				background-color: #000;
+			}
+		}
+
 		@media (any-hover: hover) {
 			&:hover {
 				color: #101112;
 			}
-		}
-	}
-
-	// .header__nav-link--active
-
-	&__nav-link--active {
-		color: #101112;
-		position: relative;
-		padding-bottom: 0.6rem;
-
-		@media(max-width: 1024px) {
-			padding-bottom: 0.8rem;
-		}
-
-		&:after {
-			content: '';
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			width: 100%;
-			height: 0.2rem;
-			background-color: #000;
 		}
 	}
 

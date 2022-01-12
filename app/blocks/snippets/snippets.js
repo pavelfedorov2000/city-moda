@@ -112,8 +112,8 @@ app.yourScriptName = {
 				clickable: true,
 			},
 			navigation: {
-				nextEl: '.swper-button-prev',
-				prevEl: '.swper-button-next',
+				nextEl: '.swiper-button-prev',
+				prevEl: '.swiper-button-next',
 			},
 			breakpoints: {
 				576: {

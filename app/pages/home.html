@@ -3,19 +3,321 @@
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
 	<main class="page home-page">
-		<!-- @@include("blocks/promo-sale/promo-sale.html") -->
+		@@include("blocks/promo-sale/promo-sale.html")
 		@@include("blocks/icons-slider/icons-slider.html")
-		<!-- @@include("blocks/slider-section/slider-section.html", {"title": ""}) -->
-		@@include("blocks/actual/actual.html")
-		@@include("blocks/brands/brands.html")
-		<!-- @@include("blocks/slider-section/slider-section.html", {"title": ""}) -->
-		@@include("blocks/promo-collection/promo-collection.html")
-		<section class="blog-section">
-			<div class="blog-section__top">
-
+		<section class="section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Популярные товары</h2>
+					<div class="slider-arrows">
+						<div class="swiper-button-prev">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+						<div class="swiper-button-next">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper catalog-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01.jpg",
+							"alt": "Пуховик",
+							"title": "Пуховик",
+							"subtitle": "Rio Verti",
+							"newprice": "23 625 ₽",
+							"oldprice": "31 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02.jpg",
+							"alt": "Джемпер",
+							"title": "Джемпер",
+							"subtitle": "Loriata",
+							"price": "12 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03.jpg",
+							"alt": "Юбка",
+							"title": "Юбка",
+							"subtitle": "Loriata",
+							"newprice": "5 000 ₽",
+							"oldprice": "8 200 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "40%",
+							"image": "assets/images/content/catalog-slider/04.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Rio Verti",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02.jpg",
+							"alt": "Джемпер",
+							"title": "Джемпер",
+							"subtitle": "Loriata",
+							"price": "12 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "40%",
+							"image": "assets/images/content/catalog-slider/04.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Rio Verti",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							})
+						</div>
+					</div>
+				</div>
 			</div>
 		</section>
-		<!-- @@include("blocks/slider-section/slider-section.html", {"title": ""}) -->
+		@@include("blocks/actual/actual.html")
+		@@include("blocks/brands/brands.html")
+		<section class="section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Новинки</h2>
+					<div class="slider-arrows">
+						<div class="swiper-button-prev">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+						<div class="swiper-button-next">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper catalog-new-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/04.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/04.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01.jpg",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include("blocks/promo-collection/promo-collection.html")
+		<section class="section blog-section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Блог</h2>
+					<a href="#" class="all-link">
+						Смотреть все
+						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+								fill="#C0C0C0" />
+						</svg>
+					</a>
+				</div>
+
+				<div class="blog-grid">
+					<article class="blog-item animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s">
+						<a href="#" class="blog-item__img">
+							<img src='assets/images/content/blog/01.jpg' alt='фото блога'>
+						</a>
+						<div class="blog-item__content">
+							<time class="blog-item__date" datetime="2021-09-10">10.09.2021</time>
+							<h5 class="blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a></h5>
+							<p class="blog-item__text">
+								Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
+								Отличная
+								теплоизоляция достигается благодаря наполнителю 90% пуха.
+							</p>
+							<div class="blog-item__tags">
+								<a href="#" class="blog-item__tag">#коллекция</a>
+								<a href="#" class="blog-item__tag">#женщинам</a>
+								<a href="#" class="blog-item__tag">#осень</a>
+							</div>
+						</div>
+					</article>
+					<article class="blog-item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s"
+						data-wow-delay=".5s">
+						<a href="#" class="blog-item__img">
+							<img src='assets/images/content/blog/02.jpg' alt='фото блога'>
+						</a>
+						<div class="blog-item__content">
+							<time class="blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item__title"><a href="#">MINOTI новая коллекция осень-зима 2021</a></h5>
+							<p class="blog-item__text">
+								Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
+								о
+								первом снеге.
+								Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+							</p>
+							<div class="blog-item__tags">
+								<a href="#" class="blog-item__tag">#коллекция</a>
+								<a href="#" class="blog-item__tag">#детям</a>
+							</div>
+						</div>
+					</article>
+					<article class="blog-item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s"
+						data-wow-delay="1s">
+						<a href=" #" class="blog-item__img">
+							<img src='assets/images/content/blog/03.jpg' alt='фото блога'>
+						</a>
+						<div class="blog-item__content">
+							<time class="blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item__title"><a href="#">Новые домашние комплекты уже поступили в
+									продажу!</a>
+							</h5>
+							<p class="blog-item__text">
+								Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+								дел.
+							</p>
+							<div class="blog-item__tags">
+								<a href="#" class="blog-item__tag">#коллекция</a>
+								<a href="#" class="blog-item__tag">#женщинам</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		@@include("blocks/instagram/instagram.html")
+
+		<div class="section">
+			<div class="container">
+				<div class="seo-text">
+					<p>
+						Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от
+						всех живут они
+						в
+						буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по
+						всей стране и
+						обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+						члены
+						предложения залетают прямо в рот.
+					</p>
+					<p>
+						Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ
+						жизни.
+						Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+						грамматики.
+						Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
+						запятой, но текст
+						не
+						дал сбить себя с толку.
+					</p>
+					<p>
+						Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись
+						на первую
+						вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
+						Буквоград, на
+						заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
+					</p>
+				</div>
+			</div>
+		</div>
 	</main>
 	@@include("blocks/footer/footer.html")
 	<!-- @@include("blocks/popups/popups.html") -->

@@ -1,6 +1,5 @@
 html {
 	box-sizing: border-box;
-	height: 100%; // Footer at bottom
 	font-size: calc(100vw / 1600 * 10);
 
 	@media(max-width: 1024px) {
@@ -18,26 +17,15 @@ html {
 
 body {
 	min-width: 320px;
-	//display: flex; // Footer at bottom
-	//flex-direction: column; // Footer at bottom
-	//height: 100%; // Footer at bottom
 	font-family: 'Raleway', sans-serif;
 	font-style: normal;
 	font-weight: 400;
 	font-feature-settings: 'pnum'on, 'lnum'on;
 	color: #101112;
 
-	//background-color: #fff;
 	&._lock {
 		overflow-y: hidden;
 	}
-
-	/* &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 0;
-        height: 0;
-    } */
-	//&::-webkit-scrollbar-thumb {}
 }
 
 .wrapper {
@@ -45,10 +33,6 @@ body {
 	overflow-x: hidden;
 	@extend %flex-col;
 	min-height: 100vh;
-}
-
-.header {
-	//flex-shrink: 0; // Footer at bottom
 }
 
 .page {
@@ -103,8 +87,10 @@ body {
 }
 
 .section {
-	&:not(:last-child) {
-		padding-bottom: 8rem;
+	padding-bottom: 8rem;
+
+	@media(max-width: 500px) {
+		padding-bottom: 5rem;
 	}
 
 	&__title {
@@ -112,12 +98,6 @@ body {
 		margin-bottom: 3rem;
 	}
 }
-
-/* .footer {
-	z-index: 10;
-	flex-shrink: 0; // Footer at bottom
-	margin-top: auto;
-} */
 
 .container {
 	max-width: $container + $gap * 2;
@@ -156,6 +136,21 @@ a {
 
 	&__img {
 		object-fit: contain;
+	}
+}
+
+.seo-text {
+	@media(min-width: 1025px) {
+		max-width: 111.2rem;
+	}
+
+	p {
+		@extend %text-16;
+		color: #505661;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
 	}
 }
 

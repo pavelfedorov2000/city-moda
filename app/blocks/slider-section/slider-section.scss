@@ -1,3 +1,18 @@
-.slider-section {
-  // your code
+.instagram-slider {
+	.swiper-slide {
+		height: 33.6rem;
+
+		img {
+			@extend %cover;
+			transition: 1s transform;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.05);
+				}
+			}
+		}
+	}
 }
