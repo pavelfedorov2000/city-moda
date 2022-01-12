@@ -46,6 +46,12 @@ body {
 			padding-bottom: 7rem;
 		}
 	}
+
+	&__seo-text {
+		@media(min-width: 1025px) {
+			max-width: 111.2rem;
+		}
+	}
 }
 
 .all-link {
@@ -140,9 +146,6 @@ a {
 }
 
 .seo-text {
-	@media(min-width: 1025px) {
-		max-width: 111.2rem;
-	}
 
 	p {
 		@extend %text-16;
