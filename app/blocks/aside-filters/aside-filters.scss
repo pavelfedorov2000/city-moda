@@ -1,3 +1,121 @@
 .aside-filters {
-  // your code
+
+	// .aside-filters__items
+
+	&__items {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	// .aside-filters__item
+
+	&__item {
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+
+	// .aside-filters__item-title
+
+	&__item-title,
+	&__item-label--drop {
+		position: relative;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0.3rem;
+			right: 0;
+			width: 1.4rem;
+			height: 1.4rem;
+			background-image: url(../images/icons/drop-arr-black.svg);
+			@extend %bg-contain;
+			transition: .3s transform;
+		}
+	}
+
+	&__item-title {
+		@extend %text-16;
+		font-weight: 600;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+
+		&--active {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	&__item-content {
+		display: none;
+	}
+
+	// .aside-filters__item-label
+
+	&__item-label {
+		display: block;
+		@extend %text-14;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		&--active {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+
+		.check-text {
+			position: relative;
+			padding-bottom: 0.3rem;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 0%;
+				height: 0.1rem;
+				background-color: #101112;
+				transition: .3s width;
+			}
+		}
+
+		.check-box:checked+.check-text {
+			font-weight: 600;
+
+			&:after {
+				width: 100%;
+			}
+		}
+	}
+
+	// .aside-filters__item-subchecks
+
+	&__item-subchecks {
+		display: none;
+		padding-left: 2rem;
+		padding-bottom: 1.2rem;
+	}
+
+	// .aside-filters__banner
+
+	&__banner {
+		height: 30rem;
+	}
+}
+
+.banner {
+	@extend %text-16;
+	@extend %flex-center;
+	text-align: center;
+	font-weight: 500;
+	background-color: #F4F4F6;
 }

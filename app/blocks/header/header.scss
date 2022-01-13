@@ -73,9 +73,6 @@
 
 	&__region {
 		position: relative;
-	}
-
-	&__current-region {
 		position: relative;
 		padding-right: 2rem;
 		font-weight: 600;
@@ -91,41 +88,6 @@
 			background-image: url(../images/icons/drop.svg);
 			@extend %bg-contain;
 			transition: .3s transform;
-		}
-
-		&--active {
-			&:after {
-				transform: rotate(180deg);
-			}
-		}
-	}
-
-	&__region-options {
-		display: none;
-		position: absolute;
-		top: calc(100% + 0.5rem);
-		left: 0;
-
-		@media(min-width: 1025px) {
-			background-color: #000;
-			color: #fff;
-			padding: 1rem 3rem 1rem 1rem;
-		}
-
-		li {
-			white-space: nowrap;
-			cursor: pointer;
-			transition: .3s color;
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: $red;
-				}
-			}
-
-			&:not(:last-child) {
-				margin-bottom: 1rem;
-			}
 		}
 	}
 

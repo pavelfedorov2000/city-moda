@@ -1,6 +1,31 @@
 .btn {
-	background-color: #000;
+	background-color: $green;
 	color: #fff;
 	text-align: center;
+	border: 0.1rem solid $green;
 	transition: .3s all;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #fff;
+			color: $green;
+		}
+	}
+
+	svg {
+		width: 1.6rem;
+		height: 1.6rem;
+	}
+
+	&--border {
+		background-color: transparent;
+		color: $green;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $green;
+				color: #fff;
+			}
+		}
+	}
 }

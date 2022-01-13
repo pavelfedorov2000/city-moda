@@ -1,3 +1,287 @@
 .catalog-filters {
-  // your code
+	// .catalog-filters__row
+
+	&__row {
+		display: flex;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .catalog-filters__item
+
+	&__item {
+		position: relative;
+
+		&:not(:last-child) {
+			margin-right: 2.6rem;
+		}
+
+		&:first-child {
+			.catalog-drop-filter {
+				width: 20.7rem;
+			}
+		}
+
+		&--material {
+			.catalog-drop-filter {
+				width: 39.1rem;
+			}
+		}
+
+		&--color {
+			.catalog-drop-filter__item {
+				align-items: center;
+			}
+		}
+	}
+
+	// .catalog-filters__item-title
+
+	&__item-title {
+		@extend %text-14;
+		padding-right: 1.9rem;
+		position: relative;
+		cursor: pointer;
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0.35rem;
+			right: 0;
+			width: 1.4rem;
+			height: 1.4rem;
+			background-image: url(../images/icons/drop-arr-black.svg);
+			@extend %bg-contain;
+			transition: .3s transform;
+		}
+
+		&--active {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	// .catalog-filters__reset-btn
+
+	&__reset-btn {
+		@extend %vertical-align;
+		@extend %text-12;
+		font-weight: 600;
+		color: #9B9B9B;
+		transition: .3s color;
+
+		svg {
+			width: 1.6rem;
+			height: 1.6rem;
+			margin-left: 0.5rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
+
+.catalog-drop-filter {
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 2rem;
+	z-index: 20;
+	background-color: #FFF;
+	border: 0.1rem solid #EFEFEF;
+	box-shadow: 0px -0.1rem 1rem rgba(0, 0, 0, 0.1);
+	width: 28.5rem;
+
+	// .catalog-drop-filter__item
+
+	&__item {
+		display: flex;
+		cursor: pointer;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+
+		.radio-style {
+			position: relative;
+			width: 1.6rem;
+			height: 1.6rem;
+			flex-shrink: 0;
+			border-radius: 50%;
+			border: 0.1rem solid #C0C0C0;
+		}
+
+		/* .radio-text {
+			white-space: nowrap;
+		} */
+
+		.radio-box:checked+.radio-style {
+			border-color: #101112;
+
+			&:before {
+				content: '';
+				width: 0.9rem;
+				height: 0.7rem;
+				position: absolute;
+				@extend %pos-center-xy;
+				background-image: url(../images/icons/check.svg);
+				@extend %bg-contain;
+			}
+		}
+
+		.check-text,
+		.radio-text {
+			margin-left: 0.8rem;
+		}
+	}
+
+	&__inner {
+		padding: 1.6rem;
+	}
+
+	&__body {
+		height: 29.3rem - 1.6rem * 2;
+		overflow-y: auto;
+
+		&::-webkit-scrollbar {
+			width: 0.5rem;
+			height: 6rem;
+			background: #C0C0C0;
+			border-radius: 0.4rem;
+		}
+	}
+
+	// .catalog-drop-filter__cols
+
+	&__cols {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 3rem;
+	}
+
+	// .catalog-drop-filter__col
+
+	&__col {
+		.check-text {
+			max-width: 11rem;
+		}
+	}
+
+	// .catalog-drop-filter__title
+
+	&__title {
+		@extend %text-12;
+		font-weight: 600;
+		color: #505661;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	// .catalog-drop-filter__buttons
+
+	&__buttons {
+		@extend %flex-row;
+		border-top: 0.1rem solid #EFEFEF;
+		padding: 1.5rem;
+	}
+
+	// .catalog-drop-filter__btn
+
+	&__btn {
+		padding: 0.6rem 1.6rem;
+	}
+
+	// .catalog-drop-filter__reset-btn
+
+	&__reset-btn {
+		@extend %vertical-align;
+		padding: 0.6rem 1rem;
+
+		svg {
+			margin-left: 0.3rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: #fff;
+				}
+			}
+		}
+	}
+
+	// .catalog-drop-filter__price-range
+
+	&__price-range {
+		@extend %flex-row;
+	}
+
+	&__input {
+		@extend %text-12;
+		line-height: 1.4rem;
+		font-style: italic;
+		width: 22.4rem;
+		border: 1px solid #EAEAEA;
+		padding: 0.8rem;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+
+		&::placeholder {
+			color: #C0C0C0;
+		}
+	}
+}
+
+.price-range {
+
+	// .price-range__item
+
+	&__item {
+		@extend %vertical-align;
+
+		span {
+			@extend %text-14;
+			margin-right: 0.6rem;
+		}
+	}
+
+	// .price-range__input
+
+	&__input {
+		width: 9rem;
+		padding: 0.5rem;
+		border: 0.1rem solid #EAEAEA;
+
+		&::placeholder {
+			color: #C0C0C0;
+		}
+
+		&:focus {
+			border-color: #101112;
+		}
+	}
 }

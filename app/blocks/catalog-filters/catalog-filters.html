@@ -3,166 +3,215 @@
 		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">По возрастанию цены</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<label class="catalog-drop-filter__item">
-					<input class="radio-box" type="radio">
-					<span class="radio-style"></span>
-					<span class="radio-text">По возрастанию цены</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="radio-box" type="radio">
-					<span class="radio-style"></span>
-					<span class="radio-text">По убыванию цены</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="radio-box" type="radio">
-					<span class="radio-style"></span>
-					<span class="radio-text">По популярности</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="radio-box" type="radio">
-					<span class="radio-style"></span>
-					<span class="radio-text">По новинкам</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="radio-box" type="radio">
-					<span class="radio-style"></span>
-					<span class="radio-text">По скидкам</span>
-				</label>
-			</div>
-		</fieldset>
-		<fieldset class="catalog-filters__item">
-			<legend class="catalog-filters__item-title">Материал</legend>
-			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__cols">
-					<fieldset class="catalog-drop-filter__col">
-						<legend class="catalog-drop-filter__title">Основной материал</legend>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Искусственная кожа</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Ангора</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Бисер</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Вискоза</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Искусственная замша</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Акрил</span>
-						</label>
-					</fieldset>
-					<fieldset class="catalog-drop-filter__col">
-						<legend class="catalog-drop-filter__title">Утеплитель</legend>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Искусственный пух</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Искусственный мех</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Акрил</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Микрофибра</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Полиамид</span>
-						</label>
-						<label class="catalog-drop-filter__item">
-							<input class="check-box" type="checkbox">
-							<span class="check-style"></span>
-							<span class="check-text">Полимер</span>
-						</label>
-					</fieldset>
+				<div class="catalog-drop-filter__inner">
+					<label class="catalog-drop-filter__item">
+						<input class="radio-box" type="radio" name="price_filter">
+						<span class="radio-style"></span>
+						<span class="radio-text">По возрастанию цены</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="radio-box" type="radio" name="price_filter">
+						<span class="radio-style"></span>
+						<span class="radio-text">По убыванию цены</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="radio-box" type="radio" name="price_filter">
+						<span class="radio-style"></span>
+						<span class="radio-text">По популярности</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="radio-box" type="radio" name="price_filter">
+						<span class="radio-style"></span>
+						<span class="radio-text">По новинкам</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="radio-box" type="radio" name="price_filter">
+						<span class="radio-style"></span>
+						<span class="radio-text">По скидкам</span>
+					</label>
 				</div>
 			</div>
 		</fieldset>
-		<fieldset class="catalog-filters__item">
+		<fieldset class="catalog-filters__item catalog-filters__item--material">
+			<legend class="catalog-filters__item-title">Материал</legend>
+			<div class="catalog-filters__item-drop catalog-drop-filter">
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__body">
+						<div class="catalog-drop-filter__cols">
+							<fieldset class="catalog-drop-filter__col">
+								<legend class="catalog-drop-filter__title">Основной материал</legend>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Искусственная кожа</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Ангора</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Бисер</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Вискоза</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Искусственная замша</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Акрил</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+							</fieldset>
+							<fieldset class="catalog-drop-filter__col">
+								<legend class="catalog-drop-filter__title">Утеплитель</legend>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Искусственный пух</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Искусственный мех</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Акрил</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Микрофибра</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Полиамид</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Полимер</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+								<label class="catalog-drop-filter__item">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">Lorem</span>
+								</label>
+							</fieldset>
+						</div>
+					</div>
+				</div>
+				<div class="catalog-drop-filter__buttons">
+					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+					<button class="btn catalog-drop-filter__reset-btn btn--border" type="reset">
+						Очистить все
+						<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z"
+								fill="#479458" />
+						</svg>
+					</button>
+				</div>
+			</div>
+		</fieldset>
+		<fieldset class="catalog-filters__item catalog-filters__item--color">
 			<legend class="catalog-filters__item-title">Цвет</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__body">
-					<div class="catalog-drop-filter__title">Выберите цвет</div>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(144.09deg, #43E3DC 10.69%, rgba(67, 227, 220, 0) 90.81%);"></span>
-						<span class="check-text">бирюзовый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(140.19deg, #90011B 22.16%, rgba(144, 1, 27, 0) 91.48%);"></span>
-						<span class="check-text">бордовый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(143.84deg, #8BCDFF 18.75%, rgba(139, 205, 255, 0) 90.76%);"></span>
-						<span class="check-text">голубой</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color" style="background: #FFF; border: 0.1rem solid #C0C0C0"></span>
-						<span class="check-text">белый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(143.13deg, #F1DAC4 22.32%, rgba(255, 238, 222, 0) 89.29%);"></span>
-						<span class="check-text">бежевый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(143.47deg, #FFEC1C 15.62%, rgba(255, 236, 28, 0) 90.69%);"></span>
-						<span class="check-text">желтый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(145.49deg, #3DB800 6.37%, rgba(61, 184, 0, 0) 93.63%);"></span>
-						<span class="check-text">зеленый</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-color"
-							style="background: linear-gradient(135deg, #FFB156 0%, rgba(255, 177, 86, 0) 100%);"></span>
-						<span class="check-text">золотой</span>
-					</label>
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__body">
+						<div class="catalog-drop-filter__title">Выберите цвет</div>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(144.09deg, #43E3DC 10.69%, rgba(67, 227, 220, 0) 90.81%);"></span>
+							<span class="check-text">бирюзовый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(140.19deg, #90011B 22.16%, rgba(144, 1, 27, 0) 91.48%);"></span>
+							<span class="check-text">бордовый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(143.84deg, #8BCDFF 18.75%, rgba(139, 205, 255, 0) 90.76%);"></span>
+							<span class="check-text">голубой</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color" style="background: #FFF; border: 0.1rem solid #C0C0C0"></span>
+							<span class="check-text">белый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(143.13deg, #F1DAC4 22.32%, rgba(255, 238, 222, 0) 89.29%);"></span>
+							<span class="check-text">бежевый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(143.47deg, #FFEC1C 15.62%, rgba(255, 236, 28, 0) 90.69%);"></span>
+							<span class="check-text">желтый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(145.49deg, #3DB800 6.37%, rgba(61, 184, 0, 0) 93.63%);"></span>
+							<span class="check-text">зеленый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-color"
+								style="background: linear-gradient(135deg, #FFB156 0%, rgba(255, 177, 86, 0) 100%);"></span>
+							<span class="check-text">золотой</span>
+						</label>
+					</div>
 				</div>
 				<div class="catalog-drop-filter__buttons">
 					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
@@ -180,7 +229,7 @@
 		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">Размер</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__body">
+				<div class="catalog-drop-filter__inner">
 					<div class="catalog-drop-filter__title">Ваш Российский размер</div>
 					<label class="catalog-drop-filter__item">
 						<input class="check-box" type="checkbox">
@@ -227,9 +276,9 @@
 			</div>
 		</fieldset>
 		<fieldset class="catalog-filters__item">
-			<legend class="catalog-filters__item-title"></legend>
+			<legend class="catalog-filters__item-title">Цена</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__price-range price-range">
+				<div class="catalog-drop-filter__inner catalog-drop-filter__price-range price-range">
 					<div class="price-range__item">
 						<span>От</span>
 						<input class="price-range__input price-from" name="price_from" type="number" min="1000"
@@ -255,46 +304,48 @@
 			</div>
 		</fieldset>
 		<fieldset class="catalog-filters__item">
-			<legend class="catalog-filters__item-title"></legend>
+			<legend class="catalog-filters__item-title">Бренд</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__body">
-					<div class="catalog-drop-filter__title">Найти бренд</div>
-					<input class="catalog-drop-filter__input" name="brand" placeholder="Введите название">
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">AllSaints</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">Allura</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">Arch</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">Arot</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">Allora</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">Bibi</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">B2B Black to Black</span>
-					</label>
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__body">
+						<div class="catalog-drop-filter__title">Найти бренд</div>
+						<input class="catalog-drop-filter__input" name="brand" placeholder="Введите название">
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">AllSaints</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">Allura</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">Arch</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">Arot</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">Allora</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">Bibi</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">B2B Black to Black</span>
+						</label>
+					</div>
 				</div>
 				<div class="catalog-drop-filter__buttons">
 					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
@@ -312,43 +363,60 @@
 		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">Детали</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__body">
-					<div class="catalog-drop-filter__title">Выберите детали</div>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">бант</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">аппликация</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">баска</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">бахрома</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">бисер/кристаллы/камни/стразы</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">воланы/рюши</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">вышивка</span>
-					</label>
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__body">
+						<div class="catalog-drop-filter__title">Выберите детали</div>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">бант</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">аппликация</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">баска</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">бахрома</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">бисер/кристаллы/камни/стразы</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">воланы/рюши</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">вышивка</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+					</div>
 				</div>
 				<div class="catalog-drop-filter__buttons">
 					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
@@ -366,69 +434,99 @@
 		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">Стиль</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__title">Выберите стиль</div>
-				<label class="catalog-drop-filter__item">
-					<input class="check-box" type="checkbox">
-					<span class="check-style"></span>
-					<span class="check-text">повседневный</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="check-box" type="checkbox">
-					<span class="check-style"></span>
-					<span class="check-text">деловой</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="check-box" type="checkbox">
-					<span class="check-style"></span>
-					<span class="check-text">вечерний</span>
-				</label>
-				<label class="catalog-drop-filter__item">
-					<input class="check-box" type="checkbox">
-					<span class="check-style"></span>
-					<span class="check-text">спортивный</span>
-				</label>
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__title">Выберите стиль</div>
+					<label class="catalog-drop-filter__item">
+						<input class="check-box" type="checkbox">
+						<span class="check-style"></span>
+						<span class="check-text">повседневный</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="check-box" type="checkbox">
+						<span class="check-style"></span>
+						<span class="check-text">деловой</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="check-box" type="checkbox">
+						<span class="check-style"></span>
+						<span class="check-text">вечерний</span>
+					</label>
+					<label class="catalog-drop-filter__item">
+						<input class="check-box" type="checkbox">
+						<span class="check-style"></span>
+						<span class="check-text">спортивный</span>
+					</label>
+				</div>
+				<div class="catalog-drop-filter__buttons">
+					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+					<button class="btn catalog-drop-filter__reset-btn btn--border" type="reset">
+						Очистить все
+						<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z"
+								fill="#479458" />
+						</svg>
+					</button>
+				</div>
 			</div>
 		</fieldset>
 		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">Узор</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
-				<div class="catalog-drop-filter__body">
-					<div class="catalog-drop-filter__title">Выберите узор</div>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">горох</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">геометрия</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">другое</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">животное</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">камуфляж</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">клетка</span>
-					</label>
-					<label class="catalog-drop-filter__item">
-						<input class="check-box" type="checkbox">
-						<span class="check-style"></span>
-						<span class="check-text">леопардовый</span>
-					</label>
+				<div class="catalog-drop-filter__inner">
+					<div class="catalog-drop-filter__body">
+						<div class="catalog-drop-filter__title">Выберите узор</div>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">горох</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">геометрия</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">другое</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">животное</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">камуфляж</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">клетка</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">леопардовый</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+						<label class="catalog-drop-filter__item">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">lorem</span>
+						</label>
+					</div>
 				</div>
 				<div class="catalog-drop-filter__buttons">
 					<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>

@@ -192,6 +192,11 @@ textarea {
 	user-select: text; // 2
 }
 
+fieldset {
+	border: none;
+	margin: 0;
+}
+
 // Reset form input styles for iOS
 button,
 textarea,

@@ -37,22 +37,6 @@ app.burger = {
 			$('.header__main-bottom').find('input.search-form__input').toggleClass('search-form__input--active');
 		});
 
-		$('.header__current-region').on('click', function () {
-			$(this).toggleClass('header__current-region--active');
-			$(this).next().slideToggle('300');
-			$('.header-info-line').slideToggle('300');
-		});
-
-		$('.header__region-options a').on('click', function (e) {
-			e.preventDefault();
-			$(this).parents('ul').prev().removeClass('header__current-region--active');
-			$(this).parents('ul').append(`<li><a href="#">${$(this).parents('ul').prev().text()}</a></li>`);
-			$(this).parents('ul').prev().text($(this).text());
-			$(this).parents('ul').slideUp('300');
-			$(this).parent().remove();
-			$('.header-info-line').slideDown('300');
-		});
-
 		$('.header-info-line__close').on('click', function () {
 			$(this).parent().slideUp('300');
 		})

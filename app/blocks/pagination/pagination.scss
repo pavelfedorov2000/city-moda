@@ -1,3 +1,54 @@
 .pagination {
-  // your code
+
+	@extend %vertical-align;
+	justify-content: flex-end;
+	padding: 5.2rem 0;
+	// .pagination__list
+
+	&__list {
+		display: flex;
+	}
+
+	// .pagination__item
+
+	&__item {
+		&:not(:last-child) {
+			margin-right: 4rem;
+		}
+	}
+
+	// .pagination__link
+
+	&__link {
+		@extend %text-20;
+		font-weight: 500;
+		color: #9B9B9B;
+
+		&.active {
+			color: #101112;
+		}
+	}
+
+	// .pagination__next
+
+	&__next {
+		margin-left: 3.5rem;
+
+		svg {
+			width: 5.6rem;
+			height: 1.6rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+	}
 }
