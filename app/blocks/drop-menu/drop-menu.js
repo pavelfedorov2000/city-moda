@@ -2,11 +2,6 @@ app.dropMenu = {
 	name: 'dropMenu',
 	description: 'your script description',
 	init() {
-		$('.tab').on('click', function (e) {
-			e.preventDefault();
-			$(this).siblings().removeClass('tab--active');
-			$(this).addClass('tab--active');
-		});
 
 		if ($(window).width() >= 1025) {
 			$('.header__list-link').not('.header__list-link--red').on('mouseover', function () {

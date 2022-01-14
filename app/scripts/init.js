@@ -1,5 +1,19 @@
 //let lazyLoadInstance = new LazyLoad();
 new WOW().init();
+Fancybox.bind("[data-fancybox]", {
+	panOnlyZoomed: true,
+	baseScale: 1.25,
+});
+
+$('.tab').on('click', function (e) {
+	e.preventDefault();
+
+	$(this).siblings().removeClass('tab--active');
+	$('.tabs-content').removeClass('tabs-content--active');
+
+	$(this).addClass('tab--active');
+	$(this).attr('href').addClass('tabs-content--active');
+});
 app.burger.init();
 app.dropMenu.init();
 app.promoSale.init();
@@ -8,6 +22,8 @@ app.sliderSections.init();
 app.catalogCard.init();
 app.asideFilters.init();
 app.catalogFilters.init();
+app.productCard.init();
+app.productDetails.init();
 /* document.querySelector('.page-up').addEventListener('click', () => {
 	window.scrollTo({
 		top: 0,

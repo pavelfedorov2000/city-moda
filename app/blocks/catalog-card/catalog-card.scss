@@ -112,6 +112,7 @@
 	&__info-link {
 		@extend %text-13;
 		font-weight: 600;
+		font-style: normal;
 		position: relative;
 		padding-bottom: 0.3rem;
 
@@ -161,8 +162,7 @@
 		@extend %vertical-align;
 	}
 
-	&__price,
-	&__new-price {
+	&__price {
 		@extend %text-16;
 		font-weight: 600;
 	}
@@ -170,7 +170,6 @@
 	// .catalog-card__new-price
 
 	&__new-price {
-		color: $red;
 		margin-right: 0.8rem;
 	}
 
@@ -178,9 +177,6 @@
 
 	&__old-price {
 		@extend %text-13;
-		font-weight: 500;
-		color: #9B9B9B;
-		text-decoration: line-through;
 	}
 
 	&.sale {

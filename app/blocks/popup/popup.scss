@@ -1,0 +1,310 @@
+.fancybox__toolbar {
+	display: none;
+}
+
+@media (min-width: 1024px) {
+	.fancybox__slide {
+		padding: 0;
+	}
+}
+
+.fancybox__carousel.is-draggable .fancybox__slide .fancybox__content {
+	cursor: zoom-in;
+}
+
+.fancybox__content {
+	width: 64rem !important;
+	height: 100vh !important;
+	margin: 0;
+
+	img {
+		width: 100% !important;
+		height: 100% !important;
+		object-fit: cover !important;
+	}
+}
+
+.carousel__button {
+	width: 4.2rem;
+	height: 4.2rem;
+	border-radius: 50%;
+	background-color: #fff;
+	position: relative;
+
+	&:before {
+		content: '';
+		position: absolute;
+		@extend %pos-center-xy;
+		width: 2.8rem;
+		height: 2.8rem;
+		@extend %bg-contain;
+	}
+
+	svg {
+		display: none;
+	}
+
+	&.is-prev {
+
+		&:before {
+			background-image: url(../images/icons/arr-l.svg);
+		}
+	}
+
+	&.is-next {
+
+		&:before {
+			background-image: url(../images/icons/arr-r.svg);
+		}
+	}
+}
+
+.fancybox__nav .carousel__button.is-prev {
+	@media(min-width: 1024px) {
+		left: calc((100vw - 64rem) / 2 - 6rem);
+	}
+}
+
+.fancybox__nav .carousel__button.is-next {
+	@media(min-width: 1025px) {
+		right: calc((100vw - 64rem) / 2 - 6rem);
+	}
+}
+
+.fancybox__thumbs .carousel__slide {
+	width: 2rem;
+	height: 0.4rem;
+	margin: 0 0.4rem;
+	background-color: rgba(#fff, .3);
+	padding: 0;
+
+	&.is-nav-selected {
+		background-color: #fff;
+	}
+}
+
+.fancybox__thumbs {
+	position: absolute;
+	@extend %pos-center-x;
+	bottom: 2rem;
+	z-index: 200;
+}
+
+.fancybox__thumb {
+	display: none;
+}
+
+.fancybox__carousel.is-draggable .fancybox__slide {
+	cursor: zoom-in;
+}
+
+.popup {
+	position: absolute;
+	@extend %pos-center-xy;
+	width: 76.8rem;
+	background-color: #fff;
+
+	&__close {
+		position: absolute;
+		top: 0;
+		right: -1.5rem;
+
+		svg {
+			width: 3.2rem;
+			height: 3.2rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
+
+.product-popup {
+
+	display: none;
+
+	@media(min-width: 1025px) {
+		width: 98.2rem;
+	}
+
+	// .product-popup__inner
+
+	&__inner {
+		display: grid;
+		grid-template-columns: 464 / 982 * 100% auto 1rem;
+		grid-template-rows: 59rem 7.6rem;
+		grid-template-areas:
+			"slider info ."
+			"link link ."
+		;
+	}
+
+	// .product-popup__slider
+
+	&__slider {
+		position: relative;
+		grid-area: slider;
+		width: 100%;
+
+		.swiper-horizontal>.swiper-pagination-bullets,
+		.swiper-pagination-bullets.swiper-pagination-horizontal {
+			@extend %pos-center-x;
+			justify-content: center;
+			bottom: 2rem;
+		}
+
+		.swiper-button-prev {
+			left: 2rem;
+		}
+
+		.swiper-button-next {
+			right: 2rem;
+		}
+	}
+
+	&__slider-item {
+		img {
+			@extend %cover;
+		}
+	}
+
+	// .product-popup__label
+
+	&__label {
+		position: absolute;
+		top: 2rem;
+		left: 2rem;
+		z-index: 20;
+		width: 5rem;
+		height: 5rem;
+		font-size: 1.5rem;
+		line-height: 2.2rem;
+	}
+
+	// .product-popup__content
+
+	&__content {
+		grid-area: info;
+		padding: 3.4rem 1.4rem 3rem 3rem;
+		@include scrollbar;
+	}
+
+	&__about {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	// .product-popup__content-top
+
+	&__content-top {
+		padding-bottom: 1.6rem;
+		border-bottom: 0.1rem solid #EFEFEF;
+
+		&:not(:last-child) {
+			margin-bottom: 1.5rem;
+		}
+	}
+
+	// .product-popup__title
+
+	&__title {
+		@extend %text-20;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: 0.7rem;
+		}
+	}
+
+	// .product-popup__prices
+
+	&__prices {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	// .product-popup__old-price
+
+	&__old-price {
+		@extend %text-12;
+		margin-right: 0.6rem;
+	}
+
+	// .product-popup__form
+
+	&__form {
+		&:not(:last-child) {
+			margin-bottom: 2.4rem;
+		}
+	}
+
+	// .product-popup__more-link
+
+	&__more-link {
+		@extend %flex-center;
+		@extend %text-14;
+		font-weight: 500;
+		grid-area: link;
+		background-color: #F4F4F6;
+
+		svg {
+			width: 5.6rem;
+			height: 1.6rem;
+			margin-left: 1.4rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}
+
+.about-product {
+
+	// .about-product__title
+
+	&__title {
+		@extend %text-16;
+		font-weight: 600;
+		margin-bottom: 0.8rem;
+	}
+
+	// .about-product__list
+
+	&__list {
+		@extend %text-13;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		div {
+			&:not(:last-child) {
+				margin-bottom: 0.4rem;
+			}
+
+			dt {
+				color: #505661;
+				padding-right: 0.3rem;
+			}
+		}
+	}
+}

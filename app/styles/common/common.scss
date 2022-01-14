@@ -35,6 +35,10 @@ button {
 		'lnum'on;
 }
 
+dt {
+	float: left;
+}
+
 .wrapper {
 	position: relative;
 	overflow-x: hidden;
@@ -61,39 +65,66 @@ button {
 	}
 }
 
-.all-link {
-	@extend %vertical-align;
-	@extend %text-16;
-	color: #9B9B9B;
+.tab {
 	position: relative;
 
-	@media(max-width: 500px) {
-		font-size: 1.4rem;
-		line-height: 2.1rem;
+	@media (any-hover: hover) {
+		&:hover {
+			color: $green;
+		}
 	}
 
-	svg {
-		width: 5.6rem;
-		height: 1.6rem;
-		margin-left: 1.6rem;
+	&:after {
+		content: '';
+		position: absolute;
+		left: 0;
+		width: 0%;
+		height: 0.2rem;
+		transition: .3s width;
+	}
 
-		@media(max-width: 500px) {
-			width: 3.5rem;
-			height: 1rem;
-			margin-left: 1rem;
+	&--active {
+		&:after {
+			width: 100%;
 		}
+	}
+}
 
-		path {
-			transition: .3s fill;
-		}
+.tabs-content {
+	display: none;
+
+	&--active {
+		display: block;
+	}
+}
+
+.player-btn {
+	position: absolute;
+	@extend %pos-center-xy;
+	width: 8rem;
+	height: 8rem;
+	border-radius: 50%;
+	border: 0.1rem solid rgba(#FFF, .7);
+	transition: .3s background-color;
+
+	&::before {
+		content: '';
+		position: absolute;
+		@extend %pos-center-y;
+		left: calc(50% - 2.1rem / 2);
+		width: 2.1rem;
+		height: 2.4rem;
+		background-color: #fff;
+		clip-path: polygon(0% 0%, 100% 50%, 0% 100%);
+		transition: .3s background-color;
 	}
 
 	@media (any-hover: hover) {
 		&:hover {
-			svg {
-				path {
-					fill: $red;
-				}
+			background-color: #fff;
+
+			&::before {
+				background-color: #101112;
 			}
 		}
 	}
@@ -162,6 +193,18 @@ a {
 			margin-bottom: 2rem;
 		}
 	}
+}
+
+.new-price {
+	@extend %text-16;
+	color: $red;
+	font-weight: 600;
+}
+
+.old-price {
+	font-weight: 500;
+	color: #9B9B9B;
+	text-decoration: line-through;
 }
 
 /* .visually-hidden {

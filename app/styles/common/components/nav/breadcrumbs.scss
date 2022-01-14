@@ -1,13 +1,12 @@
 .breadcrumbs {
-	padding-bottom: 2rem;
+	padding: 4rem 0 2rem;
 
 	&__item {
 		position: relative;
 		display: inline-block;
-		@extend %text-12;
-		color: #828282;
-		padding-right: 1.6rem;
-		margin-right: 1rem;
+		@extend %text-13;
+		padding-right: 1.8rem;
+		margin-right: 1.4rem;
 		transition: .3s color;
 
 		@media (any-hover: hover) {
@@ -17,14 +16,14 @@
 		}
 
 		&:after {
-			content: '/';
+			content: '|';
 			position: absolute;
 			@extend %pos-center-y;
 			right: 0;
 		}
 
 		&:last-child {
-			color: $accent;
+			color: #777;
 
 			&:after {
 				content: '';

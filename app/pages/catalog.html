@@ -3,6 +3,37 @@
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
 	<main class="page catalog">
+		<nav class="breadcrumbs" aria-label="breadcrumbs">
+			<div class="container">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Женщинам
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Верхняя одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							Пальто
+						</span>
+					</li>
+				</ol>
+			</div>
+		</nav>
 		@@include("blocks/promo-collection/promo-collection.html")
 		<div class="container catalog__page">
 			<h1 class="title catalog__title">Женские пальто</h1>
@@ -158,6 +189,6 @@
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")
-	<!-- @@include("blocks/popups/popups.html") -->
+	@@include("blocks/popup/product-popup.html")
 </div>
 @@include("blocks/link/link.html")
