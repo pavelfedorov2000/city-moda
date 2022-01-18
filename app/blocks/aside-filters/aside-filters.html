@@ -1,96 +1,102 @@
 <div class="aside-filters">
-	<div class="aside-filters__items">
-		<div class="aside-filters__item">
-			<div class="aside-filters__item-title">Одежда</div>
-			<div class="aside-filters__item-content">
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Блузки и рубашки</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Брюки</span>
-				</label>
-				<div class="aside-filters__item-label aside-filters__item-label--drop">
-					Верхняя одежда
-				</div>
-				<div class="aside-filters__item-subchecks">
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Демисезонные куртки</span>
-					</label>
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Жилеты</span>
-					</label>
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Легкие куртки и ветровки</span>
-					</label>
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Пальто</span>
-					</label>
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Плащи и тренчи</span>
-					</label>
-					<label class="aside-filters__item-label">
-						<input class="check-box" type="checkbox">
-						<span class="check-text">Шубы и дубленки</span>
-					</label>
-				</div>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Джемперы, свитеры</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Джинсы</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Домашняя одежда</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Комбинезоны</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Одежда для беременных</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Пиджаки и костюмы</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Платья и сарафаны</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Спортивные костюмы</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Шорты</span>
-				</label>
-				<label class="aside-filters__item-label">
-					<input class="check-box" type="checkbox">
-					<span class="check-text">Юбки</span>
-				</label>
+	<ul class="aside-filters__list">
+		<li class="aside-filters__item">
+			<div class="aside-filters__item-title">
+				<a class="aside-filters__link" href="#">Одежда</a>
+				<button class="aside-filters__item-drop aside-filters__item-drop--active" aria-label="Свернуть">
+					<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
+					</svg>
+				</button>
 			</div>
-		</div>
-		<div class="aside-filters__item">
-			<div class="aside-filters__item-title">Аксессуары</div>
-			<div class="aside-filters__item-content"></div>
-		</div>
-		<div class="aside-filters__item">
-			<div class="aside-filters__item-title">Обувь</div>
-			<div class="aside-filters__item-content"></div>
-		</div>
-	</div>
+			<ul class="aside-filters__sublist">
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Блузки и рубашки</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Брюки</a>
+				</li>
+				<li class="aside-filters__sublist-title">
+					<a class="aside-filters__link" href="#">Верхняя одежда</a>
+					<button class="aside-filters__item-drop aside-filters__item-drop--active" aria-label="Свернуть">
+						<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path fill-rule="evenodd" clip-rule="evenodd"
+								d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
+						</svg>
+					</button>
+				</li>
+				<ul class="aside-filters__sublist">
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link" href="#">Демисезонные куртки</a>
+					</li>
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link" href="#">Жилеты</a>
+					</li>
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link" href="#">Легкие куртки и ветровки</a>
+					</li>
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link active" href="#">Пальто</a>
+					</li>
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link" href="#">Плащи и тренчи</a>
+					</li>
+					<li class="aside-filters__sublist-item">
+						<a class="aside-filters__link" href="#">Шубы и дубленки</a>
+					</li>
+				</ul>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Джемперы, свитеры</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Джинсы</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Домашняя одежда</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Комбинезоны</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Одежда для беременных</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Пиджаки и костюмы</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Платья и сарафаны</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Спортивные костюмы</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Шорты</a>
+				</li>
+				<li class="aside-filters__sublist-item">
+					<a class="aside-filters__link" href="#">Юбки</a>
+				</li>
+			</ul>
+		</li>
+		<li class="aside-filters__item-title">
+			<a class="aside-filters__link" href="#">Аксессуары</a>
+			<button class="aside-filters__item-drop" aria-label="Развернуть">
+				<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z"
+						fill="#101112" />
+				</svg>
+			</button>
+		</li>
+		<li class="aside-filters__item-title">
+			<a class="aside-filters__link" href="#">Обувь</a>
+			<button class="aside-filters__item-drop" aria-label="Развернуть">
+				<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z"
+						fill="#101112" />
+				</svg>
+			</button>
+		</li>
+	</ul>
 	<div class="banner aside-filters__banner">
 		Рекламный баннер
 	</div>

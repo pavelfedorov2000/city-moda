@@ -2,7 +2,7 @@
 
 	// .aside-filters__items
 
-	&__items {
+	&__list {
 		&:not(:last-child) {
 			margin-bottom: 4rem;
 		}
@@ -16,38 +16,13 @@
 		}
 	}
 
-	// .aside-filters__item-title
-
-	&__item-title,
-	&__item-label--drop {
-		position: relative;
-
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0.3rem;
-			right: 0;
-			width: 1.4rem;
-			height: 1.4rem;
-			background-image: url(../images/icons/drop-arr-black.svg);
-			@extend %bg-contain;
-			transition: .3s transform;
-		}
-	}
-
 	&__item-title {
+		@extend %flex-row-center;
 		@extend %text-16;
 		font-weight: 600;
-		cursor: pointer;
 
 		&:not(:last-child) {
 			margin-bottom: 1.6rem;
-		}
-
-		&--active {
-			&:after {
-				transform: rotate(180deg);
-			}
 		}
 	}
 
@@ -55,40 +30,36 @@
 		display: none;
 	}
 
-	// .aside-filters__item-label
+	&__item-drop {
+		transition: .3s transform;
 
-	&__item-label {
-		display: block;
-		@extend %text-14;
-		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-bottom: 1.2rem;
+		svg {
+			width: 1.4rem;
+			height: 1.4rem;
 		}
 
 		&--active {
-			&:after {
-				transform: rotate(180deg);
-			}
+			transform: rotate(180deg);
+		}
+	}
+
+	&__link {
+		@extend %text-14;
+		position: relative;
+		padding-bottom: 0.3rem;
+
+		&:after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			width: 0%;
+			height: 0.1rem;
+			background-color: #101112;
+			transition: .3s width;
 		}
 
-		.check-text {
-			position: relative;
-			padding-bottom: 0.3rem;
-
-			&:after {
-				content: '';
-				position: absolute;
-				left: 0;
-				bottom: 0;
-				width: 0%;
-				height: 0.1rem;
-				background-color: #101112;
-				transition: .3s width;
-			}
-		}
-
-		.check-box:checked+.check-text {
+		&.active {
 			font-weight: 600;
 
 			&:after {
@@ -99,10 +70,24 @@
 
 	// .aside-filters__item-subchecks
 
-	&__item-subchecks {
-		display: none;
+	&__sublist {
+		//display: none;
 		padding-left: 2rem;
 		padding-bottom: 1.2rem;
+	}
+
+	&__sublist-title {
+		@extend %flex-row-center;
+
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&__sublist-item {
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
 	}
 
 	// .aside-filters__banner
