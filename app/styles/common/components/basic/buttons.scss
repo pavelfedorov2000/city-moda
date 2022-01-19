@@ -13,6 +13,18 @@
 		}
 	}
 
+	&[disabled] {
+		background-color: #EAEAEA;
+		border: none;
+		cursor: not-allowed;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
 	svg {
 		width: 1.6rem;
 		height: 1.6rem;

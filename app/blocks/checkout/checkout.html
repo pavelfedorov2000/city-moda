@@ -1,0 +1,90 @@
+<section class="checkout">
+	<h2 class="title checkout__title">Оформление заказа</h2>
+	<form action="#" class="checkout__form checkout-form">
+		<fieldset class="checkout-form__item personal-data-form">
+			<legend class="checkout-form__item-title">Персональные данные</legend>
+			<div class="personal-data-form__inputs">
+				<input class="personal-data-form__input input" placeholder="Имя*">
+				<input class="personal-data-form__input input" placeholder="Фамилия*">
+				<input class="personal-data-form__input input" placeholder="Ваш телефон*">
+				<input class="personal-data-form__input input" placeholder="Ваш e-mail*">
+				<input class="personal-data-form__input input" placeholder="Город, населенный пункт*">
+			</div>
+		</fieldset>
+		<fieldset class="checkout-form__item">
+			<legend class="checkout-form__item-title">Условия доставки</legend>
+			<div class="checkout-form__radios">
+				<label class="checkout-form__item-radio checkout-radio">
+					<input class="radio-box" type="radio" name="delivery">
+					<div class="checkout-radio__content">
+						<div class="checkout-radio__title">Курьер</div>
+						<dl class="checkout-radio__list">
+							<div>
+								<dt>Стоимость доставки:</dt>
+								<dd>0 руб</dd>
+							</div>
+							<div>
+								<dt>Доставка осуществляется в течении:</dt>
+								<dd>1 дня</dd>
+							</div>
+						</dl>
+					</div>
+					<div class="checkout-radio__hidden">
+						<div class="checkout-radio__inputs">
+							<input class="input" placeholder="Индекс">
+							<input class="input" placeholder="Улица">
+							<input class="input" placeholder="Дом, корпус">
+							<input class="input" placeholder="Квартира/офис">
+						</div>
+					</div>
+				</label>
+				<label class="checkout-form__item-radio checkout-radio">
+					<input class="radio-box" type="radio" name="delivery">
+					<div class="checkout-radio__content">
+						<div class="checkout-radio__title">Доставка в пункты выдачи заказов и постаматы</div>
+						<dl class="checkout-radio__list">
+							<div>
+								<dt>Стоимость доставки:</dt>
+								<dd>0 руб</dd>
+							</div>
+							<div>
+								<dt>Доставка осуществляется в течении:</dt>
+								<dd>1 дня</dd>
+							</div>
+						</dl>
+					</div>
+					<div class="checkout-radio__hidden">
+						<button id="choose-issue-point" class="btn checkout-radio__btn" type="button">
+							Выберите пункт выдачи
+						</button>
+					</div>
+				</label>
+			</div>
+		</fieldset>
+		<fieldset class="checkout-form__item">
+			<legend class="checkout-form__item-title">Способ оплаты</legend>
+			<div class="checkout-form__radios">
+				<label class="checkout-form__item-radio checkout-radio">
+					<input class="radio-box" type="radio" name="payment">
+					<div class="checkout-radio__content">
+						<div class="checkout-radio__title">Оплата при получении</div>
+						<div class="checkout-radio__hidden">
+							Наличными или банковской картой при получении
+						</div>
+					</div>
+				</label>
+				<label class="checkout-form__item-radio checkout-radio">
+					<input class="radio-box" type="radio" name="payment">
+					<div class="checkout-radio__content">
+						<div class="checkout-radio__title">Картой онлайн</div>
+						<div class="checkout-radio__hidden">
+							<a href="#">Перейти к оплате через сервис</a>
+						</div>
+					</div>
+				</label>
+			</div>
+		</fieldset>
+		<textarea class="input checkout-form__comment" name="order_comment"
+			placeholder="Комментарий к заказу"></textarea>
+	</form>
+</section>

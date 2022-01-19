@@ -1,0 +1,75 @@
+.checkout {
+
+	// .checkout__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 5.2rem;
+		}
+	}
+
+	// .checkout__form
+
+	&__form {}
+}
+
+.checkout-form {
+
+	// .checkout-form__item
+
+	&__item {}
+
+	// .checkout-form__item-title
+
+	&__item-title {}
+
+	// .checkout-form__radios
+
+	&__radios {}
+
+	// .checkout-form__item-radio
+
+	&__item-radio {}
+
+	// .checkout-form__comment
+
+	&__comment {}
+}
+
+.personal-data-form {
+
+	// .personal-data-form__inputs
+
+	&__inputs {}
+
+	// .personal-data-form__input
+
+	&__input {}
+}
+
+.checkout-radio {
+
+	// .checkout-radio__content
+
+	&__content {}
+
+	// .checkout-radio__title
+
+	&__title {}
+
+	// .checkout-radio__list
+
+	&__list {}
+
+	// .checkout-radio__hidden
+
+	&__hidden {}
+
+	// .checkout-radio__inputs
+
+	&__inputs {}
+
+	// .checkout-radio__btn
+
+	&__btn {}
+}
