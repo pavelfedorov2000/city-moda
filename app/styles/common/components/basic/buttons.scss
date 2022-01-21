@@ -1,5 +1,6 @@
 .btn {
 	@extend %flex-center;
+	@extend %text-14;
 	background-color: $green;
 	color: #fff;
 	text-align: center;
@@ -38,6 +39,17 @@
 	&--border {
 		background-color: transparent;
 		color: $green;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: $green;
+				color: #fff;
+			}
+		}
+	}
+
+	&--black {
+		background-color: #101112;
 
 		@media (any-hover: hover) {
 			&:hover {

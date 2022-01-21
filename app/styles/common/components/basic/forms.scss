@@ -74,3 +74,17 @@
 		}
 	}
 }
+
+.input {
+	@extend %text-13;
+	border: 0.1rem solid #C0C0C0;
+	padding: 1.4rem;
+
+	&::placeholder {
+		color: #777;
+	}
+
+	&.error {
+		border-color: $red;
+	}
+}

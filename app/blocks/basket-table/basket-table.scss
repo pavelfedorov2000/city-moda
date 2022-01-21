@@ -165,7 +165,9 @@
 	// .basket-product__prices
 
 	&__prices {
-		align-self: flex-end;
+		@extend %flex-col;
+		justify-content: flex-end;
+		align-self: stretch;
 		grid-area: prices;
 	}
 
@@ -179,8 +181,10 @@
 	}
 
 	&__price {
+		@extend %vertical-align;
 		@extend %text-16;
 		font-weight: 600;
+		height: 100%;
 	}
 
 	// .basket-product__old-price

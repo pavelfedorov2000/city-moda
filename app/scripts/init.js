@@ -33,6 +33,7 @@ app.catalogFilters.init();
 app.productCard.init();
 app.productDetails.init();
 app.popups.init();
+app.checkout.init();
 /* document.querySelector('.page-up').addEventListener('click', () => {
 	window.scrollTo({
 		top: 0,

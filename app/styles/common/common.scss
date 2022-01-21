@@ -28,7 +28,9 @@ body {
 	}
 }
 
-button {
+button,
+textarea,
+input {
 	font-family: 'Raleway',
 		sans-serif;
 	font-feature-settings: 'pnum'on,
@@ -163,11 +165,11 @@ img {
 a {
 	transition: .3s color;
 
-	@media (any-hover: hover) {
+	/* @media (any-hover: hover) {
 		&:hover {
 			color: $red;
 		}
-	}
+	} */
 }
 
 .logo {
