@@ -20,7 +20,7 @@ $('.tab').on('click', function (e) {
 	$('.tabs-content').removeClass('tabs-content--active');
 
 	$(this).addClass('tab--active');
-	$(this).attr('href').addClass('tabs-content--active');
+	$($(this).attr('href')).addClass('tabs-content--active');
 });
 app.burger.init();
 app.dropMenu.init();

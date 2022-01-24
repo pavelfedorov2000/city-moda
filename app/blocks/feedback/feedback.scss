@@ -1,0 +1,54 @@
+.feedback {
+
+	// .feedback__form
+
+	&__form-inputs {
+		display: grid;
+		grid-gap: 3rem;
+
+		@media(min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(min-width: 768px) {
+			width: 55.8rem;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .feedback__form-textarea
+
+	&__form-textarea {
+		min-height: 10rem;
+
+		@media(min-width: 501px) {
+			grid-column: span 2;
+		}
+	}
+
+	// .feedback__form-agrees
+
+	&__form-agrees {
+		&:not(:last-child) {
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	// .feedback__form-agree
+
+	&__form-agree {
+		&:not(:last-child) {
+			margin-bottom: 1.2rem;
+		}
+	}
+
+	&__form-btn {
+		@extend %text-14;
+		font-weight: 600;
+		width: 26.4rem;
+		padding: 1.25rem;
+	}
+}

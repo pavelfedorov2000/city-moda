@@ -109,6 +109,16 @@
 		}
 	}
 
+	&__social-item {
+		&:not(:last-child) {
+			margin-right: 4rem;
+
+			@media(max-width: 767px) {
+				margin-right: 2.5rem;
+			}
+		}
+	}
+
 	// .footer__link
 
 	&__link {
@@ -346,39 +356,6 @@
 			text-transform: uppercase;
 			color: #101112;
 			margin-left: 0.3rem;
-		}
-	}
-}
-
-.social {
-
-	display: flex;
-	// .social__item
-
-	&__item {
-		&:not(:last-child) {
-			margin-right: 4rem;
-
-			@media(max-width: 767px) {
-				margin-right: 2.5rem;
-			}
-		}
-
-		svg {
-			width: 2.6rem;
-			height: 2.6rem;
-
-			rect {
-				transition: .3s fill;
-			}
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				svg rect {
-					fill: $red;
-				}
-			}
 		}
 	}
 }

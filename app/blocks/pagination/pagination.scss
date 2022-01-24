@@ -3,6 +3,15 @@
 	@extend %vertical-align;
 	justify-content: flex-end;
 	padding: 5.2rem 0;
+
+	@media(max-width: 767px) {
+		justify-content: center;
+	}
+
+	@media(max-width: 500px) {
+		padding: 3rem 0;
+	}
+
 	// .pagination__list
 
 	&__list {
@@ -26,6 +35,12 @@
 
 		&.active {
 			color: #101112;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+			}
 		}
 	}
 

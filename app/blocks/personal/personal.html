@@ -1,0 +1,30 @@
+<form action="#" class="profile-personal">
+	<input class="profile-personal__input input" name="name" value="Иванка">
+	<input class="profile-personal__input input" name="surname" value="Иванова">
+	<input class="profile-personal__input input" name="phone" value="+7 (999) 999-99-99 " type="tel">
+	<input class="profile-personal__input input" name="email" value="post@mail.ru" type="email">
+	<div class="profile-personal__row-field profile-personal__gender">
+		<div class="profile-personal__field-title">Пол</div>
+		<div class="profile-personal__gender-radios">
+			<label class="profile-personal__gender-radio">
+				<input class="radio-box" type="radio" name="gender" checked>
+				<span class="radio-style">
+					<span class="radio-text">Женский</span>
+				</span>
+			</label>
+			<label class="profile-personal__gender-radio">
+				<input class="radio-box" type="radio" name="gender">
+				<span class="radio-style">
+					<span class="radio-text">Мужской</span>
+				</span>
+			</label>
+		</div>
+	</div>
+	<div class="profile-personal__row-field profile-personal__password">
+		<div class="profile-personal__field-title">Пароль</div>
+		<a data-fancybox href="#password-change" class="input profile-personal__change-password-btn">Изменить</a>
+	</div>
+	<button class="btn profile-personal__btn" type="submit">
+		Сохранить изменения
+	</button>
+</form>

@@ -104,9 +104,8 @@
     "animate.css": "^4.1.1",
     "gulp-sass": "^5.0.0",
     "jquery": "^3.6.0",
-    "lightgallery.js": "^1.4.0",
+    "jquery-validation": "^1.19.3",
     "sass": "^1.45.1",
-    "svg4everybody": "^2.1.9",
     "swiper": "^7.4.1",
     "wowjs": "^1.1.3"
   }

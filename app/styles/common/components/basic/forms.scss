@@ -75,6 +75,14 @@
 	}
 }
 
+.input-wrap {
+	position: relative;
+
+	.input {
+		width: 100%;
+	}
+}
+
 .input {
 	@extend %text-13;
 	border: 0.1rem solid #C0C0C0;
@@ -86,5 +94,27 @@
 
 	&.error {
 		border-color: $red;
+	}
+}
+
+label.error {
+	@extend %text-12;
+	color: $red;
+	margin-top: -1.8rem;
+}
+
+.pass-btn {
+	position: absolute;
+	top: 1.2rem;
+	right: 1.2rem;
+	width: 2.4rem;
+	height: 2.4rem;
+	background-image: url(../images/icons/hidden.svg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+
+	&.hide {
+		background-image: url(../images/icons/visible.svg);
 	}
 }

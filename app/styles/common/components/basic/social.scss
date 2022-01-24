@@ -1,0 +1,25 @@
+.social {
+
+	display: flex;
+	// .social__item
+
+	&__item {
+
+		svg {
+			width: 2.6rem;
+			height: 2.6rem;
+
+			rect {
+				transition: .3s fill;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg rect {
+					fill: $red;
+				}
+			}
+		}
+	}
+}

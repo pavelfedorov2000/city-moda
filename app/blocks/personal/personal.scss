@@ -1,0 +1,96 @@
+.profile-personal {
+
+	display: grid;
+	grid-gap: 3rem;
+
+	@media(min-width: 501px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media(min-width: 768px) {
+		width: 26.4rem * 2 + 3rem;
+	}
+
+	// .profile-personal__input
+
+	&__input {}
+
+	// .profile-personal__field-title
+
+	&__field-title {
+		@extend %text-14;
+	}
+
+	// .profile-personal__gender-radios
+
+	&__row-field {
+		@extend %flex-row-center;
+
+		&:not(:last-child) {
+			@media(min-width: 501px) {
+				margin-bottom: 2.2rem;
+			}
+		}
+	}
+
+	&__gender-radios {
+		display: flex;
+	}
+
+	// .profile-personal__gender-radio
+
+	&__gender-radio {
+		cursor: pointer;
+
+		.radio-style {
+			border: 0.1rem solid #D0D0D0;
+			padding: 1.3rem 2rem;
+		}
+
+		.radio-text {
+			@extend %text-13;
+			color: #000;
+		}
+
+		.radio-box:checked+.radio-style {
+			border-color: #101112;
+			background-color: #101112;
+
+			.radio-text {
+				color: #fff;
+			}
+		}
+	}
+
+	// .profile-personal__change-password-btn
+
+	&__change-password-btn {
+		@extend %text-13;
+		color: #000;
+		padding: 1.3rem 6.4rem;
+		border: 0.1rem solid #D0D0D0;
+		transition: .3s all;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: #D0D0D0;
+				color: #fff;
+			}
+		}
+	}
+
+	// .profile-personal__btn
+
+	&__btn {
+		@extend %text-14;
+		font-weight: 600;
+		padding: 1.25rem;
+	}
+
+	&__row-field,
+	&__btn {
+		@media(min-width: 501px) {
+			grid-column: 1 / 2;
+		}
+	}
+}

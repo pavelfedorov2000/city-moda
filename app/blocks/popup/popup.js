@@ -7,8 +7,132 @@ app.popups = {
 			$('.header__region').text($(this).text());
 		});
 
+		$('#auth input').on('change', function () {
+			if ($(this).val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
+				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
+			} else {
+				$(this).parents('form').find('button[type="submit"]').prop('disabled', true);
+			}
+		});
+
+		$('#password-change input[type=password]').on('change', function () {
+			if ($(this).val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
+				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
+			} else {
+				$(this).parents('form').find('button[type="submit"]').prop('disabled', true);
+			}
+		});
+
+		$('.aside-popup__close').on('click', function () {
+			$(this).parent().removeClass('active');
+			$('.overlay').fadeOut('300');
+			$('body').removeClass('_lock');
+		});
+
+		$(document).ready(function () {
+			if ($('.aside-popup').hasClass('active')) {
+				$('body').addClass('_lock');
+			}
+		});
+
+		//&& $('input[name="user-agreement"]').is(':checked')
+
+		// password input eye toggle
+		$('.pass-btn').on('click', function () {
+			if ($(this).hasClass('show')) {
+				$(this).parent().find('input[type=password]').attr('type', 'text');
+				$(this).removeClass('show');
+				$(this).addClass('hide');
+			} else {
+				$(this).parent().find('input[type=password]').attr('type', 'password');
+				$(this).removeClass('hide');
+				$(this).addClass('show');
+			}
+		});
+
+		// validation
+		$.validator.addMethod("minlenghtphone", function (value, element) {
+			return value.replace(/\D+/g, '').length > 10;
+		});
+		$.validator.addMethod("requiredphone", function (value, element) {
+			return value.replace(/\D+/g, '').length > 1;
+		});
+
+
+		function validateForms(form) {
+			$(form).validate({
+				rules: {
+					name: "required",
+					surname: "required",
+					phone: {
+						requiredphone: true,
+						minlenghtphone: true,
+					},
+					email: "required",
+					password: "required",
+					repeat_password: {
+						required: true,
+						equalTo: '#password',
+					},
+					new_password: "required",
+					repeat_new_password: {
+						required: true,
+						equalTo: '#new_password',
+					}
+				},
+				messages: {
+					name: "Пожалуйста, заполните обязательное поле.",
+					surname: "Пожалуйста, заполните обязательное поле.",
+					phone: {
+						requiredphone: "Пожалуйста, заполните обязательное поле."
+					},
+					email: "Пожалуйста, заполните поле.",
+					password: "Пожалуйста, заполните поле.",
+					repeat_password: {
+						required: "Пожалуйста, заполните поле.",
+						equalTo: "Пароли не совпадают",
+					},
+				}
+			});
+		}
+
+		validateForms('#auth form');
+		validateForms('#register form');
+
+
+		/* $('form').on('sumbit', function (e) {
+			e.preventDefault();
+
+			$.ajax({
+				type: "POST",
+				url: "send.php",
+				data: $(this).serialize(),
+			});
+			$('.form__input').removeClass('valid');
+			$(this).find("input").val("");
+			$('form').trigger('reset');
+			return false;
+		}); */
+
+		$.fn.setCursorPosition = function (pos) {
+			if ($(this).get(0).setSelectionRange) {
+				$(this).get(0).setSelectionRange(pos, pos);
+			} else if ($(this).get(0).createTextRange) {
+				var range = $(this).get(0).createTextRange();
+				range.collapse(true);
+				range.moveEnd('character', pos);
+				range.moveStart('character', pos);
+				range.select();
+			}
+		};
+
+		//mask
+		$("input[name=phone]").on('click', function () {
+			$(this).setCursorPosition(4);
+		}).mask("+7 (999) 999-99-99");
+
 		// ymaps
-		ymaps.ready(init);
+		//ymaps.ready(init);
 
 		function init() {
 
