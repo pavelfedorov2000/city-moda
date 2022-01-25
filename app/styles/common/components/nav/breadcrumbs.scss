@@ -1,6 +1,10 @@
 .breadcrumbs {
 	padding: 4rem 0 2rem;
 
+	@media(max-width: 500px) {
+		padding-top: 2rem;
+	}
+
 	&__item {
 		position: relative;
 		display: inline-block;
@@ -8,6 +12,13 @@
 		padding-right: 1.8rem;
 		margin-right: 1.4rem;
 		transition: .3s color;
+
+		@media(max-width: 500px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+			padding-right: 1.2rem;
+			margin-right: 0.8rem;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

@@ -1,0 +1,139 @@
+@@include("blocks/head/head.html", {"title": "Контакты"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page profile-page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Контакты</span>
+					</li>
+				</ol>
+			</nav>
+
+			<h1 class="title page__title">О компании</h1>
+
+			<div class="profile-page__inner">
+				<nav class="page-nav">
+					<ul class="page-nav__list">
+						<li class="page-nav__item"><a href="#" class="page-nav__link">О компании</a></li>
+						<li class="page-nav__item"><a href="#" class="page-nav__link active">Контакты</a></li>
+						<li class="page-nav__item"><a href="#" class="page-nav__link">Обратная связь</a>
+						</li>
+					</ul>
+				</nav>
+				<div class="profile-page__body contacts">
+					<h2 class="profile-page__title">Обратная связь</h2>
+					<div class="tabs contacts__tabs">
+						<a href="#moscow" class="tab contacts__tab tab--active">Москва</a>
+						<a href="#peterburg" class="tab contacts__tab">Санкт-Петербург</a>
+					</div>
+					<div id="moscow" class="tabs-content tabs-content--active">
+						<address class="contacts__grid">
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Оптовый отдел</h4>
+								<dl class="contact-item__content">
+									<dt>Телефон:</dt>
+									<dd>8-800-250-30-05</dd>
+									<dt>Эл.почта:</dt>
+									<dd>info.msk@citystils.ru</dd>
+								</dl>
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Время работы</h4>
+								<dl class="contact-item__content">
+									<dt>Понедельник - пятница:</dt>
+									<dd>09:00 - 18:00</dd>
+									<dt>Суббота - воскресенье:</dt>
+									<dd>выходной</dd>
+								</dl>
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Адрес</h4>
+								<div class="contact-item__content">
+									117342 г. Москва, ул. Бутлерова, д.17, этаж 3, офис 3077. Бизнес-центр Neo Geo.
+									Станция
+									метро Калужская.
+								</div>
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Реквизиты</h4>
+								<div class="contact-item__content">
+									ООО «АБ Стилс»<br>
+									191040, город Санкт-Петербург, проспект Лиговский, дом 50, литер Д, помещение
+									19Н<br>
+									ИНН 7841072077, КПП 784201001<br>
+									ОГРН 1187847066725<br>
+									ОКПО 27335556<br>
+									ОКАТО 40298000000<br>
+									Р/счёт 40702810755000010868<br>
+									БИК 044030653<br>
+									Банк СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК<br>
+									Корр. счёт 30101810500000000653
+								</div>
+							</section>
+						</address>
+						<div id="moscow-map" class="contacts__map"></div>
+					</div>
+					<div id="peterburg" class="tabs-content">
+						<address class="contacts__grid">
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Оптовый отдел</h4>
+								<dl class="contact-item__content">
+									<dt>Телефон:</dt>
+									<dd>8-800-250-30-05</dd>
+									<dt>Эл.почта:</dt>
+									<dd>info.msk@citystils.ru</dd>
+								</dl>
+
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Время работы</h4>
+								<dl class="contact-item__content">
+									<dt>Понедельник - пятница:</dt>
+									<dd>09:00 - 18:00</dd>
+									<dt>Суббота - воскресенье:</dt>
+									<dd>выходной</dd>
+								</dl>
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Адрес</h4>
+								<div class="contact-item__content">
+									117342 г. Москва, ул. Бутлерова, д.17, этаж 3, офис 3077. Бизнес-центр Neo Geo.
+									Станция
+									метро Калужская.
+								</div>
+							</section>
+							<section class="contact-item contacts__item">
+								<h4 class="contact-item__title">Реквизиты</h4>
+								<div class="contact-item__content">
+									ООО «АБ Стилс»<br>
+									191040, город Санкт-Петербург, проспект Лиговский, дом 50, литер Д, помещение
+									19Н<br>
+									ИНН 7841072077, КПП 784201001<br>
+									ОГРН 1187847066725<br>
+									ОКПО 27335556<br>
+									ОКАТО 40298000000<br>
+									Р/счёт 40702810755000010868<br>
+									БИК 044030653<br>
+									Банк СЕВЕРО-ЗАПАДНЫЙ БАНК ПАО СБЕРБАНК<br>
+									Корр. счёт 30101810500000000653
+								</div>
+							</section>
+						</address>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/popup/region-popup.html")
+	@@include("blocks/popup/password-change.html")
+</div>
+@@include("blocks/link/link.html")

@@ -51,6 +51,7 @@ dt {
 .page {
 	position: relative;
 	flex: 1 0 auto; // Footer at bottom
+	padding-bottom: 11rem;
 
 	&__title {
 		margin-bottom: 4rem;
@@ -140,11 +141,11 @@ img {
 a {
 	transition: .3s color;
 
-	/* @media (any-hover: hover) {
+	@media (any-hover: hover) {
 		&:hover {
 			color: $red;
 		}
-	} */
+	}
 }
 
 .logo {
@@ -184,7 +185,7 @@ a {
 	text-decoration: line-through;
 }
 
-/* .visually-hidden {
+.visually-hidden {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -195,7 +196,7 @@ a {
 	clip: rect(0 0 0 0);
 }
 
-.full-link {
+/* .full-link {
 	position: absolute;
 	top: 0;
 	right: 0;

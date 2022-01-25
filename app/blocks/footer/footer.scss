@@ -110,6 +110,12 @@
 	}
 
 	&__social-item {
+
+		svg {
+			width: 2.6rem;
+			height: 2.6rem;
+		}
+
 		&:not(:last-child) {
 			margin-right: 4rem;
 

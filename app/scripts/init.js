@@ -1,17 +1,5 @@
-//let lazyLoadInstance = new LazyLoad();
+let lazyLoadInstance = new LazyLoad();
 new WOW().init();
-/* Fancybox.bind("[data-fancybox]", {
-	panOnlyZoomed: true,
-	baseScale: 1.25,
-}); */
-/* $('.popup-link').fancybox(); */
-//lightGallery(document.getElementById('lightgallery'));
-/* $(".popup-link").on('click', function (e) {
-	e.preventDefault();
-	$("#product-popup").trigger();
-}); */
-//lightGallery(document.querySelector('.popup'));
-//const plugin = lightGallery(lg);
 
 $('.tab').on('click', function (e) {
 	e.preventDefault();
@@ -22,6 +10,7 @@ $('.tab').on('click', function (e) {
 	$(this).addClass('tab--active');
 	$($(this).attr('href')).addClass('tabs-content--active');
 });
+app.validation.init();
 app.burger.init();
 app.dropMenu.init();
 app.promoSale.init();
@@ -34,6 +23,11 @@ app.productCard.init();
 app.productDetails.init();
 app.popups.init();
 app.checkout.init();
+app.blog.init();
+app.otherNews.init();
+app.faq.init();
+
+//app.contacts.init();
 /* document.querySelector('.page-up').addEventListener('click', () => {
 	window.scrollTo({
 		top: 0,

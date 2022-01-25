@@ -5,7 +5,6 @@ app.productCard = {
 		new Swiper('.product-popup__slider', {
 			loop: true,
 			slidesPerView: 1,
-			//spaceBetween: 20,
 			speed: 1000,
 			pagination: {
 				el: '.swiper-pagination',
@@ -15,6 +14,18 @@ app.productCard = {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
 			},
+			breakpoints: {
+				576: {
+					slidesPerView: 2,
+				},
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+				},
+				1025: {
+					slidesPerView: 1,
+				}
+			}
 		});
 		new Swiper('.product-card__slider', {
 			loop: true,
@@ -34,7 +45,7 @@ app.productCard = {
 					slidesPerView: 2,
 				},
 				768: {
-					slidesPerView: 1,
+					slidesPerView: 2,
 				},
 				1025: {
 					slidesPerView: 2,
@@ -49,6 +60,10 @@ app.productCard = {
 				$(this).next().addClass('radio-style--checked');
 				$(this).parent().siblings().find('span.radio-style').removeClass('radio-style--checked');
 			}
+		});
+
+		$('.product-favorite-btn').on('click', function () {
+			$(this).toggleClass('favorite');
 		});
 	},
 };

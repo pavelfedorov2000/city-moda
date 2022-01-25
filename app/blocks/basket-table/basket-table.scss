@@ -5,8 +5,19 @@
 
 	&__inner {
 		display: grid;
-		grid-template-columns: 1fr 46.5rem;
 		grid-gap: 0.5rem 18.2rem;
+
+		@media(max-width: 1024px) {
+			grid-gap: 5rem;
+		}
+
+		@media(max-width: 500px) {
+			grid-gap: 3rem;
+		}
+
+		@media(min-width: 1025px) {
+			grid-template-columns: 1fr 46.5rem;
+		}
 	}
 }
 
@@ -15,11 +26,19 @@
 	// .basket-table__head
 
 	&__head {
-		display: grid;
-		grid-template-columns: 10.5rem 1.9rem minmax(24.2rem, max-content) 12.5rem 6.7rem auto max-content;
-		grid-template-areas: "title-1 . . . title-2 . title-3";
-		padding-bottom: 2rem;
-		border-bottom: 0.1rem solid #EAEAEA;
+		display: none;
+
+		@media(min-width: 768px) {
+			display: grid;
+			grid-template-columns: 10.5rem 1.9rem minmax(24.2rem, max-content) 2rem 6.7rem auto max-content;
+			grid-template-areas: "title-1 . . . title-2 . title-3";
+			padding-bottom: 2rem;
+			border-bottom: 0.1rem solid #EAEAEA;
+		}
+
+		@media(min-width: 1025px) {
+			grid-template-columns: 10.5rem 1.9rem minmax(24.2rem, max-content) 12.5rem 6.7rem auto max-content;
+		}
 	}
 
 	// .basket-table__title
@@ -57,6 +76,24 @@
 		grid-template-columns: 10.5rem 1.9rem minmax(24.2rem, max-content) 12.5rem 6.7rem auto max-content;
 		grid-template-rows: max-content 1.4rem max-content 1.6rem max-content;
 		align-items: center;
+
+		@media(max-width: 1024px) {
+			grid-template-columns: 10.5rem 1.9rem minmax(24.2rem, max-content) 2rem 6.7rem auto max-content;
+		}
+
+		@media(max-width: 767px) {
+			grid-template-columns: 6.7rem 10.5rem - 6.7rem 1.9rem auto;
+			grid-template-rows: max-content 1.4rem max-content 1.6rem max-content 1.5rem max-content;
+			grid-template-areas:
+				"image image . title"
+				"image image . ."
+				"image image . list"
+				"image image . ."
+				"image image . buttons"
+				". . . ."
+				"counter . . prices"
+			;
+		}
 	}
 }
 
@@ -166,17 +203,30 @@
 
 	&__prices {
 		@extend %flex-col;
-		justify-content: flex-end;
-		align-self: stretch;
 		grid-area: prices;
+
+		@media(min-width: 768px) {
+			justify-content: flex-end;
+			align-self: stretch;
+		}
+
+		@media(max-width: 767px) {
+			display: grid;
+			grid-template-columns: repeat(2, max-content);
+			grid-gap: 1rem;
+		}
 	}
 
 	&__prices-wrap {
-		display: flex;
-		align-items: flex-end;
+		@media(min-width: 768px) {
+			display: flex;
+			align-items: flex-end;
+		}
 
 		&:not(:last-child) {
-			margin-bottom: 2.6rem;
+			@media(min-width: 768px) {
+				margin-bottom: 2.6rem;
+			}
 		}
 	}
 
@@ -200,6 +250,11 @@
 		@extend %text-13;
 		color: #505661;
 		text-align: right;
+
+		@media(max-width: 767px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
 	}
 }
 

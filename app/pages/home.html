@@ -221,62 +221,66 @@
 				</div>
 
 				<div class="blog-grid">
-					<article class="blog-item animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s">
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow"
+						data-wow-duration="1.5s">
 						<a href="#" class="blog-item__img">
 							<img src='assets/images/content/blog/01.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
-							<time class="blog-item__date" datetime="2021-09-10">10.09.2021</time>
-							<h5 class="blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a></h5>
-							<p class="blog-item__text">
+							<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a>
+							</h5>
+							<p class="blog-item-text blog-item__text">
 								Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
 								Отличная
 								теплоизоляция достигается благодаря наполнителю 90% пуха.
 							</p>
-							<div class="blog-item__tags">
-								<a href="#" class="blog-item__tag">#коллекция</a>
-								<a href="#" class="blog-item__tag">#женщинам</a>
-								<a href="#" class="blog-item__tag">#осень</a>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#женщинам</a>
+								<a href="#" class="tag blog-item__tag">#осень</a>
 							</div>
 						</div>
 					</article>
-					<article class="blog-item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s"
-						data-wow-delay=".5s">
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
+						data-wow-duration="1.5s" data-wow-delay=".5s">
 						<a href="#" class="blog-item__img">
 							<img src='assets/images/content/blog/02.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
-							<time class="blog-item__date" datetime="2021-11-10">10.11.2021</time>
-							<h5 class="blog-item__title"><a href="#">MINOTI новая коллекция осень-зима 2021</a></h5>
-							<p class="blog-item__text">
+							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
+									2021</a></h5>
+							<p class="blog-item-text blog-item__text">
 								Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
 								о
 								первом снеге.
 								Приглашаем вас ознакомиться с новой коллекцией MINOTI.
 							</p>
-							<div class="blog-item__tags">
-								<a href="#" class="blog-item__tag">#коллекция</a>
-								<a href="#" class="blog-item__tag">#детям</a>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#детям</a>
 							</div>
 						</div>
 					</article>
-					<article class="blog-item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s"
-						data-wow-delay="1s">
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
+						data-wow-duration="1.5s" data-wow-delay="1s">
 						<a href=" #" class="blog-item__img">
 							<img src='assets/images/content/blog/03.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
-							<time class="blog-item__date" datetime="2021-11-10">10.11.2021</time>
-							<h5 class="blog-item__title"><a href="#">Новые домашние комплекты уже поступили в
+							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже
+									поступили в
 									продажу!</a>
 							</h5>
-							<p class="blog-item__text">
+							<p class="blog-item-text blog-item__text">
 								Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
 								дел.
 							</p>
-							<div class="blog-item__tags">
-								<a href="#" class="blog-item__tag">#коллекция</a>
-								<a href="#" class="blog-item__tag">#женщинам</a>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#женщинам</a>
 							</div>
 						</div>
 					</article>
@@ -320,6 +324,7 @@
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")
+	@@include("blocks/popup/product-popup.html")
 	@@include("blocks/popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")

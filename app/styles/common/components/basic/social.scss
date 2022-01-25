@@ -5,10 +5,9 @@
 
 	&__item {
 
-		svg {
-			width: 2.6rem;
-			height: 2.6rem;
+		flex-shrink: 0;
 
+		svg {
 			rect {
 				transition: .3s fill;
 			}

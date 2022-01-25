@@ -4,13 +4,11 @@
 	background-color: $green;
 	color: #fff;
 	text-align: center;
-	border: 0.1rem solid $green;
 	transition: .3s all;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: #fff;
-			color: $green;
+			background-color: #2D703C;
 		}
 	}
 
@@ -37,13 +35,28 @@
 	}
 
 	&--border {
+		border: 0.1rem solid #101112;
 		background-color: transparent;
-		color: $green;
+		color: #101112;
+
+		svg {
+			width: 2rem;
+			height: 2rem;
+
+			path {
+				transition: .3s fill;
+			}
+		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $green;
-				color: #fff;
+				background-color: transparent;
+				border-color: $green;
+				color: $green;
+
+				svg path {
+					fill: $green;
+				}
 			}
 		}
 	}

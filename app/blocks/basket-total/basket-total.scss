@@ -2,6 +2,11 @@
 
 	border: 0.1rem solid #C0C0C0;
 	padding: 4rem;
+
+	@media(max-width: 500px) {
+		padding: 3rem 1.5rem;
+	}
+
 	// .basket-total__auth
 
 	&__auth {

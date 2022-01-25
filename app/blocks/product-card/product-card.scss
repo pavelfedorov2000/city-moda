@@ -17,16 +17,11 @@
 			grid-gap: 3rem;
 		}
 
-		@media(min-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
-			grid-template-areas:
-				"slider content"
-				"info links"
-			;
-		}
-
 		@media(min-width: 1025px) {
 			grid-template-columns: auto 46.6rem;
+			grid-template-areas: "slider content"
+				"info links"
+			;
 		}
 	}
 
@@ -36,7 +31,7 @@
 		width: 100%;
 		position: relative;
 
-		@media(min-width: 768px) {
+		@media(min-width: 1025px) {
 			grid-area: slider;
 		}
 	}
@@ -50,7 +45,7 @@
 	}
 
 	&__links {
-		@media(min-width: 768px) {
+		@media(min-width: 1025px) {
 			grid-area: links;
 		}
 	}
@@ -58,7 +53,7 @@
 	// .product-card__content
 
 	&__content {
-		@media(min-width: 768px) {
+		@media(min-width: 1025px) {
 			grid-area: content;
 		}
 	}
@@ -143,7 +138,17 @@
 	// .product-card__info
 
 	&__info {
-		grid-area: info;
+		@media(min-width: 1025px) {
+			grid-area: info;
+		}
+	}
+
+	&__tabs-wrap {
+		overflow-x: auto;
+
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 	}
 
 	// .product-card__tabs
@@ -152,8 +157,8 @@
 		padding-bottom: 1.2rem;
 		border-bottom: 0.1rem solid #EAEAEA;
 
-		&:not(:last-child) {
-			margin-bottom: 3rem;
+		@media(max-width: 767px) {
+			width: 200%;
 		}
 	}
 
@@ -164,12 +169,16 @@
 
 		&:not(:last-child) {
 			margin-right: 6.2rem;
+
+			@media(max-width: 767px) {
+				margin-right: 3rem;
+			}
 		}
 
 		&:after {
 			content: '';
 			position: absolute;
-			bottom: -1.5rem;
+			bottom: -1.7rem;
 			left: 0;
 			width: 0%;
 			height: 0.2rem;
@@ -180,6 +189,7 @@
 		&.tab--active {
 			@extend %text-20;
 			font-weight: 500;
+			color: #101112;
 
 			&:after {
 				width: 100%;
@@ -194,8 +204,15 @@
 
 	&__row {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 5.2rem;
+
+		@media(max-width: 1024px) {
+			grid-gap: 3rem;
+		}
+
+		@media(min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 1rem;
@@ -244,8 +261,11 @@
 
 	&__buttons {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 1.2rem;
+
+		@media(min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 	}
 
 	&__btn {
@@ -255,32 +275,34 @@
 	}
 }
 
-.product-cart-btn {
-	@media (any-hover: hover) {
-		&:hover {
-			svg path {
-				fill: $green;
-			}
+.product-favorite-btn {
+
+	svg,
+	span {
+		&.favorite {
+			display: none;
 		}
 	}
-}
 
-.product-favorite-btn {
-	border-color: #101112;
-	color: #101112;
+	&.favorite {
 
-	svg {
-		width: 2rem;
-		height: 2rem;
-	}
+		svg,
+		span {
+			display: none;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: #101112;
-			color: #fff;
+			&.favorite {
+				display: block;
+			}
+		}
 
-			svg path {
-				fill: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #101112;
+				border-color: #101112;
+
+				svg.favorite path {
+					fill: $red;
+				}
 			}
 		}
 	}

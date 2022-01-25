@@ -1,11 +1,14 @@
 .product-links {
 
-	// .product-links__item
+	display: grid;
+	grid-gap: 2.2rem;
 
-	&__item {
-		&:not(:last-child) {
-			margin-bottom: 2.2rem;
-		}
+	@media(min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media(min-width: 1025px) {
+		grid-template-columns: unset;
 	}
 
 	// .product-links__item-link

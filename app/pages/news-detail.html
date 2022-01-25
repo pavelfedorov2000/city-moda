@@ -1,0 +1,32 @@
+@@include("blocks/head/head.html", {"title": "-15% на женские сумки"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Новости и акции
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>-15% на женские сумки</span>
+					</li>
+				</ol>
+			</nav>
+			@@include("blocks/news-detail/news-detail.html")
+			@@include("blocks/other-news/other-news.html")
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/popup/region-popup.html")
+	@@include("blocks/popup/password-change.html")
+</div>
+@@include("blocks/link/link.html")

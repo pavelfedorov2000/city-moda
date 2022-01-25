@@ -84,9 +84,9 @@
 }
 
 .popup {
-	position: absolute;
-	@extend %pos-center-xy;
-	width: 76.8rem;
+	//position: absolute;
+	//@extend %pos-center-xy;
+	//width: 76.8rem;
 	background-color: #fff;
 
 	&__close {
@@ -260,6 +260,10 @@
 
 	display: none;
 
+	@media(max-width: 1024px) {
+		width: calc(100vw - 1.6rem * 2);
+	}
+
 	@media(min-width: 1025px) {
 		width: 98.2rem;
 	}
@@ -267,13 +271,14 @@
 	// .product-popup__inner
 
 	&__inner {
-		display: grid;
-		grid-template-columns: 464 / 982 * 100% auto 1rem;
-		grid-template-rows: 59rem 7.6rem;
-		grid-template-areas:
-			"slider info ."
-			"link link ."
-		;
+		@media(min-width: 1025px) {
+			display: grid;
+			grid-template-columns: 464 / 982 * 100% auto 1rem;
+			grid-template-rows: 59rem 7.6rem;
+			grid-template-areas: "slider info ."
+				"link link ."
+			;
+		}
 	}
 
 	// .product-popup__slider
@@ -288,6 +293,14 @@
 			@extend %pos-center-x;
 			justify-content: center;
 			bottom: 2rem;
+
+			@media(max-width: 1024px) {
+				display: none;
+			}
+
+			@media(max-width: 500px) {
+				display: block;
+			}
 		}
 
 		.swiper-button-prev {
@@ -324,6 +337,14 @@
 		grid-area: info;
 		padding: 3.4rem 1.4rem 3rem 3rem;
 		@include scrollbar;
+
+		@media(max-width: 1024px) {
+			padding: 3rem;
+		}
+
+		@media(max-width: 767px) {
+			padding: 3rem 1.5rem;
+		}
 	}
 
 	&__about {
@@ -384,6 +405,10 @@
 		font-weight: 500;
 		grid-area: link;
 		background-color: #F4F4F6;
+
+		@media(max-width: 1024px) {
+			padding: 2.6rem;
+		}
 
 		svg {
 			width: 5.6rem;
@@ -752,22 +777,25 @@
 	// .aside-popup__social-item
 
 	&__social-item {
-		&:not(:last-child) {
-			margin-right: 2rem;
-		}
+		svg {
+			width: 4rem;
+			height: 4rem;
 
-		&:first-child {
-			svg path {
+			path {
 				transition: .3s fill;
 			}
+		}
 
-			@media (any-hover: hover) {
-				&:hover {
-					svg path {
-						fill: $red;
-					}
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: $red;
 				}
 			}
+		}
+
+		&:not(:last-child) {
+			margin-right: 2rem;
 		}
 	}
 }
