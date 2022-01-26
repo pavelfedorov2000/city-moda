@@ -1,0 +1,58 @@
+@@include("blocks/head/head.html", {"title": "Выпадающая корзина пустая"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page drop-basket-page">
+		<div class="_progress">
+			<div class="_progress__inner">
+				<a href="home.html" class="_progress__link" target="_blank">Главная</a>
+				<a href="catalog.html" class="_progress__link" target="_blank">Каталог</a>
+				<a href="product-card.html" class="_progress__link" target="_blank">Карточка товара</a>
+				<a href="basket.html" class="_progress__link" target="_blank">Корзина / оформление заказа</a>
+				<a href="brands.html" class="_progress__link" target="_blank">Бренды</a>
+				<a href="blog.html" class="_progress__link" target="_blank">Блог</a>
+				<a href="blog-text.html" class="_progress__link" target="_blank">Блог текстовая</a>
+				<a href="news.html" class="_progress__link" target="_blank">Новости и акции</a>
+				<a href="news-detail.html" class="_progress__link" target="_blank">Новости и акции детальная</a>
+				<a href="my-orders.html" class="_progress__link" target="_blank">Профиль - мои заказы</a>
+				<a href="discounts.html" class="_progress__link" target="_blank">Профиль - скидки</a>
+				<a href="subscribes.html" class="_progress__link" target="_blank">Профиль - управление подписками</a>
+				<a href="personal.html" class="_progress__link" target="_blank">Профиль - персональные данные</a>
+				<a href="auth.html" class="_progress__link" target="_blank">Авторизация</a>
+				<a href="faq.html" class="_progress__link" target="_blank">FAQ / Часто задаваемые вопросы</a>
+				<a href="delivery.html" class="_progress__link" target="_blank">Доставка и оплата</a>
+				<a href="about-company.html" class="_progress__link" target="_blank">О компании</a>
+				<a href="contacts.html" class="_progress__link" target="_blank">Контакты</a>
+				<a href="feedback.html" class="_progress__link" target="_blank">Обратная связь</a>
+			</div>
+		</div>
+	</main>
+</div>
+@@include("blocks/footer/footer.html")
+<div class="overlay">
+	<div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
+		<button class="aside-popup__close" type="button">
+			<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path
+					d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z"
+					fill="#505661" />
+			</svg>
+		</button>
+		<div class="drop-basket__inner">
+			<h3 class="aside-popup__title drop-basket__title">Ваша корзина</h3>
+			<div class="drop-basket__empty">
+				Вы еще не добавили товары в корзину
+			</div>
+			<a href="#" class="drop-basket__btn btn">
+				Оформить заказ
+				<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path
+						d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+						fill="white" />
+				</svg>
+			</a>
+		</div>
+	</div>
+</div>
+@@include("blocks/popup/region-popup.html")
+@@include("blocks/link/link.html")

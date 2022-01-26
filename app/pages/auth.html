@@ -2,7 +2,7 @@
 <div class="wrapper">
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
-	<main class="page">
+	<main class="page auth">
 		<div class="_progress">
 			<div class="_progress__inner">
 				<a href="home.html" class="_progress__link" target="_blank">Главная</a>
@@ -19,6 +19,10 @@
 	</main>
 </div>
 @@include("blocks/footer/footer.html")
-@@include("blocks/popup/auth.html")
+<div class="overlay">
+	@@include("blocks/auth/auth.html")
+	@@include("blocks/drop-basket/drop-basket.html")
+</div>
+@@include("blocks/popup/discount-popup.html")
 @@include("blocks/popup/region-popup.html")
 @@include("blocks/link/link.html")

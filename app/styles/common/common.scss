@@ -53,6 +53,14 @@ dt {
 	flex: 1 0 auto; // Footer at bottom
 	padding-bottom: 11rem;
 
+	@media(max-width: 1024px) {
+		padding-bottom: 7rem;
+	}
+
+	@media(max-width: 500px) {
+		padding-bottom: 3rem;
+	}
+
 	&__title {
 		margin-bottom: 4rem;
 

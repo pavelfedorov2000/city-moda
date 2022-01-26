@@ -21,7 +21,17 @@
 	opacity: .8;
 }
 
+.fancybox-slide--image {
+	.fancybox-content {
+		left: 50%;
+		height: 100vh !important;
+		transform: translate(-50%, 0) !important;
+	}
+}
+
 .fancybox-content {
+
+	width: 670 * 100vw / 1920 !important;
 
 	img {
 		@extend %cover;
@@ -45,6 +55,7 @@
 }
 
 .fancybox-button {
+
 	svg {
 		width: 3.2rem;
 		height: 3.2rem;
@@ -84,9 +95,7 @@
 }
 
 .popup {
-	//position: absolute;
-	//@extend %pos-center-xy;
-	//width: 76.8rem;
+
 	background-color: #fff;
 
 	&__close {
@@ -593,11 +602,13 @@
 
 
 .overlay {
+	display: none;
 	position: fixed;
 	top: 0;
 	right: 0;
 	bottom: 0;
 	left: 0;
+	z-index: 200;
 	width: 100%;
 	height: 100%;
 	background-color: rgba(#000, .5);
@@ -610,12 +621,17 @@
 	right: -51.5rem;
 	bottom: 0;
 	height: 100vh;
+	overflow-x: hidden;
 	overflow-y: auto;
 	width: 51.5rem;
 	background-color: #fff;
 	padding: 5rem;
 	transition: .3s right;
 	@include scrollbar;
+
+	&--basket {
+		padding-bottom: 0;
+	}
 
 	&.active {
 		right: 0;

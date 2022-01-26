@@ -31,11 +31,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 	<!--Styles-->
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
 	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/animate.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
-	<!-- <link rel="stylesheet" href="./assets/libs/css/lightgallery.min.css"> -->
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
@@ -448,13 +446,13 @@
 								</svg>
 								<span>Избранное</span>
 							</a>
-							<a href="#" class="header__action">
+							<button class="header__action cart-btn" type="button">
 								<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.9933 15.1668H4.99996C3.85329 15.1668 2.99329 14.8602 2.45996 14.2535C1.92662 13.6468 1.71995 12.7668 1.85995 11.6268L2.45996 6.62683C2.63329 5.1535 3.00663 3.8335 5.60662 3.8335H10.4066C13 3.8335 13.3733 5.1535 13.5533 6.62683L14.1533 11.6268C14.2866 12.7668 14.0866 13.6535 13.5533 14.2535C13 14.8602 12.1466 15.1668 10.9933 15.1668Z" fill="#101112" />
 									<path d="M10.6673 5.8335C10.394 5.8335 10.1673 5.60683 10.1673 5.3335V3.00016C10.1673 2.28016 9.72065 1.8335 9.00065 1.8335H7.00065C6.28065 1.8335 5.83398 2.28016 5.83398 3.00016V5.3335C5.83398 5.60683 5.60732 5.8335 5.33398 5.8335C5.06065 5.8335 4.83398 5.60683 4.83398 5.3335V3.00016C4.83398 1.72683 5.72732 0.833496 7.00065 0.833496H9.00065C10.274 0.833496 11.1673 1.72683 11.1673 3.00016V5.3335C11.1673 5.60683 10.9407 5.8335 10.6673 5.8335Z" fill="#101112" />
 								</svg>
 								<span>Корзина <span class="header__cart-num">(2)</span></span>
-							</a>
+							</button>
 						</div>
 					</div>
 					<div class="header__main-bottom">
@@ -664,7 +662,7 @@
 				</div>
 			</div>
 		</div>
-		<main class="page">
+		<main class="page auth">
 			<div class="_progress">
 				<div class="_progress__inner">
 					<a href="home.html" class="_progress__link" target="_blank">Главная</a>
@@ -849,19 +847,19 @@
 				<div class="footer__payment">
 					<ul class="footer__payment-list">
 						<li class="footer__payment-item">
-							<img src='assets/images/logo/payment/mastercard.svg' alt='mastercard'>
+							<img class="lazy" data-src='assets/images/logo/payment/mastercard.svg' alt='mastercard'>
 						</li>
 						<li class="footer__payment-item">
-							<img src='assets/images/logo/payment/visa.png' alt='mastercard'>
+							<img class="lazy" data-src='assets/images/logo/payment/visa.png' alt='mastercard'>
 						</li>
 						<li class="footer__payment-item">
-							<img src='assets/images/logo/payment/mir.png' alt='mastercard'>
+							<img class="lazy" data-src='assets/images/logo/payment/mir.png' alt='mastercard'>
 						</li>
 						<li class="footer__payment-item">
-							<img src='assets/images/logo/payment/gpay.png' alt='mastercard'>
+							<img class="lazy" data-src='assets/images/logo/payment/gpay.png' alt='mastercard'>
 						</li>
 						<li class="footer__payment-item">
-							<img src='assets/images/logo/payment/ipay.png' alt='mastercard'>
+							<img class="lazy" data-src='assets/images/logo/payment/ipay.png' alt='mastercard'>
 						</li>
 					</ul>
 					<div class="footer__payment-descr">
@@ -876,7 +874,7 @@
 		</div>
 	</footer>
 	<div class="overlay">
-		<div class="aside-popup active">
+		<div id="auth-popup" class="aside-popup">
 			<button class="aside-popup__close" type="button">
 				<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
@@ -1000,11 +998,138 @@
 				</form>
 			</div>
 		</div>
+		<div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
+			<button class="aside-popup__close" type="button">
+				<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
+				</svg>
+			</button>
+			<div class="drop-basket__inner">
+				<h3 class="aside-popup__title">Ваша корзина</h3>
+				<div class="drop-basket__products">
+					<div class="basket-product drop-basket__product">
+						<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
+						<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
+						<dl class="basket-product__list">
+							<div>
+								<dt>Артикул:</dt>
+								<dd>MP002XW08J2L</dt>
+							</div>
+							<div>
+								<dt>Цвет:</dt>
+								<dd>бежевый</dt>
+							</div>
+							<div>
+								<dt>Размер:</dd>
+								<dd>42</dt>
+							</div>
+						</dl>
+						<div class="drop-basket__product-wrap">
+							<button class="basket-product__btn basket-product__btn--delete" type="button">
+								<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g opacity="0.8">
+										<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+									</g>
+								</svg>
+								Удалить
+							</button>
+							<div class="basket-product__counter counter">
+								<button class="minus-btn counter__btn" type="button"></button>
+								<input class="counter__input" type="number" value="1" readonly>
+								<button class="plus-btn counter__btn" type="button"></button>
+							</div>
+							<div class="basket-product__prices-wrap drop-basket__product-prices">
+								<div class="old-price basket-product__old-price">47 800 ₽</div>
+								<div class="new-price">38 240 ₽</div>
+							</div>
+						</div>
+					</div>
+					<div class="basket-product drop-basket__product">
+						<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
+						<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
+						<dl class="basket-product__list">
+							<div>
+								<dt>Артикул:</dt>
+								<dd>MP002XW08J2L</dt>
+							</div>
+							<div>
+								<dt>Цвет:</dt>
+								<dd>бежевый</dt>
+							</div>
+							<div>
+								<dt>Размер:</dd>
+								<dd>42</dt>
+							</div>
+						</dl>
+						<div class="drop-basket__product-wrap">
+							<button class="basket-product__btn basket-product__btn--delete" type="button">
+								<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<g opacity="0.8">
+										<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+									</g>
+								</svg>
+								Удалить
+							</button>
+							<div class="basket-product__counter counter">
+								<button class="minus-btn counter__btn" type="button"></button>
+								<input class="counter__input" type="number" value="1" readonly>
+								<button class="plus-btn counter__btn" type="button"></button>
+							</div>
+							<div class="basket-product__prices drop-basket__product-prices">
+								<div class="basket-product__price drop-basket__product-price">
+									4 300
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="drop-basket__total">
+					<div class="drop-basket__total-title">Товаров на сумму</div>
+					<div class="drop-basket__total-sum">42 540 ₽</div>
+				</div>
+				<div class="drop-basket__empty">
+					Вы еще не добавили товары в корзину
+				</div>
+				<a href="#" class="drop-basket__btn btn">
+					Оформить заказ
+					<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="white" />
+					</svg>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div style="display: none;" id="discount-popup" class="popup mini-popup">
+		<div class="mini-popup__inner">
+			<div class="mini-popup__img">
+				<img class="lazy" data-src='assets/images/content/popups/sale-bags.jpg' alt=''>
+			</div>
+			<div class="mini-popup__content">
+				<div class="mini-popup__title">Дарим скидку 10%</div>
+				<div class="mini-popup__subtitle">
+					за подписку
+					на наши новости и акции
+				</div>
+				<form action="#" class="subscribe-form">
+					<div class="form-row subscribe-form__wrap">
+						<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email" required>
+						<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
+					</div>
+					<label class="form-agree">
+						<input class="check-box" type="checkbox" required>
+						<span class="check-style"></span>
+						<span class="check-text">
+							Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
+						</span>
+					</label>
+				</form>
+			</div>
+		</div>
 	</div>
 	<div style="display: none;" id="region-popup" class="popup region-popup">
 		<div class="region-popup__inner">
 			<div class="region-popup__img">
-				<img src='assets/images/content/popups/region-popup.jpg' alt=''>
+				<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
 			</div>
 			<div class="region-popup__content">
 				<div class="region-popup__title">Где вы находитесь?</div>
@@ -1096,9 +1221,9 @@
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>
 	<script src="./assets/libs/js/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"></script>
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/wow.min.js"></script>
+	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 </body>

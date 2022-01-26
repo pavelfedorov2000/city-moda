@@ -6,6 +6,7 @@ app.otherNews = {
 			loop: true,
 			spaceBetween: 20,
 			speed: 1000,
+			lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',

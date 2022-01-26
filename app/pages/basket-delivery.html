@@ -1,0 +1,245 @@
+@@include("blocks/head/head.html", {"title": "Каталог"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page basket-page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Женщинам
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Верхняя одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Пальто
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Пальто LORIATA Wander Yellow
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Ваша корзина</span>
+					</li>
+				</ol>
+			</nav>
+
+			<h1 class="title page__title">Ваша корзина</h1>
+
+			<form action="#">
+				<div class="basket-page__inner">
+					@@include("blocks/basket-table/basket-table.html")
+					<div class="basket-total">
+						<div class="basket-total__auth">
+							<a data-fancybox href="#auth-popup">Авторизуйтесь</a> чтобы воспользоваться скидкой по
+							программе
+							лояльности.
+						</div>
+						<div class="subscribe-form basket-total__promocode">
+							<div class="form-row subscribe-form__wrap">
+								<input class="form-row__input valid" name="promocode" value="WINTER2022"
+									placeholder="Введите промокод">
+								<button class="btn form-row__btn" type="button" aria-label="Ввести промокод"></button>
+							</div>
+						</div>
+						<dl class="basket-total__list">
+							<div class="basket-total__list-item">
+								<dt>Товаров на сумму</dd>
+								<dd>52 100 ₽</dd>
+							</div>
+							<div class="basket-total__list-item">
+								<dt>Скидка</dt>
+								<dd><span>-9 560 ₽</span></dd>
+							</div>
+							<div class="basket-total__list-item">
+								<dt>Доставка</dd>
+								<dd>0 ₽</dd>
+							</div>
+							<div class="basket-total__list-item">
+								<dt>Промокод (10%)</dt>
+								<dd><span>-5 210 ₽</span></dd>
+							</div>
+							<div class="basket-total__list-item">
+								<dt>Программа лояльности (3%)</dt>
+								<dd><span>-1 563 ₽</span></dd>
+							</div>
+						</dl>
+						<div class="basket-total__overall">
+							<div class="basket-total__overall-title">Итого</div>
+							<div class="basket-total__overall-sum">42 540 ₽</div>
+						</div>
+						<button class="btn basket-total__btn" type="submit">Отправить заказ</button>
+						<div class="basket-total__agreement">
+							Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="#">Публичной оферты.</a>
+						</div>
+					</div>
+					<section class="checkout">
+						<h2 class="title checkout__title">Оформление заказа</h2>
+						<form action="#" class="checkout__form checkout-form">
+							<fieldset class="checkout-form__item personal-data-form">
+								<legend class="checkout-form__item-title">Персональные данные</legend>
+								<div class="personal-data-form__inputs">
+									<div class="personal-data-form__input">
+										<input class="input" name="name" placeholder="Имя*">
+									</div>
+									<div class="personal-data-form__input">
+										<input class="input" name="surname" placeholder="Фамилия*">
+									</div>
+									<div class="personal-data-form__input">
+										<input class="input" type="tel" name="phone" placeholder="Ваш телефон*">
+									</div>
+									<div class="personal-data-form__input">
+										<input class="input" type="email" name="email" placeholder="Ваш e-mail*">
+									</div>
+									<div class="personal-data-form__input">
+										<input class="input" name="city" placeholder="Город, населенный пункт*">
+									</div>
+								</div>
+							</fieldset>
+							<fieldset class="checkout-form__item">
+								<legend class="checkout-form__item-title">Условия доставки</legend>
+								<div class="checkout-form__radios">
+									<label class="checkout-form__item-radio checkout-radio">
+										<input class="radio-box" type="radio" name="delivery">
+										<span class="radio-style"></span>
+										<div class="checkout-radio__content">
+											<div>
+												<div class="checkout-radio__title">Курьер</div>
+												<dl class="checkout-radio__list">
+													<div>
+														<dt>Стоимость доставки:</dt>
+														<dd>0 руб</dd>
+													</div>
+													<div>
+														<dt>Доставка осуществляется в течении:</dt>
+														<dd>1 дня</dd>
+													</div>
+												</dl>
+											</div>
+											<div class="checkout-radio__hidden">
+												<div class="checkout-radio__inputs">
+													<div class="checkout-radio__input">
+														<input class="input" name="index" placeholder="Индекс">
+													</div>
+													<div class="checkout-radio__input">
+														<input class="input" name="street" placeholder="Улица">
+													</div>
+													<div class="checkout-radio__input">
+														<input class="input" name="home" placeholder="Дом, корпус">
+													</div>
+													<div class="checkout-radio__input">
+														<input class="input" name="flat" placeholder="Квартира/офис">
+													</div>
+												</div>
+											</div>
+										</div>
+									</label>
+									<label class="checkout-form__item-radio checkout-radio checkout-delivery">
+										<input class="radio-box" type="radio" name="delivery" checked>
+										<span class="radio-style"></span>
+										<div class="checkout-radio__content">
+											<div>
+												<div class="checkout-radio__title">Доставка в пункты выдачи заказов и
+													постаматы
+												</div>
+												<dl class="checkout-radio__list">
+													<div>
+														<dt>Стоимость доставки:</dt>
+														<dd>0 руб</dd>
+													</div>
+													<div>
+														<dt>Доставка осуществляется в течении:</dt>
+														<dd>1 дня</dd>
+													</div>
+												</dl>
+											</div>
+											<div class="checkout-delivery__data">
+												<a href="#" class="btn checkout-delivery__btn btn--border">Изменить
+													пункт выдачи</a>
+												<input class="input checkout-delivery__input"
+													value="г. Санкт-Петербург, Магазин, ул. Боровая, 5,">
+												<div class="checkout-delivery__date">
+													<label class="checkout-delivery__label" for="delivery_date">Дата
+														доставки</label>
+													<input class="input checkout-delivery__input"
+														value="24 ноября, Среда" id="delivery_date"
+														name="delivery_date">
+													<small>Часы работы: пн-вс: 10:00-21:00</small>
+												</div>
+											</div>
+											<!-- <div class="checkout-radio__hidden">
+												<a data-fancybox href="#pickup-popup" class="btn checkout-radio__btn">
+													Выберите пункт выдачи
+												</a>
+											</div> -->
+										</div>
+									</label>
+								</div>
+							</fieldset>
+							<fieldset class="checkout-form__item">
+								<legend class="checkout-form__item-title">Способ оплаты</legend>
+								<div class="checkout-form__radios">
+									<label
+										class="checkout-form__item-radio checkout-radio checkout-radio--without-border">
+										<input class="radio-box" type="radio" name="payment">
+										<span class="radio-style"></span>
+										<div class="checkout-radio__content">
+											<div class="checkout-radio__title">Оплата при получении</div>
+											<div class="checkout-radio__hidden">
+												<p>Наличными или банковской картой при получении</p>
+											</div>
+										</div>
+									</label>
+									<label
+										class="checkout-form__item-radio checkout-radio checkout-radio--without-border">
+										<input class="radio-box" type="radio" name="payment">
+										<span class="radio-style"></span>
+										<div class="checkout-radio__content">
+											<div class="checkout-radio__title">Картой онлайн</div>
+											<div class="checkout-radio__hidden">
+												<p><a href="#">Перейти к оплате через сервис</a></p>
+											</div>
+										</div>
+									</label>
+								</div>
+							</fieldset>
+							<!-- <textarea class="input checkout-form__comment" name="order_comment"
+			placeholder="Комментарий к заказу"></textarea> -->
+							<input class="input checkout-form__comment" name="order_comment"
+								placeholder="Комментарий к заказу">
+						</form>
+					</section>
+
+				</div>
+			</form>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/popup/region-popup.html")
+	@@include("blocks/popup/product-popup.html")
+	@@include("blocks/pickup-popup/pickup-popup.html")
+</div>
+@@include("blocks/link/link.html")

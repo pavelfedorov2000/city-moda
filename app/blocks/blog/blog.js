@@ -6,10 +6,7 @@ app.blog = {
 			loop: true,
 			spaceBetween: 27,
 			speed: 1000,
-			/* pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			}, */
+			lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',

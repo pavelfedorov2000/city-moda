@@ -7,6 +7,12 @@ app.popups = {
 			$('.header__region').text($(this).text());
 		});
 
+		$('.cart-btn').on('click', function () {
+			$('body').addClass('_lock');
+			$('.overlay').fadeIn('slow');
+			$('#drop-basket').addClass('active');
+		});
+
 		$('#auth input').on('change', function () {
 			if ($(this).val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
 				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
@@ -29,12 +35,6 @@ app.popups = {
 			$('body').removeClass('_lock');
 		});
 
-		$(document).ready(function () {
-			if ($('.aside-popup').hasClass('active')) {
-				$('body').addClass('_lock');
-			}
-		});
-
 		//&& $('input[name="user-agreement"]').is(':checked')
 
 		// password input eye toggle
@@ -49,7 +49,5 @@ app.popups = {
 				$(this).addClass('show');
 			}
 		});
-
-		// ymaps
 	},
 };

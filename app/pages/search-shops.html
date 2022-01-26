@@ -1,0 +1,57 @@
+@@include("blocks/head/head.html", {"title": "Найти магазины"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page search-shops">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Найти магазины</span>
+					</li>
+				</ol>
+			</nav>
+
+			<h1 class="title page__title">Найти магазины</h1>
+
+			<div id="shops-map"></div>
+
+			<div class="search-shops__grid">
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+				@@include("blocks/shop-item/shop-item.html")
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/popup/region-popup.html")
+	@@include("blocks/popup/product-popup.html")
+</div>
+@@include("blocks/link/link.html")

@@ -79,6 +79,10 @@
 	// .personal-data-form__input
 
 	&__input {
+		>* {
+			width: 100%;
+		}
+
 		&:last-child {
 			@media(min-width: 768px) {
 				grid-column: span 2;
@@ -124,9 +128,11 @@
 	// .checkout-radio__content
 
 	&__content {
+		width: 100%;
 		display: grid;
 		grid-gap: 2rem;
 		margin-left: 2rem;
+		justify-items: flex-start;
 	}
 
 	// .checkout-radio__title
@@ -180,6 +186,12 @@
 		}
 	}
 
+	&__input {
+		>* {
+			width: 100%;
+		}
+	}
+
 	// .checkout-radio__btn
 
 	&__btn {
@@ -194,5 +206,41 @@
 		.checkout-radio__content {
 			grid-gap: 1rem;
 		}
+	}
+}
+
+.checkout-delivery {
+	&__data {
+		width: 100%;
+		display: grid;
+		grid-template-columns: 24.2rem 1fr;
+		grid-gap: 2.4rem 3rem;
+	}
+
+	&__btn {
+		@extend %text-14;
+		font-weight: 500;
+	}
+
+	&__label {
+		@extend %text-13;
+		font-weight: 600;
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__date {
+		small {
+			@extend %text-12;
+			display: block;
+			margin-top: 0.8rem;
+		}
+	}
+
+	&__input {
+		width: 100%;
 	}
 }

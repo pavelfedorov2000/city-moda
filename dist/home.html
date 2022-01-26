@@ -31,11 +31,9 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
 	<!--Styles-->
-	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.css" /> -->
 	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/animate.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
-	<!-- <link rel="stylesheet" href="./assets/libs/css/lightgallery.min.css"> -->
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
@@ -448,13 +446,13 @@
 								</svg>
 								<span>Избранное</span>
 							</a>
-							<a href="#" class="header__action">
+							<button class="header__action cart-btn" type="button">
 								<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.9933 15.1668H4.99996C3.85329 15.1668 2.99329 14.8602 2.45996 14.2535C1.92662 13.6468 1.71995 12.7668 1.85995 11.6268L2.45996 6.62683C2.63329 5.1535 3.00663 3.8335 5.60662 3.8335H10.4066C13 3.8335 13.3733 5.1535 13.5533 6.62683L14.1533 11.6268C14.2866 12.7668 14.0866 13.6535 13.5533 14.2535C13 14.8602 12.1466 15.1668 10.9933 15.1668Z" fill="#101112" />
 									<path d="M10.6673 5.8335C10.394 5.8335 10.1673 5.60683 10.1673 5.3335V3.00016C10.1673 2.28016 9.72065 1.8335 9.00065 1.8335H7.00065C6.28065 1.8335 5.83398 2.28016 5.83398 3.00016V5.3335C5.83398 5.60683 5.60732 5.8335 5.33398 5.8335C5.06065 5.8335 4.83398 5.60683 4.83398 5.3335V3.00016C4.83398 1.72683 5.72732 0.833496 7.00065 0.833496H9.00065C10.274 0.833496 11.1673 1.72683 11.1673 3.00016V5.3335C11.1673 5.60683 10.9407 5.8335 10.6673 5.8335Z" fill="#101112" />
 								</svg>
 								<span>Корзина <span class="header__cart-num">(2)</span></span>
-							</a>
+							</button>
 						</div>
 					</div>
 					<div class="header__main-bottom">
@@ -733,79 +731,79 @@
 						<div class="swiper-wrapper">
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/01.png" alt="Пуховик">
+									<img class="lazy" data-src="assets/images/content/icons-slider/01.png" alt="Пуховик">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Пуховики</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".2s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/02.png" alt="Джемпер">
+									<img class="lazy" data-src="assets/images/content/icons-slider/02.png" alt="Джемпер">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Джемперы</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".4s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/03.png" alt="Платье">
+									<img class="lazy" data-src="assets/images/content/icons-slider/03.png" alt="Платье">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Платья</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".6s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/04.png" alt="Джинсы">
+									<img class="lazy" data-src="assets/images/content/icons-slider/04.png" alt="Джинсы">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Джинсы</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".8s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/05.png" alt="Худи">
+									<img class="lazy" data-src="assets/images/content/icons-slider/05.png" alt="Худи">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Худи</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/06.png" alt="Сумка">
+									<img class="lazy" data-src="assets/images/content/icons-slider/06.png" alt="Сумка">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Сумки</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.2s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/07.png" alt="Перчатки">
+									<img class="lazy" data-src="assets/images/content/icons-slider/07.png" alt="Перчатки">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Перчатки</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.4s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/08.png" alt="Шапка">
+									<img class="lazy" data-src="assets/images/content/icons-slider/08.png" alt="Шапка">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Головные уборы</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.6s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/01.png" alt="Пуховик">
+									<img class="lazy" data-src="assets/images/content/icons-slider/01.png" alt="Пуховик">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Пуховики</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.8s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/02.png" alt="Джемпер">
+									<img class="lazy" data-src="assets/images/content/icons-slider/02.png" alt="Джемпер">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Джемперы</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="2s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/03.png" alt="Платье">
+									<img class="lazy" data-src="assets/images/content/icons-slider/03.png" alt="Платье">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Платья</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="2.2s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/04.png" alt="Джинсы">
+									<img class="lazy" data-src="assets/images/content/icons-slider/04.png" alt="Джинсы">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Джинсы</a></h6>
 							</div>
 							<div class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="2.4s">
 								<a href="#" class="icons-slider__item-img">
-									<img src="assets/images/content/icons-slider/05.png" alt="Худи">
+									<img class="lazy" data-src="assets/images/content/icons-slider/05.png" alt="Худи">
 								</a>
 								<h6 class="icons-slider__item-title"><a href="#">Худи</a></h6>
 							</div>
@@ -838,7 +836,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/01.jpg' alt='Пуховик'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/01.jpg' alt='Пуховик'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -866,7 +864,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/02.jpg' alt='Джемпер'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/02.jpg' alt='Джемпер'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -891,7 +889,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/03.jpg' alt='Юбка'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/03.jpg' alt='Юбка'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -919,7 +917,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -947,7 +945,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/02.jpg' alt='Джемпер'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/02.jpg' alt='Джемпер'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -972,7 +970,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1041,12 +1039,12 @@
 						</a>
 					</div>
 					<div class="brands__inner">
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" src='assets/images/logo/brands/rio-verti.jpg' alt='Rio Verti'>
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".3s" src='assets/images/logo/brands/minoti.jpg' alt='Minoti'>
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".6s" src='assets/images/logo/brands/viola-stils.jpg' alt='Viola Stils'>
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".9s" src='assets/images/logo/brands/deja.jpg' alt='Deja Fashion'>
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.2s" src='assets/images/logo/brands/bibi.jpg' alt='Bibi'>
-						<img class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.5s" src='assets/images/logo/brands/zaza.jpg' alt='Zaza'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-src='assets/images/logo/brands/rio-verti.jpg' alt='Rio Verti'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".3s" data-src='assets/images/logo/brands/minoti.jpg' alt='Minoti'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".6s" data-src='assets/images/logo/brands/viola-stils.jpg' alt='Viola Stils'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay=".9s" data-src='assets/images/logo/brands/deja.jpg' alt='Deja Fashion'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.2s" src='assets/images/logo/brands/bibi.jpg' alt='Bibi'>
+						<img class="lazy brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s" data-wow-delay="1.5s" data-src='assets/images/logo/brands/zaza.jpg' alt='Zaza'>
 					</div>
 				</div>
 			</section>
@@ -1075,7 +1073,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1100,7 +1098,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/03.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/03.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1125,7 +1123,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/02.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/02.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1150,7 +1148,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/01.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/01.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1175,7 +1173,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/04.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1200,7 +1198,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/03.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/03.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1225,7 +1223,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/02.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/02.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1250,7 +1248,7 @@
 									<span class="label catalog-card__label label--new">new</span>
 									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 									<div class="catalog-card__img">
-										<img src='assets/images/content/catalog-slider/01.jpg' alt='Пальто'>
+										<img class="lazy" data-src='assets/images/content/catalog-slider/01.jpg' alt='Пальто'>
 										<div class="catalog-card__info">
 											<div class="catalog-card__sizes">
 												<span class="catalog-card__size">42</span>
@@ -1281,7 +1279,7 @@
 							Свитеры и жилетки.<br>
 							Зима 2022
 						</h2>
-						<div class="promo-collection__img"><img src="assets/images/content/collection.jpg" alt="жилетка"></div>
+						<div class="promo-collection__img"><img class="lazy" data-src="assets/images/content/collection.jpg" alt="жилетка"></div>
 						<a href="#" class="all-link promo-collection__link">
 							Смотреть коллекцию
 							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1305,7 +1303,7 @@
 					<div class="blog-grid">
 						<article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow" data-wow-duration="1.5s">
 							<a href="#" class="blog-item__img">
-								<img src='assets/images/content/blog/01.jpg' alt='фото блога'>
+								<img class="lazy" data-src='assets/images/content/blog/01.jpg' alt='фото блога'>
 							</a>
 							<div class="blog-item__content">
 								<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
@@ -1325,7 +1323,7 @@
 						</article>
 						<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay=".5s">
 							<a href="#" class="blog-item__img">
-								<img src='assets/images/content/blog/02.jpg' alt='фото блога'>
+								<img class="lazy" data-src='assets/images/content/blog/02.jpg' alt='фото блога'>
 							</a>
 							<div class="blog-item__content">
 								<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
@@ -1345,7 +1343,7 @@
 						</article>
 						<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow" data-wow-duration="1.5s" data-wow-delay="1s">
 							<a href=" #" class="blog-item__img">
-								<img src='assets/images/content/blog/03.jpg' alt='фото блога'>
+								<img class="lazy" data-src='assets/images/content/blog/03.jpg' alt='фото блога'>
 							</a>
 							<div class="blog-item__content">
 								<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
@@ -1386,28 +1384,28 @@
 					<div class="swiper instagram-slider">
 						<div class="swiper-wrapper">
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s">
-								<img src='assets/images/content/instagram/01.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/01.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay=".3s">
-								<img src='assets/images/content/instagram/02.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/02.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay=".6s">
-								<img src='assets/images/content/instagram/03.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/03.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay=".9s">
-								<img src='assets/images/content/instagram/04.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/04.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1.2s">
-								<img src='assets/images/content/instagram/01.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/01.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1.5s">
-								<img src='assets/images/content/instagram/02.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/02.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="1.8s">
-								<img src='assets/images/content/instagram/03.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/03.jpg' alt='фото'>
 							</a>
 							<a href="#" class="swiper-slide animate__animated animate__fadeInUp wow" data-wow-duration="1.5s" data-wow-delay="2.1s">
-								<img src='assets/images/content/instagram/04.jpg' alt='фото'>
+								<img class="lazy" data-src='assets/images/content/instagram/04.jpg' alt='фото'>
 							</a>
 						</div>
 					</div>
@@ -1616,19 +1614,19 @@
 					<div class="footer__payment">
 						<ul class="footer__payment-list">
 							<li class="footer__payment-item">
-								<img src='assets/images/logo/payment/mastercard.svg' alt='mastercard'>
+								<img class="lazy" data-src='assets/images/logo/payment/mastercard.svg' alt='mastercard'>
 							</li>
 							<li class="footer__payment-item">
-								<img src='assets/images/logo/payment/visa.png' alt='mastercard'>
+								<img class="lazy" data-src='assets/images/logo/payment/visa.png' alt='mastercard'>
 							</li>
 							<li class="footer__payment-item">
-								<img src='assets/images/logo/payment/mir.png' alt='mastercard'>
+								<img class="lazy" data-src='assets/images/logo/payment/mir.png' alt='mastercard'>
 							</li>
 							<li class="footer__payment-item">
-								<img src='assets/images/logo/payment/gpay.png' alt='mastercard'>
+								<img class="lazy" data-src='assets/images/logo/payment/gpay.png' alt='mastercard'>
 							</li>
 							<li class="footer__payment-item">
-								<img src='assets/images/logo/payment/ipay.png' alt='mastercard'>
+								<img class="lazy" data-src='assets/images/logo/payment/ipay.png' alt='mastercard'>
 							</li>
 						</ul>
 						<div class="footer__payment-descr">
@@ -1642,6 +1640,259 @@
 				</div>
 			</div>
 		</footer>
+		<div class="overlay">
+			<div id="auth-popup" class="aside-popup">
+				<button class="aside-popup__close" type="button">
+					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
+					</svg>
+				</button>
+				<h3 class="aside-popup__title">Авторизация</h3>
+				<div class="aside-popup__text">
+					Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными
+					скидками и
+					баллами.
+				</div>
+				<div class="tabs aside-popup__tabs">
+					<a href="#auth" class="tab aside-popup__tab tab--active">Вход</a>
+					<a href="#register" class="tab aside-popup__tab">Регистрация</a>
+				</div>
+				<div id="auth" class="tabs-content aside-popup__content tabs-content--active">
+					<div class="aside-popup__body">
+						<div id="phone-enter">
+							<form action="#" class="aside-popup__form">
+								<div class="aside-popup__form-inputs">
+									<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Введите номер телефона">
+								</div>
+								<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+							</form>
+							<button data-enter="login-enter" class="aside-popup__link-btn" type="button">
+								Войти с помощью e-mail и паролю
+							</button>
+						</div>
+						<div id="login-enter">
+							<form action="#" class="aside-popup__form">
+								<div class="aside-popup__form-inputs">
+									<input class="input aside-popup__form-input" type="email" placeholder="Введите e-mail">
+									<div class="input-wrap">
+										<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+										<button class="pass-btn show" type="button"></button>
+									</div>
+								</div>
+								<div class="aside-popup__form-wrap">
+									<label class="form-agree">
+										<input class="check-box" type="checkbox">
+										<span class="check-style"></span>
+										<span class="check-text">
+											Запомнить меня
+										</span>
+									</label>
+									<button class="remind-password" type="button">
+										Напомнить пароль
+									</button>
+								</div>
+								<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+							</form>
+							<button data-enter="phone-enter" class="aside-popup__link-btn" type="button">
+								Войти с помощью номера телефона
+							</button>
+						</div>
+					</div>
+					<div class="aside-popup__social">
+						<div class="aside-popup__social-title ">
+							Или войдите через
+						</div>
+						<ul class="social aside-popup__social-list">
+							<li class="social__item aside-popup__social-item">
+								<a href="#" class="social__link">
+									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.6641 18.7969H29.3984C29.534 19.3546 29.6047 19.9261 29.6094 20.5C29.6094 26.4688 25.3516 29.875 20.6641 29.875C19.1463 29.8785 17.6504 29.5133 16.3049 28.811C14.9593 28.1087 13.8044 27.0903 12.9394 25.8431C12.0744 24.5959 11.5251 23.1574 11.3387 21.6511C11.1524 20.1448 11.3345 18.6158 11.8695 17.1954C12.4045 15.7751 13.2764 14.5058 14.4102 13.4968C15.544 12.4878 16.9058 11.7691 18.3787 11.4025C19.8515 11.036 21.3914 11.0325 22.8659 11.3924C24.3404 11.7523 25.7054 12.4648 26.8438 13.4688L24.1172 16.1953C23.1425 15.3987 21.9229 14.9627 20.6641 14.9609C19.195 14.9609 17.7861 15.5445 16.7474 16.5833C15.7086 17.6221 15.125 19.031 15.125 20.5C15.125 21.9691 15.7086 23.3779 16.7474 24.4167C17.7861 25.4555 19.195 26.0391 20.6641 26.0391C23.2656 26.0391 25.2266 24.7188 25.6953 22.4141H20.6641V18.7969Z" fill="#101112" />
+									</svg>
+								</a>
+							</li>
+							<li class="social__item aside-popup__social-item">
+								<a class="social__link" href="#">
+									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM16.8763 20.001C16.8763 18.2807 18.2802 16.8768 20.0005 16.8768C21.7208 16.8768 23.1247 18.2807 23.1247 20.001C23.1247 21.7214 21.7208 23.1253 20.0005 23.1253C18.2802 23.1253 16.8763 21.7214 16.8763 20.001ZM29.3711 19.5278C29.371 19.6854 29.3708 19.8431 29.3708 20.001C29.3708 20.1776 29.3711 20.354 29.3713 20.5302C29.373 21.6449 29.3746 22.7531 29.3099 23.8682C29.2372 25.3682 28.8974 26.6971 27.7981 27.7964C26.7013 28.8932 25.37 29.2354 23.87 29.3081C22.7362 29.3719 21.6096 29.3706 20.476 29.3694C20.3184 29.3692 20.1607 29.369 20.0028 29.369C19.8453 29.369 19.6878 29.3692 19.5305 29.3694C18.3984 29.3706 17.2715 29.3719 16.1356 29.3081C14.6356 29.2354 13.3067 28.8956 12.2075 27.7964C11.1106 26.6995 10.7685 25.3682 10.6958 23.8682C10.632 22.7344 10.6333 21.606 10.6345 20.4735C10.6347 20.3161 10.6349 20.1586 10.6349 20.001C10.6349 19.8435 10.6347 19.686 10.6345 19.5287C10.6333 18.3966 10.632 17.2697 10.6958 16.1339C10.7685 14.6339 11.1083 13.305 12.2075 12.2057C13.3044 11.1089 14.6356 10.7667 16.1356 10.694C17.2694 10.6302 18.396 10.6315 19.5296 10.6327C19.6872 10.6329 19.8449 10.6331 20.0028 10.6331C20.1604 10.6331 20.3179 10.6329 20.4752 10.6327C21.6073 10.6315 22.7341 10.6302 23.87 10.694C25.37 10.7667 26.6989 11.1065 27.7981 12.2057C28.895 13.3026 29.2372 14.6339 29.3099 16.1339C29.3736 17.2676 29.3724 18.3942 29.3711 19.5278ZM15.1935 20.001C15.1935 22.6612 17.3403 24.8081 20.0005 24.8081C22.6606 24.8081 24.8075 22.6612 24.8075 20.001C24.8075 17.3409 22.6606 15.194 20.0005 15.194C17.3403 15.194 15.1935 17.3409 15.1935 20.001ZM23.8817 14.9971C23.8817 15.6182 24.3833 16.1198 25.0044 16.1198C25.1519 16.12 25.2979 16.0911 25.4342 16.0347C25.5705 15.9784 25.6944 15.8957 25.7986 15.7914C25.9029 15.6871 25.9856 15.5633 26.042 15.427C26.0983 15.2907 26.1272 15.1446 26.127 14.9971C26.127 14.376 25.6255 13.8745 25.0044 13.8745C24.3833 13.8745 23.8817 14.376 23.8817 14.9971Z" fill="#101112" />
+									</svg>
+								</a>
+							</li>
+							<li class="social__item aside-popup__social-item">
+								<a class="social__link" href="#">
+									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM30.6553 15C31.4494 15 31.6163 15.4016 31.4493 15.9479V15.9481C31.1155 17.4509 27.9168 21.8771 27.9168 21.8771C27.6385 22.3141 27.5272 22.5326 27.9168 23.0244C28.0538 23.2129 28.3463 23.4944 28.681 23.8165C29.0254 24.1478 29.4144 24.5221 29.7247 24.8823C30.8526 26.1287 31.7025 27.1798 31.9392 27.9045C32.1556 28.6316 31.7806 29 31.0304 29H28.4048C27.7016 29 27.3475 28.6131 26.5827 27.7774C26.2583 27.4229 25.86 26.9877 25.3298 26.4669C23.7719 24.9916 23.1044 24.8004 22.7147 24.8004C22.1864 24.8004 22.0283 24.9474 22.0283 25.6842V27.997C22.0283 28.6316 21.822 29 20.1528 29C17.3712 29 14.3146 27.341 12.1447 24.2813C8.89027 19.8005 8 16.4125 8 15.7295C8 15.3469 8.15003 15 8.90021 15H11.5258C12.1969 15 12.4493 15.2885 12.701 16.0027C13.9853 19.6767 16.1503 22.8879 17.0404 22.8879C17.3742 22.8879 17.5272 22.7368 17.5272 21.9042V18.1063C17.4669 17.0254 17.0825 16.5579 16.7978 16.2117C16.6219 15.9978 16.4841 15.8302 16.4841 15.5928C16.4841 15.3043 16.735 15 17.1521 15H21.2781C21.8345 15 22.0283 15.2922 22.0283 15.9479V21.0572C22.0283 21.6036 22.2698 21.7946 22.4367 21.7946C22.7706 21.7946 23.0487 21.6036 23.6607 21.0025C25.5522 18.9261 26.8875 15.7295 26.8875 15.7295C27.0544 15.3469 27.362 15 28.0297 15H30.6553Z" fill="#101112" />
+									</svg>
+								</a>
+							</li>
+							<li class="social__item aside-popup__social-item">
+								<a class="social__link" href="#">
+									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.8642 21.1037V29.6545L17.4229 29.6545V21.1038H14.5455V17.7715H17.423V15.3139C17.423 12.462 19.1648 10.9091 21.709 10.9091C22.9276 10.9091 23.975 10.9998 24.2803 11.0403V14.0207L22.5157 14.0215C21.1321 14.0215 20.8642 14.679 20.8642 15.6438V17.7714H24.164L23.7343 21.1037H20.8642Z" fill="#101112" />
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div id="register" class="tabs-content aside-popup__content">
+					<form action="#" class="aside-popup__form">
+						<div class="aside-popup__form-inputs">
+							<input class="input aside-popup__form-input" name="name" placeholder="Имя*">
+							<input class="input aside-popup__form-input" name="surname" placeholder="Фамилия">
+							<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Ваш телефон">
+							<input class="input aside-popup__form-input" name="email" type="email" placeholder="Ваш e-mail">
+							<div class="input-wrap">
+								<input id="password" class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+								<button class="pass-btn show" type="button"></button>
+							</div>
+							<div class="input-wrap">
+								<input class="input aside-popup__form-input" type="password" name="repeat_password" placeholder="Повторите пароль">
+								<button class="pass-btn show" type="button"></button>
+							</div>
+						</div>
+						<label class="form-agree aside-popup__form-wrap">
+							<input class="check-box" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">
+								Подтверждаю согласие с <a href="#">Политикой конфиденциальности</a> и <a href="#">Правилами
+									работы
+									интернет-магазина</a>, а
+								также даю согласие на
+								<a href="#">обработку персональных данных</a>
+							</span>
+						</label>
+						<button class="btn aside-popup__form-btn" type="submit">Зарегистрироваться</button>
+					</form>
+				</div>
+			</div>
+			<div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
+				<button class="aside-popup__close" type="button">
+					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
+					</svg>
+				</button>
+				<div class="drop-basket__inner">
+					<h3 class="aside-popup__title">Ваша корзина</h3>
+					<div class="drop-basket__products">
+						<div class="basket-product drop-basket__product">
+							<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
+							<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
+							<dl class="basket-product__list">
+								<div>
+									<dt>Артикул:</dt>
+									<dd>MP002XW08J2L</dt>
+								</div>
+								<div>
+									<dt>Цвет:</dt>
+									<dd>бежевый</dt>
+								</div>
+								<div>
+									<dt>Размер:</dd>
+									<dd>42</dt>
+								</div>
+							</dl>
+							<div class="drop-basket__product-wrap">
+								<button class="basket-product__btn basket-product__btn--delete" type="button">
+									<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g opacity="0.8">
+											<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+										</g>
+									</svg>
+									Удалить
+								</button>
+								<div class="basket-product__counter counter">
+									<button class="minus-btn counter__btn" type="button"></button>
+									<input class="counter__input" type="number" value="1" readonly>
+									<button class="plus-btn counter__btn" type="button"></button>
+								</div>
+								<div class="basket-product__prices-wrap drop-basket__product-prices">
+									<div class="old-price basket-product__old-price">47 800 ₽</div>
+									<div class="new-price">38 240 ₽</div>
+								</div>
+							</div>
+						</div>
+						<div class="basket-product drop-basket__product">
+							<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
+							<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
+							<dl class="basket-product__list">
+								<div>
+									<dt>Артикул:</dt>
+									<dd>MP002XW08J2L</dt>
+								</div>
+								<div>
+									<dt>Цвет:</dt>
+									<dd>бежевый</dt>
+								</div>
+								<div>
+									<dt>Размер:</dd>
+									<dd>42</dt>
+								</div>
+							</dl>
+							<div class="drop-basket__product-wrap">
+								<button class="basket-product__btn basket-product__btn--delete" type="button">
+									<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<g opacity="0.8">
+											<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+										</g>
+									</svg>
+									Удалить
+								</button>
+								<div class="basket-product__counter counter">
+									<button class="minus-btn counter__btn" type="button"></button>
+									<input class="counter__input" type="number" value="1" readonly>
+									<button class="plus-btn counter__btn" type="button"></button>
+								</div>
+								<div class="basket-product__prices drop-basket__product-prices">
+									<div class="basket-product__price drop-basket__product-price">
+										4 300
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="drop-basket__total">
+						<div class="drop-basket__total-title">Товаров на сумму</div>
+						<div class="drop-basket__total-sum">42 540 ₽</div>
+					</div>
+					<div class="drop-basket__empty">
+						Вы еще не добавили товары в корзину
+					</div>
+					<a href="#" class="drop-basket__btn btn">
+						Оформить заказ
+						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="white" />
+						</svg>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div style="display: none;" id="discount-popup" class="popup mini-popup">
+			<div class="mini-popup__inner">
+				<div class="mini-popup__img">
+					<img class="lazy" data-src='assets/images/content/popups/sale-bags.jpg' alt=''>
+				</div>
+				<div class="mini-popup__content">
+					<div class="mini-popup__title">Дарим скидку 10%</div>
+					<div class="mini-popup__subtitle">
+						за подписку
+						на наши новости и акции
+					</div>
+					<form action="#" class="subscribe-form">
+						<div class="form-row subscribe-form__wrap">
+							<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email" required>
+							<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
+						</div>
+						<label class="form-agree">
+							<input class="check-box" type="checkbox" required>
+							<span class="check-style"></span>
+							<span class="check-text">
+								Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
+							</span>
+						</label>
+					</form>
+				</div>
+			</div>
+		</div>
 		<div style="display: none;" id="product-popup" class="popup product-popup">
 			<div class="product-popup__inner">
 				<div class="product-popup__slider swiper">
@@ -1664,13 +1915,13 @@
 						</div>
 					</div>
 					<div class="swiper-pagination"></div>
-					<div class="swiper-button-prev">
+					<div class="swiper-button-prev product-popup__slider-arrow product-popup__slider-arrow--prev">
 						<svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M11.3426 21.4595C11.5504 21.4595 11.7582 21.3829 11.9223 21.2188C12.2395 20.9017 12.2395 20.3767 11.9223 20.0595L5.86289 14.0001L11.9223 7.94072C12.2395 7.62354 12.2395 7.09854 11.9223 6.78135C11.6051 6.46416 11.0801 6.46416 10.7629 6.78135L4.12382 13.4204C3.80664 13.7376 3.80664 14.2626 4.12382 14.5798L10.7629 21.2188C10.927 21.3829 11.1348 21.4595 11.3426 21.4595Z" fill="#101112" />
 							<path d="M4.88906 14.8203H23.2969C23.7453 14.8203 24.1172 14.4484 24.1172 14C24.1172 13.5516 23.7453 13.1797 23.2969 13.1797H4.88906C4.44062 13.1797 4.06875 13.5516 4.06875 14C4.06875 14.4484 4.44062 14.8203 4.88906 14.8203Z" fill="#101112" />
 						</svg>
 					</div>
-					<div class="swiper-button-next">
+					<div class="swiper-button-next product-popup__slider-arrow product-popup__slider-arrow--next">
 						<svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M16.6574 21.4595C16.4496 21.4595 16.2418 21.3829 16.0777 21.2188C15.7605 20.9017 15.7605 20.3767 16.0777 20.0595L22.1371 14.0001L16.0777 7.94072C15.7605 7.62354 15.7605 7.09854 16.0777 6.78135C16.3949 6.46416 16.9199 6.46416 17.2371 6.78135L23.8762 13.4204C24.1934 13.7376 24.1934 14.2626 23.8762 14.5798L17.2371 21.2188C17.073 21.3829 16.8652 21.4595 16.6574 21.4595Z" fill="#101112" />
 							<path d="M23.1109 14.8203H4.70312C4.25469 14.8203 3.88281 14.4484 3.88281 14C3.88281 13.5516 4.25469 13.1797 4.70312 13.1797H23.1109C23.5594 13.1797 23.9312 13.5516 23.9312 14C23.9312 14.4484 23.5594 14.8203 23.1109 14.8203Z" fill="#101112" />
@@ -1734,7 +1985,10 @@
 								<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M9.99984 18.0418C9.7415 18.0418 9.4915 18.0085 9.28317 17.9335C6.09984 16.8418 1.0415 12.9668 1.0415 7.24183C1.0415 4.32516 3.39984 1.9585 6.29984 1.9585C7.70817 1.9585 9.02484 2.5085 9.99984 3.49183C10.9748 2.5085 12.2915 1.9585 13.6998 1.9585C16.5998 1.9585 18.9582 4.3335 18.9582 7.24183C18.9582 12.9752 13.8998 16.8418 10.7165 17.9335C10.5082 18.0085 10.2582 18.0418 9.99984 18.0418ZM6.29984 3.2085C4.0915 3.2085 2.2915 5.01683 2.2915 7.24183C2.2915 12.9335 7.7665 16.1002 9.6915 16.7585C9.8415 16.8085 10.1665 16.8085 10.3165 16.7585C12.2332 16.1002 17.7165 12.9418 17.7165 7.24183C17.7165 5.01683 15.9165 3.2085 13.7082 3.2085C12.4415 3.2085 11.2665 3.80016 10.5082 4.82516C10.2748 5.14183 9.7415 5.14183 9.50817 4.82516C8.73317 3.79183 7.5665 3.2085 6.29984 3.2085Z" fill="#101112" />
 								</svg>
-								В избранное
+								<svg class="favorite" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M9.99984 18.0413C9.7415 18.0413 9.4915 18.008 9.28317 17.933C6.09984 16.8413 1.0415 12.9663 1.0415 7.24134C1.0415 4.32467 3.39984 1.95801 6.29984 1.95801C7.70817 1.95801 9.02484 2.50801 9.99984 3.49134C10.9748 2.50801 12.2915 1.95801 13.6998 1.95801C16.5998 1.95801 18.9582 4.33301 18.9582 7.24134C18.9582 12.9747 13.8998 16.8413 10.7165 17.933C10.5082 18.008 10.2582 18.0413 9.99984 18.0413Z" fill="#EE3333" />
+								</svg>
+								В избранно<span>е</span><span class="favorite">м</span>
 							</button>
 						</div>
 					</form>
@@ -1822,7 +2076,7 @@
 		<div style="display: none;" id="region-popup" class="popup region-popup">
 			<div class="region-popup__inner">
 				<div class="region-popup__img">
-					<img src='assets/images/content/popups/region-popup.jpg' alt=''>
+					<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
 				</div>
 				<div class="region-popup__content">
 					<div class="region-popup__title">Где вы находитесь?</div>
@@ -1915,9 +2169,9 @@
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>
 	<script src="./assets/libs/js/jquery.validate.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js" type="text/javascript"></script>
-	<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.5.0/dist/lazyload.min.js"></script>
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/wow.min.js"></script>
+	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 </body>

@@ -65,7 +65,6 @@
 	&__item {
 		padding: 2rem 0;
 		border-bottom: 0.1rem solid #EAEAEA;
-		display: grid;
 		grid-template-areas:
 			"image . title . counter . prices"
 			"image . . . counter . prices"
@@ -99,6 +98,7 @@
 
 .basket-product {
 
+	display: grid;
 	// .basket-product__img
 
 	&__img {

@@ -4,11 +4,21 @@
 		<fieldset class="checkout-form__item personal-data-form">
 			<legend class="checkout-form__item-title">Персональные данные</legend>
 			<div class="personal-data-form__inputs">
-				<input class="personal-data-form__input input" placeholder="Имя*">
-				<input class="personal-data-form__input input" placeholder="Фамилия*">
-				<input class="personal-data-form__input input" placeholder="Ваш телефон*">
-				<input class="personal-data-form__input input" placeholder="Ваш e-mail*">
-				<input class="personal-data-form__input input" placeholder="Город, населенный пункт*">
+				<div class="personal-data-form__input">
+					<input class="input" name="name" placeholder="Имя*">
+				</div>
+				<div class="personal-data-form__input">
+					<input class="input" name="surname" placeholder="Фамилия*">
+				</div>
+				<div class="personal-data-form__input">
+					<input class="input" type="tel" name="phone" placeholder="Ваш телефон*">
+				</div>
+				<div class="personal-data-form__input">
+					<input class="input" type="email" name="email" placeholder="Ваш e-mail*">
+				</div>
+				<div class="personal-data-form__input">
+					<input class="input" name="city" placeholder="Город, населенный пункт*">
+				</div>
 			</div>
 		</fieldset>
 		<fieldset class="checkout-form__item">
@@ -33,10 +43,18 @@
 						</div>
 						<div class="checkout-radio__hidden">
 							<div class="checkout-radio__inputs">
-								<input class="input" placeholder="Индекс">
-								<input class="input" placeholder="Улица">
-								<input class="input" placeholder="Дом, корпус">
-								<input class="input" placeholder="Квартира/офис">
+								<div class="checkout-radio__input">
+									<input class="input" name="index" placeholder="Индекс">
+								</div>
+								<div class="checkout-radio__input">
+									<input class="input" name="street" placeholder="Улица">
+								</div>
+								<div class="checkout-radio__input">
+									<input class="input" name="home" placeholder="Дом, корпус">
+								</div>
+								<div class="checkout-radio__input">
+									<input class="input" name="flat" placeholder="Квартира/офис">
+								</div>
 							</div>
 						</div>
 					</div>

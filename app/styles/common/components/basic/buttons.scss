@@ -73,6 +73,14 @@
 	}
 }
 
+a.btn {
+	@media (any-hover: hover) {
+		&:hover {
+			color: #fff;
+		}
+	}
+}
+
 .popup-link {
 	@extend %text-12;
 	line-height: 1.4rem;
@@ -109,9 +117,11 @@
 
 	@media (any-hover: hover) {
 		&:hover {
+			color: $green;
+
 			svg {
 				path {
-					fill: $red;
+					fill: $green;
 				}
 			}
 		}

@@ -6,9 +6,14 @@
 		<div class="_progress">
 			<div class="_progress__inner">
 				<a href="home.html" class="_progress__link" target="_blank">Главная</a>
-				<a href="catalog.html" class="_progress__link" target="_blank">Каталог</a>
+				<a href="catalog.html" class="_progress__link" target="_blank">Каталог (бед адаптива)</a>
 				<a href="product-card.html" class="_progress__link" target="_blank">Карточка товара</a>
 				<a href="basket.html" class="_progress__link" target="_blank">Корзина / оформление заказа</a>
+				<a href="basket-delivery.html" class="_progress__link" target="_blank">Оформление заказа (выбран пункт
+					выдачи)</a>
+				<a href="drop-basket.html" class="_progress__link" target="_blank">Выезжающая корзина</a>
+				<a href="drop-basket-empty.html" class="_progress__link" target="_blank">Выезжающая корзина пустая</a>
+				<!-- <a href="pickup.html" class="_progress__link" target="_blank">Выбрать пункт самовывоза</a> -->
 				<a href="brands.html" class="_progress__link" target="_blank">Бренды</a>
 				<a href="blog.html" class="_progress__link" target="_blank">Блог</a>
 				<a href="blog-text.html" class="_progress__link" target="_blank">Блог текстовая</a>
@@ -24,10 +29,16 @@
 				<a href="about-company.html" class="_progress__link" target="_blank">О компании</a>
 				<a href="contacts.html" class="_progress__link" target="_blank">Контакты</a>
 				<a href="feedback.html" class="_progress__link" target="_blank">Обратная связь</a>
+				<a href="search-shops.html" class="_progress__link" target="_blank">Поиск магазинов</a>
 			</div>
 		</div>
 	</main>
 </div>
 @@include("blocks/footer/footer.html")
+<div class="overlay">
+	@@include("blocks/auth/auth.html")
+	@@include("blocks/drop-basket/drop-basket.html")
+</div>
+@@include("blocks/popup/discount-popup.html")
 @@include("blocks/popup/region-popup.html")
 @@include("blocks/link/link.html")

@@ -21,6 +21,7 @@
 	// .header__action
 
 	&__action {
+		@extend %text-16;
 		@extend %vertical-align;
 		font-weight: 600;
 		transition: .3s color;

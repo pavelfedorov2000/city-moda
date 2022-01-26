@@ -1,7 +1,11 @@
-app.yourScriptName = {
-  name: 'yourScriptName',
+app.basketTotal = {
+  name: 'basketTotal',
   description: 'your script description',
   init() {
-    // your code
+    $('input[name=promocode]').on('change', function () {
+      if ($(this).val() !== 0) {
+        $(this).addClass('valid');
+      }
+    });
   },
 };

@@ -224,7 +224,7 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow"
 						data-wow-duration="1.5s">
 						<a href="#" class="blog-item__img">
-							<img src='assets/images/content/blog/01.jpg' alt='фото блога'>
+							<img class="lazy" data-src='assets/images/content/blog/01.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
@@ -245,7 +245,7 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
 						data-wow-duration="1.5s" data-wow-delay=".5s">
 						<a href="#" class="blog-item__img">
-							<img src='assets/images/content/blog/02.jpg' alt='фото блога'>
+							<img class="lazy" data-src='assets/images/content/blog/02.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
@@ -266,7 +266,7 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
 						data-wow-duration="1.5s" data-wow-delay="1s">
 						<a href=" #" class="blog-item__img">
-							<img src='assets/images/content/blog/03.jpg' alt='фото блога'>
+							<img class="lazy" data-src='assets/images/content/blog/03.jpg' alt='фото блога'>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
@@ -324,6 +324,11 @@
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
 	@@include("blocks/popup/product-popup.html")
 	@@include("blocks/popup/region-popup.html")
 </div>

@@ -1,3 +1,132 @@
 .drop-basket {
-  // your code
+	@extend %flex-col;
+
+	&__inner {
+		@extend %flex-col;
+		flex-grow: 1;
+		//padding-bottom: 4rem + 6.4rem;
+		position: relative;
+	}
+
+	&__empty {
+		display: none;
+		@extend %text-16;
+		color: #9B9B9B;
+		text-align: center;
+		justify-self: center;
+		flex-grow: 1;
+	}
+
+	&__title {
+		flex-grow: 1;
+	}
+
+	&__products {
+		flex-grow: 1;
+		margin-bottom: 5rem;
+	}
+
+	&__product {
+		column-gap: 1.5rem;
+		padding-bottom: 1.7rem;
+		border-bottom: 0.1rem solid #EFEFEF;
+		grid-template-areas:
+			"image title"
+			"image ."
+			"image list"
+			"image ."
+			"image bottom"
+		;
+		grid-template-columns: 11rem auto;
+		grid-template-rows: max-content 1.4rem max-content 0.2rem max-content;
+
+		@media(max-width: 767px) {
+			grid-template-areas:
+				"image title"
+				"image ."
+				"image list"
+				"bottom bottom"
+			;
+			grid-template-columns: 11rem auto;
+			grid-template-rows: max-content 1.4rem max-content max-content;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2.6rem;
+		}
+	}
+
+	&__product-wrap {
+		grid-area: bottom;
+		@extend %flex-row;
+		align-items: flex-end;
+	}
+
+	&__product-prices {
+		flex-direction: column;
+		text-align: right;
+	}
+
+	&__product-price {
+		align-items: flex-end;
+	}
+
+	&__total {
+		@extend %flex-row;
+		@extend %text-16;
+		font-weight: 600;
+
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+
+	&__btn {
+		//position: absolute;
+		//bottom: 0;
+		//left: 0;
+		//right: 0;
+		position: relative;
+		padding: 2rem;
+		@extend %flex-center;
+		@extend %text-16;
+		font-weight: 600;
+
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 5rem;
+			height: 100%;
+			background-color: $green;
+			transition: .3s background-color;
+		}
+
+		&:before {
+			left: -5rem;
+		}
+
+		&:after {
+			right: -5rem;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+
+				&:before,
+				&:after {
+					background-color: #2D703C;
+				}
+			}
+		}
+
+		svg {
+			width: 5.6rem;
+			height: 1.6rem;
+			margin-left: 1rem;
+		}
+	}
 }

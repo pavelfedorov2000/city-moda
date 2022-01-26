@@ -2,7 +2,7 @@
 <div class="wrapper">
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
-	<main class="page profile-page">
+	<main class="page profile-page contacts-page">
 		<div class="container">
 			<nav class="breadcrumbs" aria-label="breadcrumbs">
 				<ol class="breadcrumbs__list">
@@ -133,6 +133,11 @@
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
 	@@include("blocks/popup/region-popup.html")
 	@@include("blocks/popup/password-change.html")
 </div>

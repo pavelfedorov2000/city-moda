@@ -13,7 +13,7 @@
 		@extend %text-14;
 		max-width: 33.3rem;
 
-		strong {
+		a {
 			font-weight: 600;
 		}
 
@@ -100,5 +100,16 @@
 				}
 			}
 		}
+	}
+}
+
+input[name=promocode] {
+	text-transform: uppercase;
+
+	&.valid {
+		background-image: url(../images/icons/green-check.svg);
+		background-size: 1.6rem 1.6rem;
+		background-position: calc(100% - 5.2rem - 2rem) 50%;
+		background-repeat: no-repeat;
 	}
 }

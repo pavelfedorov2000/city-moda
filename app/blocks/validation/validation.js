@@ -34,7 +34,12 @@ app.validation = {
 					repeat_new_password: {
 						required: true,
 						equalTo: '#new_password',
-					}
+					},
+					city: "required",
+					index: "required",
+					street: "required",
+					home: "required",
+					flat: "required",
 				},
 				messages: {
 					name: "Пожалуйста, заполните обязательное поле.",
@@ -52,6 +57,11 @@ app.validation = {
 						required: "Пожалуйста, заполните поле.",
 						equalTo: "Пароли не совпадают",
 					},
+					city: "Пожалуйста, заполните обязательное поле.",
+					index: "Пожалуйста, заполните поле.",
+					street: "Пожалуйста, заполните поле.",
+					home: "Пожалуйста, заполните поле.",
+					flat: "Пожалуйста, заполните поле.",
 				}
 			});
 		}
@@ -59,6 +69,7 @@ app.validation = {
 		validateForms('.footer__subscribe form');
 		validateForms('#auth form');
 		validateForms('#register form');
+		validateForms('.basket-page form');
 
 		$('.form-row__input').on('change', function () {
 			if ($('#subscribe_email-error').attr('style') === 'display: none;') {

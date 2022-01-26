@@ -1,0 +1,84 @@
+.shop-item {
+
+	>* {
+		&:not(:first-child) {
+			padding-left: 4rem;
+		}
+	}
+
+	// .shop-item__title
+
+	&__title {
+		@extend %text-20;
+		@extend %vertical-align;
+		font-weight: 500;
+		transition: .3s color;
+		cursor: pointer;
+
+		svg {
+			width: 3.2rem;
+			height: 3.2rem;
+			margin-right: 0.8rem;
+			transition: .3s fill;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $red;
+
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.1rem;
+		}
+	}
+
+	// .shop-item__address
+
+	&__address {
+		p {
+			@extend %text-16;
+			color: #505661;
+
+			@media(max-width: 1024px) {
+				font-size: 1.4rem;
+				line-height: 2.1rem;
+			}
+
+			&:not(:last-child) {
+				margin-bottom: 0.4rem;
+			}
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+	}
+
+	// .shop-item__phone
+
+	&__phone {
+		@extend %vertical-align;
+		@extend %text-16;
+		font-weight: 600;
+
+		svg {
+			width: 1.4rem;
+			height: 1.4rem;
+			margin-right: 0.8rem;
+			transition: .3s fill;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				svg path {
+					fill: $red;
+				}
+			}
+		}
+	}
+}

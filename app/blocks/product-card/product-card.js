@@ -11,8 +11,8 @@ app.productCard = {
 				clickable: true,
 			},
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+				nextEl: '.product-popup__slider-arrow--next',
+				prevEl: '.product-popup__slider-arrow--prev',
 			},
 			breakpoints: {
 				576: {
@@ -27,33 +27,32 @@ app.productCard = {
 				}
 			}
 		});
-		new Swiper('.product-card__slider', {
-			loop: true,
-			slidesPerView: 1,
-			spaceBetween: 23,
-			speed: 1000,
-			/* pagination: {
-				el: '.swiper-pagination',
-				clickable: true,
-			}, */
-			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
-			},
-			breakpoints: {
-				576: {
-					slidesPerView: 2,
-				},
-				768: {
-					slidesPerView: 2,
-				},
-				1025: {
-					slidesPerView: 2,
-					spaceBetween: 52,
-				}
+
+		$('.minus-btn').on('click', function (e) {
+			e.preventDefault();
+			var $this = $(this);
+			var $input = $this.next();
+			var value = parseInt($input.val());
+
+			while (value > 0) {
+				value -= 1;
+				break;
 			}
+
+			$input.val(value);
+
 		});
 
+		$('.plus-btn').on('click', function (e) {
+			e.preventDefault();
+			var $this = $(this);
+			var $input = $this.prev();
+			var value = parseInt($input.val());
+
+			value += 1;
+
+			$input.val(value);
+		});
 
 		$('.product-color__item .radio-box').on('change', function () {
 			if ($(this).is(':checked')) {
