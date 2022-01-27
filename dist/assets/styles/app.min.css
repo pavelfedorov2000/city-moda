@@ -1,159 +1,4 @@
 @charset "UTF-8";
-.tooltip__content, .pickup-filters__item-box .check-inner .check-text, .footer__copy, .footer__bottom {
-  font-size: 1rem;
-  line-height: 1.5rem;
-}
-
-.footer__developer a {
-  font-size: 1.1rem;
-  line-height: 1.6rem;
-}
-
-label.error, .product-card-delivery__item-text, .product-card__old-price, .remind-password, .product-popup__old-price, .pickup-shop__btn, .pickup-shop__info, .pickup-search__btn, .pickup-filters__title, .search-form__input, .checkout-delivery__date small, .catalog-drop-filter__input, .catalog-drop-filter__title, .catalog-filters__reset-btn, .aside-blog__item-date, .basket-product__old-price, .form-agree .check-text, .popup-link {
-  font-size: 1.2rem;
-  line-height: 1.8rem;
-}
-
-.subscribe-item__cancel-btn, .product-links__item-subtitle, .product-details__list-item, .product-details__hide-btn, .product-card-form__title, .product-card__section p, .product-sizes-popup__table tbody tr td, .about-product__list, .region-popup__city .radio-text, .pickup-shop__delivery-time, .profile-personal__change-password-btn, .profile-personal__gender-radio .radio-text, .order-item__order-details, .order-item__follow-link span, .order-item__status-label, .header-info-line, .footer__list-link, .footer__col-title, .footer__contact-descr, .drop-menu__list-link, .checkout-delivery__label, .catalog-card__old-price, .catalog-card__info-link, .aside-blog__item-text, .blog-item__tag, .blog-item__date, .basket-total__agreement, .basket-total__list-item, .basket-product__discount, .basket-product__list, .basket-table__title, .breadcrumbs__item, .input {
-  font-size: 1.3rem;
-  line-height: 1.9rem;
-}
-
-.subscribe-item__btn, .subscribe-item__change-btn, .subscribe-item__list li, .subscribe-item__text, .promo-collection__suptitle, .product-links__item-title, .product-card-form__btn, .password-change__form-btn, .aside-popup__social-title, .aside-popup__link-btn, .aside-popup__form-btn, .aside-popup__text, .how-define-size__content p, .product-sizes-popup__table th, .product-popup__more-link, .region-popup__input, .pickup-shop__title, .profile-personal__btn, .profile-personal__field-title, .order-item__delivery-place, .order-item__delivery-date, .header__contact, .header__shops-search, .header__location, .footer__link, .feedback__form-btn, .faq__item-details, .drop-menu__col-title, .checkout-delivery__btn, .checkout-radio__hidden p, .checkout-radio__list, .price-range__item span, .catalog-filters__item-title, .catalog-card__subtitle, .label, .burger-menu__list, .blog-text__tag, .blog-item__text, .basket-total__btn, .basket-total__auth, .counter__input, .aside-filters__link, .check-text,
-.radio-text, .form-row__input, .btn {
-  font-size: 1.4rem;
-  line-height: 2.1rem;
-}
-
-.subscribe-item__title, .shop-item__phone, .shop-item__address p, .sale-item__descr, .profile-page__content ul li, .profile-page__content h4, .profile-page__content p, .product-details__section-title, .product-card__tab, .product-card__section-title, .product-sizes-popup__subtitle, .about-product__title, .mini-popup__subtitle, .order-item__price, .order-item__title, .news-detail__list, .icons-slider__item-title, .header__nav-link, .header__main, .header__action, .header__whatsup, .header__call-link, .header__shops-search, .faq__item-summary, .drop-basket__btn, .drop-basket__total, .drop-basket__empty, .discount-add__value, .discount-add__title, .personal-discout__list li, .personal-discout__title, .discounts-progress__item, .contact-item__content, .contact-item__title, .checkout-radio__title, .catalog-card__price, .catalog-card__size, .brands-alphabet__link, .brands-index-list__item, .brands-categories__item-title, .aside-blog__item-title, .blog-text__text p, .basket-product__price, .basket-product__title, .banner, .aside-filters__item-title, .page-nav__link, .tab, .all-link, .new-price, .seo-text p {
-  font-size: 1.6rem;
-  line-height: 2.4rem;
-}
-
-.profile-page__content h3, .catalog-card__title {
-  font-size: 1.7rem;
-  line-height: 2.5rem;
-}
-
-.footer__phone {
-  font-size: 1.8rem;
-  line-height: 2.7rem;
-}
-
-.shop-item__title, .sale-item__title, .profile-page__title, .product-card__tab.tab--active, .how-define-size__title, .product-popup__title, .pickup-popup__title, .pagination__link, .checkout-form__item-title, .brands-alphabet__item dt, .aside-blog__title, .blog-item__title, .basket-total__overall {
-  font-size: 2rem;
-  line-height: 3rem;
-}
-
-.password-change__title, .aside-popup__title, .region-popup__title, .mini-popup__title {
-  font-size: 2.5rem;
-  line-height: 3.7rem;
-}
-
-.product-sizes-popup__title, .title {
-  font-size: 3.5rem;
-  line-height: 4.5rem;
-}
-
-.sale-item__discount {
-  font-size: 4rem;
-  line-height: 130%;
-}
-@media (max-width: 1024px) {
-  .sale-item__discount {
-    font-size: 3.6rem;
-  }
-}
-@media (max-width: 500px) {
-  .sale-item__discount {
-    font-size: 2.4rem;
-  }
-}
-
-.shop-item__phone, .shop-item__title, .tooltip__btn, .product-details__list-item dt, .product-color__row, .product-card__prices-wrap, .pickup-filters__item-box .check-inner, .pagination, .order-item__follow-link, .order-item__header-buttons, .header__action, .header__whatsup, .header__call-link, .header__shops-search, .footer__payment-list, .discount-add__value, .price-range__item, .catalog-drop-filter__reset-btn, .catalog-filters__reset-btn, .catalog-card__prices, .basket-product__price, .basket-product__btn, .form-row__input, .all-link, .logo__link, .product-sizes__item .radio-text, .product-color__item .radio-style, .product-popup__more-link, .fancybox-navigation .fancybox-button div, .pickup-filters__item-remove, .icons-slider__item-img, .drop-basket__btn, .label, .counter__input, .banner, .product-popup__slider .swiper-button-prev,
-.product-popup__slider .swiper-button-next,
-.product-card__slider .swiper-button-prev,
-.product-card__slider .swiper-button-next,
-.blog-text__slider .swiper-button-prev,
-.blog-text__slider .swiper-button-next, .btn, ._progress {
-  display: flex;
-  align-items: center;
-}
-
-.product-sizes__item .radio-text, .product-color__item .radio-style, .product-popup__more-link, .fancybox-navigation .fancybox-button div, .pickup-filters__item-remove, .icons-slider__item-img, .drop-basket__btn, .label, .counter__input, .banner, .product-popup__slider .swiper-button-prev,
-.product-popup__slider .swiper-button-next,
-.product-card__slider .swiper-button-prev,
-.product-card__slider .swiper-button-next,
-.blog-text__slider .swiper-button-prev,
-.blog-text__slider .swiper-button-next, .btn, ._progress {
-  justify-content: center;
-}
-
-.subscribe-item__buttons, .pickup-shops__item, .drop-basket__total, .drop-basket__product-wrap, .catalog-drop-filter__price-range, .catalog-drop-filter__buttons, .catalog__filters, .basket-total__overall, .basket-total__list-item, .product-details__section-top, .aside-popup__form-wrap, .profile-personal__row-field, .header-info-line__inner, .header__main-top, .header__top-inner, .other-news__top, .counter, .aside-filters__sublist-title, .aside-filters__item-title, .section__title {
-  display: flex;
-  justify-content: space-between;
-}
-
-.product-details__section-top, .aside-popup__form-wrap, .profile-personal__row-field, .header-info-line__inner, .header__main-top, .header__top-inner, .other-news__top, .counter, .aside-filters__sublist-title, .aside-filters__item-title, .section__title {
-  align-items: center;
-}
-
-.subscribe-item__content, .subscribe-item, .promo-sale__slider .swiper-slide, .pickup-shop__filters, .drop-basket__inner, .drop-basket, .blog-item__content, .basket-product__prices, .wrapper, .brands-categories__item {
-  display: flex;
-  flex-direction: column;
-}
-
-.brands-categories__item {
-  align-items: center;
-}
-
-.product-popup__slider .swiper-horizontal > .swiper-pagination-bullets,
-.product-popup__slider .swiper-pagination-bullets.swiper-pagination-horizontal, .discounts-progress__item:before, .counter__btn:after {
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.header-info-line__close, .counter__btn:before, .breadcrumbs__item:after, .product-popup__slider .swiper-button-prev,
-.product-popup__slider .swiper-button-next,
-.product-card__slider .swiper-button-prev,
-.product-card__slider .swiper-button-next,
-.blog-text__slider .swiper-button-prev,
-.blog-text__slider .swiper-button-next, .player-btn::before {
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.checkout-radio .radio-box:checked + .radio-style:before, .catalog-drop-filter__item .radio-box:checked + .radio-style:before, .check-box:checked + .check-style:before, .form-row__btn:before, .player-btn {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.instagram-slider .swiper-slide img, .sale-item__img img, .promo-collection__img img, .product-card__slider-item img, .product-popup__slider-item img, .fancybox-content img, #pickup-map, .news-detail__img img, .catalog-card__img img, .blog-text__slider .swiper-slide img, .blog-item__img img, .basket-product__img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.catalog-card__favorite, .pass-btn {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.product-details__hide-btn:after, .header__search-btn, .header__region:after, .faq__item-summary:after, .discounts-progress__item:before, .catalog-drop-filter__item .radio-box:checked + .radio-style:before, .catalog-filters__item-title:after, .burger-menu__list-item span:after, .check-box:checked + .check-style:before, .form-row__btn:before {
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* This stylesheet generated by Transfonter (https://transfonter.org)  */
-/* *,
-::before,
-::after {
-  box-sizing: border-box;
-} */
 * {
   box-sizing: inherit;
   margin: 0;
@@ -163,11 +8,6 @@ label.error, .product-card-delivery__item-text, .product-card__old-price, .remin
   box-sizing: inherit;
 }
 
-/* * {
-  // @stylint ignore
-  margin: 0;
-  padding: 0;
-} */
 audio,
 canvas,
 progress,
@@ -419,6 +259,155 @@ input {
 input,
 textarea {
   cursor: default;
+}
+
+.tooltip__content, .pickup-filters__item-box .check-inner .check-text, .footer__copy, .footer__bottom {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.footer__developer a {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+}
+
+label.error, .product-card-delivery__item-text, .product-card__old-price, .remind-password, .product-popup__old-price, .pickup-shop__btn, .pickup-shop__info, .pickup-search__btn, .pickup-filters__title, .search-form__input, .checkout-delivery__date small, .catalog-drop-filter__input, .catalog-drop-filter__title, .catalog-filters__reset-btn, .aside-blog__item-date, .basket-product__old-price, .form-agree .check-text, .popup-link {
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+.subscribe-item__cancel-btn, .product-links__item-subtitle, .product-details__list-item, .product-details__hide-btn, .product-card-form__title, .product-card__section p, .product-sizes-popup__table tbody tr td, .about-product__list, .region-popup__city .radio-text, .pickup-shop__delivery-time, .profile-personal__change-password-btn, .profile-personal__gender-radio .radio-text, .order-item__order-details, .order-item__follow-link span, .order-item__status-label, .header-info-line, .footer__list-link, .footer__col-title, .footer__contact-descr, .drop-menu__list-link, .checkout-delivery__label, .catalog-card__old-price, .catalog-card__info-link, .aside-blog__item-text, .blog-item__tag, .blog-item__date, .basket-total__agreement, .basket-total__list-item, .basket-product__discount, .basket-product__list, .basket-table__title, .breadcrumbs__item, .input {
+  font-size: 1.3rem;
+  line-height: 1.9rem;
+}
+
+.subscribe-item__btn, .subscribe-item__change-btn, .subscribe-item__list li, .subscribe-item__text, .promo-collection__suptitle, .product-links__item-title, .product-card-form__btn, .password-change__form-btn, .aside-popup__social-title, .aside-popup__link-btn, .aside-popup__form-btn, .aside-popup__text, .how-define-size__content p, .product-sizes-popup__table th, .product-popup__more-link, .region-popup__input, .pickup-shop__title, .profile-personal__btn, .profile-personal__field-title, .order-item__delivery-place, .order-item__delivery-date, .header__contact, .header__shops-search, .header__location, .footer__link, .feedback__form-btn, .faq__item-details, .drop-menu__col-title, .checkout-delivery__btn, .checkout-radio__hidden p, .checkout-radio__list, .price-range__item span, .catalog-filters__item-title, .catalog-card__subtitle, .label, .burger-menu__list, .blog-text__tag, .blog-item__text, .basket-total__btn, .basket-total__auth, .counter__input, .aside-filters__link, .check-text,
+.radio-text, .form-row__input, .btn {
+  font-size: 1.4rem;
+  line-height: 2.1rem;
+}
+
+.subscribe-item__title, .shop-item__phone, .shop-item__address p, .sale-item__descr, .profile-page__content ul li, .profile-page__content h4, .profile-page__content p, .product-details__section-title, .product-card__tab, .product-card__section-title, .product-sizes-popup__subtitle, .about-product__title, .mini-popup__subtitle, .order-item__price, .order-item__title, .news-detail__list, .icons-slider__item-title, .header__nav-link, .header__main, .header__action, .header__whatsup, .header__call-link, .header__shops-search, .faq__item-summary, .drop-basket__btn, .drop-basket__total, .drop-basket__empty, .discount-add__value, .discount-add__title, .personal-discout__list li, .personal-discout__title, .discounts-progress__item, .contact-item__content, .contact-item__title, .checkout-radio__title, .catalog-card__price, .catalog-card__size, .brands-alphabet__link, .brands-index-list__item, .brands-categories__item-title, .aside-blog__item-title, .blog-text__text p, .basket-product__price, .basket-product__title, .banner, .aside-filters__item-title, .page-nav__link, .tab, .all-link, .new-price, .seo-text p {
+  font-size: 1.6rem;
+  line-height: 2.4rem;
+}
+
+.profile-page__content h3, .catalog-card__title {
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+}
+
+.footer__phone {
+  font-size: 1.8rem;
+  line-height: 2.7rem;
+}
+
+.shop-item__title, .sale-item__title, .profile-page__title, .product-card__tab.tab--active, .how-define-size__title, .product-popup__title, .pickup-popup__title, .pagination__link, .checkout-form__item-title, .brands-alphabet__item dt, .aside-blog__title, .blog-item__title, .basket-total__overall {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+.password-change__title, .aside-popup__title, .region-popup__title, .mini-popup__title {
+  font-size: 2.5rem;
+  line-height: 3.7rem;
+}
+
+.product-sizes-popup__title, .title {
+  font-size: 3.5rem;
+  line-height: 4.5rem;
+}
+
+.sale-item__discount {
+  font-size: 4rem;
+  line-height: 130%;
+}
+@media (max-width: 1024px) {
+  .sale-item__discount {
+    font-size: 3.6rem;
+  }
+}
+@media (max-width: 500px) {
+  .sale-item__discount {
+    font-size: 2.4rem;
+  }
+}
+
+.shop-item__phone, .shop-item__top, .tooltip__btn, .product-details__list-item dt, .product-color__row, .product-card__prices-wrap, .pickup-filters__item-box .check-inner, .pagination, .order-item__follow-link, .order-item__header-buttons, .header__action, .header__whatsup, .header__call-link, .header__shops-search, .footer__payment-list, .discount-add__value, .price-range__item, .catalog-drop-filter__reset-btn, .catalog-filters__reset-btn, .catalog-card__prices, .basket-product__price, .basket-product__btn, .form-row__input, .all-link, .logo__link, .product-sizes__item .radio-text, .product-color__item .radio-style, .product-popup__more-link, .fancybox-navigation .fancybox-button div, .pickup-filters__item-remove, .icons-slider__item-img, .drop-basket__btn, .label, .counter__input, .banner, .product-popup__slider .swiper-button-prev,
+.product-popup__slider .swiper-button-next,
+.product-card__slider .swiper-button-prev,
+.product-card__slider .swiper-button-next,
+.blog-text__slider .swiper-button-prev,
+.blog-text__slider .swiper-button-next, .btn, ._progress {
+  display: flex;
+  align-items: center;
+}
+
+.product-sizes__item .radio-text, .product-color__item .radio-style, .product-popup__more-link, .fancybox-navigation .fancybox-button div, .pickup-filters__item-remove, .icons-slider__item-img, .drop-basket__btn, .label, .counter__input, .banner, .product-popup__slider .swiper-button-prev,
+.product-popup__slider .swiper-button-next,
+.product-card__slider .swiper-button-prev,
+.product-card__slider .swiper-button-next,
+.blog-text__slider .swiper-button-prev,
+.blog-text__slider .swiper-button-next, .btn, ._progress {
+  justify-content: center;
+}
+
+.subscribe-item__buttons, .pickup-shops__item, .drop-basket__total, .drop-basket__product-wrap, .catalog-drop-filter__price-range, .catalog-drop-filter__buttons, .catalog__filters, .basket-total__overall, .basket-total__list-item, .product-details__section-top, .aside-popup__form-wrap, .profile-personal__row-field, .header-info-line__inner, .header__main-top, .header__top-inner, .other-news__top, .counter, .aside-filters__sublist-title, .aside-filters__item-title, .section__title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-details__section-top, .aside-popup__form-wrap, .profile-personal__row-field, .header-info-line__inner, .header__main-top, .header__top-inner, .other-news__top, .counter, .aside-filters__sublist-title, .aside-filters__item-title, .section__title {
+  align-items: center;
+}
+
+.subscribe-item__content, .subscribe-item, .promo-sale__slider .swiper-slide, .pickup-shop__filters, .drop-basket__inner, .drop-basket, .blog-item__content, .basket-product__prices, .wrapper, .brands-categories__item {
+  display: flex;
+  flex-direction: column;
+}
+
+.brands-categories__item {
+  align-items: center;
+}
+
+.product-popup__slider .swiper-horizontal > .swiper-pagination-bullets,
+.product-popup__slider .swiper-pagination-bullets.swiper-pagination-horizontal, .discounts-progress__item:before, .counter__btn:after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header-info-line__close, .counter__btn:before, .breadcrumbs__item:after, .product-popup__slider .swiper-button-prev,
+.product-popup__slider .swiper-button-next,
+.product-card__slider .swiper-button-prev,
+.product-card__slider .swiper-button-next,
+.blog-text__slider .swiper-button-prev,
+.blog-text__slider .swiper-button-next, .player-btn::before {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkout-radio .radio-box:checked + .radio-style:before, .catalog-drop-filter__item .radio-box:checked + .radio-style:before, .check-box:checked + .check-style:before, .form-row__btn:before, .player-btn {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.instagram-slider .swiper-slide img, .sale-item__img img, .promo-collection__img img, .product-card__slider-item img, .product-popup__slider-item img, .fancybox-content img, #pickup-map, .news-detail__img img, .catalog-card__img img, .blog-text__slider .swiper-slide img, .blog-item__img img, .basket-product__img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.catalog-card__favorite, .pass-btn {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.product-details__hide-btn:after, .header__search-btn, .header__region:after, .faq__item-summary:after, .discounts-progress__item:before, .catalog-drop-filter__item .radio-box:checked + .radio-style:before, .catalog-filters__item-title:after, .burger-menu__list-item span:after, .check-box:checked + .check-style:before, .form-row__btn:before {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .no-js-warning {
@@ -5531,16 +5520,16 @@ input[name=promocode].valid {
 .shop-item > *:not(:first-child) {
   padding-left: 4rem;
 }
-.shop-item__title {
-  font-weight: 500;
-  transition: 0.3s color;
-  cursor: pointer;
-}
-.shop-item__title svg {
+.shop-item__top svg {
   width: 3.2rem;
   height: 3.2rem;
   margin-right: 0.8rem;
   transition: 0.3s fill;
+}
+.shop-item__title {
+  font-weight: 500;
+  transition: 0.3s color;
+  cursor: pointer;
 }
 @media (any-hover: hover) {
   .shop-item__title:hover {
@@ -5586,6 +5575,12 @@ input[name=promocode].valid {
 .search-shops__grid {
   display: grid;
   grid-gap: 5.2rem;
+  padding-top: 5.2rem;
+}
+@media (max-width: 500px) {
+  .search-shops__grid {
+    padding-top: 3rem;
+  }
 }
 @media (max-width: 1024px) {
   .search-shops__grid {
@@ -5610,6 +5605,12 @@ input[name=promocode].valid {
 
 #shops-map {
   height: 50rem;
+}
+#shops-map > * {
+  width: 100% !important;
+}
+#shops-map > * > * {
+  width: 100% !important;
 }
 
 .instagram-slider .swiper-slide {

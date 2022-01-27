@@ -6,14 +6,8 @@
 		}
 	}
 
-	// .shop-item__title
-
-	&__title {
-		@extend %text-20;
+	&__top {
 		@extend %vertical-align;
-		font-weight: 500;
-		transition: .3s color;
-		cursor: pointer;
 
 		svg {
 			width: 3.2rem;
@@ -21,6 +15,15 @@
 			margin-right: 0.8rem;
 			transition: .3s fill;
 		}
+	}
+
+	// .shop-item__title
+
+	&__title {
+		@extend %text-20;
+		font-weight: 500;
+		transition: .3s color;
+		cursor: pointer;
 
 		@media (any-hover: hover) {
 			&:hover {
