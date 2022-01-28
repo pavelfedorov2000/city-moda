@@ -109,8 +109,6 @@
 	// .basket-product__title
 
 	&__title {
-		@extend %text-16;
-		font-weight: 600;
 		grid-area: title;
 	}
 
@@ -118,19 +116,6 @@
 
 	&__list {
 		grid-area: list;
-		@extend %text-13;
-
-		>div {
-			&:not(:last-child) {
-				margin-bottom: 0.6rem;
-			}
-		}
-
-		dt {
-			color: #777;
-			padding-right: 0.3rem;
-			float: left;
-		}
 	}
 
 	// .basket-product__buttons

@@ -1,3 +1,26 @@
+.back-link {
+	@extend %text-14;
+	color: $green;
+	display: inline-flex;
+	align-items: flex-start;
+
+	svg {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0.8rem;
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: #2D703C;
+
+			svg path {
+				fill: #2D703C;
+			}
+		}
+	}
+}
+
 .profile-page {
 
 	padding-bottom: 11rem;
@@ -15,6 +38,16 @@
 		@media(min-width: 1025px) {
 			grid-template-columns: max-content 98.3rem;
 			justify-content: space-between;
+		}
+	}
+
+	&__top {
+		@extend .profile-page__inner;
+		align-items: flex-end;
+		margin-bottom: 4rem;
+
+		.page__title {
+			margin-bottom: 0;
 		}
 	}
 
@@ -114,6 +147,33 @@
 
 		&:not(:last-child) {
 			margin-right: 7rem;
+		}
+	}
+
+	&__order-table {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
+}
+
+.profile-page-goods {
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 3.5rem;
+		}
+	}
+
+	&__list {
+		display: grid;
+		grid-gap: 3rem 8.2rem;
+
+		@media(max-width: 1024px) {
+			grid-gap: 3rem;
+		}
+
+		@media(min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
 		}
 	}
 }

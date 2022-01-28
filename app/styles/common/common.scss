@@ -62,10 +62,30 @@ dt {
 	}
 
 	&__title {
-		margin-bottom: 4rem;
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
+
+	&__subtitle {
+		@extend %text-20;
+		font-weight: 500;
 
 		@media(max-width: 500px) {
-			margin-bottom: 2rem;
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 5.2rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 2.5rem;
+			}
 		}
 	}
 }

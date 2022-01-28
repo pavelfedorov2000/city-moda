@@ -82,14 +82,10 @@
 	}
 
 	&__btn {
-		//position: absolute;
-		//bottom: 0;
-		//left: 0;
-		//right: 0;
-		position: relative;
-		padding: 2rem;
 		@extend %flex-center;
 		@extend %text-16;
+		position: relative;
+		padding: 2rem;
 		font-weight: 600;
 
 		&:before,

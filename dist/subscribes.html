@@ -1074,8 +1074,8 @@
 					<div class="drop-basket__products">
 						<div class="basket-product drop-basket__product">
 							<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
-							<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
-							<dl class="basket-product__list">
+							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+							<dl class="product-list basket-product__list">
 								<div>
 									<dt>Артикул:</dt>
 									<dd>MP002XW08J2L</dt>
@@ -1111,8 +1111,8 @@
 						</div>
 						<div class="basket-product drop-basket__product">
 							<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
-							<div class="basket-product__title">Пальто LORIATA Wander Yellow</div>
-							<dl class="basket-product__list">
+							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+							<dl class="product-list basket-product__list">
 								<div>
 									<dt>Артикул:</dt>
 									<dd>MP002XW08J2L</dt>
@@ -1162,6 +1162,60 @@
 						</svg>
 					</a>
 				</div>
+			</div>
+			<div id="sale-popup" class="popup sale-popup">
+				<div class="sale-popup__title">
+					Распродажи и акции для женщин и мужчин
+				</div>
+				<form action="#" class="sale-popup__form">
+					<div class="sale-popup__form-items">
+						<div class="sale-popup__form-item">
+							<label class="sale-popup__form-check">
+								<input class="check-box" type="checkbox">
+								<span class="check-style"></span>
+								<span class="check-text">по e-mail</span>
+							</label>
+							<div class="select" data-state="">
+								<div class="select__title">Да</div>
+								<div class="select__content">
+									<label class="select__option" for="email-agree" tabindex="0" data-value="Да">
+										<input id="email-agree" class="select__input" type="radio" name="email_agree" checked />
+										<span class="radio-style"></span>
+										<span class="select__option-text">Да</span>
+									</label>
+									<label class="select__option" for="email-disagree" tabindex="0" data-value="Нет">
+										<input id="email-disagree" class="select__input" type="radio" name="email_agree" />
+										<span class="radio-style"></span>
+										<span class="select__option-text">Нет</span>
+									</label>
+								</div>
+							</div>
+						</div>
+						<div class="sale-popup__form-item">
+							<label class="sale-popup__form-check">
+								<input class="check-box" type="checkbox">
+								<span class="check-style"></span>
+								<span class="check-text">по sms</span>
+							</label>
+							<div class="select" data-state="">
+								<div class="select__title">Да</div>
+								<div class="select__content">
+									<div class="select__option" for="sms-agree" tabindex="0" data-value="Да">
+										<input id="sms-agree" class="select__input" type="radio" name="sms_agree" checked />
+										<span class="radio-style"></span>
+										<span class="select__option-text">Да</span>
+									</div>
+									<label class="select__option" for="sms-disagree" tabindex="0" data-value="Нет">
+										<input id="sms-disagree" class="select__input" type="radio" name="sms_agree" />
+										<span class="radio-style"></span>
+										<span class="select__option-text">Нет</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<button class="btn sale-popup__form-btn" type="submit">Подписаться</button>
+				</form>
 			</div>
 		</div>
 		<div style="display: none;" id="discount-popup" class="popup mini-popup">
