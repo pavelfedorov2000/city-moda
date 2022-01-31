@@ -10,16 +10,8 @@ app.catalogFilters = {
 		});
 
 		$('.catalog-drop-filter__item input[type="checkbox"]').on('click', function () {
-			/* if ($(this).is(':checked')) {
-				checkedItems += 1;
-			} else {
-				checkedItems -= 1;
-			}
-			console.log(checkedItems); */
-			let className = $(this).parents('.catalog-drop-filter__item').attr('class');
-			console.log(className);
+			let className = $(this).parents('.catalog-filters__item').attr('class').split(' ').join('.');
 			let checkedItems = $(`.${className} input:checkbox:checked`).length;
-			console.log(checkedItems);
 			if (checkedItems > 0) {
 				$(this).parents('.catalog-drop-filter').prev().find('span').text(`(${checkedItems})`);
 				$(this).parents('.catalog-drop-filter').prev().css('font-weight', '600');
@@ -27,6 +19,42 @@ app.catalogFilters = {
 				$(this).parents('.catalog-drop-filter').prev().css('font-weight', '400');
 				$(this).parents('.catalog-drop-filter').prev().find('span').text('');
 			}
+		});
+
+		$('.catalog-filters__reset-btn').on('click', function () {
+			$('.catalog-filters__item-title').css('font-weight', '400');
+			$('.catalog-filters__item-title').find('span').text('');
+		});
+
+		$('.catalog-drop-filter__btn[type=reset]').on('click', function () {
+			$(this).parents('.catalog-drop-filter').prev().css('font-weight', '400');
+			$(this).parents('.catalog-drop-filter').prev().find('span').text('');
+		});
+
+		$('.filters-btn').on('click', function () {
+			$('.catalog-filters').addClass('catalog-filters--active');
+		});
+
+		$('.catalog-filters__close').on('click', function () {
+			$('.catalog-filters').removeClass('catalog-filters--active');
+		});
+
+		$('.catalog-filters__item-title').on('click', function () {
+			if ($(window).width() < 1025) {
+				$('.catalog-filters__back-btn').show();
+				$('.catalog-filters__title').text($(this).text());
+				$(this).parent().siblings().hide();
+				$(this).hide();
+				$(this).next().show();
+			}
+		});
+		$('.catalog-filters__back-btn').on('click', function () {
+			$('.catalog-filters__back-btn').hide();
+			$('.catalog-filters__title').text('Фильтры');
+			$('.catalog-filters__item').show();
+			$('.catalog-filters__item-title').show();
+			$('.catalog-filters__item-title').removeClass('catalog-filters__item-title--active');
+			$('.catalog-drop-filter').hide();
 		});
 	},
 };

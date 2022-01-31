@@ -2,11 +2,11 @@ app.otherNews = {
 	name: 'otherNews',
 	description: 'your script description',
 	init() {
-		new Swiper('.other-news__slider', {
+		const otherNewsSlider = new Swiper('.other-news__slider', {
 			loop: true,
 			spaceBetween: 20,
 			speed: 1000,
-			lazy: true,
+			//lazy: true,
 			navigation: {
 				nextEl: '.swiper-button-next',
 				prevEl: '.swiper-button-prev',
@@ -17,6 +17,9 @@ app.otherNews = {
 					spaceBetween: 52,
 				},
 			}
+		});
+		otherNewsSlider.on('slideChange', function () {
+			new LazyLoad();
 		});
 	},
 };

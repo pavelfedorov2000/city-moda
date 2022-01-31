@@ -1,10 +1,14 @@
 .drop-basket {
-	@extend %flex-col;
+
+	&__body {
+		height: 100vh;
+		@extend %flex-col;
+	}
 
 	&__inner {
 		@extend %flex-col;
 		flex-grow: 1;
-		//padding-bottom: 4rem + 6.4rem;
+		padding: 5rem 5rem 4rem;
 		position: relative;
 	}
 
@@ -75,10 +79,6 @@
 		@extend %flex-row;
 		@extend %text-16;
 		font-weight: 600;
-
-		&:not(:last-child) {
-			margin-bottom: 4rem;
-		}
 	}
 
 	&__btn {
@@ -88,7 +88,7 @@
 		padding: 2rem;
 		font-weight: 600;
 
-		&:before,
+		/* &:before,
 		&:after {
 			content: '';
 			position: absolute;
@@ -106,7 +106,7 @@
 
 		&:after {
 			right: -5rem;
-		}
+		} */
 
 		@media (any-hover: hover) {
 			&:hover {

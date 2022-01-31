@@ -362,6 +362,12 @@
 			text-transform: uppercase;
 			color: #101112;
 			margin-left: 0.3rem;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $green;
+				}
+			}
 		}
 	}
 }

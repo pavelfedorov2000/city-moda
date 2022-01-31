@@ -78,18 +78,10 @@ app.validation = {
 			}
 		});
 
-		/* $('.subscibe-form button[type=submit]').on('click', function () {
-			if ($('#subscribe_email-error')) {
-				$(this).addClass('error');
-			}
+		$('#subscribe-form').on('submit', function (e) {
+			e.preventDefault();
+			$(this).append('<div class="success-form">Спасибо! Письмо уже на Вашей почте</div>');
 		});
-
-		$('.form-row__input').on('change', function () {
-			if ($('#subscribe_email-error')) {
-				$(this).parent().find('button').addClass('error');
-			}
-		}); */
-
 
 		/* $('form').on('sumbit', function (e) {
 			e.preventDefault();

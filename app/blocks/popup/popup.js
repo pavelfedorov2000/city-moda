@@ -7,10 +7,18 @@ app.popups = {
 			$('.header__region').text($(this).text());
 		});
 
-		$('.cart-btn').on('click', function () {
+		$('.js-cart-btn').on('click', function () {
 			$('body').addClass('_lock');
 			$('.overlay').fadeIn('slow');
+			$('#drop-basket').fadeIn('slow');
 			$('#drop-basket').addClass('active');
+		});
+
+		$('.js-auth-btn').on('click', function () {
+			$('body').addClass('_lock');
+			$('.overlay').fadeIn('slow');
+			$('#auth-popup').fadeIn('slow');
+			$('#auth-popup').addClass('active');
 		});
 
 		$('#auth input').on('change', function () {
@@ -30,7 +38,8 @@ app.popups = {
 		});
 
 		$('.aside-popup__close').on('click', function () {
-			$(this).parent().removeClass('active');
+			$(this).parents('.aside-popup').removeClass('active');
+			$(this).parent().fadeOut('slow');
 			$('.overlay').fadeOut('300');
 			$('body').removeClass('_lock');
 		});

@@ -6,7 +6,8 @@
 		<div class="_progress">
 			<div class="_progress__inner">
 				<a href="home.html" class="_progress__link" target="_blank">Главная</a>
-				<a href="catalog.html" class="_progress__link" target="_blank">Каталог (бед адаптива)</a>
+				<a href="catalog.html" class="_progress__link" target="_blank">Каталог</a>
+				<a href="search-results.html" class="_progress__link" target="_blank">Результаты поиска</a>
 				<a href="product-card.html" class="_progress__link" target="_blank">Карточка товара</a>
 				<a href="basket.html" class="_progress__link" target="_blank">Корзина / оформление заказа</a>
 				<a href="basket-delivery.html" class="_progress__link" target="_blank">Оформление заказа (выбран пункт
@@ -35,12 +36,13 @@
 			</div>
 		</div>
 	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/popup/region-popup.html")
 </div>
-@@include("blocks/footer/footer.html")
-<div class="overlay">
-	@@include("blocks/auth/auth.html")
-	@@include("blocks/drop-basket/drop-basket.html")
-</div>
-@@include("blocks/popup/discount-popup.html")
-@@include("blocks/popup/region-popup.html")
 @@include("blocks/link/link.html")

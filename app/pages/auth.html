@@ -2,27 +2,14 @@
 <div class="wrapper">
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
-	<main class="page auth">
-		<div class="_progress">
-			<div class="_progress__inner">
-				<a href="home.html" class="_progress__link" target="_blank">Главная</a>
-				<a href="catalog.html" class="_progress__link" target="_blank">Каталог</a>
-				<a href="product-card.html" class="_progress__link" target="_blank">Карточка товара</a>
-				<a href="basket.html" class="_progress__link" target="_blank">Корзина / оформление заказа</a>
-				<a href="brands.html" class="_progress__link" target="_blank">Бренды</a>
-				<a href="my-orders.html" class="_progress__link" target="_blank">Профиль - мои заказы</a>
-				<a href="discounts.html" class="_progress__link" target="_blank">Профиль - скидки</a>
-				<a href="subscribes.html" class="_progress__link" target="_blank">Профиль - управление подписками</a>
-				<a href="personal.html" class="_progress__link" target="_blank">Профиль - персональные данные</a>
-			</div>
-		</div>
-	</main>
+	<main class="page auth"></main>
+	@@include("blocks/footer/footer.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/popup/region-popup.html")
 </div>
-@@include("blocks/footer/footer.html")
-<div class="overlay">
-	@@include("blocks/auth/auth.html")
-	@@include("blocks/drop-basket/drop-basket.html")
-</div>
-@@include("blocks/popup/discount-popup.html")
-@@include("blocks/popup/region-popup.html")
+
 @@include("blocks/link/link.html")

@@ -7,3 +7,10 @@ label.error {
 .input.error {
 	border-color: $red;
 }
+
+.success-form {
+	@extend %text-14;
+	font-weight: 500;
+	color: $green;
+	margin-top: 2rem;
+}

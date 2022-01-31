@@ -47,6 +47,7 @@ $(document).ready(function () {
 	if ($('main').hasClass('drop-basket-page')) {
 		$('body').addClass('_lock');
 		$('.overlay').show('slow');
+		$('#drop-basket').fadeIn('slow');
 		$('#drop-basket').addClass('active');
 	}
 
@@ -66,6 +67,7 @@ $(document).ready(function () {
 	app.promoSale.init();
 	app.iconsSlider.init();
 	app.sliderSections.init();
+	app.instagram.init();
 	app.catalogCard.init();
 	app.asideFilters.init();
 	app.catalogFilters.init();
@@ -78,6 +80,7 @@ $(document).ready(function () {
 	app.faq.init();
 	app.basketTotal.init();
 	app.feedback.init();
+	app.pageup.init();
 	if ($('main').hasClass('contacts-page')) {
 		app.contacts.init();
 	}

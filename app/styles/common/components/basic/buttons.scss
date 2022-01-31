@@ -34,6 +34,12 @@
 		}
 	}
 
+	&--disabled {
+		background-color: transparent;
+		border: 0.1rem solid #EAEAEA;
+		color: #9B9B9B;
+	}
+
 	&--border {
 		border: 0.1rem solid #101112;
 		background-color: transparent;
