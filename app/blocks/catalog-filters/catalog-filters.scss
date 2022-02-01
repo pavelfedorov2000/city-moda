@@ -146,6 +146,12 @@
 			line-height: 2.2rem;
 		}
 
+		span {
+			&:not(:first-child) {
+				font-weight: 600;
+			}
+		}
+
 		&:after {
 			content: '';
 			position: absolute;
@@ -168,6 +174,10 @@
 			&:after {
 				transform: rotate(180deg);
 			}
+		}
+
+		&--bold {
+			font-weight: 600;
 		}
 	}
 
@@ -257,10 +267,6 @@
 		.check-box:checked+.check-style {
 			border-color: #101112;
 		}
-
-		/* .radio-text {
-			white-space: nowrap;
-		} */
 
 		.radio-box:checked+.radio-style {
 			border-color: #101112;

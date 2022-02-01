@@ -18,7 +18,7 @@
 	<div class="catalog-filters__row">
 		<fieldset class="catalog-filters__item catalog-filters__item--sort">
 			<legend class="catalog-filters__item-title">
-				Сортировать
+				<span>Сортировать</span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -52,8 +52,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--material">
 			<legend class="catalog-filters__item-title">
-				Материал
-				<span></span>
+				<span>Материал</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -173,8 +173,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--color">
 			<legend class="catalog-filters__item-title">
-				Цвет
-				<span></span>
+				<span>Цвет</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -254,8 +254,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--size">
 			<legend class="catalog-filters__item-title">
-				Размер
-				<span></span>
+				<span>Размер</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -306,21 +306,21 @@
 				</div>
 			</div>
 		</fieldset>
-		<fieldset class="catalog-filters__item ">
+		<fieldset class="catalog-filters__item">
 			<legend class="catalog-filters__item-title">
-				Цена
-				<span></span>
+				<span>Цена:</span>
+				<span class="filter-output" id="price_from"></span>
+				<span class="filter-output" id="price_to"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner catalog-drop-filter__price-range price-range">
 					<div class="price-range__item">
 						<span>От</span>
-						<input class="price-range__input price-from" name="price_from" type="number" min="1000"
-							placeholder="1000">
+						<input class="price-range__input" name="price_from" type="number" min="1000" placeholder="1000">
 					</div>
 					<div class="price-range__item">
 						<span>До</span>
-						<input class="price-range__input price-to" name="price_to" type="number" max="100000"
+						<input class="price-range__input" name="price_to" type="number" max="100000"
 							placeholder="100 000">
 					</div>
 				</div>
@@ -339,8 +339,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--brand">
 			<legend class="catalog-filters__item-title">
-				Бренд
-				<span></span>
+				<span>Бренд</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -401,8 +401,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--details">
 			<legend class="catalog-filters__item-title">
-				Детали
-				<span></span>
+				<span>Детали</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -477,8 +477,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--style">
 			<legend class="catalog-filters__item-title">
-				Стиль
-				<span></span>
+				<span>Стиль</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">
@@ -521,8 +521,8 @@
 		</fieldset>
 		<fieldset class="catalog-filters__item catalog-filters__item--decor">
 			<legend class="catalog-filters__item-title">
-				Узор
-				<span></span>
+				<span>Узор</span>
+				<span class="filter-output"></span>
 			</legend>
 			<div class="catalog-filters__item-drop catalog-drop-filter">
 				<div class="catalog-drop-filter__inner">

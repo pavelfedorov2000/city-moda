@@ -153,6 +153,12 @@
 	&__whatsup {
 		@extend .header__action;
 		color: #479458;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #479458;
+			}
+		}
 	}
 
 	// .header__main
@@ -203,10 +209,6 @@
 			padding-bottom: 0.8rem;
 		}
 
-		&:after {
-			background-color: #000;
-		}
-
 		@media(max-width: 1024px) {
 			font-size: 1.4rem;
 			line-height: 2.1rem;
@@ -220,8 +222,19 @@
 			}
 		}
 
-		&.tab--active {
+		&.active {
+			position: relative;
 			color: #101112;
+
+			&:after {
+				content: '';
+				position: absolute;
+				left: 0;
+				bottom: 0;
+				width: 100%;
+				height: 0.2rem;
+				background-color: #000;
+			}
 		}
 
 		@media (any-hover: hover) {

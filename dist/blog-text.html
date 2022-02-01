@@ -416,9 +416,9 @@
 				<div class="container">
 					<div class="header__main-top">
 						<nav class="header__nav">
-							<a href="#" class="tab header__nav-link tab--active">Женщинам</a>
-							<a href="#" class="tab header__nav-link">Детям</a>
-							<a href="#" class="tab header__nav-link">Мужчинам</a>
+							<a href="#" class="header__nav-link active">Женщинам</a>
+							<a href="#" class="header__nav-link">Детям</a>
+							<a href="#" class="header__nav-link">Мужчинам</a>
 						</nav>
 						<button class="burger-btn" type="button">
 							<span></span>
@@ -450,7 +450,7 @@
 									<path d="M10.9933 15.1668H4.99996C3.85329 15.1668 2.99329 14.8602 2.45996 14.2535C1.92662 13.6468 1.71995 12.7668 1.85995 11.6268L2.45996 6.62683C2.63329 5.1535 3.00663 3.8335 5.60662 3.8335H10.4066C13 3.8335 13.3733 5.1535 13.5533 6.62683L14.1533 11.6268C14.2866 12.7668 14.0866 13.6535 13.5533 14.2535C13 14.8602 12.1466 15.1668 10.9933 15.1668Z" fill="#101112" />
 									<path d="M10.6673 5.8335C10.394 5.8335 10.1673 5.60683 10.1673 5.3335V3.00016C10.1673 2.28016 9.72065 1.8335 9.00065 1.8335H7.00065C6.28065 1.8335 5.83398 2.28016 5.83398 3.00016V5.3335C5.83398 5.60683 5.60732 5.8335 5.33398 5.8335C5.06065 5.8335 4.83398 5.60683 4.83398 5.3335V3.00016C4.83398 1.72683 5.72732 0.833496 7.00065 0.833496H9.00065C10.274 0.833496 11.1673 1.72683 11.1673 3.00016V5.3335C11.1673 5.60683 10.9407 5.8335 10.6673 5.8335Z" fill="#101112" />
 								</svg>
-								<span>Корзина <span class="header__cart-num">(2)</span></span>
+								<span>Корзина <span class="header__cart-num"></span></span>
 							</button>
 						</div>
 					</div>
@@ -488,9 +488,9 @@
 					<img src="assets/images/icons/close-thin.svg" alt="крестик" aria-label="Закрыть меню">
 				</button>
 				<nav class="header__nav">
-					<a href="#" class="tab header__nav-link tab--active">Женщинам</a>
-					<a href="#" class="tab header__nav-link">Детям</a>
-					<a href="#" class="tab header__nav-link">Мужчинам</a>
+					<a href="#" class="header__nav-link active">Женщинам</a>
+					<a href="#" class="header__nav-link">Детям</a>
+					<a href="#" class="header__nav-link">Мужчинам</a>
 				</nav>
 			</div>
 			<div class="header__location">
@@ -992,8 +992,14 @@
 				</div>
 			</div>
 		</footer>
+		<button class="pageup" type="button" aria-label="Вверх">
+			<svg class="pageup__arrow" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+				<path d="M23.5254 11.9626C23.5254 12.2001 23.4379 12.4376 23.2504 12.6251C22.8879 12.9876 22.2879 12.9876 21.9254 12.6251L15.0004 5.7001L8.07539 12.6251C7.71289 12.9876 7.11289 12.9876 6.75039 12.6251C6.38789 12.2626 6.38789 11.6626 6.75039 11.3001L14.3379 3.7126C14.7004 3.3501 15.3004 3.3501 15.6629 3.7126L23.2504 11.3001C23.4379 11.4876 23.5254 11.7251 23.5254 11.9626Z" fill="#505661" />
+				<path d="M15.9375 4.58775L15.9375 25.6252C15.9375 26.1377 15.5125 26.5627 15 26.5627C14.4875 26.5627 14.0625 26.1377 14.0625 25.6252L14.0625 4.58775C14.0625 4.07525 14.4875 3.65025 15 3.65025C15.5125 3.65025 15.9375 4.07525 15.9375 4.58775Z" fill="#505661" />
+			</svg>
+		</button>
 		<div class="overlay">
-			<div id="auth-popup" class="aside-popup">
+			<div id="auth-popup" class="aside-popup auth-popup">
 				<button class="aside-popup__close" type="button">
 					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
@@ -1094,7 +1100,7 @@
 							<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Ваш телефон">
 							<input class="input aside-popup__form-input" name="email" type="email" placeholder="Ваш e-mail">
 							<div class="input-wrap">
-								<input id="password" class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+								<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
 								<button class="pass-btn show" type="button"></button>
 							</div>
 							<div class="input-wrap">
@@ -1195,7 +1201,7 @@
 										<input class="counter__input" type="number" value="1" readonly>
 										<button class="plus-btn counter__btn" type="button"></button>
 									</div>
-									<div class="basket-product__prices drop-basket__product-prices">
+									<div class="drop-basket__product-prices">
 										<div class="basket-product__price drop-basket__product-price">
 											4 300
 										</div>

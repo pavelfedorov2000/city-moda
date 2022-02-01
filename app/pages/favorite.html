@@ -1,0 +1,222 @@
+@@include("blocks/head/head.html", {"title": "Избранные товары"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page catalog">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>
+							Избранные товары
+						</span>
+					</li>
+				</ol>
+			</nav>
+			<div class="catalog__page">
+				<h1 class="title catalog__title">Избранные товары</h1>
+				<div class="catalog__inner">
+					@@include("blocks/aside-filters/aside-filters.html")
+					<div class="catalog__body">
+						<div class="catalog__filters">
+							@@include("blocks/catalog-filters/catalog-filters.html")
+							<div class="catalog__view">
+								<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
+									<svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+										xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+									</svg>
+								</button>
+								<button class="catalog__view-btn col-btn" type="button">
+									<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+									</svg>
+								</button>
+							</div>
+
+							<button class="filters-btn" type="button">Фильтры</button>
+						</div>
+						<div class="catalog__cards">
+							<div class="catalog-card favorite">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card favorite">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card favorite sale">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card favorite new">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card favorite">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card favorite">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button"
+									aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src="assets/images/content/catalog-card.jpg"
+										alt="Пальто Loriata">
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;"
+											class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+						</div>
+						@@include("blocks/pagination/pagination.html")
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/popup/region-popup.html")
+	@@include("blocks/popup/product-popup.html")
+</div>
+@@include("blocks/link/link.html")

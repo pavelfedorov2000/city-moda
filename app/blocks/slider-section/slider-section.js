@@ -48,5 +48,51 @@ app.sliderSections = {
 		catalogNewSlider.on('slideChange', function () {
 			new LazyLoad();
 		});
+		const recommendSlider = new Swiper('.recommend-slider', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			speed: 1000,
+			navigation: {
+				nextEl: '.recommend-slider-btn-next',
+				prevEl: '.recommend-slider-btn-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				1025: {
+					slidesPerView: 4,
+					spaceBetween: 52,
+				}
+			}
+		});
+		recommendSlider.on('slideChange', function () {
+			new LazyLoad();
+		});
+		const similarGoodsSlider = new Swiper('.similar-goods-slider', {
+			loop: true,
+			slidesPerView: 1,
+			spaceBetween: 20,
+			speed: 1000,
+			navigation: {
+				nextEl: '.similar-goods-btn-next',
+				prevEl: '.similar-goods-btn-prev',
+			},
+			breakpoints: {
+				768: {
+					slidesPerView: 2,
+					spaceBetween: 30,
+				},
+				1025: {
+					slidesPerView: 4,
+					spaceBetween: 52,
+				}
+			}
+		});
+		similarGoodsSlider.on('slideChange', function () {
+			new LazyLoad();
+		});
 	},
 };

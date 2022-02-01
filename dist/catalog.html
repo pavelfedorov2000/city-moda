@@ -416,9 +416,9 @@
 				<div class="container">
 					<div class="header__main-top">
 						<nav class="header__nav">
-							<a href="#" class="tab header__nav-link tab--active">Женщинам</a>
-							<a href="#" class="tab header__nav-link">Детям</a>
-							<a href="#" class="tab header__nav-link">Мужчинам</a>
+							<a href="#" class="header__nav-link active">Женщинам</a>
+							<a href="#" class="header__nav-link">Детям</a>
+							<a href="#" class="header__nav-link">Мужчинам</a>
 						</nav>
 						<button class="burger-btn" type="button">
 							<span></span>
@@ -450,7 +450,7 @@
 									<path d="M10.9933 15.1668H4.99996C3.85329 15.1668 2.99329 14.8602 2.45996 14.2535C1.92662 13.6468 1.71995 12.7668 1.85995 11.6268L2.45996 6.62683C2.63329 5.1535 3.00663 3.8335 5.60662 3.8335H10.4066C13 3.8335 13.3733 5.1535 13.5533 6.62683L14.1533 11.6268C14.2866 12.7668 14.0866 13.6535 13.5533 14.2535C13 14.8602 12.1466 15.1668 10.9933 15.1668Z" fill="#101112" />
 									<path d="M10.6673 5.8335C10.394 5.8335 10.1673 5.60683 10.1673 5.3335V3.00016C10.1673 2.28016 9.72065 1.8335 9.00065 1.8335H7.00065C6.28065 1.8335 5.83398 2.28016 5.83398 3.00016V5.3335C5.83398 5.60683 5.60732 5.8335 5.33398 5.8335C5.06065 5.8335 4.83398 5.60683 4.83398 5.3335V3.00016C4.83398 1.72683 5.72732 0.833496 7.00065 0.833496H9.00065C10.274 0.833496 11.1673 1.72683 11.1673 3.00016V5.3335C11.1673 5.60683 10.9407 5.8335 10.6673 5.8335Z" fill="#101112" />
 								</svg>
-								<span>Корзина <span class="header__cart-num">(2)</span></span>
+								<span>Корзина <span class="header__cart-num"></span></span>
 							</button>
 						</div>
 					</div>
@@ -488,9 +488,9 @@
 					<img src="assets/images/icons/close-thin.svg" alt="крестик" aria-label="Закрыть меню">
 				</button>
 				<nav class="header__nav">
-					<a href="#" class="tab header__nav-link tab--active">Женщинам</a>
-					<a href="#" class="tab header__nav-link">Детям</a>
-					<a href="#" class="tab header__nav-link">Мужчинам</a>
+					<a href="#" class="header__nav-link active">Женщинам</a>
+					<a href="#" class="header__nav-link">Детям</a>
+					<a href="#" class="header__nav-link">Мужчинам</a>
 				</nav>
 			</div>
 			<div class="header__location">
@@ -662,8 +662,8 @@
 			</div>
 		</div>
 		<main class="page catalog">
-			<div class="container">
-				<nav class="breadcrumbs" aria-label="breadcrumbs">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<div class="container">
 					<ol class="breadcrumbs__list">
 						<li class="breadcrumbs__item">
 							<a href="#">
@@ -691,8 +691,10 @@
 							</span>
 						</li>
 					</ol>
-				</nav>
-				<article class="promo-collection">
+				</div>
+			</nav>
+			<article class="promo-collection">
+				<div class="container">
 					<div class="promo-collection__inner">
 						<div class="promo-collection__img">
 							<img class="lazy" data-src="assets/images/content/collection.jpg" alt="жилетка">
@@ -709,123 +711,114 @@
 							</svg>
 						</a>
 					</div>
-				</article>
-				<div class="catalog__page">
-					<h1 class="title catalog__title">Женские пальто</h1>
-					<div class="catalog__inner">
-						<div class="aside-filters">
-							<ul class="aside-filters__list">
-								<li class="aside-filters__item">
-									<div class="aside-filters__item-title">
-										<a class="aside-filters__link" href="#">Одежда</a>
+				</div>
+			</article>
+			<div class="catalog__page container">
+				<h1 class="title catalog__title">Женские пальто</h1>
+				<div class="catalog__inner">
+					<div class="aside-filters">
+						<ul class="aside-filters__list">
+							<li class="aside-filters__item">
+								<div class="aside-filters__item-title">
+									<a class="aside-filters__link" href="#">Одежда</a>
+									<button class="aside-filters__item-drop" aria-label="Развернуть">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
+										</svg>
+									</button>
+								</div>
+								<ul class="aside-filters__sublist">
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Блузки и рубашки</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Брюки</a>
+									</li>
+									<li class="aside-filters__sublist-title">
+										<a class="aside-filters__link" href="#">Верхняя одежда</a>
 										<button class="aside-filters__item-drop" aria-label="Развернуть">
 											<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
 											</svg>
 										</button>
-									</div>
+									</li>
 									<ul class="aside-filters__sublist">
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Блузки и рубашки</a>
+											<a class="aside-filters__link" href="#">Демисезонные куртки</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Брюки</a>
-										</li>
-										<li class="aside-filters__sublist-title">
-											<a class="aside-filters__link" href="#">Верхняя одежда</a>
-											<button class="aside-filters__item-drop" aria-label="Развернуть">
-												<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
-												</svg>
-											</button>
-										</li>
-										<ul class="aside-filters__sublist">
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">Демисезонные куртки</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">Жилеты</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">Легкие куртки и ветровки</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link active" href="#">Пальто</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">Плащи и тренчи</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">Шубы и дубленки</a>
-											</li>
-										</ul>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Джемперы, свитеры</a>
+											<a class="aside-filters__link" href="#">Жилеты</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Джинсы</a>
+											<a class="aside-filters__link" href="#">Легкие куртки и ветровки</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Домашняя одежда</a>
+											<a class="aside-filters__link active" href="#">Пальто</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Комбинезоны</a>
+											<a class="aside-filters__link" href="#">Плащи и тренчи</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Одежда для беременных</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Пиджаки и костюмы</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Платья и сарафаны</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Спортивные костюмы</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Шорты</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Юбки</a>
+											<a class="aside-filters__link" href="#">Шубы и дубленки</a>
 										</li>
 									</ul>
-								</li>
-								<li class="aside-filters__item">
-									<div class="aside-filters__item-title">
-										<a class="aside-filters__link" href="#">Аксессуары</a>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Джемперы, свитеры</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Джинсы</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Домашняя одежда</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Комбинезоны</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Одежда для беременных</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Пиджаки и костюмы</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Платья и сарафаны</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Спортивные костюмы</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Шорты</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Юбки</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside-filters__item">
+								<div class="aside-filters__item-title">
+									<a class="aside-filters__link" href="#">Аксессуары</a>
+									<button class="aside-filters__item-drop" aria-label="Развернуть">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
+										</svg>
+									</button>
+								</div>
+								<ul class="aside-filters__sublist">
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Lorem</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Lorem</a>
+									</li>
+									<li class="aside-filters__sublist-title">
+										<a class="aside-filters__link" href="#">Lorem</a>
 										<button class="aside-filters__item-drop" aria-label="Развернуть">
 											<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
 											</svg>
 										</button>
-									</div>
+									</li>
 									<ul class="aside-filters__sublist">
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Lorem</a>
-										</li>
-										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Lorem</a>
-										</li>
-										<li class="aside-filters__sublist-title">
-											<a class="aside-filters__link" href="#">Lorem</a>
-											<button class="aside-filters__item-drop" aria-label="Развернуть">
-												<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
-												</svg>
-											</button>
-										</li>
-										<ul class="aside-filters__sublist">
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-										</ul>
 										<li class="aside-filters__sublist-item">
 											<a class="aside-filters__link" href="#">lorem</a>
 										</li>
@@ -836,942 +829,952 @@
 											<a class="aside-filters__link" href="#">lorem</a>
 										</li>
 									</ul>
-								</li>
-								<li class="aside-filters__item">
-									<div class="aside-filters__item-title">
-										<a class="aside-filters__link" href="#">Обувь</a>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">lorem</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">lorem</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">lorem</a>
+									</li>
+								</ul>
+							</li>
+							<li class="aside-filters__item">
+								<div class="aside-filters__item-title">
+									<a class="aside-filters__link" href="#">Обувь</a>
+									<button class="aside-filters__item-drop" aria-label="Развернуть">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
+										</svg>
+									</button>
+								</div>
+								<ul class="aside-filters__sublist">
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Lorem</a>
+									</li>
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">Lorem</a>
+									</li>
+									<li class="aside-filters__sublist-title">
+										<a class="aside-filters__link" href="#">Lorem</a>
 										<button class="aside-filters__item-drop" aria-label="Развернуть">
 											<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 												<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
 											</svg>
 										</button>
-									</div>
+									</li>
 									<ul class="aside-filters__sublist">
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Lorem</a>
+											<a class="aside-filters__link" href="#">lorem</a>
 										</li>
 										<li class="aside-filters__sublist-item">
-											<a class="aside-filters__link" href="#">Lorem</a>
+											<a class="aside-filters__link" href="#">lorem</a>
 										</li>
-										<li class="aside-filters__sublist-title">
-											<a class="aside-filters__link" href="#">Lorem</a>
-											<button class="aside-filters__item-drop" aria-label="Развернуть">
-												<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd" d="M3.25 4L7 7.6L10.75 4L12 5.2L7 10L2 5.2L3.25 4Z" fill="#101112" />
-												</svg>
-											</button>
-										</li>
-										<ul class="aside-filters__sublist">
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-											<li class="aside-filters__sublist-item">
-												<a class="aside-filters__link" href="#">lorem</a>
-											</li>
-										</ul>
 										<li class="aside-filters__sublist-item">
 											<a class="aside-filters__link" href="#">lorem</a>
 										</li>
 									</ul>
-								</li>
-							</ul>
-							<div class="banner aside-filters__banner">
+									<li class="aside-filters__sublist-item">
+										<a class="aside-filters__link" href="#">lorem</a>
+									</li>
+								</ul>
+							</li>
+						</ul>
+						<div class="banner aside-filters__banner">
+							Рекламный баннер
+						</div>
+					</div>
+					<div class="catalog__body">
+						<div class="catalog__filters">
+							<form action="#" class="catalog-filters">
+								<div class="catalog-filters__header">
+									<button class="catalog-filters__back-btn" type="button" aria-label="Назад">
+										<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 14.1072L8.57146 9.28578L12.8572 4.46436L11.4286 2.85721L5.71432 9.28578L11.4286 15.7144L12.8572 14.1072Z" fill="#505661" />
+										</svg>
+									</button>
+									<div class="catalog-filters__title">Фильтры</div>
+									<button class="catalog-filters__close" type="button">
+										<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<line x1="2.64645" y1="16.6464" x2="16.7886" y2="2.50431" stroke="black" />
+											<line x1="3.35355" y1="2.64645" x2="17.4957" y2="16.7886" stroke="black" />
+										</svg>
+									</button>
+								</div>
+								<div class="catalog-filters__row">
+									<fieldset class="catalog-filters__item catalog-filters__item--sort">
+										<legend class="catalog-filters__item-title">
+											<span>Сортировать</span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<label class="catalog-drop-filter__item">
+													<input class="radio-box" type="radio" name="price_filter">
+													<span class="radio-style"></span>
+													<span class="radio-text">По возрастанию цены</span>
+												</label>
+												<label class="catalog-drop-filter__item">
+													<input class="radio-box" type="radio" name="price_filter">
+													<span class="radio-style"></span>
+													<span class="radio-text">По убыванию цены</span>
+												</label>
+												<label class="catalog-drop-filter__item">
+													<input class="radio-box" type="radio" name="price_filter">
+													<span class="radio-style"></span>
+													<span class="radio-text">По популярности</span>
+												</label>
+												<label class="catalog-drop-filter__item">
+													<input class="radio-box" type="radio" name="price_filter">
+													<span class="radio-style"></span>
+													<span class="radio-text">По новинкам</span>
+												</label>
+												<label class="catalog-drop-filter__item">
+													<input class="radio-box" type="radio" name="price_filter">
+													<span class="radio-style"></span>
+													<span class="radio-text">По скидкам</span>
+												</label>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--material">
+										<legend class="catalog-filters__item-title">
+											<span>Материал</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__body">
+													<div class="catalog-drop-filter__cols">
+														<fieldset class="catalog-drop-filter__col">
+															<legend class="catalog-drop-filter__title">Основной материал</legend>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Искусственная кожа</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Ангора</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Бисер</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Вискоза</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Искусственная замша</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Акрил</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+														</fieldset>
+														<fieldset class="catalog-drop-filter__col">
+															<legend class="catalog-drop-filter__title">Утеплитель</legend>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Искусственный пух</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Искусственный мех</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Акрил</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Микрофибра</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Полиамид</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Полимер</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+															<label class="catalog-drop-filter__item">
+																<input class="check-box" type="checkbox">
+																<span class="check-style"></span>
+																<span class="check-text">Lorem</span>
+															</label>
+														</fieldset>
+													</div>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--color">
+										<legend class="catalog-filters__item-title">
+											<span>Цвет</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__body">
+													<div class="catalog-drop-filter__title">Выберите цвет</div>
+													<div class="catalog-drop-filter__items">
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(144.09deg, #43E3DC 10.69%, rgba(67, 227, 220, 0) 90.81%);"></span>
+															<span class="check-text">бирюзовый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(140.19deg, #90011B 22.16%, rgba(144, 1, 27, 0) 91.48%);"></span>
+															<span class="check-text">бордовый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(143.84deg, #8BCDFF 18.75%, rgba(139, 205, 255, 0) 90.76%);"></span>
+															<span class="check-text">голубой</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: #FFF; border: 0.1rem solid #C0C0C0"></span>
+															<span class="check-text">белый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(143.13deg, #F1DAC4 22.32%, rgba(255, 238, 222, 0) 89.29%);"></span>
+															<span class="check-text">бежевый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(143.47deg, #FFEC1C 15.62%, rgba(255, 236, 28, 0) 90.69%);"></span>
+															<span class="check-text">желтый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(145.49deg, #3DB800 6.37%, rgba(61, 184, 0, 0) 93.63%);"></span>
+															<span class="check-text">зеленый</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-color" style="background: linear-gradient(135deg, #FFB156 0%, rgba(255, 177, 86, 0) 100%);"></span>
+															<span class="check-text">золотой</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--size">
+										<legend class="catalog-filters__item-title">
+											<span>Размер</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__title">Ваш Российский размер</div>
+												<div class="catalog-drop-filter__items">
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">42</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">44</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">46</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">48</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">50</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">52</span>
+													</label>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item">
+										<legend class="catalog-filters__item-title">
+											<span>Цена:</span>
+											<span class="filter-output" id="price_from"></span>
+											<span class="filter-output" id="price_to"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner catalog-drop-filter__price-range price-range">
+												<div class="price-range__item">
+													<span>От</span>
+													<input class="price-range__input" name="price_from" type="number" min="1000" placeholder="1000">
+												</div>
+												<div class="price-range__item">
+													<span>До</span>
+													<input class="price-range__input" name="price_to" type="number" max="100000" placeholder="100 000">
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--brand">
+										<legend class="catalog-filters__item-title">
+											<span>Бренд</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__body">
+													<div class="catalog-drop-filter__title">Найти бренд</div>
+													<input class="catalog-drop-filter__input" name="brand" placeholder="Введите название">
+													<div class="catalog-drop-filter__items">
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">AllSaints</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">Allura</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">Arch</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">Arot</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">Allora</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">Bibi</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">B2B Black to Black</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--details">
+										<legend class="catalog-filters__item-title">
+											<span>Детали</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__body">
+													<div class="catalog-drop-filter__title">Выберите детали</div>
+													<div class="catalog-drop-filter__items">
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">бант</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">аппликация</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">баска</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">бахрома</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">бисер/кристаллы/камни/стразы</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">воланы/рюши</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">вышивка</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">lorem</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">lorem</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">lorem</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--style">
+										<legend class="catalog-filters__item-title">
+											<span>Стиль</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__title">Выберите стиль</div>
+												<div class="catalog-drop-filter__items">
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">повседневный</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">деловой</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">вечерний</span>
+													</label>
+													<label class="catalog-drop-filter__item">
+														<input class="check-box" type="checkbox">
+														<span class="check-style"></span>
+														<span class="check-text">спортивный</span>
+													</label>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+									<fieldset class="catalog-filters__item catalog-filters__item--decor">
+										<legend class="catalog-filters__item-title">
+											<span>Узор</span>
+											<span class="filter-output"></span>
+										</legend>
+										<div class="catalog-filters__item-drop catalog-drop-filter">
+											<div class="catalog-drop-filter__inner">
+												<div class="catalog-drop-filter__body">
+													<div class="catalog-drop-filter__title">Выберите узор</div>
+													<div class="catalog-drop-filter__items">
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">горох</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">геометрия</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">другое</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">животное</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">камуфляж</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">клетка</span>
+														</label>
+														<label class="catalog-drop-filter__item">
+															<input class="check-box" type="checkbox">
+															<span class="check-style"></span>
+															<span class="check-text">леопардовый</span>
+														</label>
+													</div>
+												</div>
+											</div>
+											<div class="catalog-drop-filter__buttons">
+												<button class="btn catalog-drop-filter__btn btn--border" type="reset">
+													Очистить все
+													<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+														<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
+													</svg>
+												</button>
+												<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
+											</div>
+										</div>
+									</fieldset>
+								</div>
+								<button class="catalog-filters__reset-btn" type="reset">
+									Очистить все
+									<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#9B9B9B" />
+									</svg>
+								</button>
+							</form>
+							<div class="catalog__view">
+								<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
+									<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+										<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+									</svg>
+								</button>
+								<button class="catalog__view-btn col-btn" type="button">
+									<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+										<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+									</svg>
+								</button>
+							</div>
+							<button class="filters-btn" type="button">Фильтры</button>
+						</div>
+						<div class="catalog__cards">
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card sale">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__prices">
+									<div class="new-price catalog-card__new-price">37 400 ₽</div>
+									<div class="old-price catalog-card__old-price">21 200 ₽</div>
+								</div>
+							</div>
+							<div class="catalog-card new">
+								<span class="label catalog-card__label label--discount">@@discount</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="banner">
 								Рекламный баннер
 							</div>
+							<div class="catalog-card new">
+								<span class="label catalog-card__label label--discount">@@discount</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card sale">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__prices">
+									<div class="new-price catalog-card__new-price">37 400 ₽</div>
+									<div class="old-price catalog-card__old-price">21 200 ₽</div>
+								</div>
+							</div>
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
+							<div class="catalog-card sale">
+								<span class="label catalog-card__label label--discount">40%</span>
+								<span class="label catalog-card__label label--new">new</span>
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__prices">
+									<div class="new-price catalog-card__new-price">37 400 ₽</div>
+									<div class="old-price catalog-card__old-price">21 200 ₽</div>
+								</div>
+							</div>
+							<div class="catalog-card">
+								<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
+								<div class="catalog-card__img">
+									<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
+									<div class="catalog-card__info">
+										<div class="catalog-card__sizes">
+											<span class="catalog-card__size">42</span>
+											<span class="catalog-card__size">44</span>
+											<span class="catalog-card__size">46</span>
+											<span class="catalog-card__size catalog-card__size--disabled">48</span>
+											<span class="catalog-card__size catalog-card__size--disabled">50</span>
+											<span class="catalog-card__size catalog-card__size--disabled">52</span>
+										</div>
+										<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
+											просмотр</a>
+									</div>
+								</div>
+								<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
+								<div class="catalog-card__subtitle">Loriata</div>
+								<div class="catalog-card__price">21 200 ₽</div>
+							</div>
 						</div>
-						<div class="catalog__body">
-							<div class="catalog__filters">
-								<form action="#" class="catalog-filters">
-									<div class="catalog-filters__header">
-										<button class="catalog-filters__back-btn" type="button" aria-label="Назад">
-											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path fill-rule="evenodd" clip-rule="evenodd" d="M12.8572 14.1072L8.57146 9.28578L12.8572 4.46436L11.4286 2.85721L5.71432 9.28578L11.4286 15.7144L12.8572 14.1072Z" fill="#505661" />
-											</svg>
-										</button>
-										<div class="catalog-filters__title">Фильтры</div>
-										<button class="catalog-filters__close" type="button">
-											<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<line x1="2.64645" y1="16.6464" x2="16.7886" y2="2.50431" stroke="black" />
-												<line x1="3.35355" y1="2.64645" x2="17.4957" y2="16.7886" stroke="black" />
-											</svg>
-										</button>
-									</div>
-									<div class="catalog-filters__row">
-										<fieldset class="catalog-filters__item catalog-filters__item--sort">
-											<legend class="catalog-filters__item-title">
-												Сортировать
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<label class="catalog-drop-filter__item">
-														<input class="radio-box" type="radio" name="price_filter">
-														<span class="radio-style"></span>
-														<span class="radio-text">По возрастанию цены</span>
-													</label>
-													<label class="catalog-drop-filter__item">
-														<input class="radio-box" type="radio" name="price_filter">
-														<span class="radio-style"></span>
-														<span class="radio-text">По убыванию цены</span>
-													</label>
-													<label class="catalog-drop-filter__item">
-														<input class="radio-box" type="radio" name="price_filter">
-														<span class="radio-style"></span>
-														<span class="radio-text">По популярности</span>
-													</label>
-													<label class="catalog-drop-filter__item">
-														<input class="radio-box" type="radio" name="price_filter">
-														<span class="radio-style"></span>
-														<span class="radio-text">По новинкам</span>
-													</label>
-													<label class="catalog-drop-filter__item">
-														<input class="radio-box" type="radio" name="price_filter">
-														<span class="radio-style"></span>
-														<span class="radio-text">По скидкам</span>
-													</label>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--material">
-											<legend class="catalog-filters__item-title">
-												Материал
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__body">
-														<div class="catalog-drop-filter__cols">
-															<fieldset class="catalog-drop-filter__col">
-																<legend class="catalog-drop-filter__title">Основной материал</legend>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Искусственная кожа</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Ангора</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Бисер</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Вискоза</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Искусственная замша</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Акрил</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-															</fieldset>
-															<fieldset class="catalog-drop-filter__col">
-																<legend class="catalog-drop-filter__title">Утеплитель</legend>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Искусственный пух</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Искусственный мех</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Акрил</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Микрофибра</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Полиамид</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Полимер</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-																<label class="catalog-drop-filter__item">
-																	<input class="check-box" type="checkbox">
-																	<span class="check-style"></span>
-																	<span class="check-text">Lorem</span>
-																</label>
-															</fieldset>
-														</div>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--color">
-											<legend class="catalog-filters__item-title">
-												Цвет
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__body">
-														<div class="catalog-drop-filter__title">Выберите цвет</div>
-														<div class="catalog-drop-filter__items">
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(144.09deg, #43E3DC 10.69%, rgba(67, 227, 220, 0) 90.81%);"></span>
-																<span class="check-text">бирюзовый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(140.19deg, #90011B 22.16%, rgba(144, 1, 27, 0) 91.48%);"></span>
-																<span class="check-text">бордовый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(143.84deg, #8BCDFF 18.75%, rgba(139, 205, 255, 0) 90.76%);"></span>
-																<span class="check-text">голубой</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: #FFF; border: 0.1rem solid #C0C0C0"></span>
-																<span class="check-text">белый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(143.13deg, #F1DAC4 22.32%, rgba(255, 238, 222, 0) 89.29%);"></span>
-																<span class="check-text">бежевый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(143.47deg, #FFEC1C 15.62%, rgba(255, 236, 28, 0) 90.69%);"></span>
-																<span class="check-text">желтый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(145.49deg, #3DB800 6.37%, rgba(61, 184, 0, 0) 93.63%);"></span>
-																<span class="check-text">зеленый</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-color" style="background: linear-gradient(135deg, #FFB156 0%, rgba(255, 177, 86, 0) 100%);"></span>
-																<span class="check-text">золотой</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--size">
-											<legend class="catalog-filters__item-title">
-												Размер
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__title">Ваш Российский размер</div>
-													<div class="catalog-drop-filter__items">
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">42</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">44</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">46</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">48</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">50</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">52</span>
-														</label>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item ">
-											<legend class="catalog-filters__item-title">
-												Цена
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner catalog-drop-filter__price-range price-range">
-													<div class="price-range__item">
-														<span>От</span>
-														<input class="price-range__input price-from" name="price_from" type="number" min="1000" placeholder="1000">
-													</div>
-													<div class="price-range__item">
-														<span>До</span>
-														<input class="price-range__input price-to" name="price_to" type="number" max="100000" placeholder="100 000">
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--brand">
-											<legend class="catalog-filters__item-title">
-												Бренд
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__body">
-														<div class="catalog-drop-filter__title">Найти бренд</div>
-														<input class="catalog-drop-filter__input" name="brand" placeholder="Введите название">
-														<div class="catalog-drop-filter__items">
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">AllSaints</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">Allura</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">Arch</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">Arot</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">Allora</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">Bibi</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">B2B Black to Black</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--details">
-											<legend class="catalog-filters__item-title">
-												Детали
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__body">
-														<div class="catalog-drop-filter__title">Выберите детали</div>
-														<div class="catalog-drop-filter__items">
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">бант</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">аппликация</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">баска</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">бахрома</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">бисер/кристаллы/камни/стразы</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">воланы/рюши</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">вышивка</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">lorem</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">lorem</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">lorem</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--style">
-											<legend class="catalog-filters__item-title">
-												Стиль
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__title">Выберите стиль</div>
-													<div class="catalog-drop-filter__items">
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">повседневный</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">деловой</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">вечерний</span>
-														</label>
-														<label class="catalog-drop-filter__item">
-															<input class="check-box" type="checkbox">
-															<span class="check-style"></span>
-															<span class="check-text">спортивный</span>
-														</label>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-										<fieldset class="catalog-filters__item catalog-filters__item--decor">
-											<legend class="catalog-filters__item-title">
-												Узор
-												<span></span>
-											</legend>
-											<div class="catalog-filters__item-drop catalog-drop-filter">
-												<div class="catalog-drop-filter__inner">
-													<div class="catalog-drop-filter__body">
-														<div class="catalog-drop-filter__title">Выберите узор</div>
-														<div class="catalog-drop-filter__items">
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">горох</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">геометрия</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">другое</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">животное</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">камуфляж</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">клетка</span>
-															</label>
-															<label class="catalog-drop-filter__item">
-																<input class="check-box" type="checkbox">
-																<span class="check-style"></span>
-																<span class="check-text">леопардовый</span>
-															</label>
-														</div>
-													</div>
-												</div>
-												<div class="catalog-drop-filter__buttons">
-													<button class="btn catalog-drop-filter__btn btn--border" type="reset">
-														Очистить все
-														<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-															<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#479458" />
-														</svg>
-													</button>
-													<button class="btn catalog-drop-filter__btn" type="submit">Применить</button>
-												</div>
-											</div>
-										</fieldset>
-									</div>
-									<button class="catalog-filters__reset-btn" type="reset">
-										Очистить все
-										<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" fill="#9B9B9B" />
-										</svg>
-									</button>
-								</form>
-								<div class="catalog__view">
-									<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
-										<svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-											<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-											<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-											<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-										</svg>
-									</button>
-									<button class="catalog__view-btn col-btn" type="button">
-										<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-											<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-										</svg>
-									</button>
-								</div>
-								<button class="filters-btn" type="button">Фильтры</button>
-							</div>
-							<div class="catalog__cards">
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card sale">
-									<span class="label catalog-card__label label--discount">40%</span>
-									<span class="label catalog-card__label label--new">new</span>
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__prices">
-										<div class="new-price catalog-card__new-price">37 400 ₽</div>
-										<div class="old-price catalog-card__old-price">21 200 ₽</div>
-									</div>
-								</div>
-								<div class="catalog-card new">
-									<span class="label catalog-card__label label--discount">@@discount</span>
-									<span class="label catalog-card__label label--new">new</span>
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="banner">
-									Рекламный баннер
-								</div>
-								<div class="catalog-card new">
-									<span class="label catalog-card__label label--discount">@@discount</span>
-									<span class="label catalog-card__label label--new">new</span>
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card sale">
-									<span class="label catalog-card__label label--discount">40%</span>
-									<span class="label catalog-card__label label--new">new</span>
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__prices">
-										<div class="new-price catalog-card__new-price">37 400 ₽</div>
-										<div class="old-price catalog-card__old-price">21 200 ₽</div>
-									</div>
-								</div>
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-								<div class="catalog-card sale">
-									<span class="label catalog-card__label label--discount">40%</span>
-									<span class="label catalog-card__label label--new">new</span>
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__prices">
-										<div class="new-price catalog-card__new-price">37 400 ₽</div>
-										<div class="old-price catalog-card__old-price">21 200 ₽</div>
-									</div>
-								</div>
-								<div class="catalog-card">
-									<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
-									<div class="catalog-card__img">
-										<img class="lazy" data-src='assets/images/content/catalog-card.jpg' alt='Пальто Loriata'>
-										<div class="catalog-card__info">
-											<div class="catalog-card__sizes">
-												<span class="catalog-card__size">42</span>
-												<span class="catalog-card__size">44</span>
-												<span class="catalog-card__size">46</span>
-												<span class="catalog-card__size catalog-card__size--disabled">48</span>
-												<span class="catalog-card__size catalog-card__size--disabled">50</span>
-												<span class="catalog-card__size catalog-card__size--disabled">52</span>
-											</div>
-											<a data-fancybox href="#product-popup" href="javascript:;" class="catalog-card__info-link popup-link">Быстрый
-												просмотр</a>
-										</div>
-									</div>
-									<h6 class="catalog-card__title"><a href="#">Пальто</a></h6>
-									<div class="catalog-card__subtitle">Loriata</div>
-									<div class="catalog-card__price">21 200 ₽</div>
-								</div>
-							</div>
-							<nav class="pagination" aria-label="Пагинация">
-								<ol class="pagination__list">
-									<li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
-									<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
-									<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
-									<li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
-								</ol>
-								<a href="#" class="pagination__next">
-									<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="#101112" />
-									</svg>
-								</a>
-							</nav>
-							<div class="seo-text catalog-page__seo-text">
-								<p>
-									Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-									Вдали
-									от
-									всех живут они
-									в
-									буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
-									журчит
-									по
-									всей стране и
-									обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
-									жаренные
-									члены
-									предложения залетают прямо в рот.
-								</p>
-								<p>
-									Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
-									безорфографичный
-									образ
-									жизни.
-									Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в
-									большой
-									мир
-									грамматики.
-									Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
-									запятой, но текст
-									не
-									дал сбить себя с толку.
-								</p>
-								<p>
-									Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
-									Взобравшись
-									на первую
-									вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
-									Буквоград, на
-									заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
-								</p>
-							</div>
+						<nav class="pagination" aria-label="Пагинация">
+							<ol class="pagination__list">
+								<li class="pagination__item"><a href="#" class="pagination__link active">1</a></li>
+								<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+								<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+								<li class="pagination__item"><a href="#" class="pagination__link">4</a></li>
+							</ol>
+							<a href="#" class="pagination__next">
+								<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="#101112" />
+								</svg>
+							</a>
+						</nav>
+						<div class="seo-text catalog-page__seo-text">
+							<p>
+								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+								Вдали
+								от
+								всех живут они
+								в
+								буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+								журчит
+								по
+								всей стране и
+								обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
+								жаренные
+								члены
+								предложения залетают прямо в рот.
+							</p>
+							<p>
+								Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
+								безорфографичный
+								образ
+								жизни.
+								Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в
+								большой
+								мир
+								грамматики.
+								Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
+								запятой, но текст
+								не
+								дал сбить себя с толку.
+							</p>
+							<p>
+								Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+								Взобравшись
+								на первую
+								вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
+								Буквоград, на
+								заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
+							</p>
 						</div>
 					</div>
 				</div>
@@ -1979,7 +1982,7 @@
 			</svg>
 		</button>
 		<div class="overlay">
-			<div id="auth-popup" class="aside-popup">
+			<div id="auth-popup" class="aside-popup auth-popup">
 				<button class="aside-popup__close" type="button">
 					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
@@ -2080,7 +2083,7 @@
 							<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Ваш телефон">
 							<input class="input aside-popup__form-input" name="email" type="email" placeholder="Ваш e-mail">
 							<div class="input-wrap">
-								<input id="password" class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+								<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
 								<button class="pass-btn show" type="button"></button>
 							</div>
 							<div class="input-wrap">
@@ -2181,7 +2184,7 @@
 										<input class="counter__input" type="number" value="1" readonly>
 										<button class="plus-btn counter__btn" type="button"></button>
 									</div>
-									<div class="basket-product__prices drop-basket__product-prices">
+									<div class="drop-basket__product-prices">
 										<div class="basket-product__price drop-basket__product-price">
 											4 300
 										</div>

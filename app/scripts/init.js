@@ -1,6 +1,9 @@
 $(document).ready(function () {
-	let lazyLoadInstance = new LazyLoad();
+
+	new LazyLoad();
 	new WOW().init();
+
+	$('.header__cart-num').text(`(${$('.drop-basket__product').length})`);
 
 	$('.select__title').on('click', function () {
 		$(this).parents('.select').siblings().find('div.select__title').removeClass('select__title--active');
@@ -21,26 +24,18 @@ $(document).ready(function () {
 		$('#sale-popup').fadeIn('slow');
 	});
 
+	// Открытие попапа через 2 мин
 	/* setTimeout(() => {
 		$.fancybox.open({
 			src: '#discount-popup',
 			type: 'inline',
-			opts: {
-				beforeShow: function (instance, current) {
-					$(".popup form").attr('tabindex', '-1');
-					$(".popup form").attr('autofocus', 'false');
-				},
-				afterShow: function (instance, current) {
-					$(".popup form").attr('tabindex', '-1');
-					$(".popup form").attr('autofocus', 'false');
-				}
-			}
 		});
 	}, 120000); */
 
 	if ($('main').hasClass('auth')) {
 		$('body').addClass('_lock');
 		$('.overlay').show('slow');
+		$('#auth-popup').fadeIn('slow');
 		$('#auth-popup').addClass('active');
 	}
 
@@ -81,6 +76,7 @@ $(document).ready(function () {
 	app.basketTotal.init();
 	app.feedback.init();
 	app.pageup.init();
+	app.auth.init();
 	if ($('main').hasClass('contacts-page')) {
 		app.contacts.init();
 	}

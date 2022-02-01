@@ -38,6 +38,14 @@
 		background-color: transparent;
 		border: 0.1rem solid #EAEAEA;
 		color: #9B9B9B;
+
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: #2D703C;
+				color: #2D703C;
+				background-color: transparent;
+			}
+		}
 	}
 
 	&--border {
@@ -57,11 +65,11 @@
 		@media (any-hover: hover) {
 			&:hover {
 				background-color: transparent;
-				border-color: $green;
-				color: $green;
+				border-color: #2D703C;
+				color: #2D703C;
 
 				svg path {
-					fill: $green;
+					fill: #2D703C;
 				}
 			}
 		}

@@ -3,8 +3,8 @@
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
 	<main class="page catalog">
-		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
+		<nav class="breadcrumbs" aria-label="breadcrumbs">
+			<div class="container">
 				<ol class="breadcrumbs__list">
 					<li class="breadcrumbs__item">
 						<a href="#">
@@ -32,163 +32,163 @@
 						</span>
 					</li>
 				</ol>
-			</nav>
-			@@include("blocks/promo-collection/promo-collection.html")
-			<div class="catalog__page">
-				<h1 class="title catalog__title">Женские пальто</h1>
-				<div class="catalog__inner">
-					@@include("blocks/aside-filters/aside-filters.html")
-					<div class="catalog__body">
-						<div class="catalog__filters">
-							@@include("blocks/catalog-filters/catalog-filters.html")
-							<div class="catalog__view">
-								<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
-									<svg width="19" height="19" viewBox="0 0 19 19" fill="none"
-										xmlns="http://www.w3.org/2000/svg">
-										<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-										<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-										<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-										<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-									</svg>
-								</button>
-								<button class="catalog__view-btn col-btn" type="button">
-									<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-										<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-										<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-									</svg>
-								</button>
-							</div>
+			</div>
+		</nav>
+		@@include("blocks/promo-collection/promo-collection.html")
+		<div class="catalog__page container">
+			<h1 class="title catalog__title">Женские пальто</h1>
+			<div class="catalog__inner">
+				@@include("blocks/aside-filters/aside-filters.html")
+				<div class="catalog__body">
+					<div class="catalog__filters">
+						@@include("blocks/catalog-filters/catalog-filters.html")
+						<div class="catalog__view">
+							<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
+								<svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+									xmlns="http://www.w3.org/2000/svg">
+									<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+									<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+									<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+									<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
+								</svg>
+							</button>
+							<button class="catalog__view-btn col-btn" type="button">
+								<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+									<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
+								</svg>
+							</button>
+						</div>
 
-							<button class="filters-btn" type="button">Фильтры</button>
+						<button class="filters-btn" type="button">Фильтры</button>
+					</div>
+					<div class="catalog__cards">
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"newprice": "21 200 ₽",
+						"oldprice": "37 400 ₽",
+						"discount": "40%",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card-new/catalog-card-new.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						<div class="banner">
+							Рекламный баннер
 						</div>
-						<div class="catalog__cards">
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"newprice": "21 200 ₽",
-							"oldprice": "37 400 ₽",
-							"discount": "40%",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card-new/catalog-card-new.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							<div class="banner">
-								Рекламный баннер
-							</div>
-							@@include("blocks/catalog-card-new/catalog-card-new.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"newprice": "21 200 ₽",
-							"oldprice": "37 400 ₽",
-							"discount": "40%",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"newprice": "21 200 ₽",
-							"oldprice": "37 400 ₽",
-							"discount": "40%",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-							@@include("blocks/catalog-card/catalog-card.html", {
-							"title": "Пальто",
-							"subtitle": "Loriata",
-							"price": "21 200 ₽",
-							"image": "assets/images/content/catalog-card.jpg",
-							"alt": "Пальто Loriata",
-							})
-						</div>
-						@@include("blocks/pagination/pagination.html")
-						<div class="seo-text catalog-page__seo-text">
-							<p>
-								Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
-								Вдали
-								от
-								всех живут они
-								в
-								буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
-								журчит
-								по
-								всей стране и
-								обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
-								жаренные
-								члены
-								предложения залетают прямо в рот.
-							</p>
-							<p>
-								Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
-								безорфографичный
-								образ
-								жизни.
-								Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в
-								большой
-								мир
-								грамматики.
-								Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
-								запятой, но текст
-								не
-								дал сбить себя с толку.
-							</p>
-							<p>
-								Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
-								Взобравшись
-								на первую
-								вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
-								Буквоград, на
-								заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
-							</p>
-						</div>
+						@@include("blocks/catalog-card-new/catalog-card-new.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"newprice": "21 200 ₽",
+						"oldprice": "37 400 ₽",
+						"discount": "40%",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"newprice": "21 200 ₽",
+						"oldprice": "37 400 ₽",
+						"discount": "40%",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+						@@include("blocks/catalog-card/catalog-card.html", {
+						"title": "Пальто",
+						"subtitle": "Loriata",
+						"price": "21 200 ₽",
+						"image": "assets/images/content/catalog-card.jpg",
+						"alt": "Пальто Loriata",
+						})
+					</div>
+					@@include("blocks/pagination/pagination.html")
+					<div class="seo-text catalog-page__seo-text">
+						<p>
+							Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты.
+							Вдали
+							от
+							всех живут они
+							в
+							буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль
+							журчит
+							по
+							всей стране и
+							обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой
+							жаренные
+							члены
+							предложения залетают прямо в рот.
+						</p>
+						<p>
+							Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими
+							безорфографичный
+							образ
+							жизни.
+							Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в
+							большой
+							мир
+							грамматики.
+							Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
+							запятой, но текст
+							не
+							дал сбить себя с толку.
+						</p>
+						<p>
+							Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу.
+							Взобравшись
+							на первую
+							вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
+							Буквоград, на
+							заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
+						</p>
 					</div>
 				</div>
 			</div>

@@ -81,7 +81,7 @@
 				<a href="#details" class="tab product-card__tab tab--active">Детали</a>
 				<a href="#delivery" class="tab product-card__tab">Доставка</a>
 				<a href="#payment" class="tab product-card__tab">Оплата</a>
-				<a href="#availability" class="tab product-card__tab">Наличие в магазинах</a>
+				<a href="#shops-availability" class="tab product-card__tab">Наличие в магазинах</a>
 				<a href="#video" class="tab product-card__tab">Видео</a>
 			</div>
 		</div>
@@ -92,11 +92,11 @@
 		<div id="payment" class="tabs-content">
 			Контент Оплата
 		</div>
-		<div id="availability" class="tabs-content">
-			Контент Наличие в магазинах
-		</div>
+		@@include("blocks/shops-availability/shops-availability.html")
 		<div id="video" class="tabs-content">
-			Контент Видео
+			<iframe src="https://www.youtube.com/embed/L1e8YEozOD8" title="YouTube video player" frameborder="0"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+				allowfullscreen></iframe>
 		</div>
 	</div>
 </div>
