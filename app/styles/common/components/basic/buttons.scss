@@ -109,8 +109,8 @@ a.btn {
 	position: relative;
 
 	@media(max-width: 500px) {
-		font-size: 1.4rem;
-		line-height: 2.1rem;
+		font-size: 1.2rem;
+		line-height: 1.8rem;
 	}
 
 	svg {
@@ -119,9 +119,8 @@ a.btn {
 		margin-left: 1.6rem;
 
 		@media(max-width: 500px) {
-			width: 3.5rem;
+			width: 4rem;
 			height: 1rem;
-			margin-left: 1rem;
 		}
 
 		path {

@@ -57,6 +57,10 @@ dt {
 		padding-bottom: 7rem;
 	}
 
+	@media(max-width: 767px) {
+		padding-top: 2.4rem;
+	}
+
 	@media(max-width: 500px) {
 		padding-bottom: 3rem;
 	}

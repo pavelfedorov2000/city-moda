@@ -921,7 +921,7 @@
 					<div id="login-enter">
 						<form action="#" class="aside-popup__form">
 							<div class="aside-popup__form-inputs">
-								<input class="input aside-popup__form-input" type="email" placeholder="Введите e-mail">
+								<input class="input aside-popup__form-input" name="login_email" type="email" placeholder="Введите e-mail">
 								<div class="input-wrap">
 									<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
 									<button class="pass-btn show" type="button"></button>
@@ -1024,7 +1024,9 @@
 					<h3 class="aside-popup__title">Ваша корзина</h3>
 					<div class="drop-basket__products">
 						<div class="basket-product drop-basket__product">
-							<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
+							<div class="basket-product__img">
+								<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" alt="">
+							</div>
 							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 							<dl class="product-list basket-product__list">
 								<div>
@@ -1061,7 +1063,9 @@
 							</div>
 						</div>
 						<div class="basket-product drop-basket__product">
-							<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
+							<div class="basket-product__img">
+								<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" alt="">
+							</div>
 							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 							<dl class="product-list basket-product__list">
 								<div>
@@ -1113,33 +1117,6 @@
 						<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="white" />
 					</svg>
 				</a>
-			</div>
-		</div>
-	</div>
-	<div style="display: none;" id="discount-popup" class="popup mini-popup">
-		<div class="mini-popup__inner">
-			<div class="mini-popup__img">
-				<img class="lazy" data-src='assets/images/content/popups/sale-bags.jpg' alt=''>
-			</div>
-			<div class="mini-popup__content">
-				<div class="mini-popup__title">Дарим скидку 10%</div>
-				<div class="mini-popup__subtitle">
-					за подписку
-					на наши новости и акции
-				</div>
-				<form action="#" class="subscribe-form">
-					<div class="form-row subscribe-form__wrap">
-						<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email" required>
-						<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
-					</div>
-					<label class="form-agree">
-						<input class="check-box" type="checkbox" required>
-						<span class="check-style"></span>
-						<span class="check-text">
-							Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
-						</span>
-					</label>
-				</form>
 			</div>
 		</div>
 	</div>

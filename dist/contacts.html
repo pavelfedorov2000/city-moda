@@ -1022,7 +1022,7 @@
 						<div id="login-enter">
 							<form action="#" class="aside-popup__form">
 								<div class="aside-popup__form-inputs">
-									<input class="input aside-popup__form-input" type="email" placeholder="Введите e-mail">
+									<input class="input aside-popup__form-input" name="login_email" type="email" placeholder="Введите e-mail">
 									<div class="input-wrap">
 										<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
 										<button class="pass-btn show" type="button"></button>
@@ -1125,7 +1125,9 @@
 						<h3 class="aside-popup__title">Ваша корзина</h3>
 						<div class="drop-basket__products">
 							<div class="basket-product drop-basket__product">
-								<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
+								<div class="basket-product__img">
+									<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" alt="">
+								</div>
 								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 								<dl class="product-list basket-product__list">
 									<div>
@@ -1162,7 +1164,9 @@
 								</div>
 							</div>
 							<div class="basket-product drop-basket__product">
-								<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
+								<div class="basket-product__img">
+									<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" alt="">
+								</div>
 								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 								<dl class="product-list basket-product__list">
 									<div>
@@ -1217,6 +1221,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- Попап арим скидку (появляется спустя 2 минуты пребывания на сайте) -->
 		<div style="display: none;" id="discount-popup" class="popup mini-popup">
 			<div class="mini-popup__inner">
 				<div class="mini-popup__img">
@@ -1244,6 +1249,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- End Попап арим скидку -->
+		<!-- Попап Где вы находитесь? -->
 		<div style="display: none;" id="region-popup" class="popup region-popup">
 			<div class="region-popup__inner">
 				<div class="region-popup__img">
@@ -1335,6 +1342,8 @@
 				</div>
 			</div>
 		</div>
+		<!-- End Попап Где вы находитесь? -->
+		<!-- Попап Изменение пароля -->
 		<div style="display: none;" id="password-change" class="popup password-change">
 			<div class="password-change__title">Изменение пароля</div>
 			<form action="#" class="password-change__form">
@@ -1353,6 +1362,7 @@
 				<button class="btn password-change__form-btn" type="submit" disabled>Сохранить новый пароль</button>
 			</form>
 		</div>
+		<!-- End Попап Изменение пароля -->
 	</div>
 	<script src="./assets/libs/js/jquery.min.js"></script>
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>

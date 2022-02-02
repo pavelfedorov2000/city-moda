@@ -98,19 +98,22 @@
 								<legend class="checkout-form__item-title">Персональные данные</legend>
 								<div class="personal-data-form__inputs">
 									<div class="personal-data-form__input">
-										<input class="input" name="name" placeholder="Имя*">
+										<input class="input" name="name" placeholder="Имя*" value="Иванка">
 									</div>
 									<div class="personal-data-form__input">
-										<input class="input" name="surname" placeholder="Фамилия*">
+										<input class="input" name="surname" placeholder="Фамилия*" value="Иванова">
 									</div>
 									<div class="personal-data-form__input">
-										<input class="input" type="tel" name="phone" placeholder="Ваш телефон*">
+										<input class="input" type="tel" name="phone" placeholder="Ваш телефон*"
+											value="+7 (999) 999-99-99 ">
 									</div>
 									<div class="personal-data-form__input">
-										<input class="input" type="email" name="email" placeholder="Ваш e-mail*">
+										<input class="input" type="email" name="email" placeholder="Ваш e-mail*"
+											value="post@mail.ru">
 									</div>
 									<div class="personal-data-form__input">
-										<input class="input" name="city" placeholder="Город, населенный пункт*">
+										<input class="input" name="city" placeholder="Город, населенный пункт*"
+											value="г.Санкт-Петербург">
 									</div>
 								</div>
 							</fieldset>
@@ -172,8 +175,10 @@
 												</dl>
 											</div>
 											<div class="checkout-delivery__data">
-												<a href="#" class="btn checkout-delivery__btn btn--border">Изменить
-													пункт выдачи</a>
+												<a href="#" class="btn checkout-delivery__btn btn--border">
+													Изменить
+													пункт выдачи
+												</a>
 												<input class="input checkout-delivery__input"
 													value="г. Санкт-Петербург, Магазин, ул. Боровая, 5,">
 												<div class="checkout-delivery__date">
@@ -239,8 +244,8 @@
 		@@include("blocks/drop-basket/drop-basket.html")
 	</div>
 	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/popup/region-popup.html")
-	@@include("blocks/popup/product-popup.html")
-	@@include("blocks/pickup-popup/pickup-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/password-change/password-change.html")
+	<!-- @@include("blocks/pickup-popup/pickup-popup.html") -->
 </div>
 @@include("blocks/link/link.html")

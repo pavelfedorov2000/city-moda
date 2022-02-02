@@ -1,7 +1,8 @@
 app.asideFilters = {
 	name: 'asideFilters',
 	description: 'your script description',
-	init() {
+    init() {
+        // Аккордеон
 		$('.aside-filters__item-drop').on('click', function () {
 			$(this).toggleClass('aside-filters__item-drop--active');
 			$(this).parent().next().slideToggle('300');

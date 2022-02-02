@@ -2,9 +2,6 @@
 
 	@extend %text-14;
 	font-weight: 500;
-	//display: grid;
-	//grid-template-columns: repeat(5, max-content);
-	//grid-gap: 1.5rem;
 	@extend %flex-row;
 	align-items: flex-start;
 	flex-wrap: wrap;
@@ -103,7 +100,10 @@
 
 	&__img {
 		grid-area: picture;
-		@extend %cover;
+
+		img {
+			@extend %cover;
+		}
 	}
 
 	// .order-product__title

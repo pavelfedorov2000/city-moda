@@ -85,6 +85,10 @@
 		text-align: center;
 		opacity: 0;
 		transition: .5s all;
+
+		@media(max-width: 500px) {
+			padding: 1.5rem 0.5rem;
+		}
 	}
 
 	&__sizes {
@@ -93,15 +97,29 @@
 
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 0.75rem;
+			}
 		}
 	}
 
 	&__size {
 		@extend %text-16;
 		font-weight: 600;
+		white-space: nowrap;
+
+		@media(max-width: 767px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
 
 		&:not(:last-child) {
 			margin-right: 2.6rem;
+
+			@media(max-width: 767px) {
+				margin-right: 1rem;
+			}
 		}
 
 		&--disabled {
@@ -116,6 +134,12 @@
 		position: relative;
 		padding-bottom: 0.3rem;
 		text-decoration: none;
+
+		@media(max-width: 500px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+			padding-bottom: 0.15rem;
+		}
 
 		&:after {
 			content: '';
@@ -196,216 +220,6 @@
 	&.favorite {
 		.catalog-card__favorite {
 			background-image: url(../images/icons/heart-filled.svg);
-		}
-	}
-}
-
-.catalog {
-
-	.catalog-card {
-		&__img {
-			height: 53.3rem;
-
-			@media(max-width: 1024px) {
-				height: 35rem
-			}
-
-			@media(max-width: 767px) {
-				height: 21rem;
-			}
-		}
-
-		&__label,
-		&__favorite {
-			@media(max-width: 500px) {
-				top: 0.8rem;
-			}
-		}
-
-		&__label {
-			@media(max-width: 500px) {
-				width: 3rem;
-				height: 3rem;
-				font-size: 1rem;
-				line-height: 1.5rem;
-				left: 0.8rem;
-			}
-		}
-
-		&__favorite {
-			@media(max-width: 500px) {
-				right: 0.8rem;
-				width: 1.6rem;
-				height: 1.6rem;
-			}
-		}
-
-		&__title {
-			@media(max-width: 500px) {
-				font-size: 1.4rem;
-				line-height: 2.1rem;
-			}
-		}
-
-		&__subtitle {
-			@media(max-width: 500px) {
-				font-size: 1.1rem;
-				line-height: 1.6rem;
-			}
-
-			&:not(:last-child) {
-				@media(max-width: 500px) {
-					margin-bottom: 0.4rem;
-				}
-			}
-		}
-
-		&__price {
-			@media(max-width: 500px) {
-				font-size: 1.2rem;
-				line-height: 1.8rem;
-			}
-		}
-
-		&__new-price {
-			@media(max-width: 500px) {
-				font-size: 1.2rem;
-				line-height: 1.8rem;
-			}
-		}
-
-		&__old-price {
-			@media(max-width: 500px) {
-				font-size: 1rem;
-				line-height: 1.5rem;
-			}
-		}
-	}
-
-	&__page {
-		padding-top: 5.2rem;
-		padding-bottom: 11rem;
-
-		@media(max-width: 767px) {
-			padding-bottom: 3rem;
-		}
-
-		@media(max-width: 500px) {
-			padding-top: 3rem;
-		}
-	}
-
-	&__title {
-		&:not(:last-child) {
-			margin-bottom: 4rem;
-
-			@media(max-width: 500px) {
-				margin-bottom: 2rem;
-			}
-		}
-	}
-
-	&__inner {
-		@media(min-width: 1025px) {
-			display: grid;
-			grid-template-columns: 22rem auto;
-			grid-gap: 4rem;
-		}
-	}
-
-	&__filters {
-		@extend %flex-row;
-		align-items: flex-start;
-		padding-bottom: 2rem;
-		border-bottom: 0.1rem solid #EFEFEF;
-
-		&:not(:last-child) {
-			margin-bottom: 3rem;
-		}
-	}
-
-	&__view {
-		display: flex;
-	}
-
-	&__view-btn {
-		svg {
-			width: 1.9rem;
-			height: 1.9rem;
-
-			rect {
-				transition: .3s stroke;
-			}
-		}
-
-		&:not(:last-child) {
-			margin-right: 1.6rem;
-		}
-
-		&--active {
-			svg rect {
-				stroke: #505661;
-			}
-		}
-	}
-
-	&__cards {
-		display: grid;
-		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 2rem;
-
-		@media(max-width: 767px) {
-			grid-gap: 1.6rem;
-			grid-template-columns: repeat(2, 1fr);
-		}
-
-		&--two-cols {
-			grid-template-columns: repeat(2, 1fr);
-
-			@media(max-width: 767px) {
-				grid-template-columns: 1fr;
-			}
-
-			.catalog-card {
-				&__img {
-					height: 81.3rem;
-
-					@media(max-width: 1024px) {
-						height: 50rem;
-					}
-				}
-			}
-		}
-	}
-}
-
-.search-results {
-	&__top {
-		@media(min-width: 768px) {
-			display: flex;
-			align-items: flex-end;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 4rem;
-
-			@media(max-width: 500px) {
-				margin-bottom: 3rem;
-			}
-		}
-	}
-
-	&__num {
-		@extend %text-13;
-		color: #777;
-
-		@media(min-width: 768px) {
-			margin-left: 1.6rem;
-			margin-bottom: 0.4rem;
-		}
-
-		@media(max-width: 767px) {
-			margin-top: 0.5rem;
 		}
 	}
 }

@@ -1,0 +1,108 @@
+#region-popup {
+	@media(min-width: 1025px) {
+		width: 98.1rem !important;
+	}
+}
+
+.region-popup {
+
+	@media(max-width: 1024px) {
+		width: calc(100vw - 1.5rem * 2);
+	}
+
+	@media(max-width: 500px) {
+		width: 100vw;
+	}
+
+	&__img {
+		height: 30rem;
+	}
+
+	// .region-popup__inner
+
+	&__inner {
+		display: grid;
+
+		@media(min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		@media(min-width: 1025px) {
+			grid-template-columns: 46.4rem 1fr;
+		}
+	}
+
+	// .region-popup__content
+
+	&__content {
+		padding: 6rem 5rem;
+
+		@media(max-width: 1024px) {
+			padding: 3rem;
+		}
+	}
+
+	// .region-popup__title
+
+	&__title {
+		@extend %text-25;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: 3.2rem;
+		}
+	}
+
+	// .region-popup__input
+
+	&__input {
+		@extend %text-14;
+		width: 100%;
+		padding: 1.55rem 2rem;
+		border: 0.1rem solid #101112;
+
+		@media(max-width: 500px) {
+			padding: 1rem 1.5rem;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 2.4rem;
+		}
+
+		&::placeholder {
+			color: #777;
+		}
+	}
+
+	// .region-popup__cities
+
+	&__cities-row {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+
+		@media(min-width: 1025px) {
+			grid-template-columns: repeat(2, max-content);
+			grid-gap: 17.5rem;
+		}
+	}
+
+	&__city {
+		display: block;
+
+		&:not(:last-child) {
+			margin-bottom: 1.6rem;
+		}
+
+		.radio-text {
+			@extend %text-13;
+			cursor: pointer;
+			transition: .3s color;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $green;
+				}
+			}
+		}
+	}
+}

@@ -5,6 +5,10 @@
 	&__title {
 		&:not(:last-child) {
 			margin-bottom: 5.2rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 3rem;
+			}
 		}
 	}
 }
@@ -31,6 +35,10 @@
 
 		&:not(:last-child) {
 			margin-bottom: 3rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 2rem;
+			}
 		}
 	}
 
@@ -223,13 +231,21 @@
 	&__data {
 		width: 100%;
 		display: grid;
-		grid-template-columns: 24.2rem 1fr;
 		grid-gap: 2.4rem 3rem;
+
+		@media(max-width: 500px) {
+			grid-gap: 2rem;
+		}
+
+		@media(min-width: 768px) {
+			grid-template-columns: 24.2rem 1fr;
+		}
 	}
 
 	&__btn {
 		@extend %text-14;
 		font-weight: 500;
+		padding: 1.35rem;
 	}
 
 	&__label {

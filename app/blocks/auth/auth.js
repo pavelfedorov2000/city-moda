@@ -1,7 +1,17 @@
 app.auth = {
 	name: 'auth',
 	description: 'your script description',
-	init() {
+    init() {
+        
+        // Закрытие выезжающего справа попапа
+        $('.aside-popup__close').on('click', function () {
+			$(this).parents('.aside-popup').removeClass('active');
+			$(this).parent().fadeOut('slow');
+			$('.overlay').fadeOut('300');
+			$('body').removeClass('_lock');
+        });
+        
+        // Логика задизейбленной кнопки
 		$('#auth input').on('change', function () {
 			if ($(this).val() !== '' && $(this).parents('form').find('input[type=email]').val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
 				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
@@ -10,7 +20,8 @@ app.auth = {
 			}
 		});
 
-		$('#password-recovery input').on('change', function () {
+        // Логика задизейбленной кнопки
+		$('#password-recovery input, #password-change input').on('change', function () {
 			if ($(this).val() !== '') {
 				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
 			} else {
@@ -18,6 +29,7 @@ app.auth = {
 			}
 		});
 
+        // Логика задизейбленной кнопки
 		$('#password-change input[type=password]').on('change', function () {
 			if ($(this).val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
 				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
@@ -39,11 +51,13 @@ app.auth = {
 			}
 		});
 
+        // toogle phone / email enter
 		$('.aside-popup__link-btn').on('click', function () {
 			$(this).parent().hide();
 			$(`#${$(this).data('enter')}`).show();
 		});
 
+        // Восстановление пароля открыть
 		$('.remind-password').on('click', function () {
 			$(this).parents('.aside-popup').removeClass('active');
 			$(this).parents('.aside-popup').hide();
@@ -51,6 +65,7 @@ app.auth = {
 			$('#password-recovery').addClass('active');
 		});
 
+        // Восстановление пароля закрыть
 		$('#password-recovery .aside-popup__back-btn').on('click', function () {
 			$(this).parents('.aside-popup').removeClass('active');
 			$(this).parents('.aside-popup').hide();
@@ -58,6 +73,7 @@ app.auth = {
 			$('#auth-popup').addClass('active');
 		});
 
+        // // Восстановление пароля форма успешно отправлена
 		$('#password-recovery form').submit(function (e) {
 			e.preventDefault();
 			$(this).append('<div class="form-success aside-popup__form-success">Письмо оптравлено. Для восстановления пароля перейдите по ссылке в письме</div>');

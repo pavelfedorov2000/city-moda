@@ -30,7 +30,7 @@ $(document).ready(function () {
 			src: '#discount-popup',
 			type: 'inline',
 		});
-	}, 120000); */
+	}, 3000); */
 
 	if ($('main').hasClass('auth')) {
 		$('body').addClass('_lock');
@@ -65,10 +65,14 @@ $(document).ready(function () {
 	app.instagram.init();
 	app.catalogCard.init();
 	app.asideFilters.init();
-	app.catalogFilters.init();
-	app.productCard.init();
+    app.catalogFilters.init();
+    app.sizeFilter.init();
+    app.pricefilter.init();
+    app.productCard.init();
+    app.productPopup.init();
 	app.productDetails.init();
-	app.popups.init();
+    app.popup.init();
+    app.regionPopup.init();
 	app.checkout.init();
 	app.blog.init();
 	app.otherNews.init();

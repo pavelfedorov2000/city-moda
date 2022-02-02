@@ -103,7 +103,10 @@
 
 	&__img {
 		grid-area: image;
-		@extend %cover;
+
+		img {
+			@extend %cover;
+		}
 	}
 
 	// .basket-product__title

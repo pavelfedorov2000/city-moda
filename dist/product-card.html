@@ -1940,7 +1940,7 @@
 					<div id="login-enter">
 						<form action="#" class="aside-popup__form">
 							<div class="aside-popup__form-inputs">
-								<input class="input aside-popup__form-input" type="email" placeholder="Введите e-mail">
+								<input class="input aside-popup__form-input" name="login_email" type="email" placeholder="Введите e-mail">
 								<div class="input-wrap">
 									<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
 									<button class="pass-btn show" type="button"></button>
@@ -2043,7 +2043,9 @@
 					<h3 class="aside-popup__title">Ваша корзина</h3>
 					<div class="drop-basket__products">
 						<div class="basket-product drop-basket__product">
-							<img class="basket-product__img" src="assets/images/content/basket-product-01.jpg" alt="">
+							<div class="basket-product__img">
+								<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" alt="">
+							</div>
 							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 							<dl class="product-list basket-product__list">
 								<div>
@@ -2080,7 +2082,9 @@
 							</div>
 						</div>
 						<div class="basket-product drop-basket__product">
-							<img class="basket-product__img" src="assets/images/content/basket-product-02.jpg" alt="">
+							<div class="basket-product__img">
+								<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" alt="">
+							</div>
 							<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
 							<dl class="product-list basket-product__list">
 								<div>
@@ -2135,6 +2139,36 @@
 			</div>
 		</div>
 	</div>
+	<!-- Попап арим скидку (появляется спустя 2 минуты пребывания на сайте) -->
+	<div style="display: none;" id="discount-popup" class="popup mini-popup">
+		<div class="mini-popup__inner">
+			<div class="mini-popup__img">
+				<img class="lazy" data-src='assets/images/content/popups/sale-bags.jpg' alt=''>
+			</div>
+			<div class="mini-popup__content">
+				<div class="mini-popup__title">Дарим скидку 10%</div>
+				<div class="mini-popup__subtitle">
+					за подписку
+					на наши новости и акции
+				</div>
+				<form action="#" class="subscribe-form">
+					<div class="form-row subscribe-form__wrap">
+						<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email" required>
+						<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
+					</div>
+					<label class="form-agree">
+						<input class="check-box" type="checkbox" required>
+						<span class="check-style"></span>
+						<span class="check-text">
+							Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
+						</span>
+					</label>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- End Попап арим скидку -->
+	<!-- Попап Где вы находитесь? -->
 	<div style="display: none;" id="region-popup" class="popup region-popup">
 		<div class="region-popup__inner">
 			<div class="region-popup__img">
@@ -2226,6 +2260,28 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Попап Где вы находитесь? -->
+	<!-- Попап Изменение пароля -->
+	<div style="display: none;" id="password-change" class="popup password-change">
+		<div class="password-change__title">Изменение пароля</div>
+		<form action="#" class="password-change__form">
+			<div class="input-wrap">
+				<input id="password" class="input" type="password" name="current_password" placeholder="Введите ваш текущий пароль">
+				<button class="pass-btn show" type="button"></button>
+			</div>
+			<div class="input-wrap">
+				<input id="new_password" class="input" type="password" name="new_password" placeholder="Введите новый пароль">
+				<button class="pass-btn show" type="button"></button>
+			</div>
+			<div class="input-wrap">
+				<input class="input" type="password" name="repeat_new_password" placeholder="Повторите пароль">
+				<button class="pass-btn show" type="button"></button>
+			</div>
+			<button class="btn password-change__form-btn" type="submit" disabled>Сохранить новый пароль</button>
+		</form>
+	</div>
+	<!-- End Попап Изменение пароля -->
+	<!-- Попап Таблица размеров -->
 	<div style="display: none;" id="product-sizes-popup" class="popup product-sizes-popup">
 		<div class="product-sizes-popup__inner">
 			<div class="product-sizes-popup__top">
@@ -2324,6 +2380,8 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Попап Таблица размеров -->
+	<!-- Попап арим скидку (появляется спустя 2 минуты пребывания на сайте) -->
 	<div style="display: none;" id="discount-popup" class="popup mini-popup">
 		<div class="mini-popup__inner">
 			<div class="mini-popup__img">
@@ -2351,6 +2409,8 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Попап арим скидку -->
+	<!-- Попап Подписаться на мой размер -->
 	<div style="display: none;" id="size-subscribe-popup" class="popup mini-popup">
 		<div class="mini-popup__inner">
 			<div class="mini-popup__img">
@@ -2377,6 +2437,7 @@
 			</div>
 		</div>
 	</div>
+	<!-- End Попап Подписаться на мой размер -->
 	<div style="display: none;" id="product-popup" class="popup product-popup">
 		<div class="product-popup__inner">
 			<div class="product-popup__slider swiper">

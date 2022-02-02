@@ -11,10 +11,6 @@
 		width: 26.4rem * 2 + 3rem;
 	}
 
-	// .profile-personal__input
-
-	&__input {}
-
 	// .profile-personal__field-title
 
 	&__field-title {
@@ -69,12 +65,11 @@
 		color: #000;
 		padding: 1.3rem 6.4rem;
 		border: 0.1rem solid #D0D0D0;
-		transition: .3s all;
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: #D0D0D0;
-				color: #fff;
+				border-color: #2D703C;
+				color: #2D703C;
 			}
 		}
 	}

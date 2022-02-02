@@ -20,7 +20,8 @@ app.validation = {
 						requiredphone: true,
 						minlenghtphone: true,
 					},
-					email: "required",
+                    email: "required",
+                    login_email: "required",
 					subscribe_email: {
 						required: true,
 						email: true,
@@ -47,7 +48,8 @@ app.validation = {
 					phone: {
 						requiredphone: "Пожалуйста, заполните обязательное поле."
 					},
-					email: "Пожалуйста, заполните поле.",
+                    email: "Пожалуйста, заполните обязательное поле.",
+                    login_email: "Пожалуйста, заполните поле.",
 					subscribe_email: {
 						required: "Пожалуйста, заполните электронную почту.",
 						email: "Пожалуйста, проверьте, правильно ли указан адрес электронной почты.",

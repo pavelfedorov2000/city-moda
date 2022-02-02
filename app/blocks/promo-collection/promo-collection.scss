@@ -26,9 +26,9 @@
 			grid-template-areas:
 				"image image image"
 				". . ."
-				". title ."
-				". . ."
 				". suptitle ."
+				". . ."
+				". title ."
 				". . ."
 				". link ."
 				". . ."
@@ -47,6 +47,11 @@
 		font-weight: 500;
 		color: #777;
 		grid-area: suptitle;
+
+		@media(max-width: 500px) {
+			font-size: 1.2rem;
+			line-height: 1.8rem;
+		}
 	}
 
 	// .promo-collection__title

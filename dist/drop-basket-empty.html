@@ -865,6 +865,130 @@
 		</svg>
 	</button>
 	<div class="overlay">
+		<div id="auth-popup" class="aside-popup auth-popup">
+			<button class="aside-popup__close" type="button">
+				<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
+				</svg>
+			</button>
+			<h3 class="aside-popup__title">Авторизация</h3>
+			<div class="aside-popup__text">
+				Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными
+				скидками и
+				баллами.
+			</div>
+			<div class="tabs aside-popup__tabs">
+				<a href="#auth" class="tab aside-popup__tab tab--active">Вход</a>
+				<a href="#register" class="tab aside-popup__tab">Регистрация</a>
+			</div>
+			<div id="auth" class="tabs-content aside-popup__content tabs-content--active">
+				<div class="aside-popup__body">
+					<div id="phone-enter">
+						<form action="#" class="aside-popup__form">
+							<div class="aside-popup__form-inputs">
+								<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Введите номер телефона">
+							</div>
+							<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+						</form>
+						<button data-enter="login-enter" class="aside-popup__link-btn" type="button">
+							Войти с помощью e-mail и паролю
+						</button>
+					</div>
+					<div id="login-enter">
+						<form action="#" class="aside-popup__form">
+							<div class="aside-popup__form-inputs">
+								<input class="input aside-popup__form-input" name="login_email" type="email" placeholder="Введите e-mail">
+								<div class="input-wrap">
+									<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+									<button class="pass-btn show" type="button"></button>
+								</div>
+							</div>
+							<div class="aside-popup__form-wrap">
+								<label class="form-agree">
+									<input class="check-box" type="checkbox">
+									<span class="check-style"></span>
+									<span class="check-text">
+										Запомнить меня
+									</span>
+								</label>
+								<button class="remind-password" type="button">
+									Напомнить пароль
+								</button>
+							</div>
+							<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+						</form>
+						<button data-enter="phone-enter" class="aside-popup__link-btn" type="button">
+							Войти с помощью номера телефона
+						</button>
+					</div>
+				</div>
+				<div class="aside-popup__social">
+					<div class="aside-popup__social-title ">
+						Или войдите через
+					</div>
+					<ul class="social aside-popup__social-list">
+						<li class="social__item aside-popup__social-item">
+							<a href="#" class="social__link">
+								<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.6641 18.7969H29.3984C29.534 19.3546 29.6047 19.9261 29.6094 20.5C29.6094 26.4688 25.3516 29.875 20.6641 29.875C19.1463 29.8785 17.6504 29.5133 16.3049 28.811C14.9593 28.1087 13.8044 27.0903 12.9394 25.8431C12.0744 24.5959 11.5251 23.1574 11.3387 21.6511C11.1524 20.1448 11.3345 18.6158 11.8695 17.1954C12.4045 15.7751 13.2764 14.5058 14.4102 13.4968C15.544 12.4878 16.9058 11.7691 18.3787 11.4025C19.8515 11.036 21.3914 11.0325 22.8659 11.3924C24.3404 11.7523 25.7054 12.4648 26.8438 13.4688L24.1172 16.1953C23.1425 15.3987 21.9229 14.9627 20.6641 14.9609C19.195 14.9609 17.7861 15.5445 16.7474 16.5833C15.7086 17.6221 15.125 19.031 15.125 20.5C15.125 21.9691 15.7086 23.3779 16.7474 24.4167C17.7861 25.4555 19.195 26.0391 20.6641 26.0391C23.2656 26.0391 25.2266 24.7188 25.6953 22.4141H20.6641V18.7969Z" fill="#101112" />
+								</svg>
+							</a>
+						</li>
+						<li class="social__item aside-popup__social-item">
+							<a class="social__link" href="#">
+								<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM16.8763 20.001C16.8763 18.2807 18.2802 16.8768 20.0005 16.8768C21.7208 16.8768 23.1247 18.2807 23.1247 20.001C23.1247 21.7214 21.7208 23.1253 20.0005 23.1253C18.2802 23.1253 16.8763 21.7214 16.8763 20.001ZM29.3711 19.5278C29.371 19.6854 29.3708 19.8431 29.3708 20.001C29.3708 20.1776 29.3711 20.354 29.3713 20.5302C29.373 21.6449 29.3746 22.7531 29.3099 23.8682C29.2372 25.3682 28.8974 26.6971 27.7981 27.7964C26.7013 28.8932 25.37 29.2354 23.87 29.3081C22.7362 29.3719 21.6096 29.3706 20.476 29.3694C20.3184 29.3692 20.1607 29.369 20.0028 29.369C19.8453 29.369 19.6878 29.3692 19.5305 29.3694C18.3984 29.3706 17.2715 29.3719 16.1356 29.3081C14.6356 29.2354 13.3067 28.8956 12.2075 27.7964C11.1106 26.6995 10.7685 25.3682 10.6958 23.8682C10.632 22.7344 10.6333 21.606 10.6345 20.4735C10.6347 20.3161 10.6349 20.1586 10.6349 20.001C10.6349 19.8435 10.6347 19.686 10.6345 19.5287C10.6333 18.3966 10.632 17.2697 10.6958 16.1339C10.7685 14.6339 11.1083 13.305 12.2075 12.2057C13.3044 11.1089 14.6356 10.7667 16.1356 10.694C17.2694 10.6302 18.396 10.6315 19.5296 10.6327C19.6872 10.6329 19.8449 10.6331 20.0028 10.6331C20.1604 10.6331 20.3179 10.6329 20.4752 10.6327C21.6073 10.6315 22.7341 10.6302 23.87 10.694C25.37 10.7667 26.6989 11.1065 27.7981 12.2057C28.895 13.3026 29.2372 14.6339 29.3099 16.1339C29.3736 17.2676 29.3724 18.3942 29.3711 19.5278ZM15.1935 20.001C15.1935 22.6612 17.3403 24.8081 20.0005 24.8081C22.6606 24.8081 24.8075 22.6612 24.8075 20.001C24.8075 17.3409 22.6606 15.194 20.0005 15.194C17.3403 15.194 15.1935 17.3409 15.1935 20.001ZM23.8817 14.9971C23.8817 15.6182 24.3833 16.1198 25.0044 16.1198C25.1519 16.12 25.2979 16.0911 25.4342 16.0347C25.5705 15.9784 25.6944 15.8957 25.7986 15.7914C25.9029 15.6871 25.9856 15.5633 26.042 15.427C26.0983 15.2907 26.1272 15.1446 26.127 14.9971C26.127 14.376 25.6255 13.8745 25.0044 13.8745C24.3833 13.8745 23.8817 14.376 23.8817 14.9971Z" fill="#101112" />
+								</svg>
+							</a>
+						</li>
+						<li class="social__item aside-popup__social-item">
+							<a class="social__link" href="#">
+								<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM30.6553 15C31.4494 15 31.6163 15.4016 31.4493 15.9479V15.9481C31.1155 17.4509 27.9168 21.8771 27.9168 21.8771C27.6385 22.3141 27.5272 22.5326 27.9168 23.0244C28.0538 23.2129 28.3463 23.4944 28.681 23.8165C29.0254 24.1478 29.4144 24.5221 29.7247 24.8823C30.8526 26.1287 31.7025 27.1798 31.9392 27.9045C32.1556 28.6316 31.7806 29 31.0304 29H28.4048C27.7016 29 27.3475 28.6131 26.5827 27.7774C26.2583 27.4229 25.86 26.9877 25.3298 26.4669C23.7719 24.9916 23.1044 24.8004 22.7147 24.8004C22.1864 24.8004 22.0283 24.9474 22.0283 25.6842V27.997C22.0283 28.6316 21.822 29 20.1528 29C17.3712 29 14.3146 27.341 12.1447 24.2813C8.89027 19.8005 8 16.4125 8 15.7295C8 15.3469 8.15003 15 8.90021 15H11.5258C12.1969 15 12.4493 15.2885 12.701 16.0027C13.9853 19.6767 16.1503 22.8879 17.0404 22.8879C17.3742 22.8879 17.5272 22.7368 17.5272 21.9042V18.1063C17.4669 17.0254 17.0825 16.5579 16.7978 16.2117C16.6219 15.9978 16.4841 15.8302 16.4841 15.5928C16.4841 15.3043 16.735 15 17.1521 15H21.2781C21.8345 15 22.0283 15.2922 22.0283 15.9479V21.0572C22.0283 21.6036 22.2698 21.7946 22.4367 21.7946C22.7706 21.7946 23.0487 21.6036 23.6607 21.0025C25.5522 18.9261 26.8875 15.7295 26.8875 15.7295C27.0544 15.3469 27.362 15 28.0297 15H30.6553Z" fill="#101112" />
+								</svg>
+							</a>
+						</li>
+						<li class="social__item aside-popup__social-item">
+							<a class="social__link" href="#">
+								<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.8642 21.1037V29.6545L17.4229 29.6545V21.1038H14.5455V17.7715H17.423V15.3139C17.423 12.462 19.1648 10.9091 21.709 10.9091C22.9276 10.9091 23.975 10.9998 24.2803 11.0403V14.0207L22.5157 14.0215C21.1321 14.0215 20.8642 14.679 20.8642 15.6438V17.7714H24.164L23.7343 21.1037H20.8642Z" fill="#101112" />
+								</svg>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div id="register" class="tabs-content aside-popup__content">
+				<form action="#" class="aside-popup__form">
+					<div class="aside-popup__form-inputs">
+						<input class="input aside-popup__form-input" name="name" placeholder="Имя*">
+						<input class="input aside-popup__form-input" name="surname" placeholder="Фамилия">
+						<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Ваш телефон">
+						<input class="input aside-popup__form-input" name="email" type="email" placeholder="Ваш e-mail">
+						<div class="input-wrap">
+							<input class="input aside-popup__form-input" type="password" name="password" placeholder="Придумайте пароль">
+							<button class="pass-btn show" type="button"></button>
+						</div>
+						<div class="input-wrap">
+							<input class="input aside-popup__form-input" type="password" name="repeat_password" placeholder="Повторите пароль">
+							<button class="pass-btn show" type="button"></button>
+						</div>
+					</div>
+					<label class="form-agree aside-popup__form-wrap">
+						<input class="check-box" type="checkbox">
+						<span class="check-style"></span>
+						<span class="check-text">
+							Подтверждаю согласие с <a href="#">Политикой конфиденциальности</a> и <a href="#">Правилами
+								работы
+								интернет-магазина</a>, а
+							также даю согласие на
+							<a href="#">обработку персональных данных</a>
+						</span>
+					</label>
+					<button class="btn aside-popup__form-btn" type="submit">Зарегистрироваться</button>
+				</form>
+			</div>
+		</div>
 		<div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
 			<div class="drop-basket__body">
 				<button class="aside-popup__close" type="button">
@@ -884,97 +1008,6 @@
 						<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="white" />
 					</svg>
 				</a>
-			</div>
-		</div>
-	</div>
-	<div style="display: none;" id="region-popup" class="popup region-popup">
-		<div class="region-popup__inner">
-			<div class="region-popup__img">
-				<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
-			</div>
-			<div class="region-popup__content">
-				<div class="region-popup__title">Где вы находитесь?</div>
-				<form action="#">
-					<input class="region-popup__input" type="text" placeholder="Название населенного пункта">
-					<div class="region-popup__cities-row">
-						<div class="region-popup__cities-col">
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Минск</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-						</div>
-						<div class="region-popup__cities-col">
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-						</div>
-					</div>
-				</form>
 			</div>
 		</div>
 	</div>
