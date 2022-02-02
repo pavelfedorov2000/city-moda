@@ -66,6 +66,7 @@
 .form-agree {
 	display: flex;
 	align-items: flex-start;
+	flex-wrap: wrap;
 	cursor: pointer;
 
 	.check-style {
@@ -73,7 +74,7 @@
 		height: 2rem;
 	}
 
-	.check-box:checked+.check-style:before {
+	.check-box:checked~.check-style:before {
 		width: 1.3rem;
 		height: 1rem;
 	}
@@ -92,6 +93,10 @@
 		&:not(:last-child) {
 			margin-bottom: 1.4rem;
 		}
+	}
+
+	&__success {
+		margin-top: 2rem;
 	}
 }
 

@@ -8,6 +8,13 @@ label.error {
 	border-color: $red;
 }
 
+.check-box.error+label.error {
+	//display: none !important;
+	order: 5;
+	width: 100%;
+	margin-top: 0.5rem;
+}
+
 .success-form {
 	@extend %text-14;
 	font-weight: 500;

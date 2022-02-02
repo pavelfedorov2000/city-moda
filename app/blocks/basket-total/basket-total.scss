@@ -15,6 +15,12 @@
 
 		a {
 			font-weight: 600;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $green;
+				}
+			}
 		}
 
 		&:not(:last-child) {

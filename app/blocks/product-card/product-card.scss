@@ -1,9 +1,5 @@
 .product-card {
 
-	@media(max-width: 500px) {
-		padding-bottom: 0;
-	}
-
 	&__page {
 		>* {
 			&:not(:last-child) {
@@ -72,16 +68,20 @@
 	&__top-wrap {
 		display: grid;
 		grid-template-columns: auto 7.6rem;
-		grid-gap: 1.9rem;
+		grid-gap: 2rem;
 		margin-bottom: 0.4rem;
 	}
 
 	// .product-card__title
 
 	&__title {
-		font-size: 2.5rem;
-		line-height: 3.7rem;
+		@extend %text-25;
 		font-weight: 500;
+
+		@media(max-width: 500px) {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
 	}
 
 	// .product-card__logo
@@ -149,6 +149,15 @@
 	&__info {
 		@media(min-width: 1025px) {
 			grid-area: info;
+		}
+
+		p {
+			@extend %text-16;
+
+			@media(max-width: 500px) {
+				font-size: 1.4rem;
+				line-height: 2.1rem;
+			}
 		}
 	}
 
@@ -321,4 +330,12 @@
 	width: 59.5rem;
 	height: 33.5rem;
 	object-fit: cover;
+
+	@media(max-width: 767px) {
+		width: 100%;
+	}
+
+	@media(max-width: 500px) {
+		height: 20rem;
+	}
 }

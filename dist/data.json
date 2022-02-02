@@ -3,45 +3,30 @@
   "features": [
     {
       "type": "Feature",
-      "id": 0,
+      "id": 1,
       "geometry": {
         "type": "Point",
         "coordinates": [55.831903, 37.411961]
       },
-      "info": {
-        "name": "ТРЦ «Галерея»",
-        "address": "Лиговский пр-т , д.30 корпус 5",
-        "timetable": "Пн-вс: 10:00-22:00",
-        "phone": "+7 000 000 00 00"
-      },
       "properties": {
         "balloonContent": "Санкт-Петербург",
-        "clusterCaption": "Санкт-Петербург",
-        "hintContent": "Санкт-Петербург",
         "iconCaption": "Санкт-Петербург"
       },
-      "options": {"preset": "islands#blueCircleDotIconWithCaption"}
+      "options": {"city": "peterburg"}
     },
     {
       "type": "Feature",
-      "id": 0,
+      "id": 2,
       "geometry": {
         "type": "Point",
         "coordinates": [55.763338, 37.565466]
       },
-      "info": {
-        "name": "ТРЦ «Галерея»",
-        "address": "пр-т Мира , д.30 корпус 5",
-        "timetable": "Пн-вс: 09:00-22:00",
-        "phone": "+7 000 000 00 00"
-      },
       "properties": {
         "balloonContent": "Москва",
-        "clusterCaption": "Москва",
-        "hintContent": "Москва",
-        "iconCaption": "Москва"
+        "iconCaption": "Москва",
+        "city": "moscow"
       },
-      "options": {"preset": "islands#blueCircleDotIconWithCaption"}
+     "options": {"city": "moscow"}
     }
   ]
 }

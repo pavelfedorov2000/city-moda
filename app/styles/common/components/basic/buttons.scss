@@ -87,10 +87,20 @@
 	}
 }
 
-a.btn {
-	@media (any-hover: hover) {
-		&:hover {
-			color: #fff;
+a {
+	&.btn {
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
+
+	&.btn--border {
+		@media (any-hover: hover) {
+			&:hover {
+				color: #2D703C;
+			}
 		}
 	}
 }
@@ -130,6 +140,7 @@ a.btn {
 
 	@media (any-hover: hover) {
 		&:hover {
+
 			color: $green;
 
 			svg {

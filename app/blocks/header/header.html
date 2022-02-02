@@ -10,7 +10,7 @@
 					Санкт-Петербург
 				</a>
 			</div>
-			<button class="header__shops-search" type="button">
+			<a class="header__shops-search" href="#">
 				<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 					<g clip-path="url(#clip0_611_26879)">
 						<path
@@ -24,7 +24,7 @@
 					</defs>
 				</svg>
 				Найти магазины
-			</button>
+			</a>
 			<div class="header__contact">
 				<div class="header__call">
 					<a href="tel:88002503005" class="header__call-link">
@@ -133,9 +133,7 @@
 					</li>
 				</ul>
 
-				<form action="#" class="search-form header__search">
-					<input class="search-form__input" placeholder="Введите фразу для поиска, например, платье">
-				</form>
+				@@include("blocks/search-form/search-form.html")
 			</div>
 		</div>
 	</div>

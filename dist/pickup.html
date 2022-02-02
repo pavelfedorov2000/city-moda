@@ -371,7 +371,7 @@
 							Санкт-Петербург
 						</a>
 					</div>
-					<button class="header__shops-search" type="button">
+					<a class="header__shops-search" href="#">
 						<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_611_26879)">
 								<path d="M7.42857 1.5C10.5056 1.5 13 4.0074 13 7.10045C13 8.13484 12.7986 9.20319 12.2206 9.97321L7.42857 16.3571L2.63656 9.97321C2.11156 9.27381 1.85714 8.03738 1.85714 7.10045C1.85713 4.0074 4.35156 1.5 7.42857 1.5ZM7.42857 4.74365C6.13387 4.74365 5.08399 5.79901 5.08399 7.10044C5.08399 8.40189 6.13387 9.45724 7.42857 9.45724C8.72326 9.45724 9.77314 8.40189 9.77314 7.10045C9.77314 5.79901 8.72326 4.74365 7.42857 4.74365Z" fill="#101112" />
@@ -383,7 +383,7 @@
 							</defs>
 						</svg>
 						Найти магазины
-					</button>
+					</a>
 					<div class="header__contact">
 						<div class="header__call">
 							<a href="tel:88002503005" class="header__call-link">
@@ -477,6 +477,29 @@
 						</ul>
 						<form action="#" class="search-form header__search">
 							<input class="search-form__input" placeholder="Введите фразу для поиска, например, платье">
+							<div class="help-search search-form__help">
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> женские
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span>
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> женские трикотажные
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> мужские
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> теплые
+								</a>
+								<a href="#" class="help-search__item">
+									жилетки детские
+								</a>
+								<a href="#" class="help-search__item">
+									жилетки nike
+								</a>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -829,7 +852,7 @@
 							<h6 class="footer__col-title"><a href="#">Новости и акции</a></h6>
 						</div>
 					</div>
-					<div class="footer__subscribe">
+					<div id="subscribe-form" class="footer__subscribe">
 						<div class="footer__col-title">
 							Узнайте первыми<br>
 							о новинках и скидках
@@ -840,12 +863,13 @@
 								<button class="form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
 							</div>
 							<label class="form-agree">
-								<input class="check-box" type="checkbox">
+								<input class="check-box" name="user_agree" type="checkbox">
 								<span class="check-style"></span>
 								<span class="check-text">
 									Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
 								</span>
 							</label>
+							<!-- <div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div> -->
 						</form>
 					</div>
 				</div>

@@ -1,7 +1,15 @@
 .search-shops {
 
-	&__map {
-		//margin-top: 11.8rem - 4rem;
+	&__select {
+		width: 33.6rem;
+
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+
+		&:not(:last-child) {
+			margin-bottom: 3.2rem;
+		}
 	}
 
 	&__grid {
@@ -27,6 +35,12 @@
 
 		@media(min-width: 1025px) {
 			grid-template-columns: repeat(4, 1fr);
+		}
+	}
+
+	&__item {
+		&.hidden {
+			display: none;
 		}
 	}
 }

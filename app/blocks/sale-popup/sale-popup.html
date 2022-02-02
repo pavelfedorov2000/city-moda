@@ -1,26 +1,26 @@
 <!-- Попап подписка -->
-<div id="sale-popup" class="popup sale-popup">
+<div style="display: none;" id="sale-popup" class="popup sale-popup">
 	<div class="sale-popup__title">
-		Распродажи и акции для женщин и мужчин
+		<!-- Распродажи и акции для женщин и&nbsp;мужчин -->
 	</div>
 	<form action="#" class="sale-popup__form">
 		<div class="sale-popup__form-items">
 			<div class="sale-popup__form-item">
 				<label class="sale-popup__form-check">
-					<input class="check-box" type="checkbox">
+					<input class="check-box" type="checkbox" checked>
 					<span class="check-style"></span>
 					<span class="check-text">по e-mail</span>
 				</label>
 				<div class="select" data-state="">
 					<div class="select__title">Да</div>
 					<div class="select__content">
-						<label class="select__option" for="email-agree" tabindex="0" data-value="Да">
-							<input id="email-agree" class="select__input" type="radio" name="email_agree" checked />
+						<label class="select__option" tabindex="0" data-value="Да">
+							<input class="select__input" type="radio" name="email-mailing" checked />
 							<span class="radio-style"></span>
 							<span class="select__option-text">Да</span>
 						</label>
-						<label class="select__option" for="email-disagree" tabindex="0" data-value="Нет">
-							<input id="email-disagree" class="select__input" type="radio" name="email_agree" />
+						<label class="select__option" tabindex="0" data-value="Нет">
+							<input class="select__input" type="radio" name="email-mailing" />
 							<span class="radio-style"></span>
 							<span class="select__option-text">Нет</span>
 						</label>
@@ -29,20 +29,20 @@
 			</div>
 			<div class="sale-popup__form-item">
 				<label class="sale-popup__form-check">
-					<input class="check-box" type="checkbox">
+					<input class="check-box" type="checkbox" checked>
 					<span class="check-style"></span>
 					<span class="check-text">по sms</span>
 				</label>
 				<div class="select" data-state="">
 					<div class="select__title">Да</div>
 					<div class="select__content">
-						<div class="select__option" for="sms-agree" tabindex="0" data-value="Да">
-							<input id="sms-agree" class="select__input" type="radio" name="sms_agree" checked />
+						<div class="select__option" tabindex="0" data-value="Да">
+							<input class="select__input" type="radio" name="sms-mailing" checked />
 							<span class="radio-style"></span>
 							<span class="select__option-text">Да</span>
 						</div>
-						<label class="select__option" for="sms-disagree" tabindex="0" data-value="Нет">
-							<input id="sms-disagree" class="select__input" type="radio" name="sms_agree" />
+						<label class="select__option" tabindex="0" data-value="Нет">
+							<input class="select__input" type="radio" name="sms-mailing" />
 							<span class="radio-style"></span>
 							<span class="select__option-text">Нет</span>
 						</label>

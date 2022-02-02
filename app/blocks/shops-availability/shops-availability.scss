@@ -1,3 +1,44 @@
 .shops-availability {
-  // your code
+
+	width: 33.6rem;
+
+	@media(max-width: 500px) {
+		width: 100%;
+	}
+
+	// .shops-availability__select
+
+	&__select {
+
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+
+			@media(max-width: 500px) {
+				margin-bottom: 3rem;
+			}
+		}
+	}
+
+	&__content {
+		display: none;
+
+		&--active {
+			display: block;
+		}
+	}
+
+	// .shops-availability__list
+
+	&__list {
+		display: grid;
+		grid-gap: 5.2rem 0;
+
+		@media(max-width: 1024px) {
+			grid-gap: 3rem;
+		}
+
+		@media(min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }

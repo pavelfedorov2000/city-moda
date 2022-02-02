@@ -371,7 +371,7 @@
 							Санкт-Петербург
 						</a>
 					</div>
-					<button class="header__shops-search" type="button">
+					<a class="header__shops-search" href="#">
 						<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<g clip-path="url(#clip0_611_26879)">
 								<path d="M7.42857 1.5C10.5056 1.5 13 4.0074 13 7.10045C13 8.13484 12.7986 9.20319 12.2206 9.97321L7.42857 16.3571L2.63656 9.97321C2.11156 9.27381 1.85714 8.03738 1.85714 7.10045C1.85713 4.0074 4.35156 1.5 7.42857 1.5ZM7.42857 4.74365C6.13387 4.74365 5.08399 5.79901 5.08399 7.10044C5.08399 8.40189 6.13387 9.45724 7.42857 9.45724C8.72326 9.45724 9.77314 8.40189 9.77314 7.10045C9.77314 5.79901 8.72326 4.74365 7.42857 4.74365Z" fill="#101112" />
@@ -383,7 +383,7 @@
 							</defs>
 						</svg>
 						Найти магазины
-					</button>
+					</a>
 					<div class="header__contact">
 						<div class="header__call">
 							<a href="tel:88002503005" class="header__call-link">
@@ -477,6 +477,29 @@
 						</ul>
 						<form action="#" class="search-form header__search">
 							<input class="search-form__input" placeholder="Введите фразу для поиска, например, платье">
+							<div class="help-search search-form__help">
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> женские
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span>
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> женские трикотажные
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> мужские
+								</a>
+								<a href="#" class="help-search__item">
+									<span>жилетки</span> теплые
+								</a>
+								<a href="#" class="help-search__item">
+									жилетки детские
+								</a>
+								<a href="#" class="help-search__item">
+									жилетки nike
+								</a>
+							</div>
 						</form>
 					</div>
 				</div>
@@ -1928,7 +1951,7 @@
 								<h6 class="footer__col-title"><a href="#">Новости и акции</a></h6>
 							</div>
 						</div>
-						<div class="footer__subscribe">
+						<div id="subscribe-form" class="footer__subscribe">
 							<div class="footer__col-title">
 								Узнайте первыми<br>
 								о новинках и скидках
@@ -1939,12 +1962,13 @@
 									<button class="form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
 								</div>
 								<label class="form-agree">
-									<input class="check-box" type="checkbox">
+									<input class="check-box" name="user_agree" type="checkbox">
 									<span class="check-style"></span>
 									<span class="check-text">
 										Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
 									</span>
 								</label>
+								<!-- <div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div> -->
 							</form>
 						</div>
 					</div>
@@ -2541,6 +2565,106 @@
 				</a>
 			</div>
 		</div>
+		<!-- Попап Таблица размеров -->
+		<div style="display: none;" id="product-sizes-popup" class="popup product-sizes-popup">
+			<div class="product-sizes-popup__inner">
+				<div class="product-sizes-popup__top">
+					<div class="product-sizes-popup__logo">
+						<img class="lazy" data-src="assets/images/logo/viola-stils.png" alt="viola stils logo">
+					</div>
+					<h4 class="product-sizes-popup__title">Таблица размеров</h4>
+					<div class="product-sizes-popup__subtitle">Женская одежда Viola stils</div>
+				</div>
+				<table class="product-sizes-popup__table">
+					<thead>
+						<tr>
+							<th>Российский размер</th>
+							<th>Размер производителя</th>
+							<th>Обхват груди, см</th>
+							<th>Обхват талии, см</th>
+							<th>Обхват бедер, см</th>
+							<th>Рост, см</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>42</td>
+							<td><b>XS</b></td>
+							<td>82</td>
+							<td>64</td>
+							<td>90</td>
+							<td>170</td>
+						</tr>
+						<tr>
+							<td>44</td>
+							<td><b>S</b></td>
+							<td>86</td>
+							<td>68</td>
+							<td>94</td>
+							<td>170</td>
+						</tr>
+						<tr>
+							<td>46</td>
+							<td><b>M</b></td>
+							<td>90</td>
+							<td>72</td>
+							<td>98</td>
+							<td>170</td>
+						</tr>
+						<tr>
+							<td>48</td>
+							<td><b>L</b></td>
+							<td>94</td>
+							<td>76</td>
+							<td>102</td>
+							<td>170</td>
+						</tr>
+						<tr>
+							<td>50</td>
+							<td><b>XL</b></td>
+							<td>98</td>
+							<td>80</td>
+							<td>106</td>
+							<td>170</td>
+						</tr>
+						<tr>
+							<td>52</td>
+							<td><b>XXL</b></td>
+							<td>102</td>
+							<td>84</td>
+							<td>110</td>
+							<td>170</td>
+						</tr>
+					</tbody>
+				</table>
+				<div class="how-define-size">
+					<h4 class="how-define-size__title">Как определить свой размер?</h4>
+					<div class="how-define-size__inner">
+						<div class="how-define-size__content">
+							<p>Вам понадобится провести измерения с помощью сантиметровой ленты.</p>
+							<p>
+								При измерении обхвата груди лента должна плотно прилегать к телу, спереди проходить по наиболее
+								выступающим
+								точкам, сбоку через подмышечные впадины, сзади обхватывая лопатки.
+							</p>
+							<p>
+								Обхват талии измеряется строго горизонтально по самой узкой части тела, проходя через самую
+								выступающую точку
+								живота.
+							</p>
+							<p>
+								При измерении обхвата бедер лента должна находиться горизонтально, проходя посредине бедра и
+								сзади
+								по наиболее
+								выступающим точкам ягодиц.
+							</p>
+						</div>
+						<img class="lazy" data-src='assets/images/content/sizes.jpg' alt=''>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Попап Таблица размеров -->
 	</div>
 	<script src="./assets/libs/js/jquery.min.js"></script>
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>

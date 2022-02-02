@@ -271,6 +271,10 @@
 		@media(min-width: 768px) {
 			grid-area: subscribe;
 		}
+
+		.form-agree .check-text {
+			max-width: calc(100% - 3rem);
+		}
 	}
 
 	// .footer__bottom

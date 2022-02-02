@@ -6,8 +6,8 @@ $(document).ready(function () {
 	$('.header__cart-num').text(`(${$('.drop-basket__product').length})`);
 
 	$('.select__title').on('click', function () {
-		$(this).parents('.select').siblings().find('div.select__title').removeClass('select__title--active');
-		$(this).parents('.select').siblings().find('div.select__content').slideUp('300');
+		$(this).parents('.sale-popup__form-item').siblings().find('.select__title').removeClass('select__title--active');
+		$(this).parents('.select').siblings().find('.select__content').slideUp('300');
 		$(this).toggleClass('select__title--active');
 		$(this).next().slideToggle('300');
 	});
@@ -18,10 +18,15 @@ $(document).ready(function () {
 		$(this).parent().slideUp('300');
 	});
 
-	$('.subscribe-item__btn').on('click', function () {
-		$('body').addClass('_lock');
-		$('.overlay').fadeIn('slow');
-		$('#sale-popup').fadeIn('slow');
+	// Переключение списка магазинов в зависимости от выбранного города (карточка товара)
+	$(`#${$('.shops-availability__select .select__content').children().first().data('city')}`).show();
+	$('.shops-availability .select__option').on('click', function () {
+		$('.shops-availability__content').hide();
+		$(`#${$(this).data('city')}`).show();
+	});
+
+	$('.subscribe-item__change-btn').on('click', function () {
+		$('.sale-popup__title').text($(this).parent().parent().prev().text());
 	});
 
 	// Открытие попапа через 2 мин
@@ -58,6 +63,7 @@ $(document).ready(function () {
 	app.validation.init();
 	app.burger.init();
 	app.dropMenu.init();
+	app.searchForm.init();
 	app.dropBasket.init();
 	app.promoSale.init();
 	app.iconsSlider.init();
@@ -65,14 +71,15 @@ $(document).ready(function () {
 	app.instagram.init();
 	app.catalogCard.init();
 	app.asideFilters.init();
-    app.catalogFilters.init();
-    app.sizeFilter.init();
-    app.pricefilter.init();
-    app.productCard.init();
-    app.productPopup.init();
+	app.catalogFilters.init();
+	app.sortFilter.init();
+	app.sizeFilter.init();
+	app.pricefilter.init();
+	app.productCard.init();
+	app.productPopup.init();
 	app.productDetails.init();
-    app.popup.init();
-    app.regionPopup.init();
+	app.popup.init();
+	app.regionPopup.init();
 	app.checkout.init();
 	app.blog.init();
 	app.otherNews.init();
@@ -84,7 +91,7 @@ $(document).ready(function () {
 	if ($('main').hasClass('contacts-page')) {
 		app.contacts.init();
 	}
-	if ($('main').hasClass('basket-page')) {
+	/* if ($('main').hasClass('basket-page')) {
 		app.pickupPopup.init();
-	}
+	} */
 });

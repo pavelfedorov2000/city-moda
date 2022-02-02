@@ -20,8 +20,9 @@ app.validation = {
 						requiredphone: true,
 						minlenghtphone: true,
 					},
-                    email: "required",
-                    login_email: "required",
+					user_agree: "required",
+					email: "required",
+					login_email: "required",
 					subscribe_email: {
 						required: true,
 						email: true,
@@ -48,8 +49,9 @@ app.validation = {
 					phone: {
 						requiredphone: "Пожалуйста, заполните обязательное поле."
 					},
-                    email: "Пожалуйста, заполните обязательное поле.",
-                    login_email: "Пожалуйста, заполните поле.",
+					user_agree: "Пожалуйста, примите пользовательское соглашение",
+					email: "Пожалуйста, заполните обязательное поле.",
+					login_email: "Пожалуйста, заполните поле.",
 					subscribe_email: {
 						required: "Пожалуйста, заполните электронную почту.",
 						email: "Пожалуйста, проверьте, правильно ли указан адрес электронной почты.",
@@ -64,15 +66,19 @@ app.validation = {
 					street: "Пожалуйста, заполните поле.",
 					home: "Пожалуйста, заполните поле.",
 					flat: "Пожалуйста, заполните поле.",
-				}
+				},
+				/* success: function () {
+					
+				}, */
 			});
 		}
 
-		validateForms('.footer__subscribe form');
+		validateForms('#subscribe-form form');
 		validateForms('#auth form');
 		validateForms('#register form');
 		validateForms('.basket-page form');
 
+		// форма подписки в футере
 		$('.form-row__input').on('change', function () {
 			if ($('#subscribe_email-error').attr('style') === 'display: none;') {
 				$(this).parent().find('button').css('background-color', '#101112');
@@ -80,23 +86,16 @@ app.validation = {
 			}
 		});
 
-		$('#subscribe-form').on('submit', function (e) {
+		/* $('#subscribe-form form').submit(function (e) {
 			e.preventDefault();
-			$(this).append('<div class="success-form">Спасибо! Письмо уже на Вашей почте</div>');
-		});
-
-		/* $('form').on('sumbit', function (e) {
-			e.preventDefault();
-
 			$.ajax({
 				type: "POST",
-				url: "send.php",
+				url: "/",
 				data: $(this).serialize(),
+				success: function () {
+					$(this).append('<div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div>');
+				}
 			});
-			$('.form__input').removeClass('valid');
-			$(this).find("input").val("");
-			$('form').trigger('reset');
-			return false;
 		}); */
 
 		$.fn.setCursorPosition = function (pos) {

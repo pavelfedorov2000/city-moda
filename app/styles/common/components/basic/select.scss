@@ -5,15 +5,17 @@
 
 	&__title {
 		@extend %vertical-align;
-		height: 4.4rem;
-		border-bottom: 0.1rem solid #505661;
+		height: 4.6rem;
+		padding-left: 1.5rem;
+		font-weight: 600;
 		cursor: pointer;
+		border: 0.1rem solid #c0c0c0;
 
 		&::after {
 			content: "";
 			position: absolute;
-			top: 0.8rem;
-			right: 0;
+			top: 1.2rem;
+			right: 1.8rem;
 			width: 2rem;
 			height: 2rem;
 			background-image: url(../images/icons/drop-arr.svg);
@@ -31,14 +33,15 @@
 	&__content {
 		display: none;
 		position: absolute;
-		top: 4.4rem;
+		top: 4.5rem;
 		left: 0;
 		right: 0;
 		width: 100%;
 		z-index: 25;
 		background-color: #fff;
-		box-shadow: 0rem -0.1rem 1rem rgba(0, 0, 0, 0.1);
 		padding: 2rem 1.5rem;
+		border: 0.1rem solid #c0c0c0;
+		border-top-color: #fff;
 	}
 
 	&__input {
