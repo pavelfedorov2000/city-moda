@@ -53,10 +53,6 @@
 		margin-bottom: 1.6rem;
 	}
 
-	// .drop-menu__list
-
-	&__list {}
-
 	// .drop-menu__list-item
 
 	&__list-item {
@@ -69,12 +65,5 @@
 
 	&__list-link {
 		@extend %text-13;
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
 	}
 }

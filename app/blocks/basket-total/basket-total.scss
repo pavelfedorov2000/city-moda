@@ -3,6 +3,17 @@
 	border: 0.1rem solid #C0C0C0;
 	padding: 4rem;
 
+	@media(min-width: 1025px) {
+		width: 46.5rem;
+	}
+
+	&.fixed {
+		@media(min-width: 1025px) {
+			position: fixed;
+			right: calc((100vw - 150rem - 1.6rem) / 2);
+		}
+	}
+
 	@media(max-width: 500px) {
 		padding: 3rem 1.5rem;
 	}

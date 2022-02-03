@@ -1,27 +1,34 @@
 .basket-page {
-	&__title {
-		margin-bottom: 4rem;
-	}
 
-	&__inner {
-		display: grid;
-		grid-gap: 0.5rem 18.2rem;
-
-		@media(max-width: 1024px) {
-			grid-gap: 5rem;
-		}
-
-		@media(max-width: 500px) {
-			grid-gap: 3rem;
-		}
+	&__body {
 
 		@media(min-width: 1025px) {
-			grid-template-columns: 1fr 46.5rem;
+			display: flex;
+			justify-content: space-between;
+			flex-wrap: wrap;
+		}
+
+		@media(max-width: 1024px) {
+			display: grid;
+			grid-gap: 5rem;
+
+			@media(max-width: 767px) {
+				grid-gap: 3rem;
+			}
+		}
+
+		&.scroll-grid {
+			display: grid;
+			grid-gap: 8.5rem;
 		}
 	}
 }
 
 .basket-table {
+
+	@media(min-width: 1025px) {
+		width: 85.3rem;
+	}
 
 	// .basket-table__head
 
@@ -92,6 +99,10 @@
 				". . . ."
 				"counter . . prices"
 			;
+
+			&:first-child {
+				padding-top: 0;
+			}
 		}
 	}
 }

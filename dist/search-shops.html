@@ -363,13 +363,15 @@
 			</div>
 			<div class="header__top">
 				<div class="container header__top-inner">
-					<div class="header__location">
-						<div class="header__location-label">
+					<div class="header__region region-header">
+						<div class="region-header__title">
 							Регион доставки:
 						</div>
-						<a data-fancybox href="#region-popup" class="header__region">
-							Санкт-Петербург
-						</a>
+						<div class="region-header__value">Санкт-Петербург</div>
+						<div class="region-header__drop">
+							<div class="region-header__drop-item">Москва</div>
+							<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+						</div>
 					</div>
 					<a class="header__shops-search" href="#">
 						<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,13 +518,15 @@
 					<a href="#" class="header__nav-link">Мужчинам</a>
 				</nav>
 			</div>
-			<div class="header__location">
-				<div class="header__location-label">
+			<div class="header__region region-header">
+				<div class="region-header__title">
 					Регион доставки:
 				</div>
-				<a data-fancybox href="#region-popup" class="header__region">
-					Санкт-Петербург
-				</a>
+				<div class="region-header__value">Санкт-Петербург</div>
+				<div class="region-header__drop">
+					<div class="region-header__drop-item">Москва</div>
+					<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+				</div>
 			</div>
 			<ul class="burger-menu__list">
 				<li class="burger-menu__list-item">
@@ -716,7 +720,7 @@
 				</div>
 				<div id="shops-map" class="search-shops__map"></div>
 				<div class="search-shops__grid">
-					<div data-city="peterburg" class="search-shops__item shop-item">
+					<div data-id="1" data-city="peterburg" class="search-shops__item shop-item">
 						<div class="shop-item__top">
 							<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M16 0C9.33809 0 3.9375 5.40056 3.9375 12.0625C3.9375 14.2904 4.37358 16.5915 5.62499 18.25L16 32L26.375 18.25C27.5117 16.7436 28.0625 14.0805 28.0625 12.0625C28.0625 5.40056 22.6619 0 16 0Z" fill="#101112" />
@@ -735,7 +739,7 @@
 							+7 000 000 00 00
 						</a>
 					</div>
-					<div data-city="moscow" class="search-shops__item shop-item hidden">
+					<div data-id="2" data-city="moscow" class="search-shops__item shop-item">
 						<div class="shop-item__top">
 							<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 								<path d="M16 0C9.33809 0 3.9375 5.40056 3.9375 12.0625C3.9375 14.2904 4.37358 16.5915 5.62499 18.25L16 32L26.375 18.25C27.5117 16.7436 28.0625 14.0805 28.0625 12.0625C28.0625 5.40056 22.6619 0 16 0Z" fill="#101112" />
@@ -1221,90 +1225,34 @@
 		</div>
 		<!-- End Попап арим скидку -->
 		<!-- Попап Где вы находитесь? -->
-		<div style="display: none;" id="region-popup" class="popup region-popup">
-			<div class="region-popup__inner">
-				<div class="region-popup__img">
+		<div style="display: none;" id="region-popup" class="popup mini-popup region-popup">
+			<div class="mini-popup__inner">
+				<div class="mini-popup__img">
 					<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
 				</div>
-				<div class="region-popup__content">
-					<div class="region-popup__title">Где вы находитесь?</div>
+				<div class="mini-popup__content">
+					<div class="mini-popup__top">
+						<div class="mini-popup__title">Где вы находитесь?</div>
+					</div>
 					<form action="#">
 						<input class="region-popup__input" type="text" placeholder="Название населенного пункта">
 						<div class="region-popup__cities-row">
 							<div class="region-popup__cities-col">
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Минск</span>
+									<span class="radio-text">г. Москва</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
+									<span class="radio-text">г. Санкт-Петербург</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
+									<span class="radio-text">г. Москва</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-							</div>
-							<div class="region-popup__cities-col">
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
+									<span class="radio-text">г. Санкт-Петербург</span>
 								</label>
 							</div>
 						</div>
@@ -1341,12 +1289,44 @@
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/wow.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 </body>
 
 </html>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<style>
+	/* .ymaps-2-1-79-balloon {
+		width: 28.6rem;
+	} */
+	.ymaps-2-1-79-balloon__close,
+	.ymaps-2-1-79-balloon__tail {
+		display: none;
+	}
+
+	.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+		margin-right: 0;
+	}
+
+	.ymaps-2-1-79-balloon__content {
+		padding: 0;
+		margin-right: 0;
+	}
+
+	.ymaps-2-1-79-balloon__content img {
+		width: 100%;
+		height: 160px;
+		object-fit: cover;
+	}
+
+	.ymaps-2-1-79-balloon-content__header {
+		margin-bottom: 0;
+	}
+</style>
 <script>
+	$('.search-shops__item').addClass('hidden');
+	$(`.search-shops__item[data-city="${$('.search-shops__select .select__option input:checked').parent().attr('data-city')}"`)
+		.removeClass('hidden');
+
 	function filterCities() {
 		$('.search-shops__select .select__option').on('click', function() {
 			$('.search-shops__item').addClass('hidden');
@@ -1360,78 +1340,36 @@
 	function init() {
 		var myMap = new ymaps.Map('shops-map', {
 				center: [55.76, 37.64],
-				zoom: 12,
+				zoom: 11,
 				controls: []
 			}, {
 				searchControlProvider: 'yandex#search'
 			}),
 			objectManager = new ymaps.ObjectManager({
-				// Чтобы метки начали кластеризоваться, выставляем опцию.
 				clusterize: true,
-				// ObjectManager принимает те же опции, что и кластеризатор.
 				gridSize: 64,
-				// Макет метки кластера pieChart.
-				clusterIconLayout: "default#image",
-				iconImageHref: 'assets/images/icons/black-pin.svg',
-				iconImageSize: [50, 50],
 			});
 		myMap.geoObjects.add(objectManager);
 
-		// Создадим 5 пунктов выпадающего списка.
-		/* var listBoxItems = ['Санкт-Петербург', 'Москва']
-			.map(function (title) {
-				return new ymaps.control.ListBoxItem({
-					data: {
-						content: title
-					},
-					state: {
-						selected: true,
-					}
-				})
-			}),
-			reducer = function (filters, filter) {
-				filters[filter.data.get('content')] = filter.isSelected();
-				return filters;
-			},
-			// Теперь создадим список, содержащий 5 пунктов.
-			listBoxControl = new ymaps.control.ListBox({
-				data: {
-					content: 'Фильтр',
-					title: 'Фильтр'
-				},
-				items: listBoxItems,
-				state: {
-					// Признак, развернут ли список.
-					expanded: true,
-					filters: listBoxItems.reduce(reducer, {})
-				}
-			}); */
-		//myMap.controls.add(listBoxControl);
-
-		// Добавим отслеживание изменения признака, выбран ли пункт списка.
-		/* listBoxControl.events.add(['select', 'deselect'], function (e) {
-			var listBoxItem = e.get('target');
-			var filters = ymaps.util.extend({}, listBoxControl.state.get('filters'));
-			filters[listBoxItem.data.get('content')] = listBoxItem.isSelected();
-			listBoxControl.state.set('filters', filters);
-		}); */
-
-
-
-		function getFilterFunction(categories) {
-			return function(obj) {
-				var content = obj.properties.balloonContent;
-				return categories[content]
-			}
+		function filterCity(cityName) {
+			let filterStr = 'options.city == "' + cityName + '"';
+			objectManager.setFilter(filterStr);
 		}
+
+		$('body').on('change', '.search-shops__select .select__option input', function() {
+			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
+		});
+
+		$('body').on('click', '.shop-item__top', function() {
+			objectManager.objects.balloon.open($(this).parent().attr('data-id'));
+		});
 
 		$.ajax({
 			url: "data.json",
 			cash: false,
 		}).done(function(data) {
 			objectManager.add(data);
-			objectManager.setFilter(filterCities());
-			//'options.city == "moscow"'
+			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
 			// Откроем балун на метке с id == 1.
 			var objectState = objectManager.getObjectState(1);
 			if (objectState.isClustered) {
@@ -1441,10 +1379,7 @@
 				// Этот идентификатор нужно передать в менеджер балуна, чтобы указать,
 				// на каком кластере нужно показать балун.
 				objectManager.clusters.balloon.open(objectState.cluster.id);
-			} else {
-				objectManager.objects.balloon.open(1);
 			}
 		});
-
 	}
 </script>

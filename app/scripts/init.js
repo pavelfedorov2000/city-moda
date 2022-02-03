@@ -84,12 +84,14 @@ $(document).ready(function () {
 	app.blog.init();
 	app.otherNews.init();
 	app.faq.init();
-	app.basketTotal.init();
 	app.feedback.init();
 	app.pageup.init();
 	app.auth.init();
 	if ($('main').hasClass('contacts-page')) {
 		app.contacts.init();
+	}
+	if ($('main').hasClass('basket-page')) {
+		app.basketTotal.init();
 	}
 	/* if ($('main').hasClass('basket-page')) {
 		app.pickupPopup.init();

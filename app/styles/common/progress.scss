@@ -22,12 +22,9 @@
 	color: #222;
 	transition: opacity 0.3s;
 
-	&.done {
-		color: greenyellow;
-	}
-
 	@media (any-hover: hover) {
 		&:hover {
+			color: $red;
 			opacity: 0.5;
 		}
 	}

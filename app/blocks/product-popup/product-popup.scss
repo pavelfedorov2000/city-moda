@@ -1,7 +1,4 @@
 #product-popup {
-	/* @media(max-width: 1024px) {
-		width: calc(100vw - 1.6rem * 2) !important;
-	} */
 
 	@media(min-width: 1025px) {
 		width: 98.2rem !important;
@@ -167,7 +164,7 @@
 		@media (any-hover: hover) {
 			&:hover {
 				svg path {
-					fill: $red;
+					fill: $green;
 				}
 			}
 		}

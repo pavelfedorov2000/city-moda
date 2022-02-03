@@ -13,11 +13,26 @@
 			width: 3.2rem;
 			height: 3.2rem;
 			margin-right: 0.8rem;
-			transition: .3s fill;
+
+			path {
+				transition: .3s fill;
+			}
 
 			@media(max-width: 500px) {
 				width: 2.5rem;
 				height: 2.5rem;
+			}
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.shop-item__title {
+					color: $green;
+				}
+
+				svg path {
+					fill: $green;
+				}
 			}
 		}
 
@@ -27,22 +42,11 @@
 	}
 
 	// .shop-item__title
-
 	&__title {
 		@extend %text-20;
 		font-weight: 500;
 		transition: .3s color;
 		cursor: pointer;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-
-				svg path {
-					fill: $red;
-				}
-			}
-		}
 	}
 
 	// .shop-item__address
@@ -90,11 +94,16 @@
 			width: 1.4rem;
 			height: 1.4rem;
 			margin-right: 0.8rem;
-			transition: .3s fill;
+
+			path {
+				transition: .3s fill;
+			}
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
+				color: $red;
+
 				svg path {
 					fill: $red;
 				}
@@ -119,4 +128,42 @@
 			background-color: $green;
 		}
 	}
+}
+
+.popover-content {
+	width: 28.6rem;
+}
+
+.shop-title {
+	@extend %text-17;
+	font-weight: 600;
+
+	&:not(:last-child) {
+		margin-bottom: 1.2rem;
+	}
+}
+
+.shop-address {
+	@extend %text-14;
+
+	&:not(:last-child) {
+		margin-bottom: 0.7rem;
+	}
+}
+
+.shop-time {
+	@extend %text-14;
+
+	&:not(:last-child) {
+		margin-bottom: 2.3rem;
+	}
+}
+
+.shop-phone {
+	@extend %text-14;
+	font-weight: 600;
+}
+
+.ballon-content {
+	padding: 1.5rem 1.6rem;
 }

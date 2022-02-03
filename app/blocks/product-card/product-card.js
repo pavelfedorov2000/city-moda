@@ -39,5 +39,16 @@ app.productCard = {
 		$('.product-favorite-btn').on('click', function () {
 			$(this).toggleClass('favorite');
 		});
+
+		$(".scroll-link").on('click', function () {
+			$('.product-card__tab').removeClass('tab--active');
+			$('.tabs-content').removeClass('tabs-content--active');
+			$(`.product-card__tab[href="#${$(this).data('link')}"]`).addClass('tab--active');
+			$(`#${$(this).data('link')}`).addClass('tabs-content--active');
+			$("html, body").animate({
+				scrollTop: $('.product-card__info').offset().top + "px"
+			});
+			return false;
+		});
 	},
 };

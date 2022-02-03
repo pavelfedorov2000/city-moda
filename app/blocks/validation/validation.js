@@ -59,8 +59,14 @@ app.validation = {
 					password: "Пожалуйста, заполните поле.",
 					repeat_password: {
 						required: "Пожалуйста, заполните поле.",
-						equalTo: "Пароли не совпадают",
+						equalTo: "Пароли не совпадают.",
 					},
+					repeat_new_password: {
+						required: "Пожалуйста, заполните поле.",
+						equalTo: "Пароли не совпадают.",
+					},
+					new_password: "Пожалуйста, заполните поле.",
+					repeat_new_password: "Пароли не совпадают.",
 					city: "Пожалуйста, заполните обязательное поле.",
 					index: "Пожалуйста, заполните поле.",
 					street: "Пожалуйста, заполните поле.",
@@ -77,6 +83,7 @@ app.validation = {
 		validateForms('#auth form');
 		validateForms('#register form');
 		validateForms('.basket-page form');
+		validateForms('#password-change form');
 
 		// форма подписки в футере
 		$('.form-row__input').on('change', function () {

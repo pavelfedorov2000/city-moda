@@ -7,7 +7,7 @@
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	@media(min-width: 768px) {
+	@media(min-width: 1025px) {
 		width: 26.4rem * 2 + 3rem;
 	}
 
@@ -20,7 +20,9 @@
 	// .profile-personal__gender-radios
 
 	&__row-field {
-		@extend %flex-row-center;
+		display: grid;
+		grid-template-columns: 1fr 19.5rem;
+		align-items: center;
 
 		&:not(:last-child) {
 			@media(min-width: 501px) {
@@ -36,11 +38,13 @@
 	// .profile-personal__gender-radio
 
 	&__gender-radio {
+		width: 50%;
 		cursor: pointer;
 
 		.radio-style {
 			border: 0.1rem solid #D0D0D0;
-			padding: 1.3rem 2rem;
+			height: 4.6rem;
+			@extend %flex-center;
 		}
 
 		.radio-text {
@@ -61,9 +65,10 @@
 	// .profile-personal__change-password-btn
 
 	&__change-password-btn {
+		@extend %flex-center;
 		@extend %text-13;
 		color: #000;
-		padding: 1.3rem 6.4rem;
+		padding: 1.35rem;
 		border: 0.1rem solid #D0D0D0;
 
 		@media (any-hover: hover) {

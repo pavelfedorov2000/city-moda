@@ -95,6 +95,8 @@ dt {
 }
 
 .home-page {
+	padding-top: 1.5rem;
+
 	>* {
 		&:first-child {
 			padding-bottom: 7rem;
@@ -171,11 +173,11 @@ img {
 }
 
 a {
-	transition: .3s color;
+	transition: .3s all;
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $red;
+			color: $green;
 		}
 	}
 }

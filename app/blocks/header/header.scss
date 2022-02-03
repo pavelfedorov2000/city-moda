@@ -48,47 +48,22 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $red;
+				color: $green;
 
 				svg path {
-					fill: $red;
+					fill: $green;
 				}
 			}
 		}
 	}
 
-	// .header__location
-
-	&__location {
-		display: flex;
-		@extend %text-14;
-
-		@media(max-width: 1024px) {
-			margin-bottom: 3rem;
-		}
-	}
-
-	&__location-label {
-		margin-right: 0.6rem;
-	}
-
 	&__region {
-		position: relative;
-		position: relative;
-		padding-right: 2rem;
-		font-weight: 600;
-		cursor: pointer;
+		min-width: 26.1rem;
 
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0.2rem;
-			right: 0;
-			width: 1.4rem;
-			height: 1.5rem;
-			background-image: url(../images/icons/drop.svg);
-			@extend %bg-contain;
-			transition: .3s transform;
+		&:not(:last-child) {
+			@media(max-width: 1024px) {
+				margin-bottom: 3rem;
+			}
 		}
 	}
 
@@ -120,6 +95,7 @@
 
 	&__call {
 		display: flex;
+		align-items: flex-end;
 
 		&:not(:last-child) {
 			@media(min-width: 1025px) {
@@ -153,19 +129,13 @@
 	&__whatsup {
 		@extend .header__action;
 		color: #479458;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: #479458;
-			}
-		}
 	}
 
 	// .header__main
 
 	&__main {
 		@extend %text-16;
-		padding: 2.5rem 0;
+		padding: 2.5rem 0 1rem;
 
 		@media(max-width: 1024px) {
 			padding-top: 2rem;
@@ -203,7 +173,6 @@
 		font-weight: 600;
 		color: #9B9B9B;
 		padding-bottom: 0.6rem;
-		transition: .3s color;
 
 		@media(max-width: 1024px) {
 			padding-bottom: 0.8rem;
@@ -351,13 +320,6 @@
 	// .header__list-link
 
 	&__list-link {
-		transition: .3s color;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
 
 		&--active {
 			font-weight: 600;
@@ -368,6 +330,100 @@
 		}
 	}
 }
+
+.region-header {
+
+	display: flex;
+	position: relative;
+	@extend %text-14;
+
+	&__title {
+		color: #505661;
+
+		&:not(:last-child) {
+			margin-right: 0.6rem;
+		}
+	}
+
+	// .region-header__value
+
+	&__value {
+		display: inline-block;
+		padding-right: 2rem;
+		font-weight: 600;
+		cursor: pointer;
+		transition: .3s color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
+		}
+
+		&:after {
+			content: '';
+			position: absolute;
+			top: 0.2rem;
+			right: 0;
+			width: 1.4rem;
+			height: 1.5rem;
+			background-image: url(../images/icons/drop.svg);
+			@extend %bg-contain;
+			transition: .3s transform;
+		}
+
+		&--active {
+			&:after {
+				transform: rotate(180deg);
+			}
+		}
+	}
+
+	// .region-header__drop
+
+	&__drop {
+		display: none;
+		position: absolute;
+		top: calc(100% + 1.4rem);
+		left: 50%;
+		z-index: 20;
+		background-color: #fff;
+		box-shadow: 0rem -0.1rem 1rem rgba(0, 0, 0, 0.1);
+		width: 24.7rem;
+		padding: 2rem 1.5rem;
+
+		@media(max-width: 500px) {
+			width: 100%;
+			left: 0;
+		}
+	}
+
+	// .region-header__drop-item
+
+	&__drop-item {
+		cursor: pointer;
+		transition: .3s color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
+		}
+
+		//white-space: nowrap;
+
+		&:not(:last-child) {
+			margin-bottom: 1.7rem;
+		}
+	}
+
+	// .region-header__drop-item--active
+
+	&__drop-item--active {
+		font-weight: 600;
+	}
+}
+
 
 .header-info-line {
 

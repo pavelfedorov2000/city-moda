@@ -363,13 +363,15 @@
 			</div>
 			<div class="header__top">
 				<div class="container header__top-inner">
-					<div class="header__location">
-						<div class="header__location-label">
+					<div class="header__region region-header">
+						<div class="region-header__title">
 							Регион доставки:
 						</div>
-						<a data-fancybox href="#region-popup" class="header__region">
-							Санкт-Петербург
-						</a>
+						<div class="region-header__value">Санкт-Петербург</div>
+						<div class="region-header__drop">
+							<div class="region-header__drop-item">Москва</div>
+							<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+						</div>
 					</div>
 					<a class="header__shops-search" href="#">
 						<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,13 +518,15 @@
 					<a href="#" class="header__nav-link">Мужчинам</a>
 				</nav>
 			</div>
-			<div class="header__location">
-				<div class="header__location-label">
+			<div class="header__region region-header">
+				<div class="region-header__title">
 					Регион доставки:
 				</div>
-				<a data-fancybox href="#region-popup" class="header__region">
-					Санкт-Петербург
-				</a>
+				<div class="region-header__value">Санкт-Петербург</div>
+				<div class="region-header__drop">
+					<div class="region-header__drop-item">Москва</div>
+					<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+				</div>
 			</div>
 			<ul class="burger-menu__list">
 				<li class="burger-menu__list-item">
@@ -1358,90 +1362,34 @@
 	</div>
 	<!-- End Попап арим скидку -->
 	<!-- Попап Где вы находитесь? -->
-	<div style="display: none;" id="region-popup" class="popup region-popup">
-		<div class="region-popup__inner">
-			<div class="region-popup__img">
+	<div style="display: none;" id="region-popup" class="popup mini-popup region-popup">
+		<div class="mini-popup__inner">
+			<div class="mini-popup__img">
 				<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
 			</div>
-			<div class="region-popup__content">
-				<div class="region-popup__title">Где вы находитесь?</div>
+			<div class="mini-popup__content">
+				<div class="mini-popup__top">
+					<div class="mini-popup__title">Где вы находитесь?</div>
+				</div>
 				<form action="#">
 					<input class="region-popup__input" type="text" placeholder="Название населенного пункта">
 					<div class="region-popup__cities-row">
 						<div class="region-popup__cities-col">
 							<label class="region-popup__city">
 								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Минск</span>
+								<span class="radio-text">г. Москва</span>
 							</label>
 							<label class="region-popup__city">
 								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
+								<span class="radio-text">г. Санкт-Петербург</span>
 							</label>
 							<label class="region-popup__city">
 								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
+								<span class="radio-text">г. Москва</span>
 							</label>
 							<label class="region-popup__city">
 								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Барановичи</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Витебск</span>
-							</label>
-						</div>
-						<div class="region-popup__cities-col">
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Гомель</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
-							</label>
-							<label class="region-popup__city">
-								<input class="radio-box" type="radio" name="city">
-								<span class="radio-text">г. Жлобин</span>
+								<span class="radio-text">г. Санкт-Петербург</span>
 							</label>
 						</div>
 					</div>
@@ -1478,7 +1426,6 @@
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/wow.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 </body>
 

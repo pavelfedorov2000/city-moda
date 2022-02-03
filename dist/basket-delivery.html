@@ -363,13 +363,15 @@
 			</div>
 			<div class="header__top">
 				<div class="container header__top-inner">
-					<div class="header__location">
-						<div class="header__location-label">
+					<div class="header__region region-header">
+						<div class="region-header__title">
 							Регион доставки:
 						</div>
-						<a data-fancybox href="#region-popup" class="header__region">
-							Санкт-Петербург
-						</a>
+						<div class="region-header__value">Санкт-Петербург</div>
+						<div class="region-header__drop">
+							<div class="region-header__drop-item">Москва</div>
+							<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+						</div>
 					</div>
 					<a class="header__shops-search" href="#">
 						<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -516,13 +518,15 @@
 					<a href="#" class="header__nav-link">Мужчинам</a>
 				</nav>
 			</div>
-			<div class="header__location">
-				<div class="header__location-label">
+			<div class="header__region region-header">
+				<div class="region-header__title">
 					Регион доставки:
 				</div>
-				<a data-fancybox href="#region-popup" class="header__region">
-					Санкт-Петербург
-				</a>
+				<div class="region-header__value">Санкт-Петербург</div>
+				<div class="region-header__drop">
+					<div class="region-header__drop-item">Москва</div>
+					<div class="region-header__drop-item region-header__drop-item--active">Санкт-Петербург</div>
+				</div>
 			</div>
 			<ul class="burger-menu__list">
 				<li class="burger-menu__list-item">
@@ -732,100 +736,102 @@
 								<div class="basket-table__title">Кол-во</div>
 								<div class="basket-table__title">Стоимость</div>
 							</div>
-							<div class="basket-table__item basket-product">
-								<div class="basket-product__img">
-									<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" alt="">
+							<div class="basket-table__body">
+								<div class="basket-table__item basket-product">
+									<div class="basket-product__img">
+										<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" alt="">
+									</div>
+									<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+									<dl class="product-list basket-product__list">
+										<div>
+											<dt>Артикул:</dt>
+											<dd>MP002XW08J2L</dt>
+										</div>
+										<div>
+											<dt>Цвет:</dt>
+											<dd>бежевый</dt>
+										</div>
+										<div>
+											<dt>Размер:</dd>
+											<dd>42</dt>
+										</div>
+									</dl>
+									<div class="basket-product__buttons">
+										<button class="basket-product__btn basket-product__btn--delete" type="button">
+											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g opacity="0.8">
+													<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+												</g>
+											</svg>
+											Удалить
+										</button>
+										<button class="basket-product__btn basket-product__btn--favorite" type="button">
+											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" stroke="#101112" />
+											</svg>
+											В избранное
+										</button>
+									</div>
+									<div class="basket-product__counter counter">
+										<button class="minus-btn counter__btn" type="button"></button>
+										<input class="counter__input" type="number" value="1" readonly>
+										<button class="plus-btn counter__btn" type="button"></button>
+									</div>
+									<div class="basket-product__prices">
+										<div class="basket-product__prices-wrap">
+											<div class="old-price basket-product__old-price">47 800 ₽</div>
+											<div class="new-price">38 240 ₽</div>
+										</div>
+										<div class="basket-product__discount">
+											<div class="basket-product__discount-percent">Сумма скидки 20%</div>
+											<div class="basket-product__discount-sum">(9 560 ₽)</div>
+										</div>
+									</div>
 								</div>
-								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
-								<dl class="product-list basket-product__list">
-									<div>
-										<dt>Артикул:</dt>
-										<dd>MP002XW08J2L</dt>
+								<div class="basket-table__item basket-product">
+									<div class="basket-product__img">
+										<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" alt="">
 									</div>
-									<div>
-										<dt>Цвет:</dt>
-										<dd>бежевый</dt>
+									<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+									<dl class="product-list basket-product__list">
+										<div>
+											<dt>Артикул:</dt>
+											<dd>MP002XW08J2L</dt>
+										</div>
+										<div>
+											<dt>Цвет:</dt>
+											<dd>бежевый</dt>
+										</div>
+										<div>
+											<dt>Размер:</dd>
+											<dd>42</dt>
+										</div>
+									</dl>
+									<div class="basket-product__buttons">
+										<button class="basket-product__btn basket-product__btn--delete" type="button">
+											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<g opacity="0.8">
+													<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
+												</g>
+											</svg>
+											Удалить
+										</button>
+										<button class="basket-product__btn basket-product__btn--favorite" type="button">
+											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" stroke="#101112" />
+											</svg>
+											В избранное
+										</button>
 									</div>
-									<div>
-										<dt>Размер:</dd>
-										<dd>42</dt>
+									<div class="basket-product__counter counter">
+										<button class="minus-btn counter__btn" type="button"></button>
+										<input class="counter__input" type="number" value="1" readonly>
+										<button class="plus-btn counter__btn" type="button"></button>
 									</div>
-								</dl>
-								<div class="basket-product__buttons">
-									<button class="basket-product__btn basket-product__btn--delete" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="0.8">
-												<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
-											</g>
-										</svg>
-										Удалить
-									</button>
-									<button class="basket-product__btn basket-product__btn--favorite" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" stroke="#101112" />
-										</svg>
-										В избранное
-									</button>
-								</div>
-								<div class="basket-product__counter counter">
-									<button class="minus-btn counter__btn" type="button"></button>
-									<input class="counter__input" type="number" value="1" readonly>
-									<button class="plus-btn counter__btn" type="button"></button>
-								</div>
-								<div class="basket-product__prices">
-									<div class="basket-product__prices-wrap">
-										<div class="old-price basket-product__old-price">47 800 ₽</div>
-										<div class="new-price">38 240 ₽</div>
-									</div>
-									<div class="basket-product__discount">
-										<div class="basket-product__discount-percent">Сумма скидки 20%</div>
-										<div class="basket-product__discount-sum">(9 560 ₽)</div>
-									</div>
-								</div>
-							</div>
-							<div class="basket-table__item basket-product">
-								<div class="basket-product__img">
-									<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" alt="">
-								</div>
-								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
-								<dl class="product-list basket-product__list">
-									<div>
-										<dt>Артикул:</dt>
-										<dd>MP002XW08J2L</dt>
-									</div>
-									<div>
-										<dt>Цвет:</dt>
-										<dd>бежевый</dt>
-									</div>
-									<div>
-										<dt>Размер:</dd>
-										<dd>42</dt>
-									</div>
-								</dl>
-								<div class="basket-product__buttons">
-									<button class="basket-product__btn basket-product__btn--delete" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="0.8">
-												<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
-											</g>
-										</svg>
-										Удалить
-									</button>
-									<button class="basket-product__btn basket-product__btn--favorite" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<path d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" stroke="#101112" />
-										</svg>
-										В избранное
-									</button>
-								</div>
-								<div class="basket-product__counter counter">
-									<button class="minus-btn counter__btn" type="button"></button>
-									<input class="counter__input" type="number" value="1" readonly>
-									<button class="plus-btn counter__btn" type="button"></button>
-								</div>
-								<div class="basket-product__prices">
-									<div class="basket-product__price">
-										4 300
+									<div class="basket-product__prices">
+										<div class="basket-product__price">
+											4 300
+										</div>
 									</div>
 								</div>
 							</div>
@@ -1473,90 +1479,34 @@
 		</div>
 		<!-- End Попап арим скидку -->
 		<!-- Попап Где вы находитесь? -->
-		<div style="display: none;" id="region-popup" class="popup region-popup">
-			<div class="region-popup__inner">
-				<div class="region-popup__img">
+		<div style="display: none;" id="region-popup" class="popup mini-popup region-popup">
+			<div class="mini-popup__inner">
+				<div class="mini-popup__img">
 					<img class="lazy" data-src='assets/images/content/popups/region-popup.jpg' alt=''>
 				</div>
-				<div class="region-popup__content">
-					<div class="region-popup__title">Где вы находитесь?</div>
+				<div class="mini-popup__content">
+					<div class="mini-popup__top">
+						<div class="mini-popup__title">Где вы находитесь?</div>
+					</div>
 					<form action="#">
 						<input class="region-popup__input" type="text" placeholder="Название населенного пункта">
 						<div class="region-popup__cities-row">
 							<div class="region-popup__cities-col">
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Минск</span>
+									<span class="radio-text">г. Москва</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
+									<span class="radio-text">г. Санкт-Петербург</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
+									<span class="radio-text">г. Москва</span>
 								</label>
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Барановичи</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Витебск</span>
-								</label>
-							</div>
-							<div class="region-popup__cities-col">
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Гомель</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Жлобин</span>
+									<span class="radio-text">г. Санкт-Петербург</span>
 								</label>
 							</div>
 						</div>
@@ -1593,7 +1543,6 @@
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/wow.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
-	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 </body>
 

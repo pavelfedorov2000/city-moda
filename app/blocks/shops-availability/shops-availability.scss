@@ -1,14 +1,14 @@
 .shops-availability {
 
-	width: 33.6rem;
-
-	@media(max-width: 500px) {
-		width: 100%;
-	}
-
 	// .shops-availability__select
 
 	&__select {
+
+		width: 33.6rem;
+
+		@media(max-width: 500px) {
+			width: 100%;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 5rem;

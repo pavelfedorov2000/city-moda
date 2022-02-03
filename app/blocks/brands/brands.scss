@@ -70,7 +70,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $red;
+				color: $green;
 			}
 		}
 	}
@@ -91,12 +91,6 @@
 		@extend %text-16;
 		font-weight: 500;
 		white-space: nowrap;
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
 
 		&:not(:last-child) {
 			padding-right: 2rem;
