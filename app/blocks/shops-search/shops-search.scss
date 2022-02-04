@@ -48,11 +48,17 @@
 #shops-map {
 	height: 50rem;
 
+	@media(max-width: 500px) {
+		height: 40rem;
+	}
+
 	>* {
 		width: 100% !important;
+		height: 100% !important;
 
 		>* {
 			width: 100% !important;
+			height: 100% !important;
 		}
 	}
 }

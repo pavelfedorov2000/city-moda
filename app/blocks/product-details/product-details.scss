@@ -21,6 +21,11 @@
 	&__section-title {
 		@extend %text-16;
 		font-weight: 600;
+
+		@media(max-width: 500px) {
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
 	}
 
 	// .product-details__hide-btn

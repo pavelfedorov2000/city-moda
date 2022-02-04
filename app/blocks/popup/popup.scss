@@ -1,18 +1,6 @@
 .fancybox-content {
 	padding: 0;
-	overflow-x: hidden;
-
-	/* @media(min-width: 1025px) {
-		width: 670 * 100vw / 1920 !important;
-	} */
-
-	/* @media(max-width: 767px) {
-		width: calc(100vw - 3.2rem) !important;
-	} */
-
-	img {
-		@extend %cover;
-	}
+	overflow: visible;
 }
 
 .fancybox-can-swipe .fancybox-content {
@@ -39,25 +27,15 @@
 	opacity: .8;
 }
 
+.fancybox-slide {
+	padding: 0;
+}
+
 .fancybox-slide--image {
 	.fancybox-content {
 		left: 50%;
 		transform: translate(-50%, -50%) !important;
 		top: 50%;
-
-		/* @media(min-width: 768px) {
-			height: 100vh !important;
-		} */
-
-		/* @media(max-width: 500px) {
-			width: calc(100vw - 3.2rem) !important;
-		} */
-
-		/* @media(max-width: 767px) {
-			top: 50%;
-			transform: translate(-50%, -50%) !important;
-			height: 70vh !important;
-		} */
 	}
 }
 
@@ -88,7 +66,16 @@
 
 		svg {
 			path {
+				width: 100%;
+				height: 100%;
 				fill: #F4F4F6;
+				transition: .3s fill;
+
+				@media (any-hover: hover) {
+					&:hover {
+						fill: $red;
+					}
+				}
 
 				@media(max-width: 767px) {
 					fill: #101112;

@@ -422,10 +422,8 @@
 							<a href="#" class="header__nav-link">Детям</a>
 							<a href="#" class="header__nav-link">Мужчинам</a>
 						</nav>
-						<button class="burger-btn" type="button">
-							<span></span>
-							<span></span>
-							<span></span>
+						<button class="burger-btn" type="button" aria-label="Открыть меню">
+							<img src="assets/images/icons/burger.svg" alt="кнопка бургер">
 						</button>
 						<div class="logo header__logo">
 							<a class="logo__link" href="#">
@@ -1365,7 +1363,14 @@
 								</div>
 							</div>
 							<div id="video" class="tabs-content">
-								<iframe src="https://www.youtube.com/embed/L1e8YEozOD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								<div class="product-card__videos">
+									<div class="product-card__video">
+										<iframe src="https://www.youtube.com/embed/L1e8YEozOD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+									<div class="product-card__video">
+										<iframe src="https://www.youtube.com/embed/L1e8YEozOD8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -2429,7 +2434,7 @@
 							выступающим точкам ягодиц.
 						</p>
 					</div>
-					<img class="lazy" data-src='assets/images/content/sizes.jpg' alt=''>
+					<img class="lazy how-define-size__img" data-src='assets/images/content/sizes.jpg' alt=''>
 				</div>
 			</div>
 		</div>
@@ -2694,12 +2699,11 @@
 			prevEl: '.product-card__slider-arrow--prev',
 		},
 		breakpoints: {
-			576: {
+			768: {
 				slidesPerView: 2,
 				spaceBetween: 12,
 			},
 			1025: {
-				slidesPerView: 2,
 				spaceBetween: 23,
 			}
 		}

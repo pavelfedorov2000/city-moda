@@ -9,6 +9,19 @@
 
 	display: none;
 
+	.fancybox-close-small {
+		@media(max-width: 1024px) {
+			top: 2rem;
+			right: 2rem;
+		}
+	}
+
+	.fancybox-slide--html .fancybox-close-small svg path {
+		@media(max-width: 1024px) {
+			fill: #101112;
+		}
+	}
+
 	// .product-popup__inner
 
 	&__inner {
@@ -16,7 +29,8 @@
 			display: grid;
 			grid-template-columns: 464 / 982 * 100% auto 1rem;
 			grid-template-rows: 59rem 7.6rem;
-			grid-template-areas: "slider info ."
+			grid-template-areas:
+				"slider info ."
 				"link link ."
 			;
 		}

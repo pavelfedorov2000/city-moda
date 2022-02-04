@@ -87,9 +87,6 @@ $(document).ready(function () {
 	app.feedback.init();
 	app.pageup.init();
 	app.auth.init();
-	if ($('main').hasClass('contacts-page')) {
-		app.contacts.init();
-	}
 	if ($('main').hasClass('basket-page')) {
 		app.basketTotal.init();
 	}

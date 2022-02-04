@@ -91,10 +91,10 @@
 
 	&__title {
 		&:not(:last-child) {
-			margin-bottom: 4rem;
 
 			@media(max-width: 500px) {
-				margin-bottom: 2rem;
+				font-size: 1.7rem;
+				line-height: 2.5rem;
 			}
 		}
 	}
@@ -197,7 +197,7 @@
 				&__img {
 
 					@media(max-width: 767px) {
-						height: 50rem;
+						height: 45rem;
 					}
 				}
 			}

@@ -151,7 +151,10 @@ dt {
 
 	&__title {
 		@extend %flex-row-center;
-		margin-bottom: 3rem;
+
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
 	}
 }
 

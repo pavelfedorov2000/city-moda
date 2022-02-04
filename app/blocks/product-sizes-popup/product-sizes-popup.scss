@@ -5,10 +5,18 @@
 .product-sizes-popup {
 	padding-right: 0.7rem;
 
-	@media(max-width: 767px) {
-		height: 100vh;
+	.fancybox-close-small {
+		@media(max-width: 1024px) {
+			top: 2rem;
+			right: 2rem;
+		}
 	}
 
+	.fancybox-slide--html .fancybox-close-small svg path {
+		@media(max-width: 1024px) {
+			fill: #101112;
+		}
+	}
 
 	//max-height: 66.7rem;
 	&__inner {
@@ -150,7 +158,7 @@
 			grid-gap: 3rem;
 		}
 
-		@media(min-width: 1025px) {
+		@media(min-width: 768px) {
 			grid-template-columns: 1fr 24.3rem;
 		}
 	}
@@ -168,6 +176,8 @@
 	}
 
 	&__img {
-		height: 32rem;
+		@media(min-width: 768px) {
+			height: 32rem;
+		}
 	}
 }
