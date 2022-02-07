@@ -150,7 +150,10 @@
 		}
 
 		img {
-			@extend %cover;
+			&.loaded {
+				@extend %cover;
+			}
+
 			transition: 1.5s transform;
 		}
 

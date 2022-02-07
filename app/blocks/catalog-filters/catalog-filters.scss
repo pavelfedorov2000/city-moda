@@ -87,11 +87,13 @@
 	&__row {
 		@media(min-width: 1025px) {
 			display: flex;
+			flex-wrap: wrap;
+			padding-right: 3rem;
 		}
 
 		&:not(:last-child) {
 			@media(min-width: 1025px) {
-				margin-bottom: 2rem;
+				margin: -0.5rem 0 1.5rem;
 			}
 		}
 	}
@@ -104,6 +106,7 @@
 		&:not(:last-child) {
 			@media(min-width: 1025px) {
 				margin-right: 2.6rem;
+				padding: 0.5rem 0;
 			}
 		}
 
@@ -480,41 +483,6 @@
 
 		&::placeholder {
 			color: #C0C0C0;
-		}
-	}
-}
-
-.price-range {
-
-	// .price-range__item
-
-	&__item {
-		@extend %vertical-align;
-
-		span {
-			@extend %text-14;
-			white-space: nowrap;
-			margin-right: 0.6rem;
-		}
-	}
-
-	// .price-range__input
-
-	&__input {
-		width: 9rem;
-		padding: 0.5rem;
-		border: 0.1rem solid #EAEAEA;
-
-		@media(max-width: 1024px) {
-			width: 100%;
-		}
-
-		&::placeholder {
-			color: #C0C0C0;
-		}
-
-		&:focus {
-			border-color: #101112;
 		}
 	}
 }

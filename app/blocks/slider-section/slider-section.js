@@ -2,14 +2,14 @@ app.sliderSections = {
 	name: 'sliderSections',
 	description: 'your script description',
 	init() {
-		const catalogSlider = new Swiper('.catalog-slider', {
+		const catalogSlider = new Swiper('.popular-goods-slider', {
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 20,
 			speed: 1000,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+				nextEl: '.popular-goods-slider-arrow-next',
+				prevEl: '.popular-goods-slider-arrow-prev',
 			},
 			breakpoints: {
 				768: {
@@ -31,8 +31,8 @@ app.sliderSections = {
 			spaceBetween: 20,
 			speed: 1000,
 			navigation: {
-				nextEl: '.swiper-button-next',
-				prevEl: '.swiper-button-prev',
+				nextEl: '.catalog-new-slider-arrow-next',
+				prevEl: '.catalog-new-slider-arrow-prev',
 			},
 			breakpoints: {
 				768: {

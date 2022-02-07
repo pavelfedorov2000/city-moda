@@ -124,6 +124,13 @@
 
 		&--disabled {
 			color: #9B9B9B;
+			cursor: not-allowed;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: #9B9B9B;
+				}
+			}
 		}
 	}
 

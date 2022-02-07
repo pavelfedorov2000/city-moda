@@ -6,7 +6,7 @@
 	label.error {
 		margin-top: 0.3rem;
 
-		+.form-row__btn {
+		&+.form-row__btn {
 			background-color: $red;
 			border-color: $red;
 		}
@@ -43,6 +43,11 @@
 		background-color: #101112;
 		border: 0.1rem solid #101112;
 		transition: .3s all;
+
+		&.default {
+			background-color: #101112;
+			border: 0.1rem solid #101112;
+		}
 
 		@media (any-hover: hover) {
 			&:hover {

@@ -84,10 +84,12 @@ app.validation = {
 		validateForms('#register form');
 		validateForms('.basket-page form');
 		validateForms('#password-change form');
+		validateForms('#size-subscribe-popup form');
+		validateForms('#discount-popup form');
 
 		// форма подписки в футере
 		$('.form-row__input').on('change', function () {
-			if ($('#subscribe_email-error').attr('style') === 'display: none;') {
+			if ($('#email-error').attr('style') === 'display: none;') {
 				$(this).parent().find('button').css('background-color', '#101112');
 				$(this).parent().find('button').css('border-color', '#101112');
 			}

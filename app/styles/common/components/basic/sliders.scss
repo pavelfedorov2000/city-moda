@@ -26,6 +26,7 @@
 		width: auto;
 		height: auto;
 		margin-top: 0;
+		cursor: pointer;
 
 		svg {
 			width: 5.6rem;
@@ -46,6 +47,16 @@
 			}
 		}
 	}
+}
+
+.popular-goods-slider-arrow-prev,
+.catalog-new-slider-arrow-prev {
+	@extend .swiper-button-prev;
+}
+
+.popular-goods-slider-arrow-next,
+.catalog-new-slider-arrow-next {
+	@extend .swiper-button-next;
 }
 
 .product-popup__slider,
@@ -108,13 +119,3 @@
 .swiper-pagination-bullet-active {
 	opacity: 1;
 }
-
-/* .swiper-pagination-current,
-.swiper-pagination-total {
-    &:before {
-        content: '0'; // если хотим нумерацию 01, 02, 03, ...
-        position: absolute;
-        top: 0;
-        left: 0;
-    }
-} */

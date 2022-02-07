@@ -143,6 +143,7 @@
 	&__body {
 		padding: 3rem;
 		border: 0.1rem solid #EAEAEA;
+		border-top: none;
 
 		@media(max-width: 500px) {
 			padding: 1.5rem;

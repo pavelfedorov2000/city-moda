@@ -58,7 +58,7 @@
 	}
 
 	&__region {
-		min-width: 26.1rem;
+		//min-width: 26.1rem;
 
 		&:not(:last-child) {
 			@media(max-width: 1024px) {
@@ -129,6 +129,11 @@
 	&__whatsup {
 		@extend .header__action;
 		color: #479458;
+	}
+
+	&__whatsup-icon {
+		width: 1.6rem;
+		height: 1.6rem;
 	}
 
 	// .header__main
@@ -216,15 +221,22 @@
 	// .header__logo
 
 	&__logo {
-		width: 20.7rem;
-		height: 3.1rem;
 
 		@media(max-width: 1024px) {
 			margin-left: 1.6rem;
 			margin-right: auto;
 		}
+	}
 
-		@media(max-width: 500px) {
+	&__logo-img {
+		width: 20.7rem;
+
+		@media(max-width: 1024px) {
+			width: 17rem;
+			height: 2.5rem;
+		}
+
+		@media(max-width: 767px) {
 			width: 12rem;
 			height: 1.7rem;
 		}
@@ -433,17 +445,20 @@
 	font-weight: 600;
 	padding: 1rem 0;
 	position: relative;
+	display: flex;
+	flex-wrap: nowrap;
 	// .header-info-line__inner
 
 	&__inner {
+		width: 100%;
+		flex-shrink: 0;
+		margin: 0 auto;
+		padding: 0 1.6rem;
 		@extend %flex-row-center;
+		animation: marquee 10s linear infinite;
 
 		p {
-			&:last-child {
-				@media(max-width: 1024px) {
-					display: none;
-				}
-			}
+			white-space: nowrap;
 		}
 	}
 
@@ -470,5 +485,15 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translate(0, 0);
+	}
+
+	100% {
+		transform: translate(-100vw, 0);
 	}
 }

@@ -1,1 +1,35 @@
+.price-range {
 
+	// .price-range__item
+
+	&__item {
+		@extend %vertical-align;
+
+		span {
+			@extend %text-14;
+			white-space: nowrap;
+			margin-right: 0.6rem;
+		}
+	}
+
+	// .price-range__input
+
+	&__input {
+		@extend %text-13;
+		width: 9rem;
+		padding: 0.45rem;
+		border: 0.1rem solid #EAEAEA;
+
+		@media(max-width: 1024px) {
+			width: 100%;
+		}
+
+		&::placeholder {
+			color: #C0C0C0;
+		}
+
+		&:focus {
+			border-color: #101112;
+		}
+	}
+}

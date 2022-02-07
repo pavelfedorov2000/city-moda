@@ -2,7 +2,7 @@ app.blog = {
 	name: 'blog',
 	description: 'your script description',
 	init() {
-		new Swiper('.blog-text__slider', {
+		const blogSlider = new Swiper('.blog-text__slider', {
 			loop: true,
 			spaceBetween: 27,
 			speed: 1000,
@@ -16,6 +16,9 @@ app.blog = {
 					slidesPerView: 2,
 				},
 			}
+		});
+		blogSlider.on('slideChange', function () {
+			new LazyLoad();
 		});
 	},
 };

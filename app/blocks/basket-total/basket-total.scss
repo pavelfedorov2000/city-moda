@@ -24,18 +24,20 @@
 		@extend %text-14;
 		max-width: 33.3rem;
 
-		a {
-			font-weight: 600;
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: $green;
-				}
-			}
-		}
-
 		&:not(:last-child) {
 			margin-bottom: 1.7rem;
+		}
+	}
+
+	&__auth-btn {
+		@extend %text-14;
+		font-weight: 600;
+		transition: .3s color;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
 		}
 	}
 

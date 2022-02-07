@@ -96,4 +96,10 @@
 			padding-right: 0.3rem;
 		}
 	}
+
+	&__address {
+		@media(min-width: 768px) {
+			max-width: 59.5rem;
+		}
+	}
 }

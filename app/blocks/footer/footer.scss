@@ -76,6 +76,16 @@
 		}
 	}
 
+	&__logo-img {
+		width: 16.7rem;
+		height: 2.5rem;
+
+		@media(max-width: 767px) {
+			width: 12rem;
+			height: 1.7rem;
+		}
+	}
+
 	// .footer__menus
 
 	&__menus {
@@ -270,6 +280,10 @@
 	&__subscribe {
 		@media(min-width: 768px) {
 			grid-area: subscribe;
+		}
+
+		@media(max-width: 767px) {
+			margin-top: -1rem;
 		}
 	}
 

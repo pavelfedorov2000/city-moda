@@ -33,11 +33,15 @@
 
 	&__inner {
 		display: grid;
-		grid-gap: 3rem;
+		grid-gap: 6.2rem;
+
+		@media(max-width: 1024px) {
+			grid-gap: 3rem;
+		}
 
 		@media(min-width: 1025px) {
-			grid-template-columns: max-content 98.3rem;
-			justify-content: space-between;
+			grid-template-columns: minmax(32.6rem, max-content) 98.8rem;
+			align-items: flex-start;
 		}
 	}
 
@@ -68,12 +72,26 @@
 		}
 	}
 
+	&__subtitle {
+		@extend %text-16;
+
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
+
 	// .profile-page__content
 
 	&__content {
 		section {
 			&:not(:last-child) {
 				padding-bottom: 3rem;
+			}
+
+			>div {
+				&:not(:last-child) {
+					margin-bottom: 3rem;
+				}
 			}
 		}
 

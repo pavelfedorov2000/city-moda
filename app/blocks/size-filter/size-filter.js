@@ -7,7 +7,7 @@ app.sizeFilter = {
 			if ($(this).is(':checked')) {
 				checkedSizes.push($(this).next().next().text());
 			} else {
-				checkedSizes.pop();
+				checkedSizes.splice(checkedSizes.indexOf($(this).next().next().text()), 1);
 			}
 			if (checkedSizes.length > 0) {
 				$(this).parents('.catalog-drop-filter').prev().find('span.filter-output').text(`(${checkedSizes.sort().join(', ')})`);

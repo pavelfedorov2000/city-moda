@@ -140,6 +140,7 @@
 	}
 
 	&__btn {
+		@extend %text-13;
 		@extend %vertical-align;
 		transition: .3s color;
 

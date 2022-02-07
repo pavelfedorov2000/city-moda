@@ -13,11 +13,6 @@ app.burger = {
 			$('.burger-menu').removeClass('burger-menu--active');
 		});
 
-		/* $('.header__menu-link').on('click', function () {
-			$('body').removeClass('_lock');
-			$('.burger-menu').removeClass('burger-menu--active');
-		}); */
-
 		$('.burger-menu__list-item span').on('click', function () {
 			$(this).parent().siblings().find('span').removeClass('active');
 			$(this).parent().siblings().find('ul').slideUp('300');

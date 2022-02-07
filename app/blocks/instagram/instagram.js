@@ -3,7 +3,7 @@ app.instagram = {
 	description: 'your script description',
 	init() {
 		const instagramSlider = new Swiper('.instagram-slider', {
-			lazy: true,
+			//lazy: true,
 			loop: true,
 			slidesPerView: 1,
 			spaceBetween: 52,

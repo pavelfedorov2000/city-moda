@@ -23,6 +23,13 @@
 		&:not(:last-child) {
 			margin-bottom: 1.6rem;
 		}
+
+		img {
+			&.loaded {
+				width: 6.8rem;
+				height: 10.1rem;
+			}
+		}
 	}
 
 	// .icons-slider__item-title
