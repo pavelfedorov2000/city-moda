@@ -31,7 +31,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/01.jpg",
+							"image": "assets/images/content/catalog-slider/01",
 							"alt": "Пуховик",
 							"title": "Пуховик",
 							"subtitle": "Rio Verti",
@@ -42,7 +42,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/02.jpg",
+							"image": "assets/images/content/catalog-slider/02",
 							"alt": "Джемпер",
 							"title": "Джемпер",
 							"subtitle": "Loriata",
@@ -52,7 +52,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/03.jpg",
+							"image": "assets/images/content/catalog-slider/03",
 							"alt": "Юбка",
 							"title": "Юбка",
 							"subtitle": "Loriata",
@@ -63,7 +63,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
 							"discount": "40%",
-							"image": "assets/images/content/catalog-slider/04.jpg",
+							"image": "assets/images/content/catalog-slider/04",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Rio Verti",
@@ -74,7 +74,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/02.jpg",
+							"image": "assets/images/content/catalog-slider/02",
 							"alt": "Джемпер",
 							"title": "Джемпер",
 							"subtitle": "Loriata",
@@ -84,7 +84,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
 							"discount": "40%",
-							"image": "assets/images/content/catalog-slider/04.jpg",
+							"image": "assets/images/content/catalog-slider/04",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Rio Verti",
@@ -124,7 +124,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/04.jpg",
+							"image": "assets/images/content/catalog-slider/04",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -134,7 +134,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/03.jpg",
+							"image": "assets/images/content/catalog-slider/03",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -144,7 +144,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/02.jpg",
+							"image": "assets/images/content/catalog-slider/02",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -154,7 +154,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/01.jpg",
+							"image": "assets/images/content/catalog-slider/01",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -164,7 +164,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/04.jpg",
+							"image": "assets/images/content/catalog-slider/04",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -174,7 +174,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/03.jpg",
+							"image": "assets/images/content/catalog-slider/03",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -184,7 +184,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/02.jpg",
+							"image": "assets/images/content/catalog-slider/02",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -194,7 +194,7 @@
 						<div class="swiper-slide">
 							@@include("blocks/catalog-card-new/catalog-card-new.html", {
 							"discount": "25%",
-							"image": "assets/images/content/catalog-slider/01.jpg",
+							"image": "assets/images/content/catalog-slider/01",
 							"alt": "Пальто",
 							"title": "Пальто",
 							"subtitle": "Loriata",
@@ -224,7 +224,12 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow"
 						data-wow-duration="1.5s">
 						<a href="#" class="blog-item__img">
-							<img class="lazy" data-src='assets/images/content/blog/01.jpg' alt='фото блога'>
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/01.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/01.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="724" height="336">
+							</picture>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
@@ -245,7 +250,12 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
 						data-wow-duration="1.5s" data-wow-delay=".5s">
 						<a href="#" class="blog-item__img">
-							<img class="lazy" data-src='assets/images/content/blog/02.jpg' alt='фото блога'>
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/02.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/02.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
+							</picture>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
@@ -266,7 +276,12 @@
 					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
 						data-wow-duration="1.5s" data-wow-delay="1s">
 						<a href=" #" class="blog-item__img">
-							<img class="lazy" data-src='assets/images/content/blog/03.jpg' alt='фото блога'>
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/03.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/03.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
+							</picture>
 						</a>
 						<div class="blog-item__content">
 							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>

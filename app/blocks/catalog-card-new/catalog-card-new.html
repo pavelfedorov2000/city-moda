@@ -3,7 +3,10 @@
 	<span class="label catalog-card__label label--new">new</span>
 	<button class="catalog-card__favorite" type="button" aria-label="Добавить в избранное"></button>
 	<div class="catalog-card__img">
-		<img class="lazy" data-src='@@image' alt='@@alt'>
+		<picture>
+			<source type="image/webp" data-srcset="@@image.webp" srcset="assets/images/src.webp">
+			<img class="lazy" data-src="@@image.jpg" src="assets/images/src.jpg" alt="@@alt" width="336" height="448">
+		</picture>
 		<div class="catalog-card__info">
 			<div class="catalog-card__sizes">
 				<span class="catalog-card__size">42</span>
