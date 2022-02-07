@@ -2127,13 +2127,13 @@
 						<h3 class="aside-popup__title">Ваша корзина</h3>
 						<div class="drop-basket__products">
 							<div class="basket-product drop-basket__product">
-								<div class="basket-product__img">
+								<a href="#" class="basket-product__img">
 									<picture>
 										<source data-srcset="assets/images/content/basket-product-01.webp" srcset="assets/images/src.webp">
 										<img class="lazy" data-src="assets/images/content/basket-product-01.jpg" src="assets/images/src.jpg" alt="фото">
 									</picture>
-								</div>
-								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+								</a>
+								<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
 								<dl class="product-list basket-product__list">
 									<div>
 										<dt>Артикул:</dt>
@@ -2169,13 +2169,13 @@
 								</div>
 							</div>
 							<div class="basket-product drop-basket__product">
-								<div class="basket-product__img">
+								<a href="#" class="basket-product__img">
 									<picture>
 										<source data-srcset="assets/images/content/basket-product-02.webp" srcset="assets/images/src.webp">
 										<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" src="assets/images/src.jpg" alt="фото">
 									</picture>
-								</div>
-								<div class="product-title basket-product__title">Пальто LORIATA Wander Yellow</div>
+								</a>
+								<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
 								<dl class="product-list basket-product__list">
 									<div>
 										<dt>Артикул:</dt>
@@ -2501,6 +2501,38 @@
 				</a>
 			</div>
 		</div>
+		<!-- Попап Подписаться на мой размер -->
+		<div style="display: none;" id="size-subscribe-popup" class="popup mini-popup">
+			<div class="mini-popup__inner">
+				<div class="mini-popup__img">
+					<picture>
+						<source data-srcset="assets/images/content/popups/size-subscribe.webp" srcset="assets/images/src.webp">
+						<img class="lazy" data-src="assets/images/content/popups/size-subscribe.jpg" src="assets/images/src.jpg" alt="фото">
+					</picture>
+				</div>
+				<div class="mini-popup__content">
+					<div class="mini-popup__title">Подписаться на мой размер</div>
+					<div class="mini-popup__subtitle">
+						Мы обязательно напишем, когда нужный размер появится в наличии
+					</div>
+					<form action="#" class="subscribe-form">
+						<div class="form-row subscribe-form__wrap">
+							<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email" required>
+							<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
+						</div>
+						<label class="form-agree">
+							<input class="check-box" name="user_agree" type="checkbox">
+							<span class="check-style"></span>
+							<span class="check-text">
+								Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
+							</span>
+						</label>
+						<!-- <div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div> -->
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- End Попап Подписаться на мой размер -->
 		<!-- Попап Таблица размеров -->
 		<div style="display: none;" id="product-sizes-popup" class="popup product-sizes-popup">
 			<div class="product-sizes-popup__inner">
