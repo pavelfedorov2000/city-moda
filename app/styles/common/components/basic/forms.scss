@@ -152,3 +152,22 @@
 	font-weight: 500;
 	color: $green;
 }
+
+input[type=number] {
+	&::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+	}
+
+	&::-webkit-outer-spin-button {
+		-webkit-appearance: none;
+	}
+}
+
+input[type=number] {
+	-moz-appearance: textfield;
+}
+
+input[type="number"]:hover,
+input[type="number"]:focus {
+	-moz-appearance: number-input;
+}

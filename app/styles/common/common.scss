@@ -1,6 +1,10 @@
 html {
 	box-sizing: border-box;
-	font-size: calc(100vw / 1600 * 10);
+	font-size: calc(100vw / 1920 * 10);
+	//width: 100vw;
+	//overflow-x: hidden;
+	overflow-x: hidden;
+	margin-right: calc(-1 * (100vw - 100%));
 
 	@media(max-width: 1024px) {
 		font-size: calc(100vw / 768 * 10);
@@ -12,6 +16,17 @@ html {
 
 	@media(max-width: 500px) {
 		font-size: calc(100vw / 360 * 10);
+	}
+
+	/* &.no-overflow {
+		overflow: hidden;
+	} */
+
+	&.disable-fix {
+		overflow-x: initial;
+		margin-right: initial;
+		//overflow-x: hidden;
+		//margin-right: calc(-1 * (100vw - 100%));
 	}
 }
 
@@ -54,7 +69,7 @@ dt {
 	padding-bottom: 11rem;
 
 	@media(max-width: 1024px) {
-		padding-bottom: 7rem;
+		padding-bottom: 0rem;
 	}
 
 	@media(max-width: 767px) {
@@ -160,6 +175,7 @@ dt {
 
 .container {
 	max-width: $container + $gap * 2;
+	//max-width: calc(1500px + 1.6rem * 2);
 	padding: 0 $gap;
 	margin: 0 auto;
 }
@@ -173,6 +189,12 @@ img {
 	table & {
 		max-width: none;
 	}
+}
+
+img[data-src],
+img[data-srcset] {
+	display: block;
+	min-height: 1px;
 }
 
 a {
@@ -214,6 +236,10 @@ a {
 			margin-bottom: 2rem;
 		}
 	}
+}
+
+.prices {
+	align-items: flex-end;
 }
 
 .new-price {

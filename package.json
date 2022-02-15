@@ -1,7 +1,7 @@
 {
   "name": "city_moda",
   "version": "2.0.0",
-  "description": "A template for a quick start",
+  "description": "Online store City Moda",
   "keywords": [
     "project",
     "template",
@@ -102,13 +102,17 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "deploy": "^1.0.3",
     "gulp-sass": "^5.0.0",
+    "i": "^0.3.7",
     "jquery": "^3.6.0",
     "jquery-validation": "^1.19.3",
     "jquery.maskedinput": "^1.4.1",
+    "npm": "^8.5.0",
+    "run": "^1.4.0",
     "sass": "^1.45.1",
     "swiper": "^7.4.1",
-    "vanilla-lazyload": "^17.5.0",
+    "vanilla-lazyload": "^17.5.1",
     "wowjs": "^1.1.3"
   }
 }

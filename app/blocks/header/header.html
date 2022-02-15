@@ -1,5 +1,4 @@
 <header class="header">
-	@@include("blocks/drop-menu/drop-menu.html")
 	<div class="header__top">
 		<div class="container header__top-inner">
 			<div class="header__region region-header">
@@ -39,7 +38,7 @@
 					</a>
 					<span class="header__call-descr">Звонок бесплатный</span>
 				</div>
-				<a href="https://wa.me/" class="header__whatsup">
+				<a href="https://wa.me/" class="header__whatsup" target="_blank" rel="nofollow">
 					<img class="header__whatsup-icon" src="assets/images/icons/whatsup.svg" alt="whatsup" width="16"
 						height="16">
 					WhatsApp
@@ -117,31 +116,12 @@
 								d="M10.6673 5.8335C10.394 5.8335 10.1673 5.60683 10.1673 5.3335V3.00016C10.1673 2.28016 9.72065 1.8335 9.00065 1.8335H7.00065C6.28065 1.8335 5.83398 2.28016 5.83398 3.00016V5.3335C5.83398 5.60683 5.60732 5.8335 5.33398 5.8335C5.06065 5.8335 4.83398 5.60683 4.83398 5.3335V3.00016C4.83398 1.72683 5.72732 0.833496 7.00065 0.833496H9.00065C10.274 0.833496 11.1673 1.72683 11.1673 3.00016V5.3335C11.1673 5.60683 10.9407 5.8335 10.6673 5.8335Z"
 								fill="#101112" />
 						</svg>
-						<span>Корзина <span class="header__cart-num"></span></span>
+						<span>Корзина <span class="header__cart-num">(2)</span></span>
 					</button>
 				</div>
 			</div>
 			<div class="header__main-bottom">
-				<ul class="header__list">
-					<li class="header__list-item">
-						<a href="#" class="header__list-link" data-category-link="ideas">Идеи</a>
-					</li>
-					<li class="header__list-item">
-						<a href="#" class="header__list-link" data-category-link="new">Новинки</a>
-					</li>
-					<li class="header__list-item">
-						<a href="#" class="header__list-link" data-category-link="clothes">Одежда</a>
-					</li>
-					<li class="header__list-item">
-						<a href="#" class="header__list-link" data-category-link="accessories">Аксессуары</a>
-					</li>
-					<li class="header__list-item">
-						<a href="#" class="header__list-link" data-category-link="brands">Бренды</a>
-					</li>
-					<li class="header__list-item">
-						<a href="#" class="header__list-link header__list-link--red">Распродажа</a>
-					</li>
-				</ul>
+				@@include("blocks/drop-menu/drop-menu.html")
 
 				@@include("blocks/search-form/search-form.html")
 			</div>

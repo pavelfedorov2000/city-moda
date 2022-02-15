@@ -48,6 +48,11 @@
 	}
 }
 
-.catalog .breadcrumbs {
+.catalog,
+.product-card .breadcrumbs {
 	padding-bottom: 2rem;
 }
+
+/* .product-card .breadcrumbs {
+	padding-top: 2rem;
+} */

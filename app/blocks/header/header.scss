@@ -289,6 +289,7 @@
 	&__main-bottom {
 
 		@media(min-width: 1025px) {
+			position: relative;
 			display: flex;
 			justify-content: space-between;
 			align-items: flex-end;
@@ -327,6 +328,18 @@
 				margin-right: 3rem;
 			}
 		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.drop-menu {
+					@media(min-width: 1025px) {
+						visibility: visible;
+						opacity: 1;
+						pointer-events: all;
+					}
+				}
+			}
+		}
 	}
 
 	// .header__list-link
@@ -345,7 +358,7 @@
 
 .region-header {
 
-	display: flex;
+	display: inline-flex;
 	position: relative;
 	@extend %text-14;
 
@@ -375,7 +388,7 @@
 		&:after {
 			content: '';
 			position: absolute;
-			top: 0.2rem;
+			top: 0.3rem;
 			right: 0;
 			width: 1.4rem;
 			height: 1.5rem;
@@ -453,7 +466,7 @@
 	&__inner {
 		padding: 0 1.6rem;
 		@extend %flex-row-center;
-		animation: marquee 10s linear infinite;
+		animation: marquee 15s linear infinite;
 		width: 100%;
 		flex-shrink: 0;
 		margin: 0 auto;
@@ -480,7 +493,8 @@
 		@media(min-width: 1025px) {
 			display: block;
 			position: absolute;
-			right: 12 / 1600 * 100%;
+			right: 20 / 1600 * 100%;
+			//right: 12 / 1600 * 100%;
 			width: 1.6rem;
 			height: 1.6rem;
 		}
