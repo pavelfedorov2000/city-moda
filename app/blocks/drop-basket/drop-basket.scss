@@ -93,26 +93,6 @@
 		padding: 2rem;
 		font-weight: 600;
 
-		/* &:before,
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0;
-			bottom: 0;
-			width: 5rem;
-			height: 100%;
-			background-color: $green;
-			transition: .3s background-color;
-		}
-
-		&:before {
-			left: -5rem;
-		}
-
-		&:after {
-			right: -5rem;
-		} */
-
 		@media (any-hover: hover) {
 			&:hover {
 				color: #fff;

@@ -8,9 +8,12 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $green;
+			//color: $green;
+			color: #9b9b9b;
 		}
 	}
+
+
 
 	&:after {
 		content: '';
@@ -26,6 +29,12 @@
 	&--active {
 		font-weight: 600;
 		color: $green;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: $green;
+			}
+		}
 
 		&:after {
 			width: 100%;

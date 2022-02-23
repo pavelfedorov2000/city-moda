@@ -114,7 +114,6 @@
 	&__address {
 		p {
 			@extend %text-16;
-			color: #505661;
 
 			&:not(:last-child) {
 				margin-bottom: 0.4rem;
@@ -176,10 +175,6 @@
 		}
 	}
 }
-
-/* .popover-content {
-	width: 28.6rem;
-} */
 
 .ballon-content {
 	padding: 1.5rem 1.6rem;

@@ -154,6 +154,12 @@
 
 		&--red {
 			color: $red;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $red;
+				}
+			}
 		}
 	}
 
@@ -271,8 +277,10 @@
 	// .footer__list-link
 
 	&__list-link {
-		@extend %text-13;
-		color: #505661;
+		//@extend %text-13;
+		@extend %text-14;
+		color: #000;
+		//color: #505661;
 	}
 
 	// .footer__subscribe
@@ -291,8 +299,9 @@
 
 	&__bottom {
 		@extend %text-10;
+		//@extend %text-12;
 		font-weight: 500;
-		color: #505661;
+		//color: #505661;
 		padding: 3.1rem 0;
 
 		@media(max-width: 500px) {
@@ -322,7 +331,6 @@
 	&__copy {
 		@extend %text-10;
 		font-weight: 500;
-		color: #505661;
 
 		@media(min-width: 768px) {
 			grid-area: copy;

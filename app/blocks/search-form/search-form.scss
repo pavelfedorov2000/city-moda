@@ -6,7 +6,7 @@
 	&__input {
 		@extend %text-12;
 		line-height: 1.4rem;
-		color: #101112;
+		//color: #101112;
 		background-color: #fff;
 		border: 0.1rem solid #777;
 		width: 33.6rem;
@@ -19,13 +19,13 @@
 
 		&::placeholder {
 			font-style: italic;
-			color: #777;
+			color: #9b9b9b;
+			//color: #777;
 		}
 
 		@media(max-width: 1024px) {
 			border-color: #2D703C;
 			padding: 1rem 2.7rem 1rem 3.4rem;
-			//filter: drop-shadow(0rem 0.4rem 1.4rem rgba(39, 116, 56, 0.8));
 		}
 
 		&--active {

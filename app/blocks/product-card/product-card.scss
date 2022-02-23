@@ -23,7 +23,8 @@
 		}
 
 		@media(min-width: 1025px) {
-			grid-template-columns: auto 46.6rem;
+			//grid-template-columns: auto 46.6rem;
+			grid-template-columns: auto 50rem;
 			grid-template-areas:
 				"slider content"
 				"info links"
@@ -263,7 +264,7 @@
 		&.tab--active {
 			@extend %text-20;
 			font-weight: 500;
-			color: #101112;
+			color: #000;
 
 			&:after {
 				width: 100%;
@@ -377,6 +378,36 @@
 				svg.favorite path {
 					fill: $red;
 				}
+			}
+		}
+	}
+}
+
+.about-product {
+	// .about-product__title
+
+	&__title {
+		@extend %text-16;
+		font-weight: 600;
+		margin-bottom: 0.8rem;
+	}
+
+	// .about-product__list
+
+	&__list {
+		@extend %text-13;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+
+		div {
+			&:not(:last-child) {
+				margin-bottom: 0.4rem;
+			}
+
+			dt {
+				padding-right: 0.3rem;
 			}
 		}
 	}

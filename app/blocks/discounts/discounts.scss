@@ -24,7 +24,7 @@
 		font-weight: 600;
 		position: relative;
 		padding-top: 4.5rem;
-		color: #777;
+		color: #9b9b9b;
 		white-space: nowrap;
 
 		&:first-child {
@@ -62,7 +62,7 @@
 	// .discounts-progress__item--completed
 
 	&__item--completed {
-		color: #101112;
+		color: #000;
 
 		&:before {
 			background-image: url(../images/icons/discount-check.svg);

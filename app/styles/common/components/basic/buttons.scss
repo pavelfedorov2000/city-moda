@@ -118,7 +118,7 @@ a {
 
 	@media (any-hover: hover) {
 		&:hover {
-			color: $green;
+			color: #9b9b9b;
 		}
 	}
 }
@@ -152,11 +152,11 @@ a {
 	@media (any-hover: hover) {
 		&:hover {
 
-			color: $green;
+			color: $dark;
 
 			svg {
 				path {
-					fill: $green;
+					fill: $dark;
 				}
 			}
 		}

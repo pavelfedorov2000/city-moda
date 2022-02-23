@@ -361,7 +361,7 @@
 	&__title {
 		@extend %text-12;
 		font-weight: 600;
-		color: #505661;
+		//color: #505661;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
 
@@ -482,7 +482,8 @@
 		}
 
 		&::placeholder {
-			color: #C0C0C0;
+			//color: #C0C0C0;
+			color: #9b9b9b;
 		}
 	}
 }

@@ -48,10 +48,10 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 
 				svg path {
-					fill: $green;
+					fill: #9b9b9b;
 				}
 			}
 		}
@@ -118,17 +118,17 @@
 		}
 	}
 
-	// .header__call-descr
-
-	&__call-descr {
-		color: #505661;
-	}
-
 	// .header__whatsup
 
 	&__whatsup {
 		@extend .header__action;
-		color: #479458;
+		color: #4CAF50;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: #4CAF50;
+			}
+		}
 	}
 
 	&__whatsup-icon {
@@ -352,6 +352,12 @@
 
 		&--red {
 			color: $red;
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: $red;
+				}
+			}
 		}
 	}
 }
@@ -363,7 +369,7 @@
 	@extend %text-14;
 
 	&__title {
-		color: #505661;
+		//color: #505661;
 
 		&:not(:last-child) {
 			margin-right: 0.6rem;
@@ -381,7 +387,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 			}
 		}
 
@@ -431,7 +437,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 			}
 		}
 

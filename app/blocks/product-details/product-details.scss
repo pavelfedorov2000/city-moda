@@ -33,7 +33,6 @@
 	&__hide-btn {
 		position: relative;
 		@extend %text-13;
-		color: #505661;
 		padding-right: 2.5rem;
 		text-transform: lowercase;
 		white-space: nowrap;
@@ -41,12 +40,6 @@
 
 		@media(max-width: 500px) {
 			padding-right: 2rem;
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				color: $green;
-			}
 		}
 
 		&:after {
@@ -75,8 +68,13 @@
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		padding: 0.6rem 0;
-		@extend %text-13;
+		@extend %text-14;
 		border-bottom: 0.1rem dashed #EAEAEA;
+
+		@media(max-width: 1024px) {
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+		}
 
 		@media(max-width: 500px) {
 			grid-template-columns: 60% 40%;
@@ -145,11 +143,11 @@
 			&:hover {
 				path {
 					&:nth-child(1) {
-						stroke: $green;
+						stroke: $dark;
 					}
 
 					&:nth-child(2) {
-						fill: $green;
+						fill: $dark;
 					}
 				}
 			}
@@ -171,8 +169,16 @@
 		box-sizing: border-box;
 		box-shadow: 0rem 0.1rem 2.8rem rgba(0, 0, 0, 0.07);
 		border-radius: 0.4rem;
-		@extend %text-10;
 		font-weight: 500;
-		color: #505661;
+		@extend %text-10;
+
+		@media(min-width: 1025px) {
+			font-size: 10px;
+			line-height: 15px;
+		}
+
+		@media(max-width: 500px) {
+			width: 14rem;
+		}
 	}
 }

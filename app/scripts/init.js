@@ -27,28 +27,6 @@ $(document).ready(function () {
     $('.sale-popup__title').text($(this).parent().parent().prev().text());
   });
 
-  // Открытие попапа через 2 мин
-  setTimeout(() => {
-    $.fancybox.open({
-      src: '#discount-popup',
-      type: 'inline',
-    });
-  }, 120000);
-
-  if ($('main').hasClass('auth')) {
-    $('body').addClass('_lock');
-    $('.overlay').show('slow');
-    $('#auth-popup').fadeIn('slow');
-    $('#auth-popup').addClass('active');
-  }
-
-  if ($('main').hasClass('drop-basket-page')) {
-    $('body').addClass('_lock');
-    $('.overlay').show('slow');
-    $('#drop-basket').fadeIn('slow');
-    $('#drop-basket').addClass('active');
-  }
-
   $('a[data-fancybox').on('click', function () {
     $('html').addClass('disable-fix');
   });
@@ -68,23 +46,22 @@ $(document).ready(function () {
   });
   app.validation.init();
   app.burger.init();
-  app.searchForm.init();
-  app.dropBasket.init();
+  //app.searchForm.init();
   app.promoSale.init();
   app.iconsSlider.init();
   app.sliderSections.init();
   app.instagram.init();
   app.catalogCard.init();
   app.asideFilters.init();
-  app.catalogFilters.init();
-  app.sortFilter.init();
+  //app.catalogFilters.init();
+  //app.sortFilter.init();
   app.sizeFilter.init();
   app.pricefilter.init();
   app.productCard.init();
   app.productPopup.init();
   app.productDetails.init();
   app.popup.init();
-  app.regionPopup.init();
+  //app.regionPopup.init();
   app.checkout.init();
   app.blog.init();
   app.otherNews.init();
@@ -92,7 +69,7 @@ $(document).ready(function () {
   app.feedback.init();
   app.pageup.init();
   app.auth.init();
-  app.productSizes.init();
+  //app.productSizes.init();
   if ($('main').hasClass('basket-page')) {
     app.basketTotal.init();
   }

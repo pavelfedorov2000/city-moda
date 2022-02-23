@@ -36,10 +36,6 @@ app.productCard = {
       }
     });
 
-    $('.product-favorite-btn').on('click', function () {
-      $(this).toggleClass('favorite');
-    });
-
     $(".scroll-link").on('click', function () {
       $('.product-card__tab').removeClass('tab--active');
       $('.tabs-content').removeClass('tabs-content--active');

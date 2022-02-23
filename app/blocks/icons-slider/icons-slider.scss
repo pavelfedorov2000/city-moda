@@ -5,6 +5,7 @@
 	&__item {
 		width: 12.8rem;
 		margin-right: 5.2rem;
+		transition: .3s color;
 
 		@media(max-width: 767px) {
 			margin-right: 2.5rem;

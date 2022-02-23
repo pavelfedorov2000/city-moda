@@ -93,6 +93,7 @@
 
 	&__follow-link {
 		@extend %vertical-align;
+		transition: .3s color;
 
 		span {
 			@extend %text-13;
@@ -106,15 +107,19 @@
 		svg {
 			width: 1.2rem;
 			height: 1.2rem;
+
+			path {
+				transition: .3s fill;
+			}
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 
 				svg {
 					path {
-						fill: $green;
+						fill: #9b9b9b;
 					}
 				}
 			}
@@ -179,7 +184,7 @@
 
 	&__delivery-place,
 	&__order-details {
-		color: #777;
+		color: #9b9b9b;
 	}
 
 	&__order-details {
@@ -188,7 +193,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #000;
 			}
 		}
 	}

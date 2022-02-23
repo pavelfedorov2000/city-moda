@@ -27,7 +27,7 @@
 
 	&__link {
 		@extend %text-16;
-		color: #505661;
+		//color: #505661;
 
 		&.active {
 			padding-left: 1.8rem;
@@ -48,7 +48,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 			}
 		}
 	}

@@ -86,13 +86,13 @@
 .date,
 .blog-item-text,
 .tag {
-	color: #777;
+	color: #9b9b9b;
 }
 
 .tag {
 	@media (any-hover: hover) {
 		&:hover {
-			color: $green;
+			color: #000;
 		}
 	}
 }
@@ -107,7 +107,7 @@
 	a {
 		@media (any-hover: hover) {
 			&:hover {
-				color: $green;
+				color: #9b9b9b;
 			}
 		}
 	}
@@ -173,7 +173,13 @@
 	// .blog-item__date
 
 	&__date {
-		@extend %text-13;
+		//@extend %text-13;
+		@extend %text-14;
+
+		@media(max-width: 500px) {
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 0.8rem;
@@ -189,13 +195,25 @@
 	// .blog-item__text
 
 	&__text {
-		@extend %text-14;
+		//@extend %text-14;
+		@extend %text-16;
+
+		@media(max-width: 500px) {
+			font-size: 1.4rem;
+			line-height: 2.1rem;
+		}
 	}
 
 	// .blog-item__tag
 
 	&__tag {
+		//@extend %text-13;
 		@extend %text-13;
+
+		@media(max-width: 500px) {
+			font-size: 1.3rem;
+			line-height: 1.9rem;
+		}
 
 		&:not(:last-child) {
 			margin-right: 1rem;

@@ -1,8 +1,9 @@
 .checkout {
 
 	@media(min-width: 1025px) {
-    width: 85.3rem;
-  }
+		width: 85.3rem;
+	}
+
 	// .checkout__title
 
 	&__title {
@@ -180,7 +181,7 @@
 		dt {
 			float: left;
 			padding-right: 0.3rem;
-			color: #777;
+			color: #9b9b9b;
 		}
 	}
 
@@ -191,7 +192,6 @@
 
 		p {
 			@extend %text-14;
-			color: #505661;
 		}
 	}
 

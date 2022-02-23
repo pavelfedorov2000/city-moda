@@ -64,8 +64,9 @@
 
 	&__list-item {
 		@extend %flex-row;
-		@extend %text-13;
-		color: #505661;
+		//@extend %text-13;
+		@extend %text-14;
+		//color: #505661;
 
 		&:not(:last-child) {
 			margin-bottom: 0.8rem;
@@ -107,15 +108,16 @@
 
 	&__agreement {
 		@extend %text-13;
-		color: #505661;
+		//color: #505661;
 
 		a {
-			color: #101112;
+			//color: #101112;
 			font-weight: 500;
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: $green;
+					//color: $green;
+					color: #9b9b9b;
 				}
 			}
 		}
