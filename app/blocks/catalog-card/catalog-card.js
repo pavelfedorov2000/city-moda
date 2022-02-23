@@ -2,6 +2,7 @@ app.catalogCard = {
     name: 'catalogCard',
     description: 'your script description',
     init() {
+        // Кнопка добавить в избранное
         $('.catalog-card__favorite:not(:disabled)').on('click', function () {
             $(this).toggleClass('favorite');
             $(this).addClass('animated');
