@@ -8,7 +8,6 @@ app.basketTotal = {
 			}
 		});
 
-		//const basketPageBody = document.querySelector('.basket-page__body');
 		const headerHeight = document.querySelector('.header').getBoundingClientRect().height;
 		const basketTotalFixedTable = document.querySelector('.basket-total');
 		const basketPageBody = document.querySelector('.basket-page__body');

@@ -1,289 +1,279 @@
 .fancybox-content {
-	padding: 0;
-	overflow: visible;
+    padding: 0;
+    overflow: visible;
 }
 
 .fancybox-can-swipe .fancybox-content {
-	cursor: default;
+    cursor: default;
 }
 
 .fancybox-toolbar {
-	.fancybox-button {
-		background-color: #fff;
-	}
+    .fancybox-button {
+        background-color: #fff;
+    }
 }
-
-/* .fancybox-infobar,
-.fancybox-toolbar {
-	display: none;
-} */
 
 .fancybox-bg {
-	z-index: 99991;
-	background: #101112;
+    z-index: 99991;
+    background: #101112;
 }
 
 .fancybox-is-open .fancybox-bg {
-	opacity: .8;
+    opacity: 0.8;
 }
 
 .fancybox-slide {
-	padding: 0;
+    padding: 0;
 }
 
 .fancybox-slide--image {
-	.fancybox-content {
-		left: 50%;
-		transform: translate(-50%, -50%) !important;
-		top: 50%;
-	}
+    .fancybox-content {
+        left: 50%;
+        transform: translate(-50%, -50%) !important;
+        top: 50%;
+    }
 }
 
 .fancybox-slide--video .fancybox-content {
-	@media(min-width: 1025px) {
-		width: 67rem !important;
-	}
+    @media (min-width: 1025px) {
+        width: 67rem !important;
+    }
 }
 
 .fancybox-slide--html {
-	@media(max-width: 500px) {
-		padding: 0;
-	}
+    @media (max-width: 500px) {
+        padding: 0;
+    }
 
-	.fancybox-close-small {
-		top: 0;
-		right: -3.2rem - 1.5rem;
-		z-index: 99995;
-		padding: 0;
-		width: 3.2rem;
-		height: 3.2rem;
-		opacity: 1;
+    .fancybox-close-small {
+        top: 0;
+        right: -3.2rem - 1.5rem;
+        z-index: 99995;
+        padding: 0;
+        width: 3.2rem;
+        height: 3.2rem;
+        opacity: 1;
 
-		@media(max-width: 1024px) {
-			top: 2rem;
-			right: 2rem;
-		}
+        @media (max-width: 1024px) {
+            top: 2rem;
+            right: 2rem;
+        }
 
-		svg {
-			path {
-				width: 100%;
-				height: 100%;
-				fill: #F4F4F6;
-				transition: .3s fill;
+        svg {
+            path {
+                width: 100%;
+                height: 100%;
+                fill: #f4f4f6;
+                transition: 0.3s fill;
 
-				@media (any-hover: hover) {
-					&:hover {
-						fill: $red;
-					}
-				}
+                @media (any-hover: hover) {
+                    &:hover {
+                        fill: $red;
+                    }
+                }
 
-				@media(max-width: 1024px) {
-					fill: #101112;
-				}
-			}
-		}
-	}
+                @media (max-width: 1024px) {
+                    fill: #101112;
+                }
+            }
+        }
+    }
 }
 
 .fancybox-button {
+    width: 4.4rem;
+    height: 4.4rem;
 
-	width: 4.4rem;
-	height: 4.4rem;
+    svg {
+        width: 3.2rem;
+        height: 3.2rem;
 
-	svg {
-		width: 3.2rem;
-		height: 3.2rem;
-
-		path {
-			fill: #101112;
-		}
-	}
+        path {
+            fill: #101112;
+        }
+    }
 }
 
 .fancybox-navigation .fancybox-button {
-	width: 4.2rem;
-	height: 4.2rem;
-	border-radius: 50%;
-	background: #fff;
-	opacity: 1;
-	transition: .3s background-color;
+    width: 4.2rem;
+    height: 4.2rem;
+    border-radius: 50%;
+    background: #fff;
+    opacity: 1;
+    transition: 0.3s background-color;
 
-	div {
-		padding: 0;
-		@extend %flex-center;
-	}
+    div {
+        padding: 0;
+        @extend %flex-center;
+    }
 
-	&--arrow {
+    &--arrow {
+        &_left {
+            left: calc((100vw - 64rem) / 2 - 6rem);
+            padding: 0;
+        }
 
-		&_left {
-			left: calc((100vw - 64rem) / 2 - 6rem);
-			padding: 0;
-		}
-
-		&_right {
-			right: calc((100vw - 64rem) / 2 - 6rem);
-			padding: 0;
-		}
-	}
+        &_right {
+            right: calc((100vw - 64rem) / 2 - 6rem);
+            padding: 0;
+        }
+    }
 }
 
 .popup {
+    background-color: #fff;
 
-	background-color: #fff;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -1.5rem;
 
-	&__close {
-		position: absolute;
-		top: 0;
-		right: -1.5rem;
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
 
-		svg {
-			width: 3.2rem;
-			height: 3.2rem;
+            path {
+                transition: 0.3s fill;
+            }
+        }
 
-			path {
-				transition: .3s fill;
-			}
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				svg path {
-					fill: $red;
-				}
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    fill: $red;
+                }
+            }
+        }
+    }
 }
 
 .mini-popup {
+    @media (min-width: 1025px) {
+        width: 76.8rem !important;
+    }
 
-	@media(min-width: 1025px) {
-		width: 76.8rem !important;
-	}
+    @media (max-width: 1024px) {
+        width: calc(100vw - 3.2rem);
+    }
 
-	@media(max-width: 1024px) {
-		width: calc(100vw - 3.2rem);
-	}
+    @media (max-width: 500px) {
+        width: 100vw;
+        min-height: 100vh;
+    }
 
-	@media(max-width: 500px) {
-		width: 100vw;
-		min-height: 100vh;
-	}
+    // .mini-popup__inner
 
-	// .mini-popup__inner
+    &__inner {
+        display: grid;
 
-	&__inner {
-		display: grid;
+        @media (min-width: 768px) {
+            grid-template-columns: 33rem 1fr;
+        }
 
-		@media(min-width: 768px) {
-			grid-template-columns: 33rem 1fr;
-		}
+        @media (max-width: 767px) {
+            grid-template-rows: 25rem auto;
+        }
+    }
 
-		@media(max-width: 767px) {
-			grid-template-rows: 25rem auto;
-		}
-	}
+    &__img {
+        img {
+            @extend %cover;
+        }
+    }
 
-	&__img {
-		img {
-			@extend %cover;
-		}
-	}
+    // .mini-popup__content
 
-	// .mini-popup__content
+    &__content {
+        padding: 7rem 5.1rem;
 
-	&__content {
-		padding: 7rem 5.1rem;
+        @media (max-width: 1024px) {
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
 
-		@media(max-width: 1024px) {
-			padding-left: 3rem;
-			padding-right: 3rem;
-		}
+        @media (max-width: 767px) {
+            padding: 3rem 1.6rem;
+        }
+    }
 
-		@media(max-width: 767px) {
-			padding: 3rem 1.6rem;
-		}
-	}
+    &__top {
+        &:not(:last-child) {
+            margin-bottom: 3.5rem;
+        }
+    }
 
-	&__top {
-		&:not(:last-child) {
-			margin-bottom: 3.5rem;
-		}
-	}
+    // .mini-popup__title
 
-	// .mini-popup__title
+    &__title {
+        @extend %text-25;
+        font-weight: 500;
 
-	&__title {
-		@extend %text-25;
-		font-weight: 500;
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+    }
 
-		&:not(:last-child) {
-			margin-bottom: 0.8rem;
-		}
-	}
+    // .mini-popup__subtitle
 
-	// .mini-popup__subtitle
+    &__subtitle {
+        @extend %text-16;
+        color: #777;
 
-	&__subtitle {
-		@extend %text-16;
-		color: #777;
+        &:not(:last-child) {
+            margin-bottom: 3.6rem;
 
-		&:not(:last-child) {
-			margin-bottom: 3.6rem;
-
-			@media(max-width: 500px) {
-				margin-bottom: 2.5rem;
-			}
-		}
-	}
+            @media (max-width: 500px) {
+                margin-bottom: 2.5rem;
+            }
+        }
+    }
 }
 
 .about-product {
+    // .about-product__title
 
-	// .about-product__title
+    &__title {
+        @extend %text-16;
+        font-weight: 600;
+        margin-bottom: 0.8rem;
+    }
 
-	&__title {
-		@extend %text-16;
-		font-weight: 600;
-		margin-bottom: 0.8rem;
-	}
+    // .about-product__list
 
-	// .about-product__list
+    &__list {
+        @extend %text-13;
 
-	&__list {
-		@extend %text-13;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
 
-		&:not(:last-child) {
-			margin-bottom: 1rem;
-		}
+        div {
+            &:not(:last-child) {
+                margin-bottom: 0.4rem;
+            }
 
-		div {
-			&:not(:last-child) {
-				margin-bottom: 0.4rem;
-			}
-
-			dt {
-				color: #505661;
-				padding-right: 0.3rem;
-			}
-		}
-	}
+            dt {
+                color: #505661;
+                padding-right: 0.3rem;
+            }
+        }
+    }
 }
 
 #password-change {
-	padding: 6rem;
+    padding: 6rem;
 
-	@media(max-width: 767px) {
-		width: calc(100vw - 3.2rem);
-		padding-left: 3rem;
-		padding-right: 3rem;
-	}
+    @media (max-width: 767px) {
+        width: calc(100vw - 3.2rem);
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
 
-	@media(min-width: 768px) {
-		width: 42rem !important;
-	}
+    @media (min-width: 768px) {
+        width: 42rem !important;
+    }
 
-	@media(min-width: 1025px) {
-		width: 42rem !important;
-	}
+    @media (min-width: 1025px) {
+        width: 42rem !important;
+    }
 }
