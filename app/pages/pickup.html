@@ -1,4 +1,4 @@
-@@include("blocks/head/head.html", {"title": "Разводящая"})
+@@include("blocks/head/head.html", {"title": "Попап Выбор пункта самовывоза"})
 <div class="wrapper">
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
@@ -36,3 +36,11 @@
 </div>
 @@include("blocks/pickup-popup/pickup-popup.html")
 @@include("blocks/link/link.html")
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+	$.fancybox.open({
+		src: '#pickup-popup',
+		type: 'inline',
+	});
+
+</script>

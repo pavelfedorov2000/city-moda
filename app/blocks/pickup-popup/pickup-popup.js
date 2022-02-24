@@ -1,4 +1,4 @@
-/* app.pickupPopup = {
+app.pickupPopup = {
   name: 'pickupPopup',
   description: 'your script description',
   init() {
@@ -148,4 +148,3 @@
     }
   },
 };
- */

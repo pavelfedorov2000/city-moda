@@ -6,7 +6,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<!--Page Title-->
-	<title>Разводящая</title>
+	<title>Попап Выбор пункта самовывоза</title>
 	<!--SEO-->
 	<meta name="description" content="Description">
 	<meta name="keywords" content="keyword1, keyword2">
@@ -1452,7 +1452,7 @@
 									<span class="check-text">Оплата картой</span>
 								</span>
 							</label>
-							<button class="pickup-filters__item-remove" type="reset">
+							<button class="pickup-filters__item-remove" type="button">
 								<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10 1L9 0L5 4L1 0L0 1L4 5L0 9L1 10L5 6L9 10L10 9L6 5L10 1Z" fill="white" />
 								</svg>
@@ -1608,10 +1608,16 @@
 	<script src="./assets/libs/js/jquery.validate.min.js"></script>
 	<script src="./assets/libs/js/jquery.maskedinput.js"></script>
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
-	<script src="./assets/libs/js/wow.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 	<script src="./assets/scripts/for-view.js"></script>
 </body>
 
 </html>
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+<script>
+	$.fancybox.open({
+		src: '#pickup-popup',
+		type: 'inline',
+	});
+</script>

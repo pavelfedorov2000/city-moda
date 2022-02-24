@@ -927,7 +927,6 @@
 			<div class="_progress">
 				<div class="_progress__inner">
 					<a href="home.html" class="_progress__link" target="_blank">Главная</a>
-					<a href="discount-popup.html" class="_progress__link" target="_blank">Попап скидка</a>
 					<a href="catalog.html" class="_progress__link" target="_blank">Каталог</a>
 					<a href="favorite.html" class="_progress__link" target="_blank">Избранные товары</a>
 					<a href="search-results.html" class="_progress__link" target="_blank">Результаты поиска</a>
@@ -938,6 +937,7 @@
 					<a href="order-success.html" class="_progress__link" target="_blank">Заказ успешно отправлен</a>
 					<a href="drop-basket.html" class="_progress__link" target="_blank">Выезжающая корзина</a>
 					<a href="drop-basket-empty.html" class="_progress__link" target="_blank">Выезжающая корзина пустая</a>
+					<a href="auth.html" class="_progress__link" target="_blank">Авторизация</a>
 					<a href="brands.html" class="_progress__link" target="_blank">Бренды</a>
 					<a href="blog.html" class="_progress__link" target="_blank">Блог</a>
 					<a href="blog-text.html" class="_progress__link" target="_blank">Блог текстовая</a>
@@ -948,13 +948,20 @@
 					<a href="discounts.html" class="_progress__link" target="_blank">Профиль - скидки</a>
 					<a href="subscribes.html" class="_progress__link" target="_blank">Профиль - управление подписками</a>
 					<a href="personal.html" class="_progress__link" target="_blank">Профиль - персональные данные</a>
-					<a href="auth.html" class="_progress__link" target="_blank">Авторизация</a>
 					<a href="faq.html" class="_progress__link" target="_blank">FAQ / Часто задаваемые вопросы</a>
 					<a href="delivery.html" class="_progress__link" target="_blank">Доставка и оплата</a>
 					<a href="about-company.html" class="_progress__link" target="_blank">О компании</a>
 					<a href="contacts.html" class="_progress__link" target="_blank">Контакты</a>
 					<a href="feedback.html" class="_progress__link" target="_blank">Обратная связь</a>
 					<a href="search-shops.html" class="_progress__link" target="_blank">Поиск магазинов</a>
+					<a href="discount-popup.html" class="_progress__link" target="_blank">Попап скидка</a>
+					<a href="region-popup.html" class="_progress__link" target="_blank">Попап выбор региона</a>
+					<a href="size-subscribe.html" class="_progress__link" target="_blank">Попап подписаться на
+						размер</a>
+					<a href="password-change.html" class="_progress__link" target="_blank">Попап изменение пароля</a>
+					<a href="product-sizes.html" class="_progress__link" target="_blank">Попап таблица размеров</a>
+					<a href="pickup.html" class="_progress__link" target="_blank">Попап выбор пункта самовывоза (если
+						понадобится)</a>
 				</div>
 			</div>
 		</main>
@@ -1485,6 +1492,8 @@
 									<input class="radio-box" type="radio" name="city">
 									<span class="radio-text">г. Санкт-Петербург</span>
 								</label>
+							</div>
+							<div class="region-popup__cities-col">
 								<label class="region-popup__city">
 									<input class="radio-box" type="radio" name="city">
 									<span class="radio-text">г. Москва</span>
@@ -1500,33 +1509,12 @@
 			</div>
 		</div>
 		<!-- End Попап Где вы находитесь? -->
-		<!-- Попап Изменение пароля -->
-		<div style="display: none;" id="password-change" class="popup password-change">
-			<div class="password-change__title">Изменение пароля</div>
-			<form action="#" class="password-change__form">
-				<div class="input-wrap">
-					<input id="password" class="input" type="password" name="current_password" placeholder="Введите ваш текущий пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input id="new_password" class="input" type="password" name="new_password" placeholder="Введите новый пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input class="input" type="password" name="repeat_new_password" placeholder="Повторите пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<button class="btn password-change__form-btn" type="submit" disabled>Сохранить новый пароль</button>
-			</form>
-		</div>
-		<!-- End Попап Изменение пароля -->
 	</div>
 	<script src="./assets/libs/js/jquery.min.js"></script>
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>
 	<script src="./assets/libs/js/jquery.validate.min.js"></script>
 	<script src="./assets/libs/js/jquery.maskedinput.js"></script>
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
-	<script src="./assets/libs/js/wow.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="./assets/scripts/app.min.js"></script>
 	<script src="./assets/scripts/for-view.js"></script>
