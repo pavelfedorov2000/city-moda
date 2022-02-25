@@ -20,7 +20,7 @@ export const styles = (cb) => {
     .pipe(group_media())
     .pipe(gulpif(config.isDev, sourcemaps.init()))
     .pipe(sassGlob())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass({ includePaths: ['./node_modules'] }).on('error', sass.logError))
     .pipe(postcss([autoprefixer()]))
     .pipe(gulpif(config.isProd, cleanCSS({
       level: 2,
