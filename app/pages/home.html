@@ -1,412 +1,355 @@
-<!DOCTYPE html>
-<html class="no-js" lang="zxx">
+@@include("blocks/head/head.html", {"title": "Главная"})
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page home-page">
+		@@include("blocks/promo-sale/promo-sale.html")
+		@@include("blocks/icons-slider/icons-slider.html")
+		<section class="section slider-section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Популярные товары</h2>
+					<div class="slider-arrows">
+						<div class="popular-goods-slider-arrow-prev">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+						<div class="popular-goods-slider-arrow-next">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper popular-goods-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01",
+							"alt": "Пуховик",
+							"title": "Пуховик",
+							"subtitle": "Rio Verti",
+							"newprice": "23 625 ₽",
+							"oldprice": "31 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02",
+							"alt": "Джемпер",
+							"title": "Джемпер",
+							"subtitle": "Loriata",
+							"price": "12 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03",
+							"alt": "Юбка",
+							"title": "Юбка",
+							"subtitle": "Loriata",
+							"newprice": "5 000 ₽",
+							"oldprice": "8 200 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "40%",
+							"image": "assets/images/content/catalog-slider/04",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Rio Verti",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02",
+							"alt": "Джемпер",
+							"title": "Джемпер",
+							"subtitle": "Loriata",
+							"price": "12 500 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"discount": "40%",
+							"image": "assets/images/content/catalog-slider/04",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Rio Verti",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							})
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include("blocks/actual/actual.html")
+		@@include("blocks/brands/brands.html")
+		<section class="section slider-section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Новинки</h2>
+					<div class="slider-arrows">
+						<div class="catalog-new-slider-arrow-prev">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+						<div class="catalog-new-slider-arrow-next">
+							<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path
+									d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+									fill="#C0C0C0" />
+							</svg>
+						</div>
+					</div>
+				</div>
+				<div class="swiper catalog-new-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/04",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/04",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/03",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/02",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+						<div class="swiper-slide">
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"discount": "25%",
+							"image": "assets/images/content/catalog-slider/01",
+							"alt": "Пальто",
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "37 400 ₽",
+							})
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		@@include("blocks/promo-collection/promo-collection.html")
+		<section class="section blog-section">
+			<div class="container">
+				<div class="section__title">
+					<h2 class="title">Блог</h2>
+					<a href="#" class="all-link">
+						Смотреть все
+						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
+								fill="#C0C0C0" />
+						</svg>
+					</a>
+				</div>
+				<div class="blog-grid">
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow"
+						data-wow-duration="1.5s">
+						<a href="#" class="blog-item__img">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/01.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/01.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="724" height="336">
+							</picture>
+						</a>
+						<div class="blog-item__content">
+							<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a>
+							</h5>
+							<p class="blog-item-text blog-item__text">
+								Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
+								Отличная
+								теплоизоляция достигается благодаря наполнителю 90% пуха.
+							</p>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#женщинам</a>
+								<a href="#" class="tag blog-item__tag">#осень</a>
+							</div>
+						</div>
+					</article>
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
+						data-wow-duration="1.5s" data-wow-delay=".5s">
+						<a href="#" class="blog-item__img">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/02.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/02.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
+							</picture>
+						</a>
+						<div class="blog-item__content">
+							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
+									2021</a></h5>
+							<p class="blog-item-text blog-item__text">
+								Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
+								о
+								первом снеге.
+								Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+							</p>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#детям</a>
+							</div>
+						</div>
+					</article>
+					<article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
+						data-wow-duration="1.5s" data-wow-delay="1s">
+						<a href=" #" class="blog-item__img">
+							<picture>
+								<source type="image/webp" data-srcset="assets/images/content/blog/03.webp"
+									srcset="assets/images/src.webp">
+								<img class="lazy" data-src="assets/images/content/blog/03.jpg"
+									src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
+							</picture>
+						</a>
+						<div class="blog-item__content">
+							<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
+							<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже
+									поступили в
+									продажу!</a>
+							</h5>
+							<p class="blog-item-text blog-item__text">
+								Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+								дел.
+							</p>
+							<div class="tags">
+								<a href="#" class="tag blog-item__tag">#коллекция</a>
+								<a href="#" class="tag blog-item__tag">#женщинам</a>
+							</div>
+						</div>
+					</article>
+				</div>
+			</div>
+		</section>
+		@@include("blocks/instagram/instagram.html")
 
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<!--Page Title-->
-	<title>@@if(!context.title){Page Title}@@if(context.title){@@title}</title>
-	<!--SEO-->
-	<meta name="description" content="Description">
-	<meta name="keywords" content="keyword1, keyword2">
-	<!--Additional meta tags-->
-	<meta name="msthemecompatible" content="no">
-	<meta name="HandheldFriendly" content="True">
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-	<meta name="format-detection" content="telephone=no">
-	<meta name="format-detection" content="address=no">
-	<!--Favicons-->
-	<link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="./favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="./favicons/favicon-16x16.png">
-	<link rel="manifest" href="./favicons/site.webmanifest">
-	<link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#5bbad5">
-	<link rel="shortcut icon" href="./favicons/favicon.ico">
-	<meta name="msapplication-TileColor" content="#da532c">
-	<meta name="msapplication-config" content="./favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,500;0,600;1,400&display=swap"
-		rel="stylesheet">
-	<!--Styles-->
-  <style>@charset "UTF-8";*{box-sizing:inherit;margin:0;padding:0}:after,:before{box-sizing:inherit}body{font-size:100%;line-height:1;-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased}:active,:focus,:hover{outline:0}button,input{line-height:normal}button{text-transform:none}button{-webkit-appearance:button}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}button,input{background-image:none}input{border-radius:0;box-shadow:none}button,input[type=email],input[type=number],input[type=password],input[type=text]{border-radius:0;-webkit-appearance:none;-moz-appearance:none;appearance:none}button::-ms-clear,button::-ms-reveal,input[type=email]::-ms-clear,input[type=email]::-ms-reveal,input[type=number]::-ms-clear,input[type=number]::-ms-reveal,input[type=password]::-ms-clear,input[type=password]::-ms-reveal,input[type=text]::-ms-clear,input[type=text]::-ms-reveal{display:none}table{border-collapse:collapse;border-spacing:0;width:100%;text-align:center;overflow-x:auto}h2,h3,h4,h5,h6,p{margin:0}h2,h3,h4,h5,h6{font-size:inherit}li,ul{list-style-type:none;margin:0;padding:0}dd,dl,dt{margin:0;padding:0}a{text-decoration:none;color:inherit}button,input{margin:0;background-color:transparent;border:none;outline:0;padding:0}input{resize:none}.basket-product__old-price,.form-agree .check-text,.help-search__item,.popup-link,.product-popup__old-price,.remind-password,.search-form__input{font-size:1.2rem;line-height:1.8rem}.about-product__list,.basket-product__btn,.drop-menu__list-link,.header-info-line,.input,.product-card-form__title,.product-links__item-subtitle,.product-list,.region-popup__city .radio-text,table tbody tr td{font-size:1.3rem;line-height:1.9rem}.aside-popup__form-btn,.aside-popup__link-btn,.aside-popup__social-title,.aside-popup__text,.btn,.burger-menu__list,.check-text,.counter__input,.drop-menu__col-title,.form-row__input,.header__contact,.header__shops-search,.how-define-size__content p,.label,.password-change__form-btn,.product-card-form__btn,.product-links__item-title,.product-popup__more-link,.radio-text,.region-header,.region-popup__input,table th{font-size:1.4rem;line-height:2.1rem}.about-product__title,.basket-product__price,.drop-basket__btn,.drop-basket__empty,.drop-basket__total,.header__action,.header__call-link,.header__main,.header__nav-link,.header__shops-search,.header__whatsup,.icons-slider__item-title,.mini-popup__subtitle,.new-price,.product-sizes-popup__subtitle,.product-title,.sale-item__descr,.tab{font-size:1.6rem;line-height:2.4rem}.how-define-size__title,.product-popup__title,.sale-item__title{font-size:2rem;line-height:3rem}.aside-popup__title,.mini-popup__title,.password-change__title{font-size:2.5rem;line-height:3.7rem}.product-sizes-popup__title,.title{font-size:3.5rem;line-height:4.5rem}.sale-item__discount{font-size:4rem;line-height:130%}@media (max-width:1024px){.sale-item__discount{font-size:3.6rem}}@media (max-width:500px){.sale-item__discount{font-size:2.4rem}}.basket-product__btn,.basket-product__price,.btn,.counter__btn,.counter__input,.drop-basket__btn,.form-row__input,.header__action,.header__call-link,.header__shops-search,.header__whatsup,.icons-slider__item-img,.label,.logo__link,.pageup,.product-popup__more-link,.product-popup__slider .swiper-button-next,.product-popup__slider .swiper-button-prev,.product-sizes__item .radio-text,.social__link{display:flex;align-items:center}.btn,.counter__input,.drop-basket__btn,.icons-slider__item-img,.label,.pageup,.product-popup__more-link,.product-popup__slider .swiper-button-next,.product-popup__slider .swiper-button-prev,.product-sizes__item .radio-text,.social__link{justify-content:center}.aside-popup__form-wrap,.counter,.drop-basket__product-wrap,.drop-basket__total,.header-info-line__inner,.header__main-top,.header__top-inner,.section__title{display:flex;justify-content:space-between}.aside-popup__form-wrap,.counter,.header-info-line__inner,.header__main-top,.header__top-inner,.section__title{align-items:center}.drop-basket__body,.drop-basket__inner,.promo-sale__slider .swiper-slide,.wrapper{display:flex;flex-direction:column}.header-info-line__close,.product-popup__slider .swiper-button-next,.product-popup__slider .swiper-button-prev{top:50%;transform:translateY(-50%)}.form-row__btn:before{top:50%;left:50%;transform:translate(-50%,-50%)}.basket-product__img img,.mini-popup__img img,.product-popup__slider-item img,.sale-item__img img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}.pass-btn{background-size:cover;background-position:center;background-repeat:no-repeat}.burger-menu__list-item span:after,.form-row__btn:before,.header__search-btn,.region-header__value:after{background-size:contain;background-position:center;background-repeat:no-repeat}.no-js-warning{position:fixed;z-index:99999;width:100%;padding:15px 20px;color:red;font-size:20px;background:rgba(255,0,0,.5)}html{font-family:sans-serif;word-break:break-word;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%;-webkit-focus-ring-color:rgba(255,255,255,0);box-sizing:border-box;font-size:.5208333333vw;overflow-x:hidden;margin-right:calc(-1 * (100vw - 100%))}@media (max-width:1440px){html{font-size:.6944444444vw}}@media (max-width:1024px){html{font-size:1.3020833333vw}}body{min-width:320px;font-family:Raleway,sans-serif;font-style:normal;font-weight:400;font-feature-settings:"pnum" on,"lnum" on;color:#000}button,input{font-family:Raleway,sans-serif;font-feature-settings:"pnum" on,"lnum" on}dt{float:left}.wrapper{position:relative;overflow-x:hidden;min-height:100vh}.page{position:relative;flex:1 0 auto;padding-bottom:11rem}@media (max-width:1024px){.page{padding-bottom:0}}@media (max-width:767px){html{font-size:2vw}.page{padding-top:2.4rem}}@media (max-width:500px){html{font-size:2.7777777778vw}.page{padding-bottom:3rem}}.home-page{padding-top:1.5rem}.home-page>:first-child{padding-bottom:7rem}.section{padding-bottom:8rem}@media (max-width:500px){.section{padding-bottom:5rem}}.section__title:not(:last-child){margin-bottom:3rem}.container{max-width:153.2rem;padding:0 1.6rem;margin:0 auto}img{max-width:100%;height:auto;vertical-align:top;border:none}img[data-src]{display:block;min-height:1px}.logo__img{height:3.1rem;-o-object-fit:contain;object-fit:contain}.prices{display:flex;align-items:flex-end}.new-price{color:#e33;font-weight:600}.old-price{font-weight:500;color:#9b9b9b;text-decoration:line-through}table th{font-weight:400;color:#9b9b9b;white-space:nowrap;padding:2.4rem 1.25rem 0}table tbody tr:nth-child(even){background-color:#f4f4f6}table tbody tr td{padding:2.1rem 0}table tbody tr td b{font-weight:600}.btn{background-color:#479458;color:#fff;text-align:center}.btn[disabled]{background-color:#eaeaea;border:none}.btn svg{width:1.6rem;height:1.6rem;margin-right:.8rem}.btn--border{border:.1rem solid #101112;background-color:transparent;color:#101112}.btn--border svg{width:2rem;height:2rem}.popup-link{line-height:1.4rem;font-style:italic;text-decoration:underline}.title{font-weight:500}@media (max-width:1024px){.title{font-size:2.4rem;line-height:2.9rem}}.tabs{display:flex}.tab{position:relative}.tab:after{content:"";position:absolute;left:0;bottom:0;width:0%;height:.2rem;background-color:#479458}.tab--active{font-weight:600;color:#479458}.tab--active:after{width:100%}.tabs-content{display:none}.tabs-content--active{display:block}.social{display:flex}.social__item{flex-shrink:0}.social__link{width:100%;height:100%}.slider-arrows{display:flex}.swiper-button-next:after,.swiper-button-prev:after{content:""}.promo-sale .swiper-button-next,.promo-sale .swiper-button-prev{position:static;width:auto;height:auto;margin-top:0}.promo-sale .swiper-button-next svg,.promo-sale .swiper-button-prev svg{width:5.6rem;height:1.6rem}@media (max-width:500px){.promo-sale .swiper-button-next svg,.promo-sale .swiper-button-prev svg{width:5rem;height:1rem}}.product-popup__slider .swiper-button-next,.product-popup__slider .swiper-button-prev{width:4.2rem;height:4.2rem;border-radius:50%;background-color:#fff}.product-popup__slider .swiper-button-next svg,.product-popup__slider .swiper-button-prev svg{width:2.8rem;height:2.8rem}.swiper-button-next{margin-bottom:0}@media (min-width:501px){.swiper-button-next{margin-left:1.2rem}}.form-row{position:relative;display:flex;flex-wrap:wrap}.form-row__input{width:100%;height:5.2rem;border:.1rem solid #101112;border-right:none;padding:0 6.8rem 0 1.6rem}.form-row__input::-moz-placeholder{color:#9b9b9b}.form-row__input:-ms-input-placeholder{color:#9b9b9b}.form-row__btn{position:absolute;top:0;right:0;width:5.2rem;height:5.2rem;background-color:#101112;border:.1rem solid #101112}.form-row__btn:before{content:"";position:absolute;width:2.3rem;height:1.6rem;background-image:url(../images/icons/submit-arr.svg)}.form-agree{display:flex;align-items:flex-start}.form-agree .check-style{width:2rem;height:2rem}.form-agree .check-text{margin-left:1rem}.subscribe-form__wrap:not(:last-child){margin-bottom:1.4rem}.subscribe-form .form-agree{flex-wrap:wrap}.subscribe-form .form-agree .check-text{max-width:calc(100% - 3rem)}.input-wrap{position:relative}.input-wrap .input{width:100%}.input{border:.1rem solid silver;padding:1.4rem}.input::-moz-placeholder{color:#777}.input:-ms-input-placeholder{color:#777}.pass-btn{position:absolute;top:1.2rem;right:1.2rem;width:2.4rem;height:2.4rem}.pass-btn.show{background-image:url(../images/icons/hidden.svg)}input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none}input[type=number]::-webkit-outer-spin-button{-webkit-appearance:none}input[type=number]{-moz-appearance:textfield}.check-box{width:1px;height:1px;overflow:hidden;position:absolute;clip:rect(0 0 0 0)}.check-style{position:relative;width:1.6rem;height:1.6rem;flex-shrink:0;border:.1rem solid #101112}.check-text a{text-decoration:underline}.radio-box{width:1px;height:1px;overflow:hidden;position:absolute;clip:rect(0 0 0 0)}#auth-popup{padding:5rem}#login-enter{display:none}.remind-password{color:#9b9b9b;text-decoration:underline}.aside-popup{position:absolute;top:0;right:-100%;opacity:0;visibility:hidden;bottom:0;height:100vh;overflow-x:hidden;width:51.5rem;background-color:#fff;overflow-y:auto}.aside-popup::-webkit-scrollbar{width:.5rem;border-radius:.4rem}.aside-popup::-webkit-scrollbar-thumb{background:silver;border-radius:.4rem}.aside-popup--basket{padding-bottom:0}@media (max-width:767px){#auth-popup{padding-left:3rem;padding-right:3rem}.aside-popup{width:100%;right:-100%}}.aside-popup__close{position:absolute;top:2rem;right:2rem;z-index:20;width:3.2rem;height:3.2rem}.aside-popup__title{font-weight:500}.aside-popup__title:not(:last-child){margin-bottom:3rem}.aside-popup__tabs:not(:last-child),.aside-popup__text:not(:last-child){margin-bottom:4rem}.aside-popup__tab{padding-bottom:.9rem}.aside-popup__tab:not(:last-child){margin-right:4rem}@media (min-width:768px){.aside-popup__content{width:30rem}}.aside-popup__body:not(:last-child){padding-bottom:3rem}.aside-popup__form:not(:last-child){margin-bottom:4rem}.aside-popup__form-inputs{display:grid;grid-gap:1.5rem}.aside-popup__form-inputs:not(:last-child){margin-bottom:2rem}.aside-popup__form-wrap:not(:last-child){margin-bottom:3rem}.aside-popup__form-wrap .form-agree{align-items:center}.aside-popup__form-wrap .check-text{margin-left:.8rem}.aside-popup__form-btn{font-weight:600;padding:1.3rem;width:100%}.aside-popup__link-btn{font-weight:500;color:#479458}.aside-popup__social{padding-top:3rem;border-top:.1rem solid #ccc}.aside-popup__social-title{font-weight:500}.aside-popup__social-title:not(:last-child){margin-bottom:1.6rem}.aside-popup__social-item svg{width:4rem;height:4rem}.aside-popup__social-item:not(:last-child){margin-right:2rem}.basket-table__title:nth-child(1){grid-area:title-1}.basket-table__title:nth-child(2){grid-area:title-2}.basket-table__title:nth-child(3){grid-area:title-3}.basket-product{display:grid}.basket-product__img{grid-area:image}.basket-product__title{grid-area:title}.basket-product__list{grid-area:list}.basket-product__buttons{display:flex;grid-area:buttons}.basket-product__btn svg{width:1rem;height:1rem;margin-right:.4rem}.basket-product__btn:not(:last-child){margin-right:2.8rem}.basket-product__counter{grid-area:counter}.basket-product__prices{grid-area:prices}@media (min-width:768px){.basket-product__prices-wrap{display:flex;align-items:flex-end}}.basket-product__price{font-weight:600;height:100%}.basket-product__old-price{margin-right:.8rem}.counter__btn{position:relative;width:1rem;height:1rem}.counter__btn svg{width:1rem}.counter__input{font-family:Raleway,sans-serif;text-align:center;font-weight:500;width:4.7rem;padding:0 .5rem}.minus-btn svg{height:.2rem}.plus-btn svg{height:1rem}.burger-btn{display:none}@media (max-width:1024px){.burger-btn{display:block;width:2rem;height:2rem}}.burger-menu{display:none}@media (max-width:1024px){.burger-menu{display:block;position:absolute;top:0;left:-100%;z-index:101;width:92.7777777778%;height:100vh;padding:2.5rem 1.6rem 7.5rem;background-color:#fff;box-shadow:0 .4rem 2rem rgba(0,0,0,.25);overflow:auto}.burger-menu .header__nav{margin-top:0}}.burger-menu__top{display:grid;grid-template-columns:2rem auto;grid-gap:2rem;align-items:flex-start;margin-bottom:3rem}.burger-menu__list{margin-bottom:4rem}.burger-menu__list>:last-child{padding-right:0}.burger-menu__list>:last-child:after{display:none}.burger-menu__sublist{display:none;padding-left:1.4rem;margin-top:2.4rem}.burger-menu__list-item{font-weight:500}.burger-menu__list-item span{position:relative;padding-right:2rem}.burger-menu__list-item span:after{content:"";position:absolute;top:.2rem;right:0;width:1.4rem;height:1.5rem;background-image:url(../images/icons/drop.svg)}.burger-menu__list-item:not(:last-child){margin-bottom:2.4rem}.burger-menu__list-link{color:#101112}.burger-menu__list-link--red{color:#e33;font-weight:500}.burger-menu__bottom>:not(:last-child){margin-bottom:2.4rem}.label{font-weight:600;color:#fff;width:4.5rem;height:4.5rem;border-radius:50%}.label--discount{background-color:#e33}.label--new{background-color:#479458}.catalog-card__label{left:1.5rem;display:none}.catalog-card__label{position:absolute;top:1.5rem;z-index:10}.drop-basket__body{height:100vh}.drop-basket__inner{flex-grow:1;padding:5rem 5rem 4rem;position:relative}@media (max-width:500px){.drop-basket__inner{padding-left:1.6rem;padding-right:1.6rem}}.drop-basket__empty{display:none;color:#9b9b9b;text-align:center;justify-self:center;flex-grow:1}.drop-basket__products{flex-grow:1;margin-bottom:5rem}.drop-basket__product{-moz-column-gap:1.5rem;column-gap:1.5rem;padding-bottom:1.7rem;border-bottom:.1rem solid #efefef;grid-template-areas:"image title" "image ." "image list" "image ." "image bottom";grid-template-columns:11rem auto;grid-template-rows:-webkit-max-content 1.4rem -webkit-max-content .2rem -webkit-max-content;grid-template-rows:max-content 1.4rem max-content .2rem max-content}@media (max-width:767px){.drop-basket__product{grid-template-areas:"image title" "image ." "image list" "bottom bottom";grid-template-columns:11rem auto;grid-template-rows:-webkit-max-content 1.4rem -webkit-max-content -webkit-max-content;grid-template-rows:max-content 1.4rem max-content max-content}}.drop-basket__product:not(:last-child){margin-bottom:2.6rem}.drop-basket__product-wrap{grid-area:bottom;align-items:flex-end}.drop-basket__product-prices{flex-direction:column;text-align:right}.drop-basket__product-price{align-items:flex-end}.drop-basket__total{font-weight:600}.drop-basket__btn{position:relative;padding:2rem;font-weight:600}.drop-basket__btn svg{width:5.6rem;height:1.6rem;margin-left:1rem}.drop-menu{display:none}@media (min-width:1025px){.drop-menu{display:block;padding:3rem 0 4rem;position:absolute;top:100%;left:0;right:0;z-index:101;width:100%;background-color:#fff;visibility:hidden;opacity:0}}.drop-menu__row{display:grid;grid-template-columns:repeat(6,1fr);grid-template-areas:"menu-1 menu-2 menu-3 . sale sale";align-items:flex-start}.drop-menu__col--1{grid-area:menu-1}.drop-menu__col--2{grid-area:menu-2}.drop-menu__col--3{grid-area:menu-3}.drop-menu__sale{width:33.6rem;grid-area:sale;justify-self:end}.drop-menu__sale .sale-item__img{height:25rem}.drop-menu__col-title{font-weight:600;margin-bottom:1.6rem}.drop-menu__list-item:not(:last-child){margin-bottom:1rem}@media (min-width:768px){.footer__logo{grid-area:logo}}@media (min-width:768px){.footer__menus{grid-area:menu}.footer__social{grid-area:soc}}@media (min-width:768px){.footer__contact{grid-area:contact}.footer__cols{grid-area:links}.footer__subscribe{grid-area:subscribe}}@media (min-width:768px){.footer__copy{grid-area:copy}.footer__payment{grid-area:pay}.footer__developer{grid-area:developer}}.header{position:relative}.header__top{display:none}.header__action,.header__call-link,.header__shops-search,.header__whatsup{font-weight:600}.header__action svg,.header__call-link svg,.header__shops-search svg{width:1.6rem;height:1.6rem;margin-right:.6rem}.header__whatsup img{flex-shrink:0;margin-right:.6rem}.header__shops-search{font-family:Raleway,sans-serif}@media (min-width:1025px){.header__top{display:block;padding:1.2rem 0}.header__shops-search{margin-left:4.3rem;margin-right:auto}.header__contact{display:flex}.header__call:not(:last-child){margin-right:3.6rem}}.header__call{display:flex;align-items:flex-end}.header__call-link:not(:last-child){margin-right:.6rem}.header__whatsup{color:#4caf50}.header__whatsup-icon{width:1.6rem;height:1.6rem}.header__main{padding:2.5rem 0 1rem}.header__main-top{flex-wrap:wrap}.header__nav{display:flex}@media (max-width:1024px){.header__action svg,.header__call-link svg,.header__shops-search svg{width:2rem;height:2rem}.header__region:not(:last-child){margin-bottom:3rem}.header__call:not(:last-child){margin-bottom:2.4rem}.header__main{padding-top:2rem;padding-bottom:0}.header__nav{width:100%;order:4;margin-top:2.4rem}}.header__nav-link{font-weight:600;color:#9b9b9b;padding-bottom:.6rem}.header__nav-link:not(:last-child){margin-right:3.5rem}.header__nav-link.active{position:relative;color:#101112}.header__nav-link.active:after{content:"";position:absolute;left:0;bottom:0;width:100%;height:.2rem;background-color:#000}.header__logo-img{width:20.7rem}@media (max-width:1024px){.header__nav-link{padding-bottom:.8rem;font-size:1.4rem;line-height:2.1rem}.header__nav-link:not(:last-child){margin-right:3rem}.header__logo{margin-left:1.6rem;margin-right:auto}.header__logo-img{width:17rem;height:2.5rem}}@media (max-width:767px){.header__logo-img{width:12rem;height:1.7rem}}.header__actions{display:flex}.header__actions>:not(:last-child){margin-right:5.3rem}.header__search-btn{display:none}@media (max-width:1024px){.header__actions>:not(:last-child){margin-right:2rem}.header__actions>* svg{margin-right:0}.header__actions>* span{display:none}.header__search-btn{display:block;width:2rem;height:2rem;background-image:url(../images/icons/search.svg)}}@media (min-width:1025px){.header__main-top{margin-bottom:2.3rem}.header__main-bottom{position:relative;display:flex;justify-content:space-between;align-items:flex-end}}@media (max-width:1024px){.header__main-bottom{position:absolute;left:-100%;bottom:0}}.header__list{display:none}@media (min-width:1025px){.header__list{display:flex}.header__list-item:not(:last-child){margin-right:3rem}}.header__list-link--red{color:#e33}.region-header{display:inline-flex;position:relative}.region-header__title:not(:last-child){margin-right:.6rem}.region-header__value{display:inline-block;padding-right:2rem;font-weight:600}.region-header__value:after{content:"";position:absolute;top:.3rem;right:0;width:1.4rem;height:1.5rem;background-image:url(../images/icons/drop.svg)}.region-header__drop{display:none;position:absolute;top:calc(100% + 1.4rem);left:50%;z-index:20;background-color:#fff;box-shadow:0 -.1rem 1rem rgba(0,0,0,.1);width:24.7rem;padding:2rem 1.5rem}@media (max-width:500px){.region-header__drop{width:100%;left:0}.icons-slider__item-title{font-size:1.4rem;line-height:2.1rem}}.region-header__drop-item:not(:last-child){margin-bottom:1.7rem}.region-header__drop-item--active{font-weight:600}.header-info-line{background-color:#101112;color:#fff;font-weight:600;padding:1rem 0;position:relative;display:flex;flex-wrap:nowrap}.header-info-line__inner{padding:0 1.6rem;-webkit-animation:15s linear infinite marquee;animation:15s linear infinite marquee;width:100%;flex-shrink:0;margin:0 auto}.header-info-line__inner p{white-space:nowrap}.header-info-line__close{display:none}@media (min-width:1025px){.header-info-line__close{display:block;position:absolute;right:1.25%;width:1.6rem;height:1.6rem}}@-webkit-keyframes marquee{0%{transform:translate(0,0)}100%{transform:translate(-100vw,0)}}@keyframes marquee{0%{transform:translate(0,0)}100%{transform:translate(-100vw,0)}}.icons-slider__item{width:12.8rem;margin-right:5.2rem}.icons-slider__item-img{width:100%;height:12.8rem;background-color:#f4f4f6;border-radius:7.1rem}.icons-slider__item-img:not(:last-child){margin-bottom:1.6rem}.icons-slider__item-img img{width:6.8rem;height:10.1rem}.icons-slider__item-title{font-weight:600;text-align:center}@media (min-width:768px){.news-detail__img{grid-area:image}.news-detail__content{grid-area:details}}@media (max-width:767px){.header-info-line__inner{-webkit-animation-duration:5s;animation-duration:5s}.header-info-line__inner p:last-child{display:none}.icons-slider__item{margin-right:2.5rem}}.order-product__img{grid-area:picture}.order-product__title{grid-area:title}.order-product__list{grid-area:dl}.product-title{font-weight:600}.product-list>div:not(:last-child){margin-bottom:.6rem}.product-list dt{color:#9b9b9b;float:left;padding-right:.3rem}.pageup{position:fixed;right:2.3958333333vw;bottom:5rem;z-index:100;width:7rem;height:7rem;border-radius:50%;border:.1rem solid #505661;opacity:0}@media (max-width:767px){.pageup{width:5rem;height:5rem}}.pageup__arrow{width:3rem;height:3rem}@media (max-width:767px){.pageup__arrow{width:2rem;height:2rem}}.password-change__title{font-weight:500}.password-change__title:not(:last-child){margin-bottom:3rem}.password-change__form{display:grid;grid-gap:1.5rem}.password-change__form-btn{font-weight:600;padding:1.35rem}@media (max-width:500px){.mini-popup__title{font-size:2rem;line-height:3rem}}@media (max-width:1024px){.pageup{right:1.6rem}}.popup{background-color:#fff}@media (min-width:1025px){.mini-popup{width:76.8rem}}@media (max-width:1024px){.mini-popup{width:calc(100vw - 3.2rem)}}.mini-popup__inner{display:grid}.mini-popup__content{padding:7rem 5.1rem}@media (max-width:1024px){.mini-popup__content{padding-left:3rem;padding-right:3rem}}.mini-popup__top:not(:last-child){margin-bottom:3.5rem}.mini-popup__title{font-weight:500}.mini-popup__title:not(:last-child){margin-bottom:.8rem}.mini-popup__subtitle{color:#9b9b9b}.mini-popup__subtitle:not(:last-child){margin-bottom:3.6rem}#password-change{padding:6rem}@media (max-width:767px){.mini-popup{width:100vw;min-height:100vh}.mini-popup__inner{grid-template-rows:25rem auto}.mini-popup__content{padding:3rem 1.6rem}#password-change{width:calc(100vw - 3.2rem);padding-left:3rem;padding-right:3rem}}@media (min-width:768px){.mini-popup__inner{grid-template-columns:33rem 1fr}#password-change{width:42rem!important}}@media (max-width:500px){.mini-popup__subtitle{font-size:1.4rem;line-height:2.1rem}.mini-popup__subtitle:not(:last-child){margin-bottom:2.5rem}}@media (min-width:1025px){#password-change{width:42rem!important}.product-card__slider{grid-area:slider}.product-card__links{grid-area:links}.product-card__content{grid-area:content;display:flex;flex-direction:column}.product-card__info{grid-area:info}}.product-card-form>:not(:last-child){margin-bottom:2rem}.product-card-form__buttons{display:grid;grid-gap:1.2rem}@media (min-width:501px){.product-card-form__buttons{grid-template-columns:repeat(2,1fr)}}.product-card-form__btn{font-weight:500;padding:1.35rem}.product-favorite-btn span.favorite,.product-favorite-btn svg.favorite{display:none}.about-product__title{font-weight:600;margin-bottom:.8rem}.about-product__list:not(:last-child){margin-bottom:1rem}.about-product__list div:not(:last-child){margin-bottom:.4rem}.about-product__list div dt{padding-right:.3rem}.product-links{display:grid;grid-gap:2.2rem}@media (min-width:768px) and (max-width:1024px){.product-links{grid-template-columns:repeat(2,1fr)}}.product-links__item-link{display:grid;grid-template-columns:4rem -webkit-max-content;grid-template-columns:4rem max-content;grid-template-rows:repeat(2,auto);grid-gap:.1rem 1.6rem}.product-links__item-img{width:100%;grid-row:1/3}.product-links__item-subtitle{grid-column:2/3;color:#9b9b9b}.product-popup{display:none}@media (min-width:1025px){#product-popup{width:98.2rem!important}.product-popup__inner{display:grid;grid-template-columns:47.250509165% auto 1rem;grid-template-rows:59rem 7.6rem;grid-template-areas:"slider info ." "link link ."}#product-sizes-popup{width:89.5rem!important}}.product-popup__slider{position:relative;grid-area:slider;width:100%}.product-popup__slider .swiper-button-prev{left:2rem}.product-popup__slider .swiper-button-next{right:2rem}.product-popup__label{position:absolute;top:2rem;left:2rem;z-index:20;width:5rem;height:5rem;font-size:1.5rem;line-height:2.2rem}.product-popup__content{grid-area:info;padding:3.4rem 1.4rem 3rem 3rem;overflow-y:auto}.product-popup__content::-webkit-scrollbar{width:.5rem;border-radius:.4rem}.product-popup__content::-webkit-scrollbar-thumb{background:silver;border-radius:.4rem}@media (max-width:1024px){.product-popup__content{padding:3rem}}@media (max-width:767px){.product-popup__content{padding:3rem 1.5rem}}.product-popup__about:not(:last-child){margin-bottom:4rem}.product-popup__content-top{padding-bottom:1.6rem;border-bottom:.1rem solid #efefef}.product-popup__content-top:not(:last-child){margin-bottom:1.5rem}.product-popup__title{font-weight:500}.product-popup__title:not(:last-child){margin-bottom:.7rem}.product-popup__old-price{margin-right:.6rem}.product-popup__form:not(:last-child){margin-bottom:2.4rem}.product-popup__more-link{font-weight:500;grid-area:link;background-color:#f4f4f6}.product-popup__more-link svg{width:5.6rem;height:1.6rem;margin-left:1.4rem}@media (max-width:1024px){.product-popup__more-link{padding:2.6rem}#product-sizes-popup{width:100vw}}.product-sizes-popup{padding-right:.7rem}.product-sizes-popup__inner{overflow-y:auto;padding:4rem 2.8rem 6.2rem 4rem}.product-sizes-popup__inner::-webkit-scrollbar{width:.5rem;border-radius:.4rem}.product-sizes-popup__inner::-webkit-scrollbar-thumb{background:silver;border-radius:.4rem}@media (max-width:1024px){.product-sizes-popup__inner{padding:3rem}}.product-sizes-popup__top{display:grid;grid-template-columns:-webkit-max-content 12.2rem;grid-template-columns:max-content 12.2rem;grid-template-areas:"title logo" "subtitle logo";row-gap:1.8rem;padding-bottom:3rem;border-bottom:.1rem solid #eaeaea}@media (max-width:767px){.product-sizes-popup__top{grid-template-columns:12.2rem -webkit-max-content;grid-template-columns:12.2rem max-content;grid-template-areas:"logo ." "title title" "subtitle subtitle"}.product-sizes-popup__title{font-size:2rem;line-height:3rem}}@media (min-width:768px){.product-sizes-popup__inner{height:66.7rem}.product-sizes-popup__top{justify-content:space-between}.how-define-size__inner{grid-template-columns:1fr 24.3rem}}.product-sizes-popup__title{font-weight:500;grid-area:title}.product-sizes-popup__subtitle{grid-area:subtitle}.product-sizes-popup__logo{height:9rem;grid-area:logo}.product-sizes-popup__table:not(:last-child){margin-bottom:5rem}.how-define-size__title{font-weight:500}.how-define-size__title:not(:last-child){margin-bottom:3rem}.how-define-size__inner{display:grid;grid-gap:5rem}@media (max-width:1024px){.how-define-size__inner{grid-gap:3rem}}.how-define-size__content p:not(:last-child){margin-bottom:2rem}.product-sizes__title:not(:last-child){margin-bottom:1rem}.product-sizes__row{display:flex;flex-wrap:wrap;margin:-.5rem -.6rem 0}.product-sizes__row:not(:last-child){margin-bottom:1rem}.product-sizes__item{margin:.5rem .6rem}.product-sizes__item .radio-text{width:3.5rem;height:3.5rem;text-align:center;border:.1rem solid #000}.product-sizes__item .radio-box:disabled+.radio-text{position:relative;color:#9b9b9b;border-color:#9b9b9b}.product-sizes__item .radio-box:disabled+.radio-text:before{content:"";position:absolute;top:-.7rem;left:1.6rem;width:.1rem;height:4.735rem;background-color:#9b9b9b;transform:rotate(-45deg)}@media (max-width:500px){.product-sizes-popup__inner{padding-left:1.5rem;padding-right:1.5rem}}.promo-collection__suptitle{font-weight:500;color:#777;grid-area:suptitle}.promo-collection__title{grid-area:title}.promo-collection__link{grid-area:link}.promo-collection__img{grid-area:image}.promo-sale__grid{display:grid;grid-gap:4.4rem 5.2rem}@media (min-width:768px){.how-define-size__img{height:32rem}.promo-sale__grid{grid-template-columns:repeat(2,1fr)}.promo-sale__slider{grid-column:span 2}}.promo-sale__grid .sale-item__img{height:25rem}.promo-sale__slider{width:100%}@media (min-width:1025px){.promo-sale__grid{grid-template-columns:auto 33.6rem}.promo-sale__slider{grid-row:span 2;grid-column:initial}}.promo-sale__slider .swiper-slide .sale-item__img{flex-grow:1;height:61rem}@media (max-width:1024px){.promo-sale__grid{grid-gap:3rem}.promo-sale__slider{width:calc(100vw - 3.2rem)}.promo-sale__slider .swiper-slide .sale-item__img{height:45rem}}.promo-sale__slider-arrows{position:absolute;right:0;bottom:2.4rem}@media (max-width:500px){.promo-sale__slider-arrows{display:none}}.region-popup__input{width:100%;padding:1.55rem 2rem;border:.1rem solid #101112}.region-popup__input:not(:last-child){margin-bottom:2.4rem}.region-popup__input::-moz-placeholder{color:#9b9b9b}.region-popup__input:-ms-input-placeholder{color:#9b9b9b}.region-popup__cities-row{display:grid}.region-popup__city{display:block}.region-popup__city:not(:last-child){margin-bottom:1.6rem}.sale-item__img{position:relative;display:block;height:42rem;margin-bottom:1.2rem}.sale-item__discount{font-weight:500;text-transform:uppercase;color:#fff;position:absolute;top:2.5rem;left:2.5rem}@media (max-width:500px){.region-popup__input{padding:1rem 1.5rem}.sale-item__discount{top:1.5rem;left:1.5rem}}.sale-item__title{font-weight:500}.sale-item__descr{color:#9b9b9b}@media (min-width:768px){.region-popup__cities-row{grid-template-columns:repeat(2,1fr)}}@media (max-width:767px){.promo-sale__slider .swiper-slide .sale-item__img{height:25rem}.region-popup__cities-row{grid-gap:1.6rem}}.search-form{position:relative}.search-form__input{line-height:1.4rem;background-color:#fff;border:.1rem solid #777;width:33.6rem;padding:1.1rem 1.5rem 1.1rem 3.5rem;background-image:url(../images/icons/search.svg);background-size:1.6rem 1.6rem;background-position:1rem 50%;background-repeat:no-repeat}.search-form__input::-moz-placeholder{font-style:italic;color:#777}.search-form__input:-ms-input-placeholder{font-style:italic;color:#777}@media (max-width:1024px){.search-form__input{border-color:#2d703c;padding:1rem 2.7rem 1rem 3.4rem}}.search-form__help{position:absolute;top:100%;left:0;right:0;z-index:25;padding:1.6rem}.help-search{display:none;background-color:#fff;box-shadow:0 -.1rem 1rem rgba(0,0,0,.1)}.help-search__item{display:block}.help-search__item:not(:last-child){margin-bottom:1rem}.help-search__item span{color:#777}</style>
-  <link rel="preload" href="./assets/styles/app.min.css" as="style">
-  <noscript><link rel="stylesheet" href="./assets/styles/app.min.css"></noscript>
-	<link rel="stylesheet" href="./assets/styles/for-view.css">
-	<!-- <link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css" media="print"
-		onload="this.media='all'; this.onload = null">
-	<link rel="stylesheet" href="./assets/libs/css/animate.min.css" media="print"
-		onload="this.media='all'; this.onload = null">
-	<link rel="stylesheet" href="./assets/styles/app.min.css" media="print"
-		onload="this.media='all'; this.onload = null"> -->
-	<script>
-		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
-		if (!('ontouchstart' in document.documentElement)) {
-			document.documentElement.className += ' no-touchevents';
-		} else {
-			document.documentElement.className += ' touchevents';
-		}
-	</script>
-</head>
-
-<body>
-	<noscript>
-		<div class="no-js-warning">Для корректной работы сайта <b>включите JavaScript</b> в браузере</div>
-	</noscript>
-
-  <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page home-page">
-      @@include("blocks/promo-sale/promo-sale.html")
-      @@include("blocks/icons-slider/icons-slider.html")
-      <section class="section slider-section">
-        <div class="container">
-          <div class="section__title">
-            <h2 class="title">Популярные товары</h2>
-            <div class="slider-arrows">
-              <div class="popular-goods-slider-arrow-prev">
-                <svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
-                    fill="#C0C0C0" />
-                </svg>
-              </div>
-              <div class="popular-goods-slider-arrow-next">
-                <svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
-                    fill="#C0C0C0" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="swiper popular-goods-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/01",
-                "alt": "Пуховик",
-                "title": "Пуховик",
-                "subtitle": "Rio Verti",
-                "newprice": "23 625 ₽",
-                "oldprice": "31 500 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/02",
-                "alt": "Джемпер",
-                "title": "Джемпер",
-                "subtitle": "Loriata",
-                "price": "12 500 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/03",
-                "alt": "Юбка",
-                "title": "Юбка",
-                "subtitle": "Loriata",
-                "newprice": "5 000 ₽",
-                "oldprice": "8 200 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                "discount": "40%",
-                "image": "assets/images/content/catalog-slider/04",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Rio Verti",
-                "newprice": "21 200 ₽",
-                "oldprice": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/02",
-                "alt": "Джемпер",
-                "title": "Джемпер",
-                "subtitle": "Loriata",
-                "price": "12 500 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                "discount": "40%",
-                "image": "assets/images/content/catalog-slider/04",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Rio Verti",
-                "newprice": "21 200 ₽",
-                "oldprice": "37 400 ₽",
-                })
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      @@include("blocks/actual/actual.html")
-      @@include("blocks/brands/brands.html")
-      <section class="section slider-section">
-        <div class="container">
-          <div class="section__title">
-            <h2 class="title">Новинки</h2>
-            <div class="slider-arrows">
-              <div class="catalog-new-slider-arrow-prev">
-                <svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
-                    fill="#C0C0C0" />
-                </svg>
-              </div>
-              <div class="catalog-new-slider-arrow-next">
-                <svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
-                    fill="#C0C0C0" />
-                </svg>
-              </div>
-            </div>
-          </div>
-          <div class="swiper catalog-new-slider">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/04",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/03",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/02",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/01",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/04",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/03",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/02",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-              <div class="swiper-slide">
-                @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                "discount": "25%",
-                "image": "assets/images/content/catalog-slider/01",
-                "alt": "Пальто",
-                "title": "Пальто",
-                "subtitle": "Loriata",
-                "price": "37 400 ₽",
-                })
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      @@include("blocks/promo-collection/promo-collection.html")
-      <section class="section blog-section">
-        <div class="container">
-          <div class="section__title">
-            <h2 class="title">Блог</h2>
-            <a href="#" class="all-link">
-              Смотреть все
-              <svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
-                  fill="#C0C0C0" />
-              </svg>
-            </a>
-          </div>
-          <div class="blog-grid">
-            <article class="blog-item blog-grid__item animate__animated animate__fadeInLeft wow"
-              data-wow-duration="1.5s">
-              <a href="#" class="blog-item__img">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/content/blog/01.webp"
-                    srcset="assets/images/src.webp">
-                  <img class="lazy" data-src="assets/images/content/blog/01.jpg"
-                    src="assets/images/src.jpg" alt="фото блога" width="724" height="336">
-                </picture>
-              </a>
-              <div class="blog-item__content">
-                <time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
-                <h5 class="blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a>
-                </h5>
-                <p class="blog-item-text blog-item__text">
-                  Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
-                  Отличная
-                  теплоизоляция достигается благодаря наполнителю 90% пуха.
-                </p>
-                <div class="tags">
-                  <a href="#" class="tag blog-item__tag">#коллекция</a>
-                  <a href="#" class="tag blog-item__tag">#женщинам</a>
-                  <a href="#" class="tag blog-item__tag">#осень</a>
-                </div>
-              </div>
-            </article>
-            <article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
-              data-wow-duration="1.5s" data-wow-delay=".5s">
-              <a href="#" class="blog-item__img">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/content/blog/02.webp"
-                    srcset="assets/images/src.webp">
-                  <img class="lazy" data-src="assets/images/content/blog/02.jpg"
-                    src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
-                </picture>
-              </a>
-              <div class="blog-item__content">
-                <time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-                <h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-                    2021</a></h5>
-                <p class="blog-item-text blog-item__text">
-                  Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
-                  о
-                  первом снеге.
-                  Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-                </p>
-                <div class="tags">
-                  <a href="#" class="tag blog-item__tag">#коллекция</a>
-                  <a href="#" class="tag blog-item__tag">#детям</a>
-                </div>
-              </div>
-            </article>
-            <article class="blog-item blog-grid__item animate__animated animate__fadeInRight wow"
-              data-wow-duration="1.5s" data-wow-delay="1s">
-              <a href=" #" class="blog-item__img">
-                <picture>
-                  <source type="image/webp" data-srcset="assets/images/content/blog/03.webp"
-                    srcset="assets/images/src.webp">
-                  <img class="lazy" data-src="assets/images/content/blog/03.jpg"
-                    src="assets/images/src.jpg" alt="фото блога" width="336" height="223">
-                </picture>
-              </a>
-              <div class="blog-item__content">
-                <time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-                <h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже
-                    поступили в
-                    продажу!</a>
-                </h5>
-                <p class="blog-item-text blog-item__text">
-                  Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
-                  дел.
-                </p>
-                <div class="tags">
-                  <a href="#" class="tag blog-item__tag">#коллекция</a>
-                  <a href="#" class="tag blog-item__tag">#женщинам</a>
-                </div>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      @@include("blocks/instagram/instagram.html")
-
-      <div class="section">
-        <div class="container">
-          <div class="seo-text home-page__seo-text">
-            <p>
-              Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от
-              всех живут они
-              в
-              буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по
-              всей стране и
-              обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные
-              члены
-              предложения залетают прямо в рот.
-            </p>
-            <p>
-              Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ
-              жизни.
-              Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
-              грамматики.
-              Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
-              запятой, но текст
-              не
-              дал сбить себя с толку.
-            </p>
-            <p>
-              Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись
-              на первую
-              вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
-              Буквоград, на
-              заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
-            </p>
-          </div>
-        </div>
-      </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-      @@include("blocks/auth/auth.html")
-      @@include("blocks/drop-basket/drop-basket.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
-    @@include("blocks/product-popup/product-popup.html")
-    @@include("blocks/popup/size-subscribe-popup.html")
-    @@include("blocks/product-sizes-popup/product-sizes-popup.html")
-  </div>
+		<div class="section">
+			<div class="container">
+				<div class="seo-text home-page__seo-text">
+					<p>
+						Далеко-далеко за словесными горами в стране гласных и согласных живут рыбные тексты. Вдали от
+						всех живут они
+						в
+						буквенных домах на берегу Семантика большого языкового океана. Маленький ручеек Даль журчит по
+						всей стране и
+						обеспечивает ее всеми необходимыми правилами. Эта парадигматическая страна, в которой жаренные
+						члены
+						предложения залетают прямо в рот.
+					</p>
+					<p>
+						Даже всемогущая пунктуация не имеет власти над рыбными текстами, ведущими безорфографичный образ
+						жизни.
+						Однажды одна маленькая строчка рыбного текста по имени Lorem ipsum решила выйти в большой мир
+						грамматики.
+						Великий Оксмокс предупреждал ее о злых запятых, диких знаках вопроса и коварных точках с
+						запятой, но текст
+						не
+						дал сбить себя с толку.
+					</p>
+					<p>
+						Он собрал семь своих заглавных букв, подпоясал инициал за пояс и пустился в дорогу. Взобравшись
+						на первую
+						вершину курсивных гор, бросил он последний взгляд назад, на силуэт своего родного города
+						Буквоград, на
+						заголовок деревни Алфавит и на подзаголовок своего переулка Строчка
+					</p>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+		@@include("blocks/popup/password-recovery.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/product-popup/product-popup.html")
+	@@include("blocks/popup/size-subscribe-popup.html")
+	@@include("blocks/product-sizes-popup/product-sizes-popup.html")
+</div>
 <script src="./assets/libs/js/wow.min.js"></script>
 <script>
 	new WOW().init();

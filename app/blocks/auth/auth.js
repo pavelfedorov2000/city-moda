@@ -30,7 +30,7 @@ app.auth = {
             }
         });
 
-        // password input eye toggle
+        // password input visibility toggle
         $('.pass-btn').on('click', function () {
             if ($(this).hasClass('show')) {
                 $(this).parent().find('input[type=password]').attr('type', 'text');
@@ -52,16 +52,12 @@ app.auth = {
         // Восстановление пароля открыть
         $('.remind-password').on('click', function () {
             $(this).parents('.aside-popup').removeClass('active');
-            $(this).parents('.aside-popup').hide();
-            $('#password-recovery').fadeIn('slow');
             $('#password-recovery').addClass('active');
         });
 
         // Восстановление пароля закрыть
         $('#password-recovery .aside-popup__back-btn').on('click', function () {
-            $(this).parents('.aside-popup').removeClass('active');
-            $(this).parents('.aside-popup').hide();
-            $('#auth-popup').fadeIn('slow');
+            $('#password-recovery').removeClass('active');
             $('#auth-popup').addClass('active');
         });
     },
