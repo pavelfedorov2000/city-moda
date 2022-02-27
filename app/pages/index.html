@@ -1,4 +1,5 @@
 @@include("blocks/head/head.html", {"title": "Разводящая"})
+@@include("blocks/head/no-js.html")
 <div class="wrapper">
 	@@include("blocks/header/header.html")
 	@@include("blocks/burger/burger.html")
@@ -17,6 +18,7 @@
 				<a href="drop-basket.html" class="_progress__link" target="_blank">Выезжающая корзина</a>
 				<a href="drop-basket-empty.html" class="_progress__link" target="_blank">Выезжающая корзина пустая</a>
 				<a href="auth.html" class="_progress__link" target="_blank">Авторизация</a>
+				<a href="password-recovery.html" class="_progress__link" target="_blank">Восстановление пароля</a>
 				<a href="brands.html" class="_progress__link" target="_blank">Бренды</a>
 				<a href="blog.html" class="_progress__link" target="_blank">Блог</a>
 				<a href="blog-text.html" class="_progress__link" target="_blank">Блог текстовая</a>
@@ -38,8 +40,8 @@
 				<a href="size-subscribe.html" class="_progress__link" target="_blank">Попап подписаться на
 					размер</a>
 				<a href="product-sizes.html" class="_progress__link" target="_blank">Попап таблица размеров</a>
-        <a href="sale-popup.html" class="_progress__link" target="_blank">Попап подписка</a>
-        <a href="password-change.html" class="_progress__link" target="_blank">Попап изменение пароля</a>
+				<a href="sale-popup.html" class="_progress__link" target="_blank">Попап подписка</a>
+				<a href="password-change.html" class="_progress__link" target="_blank">Попап изменение пароля</a>
 				<!-- <a href="pickup.html" class="_progress__link" target="_blank">Попап выбор пункта самовывоза (если
 					понадобится)</a> -->
 			</div>
@@ -49,7 +51,7 @@
 	@@include("blocks/pageup/pageup.html")
 	<div class="overlay">
 		@@include("blocks/auth/auth.html")
-        @@include("blocks/popup/password-recovery.html")
+		@@include("blocks/popup/password-recovery.html")
 		@@include("blocks/drop-basket/drop-basket.html")
 	</div>
 	@@include("blocks/popup/discount-popup.html")

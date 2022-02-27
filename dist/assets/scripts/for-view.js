@@ -74,7 +74,6 @@ $(document).ready(function () {
     if ($('main').hasClass('auth')) {
         $('body').addClass('_lock');
         $('.overlay').show('slow');
-        $('#auth-popup').fadeIn('slow');
         $('#auth-popup').addClass('active');
     }
 
@@ -82,8 +81,14 @@ $(document).ready(function () {
     if ($('main').hasClass('drop-basket-page')) {
         $('body').addClass('_lock');
         $('.overlay').show('slow');
-        $('#drop-basket').fadeIn('slow');
         $('#drop-basket').addClass('active');
+    }
+
+    // Демонстрация восстановления пароля
+    if ($('main').hasClass('password-recovery')) {
+        $('body').addClass('_lock');
+        $('.overlay').show('slow');
+        $('#password-recovery').addClass('active');
     }
 
     // Кнопка добавить в избранное

@@ -2,6 +2,7 @@ $(document).ready(function () {
 
   new LazyLoad();
 
+  // Селект
   $('.select__title').on('click', function () {
     $(this).parents('.sale-popup__form-item').siblings().find('.select__title').removeClass('select__title--active');
     $(this).parents('.sale-popup__form-item').siblings().find('.select__content').slideUp('300');
@@ -15,6 +16,7 @@ $(document).ready(function () {
     $(this).parent().slideUp('300');
   });
 
+
   // Переключение списка магазинов в зависимости от выбранного города (карточка товара)
   $(`#${$('.shops-availability__select .select__content').children().first().data('city')}`).show();
   $('.shops-availability .select__option').on('click', function () {
@@ -22,9 +24,14 @@ $(document).ready(function () {
     $(`#${$(this).data('city')}`).show();
   });
 
-  $('a[data-fancybox]').fancybox({
+  /* $('[data-fancybox]').fancybox({
+    autoFocus: false,
+  }); */
+  $('[data-fancybox=""]').fancybox({
     autoFocus: false
   });
+
+  //$.fancybox.defaults.autoFocus = false;
 
   $('a[data-fancybox').on('click', function () {
     $('html').addClass('disable-fix');
