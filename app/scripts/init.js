@@ -57,6 +57,8 @@ $(document).ready(function () {
   app.iconsSlider.init();
   app.sliderSections.init();
   app.instagram.init();
+  app.otherNews.init();
+  app.blog.init();
   app.catalogCard.init();
   app.asideFilters.init();
   //app.catalogFilters.init();
@@ -69,8 +71,6 @@ $(document).ready(function () {
   app.popup.init();
   //app.regionPopup.init();
   app.checkout.init();
-  app.blog.init();
-  app.otherNews.init();
   app.faq.init();
   app.feedback.init();
   app.pageup.init();

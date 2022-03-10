@@ -34,8 +34,8 @@
 	<!-- <link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/animate.min.css"> -->
+	<!-- <link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css"> -->
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
-	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/styles/for-view.css">
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
@@ -1575,102 +1575,103 @@
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="./assets/scripts/app.min.js"></script>
+	<!-- Скрипты, которые просили вынести -->
 	<script src="./assets/scripts/for-view.js"></script>
+	<style>
+		/* Фиксированная версия 2.1.79 позволяет привязаться к этим классам */
+		.ymaps-2-1-79-balloon__close,
+		.ymaps-2-1-79-balloon__tail {
+			display: none;
+		}
+
+		.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+			margin-right: 0;
+		}
+
+		.ymaps-2-1-79-balloon__content {
+			padding: 0;
+			margin-right: 0;
+		}
+
+		.ymaps-2-1-79-balloon__content img {
+			width: 100%;
+			height: 16rem;
+			object-fit: cover;
+		}
+
+		.ymaps-2-1-79-balloon-content__header {
+			margin-bottom: 0;
+		}
+
+		.ymaps-2-1-79-balloon__content>* {
+			width: 28.6rem !important;
+			height: auto !important;
+			overflow: hidden !important;
+		}
+
+		@media(max-width: 500px) {
+			.ymaps-2-1-79-balloon__content>* {
+				width: 100% !important;
+			}
+		}
+	</style>
+	<script>
+		$('.search-shops__item').addClass('hidden');
+		$(`.search-shops__item[data-city="${$('.search-shops__select .select__option input:checked').parent().attr('data-city')}"`)
+			.removeClass('hidden');
+
+		function filterCities() {
+			$('.search-shops__select .select__option').on('click', function() {
+				$('.search-shops__item').addClass('hidden');
+				$(`.search-shops__item[data-city="${$(this).attr('data-city')}"`).removeClass('hidden');
+			});
+		}
+		filterCities();
+
+		ymaps.ready(init);
+
+		function init() {
+			var myMap = new ymaps.Map('shops-map', {
+					center: [55.76, 37.64],
+					zoom: 11,
+					controls: []
+				}, {
+					searchControlProvider: 'yandex#search'
+				}),
+				objectManager = new ymaps.ObjectManager({
+					clusterize: true,
+					gridSize: 64,
+					clusterize: true
+				});
+			myMap.geoObjects.add(objectManager);
+
+			function filterCity(cityName) {
+				let filterStr = 'options.city == "' + cityName + '"';
+				objectManager.setFilter(filterStr);
+			}
+
+			$('body').on('change', '.search-shops__select .select__option input', function() {
+				filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
+			});
+
+			$('body').on('click', '.shop-item__top', function() {
+				objectManager.objects.balloon.open($(this).parent().attr('data-id'));
+			});
+
+			$.ajax({
+				url: "data.json",
+				cash: false,
+			}).done(function(data) {
+				objectManager.add(data);
+				filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
+				var objectState = objectManager.getObjectState(1);
+				if (objectState.isClustered) {
+					objectManager.clusters.state.set('activeObject', objectManager.objects.getById(1));
+					objectManager.clusters.balloon.open(objectState.cluster.id);
+				}
+			});
+		}
+	</script>
 </body>
 
 </html>
-<style>
-	/* Фиксированная версия 2.1.79 позволяет привязаться к этим классам */
-	.ymaps-2-1-79-balloon__close,
-	.ymaps-2-1-79-balloon__tail {
-		display: none;
-	}
-
-	.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
-		margin-right: 0;
-	}
-
-	.ymaps-2-1-79-balloon__content {
-		padding: 0;
-		margin-right: 0;
-	}
-
-	.ymaps-2-1-79-balloon__content img {
-		width: 100%;
-		height: 16rem;
-		object-fit: cover;
-	}
-
-	.ymaps-2-1-79-balloon-content__header {
-		margin-bottom: 0;
-	}
-
-	.ymaps-2-1-79-balloon__content>* {
-		width: 28.6rem !important;
-		height: auto !important;
-		overflow: hidden !important;
-	}
-
-	@media(max-width: 500px) {
-		.ymaps-2-1-79-balloon__content>* {
-			width: 100% !important;
-		}
-	}
-</style>
-<script>
-	$('.search-shops__item').addClass('hidden');
-	$(`.search-shops__item[data-city="${$('.search-shops__select .select__option input:checked').parent().attr('data-city')}"`)
-		.removeClass('hidden');
-
-	function filterCities() {
-		$('.search-shops__select .select__option').on('click', function() {
-			$('.search-shops__item').addClass('hidden');
-			$(`.search-shops__item[data-city="${$(this).attr('data-city')}"`).removeClass('hidden');
-		});
-	}
-	filterCities();
-
-	ymaps.ready(init);
-
-	function init() {
-		var myMap = new ymaps.Map('shops-map', {
-				center: [55.76, 37.64],
-				zoom: 11,
-				controls: []
-			}, {
-				searchControlProvider: 'yandex#search'
-			}),
-			objectManager = new ymaps.ObjectManager({
-				clusterize: true,
-				gridSize: 64,
-				clusterize: true
-			});
-		myMap.geoObjects.add(objectManager);
-
-		function filterCity(cityName) {
-			let filterStr = 'options.city == "' + cityName + '"';
-			objectManager.setFilter(filterStr);
-		}
-
-		$('body').on('change', '.search-shops__select .select__option input', function() {
-			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
-		});
-
-		$('body').on('click', '.shop-item__top', function() {
-			objectManager.objects.balloon.open($(this).parent().attr('data-id'));
-		});
-
-		$.ajax({
-			url: "data.json",
-			cash: false,
-		}).done(function(data) {
-			objectManager.add(data);
-			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
-			var objectState = objectManager.getObjectState(1);
-			if (objectState.isClustered) {
-				objectManager.clusters.state.set('activeObject', objectManager.objects.getById(1));
-				objectManager.clusters.balloon.open(objectState.cluster.id);
-			}
-		});
-	}
-</script>

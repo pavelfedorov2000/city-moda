@@ -1,5 +1,5 @@
 @@include("blocks/head/head.html", {"title": "Карточка товара"})
-<link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
+<link rel="stylesheet" href="./assets/libs/css/lite-yt-embed.css">
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
 	@@include("blocks/header/header.html")
@@ -270,6 +270,7 @@
 @@include("blocks/popup/size-subscribe-popup.html")
 @@include("blocks/product-popup/product-popup.html")
 @@include("blocks/link/link.html")
+<script src="./assets/libs/js/lite-yt-embed.js"></script>
 <script>
 	$(document).ready(function () {
 		const productCardSlider = new Swiper(".product-card__slider", {
@@ -296,3 +297,6 @@
 	//productCardSlider.init() вызов слайдера
 
 </script>
+</body>
+
+</html>

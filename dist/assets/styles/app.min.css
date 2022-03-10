@@ -2974,6 +2974,7 @@ input[type=number]:focus {
   position: absolute;
   top: 0;
   right: -100%;
+  z-index: 101;
   opacity: 0;
   visibility: hidden;
   bottom: 0;
@@ -8186,10 +8187,10 @@ input[name=promocode].valid {
 }
 @media (any-hover: hover) {
   .shop-phone:hover, .shop-item__phone:hover {
-    color: #EE3333;
+    color: #9b9b9b;
   }
   .shop-phone:hover svg path, .shop-item__phone:hover svg path {
-    fill: #EE3333;
+    fill: #9b9b9b;
   }
 }
 
@@ -8217,10 +8218,10 @@ input[name=promocode].valid {
 }
 @media (any-hover: hover) {
   .shop-item__top:hover .shop-item__title {
-    color: #479458;
+    color: #9b9b9b;
   }
   .shop-item__top:hover svg path {
-    fill: #479458;
+    fill: #9b9b9b;
   }
 }
 .shop-item__top:not(:last-child) {

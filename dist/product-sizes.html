@@ -34,8 +34,8 @@
 	<!-- <link rel="stylesheet" href="./assets/libs/css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/libs/css/animate.min.css"> -->
+	<!-- <link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css"> -->
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
-	<link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="./assets/styles/for-view.css">
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
@@ -1638,13 +1638,14 @@
 	<script src="./assets/libs/js/jquery.fancybox.min.js"></script>
 	<script src="./assets/libs/js/lazyload.min.js"></script>
 	<script src="./assets/scripts/app.min.js"></script>
+	<!-- Скрипты, которые просили вынести -->
 	<script src="./assets/scripts/for-view.js"></script>
+	<script>
+		$.fancybox.open({
+			src: '#product-sizes-popup',
+			type: 'inline',
+		});
+	</script>
 </body>
 
 </html>
-<script>
-	$.fancybox.open({
-		src: '#product-sizes-popup',
-		type: 'inline',
-	});
-</script>
