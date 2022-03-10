@@ -117,5 +117,13 @@ $(document).ready(function () {
   $('.subscribe-item__change-btn').on('click', function () {
     $('.sale-popup__title').text($(this).parent().parent().prev().text());
   });
+
+  // форма подписки в футере
+  $('.form-row__input').on('change', function () {
+    if ($('#email-error').attr('style') === 'display: none;') {
+      $(this).parent().find('button').css('background-color', '#101112');
+      $(this).parent().find('button').css('border-color', '#101112');
+    }
+  });
 });
 

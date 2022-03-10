@@ -87,14 +87,6 @@ app.validation = {
     validateForms('#size-subscribe-popup form');
     validateForms('#discount-popup form');
 
-    // форма подписки в футере
-    $('.form-row__input').on('change', function () {
-      if ($('#email-error').attr('style') === 'display: none;') {
-        $(this).parent().find('button').css('background-color', '#101112');
-        $(this).parent().find('button').css('border-color', '#101112');
-      }
-    });
-
     /* $('#subscribe-form form').submit(function (e) {
       e.preventDefault();
       $.ajax({

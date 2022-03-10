@@ -26,7 +26,7 @@
 }
 
 .aside-popup {
-	position: absolute;
+	/* position: absolute;
 	top: 0;
 	right: -100%;
 	z-index: 101;
@@ -35,7 +35,7 @@
 	bottom: 0;
 	height: 100vh;
 	overflow-x: hidden;
-	overflow-y: auto;
+	overflow-y: auto; */
 	width: 51.5rem;
 	background-color: #fff;
 	transition: 0.3s all;
@@ -45,7 +45,7 @@
 		padding-bottom: 0;
 	}
 
-	&.active {
+	/* &.active {
 		right: 0;
 		opacity: 1;
 		visibility: visible;
@@ -58,7 +58,7 @@
 	@media (max-width: 767px) {
 		width: 100%;
 		right: -100%;
-	}
+	} */
 
 	// .aside-popup__close
 

@@ -30,6 +30,16 @@
 		&:not(:last-child) {
 			margin-bottom: 1.6rem;
 		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				.aside-filters__item-drop {
+					svg {
+						opacity: 1;
+					}
+				}
+			}
+		}
 	}
 
 	&__item-content {
@@ -42,6 +52,8 @@
 		svg {
 			width: 1.4rem;
 			height: 1.4rem;
+			opacity: 0;
+			transition: .3s opacity;
 		}
 
 		&--active {
@@ -84,6 +96,16 @@
 
 	&__sublist-title {
 		@extend %flex-row-center;
+
+		@media (any-hover: hover) {
+			&:hover {
+				.aside-filters__item-drop {
+					svg {
+						opacity: 1;
+					}
+				}
+			}
+		}
 
 		&:not(:last-child) {
 			margin-bottom: 1.2rem;

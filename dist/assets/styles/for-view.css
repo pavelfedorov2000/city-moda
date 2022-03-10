@@ -1,3 +1,4 @@
+/* Подложка под выезжающую корзину и авторизацию */
 .overlay {
 	display: none;
 	position: fixed;
@@ -9,4 +10,34 @@
 	width: 100%;
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Выезжающая корзина и авторизация */
+.aside-popup {
+  position: absolute;
+  top: 0;
+  right: -100%;
+  z-index: 101;
+  opacity: 0;
+  visibility: hidden;
+  bottom: 0;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.aside-popup.active {
+	right: 0;
+	opacity: 1;
+	visibility: visible;
+}
+
+@media (max-width: 767px) {
+  .aside-popup {
+  	width: 100%;
+  	right: -100%;
+  }
+  .aside-popup.active {
+    right: 0;
+  }
 }
