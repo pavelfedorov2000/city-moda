@@ -4,8 +4,6 @@ app.instagram = {
     init() {
         new Swiper('.instagram-slider', {
             loop: true,
-            preloadImages: false,
-            lazy: true,
             slidesPerView: 1,
             spaceBetween: 52,
             speed: 1000,

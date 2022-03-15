@@ -25,11 +25,13 @@
     &__inner {
         @media (min-width: 1025px) {
             display: grid;
-            grid-template-columns: 464 / 982 * 100% auto 1rem;
-            grid-template-rows: 59rem 7.6rem;
+            grid-template-columns: 464 / 982 * 100% 1fr 1rem;
+            grid-template-rows: 3rem 59rem - 3rem - 1.5rem 1.5rem 7.6rem;
             grid-template-areas:
+                'slider . .'
                 'slider info .'
-                'link link .';
+                'slider . .'
+                'link link link';
         }
     }
 
@@ -87,7 +89,7 @@
 
     &__content {
         grid-area: info;
-        padding: 3.4rem 1.4rem 3rem 3rem;
+        padding: 0 1.4rem 0 3rem;
         @include scrollbar;
 
         @media (max-width: 1024px) {
@@ -108,7 +110,7 @@
     // .product-popup__content-top
 
     &__content-top {
-        padding-bottom: 1.6rem;
+        padding-bottom: 1.5rem;
         border-bottom: 0.1rem solid #efefef;
 
         &:not(:last-child) {

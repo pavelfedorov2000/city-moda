@@ -1,21 +1,22 @@
 .instagram-slider {
-	.swiper-slide {
-		height: 33.6rem;
+    .swiper-slide {
+        background-color: #f4f4f6;
+        height: 33.6rem;
 
-		img {
-			transition: 1s transform;
+        img {
+            transition: 1s transform;
 
-			&.loaded {
-				@extend %cover;
-			}
-		}
+            &.loaded {
+                @extend %cover;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				img {
-					transform: scale(1.05);
-				}
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
 }
