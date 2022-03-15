@@ -31,18 +31,16 @@
 			}
 		}
 
-		&:after {
-			content: '|';
-			position: absolute;
-			@extend %pos-center-y;
-			right: 0;
+		span {
+			color: #9b9b9b;
 		}
 
-		&:last-child {
-			color: #9b9b9b;
-
+		&:not(:last-child) {
 			&:after {
-				content: '';
+				content: '|';
+				position: absolute;
+				@extend %pos-center-y;
+				right: 0;
 			}
 		}
 	}

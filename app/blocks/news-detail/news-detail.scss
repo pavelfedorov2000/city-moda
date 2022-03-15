@@ -40,25 +40,17 @@
 		@media(min-width: 768px) {
 			grid-area: details;
 		}
-	}
 
-	// .news-detail__list
+		p {
+			@extend %text-16;
 
-	&__list {
-		@extend %text-16;
+			&:not(:last-child) {
+				margin-bottom: 1.6rem;
+			}
 
-		dt {
-			font-weight: 600;
-			float: left;
-			padding-right: 0.3rem;
-		}
-	}
-
-	// .news-detail__list-item
-
-	&__list-item {
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+			b {
+				font-weight: 600;
+			}
 		}
 	}
 }

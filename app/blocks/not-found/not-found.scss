@@ -1,0 +1,39 @@
+.not-found-page {
+	padding-top: 10rem;
+
+	&__inner {
+		@extend %flex-col-center;
+		text-align: center;
+	}
+
+	&__title {
+		font-size: 11rem;
+		line-height: 130%;
+		font-weight: 600;
+		letter-spacing: 0.02em;
+		color: #C0C0C0;
+
+		&:not(:last-child) {
+			margin-bottom: 1rem;
+		}
+	}
+
+	&__subtitle {
+		font-size: 3.5rem;
+		line-height: 45 / 35 * 100%;
+		font-weight: 500;
+
+		&:not(:last-child) {
+			margin-bottom: 8rem;
+		}
+	}
+
+	.breadcrumbs {
+		&__item {
+			padding-right: 2.4rem;
+			margin-right: 2rem;
+			font-size: 1.6rem;
+			line-height: 2.4rem;
+		}
+	}
+}
