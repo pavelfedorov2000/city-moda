@@ -1,0 +1,43 @@
+@@include("blocks/head/head.html", {"title": "Новости и акции"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page news-page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Новости и акции</span>
+					</li>
+				</ol>
+			</nav>
+
+			<h1 class="title page__title">Новости и акции</h1>
+
+			<div class="empty-page news-page__empty">
+				<img class="empty-page__img" src="assets/images/icons/empty-blog.svg" alt="иконка" width="100"
+					height="100">
+				<div class="empty-page__text">Нет актуальных новостей и акций</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/popup/password-recovery.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

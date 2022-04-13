@@ -6,6 +6,43 @@
     }
 }
 
+.blog-tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 1.3rem;
+    margin: -0.7rem -0.7rem 0;
+    > * {
+        margin: 0.7rem;
+    }
+}
+
+.blog-tag {
+    @extend %vertical-align;
+    @extend %text-14;
+    font-weight: 500;
+    padding: 0.8rem 1rem;
+    border: 0.1rem solid #505661;
+    transition: 0.3s all;
+
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-left: 0.5rem;
+        path {
+            transition: 0.3s fill;
+        }
+    }
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #505661;
+            color: #fff;
+            svg path {
+                fill: #fff;
+            }
+        }
+    }
+}
+
 .blog-grid {
     display: grid;
     grid-gap: 5.2rem;
@@ -211,6 +248,12 @@
 
 .blog-page {
     padding-bottom: 13.8rem - 5.2rem;
+
+    &__title {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
 
     .pagination {
         justify-content: center;

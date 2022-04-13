@@ -33,6 +33,18 @@
 				<div class="profile-page__body">
 					<h2 class="profile-page__title">Персональные данные</h2>
 					@@include("blocks/personal/personal.html")
+					<div class="profile-page__notifies">
+						<div class="notify profile-notify success">
+							<img class="notify__icon" src="assets/images/icons/success.svg" alt="иконка" width="24"
+								height="24">
+							Данные успешно обновлены
+						</div>
+						<div class="notify profile-notify error">
+							<img class="notify__icon" src="assets/images/icons/error.svg" alt="иконка" width="24"
+								height="24">
+							Не удалось обновить данные
+						</div>
+					</div>
 				</div>
 			</div>
 		</div>

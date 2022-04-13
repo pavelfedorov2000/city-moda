@@ -1,0 +1,44 @@
+@@include("blocks/head/head.html", {"title": "Блог"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page blog-page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Блог</span>
+					</li>
+				</ol>
+			</nav>
+
+			<h1 class="title blog-page__title">Блог</h1>
+
+			<div class="empty-page blog-page__empty">
+				<img class="empty-page__img" src="assets/images/icons/empty-blog.svg" alt="иконка" width="100"
+					height="100">
+				<div class="empty-page__text">Нет актуальных статей</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+		@@include("blocks/popup/password-recovery.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/password-change/password-change.html")
+</div>
+@@include("blocks/link/link.html")
+</body>
+
+</html>

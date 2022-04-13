@@ -1,65 +1,88 @@
 .pagination {
+    @extend %vertical-align;
+    justify-content: flex-end;
+    padding: 5.2rem 0;
 
-	@extend %vertical-align;
-	justify-content: flex-end;
-	padding: 5.2rem 0;
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
 
-	@media(max-width: 767px) {
-		justify-content: center;
-	}
+    // .pagination__list
 
-	// .pagination__list
+    &__list {
+        display: flex;
+    }
 
-	&__list {
-		display: flex;
-	}
+    // .pagination__item
 
-	// .pagination__item
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4rem;
+            @media (max-width: 767px) {
+                margin-right: 3rem;
+            }
+        }
+    }
 
-	&__item {
-		&:not(:last-child) {
-			margin-right: 4rem;
-		}
-	}
+    // .pagination__link
 
-	// .pagination__link
+    &__link {
+        @extend %text-20;
+        font-weight: 500;
+        color: #9b9b9b;
+        @media (max-width: 500px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
 
-	&__link {
-		@extend %text-20;
-		font-weight: 500;
-		color: #9B9B9B;
+        &.active {
+            color: #101112;
+        }
 
-		&.active {
-			color: #101112;
-		}
+        @media (any-hover: hover) {
+            &:hover {
+                color: $red;
+            }
+        }
+    }
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: $red;
-			}
-		}
-	}
+    &__prev,
+    &__next {
+        svg {
+            width: 5.6rem;
+            height: 1.6rem;
+            @media (max-width: 767px) {
+                width: 4rem;
+                height: 1.2rem;
+            }
 
-	// .pagination__next
+            path {
+                transition: 0.3s fill;
+            }
+        }
 
-	&__next {
-		margin-left: 3.5rem;
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    fill: $red;
+                }
+            }
+        }
+    }
 
-		svg {
-			width: 5.6rem;
-			height: 1.6rem;
+    &__prev {
+        margin-right: 3.5rem;
+        @media (max-width: 767px) {
+            margin-right: 2rem;
+        }
+    }
 
-			path {
-				transition: .3s fill;
-			}
-		}
+    // .pagination__next
 
-		@media (any-hover: hover) {
-			&:hover {
-				svg path {
-					fill: $red;
-				}
-			}
-		}
-	}
+    &__next {
+        margin-left: 3.5rem;
+        @media (max-width: 767px) {
+            margin-left: 2rem;
+        }
+    }
 }
