@@ -76,8 +76,13 @@
 			sans-serif;
 
 		@media(min-width: 1025px) {
-			margin-left: 4.3rem;
 			margin-right: auto;
+		}
+
+		&:not(:first-child) {
+			@media(min-width: 1025px) {
+				margin-left: 4.3rem;
+			}
 		}
 	}
 

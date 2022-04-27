@@ -49,47 +49,51 @@
 				<div class="basket-page__body">
 					@@include("blocks/basket-table/basket-table.html")
 					<div class="basket-total">
-						<div class="basket-total__auth">
-							<a data-fancybox href="#auth-popup">Авторизуйтесь</a> чтобы воспользоваться скидкой по
-							программе
-							лояльности.
-						</div>
-						<div class="subscribe-form basket-total__promocode">
-							<div class="form-row subscribe-form__wrap">
-								<input class="form-row__input valid" name="promocode" value="WINTER2022"
-									placeholder="Введите промокод">
-								<button class="btn form-row__btn" type="button" aria-label="Ввести промокод"></button>
+						<div class="basket-total__inner">
+							<div class="basket-total__auth">
+								<a data-fancybox href="#auth-popup">Авторизуйтесь</a> чтобы воспользоваться скидкой по
+								программе
+								лояльности.
 							</div>
-						</div>
-						<dl class="basket-total__list">
-							<div class="basket-total__list-item">
-								<dt>Товаров на сумму</dd>
-								<dd>52 100 ₽</dd>
+							<div class="subscribe-form basket-total__promocode">
+								<div class="form-row subscribe-form__wrap">
+									<input class="form-row__input valid" name="promocode" value="WINTER2022"
+										placeholder="Введите промокод">
+									<button class="btn form-row__btn" type="button"
+										aria-label="Ввести промокод"></button>
+								</div>
 							</div>
-							<div class="basket-total__list-item">
-								<dt>Скидка</dt>
-								<dd><span>-9 560 ₽</span></dd>
+							<dl class="basket-total__list">
+								<div class="basket-total__list-item">
+									<dt>Товаров на сумму</dd>
+									<dd>52 100 ₽</dd>
+								</div>
+								<div class="basket-total__list-item">
+									<dt>Скидка</dt>
+									<dd><span>-9 560 ₽</span></dd>
+								</div>
+								<div class="basket-total__list-item">
+									<dt>Доставка</dd>
+									<dd>0 ₽</dd>
+								</div>
+								<div class="basket-total__list-item">
+									<dt>Промокод (10%)</dt>
+									<dd><span>-5 210 ₽</span></dd>
+								</div>
+								<div class="basket-total__list-item">
+									<dt>Программа лояльности (3%)</dt>
+									<dd><span>-1 563 ₽</span></dd>
+								</div>
+							</dl>
+							<div class="basket-total__overall">
+								<div class="basket-total__overall-title">Итого</div>
+								<div class="basket-total__overall-sum">42 540 ₽</div>
 							</div>
-							<div class="basket-total__list-item">
-								<dt>Доставка</dd>
-								<dd>0 ₽</dd>
+							<button class="btn basket-total__btn" type="submit">Отправить заказ</button>
+							<div class="basket-total__agreement">
+								Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="#">Публичной
+									оферты.</a>
 							</div>
-							<div class="basket-total__list-item">
-								<dt>Промокод (10%)</dt>
-								<dd><span>-5 210 ₽</span></dd>
-							</div>
-							<div class="basket-total__list-item">
-								<dt>Программа лояльности (3%)</dt>
-								<dd><span>-1 563 ₽</span></dd>
-							</div>
-						</dl>
-						<div class="basket-total__overall">
-							<div class="basket-total__overall-title">Итого</div>
-							<div class="basket-total__overall-sum">42 540 ₽</div>
-						</div>
-						<button class="btn basket-total__btn" type="submit">Отправить заказ</button>
-						<div class="basket-total__agreement">
-							Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="#">Публичной оферты.</a>
 						</div>
 					</div>
 					<section class="checkout">
