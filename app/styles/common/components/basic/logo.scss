@@ -1,0 +1,16 @@
+.logo {
+	&__link {
+		@extend %vertical-align;
+
+		@media(min-width: 1025px) {
+			justify-content: center;
+		}
+	}
+
+	// .logo__img
+
+	&__img {
+		height: 3.1rem;
+		object-fit: contain;
+	}
+}

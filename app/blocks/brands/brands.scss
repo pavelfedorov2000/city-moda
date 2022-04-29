@@ -68,6 +68,7 @@
 
 		img {
 			@extend %cover;
+			border-radius: 50%;
 		}
 
 		&--all {
@@ -77,6 +78,7 @@
 				width: 5rem;
 				height: 3.6rem;
 				object-fit: contain;
+				border-radius: 0;
 			}
 		}
 

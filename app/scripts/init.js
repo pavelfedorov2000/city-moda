@@ -3,6 +3,11 @@
 
     new LazyLoad();
 
+    // prevent gallery slider crashing after fancybox close
+    $('[data-fancybox="gallery"]').fancybox({
+      backFocus: false
+    });
+
     // Селект
     $('.select__title').on('click', function () {
       $(this).parents('.sale-popup__form-item').siblings().find('.select__title').removeClass('select__title--active');
@@ -23,13 +28,6 @@
     $('.shops-availability .select__option').on('click', function () {
       $('.shops-availability__content').hide();
       $(`#${$(this).data('city')}`).show();
-    });
-
-    /* $('[data-fancybox]').fancybox({
-      autoFocus: false,
-    }); */
-    $('[data-fancybox=""]').fancybox({
-      autoFocus: false
     });
 
     $('.tab').on('click', function (e) {

@@ -46,18 +46,18 @@
 			"image ."
 			"image bottom"
 		;
-		grid-template-columns: 11rem auto;
+		grid-template-columns: 11rem 1fr;
 		grid-template-rows: max-content 1.4rem max-content 0.2rem max-content;
 
 		@media(max-width: 767px) {
 			grid-template-areas:
 				"image title"
-				"image ."
 				"image list"
 				"bottom bottom"
 			;
 			grid-template-columns: 11rem auto;
-			grid-template-rows: max-content 1.4rem max-content max-content;
+			row-gap: 1.4rem;
+			grid-template-rows: max-content max-content max-content;
 		}
 
 		&:not(:last-child) {

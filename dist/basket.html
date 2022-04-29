@@ -874,7 +874,7 @@
 				<h1 class="title page__title">Ваша корзина</h1>
 				<form action="#">
 					<div class="basket-page__body">
-						<div class="basket-table">
+						<div class="basket-table basket-page__table">
 							<div class="basket-table__head">
 								<div class="basket-table__title">Товары</div>
 								<div class="basket-table__title">Кол-во</div>
@@ -1057,21 +1057,11 @@
 								<fieldset class="checkout-form__item personal-data-form">
 									<legend class="checkout-form__item-title">Персональные данные</legend>
 									<div class="personal-data-form__inputs">
-										<div class="personal-data-form__input">
-											<input class="input" name="name" placeholder="Имя*">
-										</div>
-										<div class="personal-data-form__input">
-											<input class="input" name="surname" placeholder="Фамилия*">
-										</div>
-										<div class="personal-data-form__input">
-											<input class="input" type="tel" name="phone" placeholder="Ваш телефон*">
-										</div>
-										<div class="personal-data-form__input">
-											<input class="input" type="email" name="email" placeholder="Ваш e-mail*">
-										</div>
-										<div class="personal-data-form__input">
-											<input class="input" name="city" placeholder="Город, населенный пункт*">
-										</div>
+										<input class="input personal-data-form__input" name="name" placeholder="Имя*">
+										<input class="input personal-data-form__input" name="surname" placeholder="Фамилия*">
+										<input class="input personal-data-form__input" type="tel" name="phone" placeholder="Ваш телефон*">
+										<input class="input personal-data-form__input" type="email" name="email" placeholder="Ваш e-mail*">
+										<input class="input personal-data-form__input" name="city" placeholder="Город, населенный пункт*">
 									</div>
 								</fieldset>
 								<fieldset class="checkout-form__item">
@@ -1096,18 +1086,10 @@
 												</div>
 												<div class="checkout-radio__hidden">
 													<div class="checkout-radio__inputs">
-														<div class="checkout-radio__input">
-															<input class="input" name="index" placeholder="Индекс">
-														</div>
-														<div class="checkout-radio__input">
-															<input class="input" name="street" placeholder="Улица">
-														</div>
-														<div class="checkout-radio__input">
-															<input class="input" name="home" placeholder="Дом, корпус">
-														</div>
-														<div class="checkout-radio__input">
-															<input class="input" name="flat" placeholder="Квартира/офис">
-														</div>
+														<input class="input" name="index" placeholder="Индекс">
+														<input class="input" name="street" placeholder="Улица">
+														<input class="input" name="home" placeholder="Дом, корпус">
+														<input class="input" name="flat" placeholder="Квартира/офис">
 													</div>
 												</div>
 											</div>
@@ -1714,26 +1696,22 @@
 					<form action="#">
 						<input class="region-popup__input" type="text" placeholder="Название населенного пункта">
 						<div class="region-popup__cities-row">
-							<div class="region-popup__cities-col">
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Москва</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Санкт-Петербург</span>
-								</label>
-							</div>
-							<div class="region-popup__cities-col">
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Москва</span>
-								</label>
-								<label class="region-popup__city">
-									<input class="radio-box" type="radio" name="city">
-									<span class="radio-text">г. Санкт-Петербург</span>
-								</label>
-							</div>
+							<label class="region-popup__city">
+								<input class="radio-box" type="radio" name="city">
+								<span class="radio-text">г. Москва</span>
+							</label>
+							<label class="region-popup__city">
+								<input class="radio-box" type="radio" name="city">
+								<span class="radio-text">г. Санкт-Петербург</span>
+							</label>
+							<label class="region-popup__city">
+								<input class="radio-box" type="radio" name="city">
+								<span class="radio-text">г. Москва</span>
+							</label>
+							<label class="region-popup__city">
+								<input class="radio-box" type="radio" name="city">
+								<span class="radio-text">г. Санкт-Петербург</span>
+							</label>
 						</div>
 					</form>
 				</div>

@@ -60,22 +60,25 @@
 
 	&__cities-row {
 		display: grid;
+		row-gap: 1.6rem;
 
 		@media(min-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
+			height: 10rem;
+			overflow-y: auto;
+			@include scrollbar;
 		}
 
-		@media(max-width: 767px) {
-			grid-gap: 1.6rem;
-		}
+		/* @media(min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		} */
 	}
 
 	&__city {
 		display: block;
 
-		&:not(:last-child) {
+		/* &:not(:last-child) {
 			margin-bottom: 1.6rem;
-		}
+		} */
 
 		.radio-text {
 			@extend %text-13;

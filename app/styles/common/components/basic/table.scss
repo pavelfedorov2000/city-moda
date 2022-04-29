@@ -1,0 +1,33 @@
+table {
+	width: 100%;
+	text-align: center;
+	overflow-x: auto;
+
+	th {
+		@extend %text-14;
+		font-weight: 400;
+		//color: #777;
+		color: #9b9b9b;
+		padding-top: 2.4rem;
+		white-space: nowrap;
+		padding: 2.4rem 1.25rem 0;
+	}
+
+	tbody {
+		tr {
+			&:nth-child(even) {
+				background-color: #f4f4f6;
+			}
+
+			td {
+				@extend %text-13;
+				//color: #101112;
+				padding: 2.1rem 0;
+
+				b {
+					font-weight: 600;
+				}
+			}
+		}
+	}
+}
