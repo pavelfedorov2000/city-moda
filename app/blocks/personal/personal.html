@@ -1,30 +1,69 @@
-<form action="#" class="profile-personal profile-page__form">
-	<input class="input" name="name" value="Иванка">
-	<input class="input" name="surname" value="Иванова">
-	<input class="input" name="phone" value="+7 (999) 999-99-99 " type="tel">
-	<input class="input" name="email" value="post@mail.ru" type="email">
-	<div class="profile-personal__row-field profile-personal__gender">
-		<div class="profile-personal__field-title">Пол</div>
-		<div class="profile-personal__gender-radios">
-			<label class="profile-personal__gender-radio">
-				<input class="radio-box" type="radio" name="gender" checked>
-				<span class="radio-style">
-					<span class="radio-text">Женский</span>
-				</span>
-			</label>
-			<label class="profile-personal__gender-radio">
-				<input class="radio-box" type="radio" name="gender">
-				<span class="radio-style">
-					<span class="radio-text">Мужской</span>
-				</span>
-			</label>
+<div class="profile-personal profile-page__form">
+	<form action="#" id="personal-data" class="profile-personal__item">
+		<div class="profile-personal__item-left">
+			<div class="profile-personal__item-title">Личные данные</div>
+			<div class="profile-personal__fields">
+				<label class="input profile-personal__input">
+					<span class="input__label">Имя*</span>
+					<input name="name">
+				</label>
+				<label class="input profile-personal__input">
+					<span class="input__label">Фамилия</span>
+					<input name="surname">
+				</label>
+				<div class="profile-personal__row-field profile-personal__gender">
+					<div class="profile-personal__field-title">Пол</div>
+					<div class="profile-personal__gender-radios">
+						<label class="profile-personal__gender-radio">
+							<input class="radio-box" type="radio" name="gender" checked>
+							<span class="radio-style">
+								<span class="radio-text">Женский</span>
+							</span>
+						</label>
+						<label class="profile-personal__gender-radio">
+							<input class="radio-box" type="radio" name="gender">
+							<span class="radio-style">
+								<span class="radio-text">Мужской</span>
+							</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="profile-personal__item-buttons">
+			<button class="link-btn" type="button">Изменить личные данные</button>
+			<button class="btn profile-personal__btn" type="submit">Сохранить</button>
+		</div>
+	</form>
+	<form action="#" id="contact-data" class="profile-personal__item">
+		<div class="profile-personal__item-left">
+			<div class="profile-personal__item-title">Контактные данные</div>
+			<div class="profile-personal__fields">
+				<label class="input profile-personal__input">
+					<span class="input__label">Ваш телефон</span>
+					<input name="phone" type="tel">
+				</label>
+				<label class="input profile-personal__input">
+					<span class="input__label">Ваш e-mail</span>
+					<input name="email" type="email">
+				</label>
+			</div>
+		</div>
+		<div class="profile-personal__item-buttons">
+			<button class="link-btn" type="button">Изменить личные данные</button>
+			<button class="btn profile-personal__btn" type="submit">Сохранить</button>
+		</div>
+	</form>
+	<div class="profile-personal__item">
+		<div class="profile-personal__fields">
+			<div class="profile-personal__row-field profile-personal__password">
+				<div class="profile-personal__field-title">Пароль</div>
+				<a data-fancybox href="#password-change"
+					class="input profile-personal__change-password-btn">Изменить</a>
+			</div>
 		</div>
 	</div>
-	<div class="profile-personal__row-field profile-personal__password">
-		<div class="profile-personal__field-title">Пароль</div>
-		<a data-fancybox href="#password-change" class="input profile-personal__change-password-btn">Изменить</a>
-	</div>
-	<button class="btn profile-personal__btn" type="submit">
+	<!-- <button class="btn profile-personal__btn" type="submit">
 		Сохранить изменения
-	</button>
-</form>
+	</button> -->
+</div>

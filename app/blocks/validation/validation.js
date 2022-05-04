@@ -10,7 +10,6 @@ app.validation = {
       return value.replace(/\D+/g, '').length > 1;
     });
 
-
     function validateForms(form) {
       $(form).validate({
         rules: {
@@ -73,9 +72,6 @@ app.validation = {
           home: "Пожалуйста, заполните поле.",
           flat: "Пожалуйста, заполните поле.",
         },
-        /* success: function () {
-        	
-        }, */
       });
     }
 
@@ -86,6 +82,8 @@ app.validation = {
     validateForms('#password-change form');
     validateForms('#size-subscribe-popup form');
     validateForms('#discount-popup form');
+    validateForms('#personal-data');
+    validateForms('#contact-data');
 
     /* $('#subscribe-form form').submit(function (e) {
       e.preventDefault();

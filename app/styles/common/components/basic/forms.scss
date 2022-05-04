@@ -129,6 +129,37 @@
 	&::placeholder {
 		color: #777;
 	}
+
+	&.focus {
+		border-color: $dark;
+	}
+
+	input[disabled] {
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		background-color: #F4F4F6;
+		border-color: #C0C0C0;
+		color: #777;
+	}
+
+	&__label {
+		position: absolute;
+		top: 1.25rem;
+		left: 1.4rem;
+		z-index: 10;
+		@extend %text-13;
+		color: #777;
+		transition: .3s all;
+
+		&.focus {
+			top: 0.4rem;
+			font-size: 1.1rem;
+			line-height: 1.6rem;
+		}
+	}
 }
 
 .pass-btn {

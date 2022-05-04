@@ -22,7 +22,6 @@
       $(this).parent().slideUp('300');
     });
 
-
     // Переключение списка магазинов в зависимости от выбранного города (карточка товара)
     $(`#${$('.shops-availability__select .select__content').children().first().data('city')}`).show();
     $('.shops-availability .select__option').on('click', function () {

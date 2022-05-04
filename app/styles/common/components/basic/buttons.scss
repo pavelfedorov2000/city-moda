@@ -162,3 +162,16 @@ a {
 		}
 	}
 }
+
+.link-btn {
+	@extend %text-13;
+	color: #777;
+	text-decoration: underline;
+	transition: .3s color;
+
+	@media (any-hover: hover) {
+		&:hover {
+			color: $dark;
+		}
+	}
+}
