@@ -57,8 +57,7 @@
 	// .basket-table__title
 
 	&__title {
-		@extend %text-14;
-		//@extend %text-13;
+		@extend %text-13;
 		//color: #505661;
 
 		&:nth-child(1) {
@@ -303,7 +302,6 @@
 	// .counter__input
 
 	&__input {
-		@extend %text-14;
 		@extend %flex-center;
 		font-family: 'Raleway', sans-serif;
 		text-align: center;

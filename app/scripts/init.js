@@ -63,6 +63,7 @@
     app.feedback.init();
     app.pageup.init();
     app.auth.init();
+    app.pickupPopup.init();
     //app.productSizes.init();
     if ($('main').hasClass('basket-page')) {
       app.basketTotal.init();

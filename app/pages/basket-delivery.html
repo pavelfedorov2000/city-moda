@@ -180,7 +180,8 @@
 												</dl>
 											</div>
 											<div class="checkout-delivery__data">
-												<a href="#" class="btn checkout-delivery__btn btn--border">
+												<a class="btn checkout-delivery__btn btn--border" data-fancybox
+													href="#pickup-popup" data-touch="false" href="javascript:;">
 													Изменить
 													пункт выдачи
 												</a>
@@ -246,12 +247,14 @@
 		@@include("blocks/drop-basket/drop-basket.html")
 		@@include("blocks/popup/password-recovery.html")
 	</div>
+	@@include("blocks/pickup/pickup-popup/pickup-popup.html")
 	@@include("blocks/popup/discount-popup.html")
 	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/password-change/password-change.html")
+	@@include("blocks/popup/password-change.html")
 	<!-- @@include("blocks/pickup-popup/pickup-popup.html") -->
 </div>
 @@include("blocks/link/link.html")
+<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 </body>
 
 </html>

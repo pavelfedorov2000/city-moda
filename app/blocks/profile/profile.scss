@@ -1,5 +1,4 @@
 .back-link {
-	@extend %text-14;
 	color: $green;
 	display: inline-flex;
 	align-items: flex-start;
@@ -120,7 +119,9 @@
 			}
 		}
 
-		h4 {
+		h4,
+		h5,
+		h6 {
 			@extend %text-16;
 			font-weight: 600;
 

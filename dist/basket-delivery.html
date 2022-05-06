@@ -1131,7 +1131,7 @@
 													</dl>
 												</div>
 												<div class="checkout-delivery__data">
-													<a href="#" class="btn checkout-delivery__btn btn--border">
+													<a class="btn checkout-delivery__btn btn--border" data-fancybox href="#pickup-popup" data-touch="false" href="javascript:;">
 														Изменить
 														пункт выдачи
 													</a>
@@ -1679,6 +1679,190 @@
 				</div>
 			</div>
 		</div>
+		<div style="display: none;" id="pickup-popup" class="pickup-popup">
+			<div class="pickup-popup__inner">
+				<div class="pickup-popup__body">
+					<div class="pickup-popup__title">Пункты самовывоза</div>
+					<div class="pickup-popup__filers pickup-filters">
+						<div class="pickup-filters__title">Фильтры:</div>
+						<form action="#" class="pickup-filters__row">
+							<div class="pickup-filters__item">
+								<label class="pickup-filters__item-box">
+									<input class="check-box" type="checkbox">
+									<div class="check-inner">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#101112" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#101112" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M6.99951 6.125V12.8333" stroke="#101112" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#101112" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+											<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#101112" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+										</svg>
+										<span class="check-text">С примеркой</span>
+									</div>
+								</label>
+							</div>
+							<div class="pickup-filters__item">
+								<label class="pickup-filters__item-box">
+									<input class="check-box" type="checkbox" checked>
+									<span class="check-inner">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#101112" />
+											<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#101112" />
+										</svg>
+										<span class="check-text">Оплата картой</span>
+									</span>
+								</label>
+								<button class="pickup-filters__item-remove" type="button">
+									<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M10 1L9 0L5 4L1 0L0 1L4 5L0 9L1 10L5 6L9 10L10 9L6 5L10 1Z" fill="white" />
+									</svg>
+								</button>
+							</div>
+							<div class="pickup-filters__item">
+								<label class="pickup-filters__item-box">
+									<input class="check-box" type="checkbox">
+									<div class="check-inner">
+										<svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M8.16683 4.66675H5.8335V3.50008H8.16683V4.66675ZM11.6668 2.33341V11.6667C11.6668 12.3142 11.1477 12.8334 10.5002 12.8334H3.50016C2.85266 12.8334 2.3335 12.3142 2.3335 11.6667V2.33341C2.3335 2.024 2.45641 1.72725 2.6752 1.50846C2.894 1.28966 3.19074 1.16675 3.50016 1.16675H10.5002C10.8096 1.16675 11.1063 1.28966 11.3251 1.50846C11.5439 1.72725 11.6668 2.024 11.6668 2.33341ZM10.5002 7.58342H3.50016V11.6667H10.5002V7.58342ZM10.5002 2.33341H3.50016V6.41675H10.5002V2.33341ZM8.16683 8.75008H5.8335V9.91675H8.16683V8.75008Z" fill="#101112" />
+										</svg>
+										<span class="check-text">Постамат</span>
+									</div>
+								</label>
+							</div>
+						</form>
+					</div>
+					<div class="pickup-popup__shops pickup-shops">
+						<div class="pickup-shops__item pickup-shop">
+							<div class="pickup-shop__content">
+								<div class="pickup-shop__title">Магазин</div>
+								<ul class="pickup-shop__info">
+									<li>пр. Лиговский, дом 50, корпус 2</li>
+									<li>пн-вск: 09:00-21:00</li>
+								</ul>
+								<div class="pickup-shop__delivery-time">Срок доставки: <span>24 ноября</span></div>
+								<button class="btn pickup-shop__btn" type="button">Выбрать этот магазин</button>
+							</div>
+							<div class="pickup-shop__filters">
+								<svg class="pickup-shop__filter pickup-shop__filter--card" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#505661" />
+									<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#505661" />
+								</svg>
+								<svg class="pickup-shop__filter pickup-shop__filter--clothes" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6.99951 6.125V12.8333" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="pickup-shops__item pickup-shop">
+							<div class="pickup-shop__content">
+								<div class="pickup-shop__title">Магазин</div>
+								<ul class="pickup-shop__info">
+									<li>пр. Лиговский, дом 50, корпус 2</li>
+									<li>пн-вск: 09:00-21:00</li>
+								</ul>
+								<div class="pickup-shop__delivery-time">Срок доставки: <span>24 ноября</span></div>
+								<button class="btn pickup-shop__btn" type="button">Выбрать этот магазин</button>
+							</div>
+							<div class="pickup-shop__filters">
+								<svg class="pickup-shop__filter pickup-shop__filter--card" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#505661" />
+									<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#505661" />
+								</svg>
+								<svg class="pickup-shop__filter pickup-shop__filter--clothes" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6.99951 6.125V12.8333" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="pickup-shops__item pickup-shop">
+							<div class="pickup-shop__content">
+								<div class="pickup-shop__title">Магазин</div>
+								<ul class="pickup-shop__info">
+									<li>пр. Лиговский, дом 50, корпус 2</li>
+									<li>пн-вск: 09:00-21:00</li>
+								</ul>
+								<div class="pickup-shop__delivery-time">Срок доставки: <span>24 ноября</span></div>
+								<button class="btn pickup-shop__btn" type="button">Выбрать этот магазин</button>
+							</div>
+							<div class="pickup-shop__filters">
+								<svg class="pickup-shop__filter pickup-shop__filter--card" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#505661" />
+									<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#505661" />
+								</svg>
+								<svg class="pickup-shop__filter pickup-shop__filter--clothes" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6.99951 6.125V12.8333" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="pickup-shops__item pickup-shop">
+							<div class="pickup-shop__content">
+								<div class="pickup-shop__title">Магазин</div>
+								<ul class="pickup-shop__info">
+									<li>пр. Лиговский, дом 50, корпус 2</li>
+									<li>пн-вск: 09:00-21:00</li>
+								</ul>
+								<div class="pickup-shop__delivery-time">Срок доставки: <span>24 ноября</span></div>
+								<button class="btn pickup-shop__btn" type="button">Выбрать этот магазин</button>
+							</div>
+							<div class="pickup-shop__filters">
+								<svg class="pickup-shop__filter pickup-shop__filter--card" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#505661" />
+									<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#505661" />
+								</svg>
+								<svg class="pickup-shop__filter pickup-shop__filter--clothes" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6.99951 6.125V12.8333" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+						<div class="pickup-shops__item pickup-shop">
+							<div class="pickup-shop__content">
+								<div class="pickup-shop__title">Магазин</div>
+								<ul class="pickup-shop__info">
+									<li>пр. Лиговский, дом 50, корпус 2</li>
+									<li>пн-вск: 09:00-21:00</li>
+								</ul>
+								<div class="pickup-shop__delivery-time">Срок доставки: <span>24 ноября</span></div>
+								<button class="btn pickup-shop__btn" type="button">Выбрать этот магазин</button>
+							</div>
+							<div class="pickup-shop__filters">
+								<svg class="pickup-shop__filter pickup-shop__filter--card" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M0 3.5C0 3.03587 0.184374 2.59075 0.512563 2.26256C0.840752 1.93437 1.28587 1.75 1.75 1.75H12.25C12.7141 1.75 13.1592 1.93437 13.4874 2.26256C13.8156 2.59075 14 3.03587 14 3.5V10.5C14 10.9641 13.8156 11.4092 13.4874 11.7374C13.1592 12.0656 12.7141 12.25 12.25 12.25H1.75C1.28587 12.25 0.840752 12.0656 0.512563 11.7374C0.184374 11.4092 0 10.9641 0 10.5V3.5ZM1.75 2.625C1.51794 2.625 1.29538 2.71719 1.13128 2.88128C0.967187 3.04538 0.875 3.26794 0.875 3.5V4.375H13.125V3.5C13.125 3.26794 13.0328 3.04538 12.8687 2.88128C12.7046 2.71719 12.4821 2.625 12.25 2.625H1.75ZM13.125 6.125H0.875V10.5C0.875 10.7321 0.967187 10.9546 1.13128 11.1187C1.29538 11.2828 1.51794 11.375 1.75 11.375H12.25C12.4821 11.375 12.7046 11.2828 12.8687 11.1187C13.0328 10.9546 13.125 10.7321 13.125 10.5V6.125Z" fill="#505661" />
+									<path d="M1.75 8.75C1.75 8.51794 1.84219 8.29538 2.00628 8.13128C2.17038 7.96719 2.39294 7.875 2.625 7.875H3.5C3.73206 7.875 3.95462 7.96719 4.11872 8.13128C4.28281 8.29538 4.375 8.51794 4.375 8.75V9.625C4.375 9.85706 4.28281 10.0796 4.11872 10.2437C3.95462 10.4078 3.73206 10.5 3.5 10.5H2.625C2.39294 10.5 2.17038 10.4078 2.00628 10.2437C1.84219 10.0796 1.75 9.85706 1.75 9.625V8.75Z" fill="#505661" />
+								</svg>
+								<svg class="pickup-shop__filter pickup-shop__filter--clothes" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M3.20817 10.7917H1.1665V3.50008L2.62484 2.04175L4.6665 1.16675H9.33317L11.3748 2.04175L12.8332 3.50008V10.7917H10.7915" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M10.7913 5.5415V12.8332H3.20801V5.5415" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M6.99951 6.125V12.8333" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M2.62451 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+									<path d="M11.3745 2.0415L6.99951 6.12484" stroke="#505661" stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
+								</svg>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="pickup-popup__map">
+					<form action="#" class="pickup-popup__search pickup-search">
+						<input type="text" class="pickup-search__input" placeholder="Поиск пункта по адресу" name="pickup_search">
+						<button class="btn pickup-search__btn btn--black" type="submit">Найти</button>
+					</form>
+					<div id="pickup-map"></div>
+				</div>
+			</div>
+		</div>
 		<!-- Попап арим скидку (появляется спустя 2 минуты пребывания на сайте) -->
 		<div style="display: none;" id="discount-popup" class="popup mini-popup">
 			<div class="mini-popup__inner">
@@ -1749,26 +1933,19 @@
 			</div>
 		</div>
 		<!-- End Попап Где вы находитесь? -->
-		<!-- Попап Изменение пароля -->
-		<div style="display: none;" id="password-change" class="popup password-change">
-			<div class="password-change__title">Изменение пароля</div>
-			<form action="#" class="password-change__form">
-				<div class="input-wrap">
-					<input id="password" class="input" type="password" name="current_password" placeholder="Введите ваш текущий пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input id="new_password" class="input" type="password" name="new_password" placeholder="Введите новый пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input class="input" type="password" name="repeat_new_password" placeholder="Повторите пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<button class="btn password-change__form-btn" type="submit" disabled>Сохранить новый пароль</button>
+		<div style="display: none;" id="password-change" class="popup small-popup">
+			<div class="small-popup__title">Изменение пароля</div>
+			<div class="small-popup__text">
+				Для изменения пароля укажите e-mail, привязанный к профилю
+			</div>
+			<form action="#" class="small-popup__form">
+				<label class="input input-label">
+					<span class="input__label">Ваш e-mail</span>
+					<input name="email" type="email">
+				</label>
+				<button class="btn small-popup__form-btn" type="submit">Далее</button>
 			</form>
 		</div>
-		<!-- End Попап Изменение пароля -->
 	</div>
 	<script src="./assets/libs/js/jquery.min.js"></script>
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>
@@ -1779,6 +1956,7 @@
 	<script src="./assets/scripts/app.min.js"></script>
 	<!-- Скрипты, которые просили вынести -->
 	<script src="./assets/scripts/for-view.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
 </body>
 
 </html>

@@ -71,9 +71,6 @@
 
 	&__shops-search {
 		@extend .header__action;
-		@extend %text-14;
-		font-family: 'Raleway',
-			sans-serif;
 
 		@media(min-width: 1025px) {
 			margin-right: auto;
@@ -89,7 +86,6 @@
 	// .header__contact
 
 	&__contact {
-		@extend %text-14;
 
 		@media(min-width: 1025px) {
 			display: flex;
@@ -380,7 +376,6 @@
 
 	display: inline-flex;
 	position: relative;
-	@extend %text-14;
 
 	&__title {
 		//color: #505661;

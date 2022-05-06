@@ -68,7 +68,6 @@
 		grid-template-columns: repeat(2, 1fr);
 		align-items: center;
 		padding: 0.6rem 0;
-		@extend %text-14;
 		border-bottom: 0.1rem dashed #EAEAEA;
 
 		@media(max-width: 1024px) {

@@ -1,7 +1,6 @@
 // Custom select
 .select {
 	position: relative;
-	@extend %text-14;
 
 	&__title {
 		@extend %vertical-align;

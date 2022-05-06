@@ -1,140 +1,139 @@
 #product-sizes-popup {
-    @media (min-width: 1025px) {
-        width: 89.5rem !important;
-    }
+	@media (min-width: 1025px) {
+		width: 89.5rem !important;
+	}
 
-    @media (max-width: 1024px) {
-        width: 100vw;
-    }
+	@media (max-width: 1024px) {
+		width: 100vw;
+	}
 }
 
 .product-sizes-popup {
-    padding-right: 0.7rem;
+	padding-right: 0.7rem;
 
-    &__inner {
-        @include scrollbar;
-        padding: 4rem 2.8rem 6.2rem 4rem;
+	&__inner {
+		@include scrollbar;
+		padding: 4rem 2.8rem 6.2rem 4rem;
 
-        @media (min-width: 768px) {
-            height: 66.7rem;
-        }
+		@media (min-width: 768px) {
+			height: 66.7rem;
+		}
 
-        @media (max-width: 1024px) {
-            padding: 3rem;
-        }
+		@media (max-width: 1024px) {
+			padding: 3rem;
+		}
 
-        @media (max-width: 500px) {
-            padding-left: 1.5rem;
-            padding-right: 1.5rem;
-        }
-    }
+		@media (max-width: 500px) {
+			padding-left: 1.5rem;
+			padding-right: 1.5rem;
+		}
+	}
 
-    // .product-sizes-popup__top
+	// .product-sizes-popup__top
 
-    &__top {
-        display: grid;
-        grid-template-columns: max-content 12.2rem;
-        grid-template-areas:
-            'title logo'
-            'subtitle logo';
-        row-gap: 1.8rem;
-        padding-bottom: 3rem;
-        border-bottom: 0.1rem solid #eaeaea;
+	&__top {
+		display: grid;
+		grid-template-columns: max-content 12.2rem;
+		grid-template-areas:
+			'title logo'
+			'subtitle logo';
+		row-gap: 1.8rem;
+		padding-bottom: 3rem;
+		border-bottom: 0.1rem solid #eaeaea;
 
-        @media (max-width: 767px) {
-            grid-template-columns: 12.2rem max-content;
-            grid-template-areas:
-                'logo .'
-                'title title'
-                'subtitle subtitle';
-        }
+		@media (max-width: 767px) {
+			grid-template-columns: 12.2rem max-content;
+			grid-template-areas:
+				'logo .'
+				'title title'
+				'subtitle subtitle';
+		}
 
-        @media (min-width: 768px) {
-            justify-content: space-between;
-        }
-    }
+		@media (min-width: 768px) {
+			justify-content: space-between;
+		}
+	}
 
-    &__logo {
-        height: 9rem;
-    }
+	&__logo {
+		height: 9rem;
+	}
 
-    // .product-sizes-popup__title
+	// .product-sizes-popup__title
 
-    &__title {
-        @extend %text-35;
-        font-weight: 500;
-        grid-area: title;
+	&__title {
+		@extend %text-35;
+		font-weight: 500;
+		grid-area: title;
 
-        @media (max-width: 767px) {
-            font-size: 2rem;
-            line-height: 3rem;
-        }
-    }
+		@media (max-width: 767px) {
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
 
-    // .product-sizes-popup__subtitle
+	// .product-sizes-popup__subtitle
 
-    &__subtitle {
-        @extend %text-16;
-        grid-area: subtitle;
-    }
+	&__subtitle {
+		@extend %text-16;
+		grid-area: subtitle;
+	}
 
-    // .product-sizes-popup__logo
+	// .product-sizes-popup__logo
 
-    &__logo {
-        grid-area: logo;
-    }
+	&__logo {
+		grid-area: logo;
+	}
 
-    // .product-sizes-popup__table
+	// .product-sizes-popup__table
 
-    &__table {
-        &:not(:last-child) {
-            margin-bottom: 5rem;
-        }
-    }
+	&__table {
+		&:not(:last-child) {
+			margin-bottom: 5rem;
+		}
+	}
 }
 
 .how-define-size {
-    // .how-define-size__title
+	// .how-define-size__title
 
-    &__title {
-        @extend %text-20;
-        font-weight: 500;
+	&__title {
+		@extend %text-20;
+		font-weight: 500;
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: 3rem;
+		}
+	}
 
-    // .how-define-size__inner
+	// .how-define-size__inner
 
-    &__inner {
-        display: grid;
-        grid-gap: 5rem;
+	&__inner {
+		display: grid;
+		grid-gap: 5rem;
 
-        @media (max-width: 1024px) {
-            grid-gap: 3rem;
-        }
+		@media (max-width: 1024px) {
+			grid-gap: 3rem;
+		}
 
-        @media (min-width: 768px) {
-            grid-template-columns: 1fr 24.3rem;
-        }
-    }
+		@media (min-width: 768px) {
+			grid-template-columns: 1fr 24.3rem;
+		}
+	}
 
-    // .how-define-size__content
+	// .how-define-size__content
 
-    &__content {
-        p {
-            @extend %text-14;
+	&__content {
+		p {
 
-            &:not(:last-child) {
-                margin-bottom: 2rem;
-            }
-        }
-    }
+			&:not(:last-child) {
+				margin-bottom: 2rem;
+			}
+		}
+	}
 
-    &__img {
-        @media (min-width: 768px) {
-            height: 32rem;
-        }
-    }
+	&__img {
+		@media (min-width: 768px) {
+			height: 32rem;
+		}
+	}
 }

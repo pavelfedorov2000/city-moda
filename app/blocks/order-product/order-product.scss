@@ -1,6 +1,5 @@
 .order-details-table {
 
-	@extend %text-14;
 	font-weight: 500;
 	@extend %flex-row;
 	align-items: flex-start;
@@ -76,7 +75,6 @@
 	// .order-rable__btn
 
 	&__btn {
-		@extend %text-14;
 		font-weight: 500;
 		padding: 1.4rem 3.6rem;
 	}

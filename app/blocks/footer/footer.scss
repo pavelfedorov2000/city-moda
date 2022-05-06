@@ -138,7 +138,6 @@
 	// .footer__link
 
 	&__link {
-		@extend %text-14;
 		font-weight: 600;
 		display: block;
 
@@ -277,8 +276,7 @@
 	// .footer__list-link
 
 	&__list-link {
-		//@extend %text-13;
-		@extend %text-14;
+		@extend %text-13;
 		color: #000;
 		//color: #505661;
 	}
@@ -299,7 +297,6 @@
 
 	&__bottom {
 		@extend %text-10;
-		//@extend %text-12;
 		font-weight: 500;
 		//color: #505661;
 		padding: 3.1rem 0;

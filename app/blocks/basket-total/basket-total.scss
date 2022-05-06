@@ -16,7 +16,6 @@
 	// .basket-total__auth
 
 	&__auth {
-		@extend %text-14;
 		max-width: 33.3rem;
 
 		&:not(:last-child) {
@@ -25,7 +24,6 @@
 	}
 
 	&__auth-btn {
-		@extend %text-14;
 		font-weight: 600;
 		transition: .3s color;
 
@@ -39,8 +37,14 @@
 	// .basket-total__promocode
 
 	&__promocode {
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 0.4rem;
+			}
+		}
+
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: 1.5rem;
 		}
 	}
 
@@ -59,8 +63,7 @@
 
 	&__list-item {
 		@extend %flex-row;
-		//@extend %text-13;
-		@extend %text-14;
+		@extend %text-13;
 		//color: #505661;
 
 		&:not(:last-child) {
@@ -89,7 +92,6 @@
 	// .basket-total__btn
 
 	&__btn {
-		@extend %text-14;
 		font-weight: 600;
 		width: 100%;
 		padding: 1.35rem;
@@ -125,11 +127,45 @@ input[name=promocode] {
 	&::placeholder {
 		text-transform: none;
 	}
+}
 
-	&.valid {
-		background-image: url(../images/icons/green-check.svg);
-		background-size: 1.6rem 1.6rem;
-		background-position: calc(100% - 5.2rem - 2rem) 50%;
-		background-repeat: no-repeat;
+.promocode {
+	&__row {
+		@extend %flex-row-center;
+	}
+
+	&__delete-notify {
+		@extend %text-14;
+	}
+}
+
+.promocode-notify {
+	position: relative;
+	padding-left: 2.2rem;
+
+	&::before {
+		content: '';
+		position: absolute;
+		@extend %pos-center-y;
+		left: 0;
+		width: 1.6rem;
+		height: 1.6rem;
+		@extend %bg-contain;
+	}
+
+	&--success {
+		color: $green;
+
+		&:before {
+			background-image: url(../images/icons/green-check.svg);
+		}
+	}
+
+	&--error {
+		color: $red;
+
+		&:before {
+			background-image: url(../images/icons/error-cross.svg);
+		}
 	}
 }

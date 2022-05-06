@@ -15,7 +15,6 @@
 
 .label {
 	@extend %flex-center;
-	@extend %text-14;
 	font-weight: 600;
 	color: #fff;
 	width: 4.5rem;
@@ -196,7 +195,6 @@
 	// .catalog-card__subtitle
 
 	&__subtitle {
-		@extend %text-14;
 		text-transform: uppercase;
 		color: #9b9b9b;
 		margin-bottom: 0.7rem;

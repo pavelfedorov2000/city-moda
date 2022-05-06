@@ -859,19 +859,25 @@
 					</nav>
 					<div class="profile-page__body">
 						<h2 class="profile-page__title">Персональные данные</h2>
-						<div class="profile-personal profile-page__form">
-							<form action="#" id="personal-data" class="profile-personal__item">
-								<div class="profile-personal__item-left">
-									<div class="profile-personal__item-title">Личные данные</div>
+						<form action="#" class="profile-personal profile-page__form">
+							<div class="profile-personal__item">
+								<div class="profile-personal__item-title">Личные данные</div>
+								<div class="profile-personal__row">
 									<div class="profile-personal__fields">
-										<label class="input profile-personal__input">
-											<span class="input__label">Имя*</span>
-											<input name="name">
+										<label class="input input-label">
+											<span class="input__label focus">Имя*</span>
+											<input value="Иванка" name="name" readonly>
 										</label>
-										<label class="input profile-personal__input">
-											<span class="input__label">Фамилия</span>
-											<input name="surname">
+										<label class="input input-label">
+											<span class="input__label focus">Фамилия</span>
+											<input value="Иванова" name="surname" readonly>
 										</label>
+									</div>
+									<a href="#personal-change" class="link-btn" data-fancybox>Изменить личные
+										данные</a>
+								</div>
+								<div class="profile-personal__row">
+									<div class="profile-personal__fields">
 										<div class="profile-personal__row-field profile-personal__gender">
 											<div class="profile-personal__field-title">Пол</div>
 											<div class="profile-personal__gender-radios">
@@ -891,42 +897,39 @@
 										</div>
 									</div>
 								</div>
-								<div class="profile-personal__item-buttons">
-									<button class="link-btn" type="button">Изменить личные данные</button>
-									<button class="btn profile-personal__btn" type="submit">Сохранить</button>
-								</div>
-							</form>
-							<form action="#" id="contact-data" class="profile-personal__item">
-								<div class="profile-personal__item-left">
-									<div class="profile-personal__item-title">Контактные данные</div>
-									<div class="profile-personal__fields">
-										<label class="input profile-personal__input">
-											<span class="input__label">Ваш телефон</span>
-											<input name="phone" type="tel">
-										</label>
-										<label class="input profile-personal__input">
-											<span class="input__label">Ваш e-mail</span>
-											<input name="email" type="email">
-										</label>
-									</div>
-								</div>
-								<div class="profile-personal__item-buttons">
-									<button class="link-btn" type="button">Изменить личные данные</button>
-									<button class="btn profile-personal__btn" type="submit">Сохранить</button>
-								</div>
-							</form>
+							</div>
 							<div class="profile-personal__item">
-								<div class="profile-personal__fields">
-									<div class="profile-personal__row-field profile-personal__password">
-										<div class="profile-personal__field-title">Пароль</div>
-										<a data-fancybox href="#password-change" class="input profile-personal__change-password-btn">Изменить</a>
+								<div class="profile-personal__item-title">Контактные данные</div>
+								<div class="profile-personal__row">
+									<div class="profile-personal__fields">
+										<label class="input input-label">
+											<span class="input__label focus">Ваш телефон</span>
+											<input value="+7 (999) 999-99-99 " name="phone" type="tel" readonly>
+										</label>
 									</div>
+									<a href="#phone-change" class="link-btn" data-fancybox>Изменить номер телефона</a>
+								</div>
+								<div class="profile-personal__row">
+									<div class="profile-personal__fields">
+										<label class="input input-label">
+											<span class="input__label focus">Ваш e-mail</span>
+											<input value="post@mail.ru" name="email" type="email" readonly>
+										</label>
+									</div>
+									<a href="#email-change" class="link-btn" data-fancybox>Изменить email</a>
+								</div>
+							</div>
+							<div class="profile-personal__item">
+								<div class="profile-personal__row">
+									<div class="profile-personal__item-title">Безопасность: пароль</div>
+									<a data-fancybox href="#password-change" class="link-btn">Изменить
+										пароль</a>
 								</div>
 							</div>
 							<!-- <button class="btn profile-personal__btn" type="submit">
 		Сохранить изменения
 	</button> -->
-						</div>
+						</form>
 						<div class="profile-page__notifies">
 							<div class="notify profile-notify success">
 								<img class="notify__icon" src="assets/images/icons/success.svg" alt="иконка" width="24" height="24">
@@ -1506,26 +1509,63 @@
 			</div>
 		</div>
 		<!-- End Попап Где вы находитесь? -->
-		<!-- Попап Изменение пароля -->
-		<div style="display: none;" id="password-change" class="popup password-change">
-			<div class="password-change__title">Изменение пароля</div>
-			<form action="#" class="password-change__form">
-				<div class="input-wrap">
-					<input id="password" class="input" type="password" name="current_password" placeholder="Введите ваш текущий пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input id="new_password" class="input" type="password" name="new_password" placeholder="Введите новый пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<div class="input-wrap">
-					<input class="input" type="password" name="repeat_new_password" placeholder="Повторите пароль">
-					<button class="pass-btn show" type="button"></button>
-				</div>
-				<button class="btn password-change__form-btn" type="submit" disabled>Сохранить новый пароль</button>
+		<div style="display: none;" id="personal-change" class="popup small-popup">
+			<div class="small-popup__title">Изменить личные данные</div>
+			<form action="#" class="small-popup__form">
+				<label class="input input-label">
+					<span class="input__label focus">Имя</span>
+					<input value="Иванка" name="name">
+				</label>
+				<label class="input input-label">
+					<span class="input__label focus">Фамилия</span>
+					<input value="Иванова" name="surname">
+				</label>
+				<button class="btn small-popup__form-btn" type="submit">Сохранить</button>
 			</form>
 		</div>
-		<!-- End Попап Изменение пароля -->
+		<div style="display: none;" id="phone-change" class="popup small-popup">
+			<div class="small-popup__title">Изменить номер телефона</div>
+			<div class="small-popup__text">На указанный номер будет отправлено SMS с кодом подтверждения</div>
+			<form action="#" class="small-popup__form">
+				<label class="input input-label">
+					<span class="input__label focus">Ваш телефон</span>
+					<input value="+7 (999) 999-99-99 " name="phone" type="tel">
+				</label>
+				<button class="btn small-popup__form-btn" type="submit">Отправить</button>
+			</form>
+		</div>
+		<div style="display: none;" id="email-change" class="popup small-popup">
+			<div class="small-popup__title">Изменить e-mail</div>
+			<div class="small-popup__text">
+				На новый e-mail будет отправлено письмо с ссылкой для подтверждения
+			</div>
+			<form action="#" class="small-popup__form">
+				<label class="input input-label">
+					<span class="input__label">Ваш новый e-mail</span>
+					<input name="email" type="email">
+				</label>
+				<label class="input input-label">
+					<span class="input__label">Ваш пароль от профиля</span>
+					<input type="password" name="password">
+					<button class="pass-btn show" type="button"></button>
+				</label>
+				<button class="link-btn small-popup__remind-pass" type="button">Напомнить пароль</button>
+				<button class="btn small-popup__form-btn" type="submit">Изменить</button>
+			</form>
+		</div>
+		<div style="display: none;" id="password-change" class="popup small-popup">
+			<div class="small-popup__title">Изменение пароля</div>
+			<div class="small-popup__text">
+				Для изменения пароля укажите e-mail, привязанный к профилю
+			</div>
+			<form action="#" class="small-popup__form">
+				<label class="input input-label">
+					<span class="input__label">Ваш e-mail</span>
+					<input name="email" type="email">
+				</label>
+				<button class="btn small-popup__form-btn" type="submit">Далее</button>
+			</form>
+		</div>
 	</div>
 	<script src="./assets/libs/js/jquery.min.js"></script>
 	<script src="./assets/libs/js/swiper-bundle.min.js"></script>

@@ -157,6 +157,10 @@
 		@media(max-width: 500px) {
 			margin-left: 1rem;
 		}
+
+		>* {
+			width: 100%;
+		}
 	}
 
 	// .checkout-radio__title
@@ -169,7 +173,6 @@
 	// .checkout-radio__list
 
 	&__list {
-		@extend %text-14;
 		margin-top: 1.6rem;
 
 		>div {
@@ -192,10 +195,6 @@
 
 	&__hidden {
 		display: none;
-
-		p {
-			@extend %text-14;
-		}
 	}
 
 	// .checkout-radio__inputs
@@ -220,6 +219,7 @@
 	// .checkout-radio__btn
 
 	&__btn {
+		display: inline-block;
 		padding: 1.4rem 3.8rem;
 		font-weight: 600;
 	}
@@ -250,7 +250,6 @@
 	}
 
 	&__btn {
-		@extend %text-14;
 		font-weight: 500;
 		padding: 1.35rem;
 	}

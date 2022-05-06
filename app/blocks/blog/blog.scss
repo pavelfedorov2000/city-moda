@@ -19,7 +19,6 @@
 
 .blog-tag {
 	@extend %vertical-align;
-	@extend %text-14;
 	font-weight: 500;
 	padding: 0.8rem 1rem;
 	border: 0.1rem solid #505661;
@@ -148,10 +147,6 @@
 			}
 		}
 	}
-
-	&:not(:last-child) {
-		margin-bottom: 0.8rem;
-	}
 }
 
 .blog-item-text {
@@ -186,7 +181,6 @@
 
 		img {
 			@extend %cover;
-
 			transition: 1.5s transform;
 		}
 
@@ -201,21 +195,18 @@
 
 	&__content {
 		@extend %flex-col;
+
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 0.8rem;
+			}
+		}
 	}
 
 	// .blog-item__date
 
 	&__date {
 		@extend %text-13;
-
-		@media (max-width: 500px) {
-			font-size: 1.3rem;
-			line-height: 1.9rem;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 0.8rem;
-		}
 	}
 
 	// .blog-item__title
@@ -224,27 +215,11 @@
 		@extend %text-20;
 	}
 
-	// .blog-item__text
-
-	&__text {
-		@extend %text-14;
-
-		@media (max-width: 500px) {
-			font-size: 1.4rem;
-			line-height: 2.1rem;
-		}
-	}
-
 	// .blog-item__tag
 
 	&__tag {
 		@extend %text-13;
 		margin: 0.5rem;
-
-		@media (max-width: 500px) {
-			font-size: 1.3rem;
-			line-height: 1.9rem;
-		}
 	}
 }
 
@@ -263,6 +238,11 @@
 }
 
 .blog-text {
+
+	&__tag {
+		margin: 0.5rem;
+	}
+
 	// .blog-text__inner
 
 	&__inner {
@@ -282,6 +262,27 @@
 		@media(min-width: 1025px) {
 			width: 98.3 / 153.2 * 100%;
 		}
+
+		>* {
+			&:not(:last-child) {
+				margin-bottom: 4rem;
+			}
+		}
+
+		ul,
+		li {
+			@extend %text-16;
+			list-style-type: disc;
+			margin-left: 1rem;
+		}
+
+		h3,
+		h4,
+		h5,
+		h6 {
+			@extend %text-17;
+			font-weight: 600;
+		}
 	}
 
 	&__aside {
@@ -296,16 +297,6 @@
 	&__tags {
 		&:not(:last-child) {
 			margin-bottom: 3rem;
-		}
-	}
-
-	// .blog-text__tag
-
-	&__tag {
-		@extend %text-14;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
 		}
 	}
 
@@ -326,10 +317,6 @@
 					margin-bottom: 1.5rem;
 				}
 			}
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 4rem;
 		}
 	}
 

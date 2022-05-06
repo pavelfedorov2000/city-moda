@@ -239,7 +239,41 @@
 	}
 }
 
-#password-change {
+#personal-change {
+	@media (min-width: 768px) {
+		width: 44rem !important;
+	}
+
+	@media (min-width: 1025px) {
+		width: 44rem !important;
+	}
+}
+
+#phone-change,
+#sms-code {
+	@media (min-width: 768px) {
+		width: 44.6rem !important;
+	}
+
+	@media (min-width: 1025px) {
+		width: 44.6rem !important;
+	}
+}
+
+#email-change,
+#password-change,
+#new-password,
+#check-email {
+	@media (min-width: 768px) {
+		width: 42rem !important;
+	}
+
+	@media (min-width: 1025px) {
+		width: 42rem !important;
+	}
+}
+
+.small-popup {
 	padding: 6rem;
 
 	@media (max-width: 767px) {
@@ -248,11 +282,59 @@
 		padding-right: 3rem;
 	}
 
-	@media (min-width: 768px) {
-		width: 42rem !important;
+	>* {
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
 	}
 
-	@media (min-width: 1025px) {
-		width: 42rem !important;
+	&__title {
+		@extend %text-25;
+		font-weight: 500;
+	}
+
+	&__img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__text {
+		@extend %text-13;
+
+		p {
+			&:not(:last-child) {
+				margin-bottom: 1.5rem;
+			}
+		}
+	}
+
+	&__wrap {
+		@extend %flex-row-center;
+		@extend %text-13;
+		color: #777;
+	}
+
+	// .password-change__form
+
+	&__form {
+		display: grid;
+		grid-gap: 2rem;
+
+		@media(min-width: 768px) {
+			width: 30rem;
+		}
+	}
+
+	// .password-change__form-btn
+
+	&__form-btn {
+		font-weight: 600;
+		padding: 1.35rem;
+	}
+
+	&__remind-pass {
+		text-align: left;
+		margin-top: -1.2rem;
 	}
 }

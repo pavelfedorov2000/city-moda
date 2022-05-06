@@ -1,0 +1,23 @@
+<div style="display: none;" id="pickup-popup" class="pickup-popup">
+	<div class="pickup-popup__inner">
+		<div class="pickup-popup__body">
+			<div class="pickup-popup__title">Пункты самовывоза</div>
+			@@include("blocks/pickup/pickup-filters/pickup-filters.html")
+			<div class="pickup-popup__shops pickup-shops">
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+			</div>
+		</div>
+		<div class="pickup-popup__map">
+			<form action="#" class="pickup-popup__search pickup-search">
+				<input type="text" class="pickup-search__input" placeholder="Поиск пункта по адресу"
+					name="pickup_search">
+				<button class="btn pickup-search__btn btn--black" type="submit">Найти</button>
+			</form>
+			<div id="pickup-map"></div>
+		</div>
+	</div>
+</div>
