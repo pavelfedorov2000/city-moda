@@ -1,7 +1,10 @@
 .drop-basket {
 
+	@extend %flex-col;
+
 	&__body {
-		height: 100vh;
+		//height: 100vh;
+		flex-grow: 1;
 		@extend %flex-col;
 	}
 

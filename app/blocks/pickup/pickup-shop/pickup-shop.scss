@@ -3,41 +3,50 @@
 	// .pickup-shops__item
 
 	&__item {
-		@extend %flex-row;
-		align-items: flex-start;
 		padding: 1.4rem 2.5rem;
-		transition: .3s background-color;
-		cursor: default;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: #F4F4F6;
+		@media(max-width: 500px) {
+			padding-left: 1.6rem;
+			padding-right: 1.6rem;
+		}
+	}
+}
 
-				.pickup-shop {
-					&__info {
-						color: #101112;
+.pickup-shop {
+	@extend %flex-row;
+	align-items: flex-start;
+	transition: .3s background-color;
+	cursor: default;
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: #F4F4F6;
+
+			.pickup-shop {
+				&__info {
+					color: #101112;
+				}
+
+				&__filter {
+					&--card {
+						path {
+							fill: #101112;
+						}
 					}
 
-					&__filter {
-						&--card {
-							path {
-								fill: #101112;
-							}
-						}
-
-						&--clothes {
-							path {
-								stroke: #101112;
-							}
+					&--clothes {
+						path {
+							stroke: #101112;
 						}
 					}
 				}
 			}
 		}
 	}
-}
 
-.pickup-shop {
+	&.active {
+		background-color: #E4EFE7;
+	}
 
 	// .pickup-shop__title
 

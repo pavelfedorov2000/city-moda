@@ -28,6 +28,10 @@
 			color: #9b9b9b;
 		}
 
+		&.disabled {
+			border-color: #EAEAEA;
+		}
+
 		&.error {
 			border-color: $red;
 		}
@@ -54,6 +58,15 @@
 			&:hover {
 				background-color: $green;
 				border-color: $green;
+			}
+		}
+
+		&[disabled] {
+			@media (any-hover: hover) {
+				&:hover {
+					background-color: #EAEAEA;
+					border-color: #EAEAEA;
+				}
 			}
 		}
 

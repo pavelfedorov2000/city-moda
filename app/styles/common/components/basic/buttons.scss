@@ -167,6 +167,7 @@ a {
 	@extend %text-13;
 	color: #777;
 	text-decoration: underline;
+	text-align: left;
 	transition: .3s color;
 
 	@media (any-hover: hover) {

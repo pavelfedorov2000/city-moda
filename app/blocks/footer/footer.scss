@@ -116,6 +116,7 @@
 	&__social {
 		@media(min-width: 768px) {
 			grid-area: soc;
+			justify-content: flex-end;
 		}
 	}
 

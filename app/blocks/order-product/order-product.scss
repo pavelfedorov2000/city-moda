@@ -22,12 +22,18 @@
 
 	&__item {
 		padding: 1.5rem;
+		width: max-content;
 
 		@media(max-width: 767px) {
 			width: 50%;
 		}
 
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+
 		p {
+
 			&:not(:last-child) {
 				margin-bottom: 0.5rem;
 			}

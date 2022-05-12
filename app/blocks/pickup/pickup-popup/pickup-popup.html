@@ -4,7 +4,7 @@
 			<div class="pickup-popup__title">Пункты самовывоза</div>
 			@@include("blocks/pickup/pickup-filters/pickup-filters.html")
 			<div class="pickup-popup__shops pickup-shops">
-				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
+				@@include("blocks/pickup/pickup-shop/pickup-shop.html", {"status": "active"})
 				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
 				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
 				@@include("blocks/pickup/pickup-shop/pickup-shop.html")
@@ -15,6 +15,11 @@
 			<form action="#" class="pickup-popup__search pickup-search">
 				<input type="text" class="pickup-search__input" placeholder="Поиск пункта по адресу"
 					name="pickup_search">
+				<button class="pickup-search__reset" type="reset" aria-label="Сбросить поиск">
+					<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M10 1L9 0L5 4L1 0L0 1L4 5L0 9L1 10L5 6L9 10L10 9L6 5L10 1Z" fill="#9B9B9B" />
+					</svg>
+				</button>
 				<button class="btn pickup-search__btn btn--black" type="submit">Найти</button>
 			</form>
 			<div id="pickup-map"></div>
