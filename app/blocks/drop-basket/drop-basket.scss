@@ -2,6 +2,10 @@
 
 	@extend %flex-col;
 
+	@media(max-width: 500px) {
+		padding-bottom: 6rem;
+	}
+
 	&__body {
 		//height: 100vh;
 		flex-grow: 1;
