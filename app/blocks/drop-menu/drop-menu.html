@@ -4,7 +4,7 @@
 		<div class="drop-menu" id="clothes">
 			<div class="drop-menu__row">
 				<div class="drop-menu__col drop-menu__col--1">
-					<h6 class="drop-menu__col-title">Вся одежда</h6>
+					<div class="drop-menu__col-title">Вся одежда</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 								рубашки</a></li>
@@ -35,7 +35,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--2">
-					<h6 class="drop-menu__col-title">Популярное</h6>
+					<div class="drop-menu__col-title">Популярное</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 						</li>
@@ -48,7 +48,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--3">
-					<h6 class="drop-menu__col-title">Бренды</h6>
+					<div class="drop-menu__col-title">Бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 						</li>
@@ -75,19 +75,15 @@
 						</li>
 					</ul>
 				</div>
-				<article class="sale-item drop-menu__sale">
-					<a href="#">
-						<div class="sale-item__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp"
-									srcset="assets/images/src.webp">
-								<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-							</picture>
-						</div>
-						<h5 class="sale-item__title">Новинки зима 2022</h5>
-						<div class="sale-item__descr">Зимняя коллекция</div>
-					</a>
-				</article>
+				@@include("blocks/sale-item/sale-item.html", {
+				"el": "drop-menu__sale",
+				"src": "assets/images/content/drop-menu-img",
+				"width": "336",
+				"height": "250",
+				"label": "false",
+				"title": "Новинки зима 2022",
+				"descr": "Зимняя коллекция"
+				})
 			</div>
 		</div>
 	</li>
@@ -96,7 +92,7 @@
 		<div class="drop-menu" id="shoes">
 			<div class="drop-menu__row">
 				<div class="drop-menu__col drop-menu__col--1">
-					<h6 class="drop-menu__col-title">Вся обувь</h6>
+					<div class="drop-menu__col-title">Вся обувь</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 								рубашки</a></li>
@@ -127,7 +123,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--2">
-					<h6 class="drop-menu__col-title">Популярное</h6>
+					<div class="drop-menu__col-title">Популярное</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 						</li>
@@ -140,7 +136,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--3">
-					<h6 class="drop-menu__col-title">Бренды</h6>
+					<div class="drop-menu__col-title">Бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 						</li>
@@ -167,19 +163,15 @@
 						</li>
 					</ul>
 				</div>
-				<article class="sale-item drop-menu__sale">
-					<a href="#">
-						<div class="sale-item__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp"
-									srcset="assets/images/src.webp">
-								<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-							</picture>
-						</div>
-						<h5 class="sale-item__title">Новинки зима 2022</h5>
-						<div class="sale-item__descr">Зимняя коллекция</div>
-					</a>
-				</article>
+				@@include("blocks/sale-item/sale-item.html", {
+				"el": "drop-menu__sale",
+				"src": "assets/images/content/drop-menu-img",
+				"width": "336",
+				"height": "250",
+				"label": "false",
+				"title": "Новинки зима 2022",
+				"descr": "Зимняя коллекция"
+				})
 			</div>
 		</div>
 	</li>
@@ -188,7 +180,7 @@
 		<div class="drop-menu" id="accessories">
 			<div class="drop-menu__row">
 				<div class="drop-menu__col drop-menu__col--1">
-					<h6 class="drop-menu__col-title">Все аксессуары</h6>
+					<div class="drop-menu__col-title">Все аксессуары</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 								рубашки</a></li>
@@ -219,7 +211,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--2">
-					<h6 class="drop-menu__col-title">Популярное</h6>
+					<div class="drop-menu__col-title">Популярное</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 						</li>
@@ -232,7 +224,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--3">
-					<h6 class="drop-menu__col-title">Бренды</h6>
+					<div class="drop-menu__col-title">Бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 						</li>
@@ -259,19 +251,15 @@
 						</li>
 					</ul>
 				</div>
-				<article class="sale-item drop-menu__sale">
-					<a href="#">
-						<div class="sale-item__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp"
-									srcset="assets/images/src.webp">
-								<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-							</picture>
-						</div>
-						<h5 class="sale-item__title">Новинки зима 2022</h5>
-						<div class="sale-item__descr">Зимняя коллекция</div>
-					</a>
-				</article>
+				@@include("blocks/sale-item/sale-item.html", {
+				"el": "drop-menu__sale",
+				"src": "assets/images/content/drop-menu-img",
+				"width": "336",
+				"height": "250",
+				"label": "false",
+				"title": "Новинки зима 2022",
+				"descr": "Зимняя коллекция"
+				})
 			</div>
 		</div>
 	</li>
@@ -280,7 +268,7 @@
 		<div class="drop-menu" id="brands">
 			<div class="drop-menu__row">
 				<div class="drop-menu__col drop-menu__col--1">
-					<h6 class="drop-menu__col-title">Все бренды</h6>
+					<div class="drop-menu__col-title">Все бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 								рубашки</a></li>
@@ -311,7 +299,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--2">
-					<h6 class="drop-menu__col-title">Популярное</h6>
+					<div class="drop-menu__col-title">Популярное</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 						</li>
@@ -324,7 +312,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--3">
-					<h6 class="drop-menu__col-title">Бренды</h6>
+					<div class="drop-menu__col-title">Бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 						</li>
@@ -351,19 +339,15 @@
 						</li>
 					</ul>
 				</div>
-				<article class="sale-item drop-menu__sale">
-					<a href="#">
-						<div class="sale-item__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp"
-									srcset="assets/images/src.webp">
-								<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-							</picture>
-						</div>
-						<h5 class="sale-item__title">Новинки зима 2022</h5>
-						<div class="sale-item__descr">Зимняя коллекция</div>
-					</a>
-				</article>
+				@@include("blocks/sale-item/sale-item.html", {
+				"el": "drop-menu__sale",
+				"src": "assets/images/content/drop-menu-img",
+				"width": "336",
+				"height": "250",
+				"label": "false",
+				"title": "Новинки зима 2022",
+				"descr": "Зимняя коллекция"
+				})
 			</div>
 		</div>
 	</li>
@@ -372,7 +356,7 @@
 		<div class="drop-menu" id="new">
 			<div class="drop-menu__row">
 				<div class="drop-menu__col drop-menu__col--1">
-					<h6 class="drop-menu__col-title">Все новинки</h6>
+					<div class="drop-menu__col-title">Все новинки</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 								рубашки</a></li>
@@ -403,7 +387,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--2">
-					<h6 class="drop-menu__col-title">Популярное</h6>
+					<div class="drop-menu__col-title">Популярное</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 						</li>
@@ -416,7 +400,7 @@
 					</ul>
 				</div>
 				<div class="drop-menu__col drop-menu__col--3">
-					<h6 class="drop-menu__col-title">Бренды</h6>
+					<div class="drop-menu__col-title">Бренды</div>
 					<ul class="drop-menu__list">
 						<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 						</li>
@@ -443,19 +427,15 @@
 						</li>
 					</ul>
 				</div>
-				<article class="sale-item drop-menu__sale">
-					<a href="#">
-						<div class="sale-item__img">
-							<picture>
-								<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp"
-									srcset="assets/images/src.webp">
-								<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-							</picture>
-						</div>
-						<h5 class="sale-item__title">Новинки зима 2022</h5>
-						<div class="sale-item__descr">Зимняя коллекция</div>
-					</a>
-				</article>
+				@@include("blocks/sale-item/sale-item.html", {
+				"el": "drop-menu__sale",
+				"src": "assets/images/content/drop-menu-img",
+				"width": "336",
+				"height": "250",
+				"label": "false",
+				"title": "Новинки зима 2022",
+				"descr": "Зимняя коллекция"
+				})
 			</div>
 		</div>
 	</li>

@@ -1,107 +1,19 @@
 <!-- Попап Таблица размеров -->
 <div style="display: none;" id="product-sizes-popup" class="popup product-sizes-popup">
 	<div class="product-sizes-popup__inner">
-		<div class="product-sizes-popup__top">
-			<div class="product-sizes-popup__logo">
-				<img class="lazy" data-src="assets/images/logo/viola-stils.png" src="assets/images/src.jpg"
-					alt="viola stils logo">
-			</div>
-			<h4 class="product-sizes-popup__title">Таблица размеров</h4>
-			<div class="product-sizes-popup__subtitle">Женская одежда Viola stils</div>
-		</div>
-		<table class="product-sizes-popup__table">
-			<thead>
-				<tr>
-					<th>Российский размер</th>
-					<th>Размер производителя</th>
-					<th>Обхват груди, см</th>
-					<th>Обхват талии, см</th>
-					<th>Обхват бедер, см</th>
-					<th>Рост, см</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<td>42</td>
-					<td><b>XS</b></td>
-					<td>82</td>
-					<td>64</td>
-					<td>90</td>
-					<td>170</td>
-				</tr>
-				<tr>
-					<td>44</td>
-					<td><b>S</b></td>
-					<td>86</td>
-					<td>68</td>
-					<td>94</td>
-					<td>170</td>
-				</tr>
-				<tr>
-					<td>46</td>
-					<td><b>M</b></td>
-					<td>90</td>
-					<td>72</td>
-					<td>98</td>
-					<td>170</td>
-				</tr>
-				<tr>
-					<td>48</td>
-					<td><b>L</b></td>
-					<td>94</td>
-					<td>76</td>
-					<td>102</td>
-					<td>170</td>
-				</tr>
-				<tr>
-					<td>50</td>
-					<td><b>XL</b></td>
-					<td>98</td>
-					<td>80</td>
-					<td>106</td>
-					<td>170</td>
-				</tr>
-				<tr>
-					<td>52</td>
-					<td><b>XXL</b></td>
-					<td>102</td>
-					<td>84</td>
-					<td>110</td>
-					<td>170</td>
-				</tr>
-			</tbody>
-		</table>
-
-		<div class="how-define-size">
-			<h4 class="how-define-size__title">Как определить свой размер?</h4>
-			<div class="how-define-size__inner">
-				<div class="how-define-size__content">
-					<p>Вам понадобится провести измерения с помощью сантиметровой ленты.</p>
-					<p>
-						При измерении обхвата груди лента должна плотно прилегать к телу, спереди проходить по наиболее
-						выступающим
-						точкам, сбоку через подмышечные впадины, сзади обхватывая лопатки.
-					</p>
-					<p>
-						Обхват талии измеряется строго горизонтально по самой узкой части тела, проходя через самую
-						выступающую точку
-						живота.
-					</p>
-					<p>
-						При измерении обхвата бедер лента должна находиться горизонтально, проходя посредине бедра и
-						сзади
-						по наиболее
-						выступающим точкам ягодиц.
-					</p>
+		<article>
+			<div class="product-sizes-popup__top">
+				<div class="product-sizes-popup__logo">
+					<img class="lazy" data-src="assets/images/logo/viola-stils.png" src="assets/images/src.jpg"
+						alt="viola stils logo">
 				</div>
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/content/sizes.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy how-define-size__img" data-src="assets/images/content/sizes.jpg"
-						src="assets/images/src.jpg" alt="фото">
-				</picture>
+				<div class="product-sizes-popup__title">Таблица размеров</div>
+				<div class="product-sizes-popup__subtitle">Женская одежда Viola stils</div>
 			</div>
-		</div>
+			@@include('blocks/product-sizes-popup/table.html')
+		</article>
+
+		@@include('blocks/how-define-size/how-define-size.html')
 	</div>
 </div>
 <!-- End Попап Таблица размеров -->

@@ -1,0 +1,70 @@
+.header-info-line {
+    @extend %text-13;
+    background-color: $dark;
+    color: #fff;
+    font-weight: 600;
+    padding: 1rem 0;
+    position: relative;
+    display: flex;
+    flex-wrap: nowrap;
+
+    // .header-info-line__inner
+
+    &__inner {
+        padding: 0 1.6rem;
+        @extend %flex-row-center;
+        animation: marquee 15s linear infinite;
+        width: 100%;
+        flex-shrink: 0;
+        margin: 0 auto;
+
+        @media (max-width: 767px) {
+            animation-duration: 5s;
+        }
+
+        p {
+            white-space: nowrap;
+
+            &:last-child {
+                @media (max-width: 767px) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__close {
+        display: none;
+        @extend %pos-center-y;
+
+        @media (min-width: 1025px) {
+            display: block;
+            position: absolute;
+            right: calc(12 / 1600 * 100%);
+            width: 1.6rem;
+            height: 1.6rem;
+        }
+
+        svg path {
+            transition: 0.3s fill;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                svg path {
+                    fill: #fff;
+                }
+            }
+        }
+    }
+}
+
+@keyframes marquee {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    100% {
+        transform: translate(-100vw, 0);
+    }
+}

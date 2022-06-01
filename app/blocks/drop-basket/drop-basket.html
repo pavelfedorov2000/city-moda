@@ -1,5 +1,5 @@
 <div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
-	<button class="aside-popup__close" type="button">
+	<button class="aside-popup__close" type="button" aria-label="Закрыть корзину">
 		<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path
 				d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z"
@@ -8,7 +8,7 @@
 	</button>
 	<div class="drop-basket__body">
 		<div class="drop-basket__inner">
-			<h3 class="aside-popup__title">Ваша корзина</h3>
+			<div class="aside-popup__title">Ваша корзина</div>
 			<div class="drop-basket__products">
 				<div class="basket-product drop-basket__product">
 					<a href="#" class="basket-product__img">
@@ -121,118 +121,6 @@
 						</div>
 					</div>
 				</div>
-				<div class="basket-product drop-basket__product">
-					<a href="#" class="basket-product__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/basket-product-02.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/basket-product-02.jpg"
-								src="assets/images/src.jpg" alt="фото">
-						</picture>
-					</a>
-					<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-					<dl class="product-list basket-product__list">
-						<div>
-							<dt>Артикул:</dt>
-							<dd>MP002XW08J2L</dd>
-						</div>
-						<div>
-							<dt>Цвет:</dt>
-							<dd>бежевый</dd>
-						</div>
-						<div>
-							<dt>Размер:</dt>
-							<dd>42</dd>
-						</div>
-					</dl>
-					<div class="drop-basket__product-wrap">
-						<button class="basket-product__btn basket-product__btn--delete" type="button">
-							<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g opacity="0.8">
-									<path
-										d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z"
-										fill="#101112" />
-								</g>
-							</svg>
-							Удалить
-						</button>
-						<div class="basket-product__counter counter">
-							<button class="minus-btn counter__btn" type="button">
-								<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<line y1="1" x2="10" y2="1" stroke="#9B9B9B" stroke-width="2" />
-								</svg>
-							</button>
-							<input class="counter__input" type="number" value="1" readonly>
-							<button class="plus-btn counter__btn" type="button">
-								<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<line y1="5" x2="10" y2="5" stroke="#9B9B9B" stroke-width="2" />
-									<line x1="5" y1="10" x2="5" stroke="#9B9B9B" stroke-width="2" />
-								</svg>
-							</button>
-						</div>
-						<div class="drop-basket__product-prices">
-							<div class="basket-product__price drop-basket__product-price">
-								4 300
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="basket-product drop-basket__product">
-					<a href="#" class="basket-product__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/basket-product-02.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/basket-product-02.jpg"
-								src="assets/images/src.jpg" alt="фото">
-						</picture>
-					</a>
-					<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-					<dl class="product-list basket-product__list">
-						<div>
-							<dt>Артикул:</dt>
-							<dd>MP002XW08J2L</dd>
-						</div>
-						<div>
-							<dt>Цвет:</dt>
-							<dd>бежевый</dd>
-						</div>
-						<div>
-							<dt>Размер:</dt>
-							<dd>42</dd>
-						</div>
-					</dl>
-					<div class="drop-basket__product-wrap">
-						<button class="basket-product__btn basket-product__btn--delete" type="button">
-							<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-								<g opacity="0.8">
-									<path
-										d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z"
-										fill="#101112" />
-								</g>
-							</svg>
-							Удалить
-						</button>
-						<div class="basket-product__counter counter">
-							<button class="minus-btn counter__btn" type="button">
-								<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<line y1="1" x2="10" y2="1" stroke="#9B9B9B" stroke-width="2" />
-								</svg>
-							</button>
-							<input class="counter__input" type="number" value="1" readonly>
-							<button class="plus-btn counter__btn" type="button">
-								<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<line y1="5" x2="10" y2="5" stroke="#9B9B9B" stroke-width="2" />
-									<line x1="5" y1="10" x2="5" stroke="#9B9B9B" stroke-width="2" />
-								</svg>
-							</button>
-						</div>
-						<div class="drop-basket__product-prices">
-							<div class="basket-product__price drop-basket__product-price">
-								4 300
-							</div>
-						</div>
-					</div>
-				</div>
 			</div>
 			<div class="drop-basket__total">
 				<div class="drop-basket__total-title">Товаров на сумму</div>
@@ -243,7 +131,7 @@
 			</div>
 		</div>
 		<a href="#" class="drop-basket__btn btn">
-			Оформить заказ
+			<span>Оформить заказ</span>
 			<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 				<path
 					d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"

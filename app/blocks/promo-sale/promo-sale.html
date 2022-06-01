@@ -3,45 +3,36 @@
 		<div class="promo-sale__grid">
 			<div class="swiper promo-sale__slider">
 				<div class="swiper-wrapper">
-					<article class="swiper-slide sale-item">
-						<a href="#" class="sale-item__img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/promo-sale/01.webp"
-									srcset="assets/images/src.webp">
-								<img class=" lazy" data-src="assets/images/content/promo-sale/01.jpg"
-									src="assets/images/src.jpg" alt="фото" width="1112" height="610">
-							</picture>
-							<span class="sale-item__discount">Мега распродажа</span>
-						</a>
-						<h5 class="sale-item__title"><a href="#">На верхнюю одежду</a></h5>
-						<div class="sale-item__descr">Подготовь себя к зиме</div>
-					</article>
-					<article class="swiper-slide sale-item">
-						<a href="#" class="sale-item__img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/promo-sale/01.webp"
-									srcset="assets/images/src.webp">
-								<img class=" lazy" data-src="assets/images/content/promo-sale/01.jpg"
-									src="assets/images/src.jpg" alt="фото" width="1112" height="610">
-							</picture>
-							<span class="sale-item__discount">Мега распродажа</span>
-						</a>
-						<h5 class="sale-item__title"><a href="#">На верхнюю одежду</a></h5>
-						<div class="sale-item__descr">Подготовь себя к зиме</div>
-					</article>
-					<article class="swiper-slide sale-item">
-						<a href="#" class="sale-item__img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/promo-sale/01.webp"
-									srcset="assets/images/src.webp">
-								<img class=" lazy" data-src="assets/images/content/promo-sale/01.jpg"
-									src="assets/images/src.jpg" alt="фото" width="1112" height="610">
-							</picture>
-							<span class="sale-item__discount">Мега распродажа</span>
-						</a>
-						<h5 class="sale-item__title"><a href="#">На верхнюю одежду</a></h5>
-						<div class="sale-item__descr">Подготовь себя к зиме</div>
-					</article>
+					@@include('blocks/sale-item/sale-item.html', {
+					"el": "swiper-slide",
+					"src": "assets/images/content/promo-sale/01",
+					"width": "1112",
+					"height": "610",
+					"label": "true",
+					"discount": "Мега распродажа",
+					"title": "На верхнюю одежду",
+					"descr": "Подготовь себя к зиме"
+					})
+					@@include('blocks/sale-item/sale-item.html', {
+					"el": "swiper-slide",
+					"src": "assets/images/content/promo-sale/01",
+					"width": "1112",
+					"height": "610",
+					"label": "true",
+					"discount": "Мега распродажа",
+					"title": "На верхнюю одежду",
+					"descr": "Подготовь себя к зиме"
+					})
+					@@include('blocks/sale-item/sale-item.html', {
+					"el": "swiper-slide",
+					"src": "assets/images/content/promo-sale/01",
+					"width": "1112",
+					"height": "610",
+					"label": "true",
+					"discount": "Мега распродажа",
+					"title": "На верхнюю одежду",
+					"descr": "Подготовь себя к зиме"
+					})
 				</div>
 				<div class="swiper-pagination"></div>
 				<div class="promo-sale__slider-arrows slider-arrows">
@@ -61,31 +52,25 @@
 					</div>
 				</div>
 			</div>
-			<article class="sale-item">
-				<a href="#" class="sale-item__img">
-					<picture>
-						<source type="image/webp" data-srcset="assets/images/content/promo-sale/02.webp"
-							srcset="assets/images/src.webp">
-						<img class=" lazy" data-src="assets/images/content/promo-sale/02.jpg"
-							src="assets/images/src.jpg" alt="фото" width="336" height="250">
-					</picture>
-					<span class="sale-item__discount">До 30% </span>
-				</a>
-				<h5 class="sale-item__title"><a href="#">Уютные головные уборы</a></h5>
-				<div class="sale-item__descr">Точно не будет холодно</div>
-			</article>
-			<article class="sale-item">
-				<a href="#" class="sale-item__img">
-					<picture>
-						<source type="image/webp" data-srcset="assets/images/content/promo-sale/03.webp"
-							srcset="assets/images/src.webp">
-						<img class=" lazy" data-src="assets/images/content/promo-sale/03.jpg"
-							src="assets/images/src.jpg" alt="фото" width="336" height="250">
-					</picture>
-				</a>
-				<h5 class="sale-item__title"><a href="#">Одежда для новорожденных</a></h5>
-				<div class="sale-item__descr">Комфортная и гипоаллергенная</div>
-			</article>
+			@@include('blocks/sale-item/sale-item.html', {
+			"el": "promo-sale__item",
+			"src": "assets/images/content/promo-sale/02",
+			"width": "336",
+			"height": "250",
+			"label": "true",
+			"discount": "До 30%",
+			"title": "Уютные головные уборы",
+			"descr": "Точно не будет холодно"
+			})
+			@@include('blocks/sale-item/sale-item.html', {
+			"el": "promo-sale__item",
+			"src": "assets/images/content/promo-sale/03",
+			"width": "336",
+			"height": "250",
+			"label": "false",
+			"title": "Одежда для новорожденных",
+			"descr": "Комфортная и гипоаллергенная"
+			})
 		</div>
 	</div>
 </section>

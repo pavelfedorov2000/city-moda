@@ -1,0 +1,43 @@
+.how-define-size {
+    // .how-define-size__title
+
+    &__title {
+        @extend %text-20;
+        font-weight: 500;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
+
+    // .how-define-size__inner
+
+    &__inner {
+        display: grid;
+        grid-gap: 5rem;
+
+        @media (max-width: 1024px) {
+            grid-gap: 3rem;
+        }
+
+        @media (min-width: 768px) {
+            grid-template-columns: 1fr 24.3rem;
+        }
+    }
+
+    // .how-define-size__content
+
+    &__content {
+        p {
+            &:not(:last-child) {
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    &__img {
+        @media (min-width: 768px) {
+            height: 32rem;
+        }
+    }
+}

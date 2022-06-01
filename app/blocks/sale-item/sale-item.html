@@ -1,12 +1,13 @@
-<article class="sale-item">
+<article class="sale-item @@el">
 	<a href="#" class="sale-item__img">
 		<picture>
-			<source type="image/webp" data-srcset="assets/images/content/actual/0@@counter.webp"
-				srcset="assets/images/src.webp">
-			<img class="lazy" data-src="assets/images/content/actual/0@@counter.jpg" src="assets/images/src.jpg"
-				alt="фото">
+			<source type="image/webp" data-srcset="@@src.webp" srcset="assets/images/src.webp">
+			<img class="lazy" data-src="@@src.jpg" src="assets/images/src.jpg" alt="фото" width="@@width"
+				height="@@height">
 		</picture>
-		<span class="sale-item__discount">до @@discount</span>
+		@@if(label === "true") {
+		<span class="sale-item__discount">@@discount</span>
+		}
 	</a>
 	<h5 class="sale-item__title"><a href="#">@@title</a></h5>
 	<div class="sale-item__descr">@@descr</div>

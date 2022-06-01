@@ -36,7 +36,7 @@
 	<link rel="stylesheet" href="./assets/libs/css/animate.min.css"> -->
 	<!-- <link rel="stylesheet" href="./assets/libs/css/jquery.fancybox.min.css"> -->
 	<link id="app-css" rel="stylesheet" href="./assets/styles/app.min.css">
-	<link rel="stylesheet" href="./assets/styles/for-view.css">
+	<!-- <link rel="stylesheet" href="./assets/styles/for-view.css"> -->
 	<script>
 		document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/, 'js');
 		if (!('ontouchstart' in document.documentElement)) {
@@ -76,7 +76,7 @@
 								</clipPath>
 							</defs>
 						</svg>
-						Найти магазины
+						<span>Найти магазины</span>
 					</a>
 					<div class="header__contact">
 						<div class="header__call">
@@ -84,13 +84,13 @@
 								<svg viewBox="0 0 16 17" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<path d="M10.1638 11.24L11.2838 10.12C11.4347 9.97104 11.6256 9.86906 11.8332 9.82646C12.0409 9.78385 12.2565 9.80246 12.4538 9.88002L13.8188 10.425C14.0183 10.506 14.1892 10.6441 14.3102 10.8221C14.4313 11 14.4969 11.2098 14.4988 11.425V13.925C14.4977 14.0714 14.4669 14.2161 14.4084 14.3502C14.3498 14.4844 14.2648 14.6054 14.1583 14.7058C14.0518 14.8062 13.926 14.8841 13.7886 14.9346C13.6512 14.9852 13.5051 15.0074 13.3588 15C3.79385 14.405 1.86385 6.30502 1.49885 3.20502C1.4819 3.05279 1.49738 2.89869 1.54427 2.75288C1.59116 2.60706 1.66839 2.47282 1.77088 2.35899C1.87337 2.24516 1.9988 2.15432 2.13893 2.09245C2.27905 2.03058 2.43068 1.99908 2.58385 2.00002H4.99885C5.21435 2.00066 5.42474 2.06575 5.60294 2.18694C5.78115 2.30812 5.91903 2.47984 5.99885 2.68002L6.54385 4.04502C6.62397 4.24155 6.64442 4.45734 6.60262 4.66543C6.56083 4.87351 6.45865 5.06467 6.30885 5.21502L5.18885 6.33502C5.18885 6.33502 5.83385 10.7 10.1638 11.24Z" fill="#101112" />
 								</svg>
-								8 800 250 30 05
+								<span>8 800 250 30 05</span>
 							</a>
 							<span class="header__call-descr">Звонок бесплатный</span>
 						</div>
 						<a href="https://wa.me/" class="header__whatsup" target="_blank" rel="nofollow">
 							<img class="header__whatsup-icon" src="assets/images/icons/whatsup.svg" alt="whatsup" width="16" height="16">
-							WhatsApp
+							<span>WhatsApp</span>
 						</a>
 					</div>
 				</div>
@@ -161,7 +161,7 @@
 								<div class="drop-menu" id="clothes">
 									<div class="drop-menu__row">
 										<div class="drop-menu__col drop-menu__col--1">
-											<h6 class="drop-menu__col-title">Вся одежда</h6>
+											<div class="drop-menu__col-title">Вся одежда</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 														рубашки</a></li>
@@ -192,7 +192,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--2">
-											<h6 class="drop-menu__col-title">Популярное</h6>
+											<div class="drop-menu__col-title">Популярное</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 												</li>
@@ -205,7 +205,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--3">
-											<h6 class="drop-menu__col-title">Бренды</h6>
+											<div class="drop-menu__col-title">Бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 												</li>
@@ -233,16 +233,14 @@
 											</ul>
 										</div>
 										<article class="sale-item drop-menu__sale">
-											<a href="#">
-												<div class="sale-item__img">
-													<picture>
-														<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
-														<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-													</picture>
-												</div>
-												<h5 class="sale-item__title">Новинки зима 2022</h5>
-												<div class="sale-item__descr">Зимняя коллекция</div>
+											<a href="#" class="sale-item__img">
+												<picture>
+													<source type="image/webp" data-srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
+													<img class="lazy" data-src="assets/images/content/drop-menu-img.jpg" src="assets/images/src.jpg" alt="фото" width="336" height="250">
+												</picture>
 											</a>
+											<h5 class="sale-item__title"><a href="#">Новинки зима 2022</a></h5>
+											<div class="sale-item__descr">Зимняя коллекция</div>
 										</article>
 									</div>
 								</div>
@@ -252,7 +250,7 @@
 								<div class="drop-menu" id="shoes">
 									<div class="drop-menu__row">
 										<div class="drop-menu__col drop-menu__col--1">
-											<h6 class="drop-menu__col-title">Вся обувь</h6>
+											<div class="drop-menu__col-title">Вся обувь</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 														рубашки</a></li>
@@ -283,7 +281,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--2">
-											<h6 class="drop-menu__col-title">Популярное</h6>
+											<div class="drop-menu__col-title">Популярное</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 												</li>
@@ -296,7 +294,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--3">
-											<h6 class="drop-menu__col-title">Бренды</h6>
+											<div class="drop-menu__col-title">Бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 												</li>
@@ -324,16 +322,14 @@
 											</ul>
 										</div>
 										<article class="sale-item drop-menu__sale">
-											<a href="#">
-												<div class="sale-item__img">
-													<picture>
-														<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
-														<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-													</picture>
-												</div>
-												<h5 class="sale-item__title">Новинки зима 2022</h5>
-												<div class="sale-item__descr">Зимняя коллекция</div>
+											<a href="#" class="sale-item__img">
+												<picture>
+													<source type="image/webp" data-srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
+													<img class="lazy" data-src="assets/images/content/drop-menu-img.jpg" src="assets/images/src.jpg" alt="фото" width="336" height="250">
+												</picture>
 											</a>
+											<h5 class="sale-item__title"><a href="#">Новинки зима 2022</a></h5>
+											<div class="sale-item__descr">Зимняя коллекция</div>
 										</article>
 									</div>
 								</div>
@@ -343,7 +339,7 @@
 								<div class="drop-menu" id="accessories">
 									<div class="drop-menu__row">
 										<div class="drop-menu__col drop-menu__col--1">
-											<h6 class="drop-menu__col-title">Все аксессуары</h6>
+											<div class="drop-menu__col-title">Все аксессуары</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 														рубашки</a></li>
@@ -374,7 +370,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--2">
-											<h6 class="drop-menu__col-title">Популярное</h6>
+											<div class="drop-menu__col-title">Популярное</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 												</li>
@@ -387,7 +383,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--3">
-											<h6 class="drop-menu__col-title">Бренды</h6>
+											<div class="drop-menu__col-title">Бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 												</li>
@@ -415,16 +411,14 @@
 											</ul>
 										</div>
 										<article class="sale-item drop-menu__sale">
-											<a href="#">
-												<div class="sale-item__img">
-													<picture>
-														<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
-														<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-													</picture>
-												</div>
-												<h5 class="sale-item__title">Новинки зима 2022</h5>
-												<div class="sale-item__descr">Зимняя коллекция</div>
+											<a href="#" class="sale-item__img">
+												<picture>
+													<source type="image/webp" data-srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
+													<img class="lazy" data-src="assets/images/content/drop-menu-img.jpg" src="assets/images/src.jpg" alt="фото" width="336" height="250">
+												</picture>
 											</a>
+											<h5 class="sale-item__title"><a href="#">Новинки зима 2022</a></h5>
+											<div class="sale-item__descr">Зимняя коллекция</div>
 										</article>
 									</div>
 								</div>
@@ -434,7 +428,7 @@
 								<div class="drop-menu" id="brands">
 									<div class="drop-menu__row">
 										<div class="drop-menu__col drop-menu__col--1">
-											<h6 class="drop-menu__col-title">Все бренды</h6>
+											<div class="drop-menu__col-title">Все бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 														рубашки</a></li>
@@ -465,7 +459,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--2">
-											<h6 class="drop-menu__col-title">Популярное</h6>
+											<div class="drop-menu__col-title">Популярное</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 												</li>
@@ -478,7 +472,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--3">
-											<h6 class="drop-menu__col-title">Бренды</h6>
+											<div class="drop-menu__col-title">Бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 												</li>
@@ -506,16 +500,14 @@
 											</ul>
 										</div>
 										<article class="sale-item drop-menu__sale">
-											<a href="#">
-												<div class="sale-item__img">
-													<picture>
-														<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
-														<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-													</picture>
-												</div>
-												<h5 class="sale-item__title">Новинки зима 2022</h5>
-												<div class="sale-item__descr">Зимняя коллекция</div>
+											<a href="#" class="sale-item__img">
+												<picture>
+													<source type="image/webp" data-srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
+													<img class="lazy" data-src="assets/images/content/drop-menu-img.jpg" src="assets/images/src.jpg" alt="фото" width="336" height="250">
+												</picture>
 											</a>
+											<h5 class="sale-item__title"><a href="#">Новинки зима 2022</a></h5>
+											<div class="sale-item__descr">Зимняя коллекция</div>
 										</article>
 									</div>
 								</div>
@@ -525,7 +517,7 @@
 								<div class="drop-menu" id="new">
 									<div class="drop-menu__row">
 										<div class="drop-menu__col drop-menu__col--1">
-											<h6 class="drop-menu__col-title">Все новинки</h6>
+											<div class="drop-menu__col-title">Все новинки</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Блузки и
 														рубашки</a></li>
@@ -556,7 +548,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--2">
-											<h6 class="drop-menu__col-title">Популярное</h6>
+											<div class="drop-menu__col-title">Популярное</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Водолазки</a>
 												</li>
@@ -569,7 +561,7 @@
 											</ul>
 										</div>
 										<div class="drop-menu__col drop-menu__col--3">
-											<h6 class="drop-menu__col-title">Бренды</h6>
+											<div class="drop-menu__col-title">Бренды</div>
 											<ul class="drop-menu__list">
 												<li class="drop-menu__list-item"><a href="#" class="drop-menu__list-link">Allora</a>
 												</li>
@@ -597,16 +589,14 @@
 											</ul>
 										</div>
 										<article class="sale-item drop-menu__sale">
-											<a href="#">
-												<div class="sale-item__img">
-													<picture>
-														<source type="image/webp" srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
-														<img src="assets/images/content/drop-menu-img.jpg" alt="фото" width="336" height="250">
-													</picture>
-												</div>
-												<h5 class="sale-item__title">Новинки зима 2022</h5>
-												<div class="sale-item__descr">Зимняя коллекция</div>
+											<a href="#" class="sale-item__img">
+												<picture>
+													<source type="image/webp" data-srcset="assets/images/content/drop-menu-img.webp" srcset="assets/images/src.webp">
+													<img class="lazy" data-src="assets/images/content/drop-menu-img.jpg" src="assets/images/src.jpg" alt="фото" width="336" height="250">
+												</picture>
 											</a>
+											<h5 class="sale-item__title"><a href="#">Новинки зима 2022</a></h5>
+											<div class="sale-item__descr">Зимняя коллекция</div>
 										</article>
 									</div>
 								</div>
@@ -974,7 +964,7 @@
 					</div>
 					<ul class="social footer__social">
 						<li class="social__item footer__social-item">
-							<a class="social__link" href="https://www.instagram.com/" target="_blank" rel="nofollow">
+							<a class="social__link" href="https://www.instagram.com/" target="_blank" rel="nofollow" title="instagram">
 								<svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="26" height="26" rx="13" fill="#101112" />
 									<path d="M13.0006 10.3968C11.567 10.3968 10.3971 11.5667 10.3971 13.0003C10.3971 14.4339 11.567 15.6039 13.0006 15.6039C14.4342 15.6039 15.6041 14.4339 15.6041 13.0003C15.6041 11.5667 14.4342 10.3968 13.0006 10.3968ZM20.8092 13.0003C20.8092 11.9222 20.8189 10.8539 20.7584 9.77768C20.6978 8.52768 20.4127 7.41831 19.4986 6.50424C18.5826 5.58823 17.4752 5.30502 16.2252 5.24448C15.1471 5.18393 14.0787 5.1937 13.0025 5.1937C11.9244 5.1937 10.8561 5.18393 9.77988 5.24448C8.52988 5.30502 7.4205 5.59018 6.50644 6.50424C5.59042 7.42026 5.30722 8.52768 5.24667 9.77768C5.18613 10.8558 5.19589 11.9242 5.19589 13.0003C5.19589 14.0765 5.18613 15.1468 5.24667 16.223C5.30722 17.473 5.59238 18.5824 6.50644 19.4964C7.42246 20.4124 8.52988 20.6956 9.77988 20.7562C10.858 20.8167 11.9264 20.807 13.0025 20.807C14.0807 20.807 15.149 20.8167 16.2252 20.7562C17.4752 20.6956 18.5846 20.4105 19.4986 19.4964C20.4146 18.5804 20.6978 17.473 20.7584 16.223C20.8209 15.1468 20.8092 14.0785 20.8092 13.0003ZM13.0006 17.0062C10.7838 17.0062 8.99472 15.2171 8.99472 13.0003C8.99472 10.7835 10.7838 8.99448 13.0006 8.99448C15.2174 8.99448 17.0064 10.7835 17.0064 13.0003C17.0064 15.2171 15.2174 17.0062 13.0006 17.0062ZM17.1705 9.76596C16.6529 9.76596 16.235 9.34799 16.235 8.83041C16.235 8.31284 16.6529 7.89487 17.1705 7.89487C17.6881 7.89487 18.1061 8.31284 18.1061 8.83041C18.1062 8.95332 18.0821 9.07504 18.0352 9.18862C17.9882 9.30219 17.9193 9.40539 17.8324 9.49229C17.7455 9.57919 17.6423 9.6481 17.5287 9.69506C17.4151 9.74202 17.2934 9.76612 17.1705 9.76596Z" fill="white" />
@@ -982,7 +972,7 @@
 							</a>
 						</li>
 						<li class="social__item footer__social-item">
-							<a class="social__link" href="https://vk.com/" target="_blank" rel="nofollow">
+							<a class="social__link" href="https://vk.com/" target="_blank" rel="nofollow" title="vk">
 								<svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="26" height="26" rx="13" fill="#101112" />
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M21.2696 8.95626C21.3902 8.55452 21.2696 8.25924 20.6961 8.25924H18.7999C18.3177 8.25924 18.0955 8.51429 17.975 8.79561C17.975 8.79561 17.0106 11.146 15.6445 12.6728C15.2025 13.1148 15.0016 13.2552 14.7605 13.2552C14.64 13.2552 14.4655 13.1148 14.4655 12.713V8.95626C14.4655 8.47406 14.3256 8.25924 13.9237 8.25924H10.9439C10.6426 8.25924 10.4614 8.483 10.4614 8.69511C10.4614 9.15225 11.1443 9.25763 11.2148 10.5433V13.3358C11.2148 13.9481 11.1042 14.0591 10.8631 14.0591C10.2203 14.0591 8.65668 11.698 7.72913 8.99648C7.54736 8.47135 7.36505 8.25924 6.88041 8.25924H4.98414C4.44234 8.25924 4.33398 8.51429 4.33398 8.79561C4.33398 9.29786 4.97696 11.789 7.32739 15.0837C8.89453 17.3335 11.1021 18.5533 13.111 18.5533C14.3165 18.5533 14.4655 18.2824 14.4655 17.8158V16.1152C14.4655 15.5734 14.5797 15.4654 14.9613 15.4654C15.2427 15.4654 15.7248 15.606 16.8499 16.6908C18.1356 17.9763 18.3475 18.5533 19.0708 18.5533H20.967C21.5088 18.5533 21.7797 18.2824 21.6234 17.7478C21.4525 17.2149 20.8386 16.4421 20.024 15.5256C19.5821 15.0032 18.9191 14.4407 18.7183 14.1595C18.437 13.7979 18.5173 13.6372 18.7183 13.3159C18.7183 13.3159 21.0285 10.0614 21.2696 8.95639V8.95626Z" fill="white" />
@@ -990,7 +980,7 @@
 							</a>
 						</li>
 						<li class="social__item footer__social-item">
-							<a class="social__link" href="https://www.facebook.com/" target="_blank" rel="nofollow">
+							<a class="social__link" href="https://www.facebook.com/" target="_blank" rel="nofollow" title="facebook">
 								<svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="26" height="26" rx="13" fill="#101112" />
 									<path d="M13.8681 21.6665V13.76H16.522L16.9194 10.6787H13.8681V8.71132C13.8681 7.81922 14.1159 7.21121 15.3952 7.21121L17.0269 7.21046V4.45457C16.7446 4.41716 15.7761 4.33329 14.6493 4.33329C12.2968 4.33329 10.6862 5.7692 10.6862 8.40631V10.6787H8.02539V13.7601H10.6861V21.6666L13.8681 21.6665Z" fill="white" />
@@ -998,7 +988,7 @@
 							</a>
 						</li>
 						<li class="social__item footer__social-item">
-							<a class="social__link" href="https://www.youtube.com/" target="_blank" rel="nofollow">
+							<a class="social__link" href="https://www.youtube.com/" target="_blank" rel="nofollow" title="youtube">
 								<svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="26" height="26" rx="13" fill="#101112" />
 									<path fill-rule="evenodd" clip-rule="evenodd" d="M19.3581 7.65922C20.0541 7.84662 20.6029 8.39542 20.7903 9.09147C21.1383 10.3631 21.1249 13.0134 21.1249 13.0134C21.1249 13.0134 21.1249 15.6503 20.7903 16.922C20.6029 17.618 20.0541 18.1668 19.3581 18.3542C18.0864 18.6888 13 18.6888 13 18.6888C13 18.6888 7.92688 18.6888 6.64188 18.3408C5.94584 18.1534 5.39703 17.6046 5.20964 16.9086C4.875 15.6503 4.875 13 4.875 13C4.875 13 4.875 10.3631 5.20964 9.09147C5.39703 8.39542 5.95922 7.83324 6.64188 7.64584C7.9135 7.3112 13 7.3112 13 7.3112C13 7.3112 18.0864 7.3112 19.3581 7.65922ZM15.6101 13L11.3803 15.4361V10.5638L15.6101 13Z" fill="white" />
@@ -1006,7 +996,7 @@
 							</a>
 						</li>
 						<li class="social__item footer__social-item">
-							<a class="social__link" href="https://www.tiktok.com/" target="_blank" rel="nofollow">
+							<a class="social__link" href="https://www.tiktok.com/" target="_blank" rel="nofollow" title="tiktok">
 								<svg viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
 									<rect width="26" height="26" rx="13" fill="#101112" />
 									<path d="M13.3541 5.0135C14.2266 5 15.0941 5.008 15.9606 5C16.0131 6.0205 16.3801 7.06 17.1271 7.7815C17.8726 8.521 18.9271 8.8595 19.9531 8.974V11.6585C18.9916 11.627 18.0256 11.427 17.1531 11.013C16.7731 10.841 16.4191 10.6195 16.0726 10.393C16.0681 12.341 16.0806 14.2865 16.0601 16.2265C16.0081 17.1585 15.7006 18.086 15.1586 18.854C14.2866 20.1325 12.7731 20.966 11.2186 20.992C10.2651 21.0465 9.31263 20.7865 8.50013 20.3075C7.15363 19.5135 6.20613 18.06 6.06813 16.5C6.05075 16.1696 6.04808 15.8386 6.06013 15.508C6.18013 14.2395 6.80764 13.026 7.78164 12.2005C8.88563 11.239 10.4321 10.781 11.8801 11.052C11.8936 12.0395 11.8541 13.026 11.8541 14.0135C11.1926 13.7995 10.4196 13.8595 9.84163 14.261C9.41876 14.5396 9.09919 14.9495 8.93213 15.4275C8.79413 15.7655 8.83364 16.141 8.84163 16.5C9.00013 17.594 10.0521 18.5135 11.1751 18.414C11.9196 18.406 12.6331 17.974 13.0211 17.3415C13.1466 17.12 13.2871 16.8935 13.2946 16.633C13.3601 15.4405 13.3341 14.253 13.3421 13.0605C13.3476 10.373 13.3341 7.693 13.3546 5.014L13.3541 5.0135Z" fill="white" />
@@ -1056,7 +1046,7 @@
 						</div>
 						<div class="footer__cols">
 							<div class="footer__col">
-								<h6 class="footer__col-title">Каталог</h6>
+								<div class="footer__col-title">Каталог</div>
 								<ul class="footer__list">
 									<li class="footer__list-item">
 										<a href="#" class="footer__list-link">Новинки</a>
@@ -1073,7 +1063,7 @@
 								</ul>
 							</div>
 							<div class="footer__col">
-								<h6 class="footer__col-title">Помощь покупателю</h6>
+								<div class="footer__col-title">Помощь покупателю</div>
 								<ul class="footer__list">
 									<li class="footer__list-item">
 										<a href="#" class="footer__list-link">Отследить заказ</a>
@@ -1108,7 +1098,7 @@
 								</ul>
 							</div>
 							<div class="footer__col">
-								<h6 class="footer__col-title">О компании</h6>
+								<div class="footer__col-title">О компании</div>
 								<ul class="footer__list">
 									<li class="footer__list-item">
 										<a href="#" class="footer__list-link">О компании</a>
@@ -1123,7 +1113,6 @@
 										<a href="#" class="footer__list-link">Обратная связь</a>
 									</li>
 								</ul>
-								<h6 class="footer__col-title"><a href="#">Новости и акции</a></h6>
 							</div>
 						</div>
 					</div>
@@ -1132,35 +1121,7 @@
 			<div class="footer__bottom">
 				<div class="container footer__bottom-inner">
 					<div class="footer__payment">
-						<ul class="footer__payment-list">
-							<li class="footer__payment-item">
-								<img class="lazy" data-src="assets/images/logo/payment/mastercard.svg" src="assets/images/src.jpg" alt="mastercard" width="33.4" height="27" style="width: 3.34rem; height: 2.7rem;">
-							</li>
-							<li class="footer__payment-item">
-								<picture>
-									<source type="image/webp" data-srcset="assets/images/logo/payment/visa.webp" srcset="assets/images/src.webp">
-									<img class="lazy" data-src="assets/images/logo/payment/visa.png" src="assets/images/src.jpg" alt="visa" width="39.61" height="13.11" style="width: 3.961rem; height: 1.311rem;">
-								</picture>
-							</li>
-							<li class="footer__payment-item">
-								<picture>
-									<source type="image/webp" data-srcset="assets/images/logo/payment/mir.webp" srcset="assets/images/src.webp">
-									<img class="lazy" data-src="assets/images/logo/payment/mir.png" src="assets/images/src.jpg" alt="МИР" width="52.04" height="15.43" style="width: 5.204rem; height: 1.543rem;">
-								</picture>
-							</li>
-							<li class="footer__payment-item">
-								<picture>
-									<source type="image/webp" data-srcset="assets/images/logo/payment/gpay.webp" srcset="assets/images/src.webp">
-									<img class="lazy" data-src="assets/images/logo/payment/gpay.png" src="assets/images/src.jpg" alt="googlle pay" width="38.84" height="18.51" style="width: 3.884rem; height: 1.851rem;">
-								</picture>
-							</li>
-							<li class="footer__payment-item">
-								<picture>
-									<source type="image/webp" data-srcset="assets/images/logo/payment/ipay.webp" srcset="assets/images/src.webp">
-									<img class="lazy" data-src="assets/images/logo/payment/ipay.png" src="assets/images/src.jpg" alt="ipay" width="40.39" height="16.2" style="width: 4.039rem; height: 1.62rem;">
-								</picture>
-							</li>
-						</ul>
+						<img class="lazy" data-src="assets/images/payment.png" src="assets/images/src.jpg" alt="платежные системы" width="254" height="27">
 						<div class="footer__payment-descr">
 							Оплата подарочным сертификатом
 						</div>
@@ -1180,12 +1141,12 @@
 		</button>
 		<div class="overlay">
 			<div id="auth-popup" class="aside-popup auth-popup">
-				<button class="aside-popup__close" type="button">
+				<button class="aside-popup__close" type="button" aria-label="Закрыть окно авторизации">
 					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
 					</svg>
 				</button>
-				<h3 class="aside-popup__title">Авторизация</h3>
+				<div class="aside-popup__title">Авторизация</div>
 				<div class="aside-popup__text">
 					Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными
 					скидками и
@@ -1237,33 +1198,33 @@
 						</div>
 					</div>
 					<div class="aside-popup__social">
-						<div class="aside-popup__social-title ">
+						<div class="aside-popup__social-title">
 							Или войдите через
 						</div>
 						<ul class="social aside-popup__social-list">
 							<li class="social__item aside-popup__social-item">
-								<a href="#" class="social__link">
+								<a href="#" class="social__link" aria-label="Войти через Google">
 									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.6641 18.7969H29.3984C29.534 19.3546 29.6047 19.9261 29.6094 20.5C29.6094 26.4688 25.3516 29.875 20.6641 29.875C19.1463 29.8785 17.6504 29.5133 16.3049 28.811C14.9593 28.1087 13.8044 27.0903 12.9394 25.8431C12.0744 24.5959 11.5251 23.1574 11.3387 21.6511C11.1524 20.1448 11.3345 18.6158 11.8695 17.1954C12.4045 15.7751 13.2764 14.5058 14.4102 13.4968C15.544 12.4878 16.9058 11.7691 18.3787 11.4025C19.8515 11.036 21.3914 11.0325 22.8659 11.3924C24.3404 11.7523 25.7054 12.4648 26.8438 13.4688L24.1172 16.1953C23.1425 15.3987 21.9229 14.9627 20.6641 14.9609C19.195 14.9609 17.7861 15.5445 16.7474 16.5833C15.7086 17.6221 15.125 19.031 15.125 20.5C15.125 21.9691 15.7086 23.3779 16.7474 24.4167C17.7861 25.4555 19.195 26.0391 20.6641 26.0391C23.2656 26.0391 25.2266 24.7188 25.6953 22.4141H20.6641V18.7969Z" fill="#101112" />
 									</svg>
 								</a>
 							</li>
 							<li class="social__item aside-popup__social-item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="#" aria-label="Войти через Instagram">
 									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM16.8763 20.001C16.8763 18.2807 18.2802 16.8768 20.0005 16.8768C21.7208 16.8768 23.1247 18.2807 23.1247 20.001C23.1247 21.7214 21.7208 23.1253 20.0005 23.1253C18.2802 23.1253 16.8763 21.7214 16.8763 20.001ZM29.3711 19.5278C29.371 19.6854 29.3708 19.8431 29.3708 20.001C29.3708 20.1776 29.3711 20.354 29.3713 20.5302C29.373 21.6449 29.3746 22.7531 29.3099 23.8682C29.2372 25.3682 28.8974 26.6971 27.7981 27.7964C26.7013 28.8932 25.37 29.2354 23.87 29.3081C22.7362 29.3719 21.6096 29.3706 20.476 29.3694C20.3184 29.3692 20.1607 29.369 20.0028 29.369C19.8453 29.369 19.6878 29.3692 19.5305 29.3694C18.3984 29.3706 17.2715 29.3719 16.1356 29.3081C14.6356 29.2354 13.3067 28.8956 12.2075 27.7964C11.1106 26.6995 10.7685 25.3682 10.6958 23.8682C10.632 22.7344 10.6333 21.606 10.6345 20.4735C10.6347 20.3161 10.6349 20.1586 10.6349 20.001C10.6349 19.8435 10.6347 19.686 10.6345 19.5287C10.6333 18.3966 10.632 17.2697 10.6958 16.1339C10.7685 14.6339 11.1083 13.305 12.2075 12.2057C13.3044 11.1089 14.6356 10.7667 16.1356 10.694C17.2694 10.6302 18.396 10.6315 19.5296 10.6327C19.6872 10.6329 19.8449 10.6331 20.0028 10.6331C20.1604 10.6331 20.3179 10.6329 20.4752 10.6327C21.6073 10.6315 22.7341 10.6302 23.87 10.694C25.37 10.7667 26.6989 11.1065 27.7981 12.2057C28.895 13.3026 29.2372 14.6339 29.3099 16.1339C29.3736 17.2676 29.3724 18.3942 29.3711 19.5278ZM15.1935 20.001C15.1935 22.6612 17.3403 24.8081 20.0005 24.8081C22.6606 24.8081 24.8075 22.6612 24.8075 20.001C24.8075 17.3409 22.6606 15.194 20.0005 15.194C17.3403 15.194 15.1935 17.3409 15.1935 20.001ZM23.8817 14.9971C23.8817 15.6182 24.3833 16.1198 25.0044 16.1198C25.1519 16.12 25.2979 16.0911 25.4342 16.0347C25.5705 15.9784 25.6944 15.8957 25.7986 15.7914C25.9029 15.6871 25.9856 15.5633 26.042 15.427C26.0983 15.2907 26.1272 15.1446 26.127 14.9971C26.127 14.376 25.6255 13.8745 25.0044 13.8745C24.3833 13.8745 23.8817 14.376 23.8817 14.9971Z" fill="#101112" />
 									</svg>
 								</a>
 							</li>
 							<li class="social__item aside-popup__social-item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="#" aria-label="Войти через ВКонтакте">
 									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM30.6553 15C31.4494 15 31.6163 15.4016 31.4493 15.9479V15.9481C31.1155 17.4509 27.9168 21.8771 27.9168 21.8771C27.6385 22.3141 27.5272 22.5326 27.9168 23.0244C28.0538 23.2129 28.3463 23.4944 28.681 23.8165C29.0254 24.1478 29.4144 24.5221 29.7247 24.8823C30.8526 26.1287 31.7025 27.1798 31.9392 27.9045C32.1556 28.6316 31.7806 29 31.0304 29H28.4048C27.7016 29 27.3475 28.6131 26.5827 27.7774C26.2583 27.4229 25.86 26.9877 25.3298 26.4669C23.7719 24.9916 23.1044 24.8004 22.7147 24.8004C22.1864 24.8004 22.0283 24.9474 22.0283 25.6842V27.997C22.0283 28.6316 21.822 29 20.1528 29C17.3712 29 14.3146 27.341 12.1447 24.2813C8.89027 19.8005 8 16.4125 8 15.7295C8 15.3469 8.15003 15 8.90021 15H11.5258C12.1969 15 12.4493 15.2885 12.701 16.0027C13.9853 19.6767 16.1503 22.8879 17.0404 22.8879C17.3742 22.8879 17.5272 22.7368 17.5272 21.9042V18.1063C17.4669 17.0254 17.0825 16.5579 16.7978 16.2117C16.6219 15.9978 16.4841 15.8302 16.4841 15.5928C16.4841 15.3043 16.735 15 17.1521 15H21.2781C21.8345 15 22.0283 15.2922 22.0283 15.9479V21.0572C22.0283 21.6036 22.2698 21.7946 22.4367 21.7946C22.7706 21.7946 23.0487 21.6036 23.6607 21.0025C25.5522 18.9261 26.8875 15.7295 26.8875 15.7295C27.0544 15.3469 27.362 15 28.0297 15H30.6553Z" fill="#101112" />
 									</svg>
 								</a>
 							</li>
 							<li class="social__item aside-popup__social-item">
-								<a class="social__link" href="#">
+								<a class="social__link" href="#" aria-label="Войти через Facebook">
 									<svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
 										<path fill-rule="evenodd" clip-rule="evenodd" d="M20 0C8.95431 0 0 8.95431 0 20C0 31.0457 8.95431 40 20 40C31.0457 40 40 31.0457 40 20C40 8.95431 31.0457 0 20 0ZM20.8642 21.1037V29.6545L17.4229 29.6545V21.1038H14.5455V17.7715H17.423V15.3139C17.423 12.462 19.1648 10.9091 21.709 10.9091C22.9276 10.9091 23.975 10.9998 24.2803 11.0403V14.0207L22.5157 14.0215C21.1321 14.0215 20.8642 14.679 20.8642 15.6438V17.7714H24.164L23.7343 21.1037H20.8642Z" fill="#101112" />
 									</svg>
@@ -1304,17 +1265,17 @@
 				</div>
 			</div>
 			<div id="password-recovery" class="aside-popup">
-				<button class="aside-popup__close" type="button">
+				<button class="aside-popup__close" type="button" aria-label="Закрыть окно авторизации">
 					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
 					</svg>
 				</button>
-				<h3 class="aside-popup__title">Восстановление пароля</h3>
+				<div class="aside-popup__title">Восстановление пароля</div>
 				<button class="aside-popup__back-btn" type="button">
 					<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M14 3.128L8.02103 9.2L7.36622 10L8.02091 10.8L14 16.872L12.8878 18L5 10L12.8878 2L14 3.128Z" fill="#777777" />
 					</svg>
-					Назад
+					<span>Назад</span>
 				</button>
 				<div class="aside-popup__text">
 					Пожалуйста, введите ваш адрес электронной почты, на который мы отправим ссылку для восстановления пароля
@@ -1329,14 +1290,14 @@
 				</div>
 			</div>
 			<div id="drop-basket" class="aside-popup drop-basket aside-popup--basket">
-				<button class="aside-popup__close" type="button">
+				<button class="aside-popup__close" type="button" aria-label="Закрыть корзину">
 					<svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 						<path d="M23.1871 7L16 14.1871L8.81286 7L7 8.81286L14.1871 16L7 23.1871L8.81286 25L16 17.8129L23.1871 25L25 23.1871L17.8129 16L25 8.81286L23.1871 7Z" fill="#505661" />
 					</svg>
 				</button>
 				<div class="drop-basket__body">
 					<div class="drop-basket__inner">
-						<h3 class="aside-popup__title">Ваша корзина</h3>
+						<div class="aside-popup__title">Ваша корзина</div>
 						<div class="drop-basket__products">
 							<div class="basket-product drop-basket__product">
 								<a href="#" class="basket-product__img">
@@ -1441,110 +1402,6 @@
 									</div>
 								</div>
 							</div>
-							<div class="basket-product drop-basket__product">
-								<a href="#" class="basket-product__img">
-									<picture>
-										<source type="image/webp" data-srcset="assets/images/content/basket-product-02.webp" srcset="assets/images/src.webp">
-										<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" src="assets/images/src.jpg" alt="фото">
-									</picture>
-								</a>
-								<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-								<dl class="product-list basket-product__list">
-									<div>
-										<dt>Артикул:</dt>
-										<dd>MP002XW08J2L</dd>
-									</div>
-									<div>
-										<dt>Цвет:</dt>
-										<dd>бежевый</dd>
-									</div>
-									<div>
-										<dt>Размер:</dt>
-										<dd>42</dd>
-									</div>
-								</dl>
-								<div class="drop-basket__product-wrap">
-									<button class="basket-product__btn basket-product__btn--delete" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="0.8">
-												<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
-											</g>
-										</svg>
-										Удалить
-									</button>
-									<div class="basket-product__counter counter">
-										<button class="minus-btn counter__btn" type="button">
-											<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<line y1="1" x2="10" y2="1" stroke="#9B9B9B" stroke-width="2" />
-											</svg>
-										</button>
-										<input class="counter__input" type="number" value="1" readonly>
-										<button class="plus-btn counter__btn" type="button">
-											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<line y1="5" x2="10" y2="5" stroke="#9B9B9B" stroke-width="2" />
-												<line x1="5" y1="10" x2="5" stroke="#9B9B9B" stroke-width="2" />
-											</svg>
-										</button>
-									</div>
-									<div class="drop-basket__product-prices">
-										<div class="basket-product__price drop-basket__product-price">
-											4 300
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="basket-product drop-basket__product">
-								<a href="#" class="basket-product__img">
-									<picture>
-										<source type="image/webp" data-srcset="assets/images/content/basket-product-02.webp" srcset="assets/images/src.webp">
-										<img class="lazy" data-src="assets/images/content/basket-product-02.jpg" src="assets/images/src.jpg" alt="фото">
-									</picture>
-								</a>
-								<a href="#" class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-								<dl class="product-list basket-product__list">
-									<div>
-										<dt>Артикул:</dt>
-										<dd>MP002XW08J2L</dd>
-									</div>
-									<div>
-										<dt>Цвет:</dt>
-										<dd>бежевый</dd>
-									</div>
-									<div>
-										<dt>Размер:</dt>
-										<dd>42</dd>
-									</div>
-								</dl>
-								<div class="drop-basket__product-wrap">
-									<button class="basket-product__btn basket-product__btn--delete" type="button">
-										<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-											<g opacity="0.8">
-												<path d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" fill="#101112" />
-											</g>
-										</svg>
-										Удалить
-									</button>
-									<div class="basket-product__counter counter">
-										<button class="minus-btn counter__btn" type="button">
-											<svg viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<line y1="1" x2="10" y2="1" stroke="#9B9B9B" stroke-width="2" />
-											</svg>
-										</button>
-										<input class="counter__input" type="number" value="1" readonly>
-										<button class="plus-btn counter__btn" type="button">
-											<svg viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<line y1="5" x2="10" y2="5" stroke="#9B9B9B" stroke-width="2" />
-												<line x1="5" y1="10" x2="5" stroke="#9B9B9B" stroke-width="2" />
-											</svg>
-										</button>
-									</div>
-									<div class="drop-basket__product-prices">
-										<div class="basket-product__price drop-basket__product-price">
-											4 300
-										</div>
-									</div>
-								</div>
-							</div>
 						</div>
 						<div class="drop-basket__total">
 							<div class="drop-basket__total-title">Товаров на сумму</div>
@@ -1555,7 +1412,7 @@
 						</div>
 					</div>
 					<a href="#" class="drop-basket__btn btn">
-						Оформить заказ
+						<span>Оформить заказ</span>
 						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" fill="white" />
 						</svg>
