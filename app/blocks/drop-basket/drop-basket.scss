@@ -27,7 +27,7 @@
 	&__empty {
 		display: none;
 		@extend %text-16;
-		color: #9B9B9B;
+		color: var(--gray);
 		text-align: center;
 		justify-self: center;
 		flex-grow: 1;
@@ -106,7 +106,7 @@
 
 				&:before,
 				&:after {
-					background-color: #2D703C;
+					background-color: var(--green-second);
 				}
 			}
 		}

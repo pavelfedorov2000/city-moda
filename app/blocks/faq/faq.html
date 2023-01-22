@@ -1,83 +1,42 @@
-<div class="faq">
-	<div class="faq__item">
-		<div class="faq__item-summary">Как войти в личный кабинет?</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem, exercitationem aut repellendus modi, sed earum repudiandae voluptate hic
-			facilis sunt impedit quia provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Как оформить заказ?</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Как использовать промокод?</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Узнать статус заказа</div>
-		<div class="faq__item-details">
-			Вы всегда можете узнать статус своего заказа в личном кабинете в разделе История
-			заказов.
-			Если вас интересует дополнительная информация по точному местонахождению вашего заказа:
-			Напишите нам на <a href="mailto:info.msk@citystils.ru">info.msk@citystils.ru</a>.
-			Звоните в контакт-центр по
-			телефонам
-			<a href="tel:8-800-250-30-05">8-800-250-30-05</a>.
-			Воспользуйтесь формой обратной связи в разделе Обратная связь.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Курьерская доставка</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Отменить заказ</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Как оплатить заказ?</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
-	<div class="faq__item">
-		<div class="faq__item-summary">Как вернуть товар?</div>
-		<div class="faq__item-details">
-			Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam est quod deleniti,
-			enim autem,
-			exercitationem aut repellendus modi, sed earum repudiandae voluptate hic facilis sunt
-			impedit quia
-			provident minima error.
-		</div>
-	</div>
+<div class="accordion-block">
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Как войти в личный кабинет?",
+	"headingId": "faq_accordion_heading_1",
+	"ariaControls": "faq_collapse_1"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Как оформить заказ?",
+	"headingId": "faq_accordion_heading_2",
+	"ariaControls": "faq_collapse_2"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Как использовать промокод?",
+	"headingId": "faq_accordion_heading_2",
+	"ariaControls": "faq_collapse_2"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Узнать статус заказа",
+	"headingId": "faq_accordion_heading_3",
+	"ariaControls": "faq_collapse_3"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Курьерская доставка",
+	"headingId": "faq_accordion_heading_4",
+	"ariaControls": "faq_collapse_4"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Отменить заказ",
+	"headingId": "faq_accordion_heading_5",
+	"ariaControls": "faq_collapse_5"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Как оплатить заказ?",
+	"headingId": "faq_accordion_heading_6",
+	"ariaControls": "faq_collapse_6"
+	})
+	@@include('blocks/accordion-item/accordion-item.html', {
+	"toggleText": "Как вернуть товар?",
+	"headingId": "faq_accordion_heading_7",
+	"ariaControls": "faq_collapse_7"
+	})
 </div>

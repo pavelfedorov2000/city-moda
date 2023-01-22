@@ -15,28 +15,28 @@
 .pickup-shop {
 	@extend %flex-row;
 	align-items: flex-start;
-	transition: .3s background-color;
+	transition: $transition background-color;
 	cursor: default;
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: #F4F4F6;
+			background-color: var(--gray-bg);
 
 			.pickup-shop {
 				&__info {
-					color: #101112;
+					color: var(--dark);
 				}
 
 				&__filter {
 					&--card {
 						path {
-							fill: #101112;
+							fill: var(--dark);
 						}
 					}
 
 					&--clothes {
 						path {
-							stroke: #101112;
+							stroke: var(--dark);
 						}
 					}
 				}
@@ -63,8 +63,8 @@
 	&__info {
 		@extend %text-12;
 		font-weight: 500;
-		color: #777;
-		transition: .3s color;
+		color: var(--gray-777);
+		transition: $transition color;
 
 		li {
 			&:not(:last-child) {
@@ -108,7 +108,7 @@
 		}
 
 		path {
-			transition: .3s all;
+			transition: $transition all;
 		}
 	}
 }

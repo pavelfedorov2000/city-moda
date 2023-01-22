@@ -1,19 +1,18 @@
 .order-details-table {
-
 	font-weight: 500;
 	@extend %flex-row;
 	align-items: flex-start;
 	flex-wrap: wrap;
-	background-color: #F4F4F6;
-	border: 0.1rem solid #EAEAEA;
+	background-color: var(--gray-bg);
+	border: 0.1rem solid var(--line-color);
 	padding: 1.5rem;
 
-	@media(max-width: 767px) {
+	@media (max-width: 767px) {
 		padding-left: 0;
 		padding-right: 0;
 	}
 
-	@media(max-width: 500px) {
+	@media (max-width: 500px) {
 		font-size: 1.3rem;
 		line-height: 1.9rem;
 	}
@@ -24,30 +23,29 @@
 		padding: 1.5rem;
 		width: max-content;
 
-		@media(max-width: 767px) {
+		@media (max-width: 767px) {
 			width: 50%;
 		}
 
-		@media(max-width: 500px) {
+		@media (max-width: 500px) {
 			width: 100%;
 		}
 
 		p {
-
 			&:not(:last-child) {
 				margin-bottom: 0.5rem;
 			}
 		}
 
 		&:last-child {
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				width: 50%;
 				display: grid;
 				grid-template-columns: repeat(2, 1fr);
 				grid-gap: 1.5rem;
 			}
 
-			@media(max-width: 767px) {
+			@media (max-width: 767px) {
 				width: 100%;
 			}
 		}
@@ -71,7 +69,7 @@
 		&:not(:last-child) {
 			margin-bottom: 2rem;
 
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				margin-bottom: 0;
 				margin-right: 3rem;
 			}
@@ -88,19 +86,16 @@
 
 .order-status {
 	font-weight: 500;
-	color: $red;
+	color: var(--red);
 }
 
-
 .order-product {
-
 	display: grid;
 	grid-template-columns: 10rem 1fr;
 	grid-gap: 1.4rem 2rem;
 	grid-template-areas:
-		"picture title"
-		"picture dl"
-	;
+		'picture title'
+		'picture dl';
 
 	&__img {
 		grid-area: picture;
@@ -136,20 +131,19 @@
 	}
 
 	dt {
-		color: #9b9b9b;
+		color: var(--gray);
 		float: left;
 		padding-right: 0.3rem;
 	}
 }
 
 .order-success-table {
-
 	&__body {
 		padding: 3rem;
-		border: 0.1rem solid #EAEAEA;
+		border: 0.1rem solid var(--line-color);
 		border-top: none;
 
-		@media(max-width: 500px) {
+		@media (max-width: 500px) {
 			padding: 1.5rem;
 		}
 	}
@@ -162,17 +156,17 @@
 
 	&__products {
 		display: grid;
-		grid-gap: 2.7rem 5.2rem;
+		grid-gap: 2.7rem var(--gap);
 
-		@media(max-width: 1024px) {
+		@media (max-width: 1024px) {
 			grid-gap: 3rem;
 		}
 
-		@media(min-width: 768px) {
+		@media (min-width: 768px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media(min-width: 1025px) {
+		@media (min-width: 1025px) {
 			grid-template-columns: repeat(3, 1fr);
 		}
 	}

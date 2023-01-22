@@ -4,22 +4,20 @@
 
 	&__row {
 		@extend %vertical-align;
+		flex-wrap: wrap;
+		gap: 1.4rem;
 	}
 
-	&__title {
-		&:not(:last-child) {
-			margin-right: 1.4rem;
-		}
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
 	}
 
 	// .product-color__item
 
 	&__item {
 		cursor: pointer;
-
-		&:not(:last-child) {
-			margin-right: 1rem;
-		}
 
 		.radio-style {
 			width: 3rem;

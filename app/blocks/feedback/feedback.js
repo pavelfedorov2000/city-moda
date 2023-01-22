@@ -1,13 +1,20 @@
 app.feedback = {
-	name: 'feedback',
-	description: 'your script description',
+    name: 'feedback',
+    description: 'your script description',
     init() {
-		$('.feedback__form input').on('change', function () {
-			if ($(this).val() !== '' && $(this).parents('form').find('input').val() !== '' && $(this).parents('form').find('input[name=politics_agree]').is(':checked') && $(this).parents('form').find('input[name=personal_agree]').is(':checked')) {
-				$(this).parents('form').find('button[type="submit"]').prop('disabled', false);
-			} else {
-				$(this).parents('form').find('button[type="submit"]').prop('disabled', true);
-			}
-		});
-	},
+        $('.feedback__form input').on('change', function () {
+            const $input = $(this);
+            const inputVal = $input.val();
+            const $form = $input.closest('form');
+            const $inputs = $form.find('input');
+            const $submitBtn = $form.find('button[type="submit"]');
+            const $agreeCheckboxes = $form.find('input[type="checkbox"]');
+
+            if (inputVal !== '' && $inputs.val() !== '' && $agreeCheckboxes.is(':checked')) {
+                $submitBtn.prop('disabled', false);
+            } else {
+                $submitBtn.prop('disabled', true);
+            }
+        });
+    },
 };

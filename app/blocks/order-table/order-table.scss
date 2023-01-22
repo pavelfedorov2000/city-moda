@@ -14,7 +14,7 @@
 	// .order-item__header
 
 	&__header {
-		background-color: #F4F4F6;
+		background-color: var(--gray-bg);
 		padding: 2rem;
 
 		@media(max-width: 500px) {
@@ -73,7 +73,7 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				background-color: $green;
+				background-color: var(--green);
 				color: #fff;
 			}
 		}
@@ -93,7 +93,7 @@
 
 	&__follow-link {
 		@extend %vertical-align;
-		transition: .3s color;
+		transition: $transition color;
 
 		span {
 			@extend %text-13;
@@ -107,20 +107,15 @@
 		svg {
 			width: 1.2rem;
 			height: 1.2rem;
-
-			path {
-				transition: .3s fill;
-			}
+			transition: $transition fill;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				color: #9b9b9b;
+				color: var(--gray);
 
 				svg {
-					path {
-						fill: #9b9b9b;
-					}
+					fill: var(--gray);
 				}
 			}
 		}
@@ -182,7 +177,7 @@
 
 	&__delivery-place,
 	&__order-details {
-		color: #9b9b9b;
+		color: var(--gray);
 	}
 
 	&__order-details {

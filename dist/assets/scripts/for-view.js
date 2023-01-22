@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     // Открытие попапа скидки через 2 мин
     setTimeout(() => {
         $.fancybox.open({
@@ -8,47 +8,36 @@ $(document).ready(function () {
     }, 120000);
 
     // Логика строки поиска
-    $('.search-form__input').on('input', function () {
-        $(this).next().fadeIn('slow');
-    });
+    /* $('.search-form__input').on('input', function () {
+        const $searchInput = $(this);
+        const $searchResults = $searchInput.next();
+        $searchResults.fadeIn('slow');
+    }); */
     $('.search-form__input').on('input change', function () {
-        if ($(this).val() === '') {
-            $(this).next().fadeOut('slow');
+        const $searchInput = $(this);
+        const $searchResults = $searchInput.next();
+
+        if ($searchInput.val() === '') {
+            $searchResults.fadeOut('slow');
         } else {
-            $(this).next().fadeIn('slow');
+            $searchResults.fadeIn('slow');
         }
     });
+
     $('.search-form__input').on('focus', function () {
-        if ($(this).val() !== '') {
-            $(this).next().fadeIn('slow');
+        const $searchInput = $(this);
+        const $searchResults = $searchInput.next();
+
+        if ($searchInput.val() !== '') {
+            $searchResults.fadeIn('slow');
         }
     });
+
     $('.search-form__input').on('focusout', function () {
-        $(this).next().fadeOut('slow');
-    });
+        const $searchInput = $(this);
+        const $searchResults = $searchInput.next();
 
-    // Открытие выезжающей справа корзины
-    $('.js-cart-btn').on('click', function () {
-        $('body').addClass('_lock');
-        $('html').addClass('disable-fix');
-        $('.overlay').fadeIn('slow');
-        $('#drop-basket').addClass('active');
-    });
-
-    // Открытие выезжающей справа авторизации
-    $('.js-auth-btn').on('click', function () {
-        $('body').addClass('_lock');
-        $('html').addClass('disable-fix');
-        $('.overlay').fadeIn('slow');
-        $('#auth-popup').addClass('active');
-    });
-
-    // Закрытие выезжающей корзины и авторизации
-    $('.aside-popup__close').on('click', function () {
-        $(this).parents('.aside-popup').removeClass('active');
-        $('.overlay').fadeOut('300');
-        $('body').removeClass('_lock');
-        $('html').removeClass('disable-fix');
+        $searchResults.fadeOut('slow');
     });
 
     // Если в корзине нет продуктов, то появится надпись Вы еще не добавили товары в корзину
@@ -80,7 +69,8 @@ $(document).ready(function () {
 
     // Кнопка добавить в избранное
     $('.product-favorite-btn').on('click', function () {
-        $(this).toggleClass('favorite');
+        const $favoriteBtn = $(this);
+        $favoriteBtn.toggleClass('favorite');
     });
 
     // выбор города в попапе
@@ -92,12 +82,16 @@ $(document).ready(function () {
     // Восстановление пароля форма успешно отправлена
     $('#password-recovery form').submit(function (e) {
         e.preventDefault();
-        $(this).append('<div class="form-success aside-popup__form-success">Письмо отправлено. Для восстановления пароля перейдите по ссылке в письме</div>');
+        const $form = $(this);
+        $form.append('<div class="form-success aside-popup__form-success">Письмо отправлено. Для восстановления пароля перейдите по ссылке в письме</div>');
     });
 
     // Клик на задизейбенный размер - открытие попапа подписаться на размер
     $('.product-sizes__item').on('click', function () {
-        if ($(this).find('input[type=radio]').prop('disabled')) {
+        const $productSizesItem = $(this);
+        const $productSizesItemRadio = $productSizesItem.find('input[type=radio]');
+
+        if ($productSizesItemRadio.prop('disabled')) {
             $.fancybox.open({
                 src: '#size-subscribe-popup',
                 type: 'inline',
@@ -108,47 +102,70 @@ $(document).ready(function () {
 
     // Промокод (оформление заказа)
     $('input[name=promocode]').on('change', function () {
-        if ($(this).val() !== 0) {
-            $(this).addClass('valid');
+        const $promocodeInput = $(this);
+        const $promocodeInputVal = $promocodeInput.val();
+
+        if ($promocodeInputVal !== '') {
+            $promocodeInput.addClass('valid');
         }
     });
 
     // Попап подписка
     $('.subscribe-item__change-btn').on('click', function () {
-        $('.sale-popup__title').text($(this).parent().parent().prev().text());
+        const $subscribeItemChangeBtn = $(this);
+        const $subscribeItemTitle = $subscribeItemChangeBtn.closest('.subscribe-item').find('.subscribe-item__title');
+
+        $('.sale-popup__title').text($subscribeItemTitle.text());
     });
 
     // форма подписки в футере
     $('.form-row__input').on('change', function () {
+        const $formRowInput = $(this);
+        const $formRowBtn = $formRowInput.closest('form-row').find('.form-row__btn');
+
         if ($('#email-error').attr('style') === 'display: none;') {
-            $(this).parent().find('button').css('background-color', '#101112');
-            $(this).parent().find('button').css('border-color', '#101112');
+            $formRowBtn.css('background-color', '#101112');
+            $formRowBtn.css('border-color', '#101112');
         }
     });
 
     // Бренды алфавит
     $('.brands-index-list__item').on('click', function (e) {
         e.preventDefault();
+
+        const $brandsIndexListItem = $(this);
+        const $brandsIndexListItemHref = $brandsIndexListItem.attr('href');
+        const $brandsIndexListItemNotActive = $brandsIndexListItem.siblings();
+
         $('.cancel-brand-letter').css('display', 'flex');
-        $(this).siblings().removeClass('brands-index-list__item--active');
+        $brandsIndexListItemNotActive.removeClass('active');
         $('.brands-alphabet__item').css('display', 'none');
-        $(this).addClass('brands-index-list__item--active');
-        $($(this).attr('href')).css('display', 'flex');
+        $brandsIndexListItem.addClass('active');
+        $($brandsIndexListItemHref).css('display', 'flex');
     });
 
     // Кнопка отменить
-    $('.cancel-brand-letter').on('click', function (e) {
-        $(this).hide();
-        $(this).siblings().removeClass('brands-index-list__item--active');
+    $('.cancel-brand-letter').on('click', function () {
+        const $cancelBrandLetter = $(this);
+        const $brandsIndexListItem = $cancelBrandLetter.closest('.brands-wrap').find('.brands-index-list__item');
+
+        $cancelBrandLetter.hide();
+        $brandsIndexListItem.removeClass('active');
         $('.brands-alphabet__item').css('display', 'flex');
     });
 
     $('.input input').on('focus', function () {
-        $(this).prev().addClass('focus');
+        const $input = $(this);
+        const $inputLabel = $input.closest('.input-label').find('.input__label');
+
+        $inputLabel.addClass('focus');
     });
     $('.input input').on('focusout', function () {
-        if ($(this).val() === '') {
-            $(this).prev().removeClass('focus');
+        const $input = $(this);
+        const $inputLabel = $input.closest('.input-label').find('.input__label');
+
+        if ($input.val() === '') {
+            $inputLabel.removeClass('focus');
         }
     });
 });

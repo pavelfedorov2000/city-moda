@@ -124,7 +124,7 @@
 		background-position: 1.2rem 50%;
 		background-size: 1.6rem 1.6rem;
 		background-repeat: no-repeat;
-		border: 0.1rem solid #EAEAEA;
+		border: 0.1rem solid var(--line-color);
 		border-right: none;
 		@extend %text-13;
 
@@ -133,7 +133,7 @@
 		}
 
 		&::placeholder {
-			color: #777;
+			color: var(--gray-777);
 		}
 	}
 
@@ -145,16 +145,13 @@
 		svg {
 			width: 1rem;
 			height: 1rem;
-
-			path {
-				transition: .3s fill;
-			}
+			transition: $transition fill;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				svg path {
-					fill: $red;
+				svg {
+					fill: var(--red);
 				}
 			}
 		}

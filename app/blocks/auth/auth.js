@@ -1,64 +1,91 @@
 app.auth = {
-  name: 'auth',
-  description: 'your script description',
-  init() {
+    name: 'auth',
+    description: 'your script description',
+    init() {
+        // Логика задизейбленной кнопки
+        $('#auth input').on('keyup', function () {
+            const $input = $(this);
+            const inputVal = $input.val();
+            const $form = $input.closest('form');
+            const $inputs = $form.find('input');
+            const $submitBtn = $form.find('button[type="submit"]');
 
-    // Логика задизейбленной кнопки
-    $('#auth input').on('change', function () {
-      if ($(this).val() !== '' && $(this).parents('form').find('input[type=email]').val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', false);
-      } else {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', true);
-      }
-    });
+            if (inputVal !== '' && $inputs.val() !== '') {
+                $submitBtn.prop('disabled', false);
+            } else {
+                $submitBtn.prop('disabled', true);
+            }
+        });
 
-    // Логика задизейбленной кнопки
-    $('#password-recovery input, #password-change input').on('change', function () {
-      if ($(this).val() !== '') {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', false);
-      } else {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', true);
-      }
-    });
+        // Логика задизейбленной кнопки
+        /* $('#password-recovery input, #password-change input').on('input', function () {
+            const $input = $(this);
+            const inputVal = $input.val();
+            const $form = $input.closest('form');
+            const $submitBtn = $form.find('button[type="submit"]');
 
-    // Логика задизейбленной кнопки
-    $('#password-change input[type=password]').on('change', function () {
-      if ($(this).val() !== '' && $(this).parents('form').find('input[type=password]').val() !== '') {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', false);
-      } else {
-        $(this).parents('form').find('button[type="submit"]').prop('disabled', true);
-      }
-    });
+            if (inputVal !== '') {
+                $submitBtn.prop('disabled', false);
+            } else {
+                $submitBtn.prop('disabled', true);
+            }
+        });
 
-    // password input visibility toggle
-    $('.pass-btn').on('click', function () {
-      if ($(this).hasClass('show')) {
-        $(this).parent().find('input[type=password]').attr('type', 'text');
-        $(this).removeClass('show');
-        $(this).addClass('hide');
-      } else {
-        $(this).parent().find('input[type=text]').attr('type', 'password');
-        $(this).removeClass('hide');
-        $(this).addClass('show');
-      }
-    });
+        // Логика задизейбленной кнопки
+        $('#password-change input[type=password]').on('input', function () {
+            const $input = $(this);
+            const inputVal = $input.val();
+            const $form = $input.closest('form');
+            const $inputs = $form.find('input');
+            const $submitBtn = $form.find('button[type="submit"]');
 
-    // toogle phone / email enter
-    $('.aside-popup__link-btn').on('click', function () {
-      $(this).parent().hide();
-      $(`#${$(this).data('enter')}`).show();
-    });
+            if (inputVal !== '' && $inputs.val() !== '') {
+                $submitBtn.prop('disabled', false);
+            } else {
+                $submitBtn.prop('disabled', true);
+            }
+        }); */
 
-    // Восстановление пароля открыть
-    $('.remind-password').on('click', function () {
-      $(this).parents('.aside-popup').removeClass('active');
-      $('#password-recovery').addClass('active');
-    });
+        // password input visibility toggle
+        $('.pass-btn').on('click', function () {
+            const $passBtn = $(this);
+            const $inputWrap = $passBtn.closest('.input-wrap');
+            const $input = $inputWrap.find('input');
 
-    // Восстановление пароля закрыть
-    $('#password-recovery .aside-popup__back-btn').on('click', function () {
-      $('#password-recovery').removeClass('active');
-      $('#auth-popup').addClass('active');
-    });
-  },
+            if ($passBtn.hasClass('show')) {
+                $input.attr('type', 'text');
+                $passBtn.removeClass('show');
+                $passBtn.addClass('hide');
+            } else {
+                $input.attr('type', 'password');
+                $passBtn.removeClass('hide');
+                $passBtn.addClass('show');
+            }
+        });
+
+        // toogle phone / email enter
+        $('.aside-popup__link-btn').on('click', function () {
+            const $linkBtn = $(this);
+            const attr = $linkBtn.data('enter');
+            const $tabsContent = $linkBtn.parent();
+
+            $tabsContent.hide();
+            $(`#${attr}`).show();
+        });
+
+        // Восстановление пароля открыть
+        $('.remind-password').on('click', function () {
+            const $remindPassBtn = $(this);
+            const $asidePopup = $remindPassBtn.closest('.aside-popup');
+
+            $asidePopup.removeClass('active');
+            $('#password-recovery').addClass('active');
+        });
+
+        // Восстановление пароля закрыть
+        $('#password-recovery .aside-popup__back-btn').on('click', function () {
+            $('#password-recovery').removeClass('active');
+            $('#auth-popup').addClass('active');
+        });
+    },
 };

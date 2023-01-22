@@ -24,7 +24,7 @@
 		font-weight: 600;
 		position: relative;
 		padding-top: 4.5rem;
-		color: #9b9b9b;
+		color: var(--gray);
 		white-space: nowrap;
 
 		&:first-child {
@@ -99,7 +99,7 @@
 
 .discount-add {
 
-	border-top: 0.1rem solid #EAEAEA;
+	border-top: 0.1rem solid var(--line-color);
 	padding-top: 4rem;
 
 	@media(min-width: 1025px) {

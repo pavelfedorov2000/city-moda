@@ -67,6 +67,46 @@
 	@@include("blocks/popup/discount-popup.html")
 	@@include("blocks/region-popup/region-popup.html")
 </div>
+<style>
+	._progress {
+		min-height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: 10rem 0;
+	}
+
+	._progress__link {
+		display: block;
+		font-size: 1.5vmax;
+		margin-bottom: 10px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: #222;
+		transition: opacity 0.3s;
+	}
+
+	@media (max-width: 767px) {
+		._progress {
+			padding: 5rem 0;
+		}
+	}
+
+	@media (min-width: 768px) {
+		._progress__inner {
+			columns: 2;
+		}
+	}
+
+	@media (any-hover: hover) {
+		._progress__link:hover {
+			color: #ee3333;
+			opacity: 0.5;
+		}
+	}
+
+</style>
 @@include("blocks/link/link.html")
 </body>
 

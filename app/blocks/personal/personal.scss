@@ -6,7 +6,7 @@
 
 		&:not(:last-child) {
 			padding-bottom: 4rem;
-			border-bottom: 0.1rem solid #EAEAEA;
+			border-bottom: 0.1rem solid var(--line-color);
 
 			@media(max-width: 767px) {
 				padding-bottom: 3rem;
@@ -94,8 +94,8 @@
 		}
 
 		.radio-box:checked+.radio-style {
-			border-color: #101112;
-			background-color: #101112;
+			border-color: var(--dark);
+			background-color: var(--dark);
 
 			.radio-text {
 				color: #fff;
@@ -114,8 +114,8 @@
 
 		@media (any-hover: hover) {
 			&:hover {
-				border-color: #2d703c;
-				color: #2d703c;
+				border-color: var(--green-second);
+				color: var(--green-second);
 			}
 		}
 	}
@@ -137,10 +137,10 @@
 	padding: 1.6rem;
 
 	&.success {
-		background-color: rgba($green, 0.1);
+		background-color: rgba(var(--green), 0.1);
 	}
 
 	&.error {
-		background-color: rgba($red, 0.1);
+		background-color: rgba(var(--red), 0.1);
 	}
 }

@@ -41,7 +41,7 @@
 		@extend %text-14;
 		width: 100%;
 		padding: 1.55rem 2rem;
-		border: 0.1rem solid #101112;
+		border: 0.1rem solid var(--dark);
 
 		@media(max-width: 500px) {
 			padding: 1rem 1.5rem;
@@ -52,7 +52,7 @@
 		}
 
 		&::placeholder {
-			color: #9b9b9b;
+			color: var(--gray);
 		}
 	}
 
@@ -83,11 +83,11 @@
 		.radio-text {
 			@extend %text-13;
 			cursor: pointer;
-			transition: .3s color;
+			transition: $transition color;
 
 			@media (any-hover: hover) {
 				&:hover {
-					color: #9b9b9b;
+					color: var(--gray);
 				}
 			}
 		}

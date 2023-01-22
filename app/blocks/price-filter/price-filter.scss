@@ -17,7 +17,7 @@
 		@extend %text-13;
 		width: 9rem;
 		padding: 0.45rem;
-		border: 0.1rem solid #EAEAEA;
+		border: 0.1rem solid var(--line-color);
 
 		@media(max-width: 1024px) {
 			width: 100%;
@@ -28,7 +28,7 @@
 		}
 
 		&:focus {
-			border-color: #101112;
+			border-color: var(--dark);
 		}
 	}
 }

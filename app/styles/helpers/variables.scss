@@ -1,10 +1,34 @@
 // colors
 $dark: #101112;
+$gray: #9B9B9B;
 $green: #479458;
-$red: #EE3333;
+$red: #ee3333;
+
+:root {
+	--container-width: 150rem;
+	--container-padding: 1.6rem;
+	--gap: 5.2rem;
+
+	--dark: #101112;
+	--dark-gray: #505661;
+	--gray: #9B9B9B;
+	--gray-777: #777;
+	--gray-bg: #f4f4f6;
+	--line-color: #eaeaea;
+	--green: #479458;
+	--green-second: #2d703c;
+	--red: #ee3333;
+}
 
 $container: 150rem;
 $gap: 1.6rem;
+$grid-gap: 5.2rem;
+
+$transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
+$duration: 0.3s; // указывать только в секундах!
+$duration--long: 1s; // указывать только в секундах!
+$delay: $duration;
+$transition: $duration $transition-timing;
 
 // Typography
 
@@ -77,11 +101,11 @@ $gap: 1.6rem;
 	font-size: 4rem;
 	line-height: 52 / 40 * 100%;
 
-	@media(max-width: 1024px) {
+	@media (max-width: 1024px) {
 		font-size: 3.6rem;
 	}
 
-	@media(max-width: 500px) {
+	@media (max-width: 500px) {
 		font-size: 2.4rem;
 	}
 }
@@ -90,7 +114,6 @@ $gap: 1.6rem;
 	font-size: 4.8rem;
 	line-height: 5.8rem;
 }
-
 
 // flex
 %vertical-align {

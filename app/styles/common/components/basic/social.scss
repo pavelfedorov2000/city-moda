@@ -1,21 +1,19 @@
 .social {
-
 	display: flex;
+	flex-wrap: wrap;
 	// .social__item
 
 	&__item {
-
 		flex-shrink: 0;
 
 		svg {
-			rect {
-				transition: .3s fill;
-			}
+			fill: var(--dark);
+			transition: $transition fill;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				svg rect {
+				svg {
 					fill: $red;
 				}
 			}

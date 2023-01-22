@@ -1,5 +1,4 @@
 .catalog-home {
-
 	padding-top: 1.5rem;
 	// .catalog-home__grid
 
@@ -10,40 +9,39 @@
 		&:not(:last-child) {
 			margin-bottom: 11rem;
 
-			@media(max-width: 1024px) {
+			@media (max-width: 1024px) {
 				margin-bottom: 7rem;
 			}
 
-			@media(max-width: 767px) {
+			@media (max-width: 767px) {
 				margin-bottom: 3rem;
 			}
 		}
 
-		@media(min-width: 768px) {
+		@media (min-width: 768px) {
 			grid-template-columns: repeat(3, 1fr);
 			grid-gap: 3rem;
 		}
 
-		@media(min-width: 1025px) {
-			grid-gap: 5.2rem;
+		@media (min-width: 1025px) {
+			grid-gap: var(--gap);
 		}
 	}
 }
 
 .catalog-home-card {
-
 	position: relative;
 	height: 61rem;
 
-	@media(max-width: 1024px) {
+	@media (max-width: 1024px) {
 		height: 35rem;
 	}
 
-	@media(max-width: 767px) {
+	@media (max-width: 767px) {
 		height: 55rem;
 	}
 
-	@media(max-width: 500px) {
+	@media (max-width: 500px) {
 		height: 30rem;
 	}
 
@@ -62,7 +60,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba($dark, .6);
+		background-color: rgba(var(--dark), 0.6);
 		padding: 0 2.4rem;
 		@extend %flex-center;
 		text-align: center;
@@ -70,9 +68,9 @@
 		font-weight: 500;
 		color: #fff;
 		height: 8.6rem;
-		transition: .5s height;
+		transition: 0.5s height;
 
-		@media(max-width: 1024px) {
+		@media (max-width: 1024px) {
 			height: 6rem;
 			font-size: 2rem;
 			line-height: 3rem;

@@ -1,11 +1,11 @@
 label.error {
 	@extend %text-12;
-	color: $red;
+	color: var(--red);
 	margin-top: -1.5rem;
 }
 
 .input.error {
-	border-color: $red;
+	border-color: var(--red);
 }
 
 .check-box.error+label.error {
@@ -17,14 +17,14 @@ label.error {
 .success-form {
 	@extend %text-14;
 	font-weight: 500;
-	color: $green;
+	color: var(--green);
 	margin-top: 2rem;
 }
 
 .field {
 	&--error {
 		input {
-			border-color: $red;
+			border-color: var(--red);
 		}
 	}
 
@@ -32,7 +32,7 @@ label.error {
 		margin-top: 0.5rem;
 
 		span {
-			color: $red;
+			color: var(--red);
 			font-weight: 500;
 		}
 	}

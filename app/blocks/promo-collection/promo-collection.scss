@@ -1,7 +1,7 @@
 .promo-collection {
 	&__inner {
 		display: grid;
-		background-color: #f4f4f6;
+		background-color: var(--gray-bg);
 		grid-template-rows: 5rem max-content 2.5rem max-content auto max-content 5.3rem;
 		grid-template-columns: 12.9rem auto 3rem 50%;
 		grid-template-areas:
@@ -41,7 +41,7 @@
 
 	&__suptitle {
 		font-weight: 500;
-		color: #777;
+		color: var(--gray-777);
 		grid-area: suptitle;
 
 		@media (max-width: 500px) {

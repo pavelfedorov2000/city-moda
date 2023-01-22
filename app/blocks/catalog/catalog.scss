@@ -77,7 +77,7 @@
 		padding-bottom: 11rem;
 
 		&:not(:nth-child(2)) {
-			padding-top: 5.2rem;
+			padding-top: var(--gap);
 
 			@media (max-width: 500px) {
 				padding-top: 3rem;
@@ -136,7 +136,7 @@
 			}
 
 			rect {
-				transition: 0.3s stroke;
+				transition: $transition stroke;
 			}
 		}
 
@@ -263,7 +263,7 @@
 
 	&__num {
 		@extend %text-13;
-		color: #777;
+		color: var(--gray-777);
 
 		@media (min-width: 768px) {
 			margin-left: 1.6rem;

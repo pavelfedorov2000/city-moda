@@ -2,7 +2,7 @@
 	<div class="container">
 		<h2 class="title section__title">Актуально</h2>
 		<div class="actual__grid">
-			@@include("blocks/sale-item/sale-item.html", {
+			@@loop("blocks/sale-item/sale-item.html", [{
 			"el": "actual__item",
 			"src": "assets/images/content/actual/01",
 			"width": "724",
@@ -11,8 +11,7 @@
 			"discount": "До 30%",
 			"title": "Яркие пальто",
 			"descr": "Стильные модели разных фасонов"
-			})
-			@@include("blocks/sale-item/sale-item.html", {
+			}, {
 			"el": "actual__item",
 			"src": "assets/images/content/actual/02",
 			"width": "336",
@@ -21,8 +20,7 @@
 			"discount": "До 20%",
 			"title": "Головные уборы",
 			"descr": "Сочетание моды и комфорта"
-			})
-			@@include("blocks/sale-item/sale-item.html", {
+			}, {
 			"el": "actual__item",
 			"src": "assets/images/content/actual/03",
 			"width": "336",
@@ -31,7 +29,7 @@
 			"discount": "До 40%",
 			"title": "Подростковая одежда",
 			"descr": "Недетские скидки"
-			})
+			}])
 		</div>
 	</div>
 </section>

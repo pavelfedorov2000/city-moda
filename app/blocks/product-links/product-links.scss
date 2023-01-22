@@ -26,6 +26,6 @@
 	&__item-subtitle {
 		grid-column: 2 / 3;
 		@extend %text-13;
-		color: #9b9b9b;
+		color: var(--gray);
 	}
 }

@@ -66,93 +66,115 @@
 							</button>
 						</div>
 
-						<button class="filters-btn" type="button">Фильтры</button>
+						<button class="filters-btn" type="button" aria-expanded="false">Фильтры</button>
 					</div>
-					<div class="catalog__cards">
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card-new/catalog-card-new.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
+					<ul class="catalog__cards">
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
 						<div class="banner">
 							Рекламный баннер
 						</div>
-						@@include("blocks/catalog-card-new/catalog-card-new.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-						@@include("blocks/catalog-card/catalog-card.html", {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						})
-					</div>
+						<li>
+							@@include("blocks/catalog-card-new/catalog-card-new.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card-sale/catalog-card-sale.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"newprice": "21 200 ₽",
+							"oldprice": "37 400 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+						<li>
+							@@include("blocks/catalog-card/catalog-card.html", {
+							"title": "Пальто",
+							"subtitle": "Loriata",
+							"price": "21 200 ₽",
+							"image": "assets/images/content/catalog-card",
+							"alt": "Пальто Loriata",
+							})
+						</li>
+					</ul>
 					@@include("blocks/pagination/pagination.html")
 					<div class="seo-text catalog__seo-text">
 						<p>

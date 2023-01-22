@@ -1,12 +1,19 @@
 app.faq = {
-	name: 'faq',
-	description: 'your script description',
-	init() {
-		$('.faq__item-summary').on('click', function () {
-			$(this).parent().siblings().find('div.faq__item-summary').removeClass('faq__item-summary--active');
-			$(this).parent().siblings().find('div.faq__item-details').slideUp('300');
-			$(this).toggleClass('faq__item-summary--active');
-			$(this).next().slideToggle('300');
-		});
-	},
+    name: 'faq',
+    description: 'your script description',
+    init() {
+        $('.accordion-item__toggle').on('click', function () {
+            const $accordionItemToggle = $(this);
+            const $accordionItem = $accordionItemToggle.closest('.accordion-item');
+            const $accordionItemContent = $accordionItem.find('.accordion-item__content');
+
+            if ($accordionItemToggle.attr('aria-expanded') === 'false') {
+                $accordionItemToggle.attr('aria-expanded', true);
+                $accordionItemContent.slideDown();
+            } else {
+                $accordionItemToggle.attr('aria-expanded', false);
+                $accordionItemContent.slideUp();
+            }
+        });
+    },
 };
