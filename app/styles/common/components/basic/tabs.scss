@@ -1,51 +1,51 @@
 .tabs {
-	display: flex;
+    display: flex;
 }
 
 .tab {
-	@extend %text-16;
-	position: relative;
+    @extend %text-16;
+    position: relative;
 
-	@media (any-hover: hover) {
-		&:hover {
-			//color: $green;
-			color: #9b9b9b;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            //color: $green;
+            color: var(--gray);
+        }
+    }
 
 
 
-	&:after {
-		content: '';
-		position: absolute;
-		left: 0;
-		bottom: 0;
-		width: 0%;
-		height: 0.2rem;
-		background-color: $green;
-		transition: .3s width;
-	}
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 0.2rem;
+        background-color: $green;
+        transition: .3s width;
+    }
 
-	&--active {
-		font-weight: 600;
-		color: $green;
+    &.active {
+        font-weight: 600;
+        color: $green;
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: $green;
-			}
-		}
+        @media (any-hover: hover) {
+            &:hover {
+                color: $green;
+            }
+        }
 
-		&:after {
-			width: 100%;
-		}
-	}
+        &:after {
+            width: 100%;
+        }
+    }
 }
 
 .tabs-content {
-	display: none;
+    display: none;
 
-	&--active {
-		display: block;
-	}
+    &.active {
+        display: block;
+    }
 }

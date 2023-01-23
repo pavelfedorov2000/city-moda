@@ -258,7 +258,7 @@
 			transition: $transition width;
 		}
 
-		&.tab--active {
+		&.active {
 			@extend %text-20;
 			font-weight: 500;
 			color: #000;

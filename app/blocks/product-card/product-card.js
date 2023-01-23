@@ -2,12 +2,11 @@ app.productCard = {
     name: 'productCard',
     description: 'your script description',
     init() {
-
         $('.minus-btn').on('click', function (e) {
             e.preventDefault();
-            var $this = $(this);
-            var $input = $this.next();
-            var value = parseInt($input.val());
+            const $this = $(this);
+            const $input = $this.next();
+            let value = parseInt($input.val());
 
             while (value > 0) {
                 value -= 1;
@@ -15,14 +14,13 @@ app.productCard = {
             }
 
             $input.val(value);
-
         });
 
         $('.plus-btn').on('click', function (e) {
             e.preventDefault();
-            var $this = $(this);
-            var $input = $this.prev();
-            var value = parseInt($input.val());
+            const $this = $(this);
+            const $input = $this.prev();
+            let value = parseInt($input.val());
 
             value += 1;
 
@@ -49,10 +47,10 @@ app.productCard = {
             const $productCardTabNotActive = $productCardInfo.find('.product-card__tab');
             const $productCardTabsContentNotActive = $productCardInfo.find('.tabs-content');
 
-            $productCardTabNotActive.removeClass('tab--active');
-            $productCardTabsContentNotActive.removeClass('tabs-content--active');
-            $(`.product-card__tab[href="#${scrollLinkDataAttr}"]`).addClass('tab--active');
-            $(`#${scrollLinkDataAttr}`).addClass('tabs-content--active');
+            $productCardTabNotActive.removeClass('active');
+            $productCardTabsContentNotActive.removeClass('active');
+            $(`.product-card__tab[href="#${scrollLinkDataAttr}"]`).addClass('active');
+            $(`#${scrollLinkDataAttr}`).addClass('active');
             $("html, body").animate({
                 scrollTop: productCardInfoOffsetTop + "px"
             });

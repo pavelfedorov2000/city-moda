@@ -1,178 +1,178 @@
 .btn {
-	@extend %flex-center;
-	@extend %text-14;
-	background-color: $green;
-	color: #fff;
-	text-align: center;
-	transition: .3s all;
+    @extend %flex-center;
+    @extend %text-14;
+    background-color: $green;
+    color: #fff;
+    text-align: center;
+    transition: .3s all;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: #2D703C;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: #2D703C;
+        }
+    }
 
-	&[disabled] {
-		background-color: #EAEAEA;
-		border: none;
-		cursor: not-allowed;
+    &[disabled] {
+        background-color: #EAEAEA;
+        border: none;
+        cursor: not-allowed;
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: #fff;
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
 
-	svg {
-		width: 1.6rem;
-		height: 1.6rem;
-		margin-right: 0.8rem;
+    svg {
+        width: 1.6rem;
+        height: 1.6rem;
+        margin-right: 0.8rem;
 
-		path {
-			transition: .3s fill;
-		}
-	}
+        path {
+            transition: .3s fill;
+        }
+    }
 
-	&--disabled {
-		background-color: transparent;
-		border: 0.1rem solid #EAEAEA;
-		color: #9B9B9B;
+    &--disabled {
+        background-color: transparent;
+        border: 0.1rem solid #EAEAEA;
+        color: var(--gray);
 
-		@media (any-hover: hover) {
-			&:hover {
-				border-color: #2D703C;
-				color: #2D703C;
-				background-color: transparent;
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                border-color: #2D703C;
+                color: #2D703C;
+                background-color: transparent;
+            }
+        }
+    }
 
-	&--border {
-		border: 0.1rem solid #101112;
-		background-color: transparent;
-		color: #101112;
+    &--border {
+        border: 0.1rem solid #101112;
+        background-color: transparent;
+        color: #101112;
 
-		svg {
-			width: 2rem;
-			height: 2rem;
+        svg {
+            width: 2rem;
+            height: 2rem;
 
-			path {
-				transition: .3s fill;
-			}
-		}
+            path {
+                transition: .3s fill;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: transparent;
-				border-color: #2D703C;
-				color: #2D703C;
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: transparent;
+                border-color: #2D703C;
+                color: #2D703C;
 
-				svg path {
-					fill: #2D703C;
-				}
-			}
-		}
-	}
+                svg path {
+                    fill: #2D703C;
+                }
+            }
+        }
+    }
 
-	&--black {
-		background-color: #101112;
+    &--black {
+        background-color: #101112;
 
-		@media (any-hover: hover) {
-			&:hover {
-				background-color: $green;
-				color: #fff;
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                background-color: $green;
+                color: #fff;
+            }
+        }
+    }
 }
 
 a {
-	&.btn {
-		@media (any-hover: hover) {
-			&:hover {
-				color: #fff;
-			}
-		}
-	}
+    &.btn {
+        @media (any-hover: hover) {
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
 
-	&.btn--border {
-		@media (any-hover: hover) {
-			&:hover {
-				color: #2D703C;
-			}
-		}
-	}
+    &.btn--border {
+        @media (any-hover: hover) {
+            &:hover {
+                color: #2D703C;
+            }
+        }
+    }
 }
 
 .popup-link,
 .scroll-link {
-	@extend %text-12;
-	line-height: 1.4rem;
-	font-style: italic;
-	text-decoration: underline;
+    @extend %text-12;
+    line-height: 1.4rem;
+    font-style: italic;
+    text-decoration: underline;
 }
 
 .scroll-link {
-	transition: .3s color;
+    transition: .3s color;
 
-	@media (any-hover: hover) {
-		&:hover {
-			color: #9b9b9b;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--gray);
+        }
+    }
 }
 
 .all-link {
-	@extend %vertical-align;
-	@extend %text-16;
-	color: #9B9B9B;
-	position: relative;
+    @extend %vertical-align;
+    @extend %text-16;
+    color: var(--gray);
+    position: relative;
 
-	@media(max-width: 500px) {
-		font-size: 1.2rem;
-		line-height: 1.8rem;
-	}
+    @media(max-width: 500px) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
 
-	svg {
-		width: 5.6rem;
-		height: 1.6rem;
-		margin-left: 1.6rem;
+    svg {
+        width: 5.6rem;
+        height: 1.6rem;
+        margin-left: 1.6rem;
 
-		@media(max-width: 500px) {
-			width: 4rem;
-			height: 1rem;
-		}
+        @media(max-width: 500px) {
+            width: 4rem;
+            height: 1rem;
+        }
 
-		path {
-			transition: .3s fill;
-		}
-	}
+        path {
+            transition: .3s fill;
+        }
+    }
 
-	@media (any-hover: hover) {
-		&:hover {
+    @media (any-hover: hover) {
+        &:hover {
 
-			color: $dark;
+            color: $dark;
 
-			svg {
-				path {
-					fill: $dark;
-				}
-			}
-		}
-	}
+            svg {
+                path {
+                    fill: $dark;
+                }
+            }
+        }
+    }
 }
 
 .link-btn {
-	@extend %text-13;
-	color: #777;
-	text-decoration: underline;
-	text-align: left;
-	transition: .3s color;
+    @extend %text-13;
+    color: #777;
+    text-decoration: underline;
+    text-align: left;
+    transition: .3s color;
 
-	@media (any-hover: hover) {
-		&:hover {
-			color: $dark;
-		}
-	}
+    @media (any-hover: hover) {
+        &:hover {
+            color: $dark;
+        }
+    }
 }

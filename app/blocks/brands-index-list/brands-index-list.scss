@@ -1,0 +1,29 @@
+.brands-index-list {
+    display: flex;
+
+    &::-webkit-scrollbar {
+        -webkit-appearance: none;
+        width: 0;
+    }
+
+    @media (max-width: 1024px) {
+        overflow-x: auto;
+        padding-bottom: 3rem;
+    }
+
+    > * {
+        margin-right: 2rem;
+    }
+
+    // .brands-index-list__item
+
+    &__item {
+        @extend %text-16;
+        font-weight: 500;
+        white-space: nowrap;
+
+        &.active {
+            color: var(--green);
+        }
+    }
+}

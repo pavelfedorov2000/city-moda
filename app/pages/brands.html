@@ -1,188 +1,44 @@
 @@include("blocks/head/head.html", {"title": "Бренды"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page brands-page">
-		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Бренды</span>
-					</li>
-				</ol>
-			</nav>
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page brands-page">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Бренды"
+            })
 
-			<h1 class="title page__title">Бренды</h1>
+            <h1 class="title page__title">Бренды</h1>
 
-			<div class="brands-page__body">
-				<div class="brands-categories">
-					<a href="#" class="brands-categories__item">
-						<div class="brands-categories__item-img brands-categories__item-img--all">
-							<img class="lazy" data-src="assets/images/icons/coat-hanger.svg" src="assets/images/src.jpg"
-								alt="иконка вешалка для одежды" width="50" height="36">
-						</div>
-						<span class="brands-categories__item-title">Все</span>
-					</a>
-					<a href="#" class="brands-categories__item">
-						<div class="brands-categories__item-img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/brands/woman.webp"
-									srcset="assets/images/src.webp">
-								<img class="lazy" data-src="assets/images/content/brands/woman.png"
-									src="assets/images/src.jpg" alt="фото женщины">
-							</picture>
-						</div>
-						<span class="brands-categories__item-title">Женщинам</span>
-					</a>
-					<a href="#" class="brands-categories__item">
-						<div class="brands-categories__item-img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/brands/man.webp"
-									srcset="assets/images/src.webp">
-								<img class="lazy" data-src="assets/images/content/brands/man.png"
-									src="assets/images/src.jpg" alt="фото мужчины">
-							</picture>
-						</div>
-						<span class="brands-categories__item-title">Мужчинам</span>
-					</a>
-					<a href="#" class="brands-categories__item">
-						<div class="brands-categories__item-img">
-							<picture>
-								<source type="image/webp" data-srcset="assets/images/content/brands/girl.webp"
-									srcset="assets/images/src.webp">
-								<img class="lazy" data-src="assets/images/content/brands/girl.png"
-									src="assets/images/src.jpg" alt="фото ребенка">
-							</picture>
-						</div>
-						<span class="brands-categories__item-title">Детям</span>
-					</a>
-				</div>
-				<div class="brands-wrap">
-					<div class="brands-index-list">
-						<a href="#A" class="brands-index-list__item">A</a>
-						<a href="#B" class="brands-index-list__item">B</a>
-						<a href="#C" class="brands-index-list__item">C</a>
-						<a href="#D" class="brands-index-list__item">D</a>
-						<a href="#E" class="brands-index-list__item">E</a>
-						<a href="#F" class="brands-index-list__item">F</a>
-						<a href="#G" class="brands-index-list__item">G</a>
-						<a href="#H" class="brands-index-list__item">H</a>
-						<a href="#I" class="brands-index-list__item">I</a>
-						<a href="#J" class="brands-index-list__item">J</a>
-						<a href="#K" class="brands-index-list__item">K</a>
-						<a href="#L" class="brands-index-list__item">L</a>
-						<a href="#M" class="brands-index-list__item">M</a>
-						<a href="#N" class="brands-index-list__item">N</a>
-						<a href="#O" class="brands-index-list__item">O</a>
-						<a href="#P" class="brands-index-list__item">P</a>
-						<a href="#Q" class="brands-index-list__item">Q</a>
-						<a href="#R" class="brands-index-list__item">R</a>
-						<a href="#S" class="brands-index-list__item">S</a>
-						<a href="#T" class="brands-index-list__item">T</a>
-						<a href="#U" class="brands-index-list__item">U</a>
-						<a href="#V" class="brands-index-list__item">V</a>
-						<a href="#W" class="brands-index-list__item">W</a>
-						<a href="#X" class="brands-index-list__item">X</a>
-						<a href="#Y" class="brands-index-list__item">Y</a>
-						<a href="#Z" class="brands-index-list__item">Z</a>
-						<a href="#А-Я" class="brands-index-list__item">А-Я</a>
-						<a href="#0-9" class="brands-index-list__item">0-9</a>
-					</div>
-					<button class="cancel-brand-letter" type="button">
-						<span>Отменить</span>
-						<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" />
-						</svg>
-					</button>
-				</div>
-			</div>
-			<dl class="brands-alphabet">
-				<div id="A" class="brands-alphabet__item">
-					<dt>A</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Allora</a>
-							<a href="#" class="brands-alphabet__link">AllSaints</a>
-							<a href="#" class="brands-alphabet__link">Allura</a>
-						</div>
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Arch</a>
-							<a href="#" class="brands-alphabet__link">Arot</a>
-						</div>
-					</dd>
-				</div>
-				<div id="B" class="brands-alphabet__item">
-					<dt>B</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Bibi</a>
-							<a href="#" class="brands-alphabet__link">B2B Black to Black</a>
-							<a href="#" class="brands-alphabet__link">BeMyMom</a>
-						</div>
-					</dd>
-				</div>
-				<div id="D" class="brands-alphabet__item">
-					<dt>D</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Dirkje</a>
-							<a href="#" class="brands-alphabet__link">Djdutchjeans</a>
-							<a href="#" class="brands-alphabet__link">Dja Fashion</a>
-						</div>
-					</dd>
-				</div>
-				<div id="F" class="brands-alphabet__item">
-					<dt>F</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Faba</a>
-						</div>
-					</dd>
-				</div>
-				<div id="J" class="brands-alphabet__item">
-					<dt>J</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Jungle</a>
-						</div>
-					</dd>
-				</div>
-				<div id="А-Я" class="brands-alphabet__item">
-					<dt>А-Я</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">Вишневолоцкий текстиль</a>
-						</div>
-					</dd>
-				</div>
-				<div id="0-9" class="brands-alphabet__item">
-					<dt>0-9</dt>
-					<dd class="brands-alphabet__row">
-						<div class="brands-alphabet__col">
-							<a href="#" class="brands-alphabet__link">4F</a>
-						</div>
-					</dd>
-				</div>
-			</dl>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-		@@include("blocks/popup/password-recovery.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/popup/password-change.html")
+            <div class="brands-page__body">
+                @@include('blocks/brands-categories/brands-categories.html')
+                <div class="brands-wrap">
+                    @@include('blocks/brands-index-list/brands-index-list.html')
+                    <button class="cancel-brand-letter"
+                            type="button">
+                        <span>Отменить</span>
+                        <svg viewBox="0 0 16 16"
+                             fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            @@include('blocks/brands-alphabet/brands-alphabet.html')
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+        @@include("blocks/popup/password-recovery.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
+    @@include("blocks/popup/password-change.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -5,18 +5,9 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page search-shops">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Найти магазины</span>
-					</li>
-				</ol>
-			</nav>
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Найти магазины"
+            })
 
 			<h1 class="title page__title">Найти магазины</h1>
 

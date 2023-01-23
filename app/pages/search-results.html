@@ -5,20 +5,10 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page search-results catalog">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>
-							Товары по запросу «джинсы»
-						</span>
-					</li>
-				</ol>
-			</nav>
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Товары по запросу «джинсы»"
+            })
+            
 			<div class="search-results__top">
 				<h1 class="title catalog__title">Товары по запросу «джинсы»</h1>
 				<div class="search-results__num">2 021 товаров</div>

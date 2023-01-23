@@ -42,7 +42,7 @@ app.popup = {
 
             $(`[data-popup="${$asidePopup.attr('id')}"]`).attr('aria-expanded', false);
             $asidePopup.removeClass('active');
-            $('.overlay').fadeOut('300');
+            $('.overlay').fadeOut();
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');
         });

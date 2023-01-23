@@ -1,380 +1,491 @@
 @@include("blocks/head/head.html", {"title": "Блог"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page blog-page">
-		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Блог</span>
-					</li>
-				</ol>
-			</nav>
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page blog-page">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>Блог</span>
+                    </li>
+                </ol>
+            </nav>
 
-			<h1 class="title blog-page__title">Блог</h1>
+            <h1 class="title blog-page__title">Блог</h1>
 
-			<div class="blog-tags">
-				<a href="#" class="blog-tag">
-					#коллекции
-					<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z"
-							fill="#9b9b9b" />
-					</svg>
-				</a>
-				<a href="#" class="blog-tag">
-					#детям
-					<svg viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z"
-							fill="#9b9b9b" />
-					</svg>
-				</a>
-			</div>
+            <div class="blog-tags">
+                <a href="#"
+                   class="blog-tag">
+                    <span>#коллекции</span>
+                    <svg viewBox="0 0 16 16"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" />
+                    </svg>
+                </a>
+                <a href="#"
+                   class="blog-tag">
+                    <span>#детям</span>
+                    <svg viewBox="0 0 16 16"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9929 3L8 6.99286L4.00714 3L3 4.00714L6.99286 8L3 11.9929L4.00714 13L8 9.00714L11.9929 13L13 11.9929L9.00714 8L13 4.00714L11.9929 3Z" />
+                    </svg>
+                </a>
+            </div>
 
-			<div class="blog-grid">
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/01.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/01.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date date blog-item__date" datetime="2021-09-10">10.09.2021</time>
-						<h5 class="blog-item-title blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция
-								осень 2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
-							Отличная
-							теплоизоляция достигается благодаря наполнителю 90% пуха.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-							<a href="#" class="tag blog-item__tag">#осень</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/02.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/02.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a></h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
-							о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/03.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/03.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже поступили
-								в
-								продажу!</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
-							дел.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/04.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/04.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/05.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/05.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/06.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/06.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже поступили
-								в продажу!</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
-							дел.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/07.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/07.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция осень 2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
-							Отличная теплоизоляция
-							достигается благодаря наполнителю 90% пуха.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-							<a href="#" class="tag blog-item__tag">#осень</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/08.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/08.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/09.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/09.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже поступили
-								в продажу!</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
-							дел.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/10.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/10.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/11.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/11.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-09-10">10.09.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">JUNGE новая коллеция лето 2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-							<a href="#" class="tag blog-item__tag">#лето</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/12.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/12.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">Новые домашние комплекты уже поступили
-								в продажу!</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
-							дел.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#женщинам</a>
-						</div>
-					</div>
-				</article>
-				<article class="blog-item blog-grid__item">
-					<a href="#" class="blog-item__img">
-						<picture>
-							<source type="image/webp" data-srcset="assets/images/content/blog/13.webp"
-								srcset="assets/images/src.webp">
-							<img class="lazy" data-src="assets/images/content/blog/13.jpg" src="assets/images/src.jpg"
-								alt="фото блога">
-						</picture>
-					</a>
-					<div class="blog-item__content">
-						<time class="date blog-item__date" datetime="2021-11-10">10.11.2021</time>
-						<h5 class="blog-item-title blog-item__title"><a href="#">MINOTI новая коллекция осень-зима
-								2021</a>
-						</h5>
-						<p class="blog-item-text blog-item__text">
-							Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
-							первом снеге.
-							Приглашаем вас ознакомиться с новой коллекцией MINOTI.
-						</p>
-						<div class="tags">
-							<a href="#" class="tag blog-item__tag">#коллекция</a>
-							<a href="#" class="tag blog-item__tag">#детям</a>
-						</div>
-					</div>
-				</article>
-			</div>
-			@@include("blocks/pagination/pagination.html")
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-		@@include("blocks/popup/password-recovery.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/popup/password-change.html")
+            <div class="blog-grid">
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/01.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/01.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date date blog-item__date"
+                              datetime="2021-09-10">10.09.2021</time>
+                        <h5 class="blog-item-title blog-item-title blog-item__title">
+                            <a href="#">JUNGE новая коллеция
+                                осень 2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
+                            Отличная
+                            теплоизоляция достигается благодаря наполнителю 90% пуха.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#осень</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/02.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/02.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения
+                            о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/03.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/03.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">Новые домашние комплекты уже поступили
+                                в
+                                продажу!</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+                            дел.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/04.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/04.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/05.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/05.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/06.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/06.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">Новые домашние комплекты уже поступили
+                                в продажу!</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+                            дел.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/07.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/07.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">JUNGE новая коллеция осень 2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
+                            Отличная теплоизоляция
+                            достигается благодаря наполнителю 90% пуха.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#осень</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/08.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/08.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/09.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/09.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">Новые домашние комплекты уже поступили
+                                в продажу!</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+                            дел.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/10.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/10.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/11.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/11.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-09-10">10.09.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">JUNGE новая коллеция лето 2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Новая коллекция представлена в трендовых цветах и дополнена классическими оттенками.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#лето</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/12.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/12.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">Новые домашние комплекты уже поступили
+                                в продажу!</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Женский пижамный комплект, который отлично подойдет не только для сна, но и для домашних
+                            дел.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#женщинам</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="blog-item blog-grid__item">
+                    <a href="#"
+                       class="blog-item__img">
+                        <picture>
+                            <source type="image/webp"
+                                    data-srcset="assets/images/content/blog/13.webp"
+                                    srcset="assets/images/src.webp">
+                            <img class="lazy"
+                                 data-src="assets/images/content/blog/13.jpg"
+                                 src="assets/images/src.jpg"
+                                 alt="фото блога">
+                        </picture>
+                    </a>
+                    <div class="blog-item__content">
+                        <time class="date blog-item__date"
+                              datetime="2021-11-10">10.11.2021</time>
+                        <h5 class="blog-item-title blog-item__title">
+                            <a href="#">MINOTI новая коллекция осень-зима
+                                2021</a>
+                        </h5>
+                        <p class="blog-item-text blog-item__text">
+                            Осень уже перешагнула свой экватор, а в прогнозах погоды то и дело появляются сообщения о
+                            первом снеге.
+                            Приглашаем вас ознакомиться с новой коллекцией MINOTI.
+                        </p>
+                        <div class="tags">
+                            <a href="#"
+                               class="tag blog-item__tag">#коллекция</a>
+                            <a href="#"
+                               class="tag blog-item__tag">#детям</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            @@include("blocks/pagination/pagination.html")
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+        @@include("blocks/popup/password-recovery.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
+    @@include("blocks/popup/password-change.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

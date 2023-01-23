@@ -1,67 +1,75 @@
 @@include("blocks/head/head.html", {"title": "Персональные данные"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page profile-page">
-		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Персональные данные</span>
-					</li>
-				</ol>
-			</nav>
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page profile-page">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Персональные данные"
+            })
 
-			<h1 class="title page__title">Профиль</h1>
+            <h1 class="title page__title">Профиль</h1>
 
-			<div class="profile-page__inner">
-				<nav class="page-nav">
-					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Мои заказы</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Скидки</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Управление подписками</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Персональные данные</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="profile-page__body">
-					<h2 class="profile-page__title">Персональные данные</h2>
-					@@include("blocks/personal/personal.html")
-					<div class="profile-page__notifies">
-						<div class="notify profile-notify success">
-							<img class="notify__icon" src="assets/images/icons/success.svg" alt="иконка" width="24"
-								height="24">
-							Данные успешно обновлены
-						</div>
-						<div class="notify profile-notify error">
-							<img class="notify__icon" src="assets/images/icons/error.svg" alt="иконка" width="24"
-								height="24">
-							Не удалось обновить данные
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/popup/password-recovery.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/popup/personal-change.html")
-	@@include("blocks/popup/phone-change.html")
-	@@include("blocks/popup/email-change.html")
-	@@include("blocks/popup/password-change.html")
+            <div class="profile-page__inner">
+                <nav class="page-nav">
+                    <ul class="page-nav__list">
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Мои заказы</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Скидки</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Управление подписками</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link active">Персональные данные</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="profile-page__body">
+                    <h2 class="profile-page__title">Персональные данные</h2>
+                    @@include("blocks/personal/personal.html")
+                    <div class="profile-page__notifies">
+                        <div class="notify profile-notify success">
+                            <img class="notify__icon"
+                                 src="assets/images/icons/success.svg"
+                                 alt="иконка"
+                                 width="24"
+                                 height="24">
+                            Данные успешно обновлены
+                        </div>
+                        <div class="notify profile-notify error">
+                            <img class="notify__icon"
+                                 src="assets/images/icons/error.svg"
+                                 alt="иконка"
+                                 width="24"
+                                 height="24">
+                            Не удалось обновить данные
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/popup/password-recovery.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
+    @@include("blocks/popup/personal-change.html")
+    @@include("blocks/popup/phone-change.html")
+    @@include("blocks/popup/email-change.html")
+    @@include("blocks/popup/password-change.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

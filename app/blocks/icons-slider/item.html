@@ -1,0 +1,20 @@
+<a href="#"
+   class="swiper-slide icons-slider__item animate__animated animate__fadeIn wow"
+   data-wow-duration="1s"
+   @@if(context.delay){data-wow-delay="@@delay"
+   }>
+    <div class="icons-slider__item-img">
+        <picture>
+            <source type="image/webp"
+                    data-srcset="@@src.webp"
+                    srcset="assets/images/src.webp">
+            <img class="lazy"
+                 data-src="@@src.png"
+                 src="assets/images/src.jpg"
+                 alt="Пуховик"
+                 width="68"
+                 height="101">
+        </picture>
+    </div>
+    <span class="icons-slider__item-title">@@title</span>
+</a>

@@ -1,112 +1,119 @@
 @@include("blocks/head/head.html", {"title": "Детали заказа"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page profile-page">
-		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Мои заказы
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Подробнее о заказе</span>
-					</li>
-				</ol>
-			</nav>
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page profile-page">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "prevPage": "Мои заказы",
+            "currentPage": "Подробнее о заказе"
+            })
 
-			<div class="profile-page__top">
-				<h1 class="title page__title">Профиль</h1>
-				<a href="#" class="back-link">
-					<svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path
-							d="M7.97474 15.6829C8.13307 15.6829 8.29141 15.6246 8.41641 15.4996C8.65807 15.2579 8.65807 14.8579 8.41641 14.6163L3.79974 9.99961L8.41641 5.38294C8.65807 5.14128 8.65807 4.74128 8.41641 4.49961C8.17474 4.25794 7.77474 4.25794 7.53307 4.49961L2.47474 9.55794C2.23307 9.79961 2.23307 10.1996 2.47474 10.4413L7.53307 15.4996C7.65807 15.6246 7.81641 15.6829 7.97474 15.6829Z"
-							fill="#479458" />
-						<path
-							d="M3.05703 10.625H17.082C17.4237 10.625 17.707 10.3417 17.707 10C17.707 9.65833 17.4237 9.375 17.082 9.375H3.05703C2.71537 9.375 2.43203 9.65833 2.43203 10C2.43203 10.3417 2.71537 10.625 3.05703 10.625Z"
-							fill="#479458" />
-					</svg>
-					К списку текущих заказов
-				</a>
-			</div>
+            <div class="profile-page__top">
+                <h1 class="title page__title">Профиль</h1>
+                <a href="#"
+                   class="back-link">
+                    <svg viewBox="0 0 20 20"
+                         fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.97474 15.6829C8.13307 15.6829 8.29141 15.6246 8.41641 15.4996C8.65807 15.2579 8.65807 14.8579 8.41641 14.6163L3.79974 9.99961L8.41641 5.38294C8.65807 5.14128 8.65807 4.74128 8.41641 4.49961C8.17474 4.25794 7.77474 4.25794 7.53307 4.49961L2.47474 9.55794C2.23307 9.79961 2.23307 10.1996 2.47474 10.4413L7.53307 15.4996C7.65807 15.6246 7.81641 15.6829 7.97474 15.6829Z" />
+                        <path d="M3.05703 10.625H17.082C17.4237 10.625 17.707 10.3417 17.707 10C17.707 9.65833 17.4237 9.375 17.082 9.375H3.05703C2.71537 9.375 2.43203 9.65833 2.43203 10C2.43203 10.3417 2.71537 10.625 3.05703 10.625Z" />
+                    </svg>
+                    К списку текущих заказов
+                </a>
+            </div>
 
-			<div class="profile-page__inner">
-				<nav class="page-nav">
-					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Мои заказы</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Скидки</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Управление подписками</a>
-						</li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Персональные данные</a>
-						</li>
-					</ul>
-				</nav>
-				<div class="profile-page__body">
-					<h2 class="profile-page__title">Заказ №RU125487-985471</h2>
-					<div class="order-details-table profile-page__order-table">
-						<div class="order-details-table__item">
-							<div class="order-details-table__item-title">Заказ:</div>
-							<p>№RU125487-985471</p>
-							<p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
-						</div>
-						<div class="order-details-table__item">
-							<div class="order-details-table__item-title">Получатель:</div>
-							<p>Иванова Иванка</p>
-							<p>post@mail.ru</p>
-							<p>+7 (999) 999-99-99 </p>
-							<p>г.Санкт-Петербург</p>
-						</div>
-						<div class="order-details-table__item">
-							<div class="order-details-table__item-title">Доставка:</div>
-							<p>В пункт выдачи </p>
-							<p>Адрес</p>
-						</div>
-						<div class="order-details-table__item">
-							<div class="order-details-table__item-title">Оплата:</div>
-							<p>Картой онлайн</p>
-						</div>
-						<div class="order-details-table__item">
-							<div class="order-details-table__item-wrap">
-								<div class="order-details-table__item-title">
-									Итого:
-									<span>42 540 ₽</span>
-								</div>
-								<span class="order-status">Не оплачен</span>
-							</div>
-							<a href="#" class="btn order-details-table__btn">Оплатить</a>
-						</div>
-					</div>
+            <div class="profile-page__inner">
+                <nav class="page-nav">
+                    <ul class="page-nav__list">
+                        <li>
+                            <a href="#"
+                               class="page-nav__link active">Мои заказы</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Скидки</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Управление подписками</a>
+                        </li>
+                        <li>
+                            <a href="#"
+                               class="page-nav__link">Персональные данные</a>
+                        </li>
+                    </ul>
+                </nav>
+                <article class="order-details">
+                    <header class="order-details__header">
+                        <h2 class="profile-page__title">Заказ №RU125487-985471</h2>
+                    </header>
+                    <div class="order-details-table order-details__table">
+                        <div class="order-details-table__item">
+                            <div class="order-details-table__item-title">Заказ:</div>
+                            <p>№RU125487-985471</p>
+                            <p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
+                        </div>
+                        <div class="order-details-table__item">
+                            <div class="order-details-table__item-title">Получатель:</div>
+                            <p>Иванова Иванка</p>
+                            <p>post@mail.ru</p>
+                            <p>+7 (999) 999-99-99 </p>
+                            <p>г.Санкт-Петербург</p>
+                        </div>
+                        <div class="order-details-table__item">
+                            <div class="order-details-table__item-title">Доставка:</div>
+                            <p>В пункт выдачи </p>
+                            <p>Адрес</p>
+                        </div>
+                        <div class="order-details-table__item">
+                            <div class="order-details-table__item-title">Оплата:</div>
+                            <p>Картой онлайн</p>
+                        </div>
+                        <div class="order-details-table__item">
+                            <div class="order-details-table__item-wrap">
+                                <div class="order-details-table__item-title">
+                                    Итого:
+                                    <span>42 540 ₽</span>
+                                </div>
+                                <span class="order-status">Не оплачен</span>
+                            </div>
+                            <a href="#"
+                               class="btn order-details-table__btn">Оплатить</a>
+                        </div>
+                    </div>
 
-					<div class="profile-page-goods">
-						<h5 class="profile-page-goods__title product-title">Товары:</h5>
-						<div class="profile-page-goods__list">
-							@@include("blocks/order-product/order-product.html")
-							@@include("blocks/order-product/order-product.html")
-							@@include("blocks/order-product/order-product.html")
-							@@include("blocks/order-product/order-product.html")
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/popup/password-recovery.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
+                    <div class="order-details-goods">
+                        <h3 class="order-details-goods__title product-title">Товары:</h3>
+                        <ul class="order-details-goods__list">
+                            <li>
+                                @@include("blocks/order-product/order-product.html")
+                            </li>
+                            <li>
+                                @@include("blocks/order-product/order-product.html")
+                            </li>
+                            <li>
+                                @@include("blocks/order-product/order-product.html")
+                            </li>
+                            <li>
+                                @@include("blocks/order-product/order-product.html")
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/popup/password-recovery.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

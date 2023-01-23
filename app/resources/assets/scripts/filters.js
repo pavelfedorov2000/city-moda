@@ -1,4 +1,4 @@
-$(document).ready(function () {
+$(function () {
     $('.catalog-filters__item-title').on('click', function () {
         const $catalogFiltersItemTitle = $(this);
         const $catalogFiltersItem = $catalogFiltersItemTitle.parent();
@@ -8,9 +8,9 @@ $(document).ready(function () {
         const $catalogFiltersItemDropNotActive = $catalogFiltersItemNotActive.find('.catalog-filters__item-drop');
 
         $catalogFiltersItemTitleNotActive.removeClass('active');
-        $catalogFiltersItemDropNotActive.slideUp('300');
+        $catalogFiltersItemDropNotActive.slideUp();
         $catalogFiltersItemTitle.toggleClass('active');
-        $catalogFiltersItemDrop.slideToggle('300');
+        $catalogFiltersItemDrop.slideToggle();
     });
 
     // Подсчет отмеченных чекбоксом
@@ -41,7 +41,7 @@ $(document).ready(function () {
         $catalogFiltersItemTitle.css('font-weight', '400');
         $catalogFiltersItemTitle.find('.filter-output').text('');
         $catalogFiltersItemTitle.removeClass('active');
-        $catalogFiltersItemDrop.slideUp('300');
+        $catalogFiltersItemDrop.slideUp();
     });
 
     // Кнопка сброса в отдельном фильтре
@@ -142,7 +142,7 @@ $(document).ready(function () {
         $catalogFiltersItemTitle.text($catalogDropFilterItemRadioText);
 
         if ($(window).width() > 1024) {
-            $catalogDropFilter.slideUp('300');
+            $catalogDropFilter.slideUp();
             $catalogFiltersItemTitle.removeClass('active');
             $catalogFiltersItemTitle.removeClass('catalog-filters__item-title--bold');
         }

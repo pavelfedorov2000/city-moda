@@ -5,10 +5,11 @@ app.checkout = {
         $('.checkout-radio').on('click', function () {
             const $checkoutRadio = $(this);
             const $checkoutRadioNotActive = $checkoutRadio.siblings();
+
             $checkoutRadioNotActive.removeClass('checkout-radio--checked');
             $checkoutRadio.addClass('checkout-radio--checked');
-            $checkoutRadioNotActive.find('.checkout-radio__hidden').slideUp('300');
-            $checkoutRadio.find('.checkout-radio__hidden').slideDown('300');
+            $checkoutRadioNotActive.find('.checkout-radio__hidden').slideUp();
+            $checkoutRadio.find('.checkout-radio__hidden').slideDown();
         });
     },
 };

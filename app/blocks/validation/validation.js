@@ -85,18 +85,6 @@ app.validation = {
     validateForms('#personal-data');
     validateForms('#contact-data');
 
-    /* $('#subscribe-form form').submit(function (e) {
-      e.preventDefault();
-      $.ajax({
-        type: "POST",
-        url: "/",
-        data: $(this).serialize(),
-        success: function () {
-          $(this).append('<div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div>');
-        }
-      });
-    }); */
-
     $.fn.setCursorPosition = function (pos) {
       if ($(this).get(0).setSelectionRange) {
         $(this).get(0).setSelectionRange(pos, pos);

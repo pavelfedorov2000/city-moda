@@ -1,15 +1,15 @@
 .section {
-	padding-bottom: 8rem;
+    padding-bottom: 8rem;
 
-	@media (max-width: 500px) {
-		padding-bottom: 5rem;
-	}
+    @media (max-width: 500px) {
+        padding-bottom: 5rem;
+    }
 
-	&__title {
-		@extend %flex-row-center;
+    &__top {
+        @extend %flex-row-center;
 
-		&:not(:last-child) {
-			margin-bottom: 3rem;
-		}
-	}
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+    }
 }

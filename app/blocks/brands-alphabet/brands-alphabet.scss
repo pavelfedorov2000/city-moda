@@ -1,0 +1,58 @@
+.brands-alphabet {
+    @media (min-width: 768px) {
+        padding-left: 3rem;
+    }
+
+    // .brands-alphabet__item
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+
+            @media (max-width: 500px) {
+                margin-bottom: 2rem;
+            }
+        }
+
+        dt {
+            @extend %text-20;
+            font-weight: 500;
+            min-width: 3.6rem;
+        }
+
+        dd {
+            margin-left: 6.5rem;
+        }
+    }
+
+    // .brands-alphabet__row
+
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3rem;
+
+        @media(min-width: 768px) {
+            gap: 18.3rem;
+        }
+    }
+
+    // .brands-alphabet__link
+
+    &__link {
+        @extend %text-16;
+        display: block;
+
+        &:not(:last-child) {
+            margin-bottom: 0.8rem;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--gray);
+            }
+        }
+    }
+}

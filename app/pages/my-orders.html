@@ -5,18 +5,9 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page profile-page">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Мои заказы</span>
-					</li>
-				</ol>
-			</nav>
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+                "currentPage": "Мои заказы"
+            })
 
 			<h1 class="title page__title">Профиль</h1>
 
@@ -32,10 +23,10 @@
 				<div class="profile-page__body">
 					<h2 class="profile-page__title">Мои заказы</h2>
 					<div class="tabs profile-page__tabs">
-						<a href="#current-orders" class="tab profile-page__tab tab--active">Текущие заказы</a>
+						<a href="#current-orders" class="tab profile-page__tab active">Текущие заказы</a>
 						<a href="#orders-history" class="tab profile-page__tab">История заказов</a>
 					</div>
-					<div id="current-orders" class="tabs-content tabs-content--active">
+					<div id="current-orders" class="tabs-content active">
 						<div class="profile-page__orders order-table">
 							<div class="order-item order-table__item">
 								<header class="order-item__header">

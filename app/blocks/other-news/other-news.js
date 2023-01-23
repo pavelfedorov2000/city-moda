@@ -2,14 +2,14 @@ app.otherNews = {
     name: 'otherNews',
     description: 'your script description',
     init() {
-        new Swiper('.other-news__slider', {
+        new Swiper('.other-news-slider', {
             loop: true,
             spaceBetween: 20,
             speed: 1000,
             //lazy: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.other-news-slider .swiper-button-next',
+                prevEl: '.other-news-slider .swiper-button-prev',
             },
             breakpoints: {
                 768: {

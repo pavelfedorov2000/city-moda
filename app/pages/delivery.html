@@ -5,18 +5,9 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page profile-page">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Доставка и оплата</span>
-					</li>
-				</ol>
-			</nav>
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Доставка и оплата"
+            })
 
 			<h1 class="title page__title">Помощь покупателю</h1>
 

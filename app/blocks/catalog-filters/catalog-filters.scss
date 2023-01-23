@@ -247,11 +247,11 @@
 			height: 1.6rem;
 			flex-shrink: 0;
 			border-radius: 50%;
-			border: 0.1rem solid #c0c0c0;
+			border: 0.1rem solid var(--gray-c0);
 		}
 
 		.check-style {
-			border-color: #c0c0c0;
+			border-color: var(--gray-c0);
 		}
 
 		.check-box:checked+.check-style {

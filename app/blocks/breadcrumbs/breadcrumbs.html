@@ -1,0 +1,18 @@
+<nav class="breadcrumbs"
+     aria-label="breadcrumbs">
+    <ol class="breadcrumbs__list">
+        <li class="breadcrumbs__item">
+            <a href="#">
+                Главная
+            </a>
+        </li>
+        @@if(context.prevPage){
+        <li class="breadcrumbs__item">
+            <a href="#">@@prevPage</a>
+        </li>
+        }
+        <li class="breadcrumbs__item">
+            <span>@@currentPage</span>
+        </li>
+    </ol>
+</nav>

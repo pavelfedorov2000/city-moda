@@ -5,20 +5,9 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page catalog">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>
-							Избранные товары
-						</span>
-					</li>
-				</ol>
-			</nav>
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Избранные товары"
+            })
 			<div class="catalog__page">
 				<h1 class="title page__title catalog__title">Избранные товары</h1>
 				<div class="catalog__inner">

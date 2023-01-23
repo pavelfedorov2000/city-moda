@@ -1,76 +1,63 @@
 <section class="promo-sale">
-	<div class="container">
-		<div class="promo-sale__grid">
-			<div class="swiper promo-sale__slider">
-				<div class="swiper-wrapper">
-					@@include('blocks/sale-item/sale-item.html', {
-					"el": "swiper-slide",
-					"src": "assets/images/content/promo-sale/01",
-					"width": "1112",
-					"height": "610",
-					"label": "true",
-					"discount": "Мега распродажа",
-					"title": "На верхнюю одежду",
-					"descr": "Подготовь себя к зиме"
-					})
-					@@include('blocks/sale-item/sale-item.html', {
-					"el": "swiper-slide",
-					"src": "assets/images/content/promo-sale/01",
-					"width": "1112",
-					"height": "610",
-					"label": "true",
-					"discount": "Мега распродажа",
-					"title": "На верхнюю одежду",
-					"descr": "Подготовь себя к зиме"
-					})
-					@@include('blocks/sale-item/sale-item.html', {
-					"el": "swiper-slide",
-					"src": "assets/images/content/promo-sale/01",
-					"width": "1112",
-					"height": "610",
-					"label": "true",
-					"discount": "Мега распродажа",
-					"title": "На верхнюю одежду",
-					"descr": "Подготовь себя к зиме"
-					})
-				</div>
-				<div class="swiper-pagination"></div>
-				<div class="promo-sale__slider-arrows slider-arrows">
-					<div class="swiper-button-prev promo-sale__slider-arrow--prev">
-						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M0.292892 8.70711C-0.0976295 8.31658 -0.0976295 7.68342 0.292892 7.29289L6.65685 0.928932C7.04738 0.538408 7.68054 0.538408 8.07107 0.928932C8.46159 1.31946 8.46159 1.95262 8.07107 2.34315L2.41422 8L8.07107 13.6569C8.46159 14.0474 8.46159 14.6805 8.07107 15.0711C7.68054 15.4616 7.04738 15.4616 6.65685 15.0711L0.292892 8.70711ZM56 9H1V7H56V9Z"
-								fill="#C0C0C0" />
-						</svg>
-					</div>
-					<div class="swiper-button-next promo-sale__slider-arrow--next">
-						<svg viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path
-								d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
-								fill="#C0C0C0" />
-						</svg>
-					</div>
-				</div>
-			</div>
-			@@include('blocks/sale-item/sale-item.html', {
-			"el": "promo-sale__item",
-			"src": "assets/images/content/promo-sale/02",
-			"width": "336",
-			"height": "250",
-			"label": "true",
-			"discount": "До 30%",
-			"title": "Уютные головные уборы",
-			"descr": "Точно не будет холодно"
-			})
-			@@include('blocks/sale-item/sale-item.html', {
-			"el": "promo-sale__item",
-			"src": "assets/images/content/promo-sale/03",
-			"width": "336",
-			"height": "250",
-			"label": "false",
-			"title": "Одежда для новорожденных",
-			"descr": "Комфортная и гипоаллергенная"
-			})
-		</div>
-	</div>
+    <div class="container">
+        <div class="promo-sale__grid">
+            <div class="swiper promo-sale__slider">
+                <div class="swiper-wrapper">
+                    @@include('blocks/sale-item/sale-item.html', {
+                    "el": "swiper-slide",
+                    "src": "assets/images/content/promo-sale/01",
+                    "width": "1112",
+                    "height": "610",
+                    "label": "true",
+                    "discount": "Мега распродажа",
+                    "title": "На верхнюю одежду",
+                    "descr": "Подготовь себя к зиме"
+                    })
+                    @@include('blocks/sale-item/sale-item.html', {
+                    "el": "swiper-slide",
+                    "src": "assets/images/content/promo-sale/01",
+                    "width": "1112",
+                    "height": "610",
+                    "label": "true",
+                    "discount": "Мега распродажа",
+                    "title": "На верхнюю одежду",
+                    "descr": "Подготовь себя к зиме"
+                    })
+                    @@include('blocks/sale-item/sale-item.html', {
+                    "el": "swiper-slide",
+                    "src": "assets/images/content/promo-sale/01",
+                    "width": "1112",
+                    "height": "610",
+                    "label": "true",
+                    "discount": "Мега распродажа",
+                    "title": "На верхнюю одежду",
+                    "descr": "Подготовь себя к зиме"
+                    })
+                </div>
+                <div class="swiper-pagination"></div>
+                @@include('blocks/slider-arrows/slider-arrows.html', {
+                "class": "promo-sale__slider-arrows"
+                })
+            </div>
+            @@include('blocks/sale-item/sale-item.html', {
+            "el": "promo-sale__item",
+            "src": "assets/images/content/promo-sale/02",
+            "width": "336",
+            "height": "250",
+            "label": "true",
+            "discount": "До 30%",
+            "title": "Уютные головные уборы",
+            "descr": "Точно не будет холодно"
+            })
+            @@include('blocks/sale-item/sale-item.html', {
+            "el": "promo-sale__item",
+            "src": "assets/images/content/promo-sale/03",
+            "width": "336",
+            "height": "250",
+            "label": "false",
+            "title": "Одежда для новорожденных",
+            "descr": "Комфортная и гипоаллергенная"
+            })
+        </div>
+    </div>
 </section>

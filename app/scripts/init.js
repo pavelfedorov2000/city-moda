@@ -1,6 +1,5 @@
 (function ($) {
-    $(document).ready(function () {
-
+    $(function () {
         new LazyLoad();
 
         // prevent gallery slider crashing after fancybox close
@@ -10,16 +9,25 @@
 
         // Селект
         $('.select__title').on('click', function () {
-            $(this).parents('.sale-popup__form-item').siblings().find('.select__title').removeClass('select__title--active');
-            $(this).parents('.sale-popup__form-item').siblings().find('.select__content').slideUp('300');
-            $(this).toggleClass('select__title--active');
-            $(this).next().slideToggle('300');
+            const $selectTitle = $(this);
+            const $selectContent = $selectTitle.closest('.select').find('.select__content');
+            const $salePopupFormItems = $selectTitle.closest('.sale-popup__form-item').siblings();
+
+            $salePopupFormItems.find('.select__title').removeClass('select__title--active');
+            $salePopupFormItems.find('.select__content').slideUp();
+
+            $selectContent.toggleClass('active');
+            $selectContent.slideToggle();
         });
 
         $('.select__option').on('click', function () {
-            $(this).parent().prev().text($(this).find('span.select__option-text').text());
-            $(this).parent().prev().removeClass('select__title--active');
-            $(this).parent().slideUp('300');
+            const $selectOption = $(this);
+            const $selectContent = $selectOption.closest('.select__content');
+            const $selectTitle = $selectContent.closest('.select').find('.select__title');
+
+            $selectTitle.text($selectOption.find('span.select__option-text').text());
+            $selectTitle.removeClass('active');
+            $selectContent.slideUp();
         });
 
         // Переключение списка магазинов в зависимости от выбранного города (карточка товара)
@@ -32,15 +40,17 @@
         $('.tab').on('click', function (e) {
             e.preventDefault();
 
-            $(this).siblings().removeClass('tab--active');
-            $('.tabs-content').removeClass('tabs-content--active');
+            const $tab = $(this);
 
-            $(this).addClass('tab--active');
-            $($(this).attr('href')).addClass('tabs-content--active');
+            $tab.siblings().removeClass('active');
+            $('.tabs-content').removeClass('active');
+
+            $tab.addClass('active');
+            $($tab.attr('href')).addClass('active');
         });
+
         app.validation.init();
         app.burger.init();
-        //app.searchForm.init();
         app.promoSale.init();
         app.iconsSlider.init();
         app.sliderSections.init();
@@ -49,24 +59,15 @@
         app.blog.init();
         app.catalogCard.init();
         app.asideFilters.init();
-        //app.catalogFilters.init();
-        //app.sortFilter.init();
-        //app.sizeFilter.init();
-        //app.pricefilter.init();
         app.productCard.init();
         app.productPopup.init();
         app.productDetails.init();
         app.popup.init();
-        //app.regionPopup.init();
         app.checkout.init();
         app.faq.init();
         app.feedback.init();
         app.pageup.init();
         app.auth.init();
         app.pickupFilters.init();
-        //app.productSizes.init();
-        if ($('main').hasClass('basket-page')) {
-            app.basketTotal.init();
-        }
     });
 })(jQuery)

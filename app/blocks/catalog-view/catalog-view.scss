@@ -1,0 +1,41 @@
+.catalog-view {
+    display: flex;
+
+    &__btn {
+        margin-right: 1.6rem;
+
+        @media (max-width: 500px) {
+            margin-right: 1.4rem;
+        }
+
+        svg {
+            width: 1.9rem;
+            height: 1.9rem;
+
+            @media (max-width: 500px) {
+                width: 1.8rem;
+                height: 1.8rem;
+            }
+
+            rect {
+                transition: $transition stroke;
+            }
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+
+        &:nth-last-child(-n + 2) {
+            @media (min-width: 768px) {
+                margin-right: 0;
+            }
+        }
+
+        &.active {
+            svg rect {
+                stroke: #505661;
+            }
+        }
+    }
+}

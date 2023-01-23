@@ -8,7 +8,7 @@ app.productDetails = {
 
         $('.product-details__hide-btn').on('click', function () {
             const $productDetailsHideBtn = $(this);
-            const $productDetailsContent = $productDetailsHideBtn.closest('.product-details__section').find('.product-details__list');
+            const $productDetailsContent = $productDetailsHideBtn.closest('.product-details__section-top').next();
 
             if ($productDetailsHideBtn.attr('aria-expanded') === 'false') {
                 $productDetailsHideBtn.attr('aria-expanded', true);
