@@ -1,0 +1,52 @@
+<li>
+    <article class="blog-item@@if(context.animation){ animate__animated animate__@@animation wow}"
+             @@if(context.duration){
+             data-wow-duration="@@duration"
+             }
+             @@if(context.delay){
+             data-wow-delay="@@delay"
+             }>
+        <a href="#"
+           class="blog-item__img">
+            <picture>
+                <source type="image/webp"
+                        data-srcset="@@src.webp"
+                        srcset="assets/images/src.webp">
+                <img class="lazy"
+                     data-src="@@src.jpg"
+                     src="assets/images/src.jpg"
+                     alt="фото блога"
+                     width="@@width"
+                     height="@@height">
+            </picture>
+        </a>
+        <div class="blog-item__content">
+            <time class="date blog-item__date"
+                  datetime="@@datetime">@@date</time>
+            <h5 class="blog-item-title blog-item__title">
+                <a href="#">@@title</a>
+            </h5>
+            <p class="blog-item-text blog-item__text">
+                @@text
+            </p>
+            <ul class="tags">
+                <li>
+                    <a href="#"
+                       class="tag">#коллекция</a>
+                </li>
+                @@if(context.whom){
+                <li>
+                    <a href="#"
+                       class="tag">#@@whom</a>
+                </li>
+                }
+                @@if(context.season){
+                <li>
+                    <a href="#"
+                       class="tag">#@@season</a>
+                </li>
+                }
+            </ul>
+        </div>
+    </article>
+</li>

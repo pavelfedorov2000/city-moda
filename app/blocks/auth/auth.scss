@@ -192,7 +192,7 @@
 
 	&__form-inputs {
 		display: grid;
-		grid-gap: 1.5rem;
+		gap: 1.5rem;
 
 		&:not(:last-child) {
 			margin-bottom: 2rem;
@@ -271,7 +271,7 @@
 
 .auth-phone {
 	display: grid;
-	grid-gap: 1.5rem;
+	gap: 1.5rem;
 
 	&__field {
 		display: flex;

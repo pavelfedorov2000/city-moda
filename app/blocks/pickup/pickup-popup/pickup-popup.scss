@@ -24,11 +24,11 @@
 		display: grid;
 
 		@media(max-width: 1024px) {
-			grid-gap: 3rem;
+			gap: 3rem;
 		}
 
 		@media(max-width: 500px) {
-			grid-gap: 1.5rem;
+			gap: 1.5rem;
 		}
 
 		@media(min-width: 1025px) {

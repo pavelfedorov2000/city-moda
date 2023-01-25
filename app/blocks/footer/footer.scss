@@ -98,7 +98,7 @@
         }
 
         @media (min-width: 1025px) {
-            grid-gap: 11.2rem;
+            gap: 11.2rem;
         }
     }
 
@@ -206,7 +206,7 @@
 
         @media (max-width: 767px) {
             grid-template-columns: repeat(2, 1fr);
-            grid-gap: 4rem;
+            gap: 4rem;
         }
 
         @media (min-width: 1025px) {
@@ -313,7 +313,7 @@
         }
 
         @media (max-width: 767px) {
-            grid-gap: 3rem;
+            gap: 3rem;
         }
     }
 

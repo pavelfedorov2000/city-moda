@@ -20,7 +20,7 @@
 	&__row {
 		display: grid;
 		grid-template-columns: repeat(2, max-content);
-		grid-gap: 0.5rem;
+		gap: 0.5rem;
 	}
 
 	// .pickup-filters__item

@@ -9,10 +9,10 @@
 
     &__inner {
         display: grid;
-        grid-gap: 18rem;
+        gap: 18rem;
 
         @media (max-width: 1024px) {
-            grid-gap: 3rem;
+            gap: 3rem;
         }
 
         @media (min-width: 1025px) {

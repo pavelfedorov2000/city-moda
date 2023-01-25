@@ -1,34 +1,31 @@
-<section class="promo-sale">
+<div class="promo-sale">
     <div class="container">
         <div class="promo-sale__grid">
             <div class="swiper promo-sale__slider">
                 <div class="swiper-wrapper">
                     @@include('blocks/sale-item/sale-item.html', {
-                    "el": "swiper-slide",
+                    "class": "swiper-slide",
                     "src": "assets/images/content/promo-sale/01",
                     "width": "1112",
                     "height": "610",
-                    "label": "true",
                     "discount": "Мега распродажа",
                     "title": "На верхнюю одежду",
                     "descr": "Подготовь себя к зиме"
                     })
                     @@include('blocks/sale-item/sale-item.html', {
-                    "el": "swiper-slide",
+                    "class": "swiper-slide",
                     "src": "assets/images/content/promo-sale/01",
                     "width": "1112",
                     "height": "610",
-                    "label": "true",
                     "discount": "Мега распродажа",
                     "title": "На верхнюю одежду",
                     "descr": "Подготовь себя к зиме"
                     })
                     @@include('blocks/sale-item/sale-item.html', {
-                    "el": "swiper-slide",
+                    "class": "swiper-slide",
                     "src": "assets/images/content/promo-sale/01",
                     "width": "1112",
                     "height": "610",
-                    "label": "true",
                     "discount": "Мега распродажа",
                     "title": "На верхнюю одежду",
                     "descr": "Подготовь себя к зиме"
@@ -40,24 +37,22 @@
                 })
             </div>
             @@include('blocks/sale-item/sale-item.html', {
-            "el": "promo-sale__item",
+            "class": "promo-sale__item",
             "src": "assets/images/content/promo-sale/02",
             "width": "336",
             "height": "250",
-            "label": "true",
             "discount": "До 30%",
             "title": "Уютные головные уборы",
             "descr": "Точно не будет холодно"
             })
             @@include('blocks/sale-item/sale-item.html', {
-            "el": "promo-sale__item",
+            "class": "promo-sale__item",
             "src": "assets/images/content/promo-sale/03",
             "width": "336",
             "height": "250",
-            "label": "false",
             "title": "Одежда для новорожденных",
             "descr": "Комфортная и гипоаллергенная"
             })
         </div>
     </div>
-</section>
+</div>

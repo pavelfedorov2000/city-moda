@@ -1,69 +1,11 @@
 <section class="slider-section similar-goods">
-	<div class="section__top">
-		<h2 class="title">Похожие товары</h2>
-		@@include('blocks/slider-arrows/slider-arrows.html')
-	</div>
-	<div class="swiper similar-goods-slider">
-		<ul class="swiper-wrapper">
-			@@loop("blocks/catalog-card/catalog-card.html", [{
-			"labels": {
-			"discount": "25%"
-			},
-			"image": "assets/images/content/catalog-slider/04",
-			"alt": "Пуховик Rio Verti",
-			"title": "Пуховик",
-			"subtitle": "Rio Verti",
-			"newprice": "23 625 ₽",
-			"oldprice": "31 500 ₽",
-			}, {
-			"labels": {
-			"new": true
-			},
-			"image": "assets/images/content/catalog-slider/03",
-			"alt": "Джемпер Loriata",
-			"title": "Джемпер",
-			"subtitle": "Loriata",
-			"price": "12 500 ₽",
-			}, {
-			"labels": {
-			"discount": "25%"
-			},
-			"image": "assets/images/content/catalog-slider/02",
-			"alt": "Юбка Loriata",
-			"title": "Юбка",
-			"subtitle": "Loriata",
-			"newprice": "5 000 ₽",
-			"oldprice": "8 200 ₽",
-			}, {
-			"labels": {
-			"discount": "40%"
-			},
-			"image": "assets/images/content/catalog-slider/01",
-			"alt": "Пальто Loriata",
-			"title": "Пальто",
-			"subtitle": "Loriata",
-			"newprice": "21 200 ₽",
-			"oldprice": "37 400 ₽",
-			}, {
-			"labels": {
-			"discount": "25%"
-			},
-			"image": "assets/images/content/catalog-slider/04",
-			"alt": "Пуховик Rio Verti",
-			"title": "Пуховик",
-			"subtitle": "Rio Verti",
-			"newprice": "23 625 ₽",
-			"oldprice": "31 500 ₽",
-			}, {
-			"labels": {
-			"new": true
-			},
-			"image": "assets/images/content/catalog-slider/03",
-			"alt": "Джемпер Loriata",
-			"title": "Джемпер",
-			"subtitle": "Loriata",
-			"price": "12 500 ₽",
-			}])
-		</ul>
-	</div>
+    <div class="section__top">
+        <h2 class="title">Похожие товары</h2>
+        @@include('blocks/slider-arrows/slider-arrows.html')
+    </div>
+    <div class="swiper similar-goods-slider">
+        <ul class="swiper-wrapper">
+            @@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/similar-goods.json")
+        </ul>
+    </div>
 </section>

@@ -5,10 +5,10 @@
 
     svg {
         flex-shrink: 0;
+        margin-right: 0.8rem;
         width: 2rem;
         height: 2rem;
         fill: var(--green);
-        margin-right: 0.8rem;
     }
 
     @media (any-hover: hover) {
@@ -33,10 +33,10 @@
 
     &__inner {
         display: grid;
-        grid-gap: 6.2rem;
+        gap: 6.2rem;
 
         @media (max-width: 1024px) {
-            grid-gap: 3rem;
+            gap: 3rem;
         }
 
         @media (min-width: 1025px) {

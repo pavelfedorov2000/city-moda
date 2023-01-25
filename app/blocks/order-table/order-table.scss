@@ -14,7 +14,7 @@
 
     &__header-wrap {
         display: grid;
-        grid-gap: 1rem;
+        gap: 1rem;
 
         @media(min-width: 768px) {
             grid-template-columns: repeat(2, max-content);

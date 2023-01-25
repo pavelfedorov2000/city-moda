@@ -1,17 +1,24 @@
-<article class="sale-item @@el">
-	<a href="#" class="sale-item__img">
-		<picture>
-			<source type="image/webp" data-srcset="@@src.webp" srcset="assets/images/src.webp">
-			<img class="lazy" data-src="@@src.jpg" src="assets/images/src.jpg" alt="фото" width="@@width"
-				height="@@height">
-		</picture>
-		@@if(label === "true") {
-		<span class="sale-item__discount">@@discount</span>
-		}
-	</a>
-	<div class="sale-item__content">
+<article class="sale-item@@if(context.class){ @@class}">
+    <div class="sale-item__img">
+        <picture>
+            <source type="image/webp"
+                    data-srcset="@@src.webp"
+                    srcset="assets/images/src.webp">
+            <img class="lazy"
+                 data-src="@@src.jpg"
+                 src="assets/images/src.jpg"
+                 alt="фото"
+                 width="@@width"
+                 height="@@height">
+        </picture>
+        @@if(context.discount) {
+        <span class="sale-item__discount">@@discount</span>
+        }
+    </div>
+    <div class="sale-item__content">
         <h3 class="sale-item__title">
-            <a class="full-link" href="#">@@title</a>
+            <a class="full-link"
+               href="#">@@title</a>
         </h3>
         <div class="sale-item__descr">@@descr</div>
     </div>

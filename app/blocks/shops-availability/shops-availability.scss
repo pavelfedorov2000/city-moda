@@ -29,10 +29,10 @@
 
 	&__list {
 		display: grid;
-		grid-gap: var(--gap) 0;
+		gap: var(--gap) 0;
 
 		@media (max-width: 1024px) {
-			grid-gap: 3rem;
+			gap: 3rem;
 		}
 
 		@media (min-width: 501px) {

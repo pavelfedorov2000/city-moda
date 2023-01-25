@@ -42,7 +42,7 @@
                 width: 50%;
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
-                grid-gap: 1.5rem;
+                gap: 1.5rem;
             }
 
             @media (max-width: 767px) {
@@ -93,7 +93,7 @@
     position: relative;
     display: grid;
     grid-template-columns: 10rem 1fr;
-    grid-gap: 1.4rem 2rem;
+    gap: 1.4rem 2rem;
     grid-template-areas:
         'picture title'
         'picture dl';
@@ -157,10 +157,10 @@
 
     &__products {
         display: grid;
-        grid-gap: 2.7rem var(--gap);
+        gap: 2.7rem var(--gap);
 
         @media (max-width: 1024px) {
-            grid-gap: 3rem;
+            gap: 3rem;
         }
 
         @media (min-width: 768px) {

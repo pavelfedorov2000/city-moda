@@ -2,7 +2,7 @@
 
 	&__item {
 		display: grid;
-		grid-gap: 2rem;
+		gap: 2rem;
 
 		&:not(:last-child) {
 			padding-bottom: 4rem;
@@ -30,14 +30,14 @@
 	&__row {
 		display: grid;
 		align-items: center;
-		grid-gap: 9rem;
+		gap: 9rem;
 
 		@media(max-width: 1024px) {
-			grid-gap: 3rem;
+			gap: 3rem;
 		}
 
 		@media(max-width: 767px) {
-			grid-gap: 1.5rem;
+			gap: 1.5rem;
 		}
 
 		@media(min-width: 768px) {
@@ -51,7 +51,7 @@
 
 	&__fields {
 		display: grid;
-		grid-gap: 2rem 3rem;
+		gap: 2rem 3rem;
 
 		@media(min-width: 768px) {
 			grid-template-columns: repeat(2, 1fr);

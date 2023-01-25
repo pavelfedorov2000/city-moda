@@ -63,7 +63,7 @@
 
 	&__form-item {
 		display: grid;
-		grid-gap: 1rem;
+		gap: 1rem;
 
 		@media(min-width: 768px) {
 			grid-template-columns: max-content 24.7rem;

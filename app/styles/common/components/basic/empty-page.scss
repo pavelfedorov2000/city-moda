@@ -1,11 +1,11 @@
 .empty-page {
     display: grid;
     place-items: center;
-    grid-gap: 3rem;
+    gap: 3rem;
     text-align: center;
 
     @media (max-width: 767px) {
-        grid-gap: 2rem;
+        gap: 2rem;
     }
 
     // .empty-page__img

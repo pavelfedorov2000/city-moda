@@ -102,7 +102,7 @@
 		@media (min-width: 1025px) {
 			display: grid;
 			grid-template-columns: 22rem auto;
-			grid-gap: 4rem;
+			gap: 4rem;
 		}
 	}
 
@@ -124,10 +124,10 @@
 	&__cards {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 2rem;
+		gap: 2rem;
 
 		@media (max-width: 767px) {
-			grid-gap: 1.2rem 1.6rem;
+			gap: 1.2rem 1.6rem;
 			grid-template-columns: repeat(2, 1fr);
 		}
 

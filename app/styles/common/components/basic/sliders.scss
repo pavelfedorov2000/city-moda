@@ -1,13 +1,15 @@
-.swiper-button-prev,
-.swiper-button-next {
-    svg {
-        path {
+.swiper-button {
+
+    &-prev,
+    &-next {
+        svg {
+            fill: var(--gray-c0);
             transition: .3s fill;
         }
-    }
 
-    &:after {
-        content: '';
+        &:after {
+            content: '';
+        }
     }
 }
 
@@ -36,9 +38,8 @@
 
         @media (any-hover: hover) {
             &:hover {
-
-                svg path {
-                    fill: #101112;
+                svg {
+                    fill: var(--dark);
                 }
             }
         }
@@ -72,13 +73,14 @@
         svg {
             width: 2.8rem;
             height: 2.8rem;
+            fill: var(--dark);
         }
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: #101112;
+                background-color: var(--dark);
 
-                svg path {
+                svg {
                     fill: #fff;
                 }
             }

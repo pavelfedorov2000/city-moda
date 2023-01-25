@@ -56,7 +56,7 @@ $(function () {
     // Открытие фильтров (тач-скрины)
     $('.filters-btn').on('click', function () {
         const $filtersBtn = $(this);
-        const $catalogFilters = $body.find('.catalog-filters');
+        const $catalogFilters = $('body').find('.catalog-filters');
 
         $filtersBtn.attr('aria-expanded', true);
         $('body').addClass('_lock');

@@ -35,7 +35,7 @@
 	&__top {
 		display: grid;
 		grid-template-columns: 2rem auto;
-		grid-gap: 2rem;
+		gap: 2rem;
 		align-items: flex-start;
 		margin-bottom: 3rem;
 	}
