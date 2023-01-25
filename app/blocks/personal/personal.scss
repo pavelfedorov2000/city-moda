@@ -137,10 +137,10 @@
 	padding: 1.6rem;
 
 	&.success {
-		background-color: rgba(var(--green), 0.1);
+		background-color: rgba(#479458, 0.1);
 	}
 
 	&.error {
-		background-color: rgba(var(--red), 0.1);
+		background-color: rgba(#ee3333, 0.1);
 	}
 }

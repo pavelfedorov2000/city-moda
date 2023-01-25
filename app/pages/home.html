@@ -1,118 +1,42 @@
 @@include("blocks/head/head.html", {"title": "Главная"})
-<link rel="stylesheet"
-      href="./assets/libs/css/animate.min.css">
+<link rel="stylesheet" href="./assets/libs/css/animate.min.css">
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page home-page">
-        @@include("blocks/promo-sale/promo-sale.html")
-        @@include("blocks/icons-slider/icons-slider.html")
-        <section class="section slider-section">
-            <div class="container">
-                <div class="section__top">
-                    <h2 class="title">Популярные товары</h2>
-                    @@include('blocks/slider-arrows/slider-arrows.html')
-                </div>
-                <div class="swiper popular-goods-slider">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                            "discount": "25%",
-                            "image": "assets/images/content/catalog-slider/01",
-                            "alt": "Пуховик",
-                            "title": "Пуховик",
-                            "subtitle": "Rio Verti",
-                            "newprice": "23 625 ₽",
-                            "oldprice": "31 500 ₽",
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                            "discount": "25%",
-                            "image": "assets/images/content/catalog-slider/02",
-                            "alt": "Джемпер",
-                            "title": "Джемпер",
-                            "subtitle": "Loriata",
-                            "price": "12 500 ₽",
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                            "discount": "25%",
-                            "image": "assets/images/content/catalog-slider/03",
-                            "alt": "Юбка",
-                            "title": "Юбка",
-                            "subtitle": "Loriata",
-                            "newprice": "5 000 ₽",
-                            "oldprice": "8 200 ₽",
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                            "discount": "40%",
-                            "image": "assets/images/content/catalog-slider/04",
-                            "alt": "Пальто",
-                            "title": "Пальто",
-                            "subtitle": "Rio Verti",
-                            "newprice": "21 200 ₽",
-                            "oldprice": "37 400 ₽",
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                            "discount": "25%",
-                            "image": "assets/images/content/catalog-slider/02",
-                            "alt": "Джемпер",
-                            "title": "Джемпер",
-                            "subtitle": "Loriata",
-                            "price": "12 500 ₽",
-                            })
-                        </div>
-                        <div class="swiper-slide">
-                            @@include("blocks/catalog-card-sale/catalog-card-sale.html", {
-                            "discount": "40%",
-                            "image": "assets/images/content/catalog-slider/04",
-                            "alt": "Пальто",
-                            "title": "Пальто",
-                            "subtitle": "Rio Verti",
-                            "newprice": "21 200 ₽",
-                            "oldprice": "37 400 ₽",
-                            })
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        @@include("blocks/actual/actual.html")
-        @@include("blocks/brands/brands.html")
-        @@include('blocks/new-goods/new-goods.html')
-        @@include("blocks/promo-collection/promo-collection.html")
-        @@include('blocks/blog-section/blog-section.html')
-        @@include("blocks/instagram/instagram.html")
-        <div class="section">
-            <div class="container">
-                @@include('blocks/seo-text/seo-text.html')
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-        @@include("blocks/popup/password-recovery.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
-    @@include("blocks/product-popup/product-popup.html")
-    @@include("blocks/popup/size-subscribe-popup.html")
-    @@include("blocks/product-sizes-popup/product-sizes-popup.html")
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page home-page">
+		@@include("blocks/promo-sale/promo-sale.html")
+		@@include("blocks/icons-slider/icons-slider.html")
+		@@include('blocks/popular-goods/popular-goods.html')
+		@@include("blocks/actual/actual.html")
+		@@include("blocks/brands/brands.html")
+		@@include('blocks/new-goods/new-goods.html')
+		@@include("blocks/promo-collection/promo-collection.html")
+		@@include('blocks/blog-section/blog-section.html')
+		@@include("blocks/instagram/instagram.html")
+		<div class="section">
+			<div class="container">
+				@@include('blocks/seo-text/seo-text.html')
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+		@@include("blocks/popup/password-recovery.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/product-popup/product-popup.html")
+	@@include("blocks/popup/size-subscribe-popup.html")
+	@@include("blocks/product-sizes-popup/product-sizes-popup.html")
 </div>
 
 <script src="./assets/libs/js/wow.min.js"></script>
 <script>
-    new WOW().init();
+	new WOW().init();
 
 </script>
 @@include("blocks/link/link.html")

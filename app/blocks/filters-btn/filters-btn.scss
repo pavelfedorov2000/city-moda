@@ -1,0 +1,22 @@
+.filters-btn {
+	@extend %text-13;
+	font-weight: 500;
+	position: relative;
+	padding-left: 2.6rem;
+	display: none;
+
+	&:before {
+		content: '';
+		position: absolute;
+		@extend %pos-center-y;
+		left: 0;
+		width: 1.6rem;
+		height: 1.6rem;
+		background-image: url(../images/icons/filter.svg);
+		@extend %bg-contain;
+	}
+
+	@media (max-width: 1024px) {
+		display: block;
+	}
+}

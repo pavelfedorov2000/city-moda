@@ -1,0 +1,13 @@
+.favorite-btn {
+	background-image: url(../images/icons/heart.svg);
+	@extend %bg-contain;
+	transition: $transition transform;
+
+	&.favorite {
+		background-image: url(../images/icons/heart-filled.svg);
+	}
+
+	&.animated {
+		transform: scale(1.25);
+	}
+}

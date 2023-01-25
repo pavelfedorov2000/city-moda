@@ -5,59 +5,25 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page profile-page">
 		<div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "currentPage": "Скидки"
-            })
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Скидки"
+			})
 
-			<h1 class="title page__title">Профиль</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Скидки"
+			})
 
 			<div class="profile-page__inner">
 				<nav class="page-nav">
 					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Мои заказы</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Скидки</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Управление подписками</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Персональные данные</a></li>
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/discounts-nav.json")
 					</ul>
 				</nav>
 				<div class="profile-page__body">
 					<h2 class="profile-page__title">Скидки</h2>
-					<div class="discounts-progress">
-						<ol class="discounts-progress__list">
-							<li class="discounts-progress__item discounts-progress__item--completed">0%</li>
-							<li class="discounts-progress__item discounts-progress__item--completed">3%</li>
-							<li class="discounts-progress__item discounts-progress__item--completed">5%</li>
-							<li class="discounts-progress__item">7%</li>
-							<li class="discounts-progress__item">10%</li>
-							<li class="discounts-progress__item">13%</li>
-							<li class="discounts-progress__item">15%</li>
-							<li class="discounts-progress__item">17%</li>
-							<li class="discounts-progress__item">20%</li>
-						</ol>
-					</div>
-					<div class="personal-discout">
-						<div class="personal-discout__title">Ваша персональная скидка - 5%</div>
-						<ul class="personal-discout__list">
-							<li>— скидка распространяется на все товары City Moda, кроме производителей с предельными
-								скидками;</li>
-							<li>— размер скидки зависит от количества доставленных Вам товаров за последние 12 месяцев
-								от сегодняшнего числа;
-							</li>
-							<li>— скидка не сбрасывается в конце календарного года и не начинается заново в начале, она
-								действует все время;
-							</li>
-							<li>— скидка автоматически пересчитывается после каждого доставленного Вам заказа.</li>
-						</ul>
-					</div>
-					<div class="discount-add">
-						<div class="discount-add__title">
-							Сегодня мы добавили к вашей скидке:
-						</div>
-						<div class="discount-add__value">
-							<span class="label discount-add__label label--discount">25%</span>
-							<span>На новые коллекции</span>
-						</div>
-					</div>
+					@@include('blocks/discounts-progress/discounts-progress.html')
+					@@include('blocks/personal-discount/personal-discount.html')
+					@@include('blocks/discount-add/discount-add.html')
 				</div>
 			</div>
 		</div>

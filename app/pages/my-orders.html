@@ -6,20 +6,20 @@
 	<main class="page profile-page">
 		<div class="container">
 			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-                "currentPage": "Мои заказы"
-            })
+			"currentPage": "Мои заказы"
+			})
 
-			<h1 class="title page__title">Профиль</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Профиль"
+			})
 
 			<div class="profile-page__inner">
 				<nav class="page-nav">
 					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Мои заказы</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Скидки</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Управление подписками</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Персональные данные</a></li>
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
 					</ul>
 				</nav>
+
 				<div class="profile-page__body">
 					<h2 class="profile-page__title">Мои заказы</h2>
 					<div class="tabs profile-page__tabs">

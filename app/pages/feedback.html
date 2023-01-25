@@ -5,28 +5,18 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page profile-page">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Обратная связь</span>
-					</li>
-				</ol>
-			</nav>
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Обратная связь"
+			})
 
-			<h1 class="title page__title">О компании</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "О компании"
+			})
 
 			<div class="profile-page__inner">
 				<nav class="page-nav">
 					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link">О компании</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Контакты</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Обратная связь</a>
-						</li>
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/feedback-nav.json")
 					</ul>
 				</nav>
 				<div class="profile-page__body">

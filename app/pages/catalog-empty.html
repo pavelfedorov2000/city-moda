@@ -37,42 +37,22 @@
 		</nav>
 		@@include("blocks/promo-collection/promo-collection.html")
 		<div class="catalog__page container">
-			<h1 class="title page__title catalog__title">Женские пальто</h1>
+			<div class="page__top">
+				<h1 class="title page__title catalog__title">Женские пальто</h1>
+			</div>
 			<div class="catalog__inner">
 				@@include("blocks/aside-filters/aside-filters.html")
 				<div class="catalog__body">
 					<div class="catalog__filters">
 						@@include("blocks/catalog-filters/catalog-filters.html")
-						<div class="catalog__view">
-							<button class="catalog__view-btn grid-btn catalog__view-btn--active" type="button">
-								<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="0.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-									<rect x="11.5" y="0.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-									<rect x="11.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-									<rect x="0.5" y="11.5" width="7" height="7" rx="0.5" stroke="#C0C0C0" />
-								</svg>
-							</button>
-							<button class="catalog__view-btn col-btn" type="button">
-								<svg viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="0.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-									<rect x="11.5" y="0.5" width="7" height="18" rx="0.5" stroke="#C0C0C0" />
-								</svg>
-							</button>
-							<button class="catalog__view-btn row-btn" type="button">
-								<svg viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-									<rect x="0.5" y="0.5" width="17" height="6.57895" rx="0.5" stroke="#C0C0C0" />
-									<rect x="0.5" y="10.9214" width="17" height="6.57895" rx="0.5" stroke="#C0C0C0" />
-								</svg>
-							</button>
-						</div>
-
-						<button class="filters-btn" type="button">Фильтры</button>
+						@@include('blocks/catalog-view/catalog-view.html')
+						@@include('blocks/filters-btn/filters-btn.html')
 					</div>
-					<div class="empty-page catalog__empty">
-						<img class="empty-page__img" src="assets/images/icons/empty-catalog.svg" alt="иконка"
-							width="100" height="100">
-						<div class="empty-page__text">Нет актуальных товаров</div>
-					</div>
+					@@include('blocks/empty-page/empty-page.html', {
+					"class": "news-page",
+					"src": "assets/images/icons/empty-catalog.svg",
+					"text": "Нет актуальных товаров"
+					})
 				</div>
 			</div>
 		</div>

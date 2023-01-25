@@ -5,26 +5,19 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page blog-page">
 		<div class="container">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>Блог</span>
-					</li>
-				</ol>
-			</nav>
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Блог"
+			})
 
-			<h1 class="title blog-page__title">Блог</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Блог"
+			})
 
-			<div class="empty-page blog-page__empty">
-				<img class="empty-page__img" src="assets/images/icons/empty-blog.svg" alt="иконка" width="100"
-					height="100">
-				<div class="empty-page__text">Нет актуальных статей</div>
-			</div>
+			@@include('blocks/empty-page/empty-page.html', {
+			"class": "news-page",
+			"src": "assets/images/icons/empty-blog.svg",
+			"text": "Нет актуальных статей"
+			})
 		</div>
 	</main>
 	@@include("blocks/footer/footer.html")

@@ -1,0 +1,14 @@
+[{
+    "title": "Распродажи и акции для женщин и мужчин",
+    "email": "ежедневно на почту past@mail.ru",
+    "sms": "по SMS",
+    "status": "success"
+}, {
+    "title": "Новинка месяца",
+    "email": "еженедельно на почту past@mail.ru",
+    "status": "error"
+}, {
+    "title": "Детские новые коллекции",
+    "email": "раз в месяц на почту past@mail.ru",
+    "status": "success"
+}]

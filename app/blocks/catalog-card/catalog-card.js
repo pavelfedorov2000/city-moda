@@ -3,7 +3,7 @@ app.catalogCard = {
     description: 'your script description',
     init() {
         // Кнопка добавить в избранное
-        $('.catalog-card__favorite:not(:disabled)').on('click', function () {
+        $('.favorite-btn:not(:disabled):not(.disabled)').on('click', function () {
             const $favoriteBtn = $(this);
 
             $favoriteBtn.toggleClass('favorite');

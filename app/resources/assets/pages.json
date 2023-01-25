@@ -1,0 +1,139 @@
+[{
+    "href": "home.html",
+    "title": "Главная"
+}, {
+    "href": "catalog-home.html",
+    "title": "Разводящая каталога"
+}, {
+    "href": "catalog.html",
+    "title": "Каталог"
+}, {
+    "href": "catalog-empty.html",
+    "title": "Каталог пустой"
+}, {
+    "href": "favorite.html",
+    "title": "Избранное"
+}, {
+    "href": "search-results.html",
+    "title": "Результаты поиска"
+}, {
+    "href": "product-card.html",
+    "title": "Карточка товара"
+}, {
+    "href": "basket.html",
+    "title": "Корзина / Оформление заказа"
+}, {
+    "href": "basket-delivery.html",
+    "title": "Оформление заказа (выбран пункт выдачи)"
+}, {
+    "href": "order-success.html",
+    "title": "Заказ успешно отправлен"
+}, {
+    "href": "drop-basket.html",
+    "title": "Выезжающая корзина"
+}, {
+    "href": "drop-basket-empty.html",
+    "title": "Выезжающая корзина пустая"
+}, {
+    "href": "auth.html",
+    "title": "Авторизация"
+}, {
+    "href": "password-recovery.html",
+    "title": "Восстановление пароля"
+}, {
+    "href": "brands.html",
+    "title": "Бренды"
+}, {
+    "href": "blog.html",
+    "title": "Блог"
+}, {
+    "href": "blog-empty.html",
+    "title": "Блог пустая"
+}, {
+    "href": "blog-text.html",
+    "title": "Блог текстовая"
+}, {
+    "href": "news.html",
+    "title": "Новости и акции"
+}, {
+    "href": "news-empty.html",
+    "title": "Новости и акции пустая"
+}, {
+    "href": "news-detail.html",
+    "title": "Новости и акции детальная"
+}, {
+    "href": "my-orders.html",
+    "title": "Профиль - мои заказы"
+}, {
+    "href": "order-details.html",
+    "title": "Профиль - подробнее о заказе"
+}, {
+    "href": "discounts.html",
+    "title": "Скидки"
+}, {
+    "href": "subscribes.html",
+    "title": "Подписки"
+}, {
+    "href": "personal.html",
+    "title": "Персональные данные"
+}, {
+    "href": "faq.html",
+    "title": "FAQ / Часто задаваемые вопросы"
+}, {
+    "href": "delivery.html",
+    "title": "Доставка и оплата"
+}, {
+    "href": "about-company.html",
+    "title": "О компании"
+}, {
+    "href": "contacts.html",
+    "title": "Контакты"
+}, {
+    "href": "feedback.html",
+    "title": "Обратная связь"
+}, {
+    "href": "search-shops.html",
+    "title": "Поиск магазинов"
+}, {
+    "href": "discount-popup.html",
+    "title": "Попап скидка"
+}, {
+    "href": "region-popup.html",
+    "title": "Попап выбор региона"
+}, {
+    "href": "size-subscribe.html",
+    "title": "Попап подписаться на размер"
+}, {
+    "href": "product-sizes.html",
+    "title": "Попап таблица размеров"
+}, {
+    "href": "sale-popup.html",
+    "title": "Попап подписка"
+}, {
+    "href": "pickup.html",
+    "title": "Попап выбор пункта самовывоза"
+}, {
+    "href": "credentials.html",
+    "title": "Попап изменить личные данные"
+}, {
+    "href": "email-change.html",
+    "title": "Попап изменить email"
+}, {
+    "href": "check-email.html",
+    "title": "Попап проверьте email"
+}, {
+    "href": "phone-change.html",
+    "title": "Попап изменить телефон"
+}, {
+    "href": "password-change.html",
+    "title": "Попап изменить пароль"
+}, {
+    "href": "new-password.html",
+    "title": "Попап новый пароль"
+}, {
+    "href": "sms-code.html",
+    "title": "Попап sms-код"
+}, {
+    "href": "404.html",
+    "title": "Страница не найдена"
+}]

@@ -1,0 +1,26 @@
+.personal-discout {
+
+	&:not(:last-child) {
+		padding-bottom: 4rem;
+	}
+
+	// .personal-discout__title
+
+	&__title {
+		@extend %text-16;
+		font-weight: 600;
+
+		&:not(:last-child) {
+			margin-bottom: 1.3rem;
+		}
+	}
+
+	// .personal-discout__list
+
+	&__list {
+
+		li {
+			@extend %text-16;
+		}
+	}
+}

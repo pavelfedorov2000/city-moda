@@ -1,0 +1,37 @@
+.discount-add {
+
+	border-top: 0.1rem solid var(--line-color);
+	padding-top: 4rem;
+
+	@media(min-width: 1025px) {
+		width: 85.4rem;
+	}
+
+	// .discount-add__title
+
+	&__title {
+		@extend %text-16;
+		font-weight: 600;
+
+		&:not(:last-child) {
+			margin-bottom: 2rem;
+		}
+	}
+
+	// .discount-add__value
+
+	&__value {
+		@extend %vertical-align;
+		@extend %text-16;
+		font-weight: 500;
+	}
+
+	// .discount-add__label
+
+	&__label {
+
+		&:not(:last-child) {
+			margin-right: 1.2rem;
+		}
+	}
+}

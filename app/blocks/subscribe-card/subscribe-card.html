@@ -1,0 +1,36 @@
+<li>
+	<article class="profile-subscribes__item subscribe-card">
+		<header class="subscribe-card__head">
+			<h3 class="subscribe-card__title">@@title</h3>
+		</header>
+		<div class="subscribe-card__content">
+			<div class="subscribe-card__wrap">
+				<ul class="subscribe-card__list">
+					@@if(context.email){
+					<li>— @@email</li>
+					}
+					@@if(context.sms){
+					<li>— @@sms</li>
+					}
+				</ul>
+				<a class="subscribe-card__change-btn" href="#sale-popup" data-fancybox>Изменить</a>
+			</div>
+			<div class="subscribe-card__text">Описание подписки на распродажу и акции для женщин и мужчин</div>
+			<div class="subscribe-card__bottom">
+				<button class="btn subscribe-card__cancel-btn btn--disabled" type="button">Отменить подписку</button>
+				<div
+					class="notify subscribe-card__notify@@if(context.status === 'success'){ success}@@if(context.status === 'error'){ error}">
+					<img class="notify__icon"
+						src="assets/images/icons/@@if(context.status === 'success'){success}@@if(context.status === 'error'){error}.svg"
+						alt="иконка" width="24" height="24">
+					@@if(context.status === 'success'){
+					<span>Подписка успешно оформлена</span>
+					}
+					@@if(context.status === 'error'){
+					<span>Подписка не была оформлена</span>
+					}
+				</div>
+			</div>
+		</div>
+	</article>
+</li>

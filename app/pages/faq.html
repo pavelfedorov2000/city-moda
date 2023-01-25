@@ -1,78 +1,40 @@
 @@include("blocks/head/head.html", {"title": "Часто задаваемые вопросы"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page profile-page">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "currentPage": "FAQ / Часто задаваемые вопросы"
-            })
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page profile-page">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "FAQ / Часто задаваемые вопросы"
+			})
 
-            <h1 class="title page__title">Помощь покупателю</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Помощь покупателю"
+			})
 
-            <div class="profile-page__inner">
-                <nav class="page-nav">
-                    <ul class="page-nav__list">
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Отследить заказ</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Доставка и оплата</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Бесконтактная доставка</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Обмен и возврат</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link active">FAQ / Часто задаваемые
-                                вопросы</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Программа лояльности</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Подарочные сертификаты</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Правила работы сайта</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Политика конфиденциальности</a>
-                        </li>
-                        <li class="page-nav__item">
-                            <a href="#"
-                               class="page-nav__link">Карта сайта</a>
-                        </li>
-                    </ul>
-                </nav>
-                <div class="profile-page__body">
-                    <h2 class="profile-page__title">FAQ / Часто задаваемые вопросы</h2>
-                    @@include("blocks/faq/faq.html")
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-        @@include("blocks/popup/password-recovery.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
+			<div class="profile-page__inner">
+				<nav class="page-nav">
+					<ul class="page-nav__list">
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/faq-nav.json")
+					</ul>
+				</nav>
+				<div class="profile-page__body">
+					<h2 class="profile-page__title">FAQ / Часто задаваемые вопросы</h2>
+					@@include("blocks/faq/faq.html")
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+		@@include("blocks/popup/password-recovery.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

@@ -1,73 +1,74 @@
 @@include("blocks/head/head.html", {"title": "Корзина"})
 @@include("blocks/head/no-js.html", {"class": "sticky"})
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page basket-page">
-        <div class="container">
-            <nav class="breadcrumbs"
-                 aria-label="breadcrumbs">
-                <ol class="breadcrumbs__list">
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Главная
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Женщинам
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Одежда
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Верхняя одежда
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Пальто
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <a href="#">
-                            Пальто LORIATA Wander Yellow
-                        </a>
-                    </li>
-                    <li class="breadcrumbs__item">
-                        <span>Ваша корзина</span>
-                    </li>
-                </ol>
-            </nav>
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page basket-page">
+		<div class="container">
+			<nav class="breadcrumbs" aria-label="breadcrumbs">
+				<ol class="breadcrumbs__list">
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Главная
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Женщинам
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Верхняя одежда
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Пальто
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<a href="#">
+							Пальто LORIATA Wander Yellow
+						</a>
+					</li>
+					<li class="breadcrumbs__item">
+						<span>Ваша корзина</span>
+					</li>
+				</ol>
+			</nav>
 
-            <h1 class="title page__title">Ваша корзина</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Ваша корзина"
+			})
 
-            <form action="#">
-                <div class="basket-page__inner">
-                    <div class="basket-page__body">
-                        @@include("blocks/basket-table/basket-table.html")
-                        @@include("blocks/checkout/checkout.html")
-                    </div>
-                    @@include("blocks/basket-total/basket-total.html")
-                </div>
-            </form>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-        @@include("blocks/popup/password-recovery.html")
-    </div>
-    @@include("blocks/pickup/pickup-popup/pickup-popup.html")
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
-    @@include("blocks/popup/password-change.html")
+			<form action="#">
+				<div class="basket-page__inner">
+					<div class="basket-page__body">
+						@@include("blocks/basket-table/basket-table.html")
+						@@include("blocks/checkout/checkout.html")
+					</div>
+					@@include("blocks/basket-total/basket-total.html")
+				</div>
+			</form>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+		@@include("blocks/popup/password-recovery.html")
+	</div>
+	@@include("blocks/pickup/pickup-popup/pickup-popup.html")
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/popup/password-change.html")
 </div>
 @@include("blocks/link/link.html")
 <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>

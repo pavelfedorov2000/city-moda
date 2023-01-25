@@ -5,29 +5,18 @@
 	@@include("blocks/burger/burger.html")
 	<main class="page profile-page">
 		<div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "currentPage": "Доставка и оплата"
-            })
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Доставка и оплата"
+			})
 
-			<h1 class="title page__title">Помощь покупателю</h1>
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Помощь покупателю"
+			})
 
 			<div class="profile-page__inner">
 				<nav class="page-nav">
 					<ul class="page-nav__list">
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Отследить заказ</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link active">Доставка и оплата</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Бесконтактная доставка</a>
-						</li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Обмен и возврат</a>
-						</li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">FAQ / Часто задаваемые
-								вопросы</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Программа лояльности</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Подарочные сертификаты</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Правила работы сайта</a></li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Политика конфиденциальности</a>
-						</li>
-						<li class="page-nav__item"><a href="#" class="page-nav__link">Карта сайта</a></li>
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/delivery-nav.json")
 					</ul>
 				</nav>
 				<div class="profile-page__body">

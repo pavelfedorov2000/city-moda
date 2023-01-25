@@ -1,92 +1,86 @@
 <section class="section slider-section">
-    <div class="container">
-        <div class="section__top">
-            <h2 class="title">Новинки</h2>
-            @@include('blocks/slider-arrows/slider-arrows.html')
-        </div>
-        <div class="swiper catalog-new-slider">
-            <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/04",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/03",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/02",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/01",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/04",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/03",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/02",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-                <div class="swiper-slide">
-                    @@include("blocks/catalog-card-new/catalog-card-new.html", {
-                    "discount": "25%",
-                    "image": "assets/images/content/catalog-slider/01",
-                    "alt": "Пальто",
-                    "title": "Пальто",
-                    "subtitle": "Loriata",
-                    "price": "37 400 ₽",
-                    })
-                </div>
-            </div>
-        </div>
-    </div>
+	<div class="container">
+		<div class="section__top">
+			<h2 class="title">Новинки</h2>
+			@@include('blocks/slider-arrows/slider-arrows.html')
+		</div>
+		<div class="swiper catalog-new-slider">
+			<ul class="swiper-wrapper">
+				@@loop("blocks/catalog-card/catalog-card.html", [{
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/04",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/03",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"isFavorite": true,
+				"image": "assets/images/content/catalog-slider/02",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/01",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/04",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/03",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/02",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}, {
+				"labels": {
+				"new": true
+				},
+				"image": "assets/images/content/catalog-slider/01",
+				"alt": "Пальто",
+				"title": "Пальто",
+				"subtitle": "Loriata",
+				"price": "37 400 ₽",
+				}])
+			</ul>
+		</div>
+	</div>
 </section>
