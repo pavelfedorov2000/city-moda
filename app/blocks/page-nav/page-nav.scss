@@ -1,11 +1,10 @@
 .page-nav {
-
     // .page-nav__list
 
     &__list {
         display: grid;
         row-gap: 2.6rem;
-        border-left: 0.2rem solid $green;
+        border-left: 0.2rem solid var(--green);
         padding-left: 4rem;
 
         @media(max-width: 500px) {
@@ -18,13 +17,12 @@
 
     &__link {
         @extend %text-16;
-        //color: #505661;
 
         &.active {
             padding-left: 1.8rem;
             position: relative;
             font-weight: 600;
-            color: $green;
+            color: var(--green);
 
             &:before {
                 content: '';
@@ -33,7 +31,7 @@
                 left: 0;
                 width: 1.2rem;
                 height: 0.2rem;
-                background-color: $green;
+                background-color: var(--green);
             }
         }
 

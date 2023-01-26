@@ -1,0 +1,65 @@
+@@include("blocks/head/head.html", {"title": "@@title"})
+@@include("blocks/head/no-js.html")
+<div class="wrapper">
+    @@include("blocks/header/header.html")
+    <main class="page"></main>
+    @@include("blocks/footer/footer.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/popup/password-recovery.html")
+    </div>
+    @@include("@@popupPath")
+</div>
+@@include("blocks/link/link.html")
+<script>
+    $.fancybox.open({
+        src: '#@@popupName',
+        type: 'inline',
+        touch: false
+    });
+
+</script>
+@@if(context.popupName == 'pickup-popup'){
+<script src="https://api-maps.yandex.ru/2.1.79/?lang=ru_RU"></script>
+<style>
+    .ymaps-2-1-79-map {
+        width: 100% !important;
+    }
+
+</style>
+<script>
+    ymaps.ready(init);
+
+    function init() {
+        var myMap = new ymaps.Map('pickup-map', {
+                center: [55.76, 37.64],
+                zoom: 11,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 64,
+                clusterize: true
+            });
+        myMap.geoObjects.add(objectManager);
+
+        $.ajax({
+            url: "assets/data.json",
+            cash: false,
+        }).done(function(data) {
+            objectManager.add(data);
+            /* var objectState = objectManager.getObjectState(1);
+            if (objectState.isClustered) {
+            objectManager.clusters.state.set('activeObject', objectManager.objects.getById(1));
+            objectManager.clusters.balloon.open(objectState.cluster.id);
+            } */
+        });
+    }
+
+</script>
+}
+</body>
+
+</html>

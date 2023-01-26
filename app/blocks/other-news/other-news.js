@@ -8,8 +8,8 @@ app.otherNews = {
             speed: 1000,
             //lazy: true,
             navigation: {
-                nextEl: '.other-news-slider .swiper-button-next',
-                prevEl: '.other-news-slider .swiper-button-prev',
+                nextEl: '.other-news .swiper-button-next',
+                prevEl: '.other-news .swiper-button-prev',
             },
             breakpoints: {
                 768: {

@@ -1,0 +1,51 @@
+.tabs {
+    display: flex;
+}
+
+.tab {
+    @extend %text-16;
+    position: relative;
+
+    @media (any-hover: hover) {
+        &:hover {
+            //color: var(--green);
+            color: var(--gray);
+        }
+    }
+
+
+
+    &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 0%;
+        height: 0.2rem;
+        background-color: var(--green);
+        transition: $transition width;
+    }
+
+    &.active {
+        font-weight: 600;
+        color: var(--green);
+
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--green);
+            }
+        }
+
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.tabs-content {
+    display: none;
+
+    &.active {
+        display: block;
+    }
+}

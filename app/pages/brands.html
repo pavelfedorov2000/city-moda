@@ -1,38 +1,38 @@
 @@include("blocks/head/head.html", {"title": "Бренды"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page brands-page">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"currentPage": "Бренды"
-			})
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page brands-page">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Бренды"
+            })
 
-			@@include('blocks/page-top/page-top.html', {
-			"title": "Бренды"
-			})
+            @@include('blocks/page-top/page-top.html', {
+            "title": "Бренды"
+            })
 
-			<div class="brands-page__body">
-				@@include('blocks/brands-categories/brands-categories.html')
-				<div class="brands-wrap">
-					@@include('blocks/brands-index-list/brands-index-list.html')
-					@@include('blocks/cancel-brand-letter/cancel-brand-letter.html')
-				</div>
-			</div>
-			@@include('blocks/brands-alphabet/brands-alphabet.html')
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-		@@include("blocks/popup/password-recovery.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/popup/password-change.html")
+            <div class="brands-page__body">
+                @@include('blocks/brands-categories/brands-categories.html')
+                <div class="brands-wrap">
+                    @@include('blocks/brands-index-list/brands-index-list.html')
+                    @@include('blocks/cancel-brand-letter/cancel-brand-letter.html')
+                </div>
+            </div>
+            @@include('blocks/brands-alphabet/brands-alphabet.html')
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+        @@include("blocks/popup/password-recovery.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
+    @@include("blocks/popup/password-change.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

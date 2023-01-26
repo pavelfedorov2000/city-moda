@@ -1,114 +1,117 @@
 .pickup-shops {
 
-	// .pickup-shops__item
+    // .pickup-shops__item
 
-	&__item {
-		padding: 1.4rem 2.5rem;
+    &__item {
+        padding: 1.4rem 2.5rem;
 
-		@media(max-width: 500px) {
-			padding-left: 1.6rem;
-			padding-right: 1.6rem;
-		}
-	}
+        @media(max-width: 500px) {
+            padding-left: 1.6rem;
+            padding-right: 1.6rem;
+        }
+    }
 }
 
 .pickup-shop {
-	@extend %flex-row;
-	align-items: flex-start;
-	transition: $transition background-color;
-	cursor: default;
+    $this: &;
 
-	@media (any-hover: hover) {
-		&:hover {
-			background-color: var(--gray-bg);
+    @extend %flex-row;
+    align-items: flex-start;
+    transition: $transition background-color;
+    cursor: default;
 
-			.pickup-shop {
-				&__info {
-					color: var(--dark);
-				}
+    @media (any-hover: hover) {
+        &:hover {
+            background-color: var(--gray-bg);
 
-				&__filter {
-					&--card {
-						path {
-							fill: var(--dark);
-						}
-					}
+            #{$this} {
+                &__info {
+                    color: var(--dark);
+                }
 
-					&--clothes {
-						path {
-							stroke: var(--dark);
-						}
-					}
-				}
-			}
-		}
-	}
+                &__filter {
+                    &--card {
+                        fill: var(--dark);
+                    }
 
-	&.active {
-		background-color: #E4EFE7;
-	}
+                    &--clothes {
+                        stroke: var(--dark);
+                    }
+                }
+            }
+        }
+    }
 
-	// .pickup-shop__title
+    &.active {
+        background-color: #E4EFE7;
+    }
 
-	&__title {
-		font-weight: 600;
+    // .pickup-shop__title
 
-		&:not(:last-child) {
-			margin-bottom: 0.6rem;
-		}
-	}
+    &__title {
+        font-weight: 600;
 
-	// .pickup-shop__info
+        &:not(:last-child) {
+            margin-bottom: 0.6rem;
+        }
+    }
 
-	&__info {
-		@extend %text-12;
-		font-weight: 500;
-		color: var(--gray-777);
-		transition: $transition color;
+    // .pickup-shop__info
 
-		li {
-			&:not(:last-child) {
-				margin-bottom: 0.2rem;
-			}
-		}
-	}
+    &__info {
+        @extend %text-12;
+        font-weight: 500;
+        color: var(--gray-777);
+        transition: $transition color;
 
-	// .pickup-shop__delivery-time
+        li {
+            &:not(:last-child) {
+                margin-bottom: 0.2rem;
+            }
+        }
+    }
 
-	&__delivery-time {
-		@extend %text-13;
+    // .pickup-shop__delivery-time
 
-		&:not(:last-child) {
-			margin-bottom: 0.5rem;
-		}
-	}
+    &__delivery-time {
+        @extend %text-13;
 
-	// .pickup-shop__btn
+        &:not(:last-child) {
+            margin-bottom: 0.5rem;
+        }
+    }
 
-	&__btn {
-		@extend %text-12;
-		font-weight: 600;
-		padding: 1rem 1.6rem;
-		margin-top: 0.7rem;
-		//display: none;
-	}
+    // .pickup-shop__btn
 
-	// .pickup-shop__filters
+    &__btn {
+        @extend %text-12;
+        font-weight: 600;
+        padding: 1rem 1.6rem;
+        margin-top: 0.7rem;
+        //display: none;
+    }
 
-	&__filters {
-		@extend %flex-col;
-	}
+    // .pickup-shop__filters
 
-	&__filter {
-		width: 1.4rem;
-		height: 1.4rem;
+    &__filters {
+        @extend %flex-col;
+    }
 
-		&:not(:last-child) {
-			margin-bottom: 0.6rem;
-		}
+    &__filter {
+        width: 1.4rem;
+        height: 1.4rem;
+        transition: $transition all;
 
-		path {
-			transition: $transition all;
-		}
-	}
+        &--card {
+            fill: #505661;
+        }
+
+        &--clothes {
+            stroke: #505661;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 0.6rem;
+        }
+    }
 }

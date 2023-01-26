@@ -1,19 +1,19 @@
 .btn {
     @extend %flex-center;
     @extend %text-14;
-    background-color: $green;
+    background-color: var(--green);
     color: #fff;
     text-align: center;
-    transition: .3s all;
+    transition: $transition all;
 
     @media (any-hover: hover) {
         &:hover {
-            background-color: #2D703C;
+            background-color: var(--green-second);
         }
     }
 
     &[disabled] {
-        background-color: #EAEAEA;
+        background-color: var(--line-color);
         border: none;
         cursor: not-allowed;
 
@@ -25,51 +25,46 @@
     }
 
     svg {
+        flex-shrink: 0;
+        margin-right: 0.8rem;
         width: 1.6rem;
         height: 1.6rem;
-        margin-right: 0.8rem;
-
-        path {
-            transition: .3s fill;
-        }
+        fill: #fff;
+        transition: $transition fill;
     }
 
     &--disabled {
         background-color: transparent;
-        border: 0.1rem solid #EAEAEA;
+        border: 0.1rem solid var(--line-color);
         color: var(--gray);
 
         @media (any-hover: hover) {
             &:hover {
-                border-color: #2D703C;
-                color: #2D703C;
+                border-color: var(--green-second);
+                color: var(--green-second);
                 background-color: transparent;
             }
         }
     }
 
     &--border {
-        border: 0.1rem solid #101112;
+        border: 0.1rem solid var(--dark);
         background-color: transparent;
-        color: #101112;
+        color: var(--dark);
 
         svg {
             width: 2rem;
             height: 2rem;
-
-            path {
-                transition: .3s fill;
-            }
         }
 
         @media (any-hover: hover) {
             &:hover {
                 background-color: transparent;
-                border-color: #2D703C;
-                color: #2D703C;
+                border-color: var(--green-second);
+                color: var(--green-second);
 
-                svg path {
-                    fill: #2D703C;
+                svg {
+                    fill: var(--green-second);
                 }
             }
         }
@@ -80,7 +75,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                background-color: $green;
+                background-color: var(--green);
                 color: #fff;
             }
         }
@@ -99,7 +94,7 @@ a {
     &.btn--border {
         @media (any-hover: hover) {
             &:hover {
-                color: #2D703C;
+                color: var(--green-second);
             }
         }
     }
@@ -114,51 +109,11 @@ a {
 }
 
 .scroll-link {
-    transition: .3s color;
+    transition: $transition color;
 
     @media (any-hover: hover) {
         &:hover {
             color: var(--gray);
-        }
-    }
-}
-
-.all-link {
-    @extend %vertical-align;
-    @extend %text-16;
-    color: var(--gray);
-    position: relative;
-
-    @media(max-width: 500px) {
-        font-size: 1.2rem;
-        line-height: 1.8rem;
-    }
-
-    svg {
-        width: 5.6rem;
-        height: 1.6rem;
-        margin-left: 1.6rem;
-
-        @media(max-width: 500px) {
-            width: 4rem;
-            height: 1rem;
-        }
-
-        path {
-            transition: .3s fill;
-        }
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
-
-            color: $dark;
-
-            svg {
-                path {
-                    fill: $dark;
-                }
-            }
         }
     }
 }
@@ -168,11 +123,11 @@ a {
     color: #777;
     text-decoration: underline;
     text-align: left;
-    transition: .3s color;
+    transition: $transition color;
 
     @media (any-hover: hover) {
         &:hover {
-            color: $dark;
+            color: var(--dark);
         }
     }
 }

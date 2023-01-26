@@ -1,0 +1,22 @@
+[{
+    "src": "assets/images/content/actual/01",
+    "width": "724",
+    "height": "420",
+    "discount": "До 30%",
+    "title": "Яркие пальто",
+    "descr": "Стильные модели разных фасонов"
+}, {
+    "src": "assets/images/content/actual/02",
+    "width": "336",
+    "height": "420",
+    "discount": "До 20%",
+    "title": "Головные уборы",
+    "descr": "Сочетание моды и комфорта"
+}, {
+    "src": "assets/images/content/actual/03",
+    "width": "336",
+    "height": "420",
+    "discount": "До 40%",
+    "title": "Подростковая одежда",
+    "descr": "Недетские скидки"
+}]

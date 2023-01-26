@@ -4,10 +4,7 @@
     &__title {
         @extend %text-20;
         font-weight: 500;
-
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
+        margin-bottom: 2rem;
     }
 
     // .aside-blog__items
@@ -18,7 +15,7 @@
         }
 
         @media(min-width: 1025px) {
-           grid-template-columns: 1fr;
+            grid-template-columns: 1fr;
         }
     }
 

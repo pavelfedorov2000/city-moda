@@ -4,20 +4,24 @@
         <div class="basket-table__title">Кол-во</div>
         <div class="basket-table__title">Стоимость</div>
     </div>
-    <div class="basket-table__body">
+    <ul class="basket-table__body">
         @@loop('blocks/basket-product/basket-product.html', [{
+        "class": "basket-table__item",
         "title": "Пальто LORIATA Wander Yellow",
         "src": "assets/images/content/basket-product-01",
+        "favoriteBtn": true,
         "oldPrice": "47 800 ₽",
         "newPrice": "38 240 ₽",
         }, {
+        "class": "basket-table__item",
         "title": "Пальто LORIATA Wander Yellow",
         "src": "assets/images/content/basket-product-02",
+        "favoriteBtn": true,
         "price": "4 300",
         "discount": {
         "percent": "20%",
         "sum": "9 560 ₽"
         }
         }])
-    </div>
+    </ul>
 </div>

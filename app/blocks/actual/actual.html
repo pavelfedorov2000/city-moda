@@ -1,29 +1,8 @@
 <section class="section actual">
-    <div class="container">
-        <h2 class="title section__top">Актуально</h2>
-        <div class="grid actual__grid grid--items-xl_4">
-            @@loop("blocks/sale-item/sale-item.html", [{
-            "src": "assets/images/content/actual/01",
-            "width": "724",
-            "height": "420",
-            "discount": "До 30%",
-            "title": "Яркие пальто",
-            "descr": "Стильные модели разных фасонов"
-            }, {
-            "src": "assets/images/content/actual/02",
-            "width": "336",
-            "height": "420",
-            "discount": "До 20%",
-            "title": "Головные уборы",
-            "descr": "Сочетание моды и комфорта"
-            }, {
-            "src": "assets/images/content/actual/03",
-            "width": "336",
-            "height": "420",
-            "discount": "До 40%",
-            "title": "Подростковая одежда",
-            "descr": "Недетские скидки"
-            }])
-        </div>
+    @@include('blocks/section-top/section-top.html', {
+    "title": "Актуально"
+    })
+    <div class="grid actual__grid grid--items-xl_4">
+        @@loop("blocks/sale-item/sale-item.html", "../resources/assets/actual.json")
     </div>
 </section>

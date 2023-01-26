@@ -4,7 +4,7 @@
     &-next {
         svg {
             fill: var(--gray-c0);
-            transition: .3s fill;
+            transition: $transition fill;
         }
 
         &:after {
@@ -68,7 +68,7 @@
         height: 4.2rem;
         border-radius: 50%;
         background-color: #fff;
-        transition: .3s background-color;
+        transition: $transition background-color;
 
         svg {
             width: 2.8rem;

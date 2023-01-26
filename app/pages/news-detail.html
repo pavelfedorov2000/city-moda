@@ -3,16 +3,18 @@
 <div class="wrapper">
     @@include("blocks/header/header.html")
     @@include("blocks/burger/burger.html")
-    <main class="page">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "prevPage": "Новости и акции",
-            "currentPage": "-15% на женские сумки"
-            })
-            @@include("blocks/news-detail/news-detail.html")
-            @@include("blocks/other-news/other-news.html")
-        </div>
-    </main>
+    <div class="page">
+        <main>
+            <div class="container">
+                @@include('blocks/breadcrumbs/breadcrumbs.html', {
+                "prevPage": "Новости и акции",
+                "currentPage": "-15% на женские сумки"
+                })
+                @@include("blocks/news-detail/news-detail.html")
+            </div>
+        </main>
+        @@include("blocks/other-news/other-news.html")
+    </div>
     @@include("blocks/footer/footer.html")
     @@include("blocks/pageup/pageup.html")
     <div class="overlay">

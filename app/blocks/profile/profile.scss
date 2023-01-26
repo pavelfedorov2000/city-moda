@@ -1,27 +1,3 @@
-.back-link {
-    color: var(--green);
-    display: inline-flex;
-    align-items: flex-start;
-
-    svg {
-        flex-shrink: 0;
-        margin-right: 0.8rem;
-        width: 2rem;
-        height: 2rem;
-        fill: var(--green);
-    }
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--green-second);
-
-            svg {
-                fill: var(--green-second);
-            }
-        }
-    }
-}
-
 .profile-page {
     padding-bottom: 11rem;
 
@@ -83,6 +59,10 @@
     // .profile-page__content
 
     &__content {
+        @media(min-width: 1025px) {
+            width: calc(98.3rem / var(--container-width) * 100%);
+        }
+
         section {
             &:not(:last-child) {
                 padding-bottom: 3rem;
@@ -153,6 +133,8 @@
     // .profile-page__tabs
 
     &__tabs {
+        gap: 7rem;
+
         &:not(:last-child) {
             margin-bottom: 4rem;
         }
@@ -162,15 +144,6 @@
 
     &__tab {
         padding-bottom: 0.9rem;
-
-        &:not(:last-child) {
-            margin-right: 7rem;
-        }
-    }
-
-    &__orders {
-        display: grid;
-        row-gap: 3rem;
     }
 
     &__form {
@@ -188,12 +161,9 @@
     }
 }
 
-.order-details {
-    &__table {
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-    }
+.orders-list {
+    display: grid;
+    row-gap: 3rem;
 }
 
 .about-page {

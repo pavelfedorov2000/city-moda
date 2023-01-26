@@ -1,391 +1,62 @@
 @@include("blocks/head/head.html", {"title": "Мои заказы"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page profile-page">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"currentPage": "Мои заказы"
-			})
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page profile-page">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Мои заказы"
+            })
 
-			@@include('blocks/page-top/page-top.html', {
-			"title": "Профиль"
-			})
+            @@include('blocks/page-top/page-top.html', {
+            "title": "Профиль"
+            })
 
-			<div class="profile-page__inner">
-				<nav class="page-nav">
-					<ul class="page-nav__list">
-						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
-					</ul>
-				</nav>
+            <div class="profile-page__inner">
+                <nav class="page-nav">
+                    <ul class="page-nav__list">
+                        @@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
+                    </ul>
+                </nav>
 
-				<div class="profile-page__body">
-					<h2 class="profile-page__title">Мои заказы</h2>
-					<div class="tabs profile-page__tabs">
-						<a href="#current-orders" class="tab profile-page__tab active">Текущие заказы</a>
-						<a href="#orders-history" class="tab profile-page__tab">История заказов</a>
-					</div>
-					<div id="current-orders" class="tabs-content active">
-						<div class="profile-page__orders order-table">
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>, №RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Передан в доставку</span>
-										<button class="order-item__follow-link">
-											<span>Отследить посылку</span>
-											<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M3 10.295L6.79 6.5L7.20508 6L6.79008 5.5L3 1.705L3.705 1L8.705 6L3.705 11L3 10.295Z"
-													fill="#101112" />
-											</svg>
-										</button>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>, №RU125487-985483</div>
-										<div class="order-item__price">37 400 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Передан в доставку</span>
-										<button class="order-item__follow-link">
-											<span>Отследить посылку</span>
-											<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-												<path
-													d="M3 10.295L6.79 6.5L7.20508 6L6.79008 5.5L3 1.705L3.705 1L8.705 6L3.705 11L3 10.295Z"
-													fill="#101112" />
-											</svg>
-										</button>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-22">22 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/03.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/03.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div id="orders-history" class="tabs-content">
-						<div class="profile-page__orders order-table">
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>,
-											№RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>, №RU125487-985483</div>
-										<div class="order-item__price">37 400 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-22">22 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/03.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/03.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>,
-											№RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>, №RU125487-985483</div>
-										<div class="order-item__price">37 400 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-22">22 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/03.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/03.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>,
-											№RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture type="image/webp" class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>,
-											№RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-							<div class="order-item order-table__item">
-								<header class="order-item__header">
-									<div class="order-item__header-wrap">
-										<div class="order-item__title">Заказ от <time datetime="2021-11-24">24 ноября
-												2021</time>,
-											№RU125487-985471</div>
-										<div class="order-item__price">42 540 ₽</div>
-									</div>
-									<div class="order-item__header-buttons">
-										<span class="btn order-item__status-label">Доставлен</span>
-									</div>
-								</header>
-								<div class="order-item__body">
-									<div class="order-item__content">
-										<div class="order-item__delivery-date">
-											Дата доставки: <time datetime="2021-11-25">25 ноября 2021</time>
-										</div>
-										<div class="order-item__delivery-place">
-											Доставка: <span>в пункт выдачи</span>
-										</div>
-										<a href="#" class="order-item__order-details">Подробнее о заказе</a>
-									</div>
-									<div class="order-item__images">
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/01.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/01.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-										<picture class="order-item__img">
-											<source type="image/webp" data-srcset="assets/images/content/order/02.webp"
-												srcset="assets/images/src.webp">
-											<img class="lazy" data-src="assets/images/content/order/02.jpg"
-												src="assets/images/src.jpg" alt="фото">
-										</picture>
-									</div>
-								</div>
-							</div>
-						</div>
-						@@include("blocks/pagination/pagination.html")
-					</div>
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/popup/password-recovery.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
+                <div class="profile-page__body">
+                    <h2 class="profile-page__title">Мои заказы</h2>
+                    <div class="tabs profile-page__tabs">
+                        <a href="#current-orders"
+                           class="tab profile-page__tab active">Текущие заказы</a>
+                        <a href="#orders-history"
+                           class="tab profile-page__tab">История заказов</a>
+                    </div>
+                    <section id="current-orders"
+                             class="tabs-content active">
+                        <ul class="orders-list">
+                            @@loop("blocks/order-item/order-item.html", "../resources/assets/orders.json")
+                        </ul>
+                    </section>
+                    <section id="orders-history"
+                             class="tabs-content">
+                        <ul class="orders-list">
+                            @@loop("blocks/order-item/order-item.html", "../resources/assets/orders-history.json")
+                        </ul>
+                        @@include("blocks/pagination/pagination.html")
+                    </section>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/popup/password-recovery.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
+<script src="./assets/libs/js/sticky-sidebar.min.js"></script>
 </body>
 
 </html>

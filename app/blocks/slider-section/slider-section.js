@@ -60,8 +60,8 @@ app.sliderSections = {
             spaceBetween: 20,
             speed: 1000,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-next',
+                nextEl: '#recommended-goods .swiper-button-next',
+                prevEl: '#recommended-goods .swiper-button-next',
             },
             breakpoints: {
                 768: {
@@ -86,8 +86,8 @@ app.sliderSections = {
             spaceBetween: 20,
             speed: 1000,
             navigation: {
-                nextEl: '.similar-goods .swiper-button-next',
-                prevEl: '.similar-goods .swiper-button-next',
+                nextEl: '#similar-goods .swiper-button-next',
+                prevEl: '#similar-goods .swiper-button-next',
             },
             breakpoints: {
                 768: {

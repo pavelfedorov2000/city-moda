@@ -1,0 +1,25 @@
+<article class="order-success-table">
+    @@include('blocks/order-details-table/order-details-table.html', {
+    "successOrder": true
+    })
+    <div class="order-success-table__body">
+        <div class="product-title order-success-table__title">Товары:</div>
+        <ul class="order-success-table__products">
+            <li>
+                @@include("blocks/order-product/order-product.html")
+            </li>
+            <li>
+                @@include("blocks/order-product/order-product.html")
+            </li>
+            <li>
+                @@include("blocks/order-product/order-product.html")
+            </li>
+            <li>
+                @@include("blocks/order-product/order-product.html")
+            </li>
+            <li>
+                @@include("blocks/order-product/order-product.html")
+            </li>
+        </ul>
+    </div>
+</article>

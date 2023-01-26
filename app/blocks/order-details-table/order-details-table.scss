@@ -1,0 +1,85 @@
+.order-details-table {
+    font-weight: 500;
+    @extend %flex-row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    background-color: var(--gray-bg);
+    border: 0.1rem solid var(--line-color);
+    padding: 1.5rem;
+
+    @media (max-width: 767px) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    @media (max-width: 500px) {
+        font-size: 1.3rem;
+        line-height: 1.9rem;
+    }
+
+    // .order-table__item
+
+    &__item {
+        padding: 1.5rem;
+        width: max-content;
+
+        @media (max-width: 767px) {
+            width: 50%;
+        }
+
+        /* @media (max-width: 500px) {
+            width: 100%;
+        } */
+
+        p {
+            &:not(:last-child) {
+                margin-bottom: 0.5rem;
+            }
+        }
+
+        &:last-child {
+            @media (max-width: 1024px) {
+                width: 50%;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            @media (max-width: 767px) {
+                width: 100%;
+            }
+        }
+    }
+
+    // .order-table__item-title
+
+    &__item-title {
+        font-weight: 600;
+
+        span {
+            margin-left: 0.5rem;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
+    }
+
+    &__item-wrap {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+
+            @media (max-width: 1024px) {
+                margin-bottom: 0;
+                margin-right: 3rem;
+            }
+        }
+    }
+
+    // .order-rable__btn
+
+    &__btn {
+        font-weight: 500;
+        padding: 1.4rem 3.6rem;
+    }
+}

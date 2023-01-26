@@ -1,9 +1,9 @@
 .basket-total {
     @media(min-width: 1025px) {
-        position: sticky;
-        top: 0;
-        height: fit-content;
         width: 46.5rem;
+    }
+
+    &__inner {
         border: 0.1rem solid var(--gray-c0);
         padding: 4rem;
 

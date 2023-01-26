@@ -1,167 +1,168 @@
 @@include("blocks/head/head.html", {"title": "Каталог"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page catalog">
-		<nav class="breadcrumbs" aria-label="breadcrumbs">
-			<div class="container">
-				<ol class="breadcrumbs__list">
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Главная
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Женщинам
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Одежда
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<a href="#">
-							Верхняя одежда
-						</a>
-					</li>
-					<li class="breadcrumbs__item">
-						<span>
-							Пальто
-						</span>
-					</li>
-				</ol>
-			</div>
-		</nav>
-		@@include("blocks/promo-collection/promo-collection.html")
-		<div class="catalog__page container">
-			@@include('blocks/page-top/page-top.html', {
-			"title": "Женские пальто"
-			})
-			<div class="catalog__inner">
-				@@include("blocks/aside-filters/aside-filters.html")
-				<div class="catalog__body">
-					<div class="catalog__filters">
-						@@include("blocks/catalog-filters/catalog-filters.html")
-						@@include('blocks/catalog-view/catalog-view.html')
-						@@include('blocks/filters-btn/filters-btn.html')
-					</div>
-					<ul class="catalog__cards">
-						@@loop("blocks/catalog-card/catalog-card.html", [{
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"labels": {
-						"discount": "40%"
-						},
-						"isFavorite": true,
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"labels": {
-						"new": true
-						},
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}])
-						<li>
-							<div class="banner">
-								Рекламный баннер
-							</div>
-						</li>
-						@@loop("blocks/catalog-card/catalog-card.html", [{
-						"labels": {
-						"new": "true"
-						},
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"labels": {
-						"discount": "40%"
-						},
-						"isFavorite": true,
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"labels": {
-						"discount": "40%"
-						},
-						"isFavorite": true,
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"newprice": "21 200 ₽",
-						"oldprice": "37 400 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}, {
-						"title": "Пальто",
-						"subtitle": "Loriata",
-						"price": "21 200 ₽",
-						"image": "assets/images/content/catalog-card",
-						"alt": "Пальто Loriata",
-						}])
-					</ul>
-					@@include("blocks/pagination/pagination.html")
-					@@include('blocks/seo-text/seo-text.html')
-				</div>
-			</div>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-		@@include("blocks/popup/password-recovery.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/product-popup/product-popup.html")
-	@@include("blocks/popup/size-subscribe-popup.html")
-	@@include("blocks/product-sizes-popup/product-sizes-popup.html")
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page catalog">
+        <div class="container">
+            <nav class="breadcrumbs"
+                 aria-label="breadcrumbs">
+                <ol class="breadcrumbs__list">
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Главная
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Женщинам
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Одежда
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <a href="#">
+                            Верхняя одежда
+                        </a>
+                    </li>
+                    <li class="breadcrumbs__item">
+                        <span>
+                            Пальто
+                        </span>
+                    </li>
+                </ol>
+            </nav>
+            @@include("blocks/promo-collection/promo-collection.html")
+            <div class="catalog__page">
+                @@include('blocks/page-top/page-top.html', {
+                "title": "Женские пальто"
+                })
+                <div class="catalog__inner">
+                    @@include("blocks/aside-filters/aside-filters.html")
+                    <div class="catalog__body">
+                        <div class="catalog__filters">
+                            @@include("blocks/catalog-filters/catalog-filters.html")
+                            @@include('blocks/catalog-view/catalog-view.html')
+                            @@include('blocks/filters-btn/filters-btn.html')
+                        </div>
+                        <ul class="catalog__cards">
+                            @@loop("blocks/catalog-card/catalog-card.html", [{
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "labels": {
+                            "discount": "40%"
+                            },
+                            "isFavorite": true,
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "newprice": "21 200 ₽",
+                            "oldprice": "37 400 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "labels": {
+                            "new": true
+                            },
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }])
+                            <li>
+                                <div class="banner">
+                                    Рекламный баннер
+                                </div>
+                            </li>
+                            @@loop("blocks/catalog-card/catalog-card.html", [{
+                            "labels": {
+                            "new": "true"
+                            },
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "labels": {
+                            "discount": "40%"
+                            },
+                            "isFavorite": true,
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "newprice": "21 200 ₽",
+                            "oldprice": "37 400 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "labels": {
+                            "discount": "40%"
+                            },
+                            "isFavorite": true,
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "newprice": "21 200 ₽",
+                            "oldprice": "37 400 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }, {
+                            "title": "Пальто",
+                            "subtitle": "Loriata",
+                            "price": "21 200 ₽",
+                            "image": "assets/images/content/catalog-card",
+                            "alt": "Пальто Loriata",
+                            }])
+                        </ul>
+                        @@include("blocks/pagination/pagination.html")
+                        @@include('blocks/seo-text/seo-text.html')
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+        @@include("blocks/popup/password-recovery.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
+    @@include("blocks/product-popup/product-popup.html")
+    @@include("blocks/popup/size-subscribe-popup.html")
+    @@include("blocks/product-sizes-popup/product-sizes-popup.html")
 </div>
 @@include("blocks/link/link.html")
 <script src="./assets/scripts/filters.js"></script>

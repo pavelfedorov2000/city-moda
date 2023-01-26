@@ -1,0 +1,21 @@
+.instagram-slider {
+    .swiper-slide {
+        background-color: var(--gray-bg);
+        height: 33.6rem;
+        overflow: hidden;
+
+        img {
+            transition: transform 0.8s linear;
+            transform: translateZ(0);
+            @extend %cover;
+        }
+
+        @media (any-hover: hover) {
+            &:hover {
+                img {
+                    transform: scale(1.1);
+                }
+            }
+        }
+    }
+}

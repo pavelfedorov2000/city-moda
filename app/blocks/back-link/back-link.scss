@@ -1,0 +1,26 @@
+.back-link {
+    $this: &;
+
+    display: inline-flex;
+    align-items: flex-start;
+    color: var(--green);
+
+    &__arrow {
+        flex-shrink: 0;
+        margin-right: 0.8rem;
+        width: 2rem;
+        height: 2rem;
+        fill: var(--green);
+        transition: $transition fill;
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--green-second);
+
+            #{$this}__arrow {
+                fill: var(--green-second);
+            }
+        }
+    }
+}

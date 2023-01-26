@@ -12,8 +12,8 @@ app.promoSale = {
         clickable: true,
       },
       navigation: {
-        nextEl: '.promo-sale__slider-arrow--next',
-        prevEl: '.promo-sale__slider-arrow--prev',
+        nextEl: '.promo-sale .swiper-button-next',
+        prevEl: '.promo-sale .swiper-button-prev',
       },
     });
   },

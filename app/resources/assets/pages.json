@@ -113,7 +113,7 @@
     "href": "pickup.html",
     "title": "Попап выбор пункта самовывоза"
 }, {
-    "href": "credentials.html",
+    "href": "personal-change.html",
     "title": "Попап изменить личные данные"
 }, {
     "href": "email-change.html",

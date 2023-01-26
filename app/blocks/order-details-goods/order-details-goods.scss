@@ -1,8 +1,8 @@
 .order-details-goods {
+    padding-top: 4rem;
+
     &__title {
-        &:not(:last-child) {
-            margin-bottom: 3.5rem;
-        }
+        margin-bottom: 3.5rem;
     }
 
     &__list {

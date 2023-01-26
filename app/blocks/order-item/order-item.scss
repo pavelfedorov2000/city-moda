@@ -2,6 +2,9 @@
     // .order-item__header
 
     &__header {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
         background-color: var(--gray-bg);
         padding: 2rem;
 
@@ -17,12 +20,8 @@
         gap: 1rem;
 
         @media(min-width: 768px) {
-            grid-template-columns: repeat(2, max-content);
+            display: flex;
             justify-content: space-between;
-        }
-
-        &:not(:last-child) {
-            margin-bottom: 1rem;
         }
     }
 
@@ -42,12 +41,13 @@
 
     // .order-item__header-buttons
 
-    &__header-buttons {
+    &__buttons {
         @extend %vertical-align;
+        flex-wrap: wrap;
+        gap: 2.5rem;
 
         @media(max-width: 500px) {
-            flex-direction: column;
-            align-items: flex-start;
+            gap: 1rem;
         }
     }
 
@@ -65,16 +65,6 @@
                 color: #fff;
             }
         }
-
-        &:not(:last-child) {
-            @media(min-width: 501px) {
-                margin-right: 2.5rem;
-            }
-
-            @media(max-width: 500px) {
-                margin-bottom: 1rem;
-            }
-        }
     }
 
     // .order-item__follow-link
@@ -86,15 +76,14 @@
         span {
             @extend %text-13;
             text-decoration: underline;
-
-            &:not(:last-child) {
-                margin-right: 0.4rem;
-            }
         }
 
         svg {
+            flex-shrink: 0;
+            margin-left: 0.4rem;
             width: 1.2rem;
             height: 1.2rem;
+            fill: var(--dark);
             transition: $transition fill;
         }
 
@@ -183,6 +172,8 @@
 
     &__images {
         display: flex;
+        flex-wrap: wrap;
+        gap: 1.2rem;
     }
 
     // .order-item__img
@@ -192,9 +183,5 @@
         height: 100%;
         flex-shrink: 0;
         object-fit: cover;
-
-        &:not(:last-child) {
-            margin-right: 1.2rem;
-        }
     }
 }

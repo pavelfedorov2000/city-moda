@@ -7,6 +7,7 @@ export const libsJsLink = [
     'node_modules/vanilla-lazyload/dist/lazyload.min.js',
     'node_modules/@fancyapps/fancybox/dist/jquery.fancybox.min.js',
     'node_modules/lite-youtube-embed/src/lite-yt-embed.js',
+    'node_modules/sticky-sidebar-v2/dist/sticky-sidebar.min.js',
 ];
 
 export const libsCssLink = [

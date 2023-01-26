@@ -1,0 +1,37 @@
+.all-link {
+    $this: &;
+
+    @extend %vertical-align;
+    @extend %text-16;
+    color: var(--gray);
+    position: relative;
+
+    @media(max-width: 500px) {
+        font-size: 1.2rem;
+        line-height: 1.8rem;
+    }
+
+    &__arrow {
+        flex-shrink: 0;
+        margin-left: 1.6rem;
+        width: 5.6rem;
+        height: 1.6rem;
+        fill: var(--gray-c0);
+        transition: $transition fill;
+
+        @media(max-width: 500px) {
+            width: 4rem;
+            height: 1rem;
+        }
+    }
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--dark);
+
+            #{$this}__arrow {
+                fill: var(--dark);
+            }
+        }
+    }
+}

@@ -1,28 +1,5 @@
-@@include("blocks/head/head.html", {"title": "Попап изменить email"})
-@@include("blocks/head/no-js.html")
-<div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page"></main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/popup/password-recovery.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
-	@@include("blocks/popup/phone-change.html")
-</div>
-@@include("blocks/link/link.html")
-<script>
-	$.fancybox.open({
-		src: '#phone-change',
-		type: 'inline',
-	});
-
-</script>
-</body>
-
-</html>
+@@include('blocks/view-popup/view-popup.html', {
+"title": "Изменить email",
+"popupPath": "blocks/popup/phone-change.html",
+"popupName": "phone-change"
+})

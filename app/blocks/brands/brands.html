@@ -1,69 +1,109 @@
 <section class="section brands">
-	<div class="container">
-		<div class="section__top">
-			<h2 class="title">Бренды</h2>
-			<a href="#" class="all-link">
-				<span class="all-link__text">Смотреть все</span>
-				<svg class="all-link__arrow" viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-					<path
-						d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" />
-				</svg>
-			</a>
-		</div>
-		<div class="brands__inner">
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/rio-verti.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/rio-verti.jpg"
-						src="assets/images/src.jpg" alt="логотип Rio Verti" width="107" height="86">
-				</picture>
-			</a>
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s"
-				data-wow-delay=".3s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/minoti.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/minoti.jpg"
-						src="assets/images/src.jpg" alt="логотип Minoti" width="139" height="46">
-				</picture>
-			</a>
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s"
-				data-wow-delay=".6s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/viola-stils.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/viola-stils.jpg"
-						src="assets/images/src.jpg" alt="логотип Viola Stills" width="145" height="98">
-				</picture>
-			</a>
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s"
-				data-wow-delay=".9s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/deja.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/deja.jpg"
-						src="assets/images/src.jpg" alt="логотип Deja Fashion" width="172" height="49">
-				</picture>
-			</a>
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s"
-				data-wow-delay="1.2s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/bibi.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/bibi.jpg"
-						src="assets/images/src.jpg" alt="логотип Bibi" width="119" height="60">
-				</picture>
-			</a>
-			<a href="#" class="brands__item animate__animated animate__fadeIn wow" data-wow-duration="1s"
-				data-wow-delay="1.5s">
-				<picture>
-					<source type="image/webp" data-srcset="assets/images/logo/brands/zaza.webp"
-						srcset="assets/images/src.webp">
-					<img class="lazy brands__item-img" data-src="assets/images/logo/brands/zaza.jpg"
-						src="assets/images/src.jpg" alt="логотип Zaza" width="131" height="78">
-				</picture>
-			</a>
-		</div>
-	</div>
+    @@include('blocks/section-top/section-top.html', {
+    "title": "Бренды",
+    "allLink": true
+    })
+    <ul class="brands__list">
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/rio-verti.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/rio-verti.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Rio Verti"
+                         width="107"
+                         height="86">
+                </picture>
+            </a>
+        </li>
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay=".3s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/minoti.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/minoti.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Minoti"
+                         width="139"
+                         height="46">
+                </picture>
+            </a>
+        </li>
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay=".6s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/viola-stils.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/viola-stils.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Viola Stills"
+                         width="145"
+                         height="98">
+                </picture>
+            </a>
+        </li>
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay=".9s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/deja.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/deja.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Deja Fashion"
+                         width="172"
+                         height="49">
+                </picture>
+            </a>
+        </li>
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay="1.2s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/bibi.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/bibi.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Bibi"
+                         width="119"
+                         height="60">
+                </picture>
+            </a>
+        </li>
+        <li class="brands__item animate__animated animate__fadeIn wow"
+            data-wow-duration="1s"
+            data-wow-delay="1.5s">
+            <a href="#">
+                <picture>
+                    <source type="image/webp"
+                            data-srcset="assets/images/logo/brands/zaza.webp"
+                            srcset="assets/images/src.webp">
+                    <img class="lazy brands__item-img"
+                         data-src="assets/images/logo/brands/zaza.jpg"
+                         src="assets/images/src.jpg"
+                         alt="логотип Zaza"
+                         width="131"
+                         height="78">
+                </picture>
+            </a>
+        </li>
+    </ul>
 </section>

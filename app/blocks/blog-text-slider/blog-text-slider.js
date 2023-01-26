@@ -1,5 +1,5 @@
-app.blog = {
-    name: 'blog',
+app.blogTextSlider = {
+    name: 'blogTextSlider',
     description: 'your script description',
     init() {
         new Swiper('.blog-text__slider', {

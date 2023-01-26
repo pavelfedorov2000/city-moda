@@ -5,7 +5,7 @@
 
 .new-price {
     @extend %text-16;
-    color: $red;
+    color: var(--red);
     font-weight: 600;
 }
 

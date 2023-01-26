@@ -1,26 +1,26 @@
-.personal-discout {
+.personal-discount {
 
-	&:not(:last-child) {
-		padding-bottom: 4rem;
-	}
+    &:not(:last-child) {
+        padding-bottom: 4rem;
+    }
 
-	// .personal-discout__title
+    // .personal-discout__title
 
-	&__title {
-		@extend %text-16;
-		font-weight: 600;
+    &__title {
+        @extend %text-16;
+        font-weight: 600;
 
-		&:not(:last-child) {
-			margin-bottom: 1.3rem;
-		}
-	}
+        &:not(:last-child) {
+            margin-bottom: 1.3rem;
+        }
+    }
 
-	// .personal-discout__list
+    // .personal-discout__list
 
-	&__list {
+    &__list {
 
-		li {
-			@extend %text-16;
-		}
-	}
+        li {
+            @extend %text-16;
+        }
+    }
 }

@@ -1,0 +1,65 @@
+[{
+    "swiper": true,
+    "labels": {
+        "discount": "25%"
+    },
+    "image": "assets/images/content/catalog-slider/01",
+    "alt": "Пуховик",
+    "title": "Пуховик",
+    "subtitle": "Rio Verti",
+    "newprice": "23 625 ₽",
+    "oldprice": "31 500 ₽"
+}, {
+    "swiper": true,
+    "labels": {
+        "new": true
+    },
+    "image": "assets/images/content/catalog-slider/02",
+    "alt": "Джемпер",
+    "title": "Джемпер",
+    "subtitle": "Loriata",
+    "price": "12 500 ₽"
+}, {
+    "swiper": true,
+    "labels": {
+        "discount": "25%"
+    },
+    "image": "assets/images/content/catalog-slider/03",
+    "alt": "Юбка",
+    "title": "Юбка",
+    "subtitle": "Loriata",
+    "newprice": "5 000 ₽",
+    "oldprice": "8 200 ₽"
+}, {
+    "swiper": true,
+    "labels": {
+        "discount": "40%"
+    },
+    "image": "assets/images/content/catalog-slider/04",
+    "alt": "Пальто",
+    "title": "Пальто",
+    "subtitle": "Rio Verti",
+    "newprice": "21 200 ₽",
+    "oldprice": "37 400 ₽"
+}, {
+    "swiper": true,
+    "labels": {
+        "new": true
+    },
+    "image": "assets/images/content/catalog-slider/02",
+    "alt": "Джемпер",
+    "title": "Джемпер",
+    "subtitle": "Loriata",
+    "price": "12 500 ₽"
+}, {
+    "swiper": true,
+    "labels": {
+        "discount": "40%"
+    },
+    "image": "assets/images/content/catalog-slider/04",
+    "alt": "Пальто",
+    "title": "Пальто",
+    "subtitle": "Rio Verti",
+    "newprice": "21 200 ₽",
+    "oldprice": "37 400 ₽"
+}]

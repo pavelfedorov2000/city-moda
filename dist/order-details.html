@@ -403,7 +403,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <article class="sale-item">
+                                        <article class="sale-item drop-menu__sale">
                                             <div class="sale-item__img">
                                                 <picture>
                                                     <source type="image/webp"
@@ -586,7 +586,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <article class="sale-item">
+                                        <article class="sale-item drop-menu__sale">
                                             <div class="sale-item__img">
                                                 <picture>
                                                     <source type="image/webp"
@@ -769,7 +769,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <article class="sale-item">
+                                        <article class="sale-item drop-menu__sale">
                                             <div class="sale-item__img">
                                                 <picture>
                                                     <source type="image/webp"
@@ -952,7 +952,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <article class="sale-item">
+                                        <article class="sale-item drop-menu__sale">
                                             <div class="sale-item__img">
                                                 <picture>
                                                     <source type="image/webp"
@@ -1135,7 +1135,7 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <article class="sale-item">
+                                        <article class="sale-item drop-menu__sale">
                                             <div class="sale-item__img">
                                                 <picture>
                                                     <source type="image/webp"
@@ -1537,13 +1537,14 @@
                     <h1 class="title page__title">Профиль</h1>
                     <a href="#"
                        class="back-link">
-                        <svg viewBox="0 0 20 20"
+                        <svg class="back-link__arrow"
+                             viewBox="0 0 20 20"
                              fill="none"
                              xmlns="http://www.w3.org/2000/svg">
                             <path d="M7.97474 15.6829C8.13307 15.6829 8.29141 15.6246 8.41641 15.4996C8.65807 15.2579 8.65807 14.8579 8.41641 14.6163L3.79974 9.99961L8.41641 5.38294C8.65807 5.14128 8.65807 4.74128 8.41641 4.49961C8.17474 4.25794 7.77474 4.25794 7.53307 4.49961L2.47474 9.55794C2.23307 9.79961 2.23307 10.1996 2.47474 10.4413L7.53307 15.4996C7.65807 15.6246 7.81641 15.6829 7.97474 15.6829Z" />
                             <path d="M3.05703 10.625H17.082C17.4237 10.625 17.707 10.3417 17.707 10C17.707 9.65833 17.4237 9.375 17.082 9.375H3.05703C2.71537 9.375 2.43203 9.65833 2.43203 10C2.43203 10.3417 2.71537 10.625 3.05703 10.625Z" />
                         </svg>
-                        К списку текущих заказов
+                        <span class="back-link__text">К списку текущих заказов</span>
                     </a>
                 </div>
                 <div class="profile-page__inner">
@@ -1567,190 +1568,192 @@
                             </li>
                         </ul>
                     </nav>
-                    <article class="order-details">
-                        <header class="order-details__header">
-                            <h2 class="profile-page__title">Заказ №RU125487-985471</h2>
-                        </header>
-                        <div class="order-details-table order-details__table">
-                            <div class="order-details-table__item">
-                                <div class="order-details-table__item-title">Заказ:</div>
-                                <p>№RU125487-985471</p>
-                                <p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
-                            </div>
-                            <div class="order-details-table__item">
-                                <div class="order-details-table__item-title">Получатель:</div>
-                                <p>Иванова Иванка</p>
-                                <p>post@mail.ru</p>
-                                <p>+7 (999) 999-99-99 </p>
-                                <p>г.Санкт-Петербург</p>
-                            </div>
-                            <div class="order-details-table__item">
-                                <div class="order-details-table__item-title">Доставка:</div>
-                                <p>В пункт выдачи </p>
-                                <p>Адрес</p>
-                            </div>
-                            <div class="order-details-table__item">
-                                <div class="order-details-table__item-title">Оплата:</div>
-                                <p>Картой онлайн</p>
-                            </div>
-                            <div class="order-details-table__item">
-                                <div class="order-details-table__item-wrap">
-                                    <div class="order-details-table__item-title">
-                                        Итого:
-                                        <span>42 540 ₽</span>
-                                    </div>
-                                    <span class="order-status">Не оплачен</span>
+                    <div class="profile-page__content">
+                        <article class="order-details">
+                            <header class="order-details__header">
+                                <h2 class="profile-page__title">Заказ №RU125487-985471</h2>
+                            </header>
+                            <div class="order-details-table">
+                                <div class="order-details-table__item">
+                                    <div class="order-details-table__item-title">Заказ:</div>
+                                    <p>№RU125487-985471</p>
+                                    <p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
                                 </div>
-                                <a href="#"
-                                   class="btn order-details-table__btn">Оплатить</a>
+                                <div class="order-details-table__item">
+                                    <div class="order-details-table__item-title">Получатель:</div>
+                                    <p>Иванова Иванка</p>
+                                    <p>post@mail.ru</p>
+                                    <p>+7 (999) 999-99-99 </p>
+                                    <p>г.Санкт-Петербург</p>
+                                </div>
+                                <div class="order-details-table__item">
+                                    <div class="order-details-table__item-title">Доставка:</div>
+                                    <p>В пункт выдачи </p>
+                                    <p>Адрес</p>
+                                </div>
+                                <div class="order-details-table__item">
+                                    <div class="order-details-table__item-title">Оплата:</div>
+                                    <p>Картой онлайн</p>
+                                </div>
+                                <div class="order-details-table__item">
+                                    <div class="order-details-table__item-wrap">
+                                        <div class="order-details-table__item-title">
+                                            Итого:
+                                            <span>42 540 ₽</span>
+                                        </div>
+                                        <span class="order-status">Не оплачен</span>
+                                    </div>
+                                    <a href="#"
+                                       class="btn order-details-table__btn">Оплатить</a>
+                                </div>
                             </div>
-                        </div>
-                        <div class="order-details-goods">
-                            <h3 class="order-details-goods__title product-title">Товары:</h3>
-                            <ul class="order-details-goods__list">
-                                <li>
-                                    <article class="order-product">
-                                        <div class="order-product__img">
-                                            <picture>
-                                                <source type="image/webp"
-                                                        data-srcset="assets/images/content/basket-product-01.webp"
-                                                        srcset="assets/images/src.webp">
-                                                <img class="lazy"
-                                                     data-src="assets/images/content/basket-product-01.jpg"
-                                                     src="assets/images/src.jpg"
-                                                     alt="фото">
-                                            </picture>
-                                        </div>
-                                        <a href="#"
-                                           class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
-                                        <dl class="product-list order-product__list">
-                                            <div>
-                                                <dt>Артикул:</dt>
-                                                <dd>MP002XW08J2L</dd>
+                            <div class="order-details-goods">
+                                <div class="order-details-goods__title product-title">Товары:</div>
+                                <ul class="order-details-goods__list">
+                                    <li>
+                                        <article class="order-product">
+                                            <div class="order-product__img">
+                                                <picture>
+                                                    <source type="image/webp"
+                                                            data-srcset="assets/images/content/basket-product-01.webp"
+                                                            srcset="assets/images/src.webp">
+                                                    <img class="lazy"
+                                                         data-src="assets/images/content/basket-product-01.jpg"
+                                                         src="assets/images/src.jpg"
+                                                         alt="фото">
+                                                </picture>
                                             </div>
-                                            <div>
-                                                <dt>Цвет:</dt>
-                                                <dd>бежевый</dd>
+                                            <a href="#"
+                                               class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
+                                            <dl class="product-list order-product__list">
+                                                <div>
+                                                    <dt>Артикул:</dt>
+                                                    <dd>MP002XW08J2L</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Цвет:</dt>
+                                                    <dd>бежевый</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Размер:</dt>
+                                                    <dd>42</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Количество:</dt>
+                                                    <dd>1</dd>
+                                                </div>
+                                            </dl>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article class="order-product">
+                                            <div class="order-product__img">
+                                                <picture>
+                                                    <source type="image/webp"
+                                                            data-srcset="assets/images/content/basket-product-01.webp"
+                                                            srcset="assets/images/src.webp">
+                                                    <img class="lazy"
+                                                         data-src="assets/images/content/basket-product-01.jpg"
+                                                         src="assets/images/src.jpg"
+                                                         alt="фото">
+                                                </picture>
                                             </div>
-                                            <div>
-                                                <dt>Размер:</dt>
-                                                <dd>42</dd>
+                                            <a href="#"
+                                               class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
+                                            <dl class="product-list order-product__list">
+                                                <div>
+                                                    <dt>Артикул:</dt>
+                                                    <dd>MP002XW08J2L</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Цвет:</dt>
+                                                    <dd>бежевый</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Размер:</dt>
+                                                    <dd>42</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Количество:</dt>
+                                                    <dd>1</dd>
+                                                </div>
+                                            </dl>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article class="order-product">
+                                            <div class="order-product__img">
+                                                <picture>
+                                                    <source type="image/webp"
+                                                            data-srcset="assets/images/content/basket-product-01.webp"
+                                                            srcset="assets/images/src.webp">
+                                                    <img class="lazy"
+                                                         data-src="assets/images/content/basket-product-01.jpg"
+                                                         src="assets/images/src.jpg"
+                                                         alt="фото">
+                                                </picture>
                                             </div>
-                                            <div>
-                                                <dt>Количество:</dt>
-                                                <dd>1</dd>
+                                            <a href="#"
+                                               class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
+                                            <dl class="product-list order-product__list">
+                                                <div>
+                                                    <dt>Артикул:</dt>
+                                                    <dd>MP002XW08J2L</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Цвет:</dt>
+                                                    <dd>бежевый</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Размер:</dt>
+                                                    <dd>42</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Количество:</dt>
+                                                    <dd>1</dd>
+                                                </div>
+                                            </dl>
+                                        </article>
+                                    </li>
+                                    <li>
+                                        <article class="order-product">
+                                            <div class="order-product__img">
+                                                <picture>
+                                                    <source type="image/webp"
+                                                            data-srcset="assets/images/content/basket-product-01.webp"
+                                                            srcset="assets/images/src.webp">
+                                                    <img class="lazy"
+                                                         data-src="assets/images/content/basket-product-01.jpg"
+                                                         src="assets/images/src.jpg"
+                                                         alt="фото">
+                                                </picture>
                                             </div>
-                                        </dl>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="order-product">
-                                        <div class="order-product__img">
-                                            <picture>
-                                                <source type="image/webp"
-                                                        data-srcset="assets/images/content/basket-product-01.webp"
-                                                        srcset="assets/images/src.webp">
-                                                <img class="lazy"
-                                                     data-src="assets/images/content/basket-product-01.jpg"
-                                                     src="assets/images/src.jpg"
-                                                     alt="фото">
-                                            </picture>
-                                        </div>
-                                        <a href="#"
-                                           class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
-                                        <dl class="product-list order-product__list">
-                                            <div>
-                                                <dt>Артикул:</dt>
-                                                <dd>MP002XW08J2L</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Цвет:</dt>
-                                                <dd>бежевый</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Размер:</dt>
-                                                <dd>42</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Количество:</dt>
-                                                <dd>1</dd>
-                                            </div>
-                                        </dl>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="order-product">
-                                        <div class="order-product__img">
-                                            <picture>
-                                                <source type="image/webp"
-                                                        data-srcset="assets/images/content/basket-product-01.webp"
-                                                        srcset="assets/images/src.webp">
-                                                <img class="lazy"
-                                                     data-src="assets/images/content/basket-product-01.jpg"
-                                                     src="assets/images/src.jpg"
-                                                     alt="фото">
-                                            </picture>
-                                        </div>
-                                        <a href="#"
-                                           class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
-                                        <dl class="product-list order-product__list">
-                                            <div>
-                                                <dt>Артикул:</dt>
-                                                <dd>MP002XW08J2L</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Цвет:</dt>
-                                                <dd>бежевый</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Размер:</dt>
-                                                <dd>42</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Количество:</dt>
-                                                <dd>1</dd>
-                                            </div>
-                                        </dl>
-                                    </article>
-                                </li>
-                                <li>
-                                    <article class="order-product">
-                                        <div class="order-product__img">
-                                            <picture>
-                                                <source type="image/webp"
-                                                        data-srcset="assets/images/content/basket-product-01.webp"
-                                                        srcset="assets/images/src.webp">
-                                                <img class="lazy"
-                                                     data-src="assets/images/content/basket-product-01.jpg"
-                                                     src="assets/images/src.jpg"
-                                                     alt="фото">
-                                            </picture>
-                                        </div>
-                                        <a href="#"
-                                           class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
-                                        <dl class="product-list order-product__list">
-                                            <div>
-                                                <dt>Артикул:</dt>
-                                                <dd>MP002XW08J2L</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Цвет:</dt>
-                                                <dd>бежевый</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Размер:</dt>
-                                                <dd>42</dd>
-                                            </div>
-                                            <div>
-                                                <dt>Количество:</dt>
-                                                <dd>1</dd>
-                                            </div>
-                                        </dl>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </article>
+                                            <a href="#"
+                                               class="product-title order-product__title full-link">Пальто LORIATA Wander Yellow</a>
+                                            <dl class="product-list order-product__list">
+                                                <div>
+                                                    <dt>Артикул:</dt>
+                                                    <dd>MP002XW08J2L</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Цвет:</dt>
+                                                    <dd>бежевый</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Размер:</dt>
+                                                    <dd>42</dd>
+                                                </div>
+                                                <div>
+                                                    <dt>Количество:</dt>
+                                                    <dd>1</dd>
+                                                </div>
+                                            </dl>
+                                        </article>
+                                    </li>
+                                </ul>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </main>
@@ -1780,8 +1783,7 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect width="26"
                                           height="26"
-                                          rx="13"
-                                          fill="#101112" />
+                                          rx="13" />
                                     <path d="M13.0006 10.3968C11.567 10.3968 10.3971 11.5667 10.3971 13.0003C10.3971 14.4339 11.567 15.6039 13.0006 15.6039C14.4342 15.6039 15.6041 14.4339 15.6041 13.0003C15.6041 11.5667 14.4342 10.3968 13.0006 10.3968ZM20.8092 13.0003C20.8092 11.9222 20.8189 10.8539 20.7584 9.77768C20.6978 8.52768 20.4127 7.41831 19.4986 6.50424C18.5826 5.58823 17.4752 5.30502 16.2252 5.24448C15.1471 5.18393 14.0787 5.1937 13.0025 5.1937C11.9244 5.1937 10.8561 5.18393 9.77988 5.24448C8.52988 5.30502 7.4205 5.59018 6.50644 6.50424C5.59042 7.42026 5.30722 8.52768 5.24667 9.77768C5.18613 10.8558 5.19589 11.9242 5.19589 13.0003C5.19589 14.0765 5.18613 15.1468 5.24667 16.223C5.30722 17.473 5.59238 18.5824 6.50644 19.4964C7.42246 20.4124 8.52988 20.6956 9.77988 20.7562C10.858 20.8167 11.9264 20.807 13.0025 20.807C14.0807 20.807 15.149 20.8167 16.2252 20.7562C17.4752 20.6956 18.5846 20.4105 19.4986 19.4964C20.4146 18.5804 20.6978 17.473 20.7584 16.223C20.8209 15.1468 20.8092 14.0785 20.8092 13.0003ZM13.0006 17.0062C10.7838 17.0062 8.99472 15.2171 8.99472 13.0003C8.99472 10.7835 10.7838 8.99448 13.0006 8.99448C15.2174 8.99448 17.0064 10.7835 17.0064 13.0003C17.0064 15.2171 15.2174 17.0062 13.0006 17.0062ZM17.1705 9.76596C16.6529 9.76596 16.235 9.34799 16.235 8.83041C16.235 8.31284 16.6529 7.89487 17.1705 7.89487C17.6881 7.89487 18.1061 8.31284 18.1061 8.83041C18.1062 8.95332 18.0821 9.07504 18.0352 9.18862C17.9882 9.30219 17.9193 9.40539 17.8324 9.49229C17.7455 9.57919 17.6423 9.6481 17.5287 9.69506C17.4151 9.74202 17.2934 9.76612 17.1705 9.76596Z"
                                           fill="white" />
                                 </svg>
@@ -1798,8 +1800,7 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect width="26"
                                           height="26"
-                                          rx="13"
-                                          fill="#101112" />
+                                          rx="13" />
                                     <path fill-rule="evenodd"
                                           clip-rule="evenodd"
                                           d="M21.2696 8.95626C21.3902 8.55452 21.2696 8.25924 20.6961 8.25924H18.7999C18.3177 8.25924 18.0955 8.51429 17.975 8.79561C17.975 8.79561 17.0106 11.146 15.6445 12.6728C15.2025 13.1148 15.0016 13.2552 14.7605 13.2552C14.64 13.2552 14.4655 13.1148 14.4655 12.713V8.95626C14.4655 8.47406 14.3256 8.25924 13.9237 8.25924H10.9439C10.6426 8.25924 10.4614 8.483 10.4614 8.69511C10.4614 9.15225 11.1443 9.25763 11.2148 10.5433V13.3358C11.2148 13.9481 11.1042 14.0591 10.8631 14.0591C10.2203 14.0591 8.65668 11.698 7.72913 8.99648C7.54736 8.47135 7.36505 8.25924 6.88041 8.25924H4.98414C4.44234 8.25924 4.33398 8.51429 4.33398 8.79561C4.33398 9.29786 4.97696 11.789 7.32739 15.0837C8.89453 17.3335 11.1021 18.5533 13.111 18.5533C14.3165 18.5533 14.4655 18.2824 14.4655 17.8158V16.1152C14.4655 15.5734 14.5797 15.4654 14.9613 15.4654C15.2427 15.4654 15.7248 15.606 16.8499 16.6908C18.1356 17.9763 18.3475 18.5533 19.0708 18.5533H20.967C21.5088 18.5533 21.7797 18.2824 21.6234 17.7478C21.4525 17.2149 20.8386 16.4421 20.024 15.5256C19.5821 15.0032 18.9191 14.4407 18.7183 14.1595C18.437 13.7979 18.5173 13.6372 18.7183 13.3159C18.7183 13.3159 21.0285 10.0614 21.2696 8.95639V8.95626Z"
@@ -1818,8 +1819,7 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect width="26"
                                           height="26"
-                                          rx="13"
-                                          fill="#101112" />
+                                          rx="13" />
                                     <path d="M13.8681 21.6665V13.76H16.522L16.9194 10.6787H13.8681V8.71132C13.8681 7.81922 14.1159 7.21121 15.3952 7.21121L17.0269 7.21046V4.45457C16.7446 4.41716 15.7761 4.33329 14.6493 4.33329C12.2968 4.33329 10.6862 5.7692 10.6862 8.40631V10.6787H8.02539V13.7601H10.6861V21.6666L13.8681 21.6665Z"
                                           fill="white" />
                                 </svg>
@@ -1836,8 +1836,7 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect width="26"
                                           height="26"
-                                          rx="13"
-                                          fill="#101112" />
+                                          rx="13" />
                                     <path fill-rule="evenodd"
                                           clip-rule="evenodd"
                                           d="M19.3581 7.65922C20.0541 7.84662 20.6029 8.39542 20.7903 9.09147C21.1383 10.3631 21.1249 13.0134 21.1249 13.0134C21.1249 13.0134 21.1249 15.6503 20.7903 16.922C20.6029 17.618 20.0541 18.1668 19.3581 18.3542C18.0864 18.6888 13 18.6888 13 18.6888C13 18.6888 7.92688 18.6888 6.64188 18.3408C5.94584 18.1534 5.39703 17.6046 5.20964 16.9086C4.875 15.6503 4.875 13 4.875 13C4.875 13 4.875 10.3631 5.20964 9.09147C5.39703 8.39542 5.95922 7.83324 6.64188 7.64584C7.9135 7.3112 13 7.3112 13 7.3112C13 7.3112 18.0864 7.3112 19.3581 7.65922ZM15.6101 13L11.3803 15.4361V10.5638L15.6101 13Z"
@@ -1856,8 +1855,7 @@
                                      xmlns="http://www.w3.org/2000/svg">
                                     <rect width="26"
                                           height="26"
-                                          rx="13"
-                                          fill="#101112" />
+                                          rx="13" />
                                     <path d="M13.3541 5.0135C14.2266 5 15.0941 5.008 15.9606 5C16.0131 6.0205 16.3801 7.06 17.1271 7.7815C17.8726 8.521 18.9271 8.8595 19.9531 8.974V11.6585C18.9916 11.627 18.0256 11.427 17.1531 11.013C16.7731 10.841 16.4191 10.6195 16.0726 10.393C16.0681 12.341 16.0806 14.2865 16.0601 16.2265C16.0081 17.1585 15.7006 18.086 15.1586 18.854C14.2866 20.1325 12.7731 20.966 11.2186 20.992C10.2651 21.0465 9.31263 20.7865 8.50013 20.3075C7.15363 19.5135 6.20613 18.06 6.06813 16.5C6.05075 16.1696 6.04808 15.8386 6.06013 15.508C6.18013 14.2395 6.80764 13.026 7.78164 12.2005C8.88563 11.239 10.4321 10.781 11.8801 11.052C11.8936 12.0395 11.8541 13.026 11.8541 14.0135C11.1926 13.7995 10.4196 13.8595 9.84163 14.261C9.41876 14.5396 9.09919 14.9495 8.93213 15.4275C8.79413 15.7655 8.83364 16.141 8.84163 16.5C9.00013 17.594 10.0521 18.5135 11.1751 18.414C11.9196 18.406 12.6331 17.974 13.0211 17.3415C13.1466 17.12 13.2871 16.8935 13.2946 16.633C13.3601 15.4405 13.3341 14.253 13.3421 13.0605C13.3476 10.373 13.3341 7.693 13.3546 5.014L13.3541 5.0135Z"
                                           fill="white" />
                                 </svg>
@@ -2294,7 +2292,7 @@
                  class="aside-popup drop-basket aside-popup--basket">
                 <button class="aside-popup__close"
                         type="button"
-                        aria-label="Закрыть корзину">
+                        aria-label="Закрыть корзину быстрого просмотра">
                     <svg viewBox="0 0 32 32"
                          fill="none"
                          xmlns="http://www.w3.org/2000/svg">
@@ -2307,52 +2305,55 @@
                     <div class="drop-basket__inner">
                         <div class="aside-popup__title">Ваша корзина</div>
                         <div class="drop-basket__products">
-                            <div class="basket-product drop-basket__product">
-                                <a href="#"
-                                   class="basket-product__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                data-srcset="assets/images/content/basket-product-01.webp"
-                                                srcset="assets/images/src.webp">
-                                        <img class="lazy"
-                                             data-src="assets/images/content/basket-product-01.jpg"
-                                             src="assets/images/src.jpg"
-                                             alt="фото">
-                                    </picture>
-                                </a>
-                                <a href="#"
-                                   class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-                                <dl class="product-list basket-product__list">
-                                    <div>
-                                        <dt>Артикул:</dt>
-                                        <dd>MP002XW08J2L</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Цвет:</dt>
-                                        <dd>бежевый</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Размер:</dt>
-                                        <dd>42</dd>
-                                    </div>
-                                </dl>
-                                <div class="drop-basket__product-wrap">
-                                    <button class="basket-product__btn basket-product__btn--delete"
-                                            type="button">
-                                        <svg viewBox="0 0 10 10"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.8">
-                                                <path fill-rule="evenodd"
-                                                      clip-rule="evenodd"
-                                                      d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
-                                            </g>
-                                        </svg>
-                                        <span>Удалить</span>
-                                    </button>
-                                    <div class="basket-product__counter counter">
-                                        <button class="minus-btn counter__btn"
+                            <li>
+                                <article class="basket-product drop-basket__product">
+                                    <a href="#"
+                                       class="basket-product__img">
+                                        <picture>
+                                            <source type="image/webp"
+                                                    data-srcset="assets/images/content/basket-product-01.webp"
+                                                    srcset="assets/images/src.webp">
+                                            <img class="lazy"
+                                                 data-src="assets/images/content/basket-product-01.jpg"
+                                                 src="assets/images/src.jpg"
+                                                 alt="фото">
+                                        </picture>
+                                    </a>
+                                    <a href="#"
+                                       class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
+                                    <dl class="product-list basket-product__list">
+                                        <div>
+                                            <dt>Артикул:</dt>
+                                            <dd>MP002XW08J2L</dt>
+                                        </div>
+                                        <div>
+                                            <dt>Цвет:</dt>
+                                            <dd>бежевый</dt>
+                                        </div>
+                                        <div>
+                                            <dt>Размер:</dd>
+                                            <dd>42</dt>
+                                        </div>
+                                    </dl>
+                                    <div class="basket-product__buttons">
+                                        <button class="basket-product__btn basket-product__btn--delete"
                                                 type="button">
+                                            <svg viewBox="0 0 10 10"
+                                                 fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.8">
+                                                    <path fill-rule="evenodd"
+                                                          clip-rule="evenodd"
+                                                          d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
+                                                </g>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                    <div class="counter basket-product__counter">
+                                        <button class="minus-btn counter__btn"
+                                                type="button"
+                                                aria-label="Минус товар">
                                             <svg viewBox="0 0 10 2"
                                                  fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -2368,7 +2369,8 @@
                                                value="1"
                                                readonly>
                                         <button class="plus-btn counter__btn"
-                                                type="button">
+                                                type="button"
+                                                aria-label="Плюс товар">
                                             <svg viewBox="0 0 10 10"
                                                  fill="none"
                                                  xmlns="http://www.w3.org/2000/svg">
@@ -2385,97 +2387,103 @@
                                             </svg>
                                         </button>
                                     </div>
-                                    <div class="basket-product__prices-wrap drop-basket__product-prices">
-                                        <div class="old-price basket-product__old-price">47 800 ₽</div>
-                                        <div class="new-price">38 240 ₽</div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="basket-product drop-basket__product">
-                                <a href="#"
-                                   class="basket-product__img">
-                                    <picture>
-                                        <source type="image/webp"
-                                                data-srcset="assets/images/content/basket-product-02.webp"
-                                                srcset="assets/images/src.webp">
-                                        <img class="lazy"
-                                             data-src="assets/images/content/basket-product-02.jpg"
-                                             src="assets/images/src.jpg"
-                                             alt="фото">
-                                    </picture>
-                                </a>
-                                <a href="#"
-                                   class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
-                                <dl class="product-list basket-product__list">
-                                    <div>
-                                        <dt>Артикул:</dt>
-                                        <dd>MP002XW08J2L</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Цвет:</dt>
-                                        <dd>бежевый</dd>
-                                    </div>
-                                    <div>
-                                        <dt>Размер:</dt>
-                                        <dd>42</dd>
-                                    </div>
-                                </dl>
-                                <div class="drop-basket__product-wrap">
-                                    <button class="basket-product__btn basket-product__btn--delete"
-                                            type="button">
-                                        <svg viewBox="0 0 10 10"
-                                             fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <g opacity="0.8">
-                                                <path fill-rule="evenodd"
-                                                      clip-rule="evenodd"
-                                                      d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
-                                            </g>
-                                        </svg>
-                                        <span>Удалить</span>
-                                    </button>
-                                    <div class="basket-product__counter counter">
-                                        <button class="minus-btn counter__btn"
-                                                type="button">
-                                            <svg viewBox="0 0 10 2"
-                                                 fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <line y1="1"
-                                                      x2="10"
-                                                      y2="1"
-                                                      stroke="#9B9B9B"
-                                                      stroke-width="2" />
-                                            </svg>
-                                        </button>
-                                        <input class="counter__input"
-                                               type="number"
-                                               value="1"
-                                               readonly>
-                                        <button class="plus-btn counter__btn"
-                                                type="button">
-                                            <svg viewBox="0 0 10 10"
-                                                 fill="none"
-                                                 xmlns="http://www.w3.org/2000/svg">
-                                                <line y1="5"
-                                                      x2="10"
-                                                      y2="5"
-                                                      stroke="#9B9B9B"
-                                                      stroke-width="2" />
-                                                <line x1="5"
-                                                      y1="10"
-                                                      x2="5"
-                                                      stroke="#9B9B9B"
-                                                      stroke-width="2" />
-                                            </svg>
-                                        </button>
-                                    </div>
-                                    <div class="drop-basket__product-prices">
-                                        <div class="basket-product__price drop-basket__product-price">
-                                            4 300
+                                    <div class="basket-product__prices">
+                                        <div class="basket-product__prices-wrap">
+                                            <div class="old-price basket-product__old-price">47 800 ₽</div>
+                                            <div class="new-price">38 240 ₽</div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
+                                </article>
+                            </li>
+                            <li>
+                                <article class="basket-product drop-basket__product">
+                                    <a href="#"
+                                       class="basket-product__img">
+                                        <picture>
+                                            <source type="image/webp"
+                                                    data-srcset="assets/images/content/basket-product-02.webp"
+                                                    srcset="assets/images/src.webp">
+                                            <img class="lazy"
+                                                 data-src="assets/images/content/basket-product-02.jpg"
+                                                 src="assets/images/src.jpg"
+                                                 alt="фото">
+                                        </picture>
+                                    </a>
+                                    <a href="#"
+                                       class="product-title basket-product__title">Пальто LORIATA Wander Yellow</a>
+                                    <dl class="product-list basket-product__list">
+                                        <div>
+                                            <dt>Артикул:</dt>
+                                            <dd>MP002XW08J2L</dt>
+                                        </div>
+                                        <div>
+                                            <dt>Цвет:</dt>
+                                            <dd>бежевый</dt>
+                                        </div>
+                                        <div>
+                                            <dt>Размер:</dd>
+                                            <dd>42</dt>
+                                        </div>
+                                    </dl>
+                                    <div class="basket-product__buttons">
+                                        <button class="basket-product__btn basket-product__btn--delete"
+                                                type="button">
+                                            <svg viewBox="0 0 10 10"
+                                                 fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <g opacity="0.8">
+                                                    <path fill-rule="evenodd"
+                                                          clip-rule="evenodd"
+                                                          d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
+                                                </g>
+                                            </svg>
+                                            <span>Удалить</span>
+                                        </button>
+                                    </div>
+                                    <div class="counter basket-product__counter">
+                                        <button class="minus-btn counter__btn"
+                                                type="button"
+                                                aria-label="Минус товар">
+                                            <svg viewBox="0 0 10 2"
+                                                 fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <line y1="1"
+                                                      x2="10"
+                                                      y2="1"
+                                                      stroke="#9B9B9B"
+                                                      stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                        <input class="counter__input"
+                                               type="number"
+                                               value="1"
+                                               readonly>
+                                        <button class="plus-btn counter__btn"
+                                                type="button"
+                                                aria-label="Плюс товар">
+                                            <svg viewBox="0 0 10 10"
+                                                 fill="none"
+                                                 xmlns="http://www.w3.org/2000/svg">
+                                                <line y1="5"
+                                                      x2="10"
+                                                      y2="5"
+                                                      stroke="#9B9B9B"
+                                                      stroke-width="2" />
+                                                <line x1="5"
+                                                      y1="10"
+                                                      x2="5"
+                                                      stroke="#9B9B9B"
+                                                      stroke-width="2" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                    <div class="basket-product__prices">
+                                        <div class="basket-product__prices-wrap">
+                                            <div class="basket-product__price">4 300</div>
+                                        </div>
+                                    </div>
+                                </article>
+                            </li>
                         </div>
                         <div class="drop-basket__total">
                             <div class="drop-basket__total-title">Товаров на сумму</div>
@@ -2487,12 +2495,14 @@
                     </div>
                     <a href="#"
                        class="drop-basket__btn btn">
-                        <span>Оформить заказ</span>
-                        <svg viewBox="0 0 56 16"
+                        <span class="btn__text">Оформить заказ</span>
+                        <svg class="btn__arrow"
+                             viewBox="0 0 56 16"
                              fill="none"
                              xmlns="http://www.w3.org/2000/svg">
-                            <path d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z"
-                                  fill="white" />
+                            <path fill-rule="evenodd"
+                                  clip-rule="evenodd"
+                                  d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" />
                         </svg>
                     </a>
                 </div>
@@ -2610,6 +2620,7 @@
     <script src="./assets/scripts/app.min.js"></script>
     <!-- Скрипты, которые просили вынести -->
     <script src="./assets/scripts/for-view.js"></script>
+    <script src="./assets/libs/js/sticky-sidebar.min.js"></script>
 </body>
 
 </html>

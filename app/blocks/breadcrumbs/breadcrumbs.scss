@@ -16,7 +16,7 @@
         @extend %text-13;
         padding-right: 1.8rem;
         margin-right: 1.4rem;
-        transition: .3s color;
+        transition: $transition color;
 
         @media(max-width: 500px) {
             font-size: 1.2rem;
@@ -27,7 +27,7 @@
 
         @media (any-hover: hover) {
             &:hover {
-                color: $green;
+                color: var(--green);
             }
         }
 
@@ -46,7 +46,7 @@
     }
 }
 
-.catalog,
+.catalog .breadcrumbs,
 .product-card .breadcrumbs {
     padding-bottom: 2rem;
 }

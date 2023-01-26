@@ -19,7 +19,7 @@
             height: 2rem;
             background-image: url(../images/icons/drop-arr.svg);
             @extend %bg-contain;
-            transition: .3s transform;
+            transition: $transition transform;
         }
 
         &--active {

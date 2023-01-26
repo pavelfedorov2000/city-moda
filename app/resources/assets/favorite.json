@@ -1,0 +1,50 @@
+[{
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "price": "21 200 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}, {
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "price": "21 200 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}, {
+    "labels": {
+        "discount": "40%"
+    },
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "newprice": "21 200 ₽",
+    "oldprice": "37 400 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}, {
+    "labels": {
+        "new": true
+    },
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "price": "21 200 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}, {
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "price": "21 200 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}, {
+    "isFavorite": true,
+    "title": "Пальто",
+    "subtitle": "Loriata",
+    "price": "21 200 ₽",
+    "image": "assets/images/content/catalog-card",
+    "alt": "Пальто Loriata"
+}]
