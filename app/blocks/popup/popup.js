@@ -46,5 +46,16 @@ app.popup = {
             $('body').removeClass('_lock');
             $('html').removeClass('disable-fix');
         });
+
+        $(document).on('mouseup', function (e) {
+            const $asidePopupActive = $('.aside-popup.active');
+            if (!$asidePopupActive.is(e.target) && $asidePopupActive.has(e.target).length === 0) {
+                $(`[data-popup="${$asidePopupActive.attr('id')}"]`).attr('aria-expanded', false);
+                $asidePopupActive.removeClass('active');
+                $('.overlay').fadeOut();
+                $('body').removeClass('_lock');
+                $('html').removeClass('disable-fix');
+            }
+        });
     },
 };

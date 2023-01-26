@@ -23,9 +23,6 @@
     "href": "basket.html",
     "title": "Корзина / Оформление заказа"
 }, {
-    "href": "basket-delivery.html",
-    "title": "Оформление заказа (выбран пункт выдачи)"
-}, {
     "href": "order-success.html",
     "title": "Заказ успешно отправлен"
 }, {

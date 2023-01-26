@@ -159,19 +159,23 @@
 	// .product-popup__more-link
 
 	&__more-link {
+		@extend %text-14;
 		@extend %flex-center;
 		font-weight: 500;
 		grid-area: link;
 		background-color: var(--gray-bg);
+		color: var(--dark);
 
 		@media (max-width: 1024px) {
 			padding: 2.6rem;
 		}
 
 		svg {
+			flex-shrink: 0;
+			margin-left: 1.4rem;
 			width: 5.6rem;
 			height: 1.6rem;
-			margin-left: 1.4rem;
+			fill: var(--dark);
 			transition: $transition fill;
 		}
 

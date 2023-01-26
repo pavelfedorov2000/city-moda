@@ -11,8 +11,8 @@ app.productPopup = {
                 clickable: true,
             },
             navigation: {
-                nextEl: '.product-popup__slider-arrow--next',
-                prevEl: '.product-popup__slider-arrow--prev',
+                nextEl: '.product-popup__slider .swiper-button-next',
+                prevEl: '.product-popup__slider .swiper-button-prev',
             },
             breakpoints: {
                 576: {

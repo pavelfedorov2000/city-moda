@@ -13,6 +13,17 @@ $(function () {
         $catalogFiltersItemDrop.slideToggle();
     });
 
+    $(document).on('mouseup', function (e) {
+        const $catalogFiltersItemTitleActive = $('.catalog-filters__item-title.active');
+        const $catalogFilter = $catalogFiltersItemTitleActive.closest('.catalog-filters__item');
+        const $catalogFiltersItemDrop = $catalogFilter.find('.catalog-filters__item-drop');
+
+        if (!$catalogFilter.is(e.target) && $catalogFilter.has(e.target).length === 0) {
+            $catalogFiltersItemTitleActive.removeClass('active');
+            $catalogFiltersItemDrop.slideUp();
+        }
+    });
+
     // Подсчет отмеченных чекбоксом
     $('.catalog-filters__item--material input[type="checkbox"], .catalog-filters__item--color input[type="checkbox"], .catalog-filters__item--brand input[type="checkbox"], .catalog-filters__item--details input[type="checkbox"], .catalog-filters__item--style input[type="checkbox"], .catalog-filters__item--decor input[type="checkbox"]').on('click', function () {
         const $checkbox = $(this);

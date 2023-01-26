@@ -360,12 +360,17 @@
 }
 
 .product-favorite-btn {
+	svg {
+		fill: var(--dark);
+		transition: $transition fill;
+	}
+
 	@media (any-hover: hover) {
 		&:hover {
 			border-color: var(--red);
 			color: var(--red);
 
-			svg path {
+			svg {
 				fill: var(--red);
 			}
 		}
@@ -394,7 +399,7 @@
 				color: var(--dark);
 				border-color: var(--dark);
 
-				svg.favorite path {
+				svg.favorite {
 					fill: var(--red);
 				}
 			}

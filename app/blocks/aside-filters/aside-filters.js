@@ -21,5 +21,24 @@ app.asideFilters = {
                 $asideFiltersItemContent.slideUp();
             }
         });
+
+        const catalogAside = document.querySelector('.catalog__aside');
+
+        function fixAsideFilters() {
+            if (window.innerWidth > 1024) {
+                new StickySidebar('.catalog__aside', {
+                    topSpacing: 20,
+                    bottomSpacing: 20,
+                    containerSelector: '.catalog__inner',
+                    innerWrapperSelector: '.aside-filters',
+                });
+            }
+        }
+
+        if (!catalogAside) return;
+        fixAsideFilters();
+        window.addEventListener('resize', () => {
+            fixAsideFilters();
+        });
     },
 };
