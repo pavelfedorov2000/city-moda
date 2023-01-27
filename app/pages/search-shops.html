@@ -1,150 +1,160 @@
 @@include("blocks/head/head.html", {"title": "Найти магазины"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-	@@include("blocks/header/header.html")
-	@@include("blocks/burger/burger.html")
-	<main class="page search-shops">
-		<div class="container">
-			@@include('blocks/breadcrumbs/breadcrumbs.html', {
-			"currentPage": "Найти магазины"
-			})
+    @@include("blocks/header/header.html")
+    @@include("blocks/burger/burger.html")
+    <main class="page search-shops">
+        <div class="container">
+            @@include('blocks/breadcrumbs/breadcrumbs.html', {
+            "currentPage": "Найти магазины"
+            })
 
-			@@include('blocks/page-top/page-top.html', {
-			"title": "Найти магазины"
-			})
+            @@include('blocks/page-top/page-top.html', {
+            "title": "Найти магазины"
+            })
 
-			<div class="search-shops__select select">
-				<div class="select__title">Санкт-Петербург</div>
-				<div class="select__content">
-					<label class="select__option" tabindex="0" data-city="peterburg">
-						<input class="select__input" type="radio" name="shops-city" checked />
-						<span class="radio-style"></span>
-						<span class="select__option-text">Санкт-Петербург</span>
-					</label>
-					<label class="select__option" tabindex="0" data-city="moscow">
-						<input class="select__input" type="radio" name="shops-city" />
-						<span class="radio-style"></span>
-						<span class="select__option-text">Москва</span>
-					</label>
-				</div>
-			</div>
+            <div class="search-shops__select select">
+                <div class="select__title">Санкт-Петербург</div>
+                <div class="select__content">
+                    <label class="select__option"
+                           tabindex="0"
+                           data-city="peterburg">
+                        <input class="select__input radio-box"
+                               type="radio"
+                               name="shops-city"
+                               checked />
+                        <span class="radio-style"></span>
+                        <span class="select__option-text">Санкт-Петербург</span>
+                    </label>
+                    <label class="select__option"
+                           tabindex="0"
+                           data-city="moscow">
+                        <input class="select__input radio-box"
+                               type="radio"
+                               name="shops-city" />
+                        <span class="radio-style"></span>
+                        <span class="select__option-text">Москва</span>
+                    </label>
+                </div>
+            </div>
 
-			<div id="shops-map" class="search-shops__map"></div>
+            <div id="shops-map"
+                 class="search-shops__map"></div>
 
-			<ul class="grid grid--items-xl_4">
-				@@loop("blocks/shop-item/shop-item.html", "../resources/assets/shops.json")
-			</ul>
-		</div>
-	</main>
-	@@include("blocks/footer/footer.html")
-	@@include("blocks/pageup/pageup.html")
-	<div class="overlay">
-		@@include("blocks/auth/auth.html")
-		@@include("blocks/popup/password-recovery.html")
-		@@include("blocks/drop-basket/drop-basket.html")
-	</div>
-	@@include("blocks/popup/discount-popup.html")
-	@@include("blocks/region-popup/region-popup.html")
+            <ul class="grid grid--items-xl_4">
+                @@loop("blocks/shop-item/shop-item.html", "../resources/assets/shops.json")
+            </ul>
+        </div>
+    </main>
+    @@include("blocks/footer/footer.html")
+    @@include("blocks/pageup/pageup.html")
+    <div class="overlay">
+        @@include("blocks/auth/auth.html")
+        @@include("blocks/popup/password-recovery.html")
+        @@include("blocks/drop-basket/drop-basket.html")
+    </div>
+    @@include("blocks/popup/discount-popup.html")
+    @@include("blocks/region-popup/region-popup.html")
 </div>
 <script src="https://api-maps.yandex.ru/2.1.79/?lang=ru_RU"></script>
 @@include("blocks/link/link.html")
 
 <style>
-	/* Фиксированная версия 2.1.79 позволяет привязаться к этим классам */
-	.ymaps-2-1-79-balloon__close,
-	.ymaps-2-1-79-balloon__tail {
-		display: none;
-	}
+    /* Фиксированная версия 2.1.79 позволяет привязаться к этим классам */
+    .ymaps-2-1-79-balloon__close,
+    .ymaps-2-1-79-balloon__tail {
+        display: none;
+    }
 
-	.ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
-		margin-right: 0;
-	}
+    .ymaps-2-1-79-balloon__close+.ymaps-2-1-79-balloon__content {
+        margin-right: 0;
+    }
 
-	.ymaps-2-1-79-balloon__content {
-		padding: 0;
-		margin-right: 0;
-	}
+    .ymaps-2-1-79-balloon__content {
+        padding: 0;
+        margin-right: 0;
+    }
 
-	.ymaps-2-1-79-balloon__content img {
-		width: 100%;
-		height: 16rem;
-		object-fit: cover;
-	}
+    .ymaps-2-1-79-balloon__content img {
+        width: 100%;
+        height: 16rem;
+        object-fit: cover;
+    }
 
-	.ymaps-2-1-79-balloon-content__header {
-		margin-bottom: 0;
-	}
+    .ymaps-2-1-79-balloon-content__header {
+        margin-bottom: 0;
+    }
 
-	.ymaps-2-1-79-balloon__content>* {
-		width: 28.6rem !important;
-		height: auto !important;
-		overflow: hidden !important;
-	}
+    .ymaps-2-1-79-balloon__content>* {
+        width: 28.6rem !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
 
-	@media(max-width: 500px) {
-		.ymaps-2-1-79-balloon__content>* {
-			width: 100% !important;
-		}
-	}
+    @media(max-width: 500px) {
+        .ymaps-2-1-79-balloon__content>* {
+            width: 100% !important;
+        }
+    }
 
 </style>
 
 <script>
-	$('.search-shops .shop-item').addClass('hidden');
-	$(`.search-shops .shop-item[data-city="${$('.search-shops__select .select__option input:checked').parent().attr('data-city')}"`)
-		.removeClass('hidden');
+    $('.search-shops .shop-item').addClass('hidden');
+    $(`.search-shops .shop-item[data-city="${$('.search-shops__select .select__option input:checked').parent().attr('data-city')}"`)
+        .removeClass('hidden');
 
-	function filterCities() {
-		$('.search-shops__select .select__option').on('click', function () {
-			$('.search-shops .shop-item').addClass('hidden');
-			$(`.search-shops .shop-item[data-city="${$(this).attr('data-city')}"`).removeClass('hidden');
-		});
-	}
-	filterCities();
+    function filterCities() {
+        $('.search-shops__select .select__option').on('click', function() {
+            $('.search-shops .shop-item').addClass('hidden');
+            $(`.search-shops .shop-item[data-city="${$(this).attr('data-city')}"`).removeClass('hidden');
+        });
+    }
+    filterCities();
 
-	ymaps.ready(init);
+    ymaps.ready(init);
 
-	function init() {
-		var myMap = new ymaps.Map('shops-map', {
-				center: [55.76, 37.64],
-				zoom: 11,
-				controls: []
-			}, {
-				searchControlProvider: 'yandex#search'
-			}),
-			objectManager = new ymaps.ObjectManager({
-				clusterize: true,
-				gridSize: 64,
-				clusterize: true
-			});
-		myMap.geoObjects.add(objectManager);
+    function init() {
+        var myMap = new ymaps.Map('shops-map', {
+                center: [55.76, 37.64],
+                zoom: 11,
+                controls: []
+            }, {
+                searchControlProvider: 'yandex#search'
+            }),
+            objectManager = new ymaps.ObjectManager({
+                clusterize: true,
+                gridSize: 64,
+                clusterize: true
+            });
+        myMap.geoObjects.add(objectManager);
 
-		function filterCity(cityName) {
-			let filterStr = 'options.city == "' + cityName + '"';
-			objectManager.setFilter(filterStr);
-		}
+        function filterCity(cityName) {
+            let filterStr = 'options.city == "' + cityName + '"';
+            objectManager.setFilter(filterStr);
+        }
 
-		$('body').on('change', '.search-shops__select .select__option input', function () {
-			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
-		});
+        $('body').on('change', '.search-shops__select .select__option input', function() {
+            filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
+        });
 
-		$('body').on('click', '.shop-item__top', function () {
-			objectManager.objects.balloon.open($(this).parent().attr('data-id'));
-		});
+        $('body').on('click', '.shop-item__top', function() {
+            objectManager.objects.balloon.open($(this).parent().attr('data-id'));
+        });
 
-		$.ajax({
-			url: "assets/data.json",
-			cash: false,
-		}).done(function (data) {
-			objectManager.add(data);
-			filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
-			var objectState = objectManager.getObjectState(1);
-			if (objectState.isClustered) {
-				objectManager.clusters.state.set('activeObject', objectManager.objects.getById(1));
-				objectManager.clusters.balloon.open(objectState.cluster.id);
-			}
-		});
-	}
+        $.ajax({
+            url: "assets/data.json",
+            cash: false,
+        }).done(function(data) {
+            objectManager.add(data);
+            filterCity($('.search-shops__select .select__input:checked').parent().attr('data-city'));
+            var objectState = objectManager.getObjectState(1);
+            if (objectState.isClustered) {
+                objectManager.clusters.state.set('activeObject', objectManager.objects.getById(1));
+                objectManager.clusters.balloon.open(objectState.cluster.id);
+            }
+        });
+    }
 
 </script>
 </body>

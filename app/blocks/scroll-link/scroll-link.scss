@@ -1,0 +1,9 @@
+.scroll-link {
+    transition: $transition color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--gray);
+        }
+    }
+}

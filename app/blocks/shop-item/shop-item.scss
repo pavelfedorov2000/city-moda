@@ -1,184 +1,186 @@
 .shop-title {
-	@extend %text-17;
-	font-weight: 600;
+    @extend %text-17;
+    font-weight: 600;
 
-	&:not(:last-child) {
-		margin-bottom: 1.2rem;
-	}
+    &:not(:last-child) {
+        margin-bottom: 1.2rem;
+    }
 }
 
 .shop-address {
-	@extend %text-14;
+    @extend %text-14;
 
-	&:not(:last-child) {
-		margin-bottom: 0.7rem;
-	}
+    &:not(:last-child) {
+        margin-bottom: 0.7rem;
+    }
 }
 
 .shop-time {
-	@extend %text-14;
+    @extend %text-14;
 
-	&:not(:last-child) {
-		margin-bottom: 2.3rem;
-	}
+    &:not(:last-child) {
+        margin-bottom: 2.3rem;
+    }
 }
 
 .shop-phone {
-	@extend %vertical-align;
-	@extend %text-14;
-	font-weight: 600;
+    @extend %vertical-align;
+    @extend %text-14;
+    font-weight: 600;
 
-	svg {
-		flex-shrink: 0;
-		margin-right: 0.8rem;
-		width: 1.4rem;
-		height: 1.4rem;
-		fill: var(--dark);
-		transition: $transition fill;
-	}
+    svg {
+        flex-shrink: 0;
+        margin-right: 0.8rem;
+        width: 1.4rem;
+        height: 1.4rem;
+        fill: var(--dark);
+        transition: $transition fill;
+    }
 
-	@media (any-hover: hover) {
-		&:hover {
-			color: var(--gray);
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--gray);
 
-			svg {
-				fill: var(--gray);
-			}
-		}
-	}
+            svg {
+                fill: var(--gray);
+            }
+        }
+    }
 }
 
 .shop-item {
 
-	>* {
-		&:not(:first-child) {
-			margin-left: 4rem;
+    > * {
+        &:not(:first-child) {
+            margin-left: 4rem;
 
-			@media(max-width: 500px) {
-				margin-left: 2.5rem + 0.8rem;
-			}
-		}
-	}
+            @media(max-width: 500px) {
+                margin-left: 2.5rem + 0.8rem;
+            }
+        }
+    }
 
-	&__top {
-		@extend %vertical-align;
+    &__top {
+        @extend %vertical-align;
 
-		svg {
-			width: 3.2rem;
-			height: 3.2rem;
-			margin-right: 0.8rem;
+        svg {
+            width: 3.2rem;
+            height: 3.2rem;
+            margin-right: 0.8rem;
 
-			path {
-				transition: $transition fill;
-			}
+            path {
+                transition: $transition fill;
+            }
 
-			@media(max-width: 500px) {
-				width: 2.5rem;
-				height: 2.5rem;
-			}
-		}
+            @media(max-width: 500px) {
+                width: 2.5rem;
+                height: 2.5rem;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				.shop-item__title {
-					color: var(--gray);
-				}
+        @media (any-hover: hover) {
+            &:hover {
+                .shop-item__title {
+                    color: var(--gray);
+                }
 
-				svg path {
-					fill: var(--gray);
-				}
-			}
-		}
+                svg path {
+                    fill: var(--gray);
+                }
+            }
+        }
 
-		&:not(:last-child) {
-			margin-bottom: 1.1rem;
-		}
-	}
+        &:not(:last-child) {
+            margin-bottom: 1.1rem;
+        }
+    }
 
-	// .shop-item__title
-	&__title {
-		@extend %text-20;
-		font-weight: 500;
-		transition: $transition color;
-		cursor: pointer;
+    // .shop-item__title
+    &__title {
+        @extend %text-20;
+        font-weight: 500;
+        transition: $transition color;
+        cursor: pointer;
 
-		@media(max-width: 500px) {
-			font-size: 1.6rem;
-			line-height: 2.4rem;
-		}
-	}
+        @media(max-width: 500px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
+    }
 
-	// .shop-item__address
+    // .shop-item__address
 
-	&__address {
-		p {
-			@extend %text-16;
+    &__address {
+        p {
+            @extend %text-16;
 
-			&:not(:last-child) {
-				margin-bottom: 0.4rem;
-			}
-		}
+            &:not(:last-child) {
+                margin-bottom: 0.4rem;
+            }
+        }
 
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
 
-			@media(max-width: 500px) {
-				font-size: 1.4rem;
-				line-height: 2.1rem;
-				margin-bottom: 1rem;
-			}
-		}
-	}
+            @media(max-width: 500px) {
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
 
-	// .shop-item__phone
+    // .shop-item__phone
 
-	&__phone {
-		@extend .shop-phone;
-		@extend %text-16;
+    &__phone {
+        @extend .shop-phone;
+        @extend %text-16;
 
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+        &:not(:last-child) {
+            margin-bottom: 1.6rem;
 
-			@media(max-width: 500px) {
-				font-size: 1.4rem;
-				line-height: 2.1rem;
-				margin-bottom: 1rem;
-			}
-		}
-	}
+            @media(max-width: 500px) {
+                font-size: 1.4rem;
+                line-height: 2.1rem;
+                margin-bottom: 1rem;
+            }
+        }
+    }
 
-	&__status {
-		@extend %text-16;
-		position: relative;
-		padding-left: 2.1rem;
+    &__status {
+        @extend %text-16;
+        position: relative;
+        padding-left: 2.1rem;
 
-		@media(max-width: 500px) {
-			font-size: 1.4rem;
-			line-height: 2.1rem;
-		}
+        @media(max-width: 500px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
 
-		&:before {
-			content: '';
-			position: absolute;
-			@extend %pos-center-y;
-			top: 1.2rem;
-			left: 0;
-			width: 1rem;
-			height: 1rem;
-			border-radius: 50%;
-			background-color: var(--green);
+        &:before {
+            content: '';
+            position: absolute;
+            @extend %pos-center-y;
+            top: 1.2rem;
+            left: 0;
+            width: 1rem;
+            height: 1rem;
+            border-radius: 50%;
+            background-color: var(--green);
 
-			@media(max-width: 500px) {
-				top: 1rem;
-			}
-		}
-	}
+            @media(max-width: 500px) {
+                top: 1rem;
+            }
+        }
+    }
 
-	&.hidden {
-		display: none;
-	}
+    &.hidden {
+        display: none;
+    }
 }
 
 .ballon-content {
-	padding: 1.5rem 1.6rem;
+    @extend %flex-col;
+    align-items: flex-start;
+    padding: 1.5rem 1.6rem;
 }

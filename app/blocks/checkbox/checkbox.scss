@@ -1,0 +1,49 @@
+// ===================== CHECKBOXES ==================== //
+.check {
+    $this: &;
+
+    &-box {
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        clip: rect(0 0 0 0);
+
+        &:checked ~ #{$this}-style {
+            &:before {
+                content: '';
+                width: 1rem;
+                height: 0.8rem;
+                position: absolute;
+                @extend %pos-center-xy;
+                background-image: url(../images/icons/check.svg);
+                @extend %bg-contain;
+            }
+        }
+    }
+
+    &-style {
+        position: relative;
+        width: 1.6rem;
+        height: 1.6rem;
+        flex-shrink: 0;
+        border: 0.1rem solid var(--dark);
+    }
+
+    &-text {
+        a {
+            text-decoration: underline;
+        }
+    }
+
+    &-color {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        margin-left: 1rem;
+
+        & + #{$this}-text {
+            margin-left: 0.5rem;
+        }
+    }
+}

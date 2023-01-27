@@ -1,0 +1,12 @@
+<div class="form-row subscribe-form__wrap">
+    <input class="form-row__input"
+           @@if(context.inputType){
+           type="@@inputType"
+           }@@if(context.inputName){
+           name="@@inputName"
+           }
+           placeholder="@@placeholder">
+    <button class="form-row__btn"
+            type="submit"
+            aria-label="@@ariaLabel"></button>
+</div>

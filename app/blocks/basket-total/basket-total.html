@@ -12,23 +12,24 @@
             лояльности.
         </div>
         <div class="subscribe-form basket-total__promocode promocode">
-            <div class="form-row subscribe-form__wrap">
-                <input class="form-row__input"
-                       name="promocode"
-                       placeholder="Введите промокод">
-                <button class="btn form-row__btn"
-                        type="button"
-                        aria-label="Ввести промокод"></button>
-            </div>
+            @@include('blocks/subscribe-form/subscribe-form.html', {
+            "inputName": "promocode",
+            "placeholder": "Введите промокод",
+            "ariaLabel": "Ввести промокод"
+            })
             <div class="promocode__row">
                 <div class="promocode-notify promocode-notify--success">Промокод применен</div>
-                <button class="link-btn promocode__delete-notify"
-                        type="button">Удалить</button>
+                @@include('blocks/link-btn/link-btn.html', {
+                "class": "promocode__delete-notify",
+                "text": "Удалить"
+                })
             </div>
             <div class="promocode__row">
                 <div class="promocode-notify promocode-notify--error">Промокод не найден</div>
-                <button class="link-btn promocode__delete-notify"
-                        type="button">Удалить</button>
+                @@include('blocks/link-btn/link-btn.html', {
+                "class": "promocode__delete-notify",
+                "text": "Удалить"
+                })
             </div>
         </div>
         <dl class="basket-total__list">

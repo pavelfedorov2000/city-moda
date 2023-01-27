@@ -1,90 +1,91 @@
 .pagination {
-	@extend %vertical-align;
-	justify-content: flex-end;
-	padding: var(--gap) 0;
+    @extend %vertical-align;
+    justify-content: flex-end;
+    padding: var(--gap) 0;
 
-	@media (max-width: 767px) {
-		justify-content: center;
-	}
+    @media (max-width: 767px) {
+        justify-content: center;
+    }
 
-	// .pagination__list
+    // .pagination__list
 
-	&__list {
-		display: flex;
-	}
+    &__list {
+        display: flex;
+    }
 
-	// .pagination__item
+    // .pagination__item
 
-	&__item {
-		&:not(:last-child) {
-			margin-right: 4rem;
+    &__item {
+        &:not(:last-child) {
+            margin-right: 4rem;
 
-			@media (max-width: 767px) {
-				margin-right: 3rem;
-			}
-		}
-	}
+            @media (max-width: 767px) {
+                margin-right: 3rem;
+            }
+        }
+    }
 
-	// .pagination__link
+    // .pagination__link
 
-	&__link {
-		@extend %text-20;
-		font-weight: 500;
-		color: var(--gray);
+    &__link {
+        @extend %text-20;
+        font-weight: 500;
+        color: var(--gray);
 
-		@media (max-width: 500px) {
-			font-size: 1.6rem;
-			line-height: 2.4rem;
-		}
+        @media (max-width: 500px) {
+            font-size: 1.6rem;
+            line-height: 2.4rem;
+        }
 
-		&.active {
-			color: var(--dark);
-		}
+        &.active {
+            color: var(--dark);
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				color: var(--red);
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                color: var(--red);
+            }
+        }
+    }
 
-	&__prev,
-	&__next {
-		svg {
-			width: 5.6rem;
-			height: 1.6rem;
-			transition: $transition fill;
+    &__prev,
+    &__next {
+        svg {
+            width: 5.6rem;
+            height: 1.6rem;
+            fill: var(--dark);
+            transition: $transition fill;
 
-			@media (max-width: 767px) {
-				width: 4rem;
-				height: 1.2rem;
-			}
-		}
+            @media (max-width: 767px) {
+                width: 4rem;
+                height: 1.2rem;
+            }
+        }
 
-		@media (any-hover: hover) {
-			&:hover {
-				svg {
-					fill: var(--red);
-				}
-			}
-		}
-	}
+        @media (any-hover: hover) {
+            &:hover {
+                svg {
+                    fill: var(--red);
+                }
+            }
+        }
+    }
 
-	&__prev {
-		margin-right: 3.5rem;
+    &__prev {
+        margin-right: 3.5rem;
 
-		@media (max-width: 767px) {
-			margin-right: 2rem;
-		}
-	}
+        @media (max-width: 767px) {
+            margin-right: 2rem;
+        }
+    }
 
-	// .pagination__next
+    // .pagination__next
 
-	&__next {
-		margin-left: 3.5rem;
+    &__next {
+        margin-left: 3.5rem;
 
-		@media (max-width: 767px) {
-			margin-left: 2rem;
-		}
-	}
+        @media (max-width: 767px) {
+            margin-left: 2rem;
+        }
+    }
 }

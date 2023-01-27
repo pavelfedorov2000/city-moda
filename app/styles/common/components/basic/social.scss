@@ -7,18 +7,14 @@
         flex-shrink: 0;
 
         svg {
-            rect {
-                fill: var(--dark);
-                transition: $transition fill;
-            }
+            fill: var(--dark);
+            transition: $transition fill;
         }
 
         @media (any-hover: hover) {
             &:hover {
                 svg {
-                    rect {
-                        fill: var(--red);
-                    }
+                    fill: var(--red);
                 }
             }
         }

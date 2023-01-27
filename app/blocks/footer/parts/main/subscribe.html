@@ -1,20 +1,22 @@
-<div id="subscribe-form" class="footer__subscribe">
-	<div class="footer__col-title">
-		Узнайте первыми<br>
-		о новинках и скидках
-	</div>
-	<form action="#" class="subscribe-form">
-		<div class="form-row subscribe-form__wrap">
-			<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email">
-			<button class="form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
-		</div>
-		<label class="form-agree">
-			<input class="check-box" name="user_agree" type="checkbox">
-			<span class="check-style"></span>
-			<span class="check-text">
-				Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
-			</span>
-		</label>
-		<!-- <div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div> -->
-	</form>
+<div id="subscribe-form"
+     class="footer__subscribe">
+    <div class="footer__col-title">
+        Узнайте первыми<br>
+        о новинках и скидках
+    </div>
+    <form action="#"
+          class="subscribe-form">
+        @@include('blocks/subscribe-form/subscribe-form.html', {
+        "inputType": "email",
+        "inputName": "email",
+        "placeholder": "Введите ваш Email",
+        "ariaLabel": "Подписаться на рассылку"
+        })
+        @@include('blocks/checkbox/checkbox.html', {
+        "class": "form-agree",
+        "name": "userAgree",
+        "text": "Я принимаю <a href='#'>Пользовательское соглашение</a> о конфиденциальности"
+        })
+        <!-- <div class="form-success subscribe-form__success">Спасибо! Письмо уже на Вашей почте</div> -->
+    </form>
 </div>

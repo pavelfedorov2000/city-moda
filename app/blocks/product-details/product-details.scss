@@ -1,176 +1,101 @@
 .product-details {
-	// .product-details__section
+    // .product-details__section
 
-	&__section {
-		&:not(:last-child) {
-			margin-bottom: 3rem;
-		}
-	}
+    &__section {
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+    }
 
-	// .product-details__section-top
+    // .product-details__section-title
 
-	&__section-top {
-		@extend %flex-row-center;
-		padding-bottom: 1rem;
-		border-bottom: 0.1rem solid var(--line-color);
-	}
+    &__section-title {
+        @extend %flex-row-center;
+        @include padding-y(1rem);
+        border-bottom: 0.1rem solid var(--line-color);
+        @extend %text-16;
+        font-weight: 600;
 
-	// .product-details__section-title
+        @media (max-width: 500px) {
+            font-size: 1.4rem;
+            line-height: 2.1rem;
+        }
+    }
 
-	&__section-title {
-		@extend %text-16;
-		font-weight: 600;
+    // .product-details__hide-btn
 
-		@media (max-width: 500px) {
-			font-size: 1.4rem;
-			line-height: 2.1rem;
-		}
-	}
+    &__hide-btn {
+        position: relative;
+        @extend %text-13;
+        padding-right: 2.5rem;
+        text-transform: lowercase;
+        white-space: nowrap;
+        transition: $transition color;
 
-	// .product-details__hide-btn
+        @media (max-width: 500px) {
+            padding-right: 2rem;
+        }
 
-	&__hide-btn {
-		position: relative;
-		@extend %text-13;
-		padding-right: 2.5rem;
-		text-transform: lowercase;
-		white-space: nowrap;
-		transition: $transition color;
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0.2rem;
+            right: 0;
+            width: 1.4rem;
+            height: 1.5rem;
+            background-image: url(../images/icons/drop.svg);
+            @extend %bg-contain;
+            transition: $transition transform;
+        }
 
-		@media (max-width: 500px) {
-			padding-right: 2rem;
-		}
+        &[aria-expanded="true"] {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+    }
 
-		&:after {
-			content: '';
-			position: absolute;
-			top: 0.2rem;
-			right: 0;
-			width: 1.4rem;
-			height: 1.5rem;
-			background-image: url(../images/icons/drop.svg);
-			@extend %bg-contain;
-			transition: $transition transform;
-		}
+    // .product-details__list-item
 
-		&[aria-expanded="true"] {
-			&:after {
-				transform: rotate(180deg);
-			}
-		}
-	}
+    &__list-item {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        @include padding-y(0.6rem);
+        border-bottom: 0.1rem dashed var(--line-color);
 
-	// .product-details__list-item
+        @media (max-width: 1024px) {
+            font-size: 1.3rem;
+            line-height: 1.9rem;
+        }
 
-	&__list-item {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		align-items: center;
-		padding: 0.6rem 0;
-		border-bottom: 0.1rem dashed var(--line-color);
+        @media (max-width: 500px) {
+            grid-template-columns: 60% 40%;
+            gap: 2rem;
+        }
 
-		@media (max-width: 1024px) {
-			font-size: 1.3rem;
-			line-height: 1.9rem;
-		}
+        dt {
+            @extend %vertical-align;
+        }
 
-		@media (max-width: 500px) {
-			grid-template-columns: 60% 40%;
-			gap: 2rem;
-		}
+        dd {
+            font-weight: 600;
+        }
 
-		dt {
-			@extend %vertical-align;
-		}
+        p {
+            max-width: 26.7rem;
+        }
+    }
 
-		dd {
-			font-weight: 600;
-		}
+    // .product-details__icons-list
 
-		p {
-			max-width: 26.7rem;
-		}
-	}
+    &__icons-list {
+        display: flex;
+        gap: 1.1rem;
 
-	// .product-details__icons-list
-
-	&__icons-list {
-		display: flex;
-		gap: 1.1rem;
-
-		img {
-			width: 3.3rem;
-			height: 2.7rem;
-		}
-	}
-}
-
-.tooltip {
-	position: relative;
-	margin-left: 0.6rem;
-	flex-shrink: 0;
-	// .tooltip__btn
-
-	&__btn {
-		@extend %vertical-align;
-
-		svg {
-			width: 1.7rem;
-			height: 2.1rem;
-
-			path {
-				&:nth-child(1) {
-					transition: $transition stroke;
-				}
-			}
-
-			path {
-				&:nth-child(2) {
-					transition: $transition fill;
-				}
-			}
-		}
-
-		@media (any-hover: hover) {
-			&:hover {
-				path {
-					&:nth-child(1) {
-						stroke: var(--dark);
-					}
-
-					&:nth-child(2) {
-						fill: var(--dark);
-					}
-				}
-			}
-		}
-	}
-
-	// .tooltip__content
-
-	&__content {
-		display: none;
-		position: absolute;
-		top: 0;
-		left: calc(100% + 0.7rem);
-		z-index: 25;
-		width: 19.8rem;
-		padding: 1rem;
-		background-color: #fff;
-		border: 0.1rem solid var(--line-color);
-		box-sizing: border-box;
-		box-shadow: 0rem 0.1rem 2.8rem rgba(0, 0, 0, 0.07);
-		border-radius: 0.4rem;
-		font-weight: 500;
-		@extend %text-10;
-
-		@media (min-width: 1025px) {
-			font-size: 10px;
-			line-height: 15px;
-		}
-
-		@media (max-width: 500px) {
-			width: 14rem;
-		}
-	}
+        img {
+            width: 3.3rem;
+            height: 2.7rem;
+        }
+    }
 }

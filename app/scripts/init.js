@@ -18,8 +18,10 @@
         app.otherNews.init();
         app.blogTextSlider.init();
         app.catalogCard.init();
+        app.catalogFilters.init();
         app.asideFilters.init();
         app.productCard.init();
+        app.counter.init();
         app.productPopup.init();
         app.productDetails.init();
         app.popup.init();
@@ -31,5 +33,7 @@
         app.pickupFilters.init();
         app.basketTotal.init();
         app.pageNav.init();
+        app.scrollLink.init();
+        app.tooltip.init();
     });
 })(jQuery)

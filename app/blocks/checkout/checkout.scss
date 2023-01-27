@@ -133,26 +133,22 @@
         border-color: var(--green);
     }
 
-    .radio-style {
-        position: relative;
-        width: 2.4rem;
-        height: 2.4rem;
-        border-radius: 50%;
-        flex-shrink: 0;
-        border: 0.1rem solid var(--gray-c0);
-    }
+    .radio {
+        &-style {
+            width: 2.4rem;
+            height: 2.4rem;
+        }
 
-    .radio-box:checked + .radio-style {
-        border-color: var(--green);
+        &-box:checked + .radio-style {
+            border-color: var(--green);
 
-        &:before {
-            content: '';
-            position: absolute;
-            @extend %pos-center-xy;
-            width: 1rem;
-            height: 1rem;
-            border-radius: 50%;
-            background-color: var(--green);
+            &:before {
+                width: 1rem;
+                height: 1rem;
+                border-radius: 50%;
+                background-color: var(--green);
+                background-image: none;
+            }
         }
     }
 

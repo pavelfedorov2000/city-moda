@@ -1,0 +1,49 @@
+.catalog-filter {
+    &__title {
+        padding-right: 1.9rem;
+        position: relative;
+        cursor: pointer;
+
+        @media (max-width: 1024px) {
+            width: 100%;
+            padding: 2rem 0;
+            border-bottom: 0.1rem solid #efefef;
+            font-size: 1.5rem;
+            line-height: 2.2rem;
+        }
+
+        span {
+            &:not(:first-child) {
+                font-weight: 600;
+            }
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0.35rem;
+            right: 0;
+            width: 1.4rem;
+            height: 1.4rem;
+            background-image: url(../images/icons/drop-arr-black.svg);
+            @extend %bg-contain;
+            transition: $transition transform;
+
+            @media (max-width: 1024px) {
+                top: 2.35rem;
+                transform: rotate(-90deg);
+                background-image: url(../images/icons/drop-arr.svg);
+            }
+        }
+
+        &.active {
+            &:after {
+                transform: rotate(180deg);
+            }
+        }
+
+        &--bold {
+            font-weight: 600;
+        }
+    }
+}

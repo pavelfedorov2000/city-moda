@@ -1,0 +1,35 @@
+<fieldset class="catalog-filters__item catalog-filter catalog-filters__item--details">
+    @@include('blocks/catalog-filter/title.html', {"title": "Детали"})
+    <div class="catalog-filter__drop catalog-drop-filter">
+        <div class="catalog-drop-filter__inner">
+            <div class="catalog-drop-filter__body">
+                <div class="catalog-drop-filter__title">Выберите детали</div>
+                <div class="catalog-drop-filter__items">
+                    @@loop('blocks/checkbox/checkbox.html', [{
+                    "class": "catalog-drop-filter__item",
+                    "text": "аппликация"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "бант"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "баска"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "бахрома"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "бисер/кристаллы/камни/стразы"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "воланы/рюши"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "вышивка"
+                    }])
+                </div>
+            </div>
+        </div>
+        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+    </div>
+</fieldset>

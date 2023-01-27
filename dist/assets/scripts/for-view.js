@@ -153,20 +153,5 @@ $(function () {
         $brandsIndexListItem.removeClass('active');
         $('.brands-alphabet__item').css('display', 'flex');
     });
-
-    $('.input input').on('focus', function () {
-        const $input = $(this);
-        const $inputLabel = $input.closest('.input-label').find('.input__label');
-
-        $inputLabel.addClass('focus');
-    });
-    $('.input input').on('focusout', function () {
-        const $input = $(this);
-        const $inputLabel = $input.closest('.input-label').find('.input__label');
-
-        if ($input.val() === '') {
-            $inputLabel.removeClass('focus');
-        }
-    });
 });
 

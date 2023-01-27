@@ -7,10 +7,10 @@
 
     &__list {
         display: grid;
-        gap: 3rem 8.2rem;
+        gap: 1.5rem 8.2rem;
 
         @media (max-width: 1024px) {
-            gap: 3rem;
+            column-gap: 3rem;
         }
 
         @media (min-width: 501px) {

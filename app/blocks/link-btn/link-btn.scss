@@ -1,0 +1,13 @@
+.link-btn {
+    @extend %text-13;
+    color: var(--gray-777);
+    text-decoration: underline;
+    text-align: left;
+    transition: $transition color;
+
+    @media (any-hover: hover) {
+        &:hover {
+            color: var(--dark);
+        }
+    }
+}

@@ -48,16 +48,9 @@
 
         &:checked {
             & + .radio-style {
-                border-color: #101112;
-
-                &:after {
-                    content: '';
-                    position: absolute;
-                    @extend %pos-center-xy;
+                &:before {
                     width: 0.9rem;
                     height: 0.6rem;
-                    background-image: url(../images/icons/check.svg);
-                    @extend %bg-contain;
                 }
             }
         }
@@ -71,15 +64,6 @@
 
         &:not(:last-child) {
             margin-bottom: 1.4rem;
-        }
-
-        .radio-style {
-            position: relative;
-            width: 1.6rem;
-            height: 1.6rem;
-            border-radius: 50%;
-            flex-shrink: 0;
-            border: 0.1rem solid var(--gray-c0);
         }
     }
 

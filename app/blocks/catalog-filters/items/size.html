@@ -1,0 +1,30 @@
+<fieldset class="catalog-filters__item catalog-filter catalog-filters__item--size">
+    @@include('blocks/catalog-filter/title.html', {"title": "Размер"})
+    <div class="catalog-filter__drop catalog-drop-filter">
+        <div class="catalog-drop-filter__inner">
+            <div class="catalog-drop-filter__title">Ваш Российский размер</div>
+            <div class="catalog-drop-filter__items">
+                @@loop('blocks/checkbox/checkbox.html', [{
+                "class": "catalog-drop-filter__item",
+                "text": "42"
+                }, {
+                "class": "catalog-drop-filter__item",
+                "text": "44"
+                }, {
+                "class": "catalog-drop-filter__item",
+                "text": "46"
+                }, {
+                "class": "catalog-drop-filter__item",
+                "text": "48"
+                }, {
+                "class": "catalog-drop-filter__item",
+                "text": "50"
+                }, {
+                "class": "catalog-drop-filter__item",
+                "text": "52"
+                }])
+            </div>
+        </div>
+        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+    </div>
+</fieldset>

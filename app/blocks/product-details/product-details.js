@@ -8,7 +8,7 @@ app.productDetails = {
 
         $('.product-details__hide-btn').on('click', function () {
             const $productDetailsHideBtn = $(this);
-            const $productDetailsContent = $productDetailsHideBtn.closest('.product-details__section-top').next();
+            const $productDetailsContent = $productDetailsHideBtn.closest('.product-details__section-title').next();
 
             if ($productDetailsHideBtn.attr('aria-expanded') === 'false') {
                 $productDetailsHideBtn.attr('aria-expanded', true);
@@ -19,14 +19,6 @@ app.productDetails = {
                 $productDetailsHideBtn.text(productDetailsButtonTextMap.get(false));
                 $productDetailsContent.slideUp();
             }
-        });
-
-        $('.tooltip__btn').hover(function () {
-            const $tooltipBtn = $(this);
-            const $tooltip = $tooltipBtn.closest('.tooltip');
-            const $tooltipContent = $tooltip.find('.tooltip__content');
-
-            $tooltipContent.fadeToggle('slow');
         });
     },
 };

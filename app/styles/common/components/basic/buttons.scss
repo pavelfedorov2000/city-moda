@@ -107,27 +107,3 @@ a {
     font-style: italic;
     text-decoration: underline;
 }
-
-.scroll-link {
-    transition: $transition color;
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--gray);
-        }
-    }
-}
-
-.link-btn {
-    @extend %text-13;
-    color: #777;
-    text-decoration: underline;
-    text-align: left;
-    transition: $transition color;
-
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--dark);
-        }
-    }
-}

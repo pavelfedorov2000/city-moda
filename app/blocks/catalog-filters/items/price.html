@@ -1,0 +1,13 @@
+<fieldset class="catalog-filters__item catalog-filter">
+    <legend class="catalog-filter__title">
+        <span>Цена:</span>
+        <span class="filter-output"
+              id="price_from"></span>
+        <span class="filter-output"
+              id="price_to"></span>
+    </legend>
+    <div class="catalog-filter__drop catalog-drop-filter">
+        @@include('blocks/price-range/price-range.html')
+        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+    </div>
+</fieldset>

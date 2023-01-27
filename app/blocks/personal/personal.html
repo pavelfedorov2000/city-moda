@@ -1,71 +1,98 @@
-<form action="#" class="profile-personal profile-page__form">
-	<div class="profile-personal__item">
-		<div class="profile-personal__item-title">Личные данные</div>
-		<div class="profile-personal__row">
-			<div class="profile-personal__fields">
-				<label class="input input-label">
-					<span class="input__label focus">Имя*</span>
-					<input value="Иванка" name="name" readonly>
-				</label>
-				<label class="input input-label">
-					<span class="input__label focus">Фамилия</span>
-					<input value="Иванова" name="surname" readonly>
-				</label>
-			</div>
-			<a href="#personal-change" class="link-btn" data-fancybox>Изменить личные
-				данные</a>
-		</div>
-		<div class="profile-personal__row">
-			<div class="profile-personal__fields">
-				<div class="profile-personal__row-field profile-personal__gender">
-					<div class="profile-personal__field-title">Пол</div>
-					<div class="profile-personal__gender-radios">
-						<label class="profile-personal__gender-radio">
-							<input class="radio-box" type="radio" name="gender" checked>
-							<span class="radio-style">
-								<span class="radio-text">Женский</span>
-							</span>
-						</label>
-						<label class="profile-personal__gender-radio">
-							<input class="radio-box" type="radio" name="gender">
-							<span class="radio-style">
-								<span class="radio-text">Мужской</span>
-							</span>
-						</label>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	<div class="profile-personal__item">
-		<div class="profile-personal__item-title">Контактные данные</div>
-		<div class="profile-personal__row">
-			<div class="profile-personal__fields">
-				<label class="input input-label">
-					<span class="input__label focus">Ваш телефон</span>
-					<input value="+7 (999) 999-99-99 " name="phone" type="tel" readonly>
-				</label>
-			</div>
-			<a href="#phone-change" class="link-btn" data-fancybox>Изменить номер телефона</a>
-		</div>
-		<div class="profile-personal__row">
-			<div class="profile-personal__fields">
-				<label class="input input-label">
-					<span class="input__label focus">Ваш e-mail</span>
-					<input value="post@mail.ru" name="email" type="email" readonly>
-				</label>
-			</div>
-			<a href="#email-change" class="link-btn" data-fancybox>Изменить email</a>
-		</div>
-	</div>
-	<div class="profile-personal__item">
-		<div class="profile-personal__row">
-			<div class="profile-personal__item-title">Безопасность: пароль</div>
-			<a data-fancybox href="#password-change" class="link-btn">Изменить
-				пароль</a>
-		</div>
-	</div>
-	<!-- <button class="btn profile-personal__btn" type="submit">
-		Сохранить изменения
-	</button> -->
+<form action="#"
+      class="profile-personal profile-page__form">
+    <div class="profile-personal__item">
+        <div class="profile-personal__item-title">Личные данные</div>
+        <div class="profile-personal__row">
+            <div class="profile-personal__fields">
+                <label class="input input-label">
+                    <input value="Иванка"
+                           name="USER_NAME"
+                           readonly
+                           placeholder="Имя">
+                    <span class="input__label">Имя*</span>
+                </label>
+                <label class="input input-label">
+                    <input value="Иванова"
+                           name="USER_SURNAME"
+                           readonly
+                           placeholder="Фамилия">
+                    <span class="input__label">Фамилия</span>
+                </label>
+            </div>
+            @@include('blocks/link-btn/link-btn.html', {
+            "popup": "personal-change",
+            "text": "Изменить личные данные"
+            })
+        </div>
+        <div class="profile-personal__row">
+            <div class="profile-personal__fields">
+                <div class="profile-personal__row-field profile-personal__gender">
+                    <div class="profile-personal__field-title">Пол</div>
+                    <div class="profile-personal__gender-radios">
+                        <label class="profile-personal__gender-radio">
+                            <input class="radio-box"
+                                   type="radio"
+                                   name="gender"
+                                   checked>
+                            <span class="radio-style">
+                                <span class="radio-text">Женский</span>
+                            </span>
+                        </label>
+                        <label class="profile-personal__gender-radio">
+                            <input class="radio-box"
+                                   type="radio"
+                                   name="gender">
+                            <span class="radio-style">
+                                <span class="radio-text">Мужской</span>
+                            </span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="profile-personal__item">
+        <div class="profile-personal__item-title">Контактные данные</div>
+        <div class="profile-personal__row">
+            <div class="profile-personal__fields">
+                <label class="input input-label">
+                    <input value="+7 (999) 999-99-99 "
+                           name="USER_PHONE"
+                           type="tel"
+                           readonly
+                           placeholder="Ваш телефон">
+                    <span class="input__label">Ваш телефон</span>
+                </label>
+            </div>
+            @@include('blocks/link-btn/link-btn.html', {
+            "popup": "phone-change",
+            "text": "Изменить номер телефона"
+            })
+        </div>
+        <div class="profile-personal__row">
+            <div class="profile-personal__fields">
+                <label class="input input-label">
+                    <input value="post@mail.ru"
+                           name="USER_EMAIL"
+                           type="email"
+                           readonly
+                           placeholder="E-mail">
+                    <span class="input__label">Ваш e-mail</span>
+                </label>
+            </div>
+            @@include('blocks/link-btn/link-btn.html', {
+            "popup": "email-change",
+            "text": "Изменить email"
+            })
+        </div>
+    </div>
+    <div class="profile-personal__item">
+        <div class="profile-personal__row">
+            <div class="profile-personal__item-title">Безопасность: пароль</div>
+            @@include('blocks/link-btn/link-btn.html', {
+            "popup": "password-change",
+            "text": "Изменить пароль"
+            })
+        </div>
+    </div>
 </form>

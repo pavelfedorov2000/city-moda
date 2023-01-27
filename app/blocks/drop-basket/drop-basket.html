@@ -1,45 +1,51 @@
-<div id="cart" class="aside-popup drop-basket aside-popup--basket">
-	@@include('blocks/aside-popup/aside-popup__close.html', {
-	"ariaLabel": "Закрыть корзину быстрого просмотра"
-	})
-	<div class="drop-basket__body">
-		<div class="drop-basket__inner">
-			<div class="aside-popup__title@@if(context.isEmpty){ drop-basket__title}">Ваша корзина</div>
-			@@if(!context.isEmpty){
-			<div class="drop-basket__products">
-				@@loop('blocks/basket-product/basket-product.html', [{
-				"class": "drop-basket__product",
-				"title": "Пальто LORIATA Wander Yellow",
-				"src": "assets/images/content/basket-product-01",
-				"oldPrice": "47 800 ₽",
-				"newPrice": "38 240 ₽",
-				}, {
-				"class": "drop-basket__product",
-				"title": "Пальто LORIATA Wander Yellow",
-				"src": "assets/images/content/basket-product-02",
-				"price": "4 300",
-				}])
-			</div>
-			<div class="drop-basket__total">
-				<div class="drop-basket__total-title">Товаров на сумму</div>
-				<div class="drop-basket__total-sum">42 540 ₽</div>
-			</div>
-			}
-			@@if(context.isEmpty){
-			<div class="drop-basket__empty">
-				Вы еще не добавили товары в корзину
-			</div>
-			}
-		</div>
-		<a href="#" class="drop-basket__btn btn">
-			<span class="btn__text">
-				@@if(!context.isEmpty){Оформить заказ}
-				@@if(context.isEmpty){Продолжить покупки}
-			</span>
-			<svg class="btn__arrow" viewBox="0 0 56 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-				<path fill-rule="evenodd" clip-rule="evenodd"
-					d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" />
-			</svg>
-		</a>
-	</div>
+<div id="cart"
+     class="aside-popup drop-basket aside-popup--basket">
+    @@include('blocks/aside-popup/close.html', {
+    "ariaLabel": "Закрыть корзину быстрого просмотра"
+    })
+    <div class="drop-basket__body">
+        <div class="drop-basket__inner">
+            <div class="aside-popup__title@@if(context.isEmpty){ drop-basket__title}">Ваша корзина</div>
+            @@if(!context.isEmpty){
+            <div class="drop-basket__products">
+                @@loop('blocks/basket-product/basket-product.html', [{
+                "class": "drop-basket__product",
+                "title": "Пальто LORIATA Wander Yellow",
+                "src": "assets/images/content/basket-product-01",
+                "oldPrice": "47 800 ₽",
+                "newPrice": "38 240 ₽",
+                }, {
+                "class": "drop-basket__product",
+                "title": "Пальто LORIATA Wander Yellow",
+                "src": "assets/images/content/basket-product-02",
+                "price": "4 300",
+                }])
+            </div>
+            <div class="drop-basket__total">
+                <div class="drop-basket__total-title">Товаров на сумму</div>
+                <div class="drop-basket__total-sum">42 540 ₽</div>
+            </div>
+            }
+            @@if(context.isEmpty){
+            <div class="drop-basket__empty">
+                Вы еще не добавили товары в корзину
+            </div>
+            }
+        </div>
+        <a href="#"
+           class="drop-basket__btn btn">
+            <span class="btn__text">
+                @@if(!context.isEmpty){Оформить заказ}
+                @@if(context.isEmpty){Продолжить покупки}
+            </span>
+            <svg class="btn__arrow"
+                 viewBox="0 0 56 16"
+                 fill="none"
+                 xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M55.7071 8.70711C56.0976 8.31658 56.0976 7.68342 55.7071 7.29289L49.3431 0.928932C48.9526 0.538408 48.3195 0.538408 47.9289 0.928932C47.5384 1.31946 47.5384 1.95262 47.9289 2.34315L53.5858 8L47.9289 13.6569C47.5384 14.0474 47.5384 14.6805 47.9289 15.0711C48.3195 15.4616 48.9526 15.4616 49.3431 15.0711L55.7071 8.70711ZM0 9H55V7H0V9Z" />
+            </svg>
+        </a>
+    </div>
 </div>

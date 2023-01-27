@@ -9,13 +9,10 @@
 			</div>
 		</div>
 		<div class="aside-popup__form-wrap">
-			<label class="form-agree">
-				<input class="check-box" type="checkbox">
-				<span class="check-style"></span>
-				<span class="check-text">
-					Запомнить меня
-				</span>
-			</label>
+            @@include('blocks/checkbox/checkbox.html', {
+            "class": "form-agree",
+            "text": "Запомнить меня"
+            })
 			<button class="remind-password" type="button">
 				Напомнить пароль
 			</button>

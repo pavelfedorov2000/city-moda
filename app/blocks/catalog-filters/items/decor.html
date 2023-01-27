@@ -1,0 +1,38 @@
+<fieldset class="catalog-filters__item catalog-filters__items__item--decor">
+    @@include('blocks/catalog-filter/title.html', {"title": "Узор"})
+    <div class="catalog-filters__item-drop catalog-drop-filter">
+        <div class="catalog-drop-filter__inner">
+            <div class="catalog-drop-filter__body">
+                <div class="catalog-drop-filter__title">Выберите узор</div>
+                <div class="catalog-drop-filter__items">
+                    @@loop('blocks/checkbox/checkbox.html', [{
+                    "class": "catalog-drop-filter__item",
+                    "text": "геометрия"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "горох"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "другое"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "животное"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "камуфляж"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "клетка"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "леопардовый"
+                    }, {
+                    "class": "catalog-drop-filter__item",
+                    "text": "леопардовый"
+                    }])
+                </div>
+            </div>
+        </div>
+        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+    </div>
+</fieldset>

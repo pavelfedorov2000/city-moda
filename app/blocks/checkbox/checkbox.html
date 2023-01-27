@@ -1,0 +1,13 @@
+<label class="@@class">
+    <input class="check-box"
+           @@if(context.name){name="@@name"
+           }
+           type="checkbox"
+           @@if(context.isChecked){checked}>
+    <span class="check-style"></span>
+    @@if(context.color){
+    <span class="check-color"
+          style="background: @@color;"></span>
+    }
+    <span class="check-text">@@text</span>
+</label>

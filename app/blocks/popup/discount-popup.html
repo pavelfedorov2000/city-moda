@@ -1,34 +1,40 @@
 <!-- Попап арим скидку (появляется спустя 2 минуты пребывания на сайте) -->
-<div style="display: none;" id="discount-popup" class="popup mini-popup">
-	<div class="mini-popup__inner">
-		<div class="mini-popup__img">
-			<picture>
-				<source type="image/webp" data-srcset="assets/images/content/popups/sale-bags.webp"
-					srcset="assets/images/src.webp">
-				<img class="lazy" data-src="assets/images/content/popups/sale-bags.jpg" src="assets/images/src.jpg"
-					alt="фото">
-			</picture>
-		</div>
-		<div class="mini-popup__content">
-			<div class="mini-popup__title">Дарим скидку 10%</div>
-			<div class="mini-popup__subtitle">
-				за подписку
-				на наши новости и акции
-			</div>
-			<form action="#" class="subscribe-form">
-				<div class="form-row subscribe-form__wrap">
-					<input class="form-row__input" type="email" name="email" placeholder="Введите ваш Email">
-					<button class="btn form-row__btn" type="submit" aria-label="Подписаться на рассылку"></button>
-				</div>
-				<label class="form-agree">
-					<input class="check-box" name="user_agree" type="checkbox">
-					<span class="check-style"></span>
-					<span class="check-text">
-						Я принимаю <a href="#">Пользовательское соглашение</a> о конфиденциальности
-					</span>
-				</label>
-			</form>
-		</div>
-	</div>
+<div style="display: none;"
+     id="discount-popup"
+     class="popup mini-popup">
+    <div class="mini-popup__inner">
+        <div class="mini-popup__img">
+            <picture>
+                <source type="image/webp"
+                        data-srcset="assets/images/content/popups/sale-bags.webp"
+                        srcset="assets/images/src.webp">
+                <img class="lazy"
+                     data-src="assets/images/content/popups/sale-bags.jpg"
+                     src="assets/images/src.jpg"
+                     alt="фото">
+            </picture>
+        </div>
+        <div class="mini-popup__content">
+            <div class="mini-popup__title">Дарим скидку 10%</div>
+            <div class="mini-popup__subtitle">
+                за подписку
+                на наши новости и акции
+            </div>
+            <form action="#"
+                  class="subscribe-form">
+                @@include('blocks/subscribe-form/subscribe-form.html', {
+                "inputType": "email",
+                "inputName": "email",
+                "placeholder": "Введите ваш Email",
+                "ariaLabel": "Подписаться на рассылку"
+                })
+                @@include('blocks/checkbox/checkbox.html', {
+                "class": "form-agree",
+                "name": "userAgree",
+                "text": "Я принимаю <a href='#'>Пользовательское соглашение</a> о конфиденциальности"
+                })
+            </form>
+        </div>
+    </div>
 </div>
 <!-- End Попап арим скидку -->
