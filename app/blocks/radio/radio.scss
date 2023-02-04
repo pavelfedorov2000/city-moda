@@ -1,68 +1,120 @@
 // ===================== RADIO ===================== //
 .radio {
-    $this: &;
+	$this: &;
 
-    &-box {
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        position: absolute;
-        clip: rect(0 0 0 0);
+	&-box {
+		width: 1px;
+		height: 1px;
+		overflow: hidden;
+		position: absolute;
+		clip: rect(0 0 0 0);
 
-        &:checked ~ #{$this}-style {
-            border-color: var(--dark);
+		&:checked~#{$this}-style {
+			border-color: var(--dark);
 
-            &:before {
-                content: '';
-                width: 0.9rem;
-                height: 0.7rem;
-                position: absolute;
-                @extend %pos-center-xy;
-                background-image: url(../images/icons/check.svg);
-                @extend %bg-contain;
-            }
-        }
-    }
+			&:before {
+				content: '';
+				width: 0.9rem;
+				height: 0.7rem;
+				position: absolute;
+				@extend %pos-center-xy;
+				background-image: url(../images/icons/check.svg);
+				@extend %bg-contain;
+			}
+		}
+	}
 
-    &-style {
-        position: relative;
-        width: 1.6rem;
-        height: 1.6rem;
-        flex-shrink: 0;
-        border-radius: 50%;
-        border: 0.1rem solid var(--gray-c0);
-    }
+	&-style {
+		position: relative;
+		width: 1.6rem;
+		height: 1.6rem;
+		flex-shrink: 0;
+		border-radius: 50%;
+		border: 0.1rem solid var(--gray-c0);
+	}
 
-    &--type {
-        &_color {
-            #{$this} {
-                &-style {
-                    @extend %flex-center;
-                    width: 3rem;
-                    height: 3rem;
-                    border-radius: 50%;
-                    border-width: 0;
-                    border-style: solid;
+	&-text {
+		transition: $transition;
+		transition-property: background-color, color;
+	}
 
-                    &--checked {
-                        border-width: 0.1rem;
-                    }
+	&--type {
+		&_size {
+			#{$this} {
+				&-text {
+					@extend %flex-center;
+					width: 3.5rem;
+					height: 3.5rem;
+					text-align: center;
+					border: 0.1rem solid var(--dark);
+					cursor: pointer;
 
-                    span {
-                        width: 2.2rem;
-                        height: 2.2rem;
-                        border-radius: 50%;
-                    }
-                }
+					@media (any-hover: hover) {
+						&:hover {
+							background-color: var(--dark);
+							color: #fff;
+						}
+					}
+				}
 
-                &-box {
-                    &:checked ~ #{$this}-style {
-                        &:before {
-                            display: none;
-                        }
-                    }
-                }
-            }
-        }
-    }
+				&-box {
+					&:checked+#{$this}-text {
+						background-color: var(--dark);
+						color: #fff;
+					}
+
+					&:disabled {
+						&+#{$this}-text {
+							position: relative;
+							color: var(--gray);
+							border-color: var(--gray);
+							cursor: not-allowed;
+
+							&:before {
+								content: '';
+								position: absolute;
+								top: -0.7rem;
+								left: 1.6rem;
+								width: 0.1rem;
+								height: 4.735rem;
+								background-color: var(--gray);
+								transform: rotate(-45deg);
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&_color {
+			#{$this} {
+				&-style {
+					@extend %flex-center;
+					width: 3rem;
+					height: 3rem;
+					border-radius: 50%;
+					border-width: 0;
+					border-style: solid;
+
+					&--checked {
+						border-width: 0.1rem;
+					}
+
+					span {
+						width: 2.2rem;
+						height: 2.2rem;
+						border-radius: 50%;
+					}
+				}
+
+				&-box {
+					&:checked~#{$this}-style {
+						&:before {
+							display: none;
+						}
+					}
+				}
+			}
+		}
+	}
 }

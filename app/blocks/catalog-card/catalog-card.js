@@ -23,31 +23,32 @@ app.catalogCard = {
         $('.catalog-view__btn').on('click', function () {
             const $catalogViewBtn = $(this);
             const $catalogViewBtnNotActive = $catalogViewBtn.siblings();
+            const $catalogList = $('.catalog-list');
 
             $catalogViewBtnNotActive.removeClass('active');
             $catalogViewBtn.addClass('active');
 
             if ($('.col-btn').hasClass('active')) {
-                $('.catalog__cards').addClass('catalog__cards--two-cols');
+                $catalogList.addClass('catalog-list--two-cols');
             } else {
-                $('.catalog__cards').removeClass('catalog__cards--two-cols');
+                $catalogList.removeClass('catalog-list--two-cols');
             }
 
             if ($('.row-btn').hasClass('active')) {
-                $('.catalog__cards').addClass('catalog__cards--row');
+                $catalogList.addClass('catalog-list--row');
             } else {
-                $('.catalog__cards').removeClass('catalog__cards--row');
+                $catalogList.removeClass('catalog-list--row');
             }
         });
 
         if ($(window).width() < 768) {
-            $('.catalog__cards').addClass('catalog__cards--two-cols');
+            $('.catalog-list').addClass('catalog-list--two-cols');
             $('.col-btn').addClass('active');
         }
 
         $(window).resize(function () {
             if ($(window).width() < 768) {
-                $('.catalog__cards').addClass('catalog__cards--two-cols');
+                $('.catalog-list').addClass('catalog-list--two-cols');
                 $('.col-btn').addClass('active');
             }
         });

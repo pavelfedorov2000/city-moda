@@ -6,8 +6,13 @@ app.popup = {
             const $regionHeaderValue = $(this);
             const $regionHeaderDrop = $regionHeaderValue.next();
 
-            $regionHeaderValue.toggleClass('active');
-            $regionHeaderDrop.slideToggle();
+            if ($regionHeaderValue.attr('aria-expanded') === 'false') {
+                $regionHeaderValue.attr('aria-expanded', true);
+                $regionHeaderDrop.slideDown();
+            } else {
+                $regionHeaderValue.attr('aria-expanded', false);
+                $regionHeaderDrop.slideUp();
+            }
         });
 
         $('.region-header__drop-item').on('click', function () {
@@ -17,7 +22,7 @@ app.popup = {
             const $regionHeaderDrop = $regionHeaderDropItem.parent();
             const $regionHeaderValue = $regionHeaderDrop.prev();
 
-            $regionHeaderValue.removeClass('active');
+            $regionHeaderValue.attr('aria-expanded', false);
             $regionHeaderValue.text(regionHeaderDropItemText);
             $regionHeaderDropItemNotActive.removeClass('active');
             $regionHeaderDropItem.addClass('active');

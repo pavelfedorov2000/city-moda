@@ -9,7 +9,8 @@ app.asideFilters = {
         // Аккордеон
         $('.aside-filters__item-drop').on('click', function () {
             const $asideFiltersItemDrop = $(this);
-            const $asideFiltersItemContent = $asideFiltersItemDrop.closest('.aside-filters__item').find('.aside-filters__sublist');
+            const $closestListItem = $asideFiltersItemDrop.closest('li');
+            const $asideFiltersItemContent = $closestListItem.hasClass('aside-filters__item') ? $asideFiltersItemDrop.closest('li').find('ul').first() : $asideFiltersItemDrop.closest('li').next();
 
             if ($asideFiltersItemDrop.attr('aria-expanded') === 'false') {
                 $asideFiltersItemDrop.attr('aria-expanded', true);

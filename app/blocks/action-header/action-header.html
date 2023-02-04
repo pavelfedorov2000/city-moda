@@ -1,0 +1,19 @@
+<@@if(!context.dataPopup){a}@@if(context.dataPopup){button type="button" aria-expanded="false" data-popup="@@dataPopup"
+	} class="action-header@@if(context.class){ @@class}" @@if(!context.dataPopup){href="@@if(!context.tel){#}@@if(context.tel){@@tel}"}>
+	@@if(context.searchShops){
+	@@include('blocks/icons/pin.html')
+	}
+    @@if(context.tel){
+        @@include('blocks/icons/phone.html')
+    }
+    @@if(context.user){
+    @@include('blocks/icons/user.html')
+    }
+    @@if(context.favorite){
+    @@include('blocks/icons/favorite.html')
+    }
+    @@if(context.cart){
+    @@include('blocks/icons/cart.html')
+    }
+	<span>@@text@@if(context.quantity){ <span class="action-header__num">(@@quantity)</span>}</span>
+</@@if(!context.dataPopup){a}@@if(context.dataPopup){button}>

@@ -1,0 +1,10 @@
+.contacts-header {
+	display: flex;
+	align-items: center;
+	gap: 0.6rem;
+
+	&__call-link {
+		@extend .action-header;
+		color: var(--dark-gray);
+	}
+}

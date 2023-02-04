@@ -1,70 +1,77 @@
 .discounts-progress {
-    &:not(:last-child) {
-        padding-bottom: 4rem;
-    }
+	scrollbar-width: 0;
 
-    @media(max-width: 1024px) {
-        overflow-x: auto;
-    }
+	&:not(:last-child) {
+		padding-bottom: 4rem;
+	}
 
-    &__list {
-        display: flex;
+	@media(max-width: 1024px) {
+		overflow-x: auto;
+	}
 
-        @media(max-width: 1024px) {
-            width: 3rem * 9;
-            min-width: 3rem * 9;
-        }
-    }
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 0;
+	}
 
-    // .discounts-progress__item
+	&__list {
+		display: flex;
 
-    &__item {
-        @extend %text-16;
-        font-weight: 600;
-        position: relative;
-        padding-top: 4.5rem;
-        color: var(--gray);
-        white-space: nowrap;
+		@media(max-width: 1024px) {
+			width: 3rem * 9;
+			min-width: 3rem * 9;
+		}
+	}
 
-        &:first-child {
-            margin-left: 0.4rem;
-        }
+	// .discounts-progress__item
 
-        &:before,
-        &:after {
-            content: '';
-            position: absolute;
-        }
+	&__item {
+		@extend %text-16;
+		font-weight: 600;
+		position: relative;
+		padding-top: 4.5rem;
+		color: var(--gray);
+		white-space: nowrap;
 
-        &:not(:last-child) {
-            margin-right: 9.2rem;
+		&:first-child {
+			margin-left: 0.4rem;
+		}
 
-            &:after {
-                bottom: 1rem;
-                right: -1.7rem - 5.8rem;
-                width: 5.8rem;
-                height: 0.1rem;
-                background-color: #DCDADA;
-            }
-        }
+		&:before,
+		&:after {
+			content: '';
+			position: absolute;
+		}
 
-        &:before {
-            top: 0rem;
-            @extend %pos-center-x;
-            width: 3rem;
-            height: 3rem;
-            background-image: url(../images/icons/lock.svg);
-            @extend %bg-contain;
-        }
-    }
+		&:not(:last-child) {
+			margin-right: 9.2rem;
 
-    // .discounts-progress__item--completed
+			&:after {
+				bottom: 1rem;
+				right: -1.7rem - 5.8rem;
+				width: 5.8rem;
+				height: 0.1rem;
+				background-color: #DCDADA;
+			}
+		}
 
-    &__item--completed {
-        color: #000;
+		&:before {
+			top: 0rem;
+			@extend %pos-center-x;
+			width: 3rem;
+			height: 3rem;
+			background-image: url(../images/icons/lock.svg);
+			@extend %bg-contain;
+		}
+	}
 
-        &:before {
-            background-image: url(../images/icons/discount-check.svg);
-        }
-    }
+	// .discounts-progress__item--completed
+
+	&__item--completed {
+		color: #000;
+
+		&:before {
+			background-image: url(../images/icons/discount-check.svg);
+		}
+	}
 }

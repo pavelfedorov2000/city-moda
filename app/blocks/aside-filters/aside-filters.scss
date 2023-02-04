@@ -1,5 +1,4 @@
 .aside-filters {
-
 	display: none;
 
 	@media(min-width: 1025px) {
@@ -53,6 +52,7 @@
 			width: 1.4rem;
 			height: 1.4rem;
 			opacity: 0;
+			fill: var(--dark);
 			transition: $transition opacity;
 		}
 

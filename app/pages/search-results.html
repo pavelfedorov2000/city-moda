@@ -1,50 +1,50 @@
 @@include("blocks/head/head.html", {"title": "Товары по запросу «джинсы»"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page search-results catalog">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "currentPage": "Товары по запросу «джинсы»"
-            })
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page search-results catalog">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Товары по запросу «джинсы»"
+			})
 
-            <div class="search-results__top">
-                <h1 class="title catalog__title">Товары по запросу «джинсы»</h1>
-                <div class="search-results__num">2 021 товаров</div>
-            </div>
+			<div class="search-results__top">
+				<h1 class="title catalog__title">Товары по запросу «джинсы»</h1>
+				<div class="search-results__num">2 021 товаров</div>
+			</div>
 
-            <div class="catalog__inner">
-                <div class="catalog__aside">
-                    @@include("blocks/aside-filters/aside-filters.html")
-                </div>
-                <div class="catalog__body">
-                    <div class="catalog__filters">
-                        @@include("blocks/catalog-filters/catalog-filters.html")
-                        @@include('blocks/catalog-view/catalog-view.html')
-                        @@include('blocks/filters-btn/filters-btn.html')
-                    </div>
-                    <ul class="catalog__cards">
-                        @@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/search-results.json")
-                    </ul>
-                    @@include("blocks/pagination/pagination.html")
-                    @@include('blocks/seo-text/seo-text.html')
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/popup/password-recovery.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
-    @@include("blocks/product-popup/product-popup.html")
-    @@include("blocks/popup/size-subscribe-popup.html")
-    @@include("blocks/product-sizes-popup/product-sizes-popup.html")
+			<div class="catalog__inner">
+				<div class="catalog__aside">
+					@@include("blocks/aside-filters/aside-filters.html")
+				</div>
+				<div class="catalog__body">
+					<div class="catalog__filters">
+						@@include("blocks/catalog-filters/catalog-filters.html")
+						@@include('blocks/catalog-view/catalog-view.html')
+						@@include('blocks/filters-btn/filters-btn.html')
+					</div>
+					<ul class="catalog-list">
+						@@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/search-results.json")
+					</ul>
+					@@include("blocks/pagination/pagination.html")
+					@@include('blocks/seo-text/seo-text.html')
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/popup/password-recovery.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/product-popup/product-popup.html")
+	@@include("blocks/popup/size-subscribe-popup.html")
+	@@include("blocks/product-sizes-popup/product-sizes-popup.html")
 </div>
 @@include("blocks/link/link.html")
 <!-- <script src="./assets/scripts/filters.js"></script> -->

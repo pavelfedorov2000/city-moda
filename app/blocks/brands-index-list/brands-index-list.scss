@@ -1,29 +1,28 @@
 .brands-index-list {
-    display: flex;
+	display: flex;
+	margin-left: -1rem;
+	margin-right: 1rem;
 
-    &::-webkit-scrollbar {
-        -webkit-appearance: none;
-        width: 0;
-    }
+	&::-webkit-scrollbar {
+		-webkit-appearance: none;
+		width: 0;
+	}
 
-    @media (max-width: 1024px) {
-        overflow-x: auto;
-        padding-bottom: 3rem;
-    }
+	@media (max-width: 1024px) {
+		overflow-x: auto;
+		padding-bottom: 3rem;
+	}
 
-    > * {
-        margin-right: 2rem;
-    }
+	// .brands-index-list__item
 
-    // .brands-index-list__item
+	&__item {
+		@extend %text-16;
+		font-weight: 500;
+		white-space: nowrap;
+		padding: 0 1rem;
 
-    &__item {
-        @extend %text-16;
-        font-weight: 500;
-        white-space: nowrap;
-
-        &.active {
-            color: var(--green);
-        }
-    }
+		&.active {
+			color: var(--green);
+		}
+	}
 }

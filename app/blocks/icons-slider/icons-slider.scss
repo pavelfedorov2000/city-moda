@@ -2,7 +2,8 @@
 	// .icons-slider__item
 
 	&__item {
-		@extend %flex-col-center;
+		@include row-grid(1.6rem);
+		justify-items: center;
 		width: 12.8rem;
 		margin-right: var(--gap);
 		transition: $transition color;
@@ -21,10 +22,6 @@
 		background-color: var(--gray-bg);
 		border-radius: 7.1rem;
 		overflow: hidden;
-
-		&:not(:last-child) {
-			margin-bottom: 1.6rem;
-		}
 
 		img {
 			width: 100%;

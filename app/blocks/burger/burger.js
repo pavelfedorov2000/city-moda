@@ -14,17 +14,24 @@ app.burger = {
             $('.burger-btn').attr('aria-expanded', false);
         });
 
-        $('.burger-menu__list-item span').on('click', function () {
-            const $burgerMenuListItem = $(this);
-            const $burgerMenuListItemNotActive = $burgerMenuListItem.parent().siblings();
-            const $burgerMenuListItemNotActiveTitle = $burgerMenuListItemNotActive.find('span');
+        $('.burger-menu__list-toggle').on('click', function () {
+            const $burgerMenuListToggle = $(this);
+            const $burgerMenuListItem = $burgerMenuListToggle.closest('.burger-menu__list-item');
+            const $burgerMenuListItemNotActive = $burgerMenuListItem.siblings();
+            const $burgerMenuListItemNotActiveToggle = $burgerMenuListItemNotActive.find('.burger-menu__list-toggle');
             const $burgerMenuListItemNotActiveList = $burgerMenuListItemNotActive.find('ul');
-            const $burgerMenuSublist = $burgerMenuListItem.next();
+            const $burgerMenuSublist = $burgerMenuListItem.find('ul');
 
-            $burgerMenuListItemNotActiveTitle.removeClass('active');
+            $burgerMenuListItemNotActiveToggle.attr('aria-expanded', false);
             $burgerMenuListItemNotActiveList.slideUp();
-            $burgerMenuListItem.toggleClass('active');
-            $burgerMenuSublist.slideToggle();
+
+            if ($burgerMenuListToggle.attr('aria-expanded') === 'false') {
+                $burgerMenuListToggle.attr('aria-expanded', true);
+                $burgerMenuSublist.slideDown();
+            } else {
+                $burgerMenuListToggle.attr('aria-expanded', false);
+                $burgerMenuSublist.slideUp();
+            }
         });
 
         $('.header__search-btn').on('click', function () {

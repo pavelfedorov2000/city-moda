@@ -1,11 +1,11 @@
-<section class="section slider-section">
-    @@include('blocks/section-top/section-top.html', {
-    "title": "Популярные товары",
-    "swiper": true
-    })
-    <div class="swiper popular-goods-slider">
-        <ul class="swiper-wrapper">
-            @@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/popular-goods.json")
-        </ul>
-    </div>
+<section id="popular-goods" class="section slider-section">
+	@@include('blocks/section-top/section-top.html', {
+	"title": "Популярные товары",
+	"swiper": true
+	})
+	<div class="swiper popular-goods-slider">
+		<ul class="swiper-wrapper">
+			@@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/popular-goods.json")
+		</ul>
+	</div>
 </section>

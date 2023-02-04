@@ -3,19 +3,14 @@
 	// .contacts__tabs
 
 	&__tabs {
-		&:not(:last-child) {
-			margin-bottom: 4rem;
-		}
+		gap: 7rem;
+		margin-bottom: 4rem;
 	}
 
 	// .contacts__tab
 
 	&__tab {
 		padding-bottom: 0.9rem;
-
-		&:not(:last-child) {
-			margin-right: 7rem;
-		}
 	}
 
 	// .contacts__grid

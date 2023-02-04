@@ -135,7 +135,7 @@ $(function () {
 
         const $brandsIndexListItem = $(this);
         const $brandsIndexListItemHref = $brandsIndexListItem.attr('href');
-        const $brandsIndexListItemNotActive = $brandsIndexListItem.siblings();
+        const $brandsIndexListItemNotActive = $brandsIndexListItem.closest('li').siblings().find('.brands-index-list__item');
 
         $('.cancel-brand-letter').css('display', 'flex');
         $brandsIndexListItemNotActive.removeClass('active');

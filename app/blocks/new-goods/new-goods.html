@@ -1,11 +1,11 @@
-<section class="section slider-section">
-    @@include('blocks/section-top/section-top.html', {
-    "title": "Новинки",
-    "swiper": true
-    })
-    <div class="swiper catalog-new-slider">
-        <ul class="swiper-wrapper">
-            @@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/new-goods.json")
-        </ul>
-    </div>
+<section id="new-goods" class="section slider-section">
+	@@include('blocks/section-top/section-top.html', {
+	"title": "Новинки",
+	"swiper": true
+	})
+	<div class="swiper catalog-new-slider">
+		<ul class="swiper-wrapper">
+			@@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/new-goods.json")
+		</ul>
+	</div>
 </section>

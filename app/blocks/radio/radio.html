@@ -1,9 +1,7 @@
-<label class="@@class">
-    <input class="radio-box"
-           type="radio"
-           name="@@name">
-    @@if(!context.withoutStyle){
-    <span class="radio-style"></span>
-    }
-    <span class="radio-text">@@text</span>
+<label class="radio@@if(context.class){ @@class}@@if(context.type){ radio--type_@@type}">
+	<input class="radio-box" type="radio" name="@@name">
+	@@if(!context.withoutStyle){
+	<span class="radio-style"></span>
+	}
+	<span class="radio-text">@@text</span>
 </label>

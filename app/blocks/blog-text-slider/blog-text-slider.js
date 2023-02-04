@@ -8,8 +8,8 @@ app.blogTextSlider = {
             speed: 1000,
             lazy: true,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
+                nextEl: '.blog-text__slider .swiper-button-next',
+                prevEl: '.blog-text__slider .swiper-button-prev',
             },
             breakpoints: {
                 576: {

@@ -8,8 +8,8 @@ app.sliderSections = {
             spaceBetween: 20,
             speed: 1000,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-next',
+                nextEl: '#popular-goods .swiper-button-next',
+                prevEl: '#popular-goods .swiper-button-next',
             },
             breakpoints: {
                 768: {
@@ -34,8 +34,8 @@ app.sliderSections = {
             spaceBetween: 20,
             speed: 1000,
             navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-next',
+                nextEl: '#new-goods .swiper-button-next',
+                prevEl: '#new-goods .swiper-button-next',
             },
             breakpoints: {
                 768: {
