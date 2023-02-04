@@ -1,13 +1,15 @@
 <fieldset class="catalog-filters__item catalog-filter">
-    <legend class="catalog-filter__title">
-        <span>Цена:</span>
-        <span class="filter-output"
-              id="price_from"></span>
-        <span class="filter-output"
-              id="price_to"></span>
-    </legend>
-    <div class="catalog-filter__drop catalog-drop-filter">
-        @@include('blocks/price-range/price-range.html')
-        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
-    </div>
+	<legend class="catalog-filter__title" id="price_filter_heading">
+		<button class="catalog-filter__toggle" type="button" aria-expanded="false"
+			aria-controls="price_filter_dropdown">
+			<span>Цена:</span>
+			<span class="filter-output" id="price_from"></span>
+			<span class="filter-output" id="price_to"></span>
+		</button>
+	</legend>
+	<div class="catalog-filter__drop catalog-drop-filter" id="price_filter_dropdown"
+		aria-labelledby="price_filter_heading">
+		@@include('blocks/price-range/price-range.html')
+		@@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+	</div>
 </fieldset>

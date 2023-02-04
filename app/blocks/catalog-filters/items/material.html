@@ -1,56 +1,60 @@
 <fieldset class="catalog-filters__item catalog-filter catalog-filters__item--material">
-    @@include('blocks/catalog-filter/title.html', {"title": "Материал"})
-    <div class="catalog-filter__drop catalog-drop-filter">
-        <div class="catalog-drop-filter__inner">
-            <div class="catalog-drop-filter__body">
-                <div class="catalog-drop-filter__cols">
-                    <fieldset class="catalog-drop-filter__col">
-                        <legend class="catalog-drop-filter__title">Основной материал</legend>
-                        @@loop('blocks/checkbox/checkbox.html', [{
-                        "class": "catalog-drop-filter__item",
-                        "text": "Акрил"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Ангора"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Бисер"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Вискоза"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Искусственная замша"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Искусственная кожа"
-                        }])
-                    </fieldset>
-                    <fieldset class="catalog-drop-filter__col">
-                        <legend class="catalog-drop-filter__title">Утеплитель</legend>
-                        @@loop('blocks/checkbox/checkbox.html', [{
-                        "class": "catalog-drop-filter__item",
-                        "text": "Акрил"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Искусственный мех"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Искусственный пух"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Микрофибра"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Полиамид"
-                        }, {
-                        "class": "catalog-drop-filter__item",
-                        "text": "Полимер"
-                        }])
-                    </fieldset>
-                </div>
-            </div>
-        </div>
-        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
-    </div>
+	@@include('blocks/catalog-filter/title.html', {
+	"title": "Материал",
+	"filterName": "material"
+	})
+	<div class="catalog-filter__drop catalog-drop-filter" id="material_filter_dropdown"
+		aria-labelledby="material_filter_heading">
+		<div class="catalog-drop-filter__inner">
+			<div class="catalog-drop-filter__body">
+				<div class="catalog-drop-filter__cols">
+					<fieldset class="catalog-drop-filter__col">
+						<legend class="catalog-drop-filter__title">Основной материал</legend>
+						@@loop('blocks/checkbox/checkbox.html', [{
+						"class": "catalog-drop-filter__item",
+						"text": "Акрил"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Ангора"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Бисер"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Вискоза"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Искусственная замша"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Искусственная кожа"
+						}])
+					</fieldset>
+					<fieldset class="catalog-drop-filter__col">
+						<legend class="catalog-drop-filter__title">Утеплитель</legend>
+						@@loop('blocks/checkbox/checkbox.html', [{
+						"class": "catalog-drop-filter__item",
+						"text": "Акрил"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Искусственный мех"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Искусственный пух"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Микрофибра"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Полиамид"
+						}, {
+						"class": "catalog-drop-filter__item",
+						"text": "Полимер"
+						}])
+					</fieldset>
+				</div>
+			</div>
+		</div>
+		@@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+	</div>
 </fieldset>

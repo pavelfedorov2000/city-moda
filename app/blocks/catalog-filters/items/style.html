@@ -1,27 +1,31 @@
 <fieldset class="catalog-filters__item catalog-filter catalog-filters__item--style">
-    @@include('blocks/catalog-filter/title.html', {"title": "Стиль"})
-    <div class="catalog-filter__drop catalog-drop-filter">
-        <div class="catalog-drop-filter__inner">
-            <div class="catalog-drop-filter__title">Выберите стиль</div>
-            <div class="catalog-drop-filter__items">
-                @@loop('blocks/checkbox/checkbox.html', [{
-                "class": "catalog-drop-filter__item",
-                "text": "деловой"
-                }, {
-                "class": "catalog-drop-filter__item",
-                "text": "вечерний"
-                }, {
-                "class": "catalog-drop-filter__item",
-                "text": "повседневный"
-                }, {
-                "class": "catalog-drop-filter__item",
-                "text": "спортивный"
-                }, {
-                "class": "catalog-drop-filter__item",
-                "text": "спортивный"
-                }])
-            </div>
-        </div>
-        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
-    </div>
+	@@include('blocks/catalog-filter/title.html', {
+	"title": "Стиль",
+	"filterName": "style"
+	})
+	<div class="catalog-filter__drop catalog-drop-filter" id="style_filter_dropdown"
+		aria-labelledby="style_filter_heading">
+		<div class="catalog-drop-filter__inner">
+			<div class="catalog-drop-filter__title">Выберите стиль</div>
+			<div class="catalog-drop-filter__items">
+				@@loop('blocks/checkbox/checkbox.html', [{
+				"class": "catalog-drop-filter__item",
+				"text": "деловой"
+				}, {
+				"class": "catalog-drop-filter__item",
+				"text": "вечерний"
+				}, {
+				"class": "catalog-drop-filter__item",
+				"text": "повседневный"
+				}, {
+				"class": "catalog-drop-filter__item",
+				"text": "спортивный"
+				}, {
+				"class": "catalog-drop-filter__item",
+				"text": "спортивный"
+				}])
+			</div>
+		</div>
+		@@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+	</div>
 </fieldset>

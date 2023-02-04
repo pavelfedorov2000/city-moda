@@ -1,38 +1,40 @@
 <fieldset class="catalog-filters__item catalog-filter catalog-filters__item--brand">
-    @@include('blocks/catalog-filter/title.html', {"title": "Бренд"})
-    <div class="catalog-filter__drop catalog-drop-filter">
-        <div class="catalog-drop-filter__inner">
-            <div class="catalog-drop-filter__body">
-                <div class="catalog-drop-filter__title">Найти бренд</div>
-                <input class="catalog-drop-filter__input"
-                       name="brand"
-                       placeholder="Введите название">
-                <div class="catalog-drop-filter__items">
-                    @@loop('blocks/checkbox/checkbox.html', [{
-                    "class": "catalog-drop-filter__item",
-                    "text": "AllSaints"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "Allura"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "Arch"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "Arot"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "Allora"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "Bibi"
-                    }, {
-                    "class": "catalog-drop-filter__item",
-                    "text": "B2B Black to Black"
-                    }])
-                </div>
-            </div>
-        </div>
-        @@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
-    </div>
+	@@include('blocks/catalog-filter/title.html', {
+	"title": "Бренд",
+	"filterName": "brand"
+	})
+	<div class="catalog-filter__drop catalog-drop-filter" id="brand_filter_dropdown"
+		aria-labelledby="brand_filter_heading">
+		<div class="catalog-drop-filter__inner">
+			<div class="catalog-drop-filter__body">
+				<div class="catalog-drop-filter__title">Найти бренд</div>
+				<input class="catalog-drop-filter__input" name="brand" placeholder="Введите название">
+				<div class="catalog-drop-filter__items">
+					@@loop('blocks/checkbox/checkbox.html', [{
+					"class": "catalog-drop-filter__item",
+					"text": "AllSaints"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "Allura"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "Arch"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "Arot"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "Allora"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "Bibi"
+					}, {
+					"class": "catalog-drop-filter__item",
+					"text": "B2B Black to Black"
+					}])
+				</div>
+			</div>
+		</div>
+		@@include('blocks/catalog-drop-filter/catalog-drop-filter__buttons.html')
+	</div>
 </fieldset>

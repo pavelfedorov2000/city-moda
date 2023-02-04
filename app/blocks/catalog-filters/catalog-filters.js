@@ -2,44 +2,51 @@ app.catalogFilters = {
     name: 'catalogFilters',
     description: 'your script description',
     init() {
-        $('.catalog-filter__title').on('click', function () {
-            const $catalogFiltersItemTitle = $(this);
-            const $catalogFiltersItem = $catalogFiltersItemTitle.parent();
-            const $catalogFiltersItemDrop = $catalogFiltersItem.find('.catalog-filter__drop');
-            const $catalogFiltersItemNotActive = $catalogFiltersItem.siblings();
-            const $catalogFiltersItemTitleNotActive = $catalogFiltersItemNotActive.find('.catalog-filter__title');
-            const $catalogFiltersItemDropNotActive = $catalogFiltersItemNotActive.find('.catalog-filter__drop');
+        $('.catalog-filter__toggle').on('click', function () {
+            const $catalogFilterToggle = $(this);
+            const $catalogFilter = $catalogFilterToggle.closest('.catalog-filter');
+            const $catalogFilterDrop = $catalogFilter.find('.catalog-filter__drop');
+            const $catalogFilterNotActive = $catalogFilter.siblings();
+            const $catalogFilterToggleNotActive = $catalogFilterNotActive.find('.catalog-filter__toggle');
+            const $catalogFilterDropNotActive = $catalogFilterNotActive.find('.catalog-filter__drop');
 
-            $catalogFiltersItemTitleNotActive.removeClass('active');
-            $catalogFiltersItemDropNotActive.slideUp();
-            $catalogFiltersItemTitle.toggleClass('active');
-            $catalogFiltersItemDrop.slideToggle();
+            $catalogFilterToggleNotActive.attr('aria-expanded', false);
+            $catalogFilterDropNotActive.slideUp();
+
+            if ($catalogFilterToggle.attr('aria-expanded') === 'false') {
+                $catalogFilterToggle.attr('aria-expanded', true);
+                $catalogFilterDrop.slideDown();
+            } else {
+                $catalogFilterToggle.attr('aria-expanded', false);
+                $catalogFilterDrop.slideUp();
+            }
         });
 
         $(document).on('mouseup', function (e) {
-            const $catalogFiltersItemTitleActive = $('.catalog-filter__title.active');
-            const $catalogFilter = $catalogFiltersItemTitleActive.closest('.catalog-filters__item');
-            const $catalogFiltersItemDrop = $catalogFilter.find('.catalog-filter__drop');
+            const $catalogFilterToggleActive = $('.catalog-filter__toggle[aria-expanded="true"]');
+            const $catalogFilter = $catalogFilterToggleActive.closest('.catalog-filter');
+            const $catalogFilterDrop = $catalogFilter.find('.catalog-filter__drop');
 
             if (!$catalogFilter.is(e.target) && $catalogFilter.has(e.target).length === 0) {
-                $catalogFiltersItemTitleActive.removeClass('active');
-                $catalogFiltersItemDrop.slideUp();
+                $catalogFilterToggleActive.attr('aria-expanded', false);
+                $catalogFilterDrop.slideUp();
             }
         });
 
         // Подсчет отмеченных чекбоксом
         $('.catalog-filters__item--material input[type="checkbox"], .catalog-filters__item--color input[type="checkbox"], .catalog-filters__item--brand input[type="checkbox"], .catalog-filters__item--details input[type="checkbox"], .catalog-filters__item--style input[type="checkbox"], .catalog-filters__item--decor input[type="checkbox"]').on('click', function () {
             const $checkbox = $(this);
-            const className = $checkbox.closest('.catalog-filters__item').attr('class').split(' ').join('.');
+            const $catalogFilter = $checkbox.closest('.catalog-filter');
+            const className = $catalogFilter.attr('class').split(' ').join('.');
             const checkedItems = $(`.${className} input:checkbox:checked`).length;
-            const $catalogFiltersItemTitle = $checkbox.closest('.catalog-filters__item').find('.catalog-filter__title');
-            const $filterOutput = $catalogFiltersItemTitle.find('.filter-output');
+            const $catalogFilterToggle = $catalogFilter.find('.catalog-filter__toggle');
+            const $filterOutput = $catalogFilterToggle.find('.filter-output');
 
             if (checkedItems > 0) {
                 $filterOutput.text(`(${checkedItems})`);
-                $catalogFiltersItemTitle.css('font-weight', '600');
+                $catalogFilterToggle.css('font-weight', '600');
             } else {
-                $catalogFiltersItemTitle.css('font-weight', '400');
+                $catalogFilterToggle.css('font-weight', '400');
                 $filterOutput.text('');
             }
         });
@@ -48,22 +55,22 @@ app.catalogFilters = {
         $('.catalog-filters__reset-btn').on('click', function () {
             const $catalogFiltersResetBtn = $(this);
             const $catalogFilters = $catalogFiltersResetBtn.closest('.catalog-filters');
-            const $catalogFiltersItemTitle = $catalogFilters.find('.catalog-filter__title');
-            const $catalogFiltersItemDrop = $catalogFilters.find('.catalog-filter__drop');
+            const $catalogFilterToggle = $catalogFilters.find('.catalog-filter__toggle');
+            const $catalogFilterDrop = $catalogFilters.find('.catalog-filter__drop');
 
             $('.catalog-filters__item--sort').find('.catalog-filter__title').text('Сортировать');
-            $catalogFiltersItemTitle.css('font-weight', '400');
-            $catalogFiltersItemTitle.find('.filter-output').text('');
-            $catalogFiltersItemTitle.removeClass('active');
-            $catalogFiltersItemDrop.slideUp();
+            $catalogFilterToggle.css('font-weight', '400');
+            $catalogFilterToggle.find('.filter-output').text('');
+            $catalogFilterToggle.attr('aria-expanded', false);
+            $catalogFilterDrop.slideUp();
         });
 
         // Кнопка сброса в отдельном фильтре
         $('.catalog-drop-filter__btn[type=reset]').on('click', function () {
             const $catalogDropFilterResetBtn = $(this);
-            const $catalogFiltersItemTitle = $catalogDropFilterResetBtn.closest('.catalog-filters__item').find('.catalog-filter__title');
-            const $filterOutput = $catalogFiltersItemTitle.find('.filter-output');
-            $catalogFiltersItemTitle.css('font-weight', '400');
+            const $catalogFilterToggle = $catalogDropFilterResetBtn.closest('.catalog-filter').find('.catalog-filter__toggle');
+            const $filterOutput = $catalogFilterToggle.find('.filter-output');
+            $catalogFilterToggle.css('font-weight', '400');
             $filterOutput.text('');
         });
 
@@ -87,22 +94,23 @@ app.catalogFilters = {
             $('.filters-btn').attr('aria-expanded', false);
         });
 
-        $('.catalog-filter__title').on('click', function () {
+        $('.catalog-filter__toggle').on('click', function () {
             if ($(window).width() < 1025) {
-                const $catalogFiltersItemTitle = $(this);
-                const $catalogFiltersItemTitleText = $catalogFiltersItemTitle.children().first().text();
-                const $catalogFiltersItem = $catalogFiltersItemTitle.closest('.catalog-filters__item');
-                const $catalogFiltersItemNotActive = $catalogFiltersItem.siblings();
-                const $catalogFiltersItemDrop = $catalogFiltersItem.find('.catalog-filter__drop');
-                const $catalogFilters = $catalogFiltersItem.closest('.catalog-filters');
+                const $catalogFilterToggle = $(this);
+                const $catalogFilterTitle = $catalogFilterToggle.closest('.catalog-filter__title');
+                const $catalogFilterToggleText = $catalogFilterToggle.children().first().text();
+                const $catalogFilter = $catalogFilterToggle.closest('.catalog-filter');
+                const $catalogFilterNotActive = $catalogFilter.siblings();
+                const $catalogFilterDrop = $catalogFilter.find('.catalog-filter__drop');
+                const $catalogFilters = $catalogFilter.closest('.catalog-filters');
                 const $catalogFiltersBackBtn = $catalogFilters.find('.catalog-filters__back-btn');
                 const $catalogFiltersTitle = $catalogFilters.find('.catalog-filters__title');
 
                 $catalogFiltersBackBtn.show();
-                $catalogFiltersTitle.text($catalogFiltersItemTitleText);
-                $catalogFiltersItemNotActive.hide();
-                $catalogFiltersItemTitle.hide();
-                $catalogFiltersItemDrop.show();
+                $catalogFiltersTitle.text($catalogFilterToggleText);
+                $catalogFilterNotActive.hide();
+                $catalogFilterTitle.hide();
+                $catalogFilterDrop.show();
             }
         });
 
@@ -150,15 +158,15 @@ app.catalogFilters = {
             const $catalogDropFilterItem = $(this);
             const $catalogDropFilterItemRadioText = $catalogDropFilterItem.find('.radio-text').text();
             const $catalogDropFilter = $catalogDropFilterItem.closest('.catalog-drop-filter');
-            const $catalogFiltersItemTitle = $catalogDropFilterItem.closest('.catalog-filters__item').find('.catalog-filter__title');
+            const $catalogFilterToggle = $catalogDropFilterItem.closest('.catalog-filter').find('.catalog-filter__toggle');
 
-            $catalogFiltersItemTitle.css('font-weight', '600');
-            $catalogFiltersItemTitle.text($catalogDropFilterItemRadioText);
+            $catalogFilterToggle.css('font-weight', '600');
+            $catalogFilterToggle.children().first().text($catalogDropFilterItemRadioText);
 
             if ($(window).width() > 1024) {
                 $catalogDropFilter.slideUp();
-                $catalogFiltersItemTitle.removeClass('active');
-                $catalogFiltersItemTitle.removeClass('catalog-filter__title--bold');
+                $catalogFilterToggle.attr('aria-expanded', false);
+                $catalogFilterToggle.removeClass('catalog-filter__toggle--bold');
             }
         });
 
@@ -166,11 +174,11 @@ app.catalogFilters = {
         $('input[name=price_from]').on('input change', function () {
             const $input = $(this);
             const inputVal = $input.val();
-            const $catalogFiltersItemTitle = $input.closest('.catalog-filters__item').find('.catalog-filter__title');
+            const $catalogFilterToggle = $input.closest('.catalog-filter').find('.catalog-filter__toggle');
 
             if (inputVal !== '') {
                 $('#price_from').text(`${inputVal} -`);
-                $catalogFiltersItemTitle.css('font-weight', '600');
+                $catalogFilterToggle.css('font-weight', '600');
             } else {
                 $('#price_from').text('');
             }

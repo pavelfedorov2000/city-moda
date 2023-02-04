@@ -1,31 +1,33 @@
 <fieldset class="catalog-filters__item catalog-filter catalog-filters__item--sort">
-    @@include('blocks/catalog-filter/title.html', {
-    "title": "Сортировать",
-    "withoutOutput": true
-    })
-    <div class="catalog-filter__drop catalog-drop-filter">
-        <div class="catalog-drop-filter__inner">
-            @@loop('blocks/radio/radio.html', [{
-            "class": "catalog-drop-filter__item",
-            "name": "price_filter",
-            "text": "По возрастанию цены"
-            }, {
-            "class": "catalog-drop-filter__item",
-            "name": "price_filter",
-            "text": "По убыванию цены"
-            }, {
-            "class": "catalog-drop-filter__item",
-            "name": "price_filter",
-            "text": "По популярности"
-            }, {
-            "class": "catalog-drop-filter__item",
-            "name": "price_filter",
-            "text": "По новинкам"
-            }, {
-            "class": "catalog-drop-filter__item",
-            "name": "price_filter",
-            "text": "По скидкам"
-            }])
-        </div>
-    </div>
+	@@include('blocks/catalog-filter/title.html', {
+	"title": "Сортировать",
+	"filterName": "sort",
+	"withoutOutput": true
+	})
+	<div class="catalog-filter__drop catalog-drop-filter" id="sort_filter_dropdown"
+		aria-labelledby="sort_filter_heading">
+		<div class="catalog-drop-filter__inner">
+			@@loop('blocks/radio/radio.html', [{
+			"class": "catalog-drop-filter__item",
+			"name": "price_filter",
+			"text": "По возрастанию цены"
+			}, {
+			"class": "catalog-drop-filter__item",
+			"name": "price_filter",
+			"text": "По убыванию цены"
+			}, {
+			"class": "catalog-drop-filter__item",
+			"name": "price_filter",
+			"text": "По популярности"
+			}, {
+			"class": "catalog-drop-filter__item",
+			"name": "price_filter",
+			"text": "По новинкам"
+			}, {
+			"class": "catalog-drop-filter__item",
+			"name": "price_filter",
+			"text": "По скидкам"
+			}])
+		</div>
+	</div>
 </fieldset>
