@@ -1,59 +1,59 @@
 @@include("blocks/head/head.html", {"title": "Мои заказы"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page profile-page">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "currentPage": "Мои заказы"
-            })
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page profile-page">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"currentPage": "Мои заказы"
+			})
 
-            @@include('blocks/page-top/page-top.html', {
-            "title": "Профиль"
-            })
+			@@include('blocks/page-top/page-top.html', {
+			"title": "Профиль"
+			})
 
-            <div class="profile-page__inner">
-                <nav class="page-nav">
-                    <ul class="page-nav__list">
-                        @@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
-                    </ul>
-                </nav>
+			<div class="profile-page__inner">
+				<nav class="page-nav">
+					<ul class="page-nav__list">
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
+					</ul>
+				</nav>
 
-                <div class="profile-page__body">
-                    <h2 class="profile-page__title">Мои заказы</h2>
-                    <div class="tabs profile-page__tabs">
-                        <a href="#current-orders"
-                           class="tab profile-page__tab active">Текущие заказы</a>
-                        <a href="#orders-history"
-                           class="tab profile-page__tab">История заказов</a>
-                    </div>
-                    <section id="current-orders"
-                             class="tabs-content active">
-                        <ul class="orders-list">
-                            @@loop("blocks/order-item/order-item.html", "../resources/assets/orders.json")
-                        </ul>
-                    </section>
-                    <section id="orders-history"
-                             class="tabs-content">
-                        <ul class="orders-list">
-                            @@loop("blocks/order-item/order-item.html", "../resources/assets/orders-history.json")
-                        </ul>
-                        @@include("blocks/pagination/pagination.html")
-                    </section>
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/popup/password-recovery.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
+				<div class="profile-page__body">
+					<h2 class="profile-page__title">Мои заказы</h2>
+					<div class="tabs profile-page__tabs" role="tablist">
+						<button class="tab profile-page__tab active" id="orders_tab_1" aria-controls="current-orders"
+							aria-selected="true" role="tab" type="button" tabindex="0">Текущие заказы</button>
+						<button class="tab profile-page__tab" id="orders_tab_2" aria-controls="orders-history"
+							aria-selected="false" role="tab" type="button" tabindex="-1">История заказов</button>
+					</div>
+					<section id="current-orders" class="tabs-content active" aria-labelledby="orders_tab_1"
+						role="tabpanel" tabindex="0">
+						<ul class="orders-list">
+							@@loop("blocks/order-item/order-item.html", "../resources/assets/orders.json")
+						</ul>
+					</section>
+					<section id="orders-history" class="tabs-content" aria-labelledby="orders_tab_2" role="tabpanel"
+						tabindex="-1">
+						<ul class="orders-list">
+							@@loop("blocks/order-item/order-item.html", "../resources/assets/orders-history.json")
+						</ul>
+						@@include("blocks/pagination/pagination.html")
+					</section>
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/popup/password-recovery.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
 <script src="./assets/libs/js/sticky-sidebar.min.js"></script>

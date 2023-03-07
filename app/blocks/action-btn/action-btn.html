@@ -1,0 +1,10 @@
+<@@if(context.popupName){button}@@if(!context.popupName){a href="#" } class="action-btn" type="button"
+	aria-expanded="false" aria-controls="@@popupName" data-popup="@@popupName">
+	@@include('blocks/icons/@@icon.html')
+	<span class="action-btn__text">
+		@@text
+		@@if(context.count){
+		<span class="action-btn__count">(@@count)</span>
+		}
+	</span>
+	</@@if(context.popupName){button}@@if(!context.popupName){a}>

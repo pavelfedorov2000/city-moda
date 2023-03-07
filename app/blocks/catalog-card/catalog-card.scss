@@ -1,11 +1,31 @@
 .labels {
-	position: absolute;
-	top: 1.5rem;
-	left: 1.5rem;
-	z-index: 10;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 1rem;
+}
+
+.catalog-card,
+.product-popup {
+	.labels {
+		position: absolute;
+		top: 1.5rem;
+		left: 1.5rem;
+		z-index: 10;
+	}
+}
+
+.catalog-card {
+	.labels {
+		top: 1.5rem;
+		left: 1.5rem;
+	}
+}
+
+.product-popup {
+	.labels {
+		top: 2rem;
+		left: 2rem;
+	}
 }
 
 .label {
@@ -15,6 +35,16 @@
 	width: 4.5rem;
 	height: 4.5rem;
 	border-radius: 50%;
+
+	&--size {
+		&_xl {
+			width: 5rem;
+			height: 5rem;
+			font-size: 1.5rem;
+			line-height: 2.2rem;
+		}
+	}
+
 	//display: none;
 
 	&--style {
@@ -53,11 +83,7 @@
 		position: relative;
 		height: 44.8rem;
 		display: block;
-		transition: 0.5s height;
-
-		&:not(:last-child) {
-			margin-bottom: 1.2rem;
-		}
+		transition: $transition height;
 
 		img {
 			@extend %cover;
@@ -78,6 +104,13 @@
 		}
 	}
 
+	&__content {
+		padding-top: 1.2rem;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
 	&__info {
 		position: absolute;
 		left: 0;
@@ -87,7 +120,7 @@
 		padding: 2rem;
 		text-align: center;
 		opacity: 0;
-		transition: 0.5s all;
+		transition: $transition all;
 
 		@media (max-width: 500px) {
 			padding: 1.5rem 0.5rem;
@@ -191,15 +224,13 @@
 		margin-bottom: 0.7rem;
 	}
 
+	&__prices {
+		gap: 0.8rem;
+	}
+
 	&__price {
 		@extend %text-16;
 		font-weight: 600;
-	}
-
-	// .catalog-card__new-price
-
-	&__new-price {
-		margin-right: 0.8rem;
 	}
 
 	// .catalog-card__old-price
