@@ -1,127 +1,126 @@
 .drop-basket {
-    @extend %flex-col;
+	@extend %flex-col;
 
-    @media(max-width: 500px) {
-        padding-bottom: 6rem;
-    }
+	@media(max-width: 500px) {
+		padding-bottom: 6rem;
+	}
 
-    &__body {
-        flex-grow: 1;
-        @extend %flex-col;
-    }
+	&__body {
+		flex-grow: 1;
+		@extend %flex-col;
+	}
 
-    &__inner {
-        @extend %flex-col;
-        flex-grow: 1;
-        padding: 5rem 5rem 4rem;
-        position: relative;
+	&__inner {
+		@extend %flex-col;
+		flex-grow: 1;
+		padding: 5rem 5rem 4rem;
+		position: relative;
 
-        @media(max-width: 500px) {
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
-        }
-    }
+		@media(max-width: 500px) {
+			@include padding-x(var(--offset));
+		}
+	}
 
-    &__empty {
-        display: none;
-        @extend %text-16;
-        color: var(--gray);
-        text-align: center;
-        justify-self: center;
-        flex-grow: 1;
-    }
+	&__empty {
+		display: none;
+		@extend %text-16;
+		color: var(--gray);
+		text-align: center;
+		justify-self: center;
+		flex-grow: 1;
+	}
 
-    &__title {
-        flex-grow: 1;
-    }
+	&__title {
+		flex-grow: 1;
+	}
 
-    &__products {
-        flex-grow: 1;
-        margin-bottom: 5rem;
-    }
+	&__products {
+		flex-grow: 1;
+		margin-bottom: 5rem;
+	}
 
-    &__product {
-        column-gap: 1.5rem;
-        padding-bottom: 1.7rem;
-        border-bottom: 0.1rem solid #EFEFEF;
-        grid-template-areas:
-            "image title title title"
-            "image . . ."
-            "image list list list"
-            "image . . ."
-            "image buttons counter prices"
-        ;
-        grid-template-columns: 11rem 1fr 1fr 1fr;
+	&__product {
+		column-gap: 1.5rem;
+		padding-bottom: 1.7rem;
+		border-bottom: 0.1rem solid #EFEFEF;
+		grid-template-areas:
+			"image title title title"
+			"image . . ."
+			"image list list list"
+			"image . . ."
+			"image buttons counter prices"
+		;
+		grid-template-columns: 11rem 1fr 1fr 1fr;
 
-        @media(min-width: 768px) {
-            grid-template-rows: auto 1.4rem auto 0.2rem auto;
-        }
+		@media(min-width: 768px) {
+			grid-template-rows: auto var(--offset-sm) auto 0.2rem auto;
+		}
 
-        @media(max-width: 767px) {
-            grid-template-areas:
-                "image title title"
-                "image list list"
-                "buttons counter prices"
-            ;
-            grid-template-columns: 11rem repeat(2, 1fr);
-            row-gap: 1.4rem;
-        }
+		@media(max-width: 767px) {
+			grid-template-areas:
+				"image title title"
+				"image list list"
+				"buttons counter prices"
+			;
+			grid-template-columns: 11rem repeat(2, 1fr);
+			row-gap: var(--offset-sm);
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 2.6rem;
-        }
+		&:not(:last-child) {
+			margin-bottom: 2.6rem;
+		}
 
-        .basket-product {
+		.basket-product {
 
-            &__buttons,
-            &__counter {
-                align-self: flex-end;
-            }
+			&__buttons,
+			&__counter {
+				align-self: flex-end;
+			}
 
-            &__prices-wrap {
-                flex-direction: column;
-                gap: 0;
-            }
-        }
-    }
+			&__prices-wrap {
+				flex-direction: column;
+				gap: 0;
+			}
+		}
+	}
 
-    &__product-prices {
-        flex-direction: column;
-        text-align: right;
-    }
+	&__product-prices {
+		flex-direction: column;
+		text-align: right;
+	}
 
-    &__product-price {
-        align-items: flex-end;
-    }
+	&__product-price {
+		align-items: flex-end;
+	}
 
-    &__total {
-        @extend %flex-row;
-        @extend %text-16;
-        font-weight: 600;
-    }
+	&__total {
+		@extend %flex-row;
+		@extend %text-16;
+		font-weight: 600;
+	}
 
-    &__btn {
-        @extend %flex-center;
-        @extend %text-16;
-        position: relative;
-        padding: 2rem;
-        font-weight: 600;
+	&__btn {
+		@extend %flex-center;
+		@extend %text-16;
+		position: relative;
+		padding: var(--offset-ms);
+		font-weight: 600;
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: #fff;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
 
-                &:before,
-                &:after {
-                    background-color: var(--green-second);
-                }
-            }
-        }
+				&:before,
+				&:after {
+					background-color: var(--green-second);
+				}
+			}
+		}
 
-        svg {
-            width: 5.6rem;
-            height: 1.6rem;
-            margin-left: 1rem;
-        }
-    }
+		svg {
+			width: 5.6rem;
+			height: var(--icon-size);
+			margin-left: var(--offset-xs);
+		}
+	}
 }

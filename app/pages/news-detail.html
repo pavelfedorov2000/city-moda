@@ -1,29 +1,29 @@
 @@include("blocks/head/head.html", {"title": "-15% на женские сумки"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <div class="page">
-        <main>
-            <div class="container">
-                @@include('blocks/breadcrumbs/breadcrumbs.html', {
-                "prevPage": "Новости и акции",
-                "currentPage": "-15% на женские сумки"
-                })
-                @@include("blocks/news-detail/news-detail.html")
-            </div>
-        </main>
-        @@include("blocks/other-news/other-news.html")
-    </div>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/popup/password-recovery.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<div class="page">
+		<div class="container">
+			<main>
+				@@include('blocks/breadcrumbs/breadcrumbs.html', {
+				"prevPage": "Новости и акции",
+				"currentPage": "-15% на женские сумки"
+				})
+				@@include("blocks/news-detail/news-detail.html")
+			</main>
+			@@include("blocks/other-news/other-news.html")
+		</div>
+	</div>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/popup/password-recovery.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
 </body>

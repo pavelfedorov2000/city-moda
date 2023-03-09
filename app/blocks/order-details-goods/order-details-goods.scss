@@ -1,20 +1,20 @@
 .order-details-goods {
-    padding-top: 4rem;
+	padding-top: 4rem;
 
-    &__title {
-        margin-bottom: 3.5rem;
-    }
+	&__title {
+		margin-bottom: 3.5rem;
+	}
 
-    &__list {
-        display: grid;
-        gap: 1.5rem 8.2rem;
+	&__list {
+		display: grid;
+		gap: 1.5rem 8.2rem;
 
-        @media (max-width: 1024px) {
-            column-gap: 3rem;
-        }
+		@media (max-width: 1024px) {
+			column-gap: var(--offset-ls);
+		}
 
-        @media (min-width: 501px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
+		@media (min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
 }

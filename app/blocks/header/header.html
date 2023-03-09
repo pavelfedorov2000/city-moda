@@ -2,15 +2,16 @@
 	<div class="header__top">
 		<div class="container header__top-inner">
 			@@include('blocks/region-header/region-header.html')
-			@@include('blocks/action-header/action-header.html', {
+			@@include('blocks/action-btn/action-btn.html', {
 			"class": "header__shops-search",
-			"searchShops": true,
+			"icon": "pin",
 			"text": "Найти магазины"
 			})
 			<div class="contacts-header">
-				@@include('blocks/action-header/action-header.html', {
+				@@include('blocks/action-btn/action-btn.html', {
 				"class": "header__call",
-				"tel": "88002503005",
+				"href": "88002503005",
+				"icon": "phone",
 				"text": "8 800 250 30 05"
 				})
 				<span class="contacts-header__call-descr">Звонок бесплатный</span>

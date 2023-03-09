@@ -1,18 +1,16 @@
 <div class="header__actions">
 	<button class="header__search-btn" type="button" aria-expanded="false"></button>
-	@@include('blocks/action-header/action-header.html', {
-	"dataPopup": "auth-popup",
-	"user": true,
+	@@loop('blocks/action-btn/action-btn.html', [{
+	"popupName": "auth-popup",
+	"icon": "user",
 	"text": "Профиль"
-	})
-	@@include('blocks/action-header/action-header.html', {
-	"favorite": true,
+	}, {
+	"icon": "favorite",
 	"text": "Избранное"
-	})
-	@@include('blocks/action-header/action-header.html', {
-	"dataPopup": "cart",
-	"cart": true,
+	}, {
+	"popupName": "drop-basket",
+	"icon": "cart",
 	"text": "Корзина",
-	"quantity": "2"
-	})
+	"count": "2"
+	}])
 </div>

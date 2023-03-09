@@ -3,7 +3,12 @@
 		<div class="aside-popup__form-inputs">
 			<input class="input aside-popup__form-input" name="phone" type="tel" placeholder="Введите номер телефона">
 		</div>
-		<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+		@@include('blocks/button/button.html', {
+		"class": "aside-popup__form-btn",
+		"type": "submit",
+		"text": "Войти",
+		"isDisabled": true
+		})
 	</form>
 	<button data-enter="login-enter" class="aside-popup__link-btn" type="button">
 		Войти с помощью e-mail и пароля

@@ -13,11 +13,17 @@
 					<li>— @@sms</li>
 					}
 				</ul>
-				<a class="subscribe-card__change-btn" href="#sale-popup" data-fancybox>Изменить</a>
+				<a class="btn btn--style_link" href="#sale-popup" data-fancybox>
+					<span class="btn__text">Изменить</span>
+				</a>
 			</div>
 			<div class="subscribe-card__text">Описание подписки на распродажу и акции для женщин и мужчин</div>
 			<div class="subscribe-card__bottom">
-				<button class="btn subscribe-card__cancel-btn btn--disabled" type="button">Отменить подписку</button>
+				@@include('blocks/button/button.html', {
+				"class": "subscribe-card__cancel-btn",
+				"disabled": true,
+				"text": "Отменить подписку",
+				})
 				<div
 					class="notify subscribe-card__notify@@if(context.status === 'success'){ success}@@if(context.status === 'error'){ error}">
 					<img class="notify__icon"

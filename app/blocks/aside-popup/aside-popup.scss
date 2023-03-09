@@ -1,217 +1,201 @@
 .aside-popup {
-    position: absolute;
-    top: 0;
-    right: -100%;
-    z-index: 101;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    bottom: 0;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    width: 51.5rem;
-    background-color: #fff;
-    transition: $transition all;
-    @include scrollbar;
+	position: absolute;
+	top: 0;
+	right: -100%;
+	z-index: 101;
+	bottom: 0;
+	height: 100%;
+	width: 51.5rem;
+	background-color: #fff;
+	transition: $transition all;
+	overflow-x: hidden;
+	overflow-y: auto;
+	@include scrollbar;
+	@include hide();
 
-    &--basket {
-        padding-bottom: 0;
-    }
+	&--basket {
+		padding-bottom: 0;
+	}
 
-    &.active {
-        right: 0;
-        opacity: 1;
-        visibility: visible;
-        pointer-events: all;
+	&.active {
+		right: 0;
+		@include show();
 
-        @media (max-width: 767px) {
-            right: 0;
-        }
-    }
+		@media (max-width: 767px) {
+			right: 0;
+		}
+	}
 
-    @media (max-width: 767px) {
-        width: 100%;
-        right: -100%;
-    }
+	@media (max-width: 767px) {
+		width: 100%;
+		right: -100%;
+	}
 
-    // .aside-popup__close
+	// .aside-popup__close
 
-    &__close {
-        position: absolute;
-        top: 2rem;
-        right: 2rem;
-        z-index: 20;
-        width: 3.2rem;
-        height: 3.2rem;
+	&__close {
+		position: absolute;
+		top: var(--offset-ms);
+		right: var(--offset-ms);
+		z-index: 20;
+		width: var(--icon-size_l);
+		height: var(--icon-size_l);
 
-        svg {
-            fill: var(--dark-gray);
-            transition: $transition fill;
-        }
+		svg {
+			fill: var(--dark-gray);
+			transition: $transition fill;
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                svg {
-                    fill: var(--red);
-                }
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				svg {
+					fill: var(--red);
+				}
+			}
+		}
+	}
 
-    // .aside-popup__title
+	// .aside-popup__title
 
-    &__title {
-        @extend %text-25;
-        font-weight: 500;
+	&__title {
+		@extend %text-25;
+		font-weight: 500;
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: var(--offset-ls);
+		}
+	}
 
-    &__back-btn {
-        @extend %vertical-align;
-        color: var(--gray);
-        transition: $transition color;
+	&__back-btn {
+		text-decoration: none;
+		margin-bottom: var(--gap);
 
-        svg {
-            flex-shrink: 0;
-            width: 1rem;
-            height: 1rem;
-            margin-right: 1rem;
-            transition: $transition fill;
-        }
+		@media (max-width: 500px) {
+			margin-bottom: var(--offset-ls);
+		}
 
-        &:not(:last-child) {
-            margin-bottom: var(--gap);
+		svg {
+			margin-right: var(--offset-xs);
+		}
 
-            @media (max-width: 500px) {
-                margin-bottom: 3rem;
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--dark);
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--dark);
+				svg {
+					fill: var(--dark);
+				}
+			}
+		}
+	}
 
-                svg {
-                    fill: var(--dark);
-                }
-            }
-        }
-    }
+	// .aside-popup__text
 
-    // .aside-popup__text
+	&__text {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
 
-    &__text {
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-    }
+	// .aside-popup__tabs
 
-    // .aside-popup__tabs
+	&__tabs {
+		gap: 4rem;
+		margin-bottom: 4rem;
+	}
 
-    &__tabs {
-        gap: 4rem;
+	// .aside-popup__tab
 
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-    }
+	&__tab {
+		padding-bottom: 0.9rem;
+	}
 
-    // .aside-popup__tab
+	// .aside-popup__content
 
-    &__tab {
-        padding-bottom: 0.9rem;
-    }
+	&__content {
+		@media (min-width: 768px) {
+			width: 30rem;
+		}
+	}
 
-    // .aside-popup__content
+	&__body {
+		&:not(:last-child) {
+			padding-bottom: var(--offset-ls);
+		}
+	}
 
-    &__content {
-        @media (min-width: 768px) {
-            width: 30rem;
-        }
-    }
+	// .aside-popup__form
 
-    &__body {
-        &:not(:last-child) {
-            padding-bottom: 3rem;
-        }
-    }
+	&__form {
+		&:not(:last-child) {
+			margin-bottom: 4rem;
+		}
+	}
 
-    // .aside-popup__form
+	&__form-inputs {
+		@include row-grid(1.5rem);
 
-    &__form {
-        &:not(:last-child) {
-            margin-bottom: 4rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: var(--offset-ms);
+		}
+	}
 
-    &__form-inputs {
-        display: grid;
-        gap: 1.5rem;
+	&__form-wrap {
+		@extend %flex-row-center;
 
-        &:not(:last-child) {
-            margin-bottom: 2rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: var(--offset-ls);
+		}
 
-    &__form-wrap {
-        @extend %flex-row-center;
+		.form-agree {
+			align-items: center;
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
-        }
+		.check-text {
+			margin-left: var(--offset-xxs);
+		}
+	}
 
-        .form-agree {
-            align-items: center;
-        }
+	&__form-btn {
+		justify-content: center;
+		font-weight: 600;
+		padding: 1.3rem;
+		width: 100%;
+	}
 
-        .check-text {
-            margin-left: 0.8rem;
-        }
-    }
+	&__form-success {
+		margin-top: var(--offset-ls);
+	}
 
-    &__form-btn {
-        font-weight: 600;
-        padding: 1.3rem;
-        width: 100%;
-    }
+	// .aside-popup__link-btn
 
-    &__form-success {
-        margin-top: 3rem;
-    }
+	&__link-btn {
+		font-weight: 500;
+		color: var(--green);
+		text-align: left;
+	}
 
-    // .aside-popup__link-btn
+	// .aside-popup__social
 
-    &__link-btn {
-        font-weight: 500;
-        color: var(--green);
-        text-align: left;
-    }
+	&__social {
+		padding-top: var(--offset-ls);
+		border-top: 0.1rem solid #ccc;
+	}
 
-    // .aside-popup__social
+	// .aside-popup__social-title
 
-    &__social {
-        padding-top: 3rem;
-        border-top: 0.1rem solid #ccc;
-    }
+	&__social-title {
+		margin-bottom: var(--offset);
+		font-weight: 500;
+	}
 
-    // .aside-popup__social-title
+	&__social-list {
+		gap: var(--offset-ms);
 
-    &__social-title {
-        margin-bottom: 1.6rem;
-        font-weight: 500;
-    }
-
-    &__social-list {
-        gap: 2rem;
-
-        svg {
-            width: 4rem;
-            height: 4rem;
-            fill: var(--dark);
-        }
-    }
+		svg {
+			width: 4rem;
+			height: 4rem;
+			fill: var(--dark);
+		}
+	}
 }

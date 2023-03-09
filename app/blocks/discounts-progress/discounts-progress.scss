@@ -18,8 +18,8 @@
 		display: flex;
 
 		@media(max-width: 1024px) {
-			width: 3rem * 9;
-			min-width: 3rem * 9;
+			width: calc(var(--icon-size_ls) * 9);
+			min-width: calc(var(--icon-size_ls) * 9);
 		}
 	}
 
@@ -34,20 +34,20 @@
 		white-space: nowrap;
 
 		&:first-child {
-			margin-left: 0.4rem;
+			margin-left: var(--offset-xxxs);
 		}
 
 		&:before,
 		&:after {
 			content: '';
-			position: absolute;
 		}
 
 		&:not(:last-child) {
 			margin-right: 9.2rem;
 
 			&:after {
-				bottom: 1rem;
+				position: absolute;
+				bottom: var(--offset-xs);
 				right: -1.7rem - 5.8rem;
 				width: 5.8rem;
 				height: 0.1rem;
@@ -58,8 +58,8 @@
 		&:before {
 			top: 0rem;
 			@extend %pos-center-x;
-			width: 3rem;
-			height: 3rem;
+			width: var(--icon-size_ls);
+			height: var(--icon-size_ls);
 			background-image: url(../images/icons/lock.svg);
 			@extend %bg-contain;
 		}

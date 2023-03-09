@@ -1,41 +1,30 @@
 .catalog-view {
-    display: flex;
+	display: flex;
+	gap: var(--offset);
 
-    &__btn {
-        margin-right: 1.6rem;
+	@media(max-width: 500px) {
+		gap: var(--offset-sm);
+	}
 
-        @media (max-width: 500px) {
-            margin-right: 1.4rem;
-        }
+	&__btn {
+		svg {
+			width: 1.9rem;
+			height: 1.9rem;
 
-        svg {
-            width: 1.9rem;
-            height: 1.9rem;
+			@media (max-width: 500px) {
+				width: 1.8rem;
+				height: 1.8rem;
+			}
 
-            @media (max-width: 500px) {
-                width: 1.8rem;
-                height: 1.8rem;
-            }
+			rect {
+				transition: $transition stroke;
+			}
+		}
 
-            rect {
-                transition: $transition stroke;
-            }
-        }
-
-        &:last-child {
-            margin-right: 0;
-        }
-
-        &:nth-last-child(-n + 2) {
-            @media (min-width: 768px) {
-                margin-right: 0;
-            }
-        }
-
-        &.active {
-            svg rect {
-                stroke: #505661;
-            }
-        }
-    }
+		&.active {
+			svg rect {
+				stroke: #505661;
+			}
+		}
+	}
 }

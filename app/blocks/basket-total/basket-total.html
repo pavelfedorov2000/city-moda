@@ -1,73 +1,74 @@
 <div class="basket-total">
-    <div class="basket-total__inner">
-        <div class="basket-total__auth">
-            <button class="basket-total__auth-btn"
-                    type="button"
-                    data-popup="auth-popup"
-                    aria-expanded="false">Авторизуйтесь</button>
-            чтобы
-            воспользоваться
-            скидкой по
-            программе
-            лояльности.
-        </div>
-        <div class="subscribe-form basket-total__promocode promocode">
-            @@include('blocks/subscribe-form/subscribe-form.html', {
-            "inputName": "promocode",
-            "placeholder": "Введите промокод",
-            "ariaLabel": "Ввести промокод"
-            })
-            <div class="promocode__row">
-                <div class="promocode-notify promocode-notify--success">Промокод применен</div>
-                @@include('blocks/link-btn/link-btn.html', {
-                "class": "promocode__delete-notify",
-                "text": "Удалить"
-                })
-            </div>
-            <div class="promocode__row">
-                <div class="promocode-notify promocode-notify--error">Промокод не найден</div>
-                @@include('blocks/link-btn/link-btn.html', {
-                "class": "promocode__delete-notify",
-                "text": "Удалить"
-                })
-            </div>
-        </div>
-        <dl class="basket-total__list">
-            <div class="basket-total__list-item">
-                <dt>Товаров на сумму</dd>
-                <dd>52 100 ₽</dd>
-            </div>
-            <div class="basket-total__list-item">
-                <dt>Скидка</dt>
-                <dd>
-                    <span>-9 560 ₽</span>
-                </dd>
-            </div>
-            <div class="basket-total__list-item">
-                <dt>Доставка</dd>
-                <dd>0 ₽</dd>
-            </div>
-            <div class="basket-total__list-item">
-                <dt>Промокод (10%)</dt>
-                <dd>
-                    <span>-5 210 ₽</span>
-                </dd>
-            </div>
-            <div class="basket-total__list-item">
-                <dt>Программа лояльности (3%)</dt>
-                <dd>
-                    <span>-1 563 ₽</span>
-                </dd>
-            </div>
-        </dl>
-        <div class="basket-total__overall">
-            <div class="basket-total__overall-title">Итого</div>
-            <div class="basket-total__overall-sum">42 540 ₽</div>
-        </div>
-        <button class="btn basket-total__btn"
-                type="submit">Отправить заказ</button>
-        <div class="basket-total__agreement">
-            Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="#">Публичной оферты.</a>
-        </div>
-    </div>
+	<div class="basket-total__inner">
+		<div class="basket-total__auth">
+			<button class="basket-total__auth-btn" type="button" data-popup="auth-popup" aria-controls="auth-popup"
+				aria-expanded="false">Авторизуйтесь</button>
+			чтобы
+			воспользоваться
+			скидкой по
+			программе
+			лояльности.
+		</div>
+		<div class="subscribe-form basket-total__promocode promocode">
+			@@include('blocks/subscribe-form/subscribe-form.html', {
+			"inputName": "promocode",
+			"placeholder": "Введите промокод",
+			"ariaLabel": "Ввести промокод"
+			})
+			<div class="promocode__row">
+				<div class="promocode-notify promocode-notify--success">Промокод применен</div>
+				@@include('blocks/link-btn/link-btn.html', {
+				"class": "promocode__delete-notify",
+				"text": "Удалить"
+				})
+			</div>
+			<div class="promocode__row">
+				<div class="promocode-notify promocode-notify--error">Промокод не найден</div>
+				@@include('blocks/link-btn/link-btn.html', {
+				"class": "promocode__delete-notify",
+				"text": "Удалить"
+				})
+			</div>
+		</div>
+		<dl class="basket-total__list">
+			<div class="basket-total__list-item">
+				<dt>Товаров на сумму</dd>
+				<dd>52 100 ₽</dd>
+			</div>
+			<div class="basket-total__list-item">
+				<dt>Скидка</dt>
+				<dd>
+					<span>-9 560 ₽</span>
+				</dd>
+			</div>
+			<div class="basket-total__list-item">
+				<dt>Доставка</dd>
+				<dd>0 ₽</dd>
+			</div>
+			<div class="basket-total__list-item">
+				<dt>Промокод (10%)</dt>
+				<dd>
+					<span>-5 210 ₽</span>
+				</dd>
+			</div>
+			<div class="basket-total__list-item">
+				<dt>Программа лояльности (3%)</dt>
+				<dd>
+					<span>-1 563 ₽</span>
+				</dd>
+			</div>
+		</dl>
+		<div class="basket-total__overall">
+			<div class="basket-total__overall-title">Итого</div>
+			<div class="basket-total__overall-sum">42 540 ₽</div>
+		</div>
+		@@include('blocks/button/button.html', {
+		"class": "basket-total__btn",
+		"type": "submit",
+		"text": "Отправить заказ"
+		})
+		<div class="basket-total__agreement">
+			Нажимая на кнопку «Отправить заказ», вы принимаете условия <a href="#">Публичной оферты.</a>
+		</div>
+	</div>
 </div>

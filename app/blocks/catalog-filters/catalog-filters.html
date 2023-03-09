@@ -15,5 +15,12 @@
 		@@include('blocks/catalog-filters/items/style.html')
 		@@include('blocks/catalog-filters/items/decor.html')
 	</div>
-	@@include('blocks/catalog-filters/buttons/reset.html')
+	@@include('blocks/button/button.html', {
+	"class": "catalog-filters__reset-btn",
+	"type": "reset",
+	"style": "link-gray",
+	"icon": "reset",
+	"reversed": true,
+	"text": "Очистить все"
+	})
 </form>

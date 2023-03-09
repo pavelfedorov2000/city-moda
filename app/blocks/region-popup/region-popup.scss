@@ -1,7 +1,4 @@
 .region-popup {
-
-	// .region-popup__inner
-
 	&__inner {
 		display: grid;
 
@@ -20,7 +17,7 @@
 		padding: 6rem 5rem;
 
 		@media(max-width: 1024px) {
-			padding: 3rem;
+			padding: var(--offset-ls);
 		}
 	}
 
@@ -31,7 +28,7 @@
 		font-weight: 500;
 
 		&:not(:last-child) {
-			margin-bottom: 3.2rem;
+			margin-bottom: var(--offset-l);
 		}
 	}
 
@@ -40,15 +37,15 @@
 	&__input {
 		@extend %text-14;
 		width: 100%;
-		padding: 1.55rem 2rem;
+		padding: 1.55rem var(--offset-ms);
 		border: 0.1rem solid var(--dark);
 
 		@media(max-width: 500px) {
-			padding: 1rem 1.5rem;
+			padding: var(--offset-xs) 1.5rem;
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 2.4rem;
+			margin-bottom: var(--offset-m);
 		}
 
 		&::placeholder {
@@ -59,26 +56,17 @@
 	// .region-popup__cities
 
 	&__cities-row {
-		display: grid;
-		row-gap: 1.6rem;
+		@include row-grid(var(--offset));
 
 		@media(min-width: 768px) {
 			height: 10rem;
 			overflow-y: auto;
 			@include scrollbar;
 		}
-
-		/* @media(min-width: 768px) {
-			grid-template-columns: repeat(2, 1fr);
-		} */
 	}
 
 	&__city {
 		display: block;
-
-		/* &:not(:last-child) {
-			margin-bottom: 1.6rem;
-		} */
 
 		.radio-text {
 			@extend %text-13;

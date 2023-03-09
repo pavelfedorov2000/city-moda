@@ -8,12 +8,6 @@
 			}
 		}
 
-		&__favorite {
-			@media (max-width: 500px) {
-				top: 0.8rem;
-			}
-		}
-
 		&__label {
 			@media (max-width: 500px) {
 				width: 3rem;
@@ -25,9 +19,8 @@
 
 		&__favorite {
 			@media (max-width: 500px) {
-				right: 0.8rem;
-				width: 1.6rem;
-				height: 1.6rem;
+				width: var(--icon-size_m);
+				height: var(--icon-size_m);
 			}
 		}
 
@@ -46,7 +39,7 @@
 
 			&:not(:last-child) {
 				@media (max-width: 500px) {
-					margin-bottom: 0.4rem;
+					margin-bottom: var(--offset-xxxs);
 				}
 			}
 		}
@@ -78,12 +71,12 @@
 			padding-top: var(--gap);
 
 			@media (max-width: 500px) {
-				padding-top: 3rem;
+				padding-top: var(--offset-ls);
 			}
 		}
 
 		@media (max-width: 767px) {
-			padding-bottom: 3rem;
+			padding-bottom: var(--offset-ls);
 		}
 	}
 
@@ -105,14 +98,14 @@
 	&__filters {
 		@extend %flex-row;
 		align-items: flex-start;
-		padding-bottom: 2rem;
+		padding-bottom: var(--offset-ms);
 		border-bottom: 0.1rem solid #efefef;
 
 		&:not(:last-child) {
-			margin-bottom: 3rem;
+			margin-bottom: var(--offset-ls);
 
 			@media (max-width: 500px) {
-				margin-bottom: 2rem;
+				margin-bottom: var(--offset-ms);
 			}
 		}
 	}
@@ -131,7 +124,7 @@
 		}
 
 		@media (max-width: 500px) {
-			padding-top: 3rem;
+			padding-top: var(--offset-ls);
 		}
 	}
 }
@@ -139,10 +132,10 @@
 .catalog-list {
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
+	gap: var(--offset-ms);
 
 	@media (max-width: 767px) {
-		gap: 1.2rem 1.6rem;
+		gap: var(--offset-s) var(--offset);
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -207,11 +200,11 @@
 	&__top {
 		display: flex;
 		flex-wrap: wrap;
-		gap: 1.6rem;
+		gap: var(--offset);
 		margin-bottom: 4rem;
 
 		@media (max-width: 500px) {
-			margin-bottom: 3rem;
+			margin-bottom: var(--offset-ls);
 		}
 	}
 

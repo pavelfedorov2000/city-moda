@@ -1,39 +1,29 @@
 <div class="feedback">
-    <form action="#"
-          class="feedback__form">
-        <div class="feedback__form-inputs">
-            <input class="input"
-                   name="name"
-                   placeholder="Имя*">
-            <input class="input"
-                   name="surname"
-                   placeholder="Фамилия*">
-            <input class="input"
-                   type="tel"
-                   name="phone"
-                   placeholder="Ваш телефон*">
-            <input class="input"
-                   type="email"
-                   name="email"
-                   placeholder="Ваш e-mail*">
-            <textarea class="input feedback__form-textarea"
-                      name="comment"
-                      placeholder="Комментарий"></textarea>
-        </div>
-        <div class="feedback__form-agrees">
-            @@include('blocks/checkbox/checkbox.html', {
-            "class": "form-agree feedback__form-agree",
-            "name": "politics_agree",
-            "text": "Согласен с <a href='#'>Политикой конфиденциальности</a>"
-            })
-            @@include('blocks/checkbox/checkbox.html', {
-            "class": "form-agree feedback__form-agree",
-            "name": "personal_agree",
-            "text": "Согласен с <a href='#'>Правилами использования персональных данных</a>"
-            })
-        </div>
-        <button class="btn feedback__form-btn"
-                type="submit"
-                disabled>Отправить</button>
-    </form>
+	<form action="#" class="feedback__form">
+		<div class="feedback__form-inputs">
+			<input class="input" name="name" placeholder="Имя*">
+			<input class="input" name="surname" placeholder="Фамилия*">
+			<input class="input" type="tel" name="phone" placeholder="Ваш телефон*">
+			<input class="input" type="email" name="email" placeholder="Ваш e-mail*">
+			<textarea class="input feedback__form-textarea" name="comment" placeholder="Комментарий"></textarea>
+		</div>
+		<div class="feedback__form-agrees">
+			@@include('blocks/checkbox/checkbox.html', {
+			"class": "form-agree feedback__form-agree",
+			"name": "politics_agree",
+			"text": "Согласен с <a href='#'>Политикой конфиденциальности</a>"
+			})
+			@@include('blocks/checkbox/checkbox.html', {
+			"class": "form-agree feedback__form-agree",
+			"name": "personal_agree",
+			"text": "Согласен с <a href='#'>Правилами использования персональных данных</a>"
+			})
+		</div>
+		@@include('blocks/button/button.html', {
+		"class": "feedback__form-btn",
+		"type": "submit",
+		"text": "Отправить",
+		"isDisabled": true
+		})
+	</form>
 </div>

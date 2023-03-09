@@ -14,12 +14,11 @@
 	}
 
 	@media(max-width: 767px) {
+		@include padding-x(var(--offset-ls));
 		width: 100vw;
 		min-height: 100vh;
 		top: 0;
 		left: 0;
-		padding-left: 3rem;
-		padding-right: 3rem;
 	}
 
 	.select {
@@ -33,7 +32,7 @@
 
 			&:after {
 				right: 0;
-				top: 0.8rem;
+				top: var(--offset-xxs);
 			}
 		}
 
@@ -63,7 +62,7 @@
 
 	&__form-item {
 		display: grid;
-		gap: 1rem;
+		gap: var(--offset-xs);
 
 		@media(min-width: 768px) {
 			grid-template-columns: max-content 24.7rem;
@@ -88,7 +87,7 @@
 		}
 
 		.check-text {
-			padding-left: 1.2rem;
+			padding-left: var(--offset-s);
 		}
 	}
 
@@ -96,6 +95,6 @@
 
 	&__form-btn {
 		font-weight: 500;
-		padding: 1.3rem 3rem;
+		padding: 1.3rem var(--offset-ls);
 	}
 }

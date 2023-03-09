@@ -1,56 +1,56 @@
 .catalog-home-card {
-    $this: &;
+	$this: &;
 
-    position: relative;
-    height: 61rem;
+	position: relative;
+	height: 61rem;
 
-    @media (max-width: 1024px) {
-        height: 35rem;
-    }
+	@media (max-width: 1024px) {
+		height: 35rem;
+	}
 
-    @media (max-width: 767px) {
-        height: 55rem;
-    }
+	@media (max-width: 767px) {
+		height: 55rem;
+	}
 
-    @media (max-width: 500px) {
-        height: 30rem;
-    }
+	@media (max-width: 500px) {
+		height: 30rem;
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            #{$this}__title {
-                height: 100%;
-            }
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			#{$this}__title {
+				height: 100%;
+			}
+		}
+	}
 
-    // .catalog-home-card__title
+	// .catalog-home-card__title
 
-    &__title {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-color: rgba(#101112, 0.6);
-        padding: 0 2.4rem;
-        @extend %flex-center;
-        text-align: center;
-        @extend %text-25;
-        font-weight: 500;
-        color: #fff;
-        height: 8.6rem;
-        transition: 0.5s height;
+	&__title {
+		@extend %flex-center;
+		@extend %text-25;
+		@include padding-x(var(--offset-m));
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 8.6rem;
+		background-color: rgba(#101112, 0.6);
+		text-align: center;
+		font-weight: 500;
+		color: #fff;
+		transition: $transition height;
 
-        @media (max-width: 1024px) {
-            height: 6rem;
-            font-size: 2rem;
-            line-height: 3rem;
-        }
-    }
+		@media (max-width: 1024px) {
+			height: 6rem;
+			font-size: 2rem;
+			line-height: 3rem;
+		}
+	}
 
-    &__img {
-        img {
-            @extend %cover;
-        }
-    }
+	&__img {
+		img {
+			@extend %cover;
+		}
+	}
 }

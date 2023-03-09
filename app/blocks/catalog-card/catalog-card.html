@@ -30,12 +30,12 @@
 		<div class="catalog-card__content">
 			<a class="catalog-card__title" href="#">@@title</a>
 			<div class="catalog-card__subtitle">@@subtitle</div>
-			<div class="prices">
+			<div class="prices catalog-card__prices">
 				@@if(context.newprice){
-				<div class="new-price catalog-card__new-price">@@newprice</div>
+				<div class="new-price">@@newprice</div>
 				}
 				@@if(context.oldprice){
-				<div class="old-price catalog-card__old-price">@@oldprice</div>
+				<s class="old-price catalog-card__old-price">@@oldprice</s>
 				}
 				@@if(context.price){
 				<div class="catalog-card__price">@@price</div>

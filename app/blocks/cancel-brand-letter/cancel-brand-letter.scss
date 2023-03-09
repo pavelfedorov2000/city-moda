@@ -1,20 +1,14 @@
 .cancel-brand-letter {
-	@extend %vertical-align;
-	@extend %text-12;
+	font-size: 1.2rem;
+	line-height: 1.8rem;
 	font-weight: 600;
 	letter-spacing: 0.1em;
-	color: var(--gray);
 	text-transform: uppercase;
-	transition: $transition color;
+	text-decoration: none;
 	display: none;
 
 	svg {
-		flex-shrink: 0;
 		margin-left: 0.5rem;
-		width: 1.6rem;
-		height: 1.6rem;
-		fill: var(--gray);
-		transition: $transition fill;
 	}
 
 	@media (any-hover: hover) {

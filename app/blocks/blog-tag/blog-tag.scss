@@ -1,17 +1,13 @@
 .blog-tag {
 	@extend %vertical-align;
 	font-weight: 500;
-	padding: 0.8rem 1rem;
+	padding: var(--offset-xxs) var(--offset-xs);
 	border: 0.1rem solid var(--dark-gray);
 	transition: $transition all;
 
 	svg {
-		flex-shrink: 0;
 		margin-left: 0.5rem;
-		width: 1.6rem;
-		height: 1.6rem;
 		fill: var(--gray);
-		transition: $transition fill;
 	}
 
 	@media (any-hover: hover) {

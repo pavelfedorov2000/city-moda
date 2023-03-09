@@ -6,7 +6,7 @@
 	@@include("blocks/burger/burger.html")
 	<div class="container product-card">
 		<main class="page ">
-			<nav class="breadcrumbs" aria-label="breadcrumbs">
+			<nav class="breadcrumbs" aria-label="Хлебные крошки">
 				<ol class="breadcrumbs__list">
 					<li class="breadcrumbs__item">
 						<a href="#">
@@ -43,8 +43,14 @@
 			@@include("blocks/product-card/product-card.html")
 		</main>
 		<aside class="product-card__page">
-			@@include('blocks/recommended-goods/recommended-goods.html')
-			@@include('blocks/similar-goods/similar-goods.html')
+			@@include('blocks/slider-section/slider-section.html', {
+			"name": "recommended-goods",
+			"title": "С этим товаром рекомендуем"
+			})
+			@@include('blocks/slider-section/slider-section.html', {
+			"name": "similar-goods",
+			"title": "Похожие товары"
+			})
 		</aside>
 	</div>
 </div>

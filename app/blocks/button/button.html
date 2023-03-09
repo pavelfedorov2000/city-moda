@@ -1,0 +1,11 @@
+<@@if(!context.href){button}@@if(context.href){a href="@@href" } class="btn@@if(context.class){ @@class}@@if(context.style){ btn--style_@@style}@@if(context.transparent){
+	btn--transparent}@@if(context.disabled){ btn--disabled}@@if(context.reversed){ btn--reversed}"
+	@@if(!context.href){type="@@if(context.type ==
+	'submit'){submit}@@if(context.type ==
+	'reset'){reset}@@if(!context.type){button}" } @@if(context.isDisabled){disabled}@@if(context.fancybox){data-fancybox
+	data-touch="false" }>
+	@@if(context.icon){
+	@@include('blocks/icons/@@icon.html')
+	}
+	<span class="btn__text">@@text</span>
+	</@@if(!context.href){button}@@if(context.href){a}>

@@ -1,30 +1,30 @@
 .catalog-home {
-    padding-top: 1.5rem;
-    // .catalog-home__grid
+	padding-top: 1.5rem;
+	// .catalog-home__grid
 
-    &__grid {
-        display: grid;
-        gap: 2rem;
+	&__grid {
+		display: grid;
+		gap: var(--offset-ms);
 
-        &:not(:last-child) {
-            margin-bottom: 11rem;
+		&:not(:last-child) {
+			margin-bottom: 11rem;
 
-            @media (max-width: 1024px) {
-                margin-bottom: 7rem;
-            }
+			@media (max-width: 1024px) {
+				margin-bottom: 7rem;
+			}
 
-            @media (max-width: 767px) {
-                margin-bottom: 3rem;
-            }
-        }
+			@media (max-width: 767px) {
+				margin-bottom: var(--offset-ls);
+			}
+		}
 
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(3, 1fr);
-            gap: 3rem;
-        }
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(3, 1fr);
+			gap: var(--offset-ls);
+		}
 
-        @media (min-width: 1025px) {
-            gap: var(--gap);
-        }
-    }
+		@media (min-width: 1025px) {
+			gap: var(--gap);
+		}
+	}
 }

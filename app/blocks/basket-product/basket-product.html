@@ -1,80 +1,54 @@
 <li>
-    <article class="basket-product@@if(context.class){ @@class}">
-        <a href="#"
-           class="basket-product__img">
-            <picture>
-                <source type="image/webp"
-                        data-srcset="@@src.webp"
-                        srcset="assets/images/src.webp">
-                <img class="lazy"
-                     data-src="@@src.jpg"
-                     src="assets/images/src.jpg"
-                     alt="фото">
-            </picture>
-        </a>
-        <a href="#"
-           class="product-title basket-product__title">@@title</a>
-        <dl class="product-list basket-product__list">
-            <div>
-                <dt>Артикул:</dt>
-                <dd>MP002XW08J2L</dt>
-            </div>
-            <div>
-                <dt>Цвет:</dt>
-                <dd>бежевый</dt>
-            </div>
-            <div>
-                <dt>Размер:</dd>
-                <dd>42</dt>
-            </div>
-        </dl>
-        <div class="basket-product__buttons">
-            <button class="basket-product__btn basket-product__btn--delete"
-                    type="button">
-                <svg viewBox="0 0 10 10"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.8">
-                        <path fill-rule="evenodd"
-                              clip-rule="evenodd"
-                              d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
-                    </g>
-                </svg>
-                <span>Удалить</span>
-            </button>
-            @@if(context.favoriteBtn){
-            <button class="basket-product__btn basket-product__btn--favorite"
-                    type="button">
-                <svg viewBox="0 0 10 10"
-                     fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd"
-                          clip-rule="evenodd"
-                          d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" />
-                </svg>
-                <span>В избранное</span>
-            </button>
-            }
-        </div>
-        @@include('blocks/counter/counter.html', {"element": "basket-product__counter"})
-        <div class="basket-product__prices">
-            <div class="basket-product__prices-wrap">
-                @@if(context.oldPrice){
-                <div class="old-price basket-product__old-price">@@oldPrice</div>
-                }
-                @@if(context.newPrice){
-                <div class="new-price">@@newPrice</div>
-                }
-                @@if(context.price){
-                <div class="basket-product__price">@@price</div>
-                }
-            </div>
-            @@if(context.discount){
-            <div class="basket-product__discount">
-                <div class="basket-product__discount-percent">Сумма скидки @@discount.percent</div>
-                <div class="basket-product__discount-sum">(@@discount.sum)</div>
-            </div>
-            }
-        </div>
-    </article>
+	<article class="basket-product@@if(context.class){ @@class}">
+		<a href="#" class="basket-product__img">
+			<picture>
+				<source type="image/webp" data-srcset="@@src.webp" srcset="assets/images/src.webp">
+				<img class="lazy" data-src="@@src.jpg" src="assets/images/src.jpg" alt="фото">
+			</picture>
+		</a>
+		<a href="#" class="product-title basket-product__title">@@title</a>
+		@@include('blocks/product-list/product-list.html', {
+		"class": "basket-product__list"
+		})
+		<div class="basket-product__buttons">
+			<button class="btn basket-product__btn basket-product__btn--delete btn--transparent" type="button">
+				<svg class="icon icon--size_xs" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<g opacity="0.8">
+						<path fill-rule="evenodd" clip-rule="evenodd"
+							d="M8.26018 0.916504L4.99935 4.17734L1.73852 0.916504L0.916016 1.739L4.17685 4.99984L0.916016 8.26067L1.73852 9.08317L4.99935 5.82234L8.26018 9.08317L9.08268 8.26067L5.82185 4.99984L9.08268 1.739L8.26018 0.916504Z" />
+					</g>
+				</svg>
+				<span class="btn__text">Удалить</span>
+			</button>
+			@@if(context.favoriteBtn){
+			<button class="btn basket-product__btn basket-product__btn--favorite btn--transparent" type="button">
+				<svg class="icon icon--size_xs" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path fill-rule="evenodd" clip-rule="evenodd"
+						d="M4.8107 8.4963L4.81072 8.49625L4.80354 8.49379C4.08775 8.24832 3.12853 7.67452 2.35329 6.82545C1.58257 5.98132 1.02051 4.89635 1.02051 3.62091C1.02051 2.43666 1.97787 1.47925 3.14967 1.47925C3.72137 1.47925 4.25163 1.70161 4.64462 2.09796L4.99967 2.45605L5.35473 2.09796C5.74773 1.70161 6.27797 1.47925 6.84968 1.47925C8.02096 1.47925 8.97884 2.44032 8.97884 3.62091C8.97884 4.89855 8.41668 5.98347 7.64615 6.8269C6.87106 7.67533 5.91188 8.24823 5.19581 8.49379L5.1958 8.49373L5.18865 8.4963C5.15481 8.50849 5.09099 8.52092 4.99967 8.52092C4.90836 8.52092 4.84454 8.50849 4.8107 8.4963Z" />
+				</svg>
+				<span class="btn__text">В избранное</span>
+			</button>
+			}
+		</div>
+		@@include('blocks/counter/counter.html', {"element": "basket-product__counter"})
+		<div class="basket-product__prices">
+			<div class="basket-product__prices-wrap">
+				@@if(context.oldPrice){
+				<s class="old-price basket-product__old-price">@@oldPrice</s>
+				}
+				@@if(context.newPrice){
+				<div class="new-price">@@newPrice</div>
+				}
+				@@if(context.price){
+				<div class="basket-product__price">@@price</div>
+				}
+			</div>
+			@@if(context.discount){
+			<div class="basket-product__discount">
+				<div class="basket-product__discount-percent">Сумма скидки @@discount.percent</div>
+				<div class="basket-product__discount-sum">(@@discount.sum)</div>
+			</div>
+			}
+		</div>
+	</article>
 </li>

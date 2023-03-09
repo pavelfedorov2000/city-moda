@@ -1,0 +1,11 @@
+<section id="@@name" class="slider-section">
+	@@include('blocks/section-top/section-top.html', {
+	"title": "@@title",
+	"swiper": true
+	})
+	<div class="swiper @@name-slider">
+		<ul class="swiper-wrapper">
+			@@loop("blocks/catalog-card/catalog-card.html", "../resources/assets/@@name.json")
+		</ul>
+	</div>
+</section>

@@ -1,0 +1,26 @@
+.product-card-form {
+	>* {
+		&:not(:last-child) {
+			margin-bottom: var(--offset-ms);
+		}
+	}
+
+	&__title {
+		@extend %text-13;
+	}
+
+	&__buttons {
+		display: grid;
+		gap: var(--offset-s);
+
+		@media (min-width: 501px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
+	}
+
+	&__btn {
+		justify-content: center;
+		font-weight: 500;
+		padding: 1.25rem;
+	}
+}

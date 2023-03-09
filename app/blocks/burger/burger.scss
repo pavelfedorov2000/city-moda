@@ -9,7 +9,7 @@
 		z-index: 101;
 		width: calc(334 / 360 * 100%);
 		height: 100%;
-		padding: 2.5rem 1.6rem 7.5rem;
+		padding: 2.5rem var(--offset) 7.5rem;
 		background-color: #fff;
 		box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25);
 		transition: $transition left;
@@ -24,17 +24,10 @@
 
 	&__top {
 		display: grid;
-		grid-template-columns: 2rem auto;
-		gap: 2rem;
+		grid-template-columns: var(--icon-size_ms) auto;
+		gap: var(--offset-ms);
 		align-items: flex-start;
-		margin-bottom: 3rem;
-	}
-
-	&__close {
-		svg {
-			width: 2rem;
-			height: 2rem;
-		}
+		margin-bottom: var(--offset-ls);
 	}
 
 	&__region {
@@ -61,12 +54,12 @@
 
 	&__sublist {
 		display: none;
-		padding-left: 1.4rem;
-		padding-top: 1.2rem;
+		padding-left: var(--offset-sm);
+		padding-top: var(--offset-s);
 	}
 
 	&__list-item {
-		@include padding-y(1.2rem);
+		@include padding-y(var(--offset-s));
 	}
 
 	&__list-toggle {
@@ -74,14 +67,14 @@
 		color: var(--dark);
 		font-weight: 500;
 		position: relative;
-		padding-right: 2rem;
+		padding-right: var(--offset-ms);
 
 		&:after {
 			content: '';
 			position: absolute;
 			top: 0.2rem;
 			right: 0;
-			width: 1.4rem;
+			width: var(--icon-size_sm);
 			height: 1.5rem;
 			background-image: url(../images/icons/drop.svg);
 			@extend %bg-contain;
@@ -107,7 +100,7 @@
 	}
 
 	&__bottom {
-		@include row-grid(2.4rem);
+		@include row-grid(var(--offset-m));
 	}
 
 	.header {

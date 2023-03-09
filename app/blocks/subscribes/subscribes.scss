@@ -1,11 +1,9 @@
 .profile-subscribes {
-	// .profile-subscribes__inner
-
 	display: grid;
-	gap: 3rem var(--gap);
+	gap: var(--offset-ls) var(--gap);
 
 	@media (max-width: 1024px) {
-		gap: 3rem;
+		gap: var(--offset-ls);
 	}
 
 	@media (min-width: 768px) {
@@ -34,6 +32,5 @@
 }
 
 .profile-subscribes-list {
-	display: grid;
-	row-gap: 1.6rem;
+	@include row-grid(var(--offset));
 }

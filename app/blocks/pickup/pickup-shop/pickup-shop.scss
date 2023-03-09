@@ -1,117 +1,115 @@
 .pickup-shops {
 
-    // .pickup-shops__item
+	// .pickup-shops__item
 
-    &__item {
-        padding: 1.4rem 2.5rem;
+	&__item {
+		padding: var(--offset-sm) 2.5rem;
 
-        @media(max-width: 500px) {
-            padding-left: 1.6rem;
-            padding-right: 1.6rem;
-        }
-    }
+		@media(max-width: 500px) {
+			@include padding-x(var(--offset));
+		}
+	}
 }
 
 .pickup-shop {
-    $this: &;
+	$this: &;
 
-    @extend %flex-row;
-    align-items: flex-start;
-    transition: $transition background-color;
-    cursor: default;
+	@extend %flex-row;
+	align-items: flex-start;
+	transition: $transition background-color;
+	cursor: default;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: var(--gray-bg);
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--gray-bg);
 
-            #{$this} {
-                &__info {
-                    color: var(--dark);
-                }
+			#{$this} {
+				&__info {
+					color: var(--dark);
+				}
 
-                &__filter {
-                    &--card {
-                        fill: var(--dark);
-                    }
+				&__filter {
+					&--card {
+						fill: var(--dark);
+					}
 
-                    &--clothes {
-                        stroke: var(--dark);
-                    }
-                }
-            }
-        }
-    }
+					&--clothes {
+						stroke: var(--dark);
+					}
+				}
+			}
+		}
+	}
 
-    &.active {
-        background-color: #E4EFE7;
-    }
+	&.active {
+		background-color: #E4EFE7;
+	}
 
-    // .pickup-shop__title
+	// .pickup-shop__title
 
-    &__title {
-        font-weight: 600;
+	&__title {
+		font-weight: 600;
 
-        &:not(:last-child) {
-            margin-bottom: 0.6rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: 0.6rem;
+		}
+	}
 
-    // .pickup-shop__info
+	// .pickup-shop__info
 
-    &__info {
-        @extend %text-12;
-        font-weight: 500;
-        color: var(--gray-777);
-        transition: $transition color;
+	&__info {
+		@extend %text-12;
+		font-weight: 500;
+		color: var(--gray-777);
+		transition: $transition color;
 
-        li {
-            &:not(:last-child) {
-                margin-bottom: 0.2rem;
-            }
-        }
-    }
+		li {
+			&:not(:last-child) {
+				margin-bottom: 0.2rem;
+			}
+		}
+	}
 
-    // .pickup-shop__delivery-time
+	// .pickup-shop__delivery-time
 
-    &__delivery-time {
-        @extend %text-13;
+	&__delivery-time {
+		@extend %text-13;
 
-        &:not(:last-child) {
-            margin-bottom: 0.5rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: 0.5rem;
+		}
+	}
 
-    // .pickup-shop__btn
+	// .pickup-shop__btn
 
-    &__btn {
-        @extend %text-12;
-        font-weight: 600;
-        padding: 1rem 1.6rem;
-        margin-top: 0.7rem;
-        //display: none;
-    }
+	&__btn {
+		@extend %text-12;
+		font-weight: 600;
+		padding: var(--offset-xs) var(--offset);
+		margin-top: 0.7rem;
+	}
 
-    // .pickup-shop__filters
+	// .pickup-shop__filters
 
-    &__filters {
-        @extend %flex-col;
-    }
+	&__filters {
+		@extend %flex-col;
+	}
 
-    &__filter {
-        width: 1.4rem;
-        height: 1.4rem;
-        transition: $transition all;
+	&__filter {
+		width: var(--icon-size_sm);
+		height: var(--icon-size_sm);
+		transition: $transition all;
 
-        &--card {
-            fill: #505661;
-        }
+		&--card {
+			fill: #505661;
+		}
 
-        &--clothes {
-            stroke: #505661;
-        }
+		&--clothes {
+			stroke: #505661;
+		}
 
-        &:not(:last-child) {
-            margin-bottom: 0.6rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: 0.6rem;
+		}
+	}
 }

@@ -1,15 +1,15 @@
 .actual {
-    &__grid {
-        @media (max-width: 500px) {
-            gap: 2rem;
-        }
+	&__grid {
+		@media (max-width: 500px) {
+			gap: var(--offset-ms);
+		}
 
-        > * {
-            &:first-child {
-                @media (min-width: 768px) {
-                    grid-column: span 2;
-                }
-            }
-        }
-    }
+		>* {
+			&:first-child {
+				@media (min-width: 768px) {
+					grid-column: span 2;
+				}
+			}
+		}
+	}
 }

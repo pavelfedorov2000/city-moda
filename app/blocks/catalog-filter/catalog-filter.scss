@@ -13,7 +13,7 @@
 
 		@media (max-width: 1024px) {
 			width: 100%;
-			padding: 2rem 0;
+			@include padding-y(var(--offset-ms));
 			border-bottom: 0.1rem solid #efefef;
 			font-size: 1.5rem;
 			line-height: 2.2rem;
@@ -30,8 +30,8 @@
 			position: absolute;
 			top: 0.35rem;
 			right: 0;
-			width: 1.4rem;
-			height: 1.4rem;
+			width: var(--icon-size_sm);
+			height: var(--icon-size_sm);
 			background-image: url(../images/icons/drop-arr-black.svg);
 			@extend %bg-contain;
 			transition: $transition transform;

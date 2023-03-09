@@ -1,4 +1,4 @@
-<div class="burger-menu">
+<div id="burger-menu" class="burger-menu">
 	<div class="burger-menu__top">
 		@@include('blocks/burger/close.html')
 		@@include('blocks/nav-header/nav-header.html')
@@ -190,14 +190,15 @@
 	</ul>
 
 	<div class="burger-menu__bottom">
-		@@include('blocks/action-header/action-header.html', {
-		"searchShops": true,
+		@@include('blocks/action-btn/action-btn.html', {
+		"icon": "pin",
 		"text": "Найти магазины"
 		})
 		<div class="contacts-header">
-			@@include('blocks/action-header/action-header.html', {
+			@@include('blocks/action-btn/action-btn.html', {
 			"class": "header__call",
-			"tel": "88002503005",
+			"href": "88002503005",
+			"icon": "phone",
 			"text": "8 800 250 30 05"
 			})
 			<span class="contacts-header__call-descr">Звонок бесплатный</span>

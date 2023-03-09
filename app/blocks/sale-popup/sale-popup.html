@@ -1,79 +1,59 @@
 <!-- Попап подписка -->
-<div style="display: none;"
-     id="sale-popup"
-     class="popup sale-popup">
-    <div class="sale-popup__title">
-        Распродажи и акции для женщин и&nbsp;мужчин
-    </div>
-    <form action="#"
-          class="sale-popup__form">
-        <div class="sale-popup__form-items">
-            <div class="sale-popup__form-item">
-                @@include('blocks/checkbox/checkbox.html', {
-                "isChecked": true,
-                "class": "sale-popup__form-check",
-                "text": "по e-mail"
-                })
-                <div class="select"
-                     data-state="">
-                    <div class="select__title">Да</div>
-                    <div class="select__content">
-                        <label class="select__option"
-                               tabindex="0"
-                               data-value="Да">
-                            <input class="select__input radio-box"
-                                   type="radio"
-                                   name="email-mailing"
-                                   checked />
-                            <span class="radio-style"></span>
-                            <span class="select__option-text">Да</span>
-                        </label>
-                        <label class="select__option"
-                               tabindex="0"
-                               data-value="Нет">
-                            <input class="select__input radio-box"
-                                   type="radio"
-                                   name="email-mailing" />
-                            <span class="radio-style"></span>
-                            <span class="select__option-text">Нет</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-            <div class="sale-popup__form-item">
-                @@include('blocks/checkbox/checkbox.html', {
-                "class": "sale-popup__form-check",
-                "text": "по sms"
-                })
-                <div class="select"
-                     data-state="">
-                    <div class="select__title">Да</div>
-                    <div class="select__content">
-                        <label class="select__option"
-                               tabindex="0"
-                               data-value="Да">
-                            <input class="select__input radio-box"
-                                   type="radio"
-                                   name="sms-mailing"
-                                   checked />
-                            <span class="radio-style"></span>
-                            <span class="select__option-text">Да</span>
-                        </label>
-                        <label class="select__option"
-                               tabindex="0"
-                               data-value="Нет">
-                            <input class="select__input radio-box"
-                                   type="radio"
-                                   name="sms-mailing" />
-                            <span class="radio-style"></span>
-                            <span class="select__option-text">Нет</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <button class="btn sale-popup__form-btn"
-                type="submit">Подписаться</button>
-    </form>
+<div style="display: none;" id="sale-popup" class="popup sale-popup">
+	<div class="sale-popup__title">
+		Распродажи и акции для женщин и&nbsp;мужчин
+	</div>
+	<form action="#" class="sale-popup__form">
+		<div class="sale-popup__form-items">
+			<div class="sale-popup__form-item">
+				@@include('blocks/checkbox/checkbox.html', {
+				"isChecked": true,
+				"class": "sale-popup__form-check",
+				"text": "по e-mail"
+				})
+				<div class="select" data-state="">
+					<div class="select__title">Да</div>
+					<div class="select__content">
+						<label class="select__option" tabindex="0" data-value="Да">
+							<input class="select__input radio-box" type="radio" name="email-mailing" checked />
+							<span class="radio-style"></span>
+							<span class="select__option-text">Да</span>
+						</label>
+						<label class="select__option" tabindex="0" data-value="Нет">
+							<input class="select__input radio-box" type="radio" name="email-mailing" />
+							<span class="radio-style"></span>
+							<span class="select__option-text">Нет</span>
+						</label>
+					</div>
+				</div>
+			</div>
+			<div class="sale-popup__form-item">
+				@@include('blocks/checkbox/checkbox.html', {
+				"class": "sale-popup__form-check",
+				"text": "по sms"
+				})
+				<div class="select" data-state="">
+					<div class="select__title">Да</div>
+					<div class="select__content">
+						<label class="select__option" tabindex="0" data-value="Да">
+							<input class="select__input radio-box" type="radio" name="sms-mailing" checked />
+							<span class="radio-style"></span>
+							<span class="select__option-text">Да</span>
+						</label>
+						<label class="select__option" tabindex="0" data-value="Нет">
+							<input class="select__input radio-box" type="radio" name="sms-mailing" />
+							<span class="radio-style"></span>
+							<span class="select__option-text">Нет</span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		@@include('blocks/button/button.html', {
+		"class": "sale-popup__form-btn",
+		"type": "submit",
+		"text": "Подписаться",
+		})
+	</form>
 </div>
 <!-- End Попап подписка -->

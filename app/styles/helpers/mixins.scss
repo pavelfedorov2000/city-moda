@@ -12,6 +12,24 @@
 	}
 }
 
+@mixin round($size) {
+	width: $size;
+	height: $size;
+	border-radius: 50%;
+}
+
+@mixin hide() {
+	visibility: hidden;
+	opacity: 0;
+	pointer-events: none;
+}
+
+@mixin show() {
+	visibility: visible;
+	opacity: 1;
+	pointer-events: all;
+}
+
 @mixin rem() {
 	@media (max-width: 1600px) {
 		font-size: calc(100vw / 1600 * 10);

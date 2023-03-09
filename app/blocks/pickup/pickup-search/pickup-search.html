@@ -1,20 +1,15 @@
-<form action="#"
-      class="pickup-popup__search pickup-search">
-    <input type="text"
-           class="pickup-search__input"
-           placeholder="Поиск пункта по адресу"
-           name="pickup_search">
-    <button class="pickup-search__reset"
-            type="reset"
-            aria-label="Сбросить поиск">
-        <svg viewBox="0 0 10 10"
-             fill="none"
-             xmlns="http://www.w3.org/2000/svg">
-            <path fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M10 1L9 0L5 4L1 0L0 1L4 5L0 9L1 10L5 6L9 10L10 9L6 5L10 1Z" />
-        </svg>
-    </button>
-    <button class="btn pickup-search__btn btn--black"
-            type="submit">Найти</button>
+<form action="#" class="pickup-popup__search pickup-search">
+	<input type="text" class="pickup-search__input" placeholder="Поиск пункта по адресу" name="pickup_search">
+	<button class="pickup-search__reset" type="reset" aria-label="Сбросить поиск">
+		<svg class="icon icon--size_xs" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+			<path fill-rule="evenodd" clip-rule="evenodd"
+				d="M10 1L9 0L5 4L1 0L0 1L4 5L0 9L1 10L5 6L9 10L10 9L6 5L10 1Z" />
+		</svg>
+	</button>
+	@@include('blocks/button/button.html', {
+	"class": "pickup-search__btn",
+	"style": "bg-black",
+	"type": "submit",
+	"text": "Найти",
+	})
 </form>

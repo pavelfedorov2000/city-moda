@@ -1,0 +1,23 @@
+.about-product {
+	&__title {
+		@extend %text-16;
+		font-weight: 600;
+		margin-bottom: var(--offset-xxs);
+	}
+
+	&__list {
+		@extend %text-13;
+		@include row-grid(var(--offset-xxxs));
+
+		&:not(:last-child) {
+			margin-bottom: var(--offset-xs);
+		}
+
+		>div {
+			dt {
+				color: var(--dark-gray);
+				padding-right: 0.3rem;
+			}
+		}
+	}
+}

@@ -1,31 +1,26 @@
-<div style="display: none;"
-     id="email-change"
-     class="popup small-popup">
-    <div class="small-popup__title">Изменить e-mail</div>
-    <div class="small-popup__text">
-        На новый e-mail будет отправлено письмо с ссылкой для подтверждения
-    </div>
-    <form action="#"
-          class="small-popup__form">
-        <label class="input input-label">
-            <input name="USER_EMAIL"
-                   type="email"
-                   placeholder="E-mail">
-            <span class="input__label">Ваш новый e-mail</span>
-        </label>
-        <label class="input input-label">
-            <input type="password"
-                   name="USER_PASSWORD"
-                   placeholder="Пароль">
-            <span class="input__label">Ваш пароль от профиля</span>
-            <button class="pass-btn show"
-                    type="button"></button>
-        </label>
-        @@include('blocks/link-btn/link-btn.html', {
-        "class": "small-popup__remind-pass",
-        "text": "Напомнить пароль"
-        })
-        <button class="btn small-popup__form-btn"
-                type="submit">Изменить</button>
-    </form>
+<div style="display: none;" id="email-change" class="popup small-popup">
+	<div class="small-popup__title">Изменить e-mail</div>
+	<div class="small-popup__text">
+		На новый e-mail будет отправлено письмо с ссылкой для подтверждения
+	</div>
+	<form action="#" class="small-popup__form">
+		<label class="input input-label">
+			<input name="USER_EMAIL" type="email" placeholder="E-mail">
+			<span class="input__label">Ваш новый e-mail</span>
+		</label>
+		<label class="input input-label">
+			<input type="password" name="USER_PASSWORD" placeholder="Пароль">
+			<span class="input__label">Ваш пароль от профиля</span>
+			<button class="pass-btn show" type="button"></button>
+		</label>
+		@@include('blocks/link-btn/link-btn.html', {
+		"class": "small-popup__remind-pass",
+		"text": "Напомнить пароль"
+		})
+		@@include('blocks/button/button.html', {
+		"class": "small-popup__form-btn",
+		"type": "submit",
+		"text": "Изменить",
+		})
+	</form>
 </div>

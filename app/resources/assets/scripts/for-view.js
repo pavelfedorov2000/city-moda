@@ -64,7 +64,7 @@ $(function () {
     if ($('main').hasClass('drop-basket-page')) {
         $('body').addClass('_lock');
         $('.overlay').show('slow');
-        $('#cart').addClass('active');
+        $('#drop-basket').addClass('active');
     }
 
     // Кнопка добавить в избранное

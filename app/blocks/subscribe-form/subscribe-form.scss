@@ -1,22 +1,19 @@
 .subscribe-form {
+	&__wrap {
+		&:not(:last-child) {
+			margin-bottom: var(--offset-sm);
+		}
+	}
 
-    // .subscribe-form__wrap
+	&__success {
+		margin-top: var(--offset-ms);
+	}
 
-    &__wrap {
-        &:not(:last-child) {
-            margin-bottom: 1.4rem;
-        }
-    }
+	.form-agree {
+		flex-wrap: wrap;
 
-    &__success {
-        margin-top: 2rem;
-    }
-
-    .form-agree {
-        flex-wrap: wrap;
-
-        .check-text {
-            max-width: calc(100% - 3rem);
-        }
-    }
+		.check-text {
+			max-width: calc(100% - var(--offset-ls));
+		}
+	}
 }

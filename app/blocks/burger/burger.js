@@ -5,13 +5,11 @@ app.burger = {
         $('.burger-btn').on('click', function () {
             $('body').addClass('_lock');
             $('.burger-menu').addClass('active');
-            $(this).attr('aria-expanded', true);
         });
 
         $('.burger-menu__close').on('click', function () {
             $('body').removeClass('_lock');
             $('.burger-menu').removeClass('active');
-            $('.burger-btn').attr('aria-expanded', false);
         });
 
         $('.burger-menu__list-toggle').on('click', function () {

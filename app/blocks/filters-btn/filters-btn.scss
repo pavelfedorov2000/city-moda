@@ -7,11 +7,10 @@
 
 	&:before {
 		content: '';
-		position: absolute;
 		@extend %pos-center-y;
 		left: 0;
-		width: 1.6rem;
-		height: 1.6rem;
+		width: var(--icon-size);
+		height: var(--icon-size);
 		background-image: url(../images/icons/filter.svg);
 		@extend %bg-contain;
 	}

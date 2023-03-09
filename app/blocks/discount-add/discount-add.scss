@@ -1,5 +1,4 @@
 .discount-add {
-
 	border-top: 0.1rem solid var(--line-color);
 	padding-top: 4rem;
 
@@ -10,12 +9,9 @@
 	// .discount-add__title
 
 	&__title {
+		margin-bottom: var(--offset-ms);
 		@extend %text-16;
 		font-weight: 600;
-
-		&:not(:last-child) {
-			margin-bottom: 2rem;
-		}
 	}
 
 	// .discount-add__value
@@ -29,9 +25,6 @@
 	// .discount-add__label
 
 	&__label {
-
-		&:not(:last-child) {
-			margin-right: 1.2rem;
-		}
+		margin-right: var(--offset-s);
 	}
 }

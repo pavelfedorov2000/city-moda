@@ -1,57 +1,49 @@
 <li>
-    <article class="order-item">
-        <header class="order-item__header">
-            <div class="order-item__header-wrap">
-                <div class="order-item__title">Заказ от <time datetime="@@datetime">@@date</time>, @@number</div>
-                <div class="order-item__price">@@price ₽</div>
-            </div>
-            <div class="order-item__buttons">
-                <span class="btn order-item__status-label">@@status.text</span>
-                @@if(context.status.code === 'inDelivery'){
-                <button class="order-item__follow-link">
-                    <span>Отследить посылку</span>
-                    <svg viewBox="0 0 12 12"
-                         fill="none"
-                         xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 10.295L6.79 6.5L7.20508 6L6.79008 5.5L3 1.705L3.705 1L8.705 6L3.705 11L3 10.295Z" />
-                    </svg>
-                </button>
-                }
-            </div>
-        </header>
-        <div class="order-item__body">
-            <div class="order-item__content">
-                <div class="order-item__delivery-date">
-                    Дата доставки: <time datetime="@@deliveryDateTime">@@deliveryDate</time>
-                </div>
-                <div class="order-item__delivery-place">
-                    Доставка: <span>@@deliveryPlace</span>
-                </div>
-                <a href="#"
-                   class="order-item__order-details">Подробнее о заказе</a>
-            </div>
-            <div class="order-item__images">
-                <picture class="order-item__img">
-                    <source type="image/webp"
-                            data-srcset="@@src.webp"
-                            srcset="assets/images/src.webp">
-                    <img class="lazy"
-                         data-src="@@src.jpg"
-                         src="assets/images/src.jpg"
-                         alt="фото">
-                </picture>
-                @@if(context.src2){
-                <picture class="order-item__img">
-                    <source type="image/webp"
-                            data-srcset="@@src2.webp"
-                            srcset="assets/images/src.webp">
-                    <img class="lazy"
-                         data-src="@@src2.jpg"
-                         src="assets/images/src.jpg"
-                         alt="фото">
-                </picture>
-                }
-            </div>
-        </div>
-    </article>
+	<article class="order-item">
+		<header class="order-item__header">
+			<div class="order-item__header-wrap">
+				<div class="order-item__title">Заказ от <time datetime="@@datetime">@@date</time>, @@number</div>
+				<div class="order-item__price">@@price ₽</div>
+			</div>
+			<div class="order-item__buttons">
+				<span class="btn order-item__status-label">@@status.text</span>
+				@@if(context.status.code === 'inDelivery'){
+				@@include('blocks/button/button.html', {
+				"class": "order-item__follow-link",
+				"style": "link",
+				"icon": "arrow-right",
+				"reversed": true,
+				"text": "Отследить посылку"
+				})
+				}
+			</div>
+		</header>
+		<div class="order-item__body">
+			<div class="order-item__content">
+				<div class="order-item__delivery-date">
+					Дата доставки: <time datetime="@@deliveryDateTime">@@deliveryDate</time>
+				</div>
+				<div class="order-item__delivery-place">
+					Доставка: <span>@@deliveryPlace</span>
+				</div>
+				@@include('blocks/button/button.html', {
+				"href": "#",
+				"style": "link-gray",
+				"text": "Подробнее о заказе"
+				})
+			</div>
+			<div class="order-item__images">
+				<picture class="order-item__img">
+					<source type="image/webp" data-srcset="@@src.webp" srcset="assets/images/src.webp">
+					<img class="lazy" data-src="@@src.jpg" src="assets/images/src.jpg" alt="фото">
+				</picture>
+				@@if(context.src2){
+				<picture class="order-item__img">
+					<source type="image/webp" data-srcset="@@src2.webp" srcset="assets/images/src.webp">
+					<img class="lazy" data-src="@@src2.jpg" src="assets/images/src.jpg" alt="фото">
+				</picture>
+				}
+			</div>
+		</div>
+	</article>
 </li>

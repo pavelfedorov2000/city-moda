@@ -1,15 +1,10 @@
 .whatsapp {
-	@extend .action-header;
+	@extend .action-btn;
 	color: #4caf50;
 
 	@media (any-hover: hover) {
 		&:hover {
 			color: #4caf50;
 		}
-	}
-
-	&__icon {
-		width: 1.6rem;
-		height: 1.6rem;
 	}
 }

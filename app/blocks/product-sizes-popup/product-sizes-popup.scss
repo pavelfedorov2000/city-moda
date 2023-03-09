@@ -20,7 +20,7 @@
 		}
 
 		@media (max-width: 1024px) {
-			padding: 3rem;
+			padding: var(--offset-ls);
 		}
 
 		@media (max-width: 500px) {
@@ -44,7 +44,7 @@
 			'title logo'
 			'subtitle logo';
 		row-gap: 1.8rem;
-		padding-bottom: 3rem;
+		padding-bottom: var(--offset-ls);
 		border-bottom: 0.1rem solid var(--line-color);
 
 		@media (max-width: 767px) {

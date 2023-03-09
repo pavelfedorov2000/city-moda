@@ -10,12 +10,12 @@
 
 #shops-map {
 	height: 50rem;
-	margin-top: 3.2rem;
+	margin-top: var(--offset-l);
 	margin-bottom: var(--gap);
 
 	@media (max-width: 500px) {
 		height: 40rem;
-		margin-bottom: 3rem;
+		margin-bottom: var(--offset-ls);
 	}
 
 	>* {

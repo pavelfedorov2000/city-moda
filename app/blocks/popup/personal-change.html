@@ -9,6 +9,10 @@
 			<input value="Иванова" name="surname" placeholder="Фамилия">
             <span class="input__label">Фамилия</span>
 		</label>
-		<button class="btn small-popup__form-btn" type="submit">Сохранить</button>
+        @@include('blocks/button/button.html', {
+        "class": "small-popup__form-btn",
+        "type": "submit",
+        "text": "Сохранить",
+        })
 	</form>
 </div>

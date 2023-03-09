@@ -1,74 +1,72 @@
-// Custom select
 .select {
-    position: relative;
+	position: relative;
 
-    &__title {
-        @extend %vertical-align;
-        height: 4.6rem;
-        padding-left: 1.5rem;
-        font-weight: 600;
-        cursor: pointer;
-        border: 0.1rem solid var(--gray-c0);
+	&__title {
+		@extend %vertical-align;
+		height: 4.6rem;
+		padding-left: 1.5rem;
+		font-weight: 600;
+		cursor: pointer;
+		border: 0.1rem solid var(--gray-c0);
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 1.2rem;
-            right: 1.8rem;
-            width: 2rem;
-            height: 2rem;
-            background-image: url(../images/icons/drop-arr.svg);
-            @extend %bg-contain;
-            transition: $transition transform;
-        }
+		&::after {
+			@extend %bg-contain;
+			content: "";
+			position: absolute;
+			top: var(--offset-s);
+			right: 1.8rem;
+			width: var(--icon-size_ms);
+			height: var(--icon-size_ms);
+			background-image: url(../images/icons/drop-arr.svg);
+			transition: $transition transform;
+		}
 
-        &--active {
-            &::after {
-                transform: rotate(180deg);
-            }
-        }
-    }
+		&--active {
+			&::after {
+				transform: rotate(180deg);
+			}
+		}
+	}
 
-    &__content {
-        display: none;
-        position: absolute;
-        top: 4.5rem;
-        left: 0;
-        right: 0;
-        width: 100%;
-        z-index: 25;
-        background-color: #fff;
-        padding: 2rem 1.5rem;
-        border: 0.1rem solid var(--gray-c0);
-        border-top-color: #fff;
-    }
+	&__content {
+		display: none;
+		position: absolute;
+		top: 4.5rem;
+		left: 0;
+		right: 0;
+		width: 100%;
+		z-index: 25;
+		background-color: #fff;
+		padding: var(--offset-ms) 1.5rem;
+		border: 0.1rem solid var(--gray-c0);
+		border-top-color: #fff;
+	}
 
-    &__input {
-        display: none;
+	&__input {
+		display: none;
 
-        &:checked {
-            & + .radio-style {
-                &:before {
-                    width: 0.9rem;
-                    height: 0.6rem;
-                }
-            }
-        }
-    }
+		&:checked {
+			&+.radio-style {
+				&:before {
+					width: 0.9rem;
+					height: 0.6rem;
+				}
+			}
+		}
+	}
 
-    &__option {
-        position: relative;
-        //z-index: 30;
-        @extend %vertical-align;
-        cursor: pointer;
+	&__option {
+		@extend %vertical-align;
+		position: relative;
+		cursor: pointer;
 
-        &:not(:last-child) {
-            margin-bottom: 1.4rem;
-        }
-    }
+		&:not(:last-child) {
+			margin-bottom: var(--offset-sm);
+		}
+	}
 
-    &__option-text {
-        @extend %text-16;
-        margin-left: 1rem;
-    }
+	&__option-text {
+		@extend %text-16;
+		margin-left: var(--offset-xs);
+	}
 }

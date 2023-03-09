@@ -1,3 +1,4 @@
 <div class="page__top">
-	<h1 class="title">@@title</h1>
+	<@@if(!context.tag){h1}@@if(context.tag){@@tag} class="title">@@title
+	</@@if(!context.tag){h1}@@if(context.tag){@@tag}>
 </div>

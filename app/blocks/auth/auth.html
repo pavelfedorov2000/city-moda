@@ -1,20 +1,19 @@
-<div id="auth-popup"
-     class="aside-popup auth-popup">
-    @@include('blocks/aside-popup/close.html', {
-    "ariaLabel": "Закрыть окно авторизации"
-    })
-    <div class="aside-popup__title">Авторизация</div>
-    <div class="aside-popup__text">
-        Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными
-        скидками и
-        баллами.
-    </div>
-    <div class="tabs aside-popup__tabs">
-        <a href="#auth"
-           class="tab aside-popup__tab active">Вход</a>
-        <a href="#register"
-           class="tab aside-popup__tab">Регистрация</a>
-    </div>
-    @@include('blocks/auth/tabs/enter.html')
-    @@include('blocks/auth/tabs/register.html')
+<div id="auth-popup" class="aside-popup auth-popup">
+	@@include('blocks/aside-popup/close.html', {
+	"ariaLabel": "Закрыть окно авторизации"
+	})
+	<div class="aside-popup__title">Авторизация</div>
+	<div class="aside-popup__text">
+		Войдите или зарегистрируйтесь, чтобы делать покупки, отслеживать заказы и пользоваться персональными
+		скидками и
+		баллами.
+	</div>
+	<div class="tabs aside-popup__tabs" role="tablist">
+		<button class="tab aside-popup__tab active" id="auth_tab" aria-controls="auth" aria-selected="true"
+			type="button" role="tab" tabindex="0">Вход</button>
+		<button class="tab aside-popup__tab" id="register_tab" aria-controls="register" aria-selected="false"
+			type="button" role="tab" tabindex="-1">Регистрация</button>
+	</div>
+	@@include('blocks/auth/tabs/enter.html')
+	@@include('blocks/auth/tabs/register.html')
 </div>

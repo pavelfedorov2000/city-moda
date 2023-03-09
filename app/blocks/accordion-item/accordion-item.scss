@@ -29,8 +29,8 @@
 			position: absolute;
 			top: 0.5rem;
 			right: 0;
-			width: 2rem;
-			height: 2rem;
+			width: var(--icon-size_ms);
+			height: var(--icon-size_ms);
 			background-image: url(../images/icons/drop-arr.svg);
 			@extend %bg-contain;
 			transition: $transition transform;

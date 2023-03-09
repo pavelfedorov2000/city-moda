@@ -3,7 +3,7 @@
 	background-color: var(--dark);
 	color: #fff;
 	font-weight: 600;
-	padding: 1rem 0;
+	@include padding-y(var(--offset-xs));
 	position: relative;
 	display: flex;
 	flex-wrap: nowrap;
@@ -11,7 +11,7 @@
 	// .header-info-line__inner
 
 	&__inner {
-		padding: 0 1.6rem;
+		@include padding-x(var(--container-padding));
 		@extend %flex-row-center;
 		animation: marquee 15s linear infinite;
 		width: 100%;
@@ -35,17 +35,17 @@
 
 	&__close {
 		display: none;
-		@extend %pos-center-y;
 
 		@media (min-width: 1025px) {
 			display: block;
 			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
 			right: calc(12 / 1600 * 100%);
-			width: 1.6rem;
-			height: 1.6rem;
 		}
 
 		svg {
+			fill: var(--gray-c0);
 			transition: $transition fill;
 		}
 

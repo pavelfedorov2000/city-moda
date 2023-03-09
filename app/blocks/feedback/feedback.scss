@@ -1,10 +1,8 @@
 .feedback {
-
-	// .feedback__form
-
 	&__form-inputs {
+		margin-bottom: var(--offset-ms);
 		display: grid;
-		gap: 3rem;
+		gap: var(--offset-ls);
 
 		@media(min-width: 501px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -12,10 +10,6 @@
 
 		@media(min-width: 768px) {
 			width: 55.8rem;
-		}
-
-		&:not(:last-child) {
-			margin-bottom: 2rem;
 		}
 	}
 
@@ -40,12 +34,11 @@
 	// .feedback__form-agree
 
 	&__form-agree {
-		&:not(:last-child) {
-			margin-bottom: 1.2rem;
-		}
+		margin-bottom: var(--offset-s);
 	}
 
 	&__form-btn {
+		justify-content: center;
 		font-weight: 600;
 		width: 26.4rem;
 		padding: 1.25rem;

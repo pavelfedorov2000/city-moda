@@ -1,5 +1,5 @@
 <label class="radio@@if(context.class){ @@class}@@if(context.type){ radio--type_@@type}">
-	<input class="radio-box" type="radio" name="@@name">
+	<input class="radio-box" type="radio" name="@@name" @@if(context.isChecked){checked}>
 	@@if(!context.withoutStyle){
 	<span class="radio-style"></span>
 	}

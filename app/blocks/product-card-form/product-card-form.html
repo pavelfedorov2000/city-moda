@@ -1,0 +1,20 @@
+<form action="#" class="product-card-form@@if(context.class){ @@class__form}">
+	@@if(context.colors){
+	@@include("blocks/product-color/product-color.html")
+	}
+	@@include("blocks/product-sizes/product-sizes.html")
+	<div class="product-card-form__buttons">
+		@@include('blocks/button/button.html', {
+		"class": "product-card-form__btn",
+		"style": "bg-red",
+		"icon": "cart",
+		"text": "Добавить в корзину"
+		})
+		@@include('blocks/button/button.html', {
+		"class": "product-card-form__btn",
+		"style": "border-dark",
+		"icon": "favorite",
+		"text": "В избранное"
+		})
+	</div>
+</form>

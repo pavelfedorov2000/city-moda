@@ -1,58 +1,58 @@
 .brands-alphabet {
-    @media (min-width: 768px) {
-        padding-left: 3rem;
-    }
+	@media (min-width: 768px) {
+		padding-left: var(--offset-ls);
+	}
 
-    // .brands-alphabet__item
+	// .brands-alphabet__item
 
-    &__item {
-        display: flex;
+	&__item {
+		display: flex;
 
-        &:not(:last-child) {
-            margin-bottom: 3rem;
+		&:not(:last-child) {
+			margin-bottom: var(--offset-ls);
 
-            @media (max-width: 500px) {
-                margin-bottom: 2rem;
-            }
-        }
+			@media (max-width: 500px) {
+				margin-bottom: var(--offset-ms);
+			}
+		}
 
-        dt {
-            @extend %text-20;
-            font-weight: 500;
-            min-width: 3.6rem;
-        }
+		dt {
+			@extend %text-20;
+			font-weight: 500;
+			min-width: 3.6rem;
+		}
 
-        dd {
-            margin-left: 6.5rem;
-        }
-    }
+		dd {
+			margin-left: 6.5rem;
+		}
+	}
 
-    // .brands-alphabet__row
+	// .brands-alphabet__row
 
-    &__row {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 3rem;
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: var(--offset-ls);
 
-        @media(min-width: 768px) {
-            gap: 18.3rem;
-        }
-    }
+		@media(min-width: 768px) {
+			gap: 18.3rem;
+		}
+	}
 
-    // .brands-alphabet__link
+	// .brands-alphabet__link
 
-    &__link {
-        @extend %text-16;
-        display: block;
+	&__link {
+		@extend %text-16;
+		display: block;
 
-        &:not(:last-child) {
-            margin-bottom: 0.8rem;
-        }
+		&:not(:last-child) {
+			margin-bottom: var(--offset-xxs);
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--gray);
-            }
-        }
-    }
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--gray);
+			}
+		}
+	}
 }

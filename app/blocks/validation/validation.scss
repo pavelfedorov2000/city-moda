@@ -18,7 +18,7 @@ label.error {
 	@extend %text-14;
 	font-weight: 500;
 	color: var(--green);
-	margin-top: 2rem;
+	margin-top: var(--offset-ms);
 }
 
 .field {

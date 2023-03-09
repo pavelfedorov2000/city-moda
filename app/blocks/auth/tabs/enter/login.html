@@ -9,15 +9,20 @@
 			</div>
 		</div>
 		<div class="aside-popup__form-wrap">
-            @@include('blocks/checkbox/checkbox.html', {
-            "class": "form-agree",
-            "text": "Запомнить меня"
-            })
+			@@include('blocks/checkbox/checkbox.html', {
+			"class": "form-agree",
+			"text": "Запомнить меня"
+			})
 			<button class="remind-password" type="button">
 				Напомнить пароль
 			</button>
 		</div>
-		<button class="btn aside-popup__form-btn" type="submit" disabled>Войти</button>
+		@@include('blocks/button/button.html', {
+		"class": "aside-popup__form-btn",
+		"type": "submit",
+		"text": "Войти",
+		"isDisabled": true
+		})
 	</form>
 	<button data-enter="phone-enter" class="aside-popup__link-btn" type="button">
 		Войти с помощью номера телефона

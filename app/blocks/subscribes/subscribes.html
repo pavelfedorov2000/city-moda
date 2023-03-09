@@ -1,5 +1,5 @@
 <div class="profile-page__body">
-	<h2 class="profile-page__title">Управление подписками</h2>
+	<h1 class="profile-page__title">Управление подписками</h1>
 	<div class="profile-subscribes">
 		<ul class="profile-subscribes-list">
 			@@loop("blocks/subscribe-card/subscribe-card.html", "../resources/assets/subscribes.json")
@@ -10,7 +10,9 @@
 			</header>
 			<div class="subscribe-card__content">
 				<div class="subscribe-card__email">На почту past@mail.ru</div>
-				<button class="btn subscribe-card__btn" type="button">Подписаться</button>
+				<button class="btn subscribe-card__btn" type="button">
+					<span class="btn__text">Подписаться</span>
+				</button>
 			</div>
 		</article>
 	</div>

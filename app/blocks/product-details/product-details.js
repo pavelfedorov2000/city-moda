@@ -6,18 +6,18 @@ app.productDetails = {
         productDetailsButtonTextMap.set(true, 'скрыть');
         productDetailsButtonTextMap.set(false, 'раскрыть');
 
-        $('.product-details__hide-btn').on('click', function () {
-            const $productDetailsHideBtn = $(this);
-            const $productDetailsContent = $productDetailsHideBtn.closest('.product-details__section-title').next();
+        $('.product-details-section__toggle').on('click', function () {
+            const $productDetailsSectionToggle = $(this);
+            const $productDetailsSectionContent = $productDetailsSectionToggle.closest('.product-details-section__heading').next();
 
-            if ($productDetailsHideBtn.attr('aria-expanded') === 'false') {
-                $productDetailsHideBtn.attr('aria-expanded', true);
-                $productDetailsHideBtn.text(productDetailsButtonTextMap.get(true));
-                $productDetailsContent.slideDown();
+            if ($productDetailsSectionToggle.attr('aria-expanded') === 'false') {
+                $productDetailsSectionToggle.attr('aria-expanded', true);
+                $productDetailsSectionToggle.text(productDetailsButtonTextMap.get(true));
+                $productDetailsSectionContent.slideDown();
             } else {
-                $productDetailsHideBtn.attr('aria-expanded', false);
-                $productDetailsHideBtn.text(productDetailsButtonTextMap.get(false));
-                $productDetailsContent.slideUp();
+                $productDetailsSectionToggle.attr('aria-expanded', false);
+                $productDetailsSectionToggle.text(productDetailsButtonTextMap.get(false));
+                $productDetailsSectionContent.slideUp();
             }
         });
     },

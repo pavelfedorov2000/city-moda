@@ -47,16 +47,16 @@
 
 	.fancybox-close-small {
 		top: 0;
-		right: -3.2rem - 1.5rem;
+		right: calc(var(--icon-size_l) * (-1) - 1.5rem);
 		z-index: 99995;
 		padding: 0;
-		width: 3.2rem;
-		height: 3.2rem;
+		width: var(--icon-size_l);
+		height: var(--icon-size_l);
 		opacity: 1;
 
 		@media (max-width: 1024px) {
-			top: 2rem;
-			right: 2rem;
+			top: var(--offset-ms);
+			right: var(--offset-ms);
 		}
 
 		svg {
@@ -85,8 +85,8 @@
 	height: 4.4rem;
 
 	svg {
-		width: 3.2rem;
-		height: 3.2rem;
+		width: var(--icon-size_l);
+		height: var(--icon-size_l);
 
 		path {
 			fill: var(--dark);
@@ -95,9 +95,7 @@
 }
 
 .fancybox-navigation .fancybox-button {
-	width: 4.2rem;
-	height: 4.2rem;
-	border-radius: 50%;
+	@include round(4.2rem);
 	background: #fff;
 	opacity: 1;
 	transition: $transition background-color;
@@ -129,8 +127,8 @@
 		right: -1.5rem;
 
 		svg {
-			width: 3.2rem;
-			height: 3.2rem;
+			width: var(--icon-size_l);
+			height: var(--icon-size_l);
 
 			path {
 				transition: $transition fill;
@@ -153,7 +151,7 @@
 	}
 
 	@media (max-width: 1024px) {
-		width: calc(100vw - 3.2rem);
+		width: calc(100% - var(--container-padding) * 2);
 	}
 
 	@media (max-width: 767px) {
@@ -187,19 +185,16 @@
 		padding: 7rem 5.1rem;
 
 		@media (max-width: 1024px) {
-			padding-left: 3rem;
-			padding-right: 3rem;
+			@include padding-x(var(--offset-ls));
 		}
 
 		@media (max-width: 767px) {
-			padding: 3rem 1.6rem;
+			padding: var(--offset-ls) var(--offset);
 		}
 	}
 
 	&__top {
-		&:not(:last-child) {
-			margin-bottom: 3.5rem;
-		}
+		margin-bottom: 3.5rem;
 	}
 
 	// .mini-popup__title
@@ -214,7 +209,7 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 0.8rem;
+			margin-bottom: var(--offset-xxs);
 		}
 	}
 
@@ -239,52 +234,21 @@
 	}
 }
 
-#personal-change {
-	@media (min-width: 768px) {
-		width: 44rem !important;
-	}
-
-	@media (min-width: 1025px) {
-		width: 44rem !important;
-	}
-}
-
-#phone-change,
-#sms-code {
-	@media (min-width: 768px) {
-		width: 44.6rem !important;
-	}
-
-	@media (min-width: 1025px) {
-		width: 44.6rem !important;
-	}
-}
-
-#email-change,
-#password-change,
-#new-password,
-#check-email {
-	@media (min-width: 768px) {
-		width: 42rem !important;
-	}
-
-	@media (min-width: 1025px) {
-		width: 42rem !important;
-	}
-}
-
 .small-popup {
 	padding: 6rem;
 
+	@media (min-width: 768px) {
+		width: 44rem;
+	}
+
 	@media (max-width: 767px) {
-		width: calc(100vw - 3.2rem);
-		padding-left: 3rem;
-		padding-right: 3rem;
+		width: calc(100% - var(--container-padding) * 2);
+		@include padding-x(var(--offset-ls));
 	}
 
 	>* {
 		&:not(:last-child) {
-			margin-bottom: 2rem;
+			margin-bottom: var(--offset-ms);
 		}
 	}
 
@@ -318,8 +282,7 @@
 	// .password-change__form
 
 	&__form {
-		display: grid;
-		gap: 2rem;
+		@include row-grid(var(--offset-ms));
 
 		@media(min-width: 768px) {
 			width: 30rem;
@@ -329,12 +292,13 @@
 	// .password-change__form-btn
 
 	&__form-btn {
+		justify-content: center;
 		font-weight: 600;
 		padding: 1.35rem;
 	}
 
 	&__remind-pass {
 		text-align: left;
-		margin-top: -1.2rem;
+		margin-top: calc(var(--offset-s) * (-1));
 	}
 }

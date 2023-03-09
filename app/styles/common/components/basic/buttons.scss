@@ -1,109 +1,200 @@
 .btn {
-    @extend %flex-center;
-    @extend %text-14;
-    background-color: var(--green);
-    color: #fff;
-    text-align: center;
-    transition: $transition all;
+	@extend %text-14;
+	display: inline-flex;
+	align-items: center;
+	background-color: var(--green);
+	color: #fff;
+	transition: $transition all;
 
-    @media (any-hover: hover) {
-        &:hover {
-            background-color: var(--green-second);
-        }
-    }
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--green-second);
+		}
+	}
 
-    &[disabled] {
-        background-color: var(--line-color);
-        border: none;
-        cursor: not-allowed;
+	svg {
+		margin-right: var(--offset-xxs);
+		fill: #fff;
+		transition: $transition stroke,
+			$transition fill;
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                color: #fff;
-            }
-        }
-    }
+	&__text {
+		white-space: nowrap;
+	}
 
-    svg {
-        flex-shrink: 0;
-        margin-right: 0.8rem;
-        width: 1.6rem;
-        height: 1.6rem;
-        fill: #fff;
-        transition: $transition fill;
-    }
+	&[disabled] {
+		background-color: var(--line-color);
+		border: none;
+		cursor: not-allowed;
 
-    &--disabled {
-        background-color: transparent;
-        border: 0.1rem solid var(--line-color);
-        color: var(--gray);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+			}
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                border-color: var(--green-second);
-                color: var(--green-second);
-                background-color: transparent;
-            }
-        }
-    }
+	&--reversed {
+		flex-direction: row-reverse;
 
-    &--border {
-        border: 0.1rem solid var(--dark);
-        background-color: transparent;
-        color: var(--dark);
+		svg {
+			margin-right: 0;
+		}
+	}
 
-        svg {
-            width: 2rem;
-            height: 2rem;
-        }
+	&--disabled {
+		background-color: transparent;
+		border: 0.1rem solid var(--line-color);
+		color: var(--gray);
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: transparent;
-                border-color: var(--green-second);
-                color: var(--green-second);
+		@media (any-hover: hover) {
+			&:hover {
+				border-color: var(--green-second);
+				color: var(--green-second);
+				background-color: transparent;
+			}
+		}
+	}
 
-                svg {
-                    fill: var(--green-second);
-                }
-            }
-        }
-    }
+	&--transparent,
+	&--style_border,
+	&--style_border-dark,
+	&--style_link,
+	&--style_link-gray {
+		background-color: transparent;
+		color: var(--dark);
 
-    &--black {
-        background-color: #101112;
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
+	}
 
-        @media (any-hover: hover) {
-            &:hover {
-                background-color: var(--green);
-                color: #fff;
-            }
-        }
-    }
-}
+	&--style {
 
-a {
-    &.btn {
-        @media (any-hover: hover) {
-            &:hover {
-                color: #fff;
-            }
-        }
-    }
+		&_link,
+		&_link-gray {
+			@extend %text-13;
+			text-decoration: underline;
+		}
 
-    &.btn--border {
-        @media (any-hover: hover) {
-            &:hover {
-                color: var(--green-second);
-            }
-        }
-    }
+		&_link {
+			svg {
+				fill: var(--dark);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: var(--gray);
+
+					svg {
+						fill: var(--gray);
+					}
+				}
+			}
+		}
+
+		&_link-gray {
+			color: var(--gray);
+
+			svg {
+				fill: var(--gray);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					color: #000;
+
+					svg {
+						fill: #000;
+					}
+				}
+			}
+		}
+
+		&_border,
+		&_border-dark {
+			border-width: 0.1rem;
+			border-style: solid;
+
+			svg {
+				width: var(--icon-size_ms);
+				height: var(--icon-size_ms);
+				fill: none;
+			}
+		}
+
+		&_border {
+			border-color: var(--green);
+			color: var(--green);
+
+			svg {
+				stroke: var(--green);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					border-color: var(--green-second);
+					color: var(--green-second);
+
+					svg {
+						stroke: var(--green-second);
+					}
+				}
+			}
+
+			&-dark {
+				border-color: var(--dark);
+
+				svg {
+					stroke: var(--dark);
+				}
+
+				@media (any-hover: hover) {
+					&:hover {
+						border-color: var(--red);
+						color: var(--red);
+
+						svg {
+							stroke: var(--red);
+						}
+					}
+				}
+			}
+		}
+
+		&_bg {
+			&-red {
+				background-color: var(--red);
+
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--red);
+						box-shadow: 0 0.4rem 2rem rgba(0, 0, 0, 0.25);
+					}
+				}
+			}
+
+			&-black {
+				background-color: var(--dark);
+
+				@media (any-hover: hover) {
+					&:hover {
+						background-color: var(--green);
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
 }
 
 .popup-link,
 .scroll-link {
-    @extend %text-12;
-    line-height: 1.4rem;
-    font-style: italic;
-    text-decoration: underline;
+	@extend %text-12;
+	line-height: 1.4rem;
+	font-style: italic;
+	text-decoration: underline;
 }

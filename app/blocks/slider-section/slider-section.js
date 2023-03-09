@@ -54,7 +54,7 @@ app.sliderSections = {
             },
         });
 
-        new Swiper('.recommend-slider', {
+        new Swiper('.recommended-goods-slider', {
             loop: true,
             slidesPerView: 1,
             spaceBetween: 20,

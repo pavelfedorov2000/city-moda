@@ -12,7 +12,7 @@
 			margin-bottom: 5rem;
 
 			@media (max-width: 500px) {
-				margin-bottom: 3rem;
+				margin-bottom: var(--offset-ls);
 			}
 		}
 	}
@@ -32,7 +32,7 @@
 		gap: var(--gap) 0;
 
 		@media (max-width: 1024px) {
-			gap: 3rem;
+			gap: var(--offset-ls);
 		}
 
 		@media (min-width: 501px) {

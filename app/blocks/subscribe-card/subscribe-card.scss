@@ -16,10 +16,10 @@
 	// .subscribe-item__content
 
 	&__content {
+		@extend %flex-col;
 		padding: 1.5rem 2.5rem 2.5rem;
 		border: 0.1rem solid var(--line-color);
 		border-top: none;
-		@extend %flex-col;
 
 		@media (max-width: 1024px) {
 			@include padding-x(1.5rem);
@@ -27,7 +27,7 @@
 
 		>* {
 			&:not(:last-child) {
-				margin-bottom: 2rem;
+				margin-bottom: var(--offset-ms);
 			}
 		}
 	}
@@ -50,11 +50,7 @@
 	// .subscribe-item__list
 
 	&__list {
-		li {
-			&:not(:last-child) {
-				margin-bottom: 1.4rem;
-			}
-		}
+		@include row-grid(var(--offset-sm));
 	}
 
 	&__text {
@@ -66,19 +62,12 @@
 
 	&__bottom {
 		@extend %vertical-align;
-
-		@media (max-width: 1024px) {
-			display: grid;
-			gap: 1.5rem;
-		}
+		flex-wrap: wrap;
+		gap: var(--offset);
 	}
 
 	&__notify {
 		@extend %text-13;
-
-		@media (min-width: 1025px) {
-			margin-left: 1.6rem;
-		}
 	}
 
 	// .subscribe-item__change-btn
@@ -98,25 +87,14 @@
 	&__cancel-btn {
 		@extend %text-13;
 		font-weight: 500;
-		padding: 1.3rem 2rem;
-
-		&[disabled] {
-			border: 0.1rem solid var(--line-color);
-			background-color: transparent;
-			color: var(--gray);
-
-			@media (any-hover: hover) {
-				&:hover {
-					color: var(--gray);
-				}
-			}
-		}
+		padding: 1.3rem var(--offset-ms);
+		justify-content: center;
 	}
 
 	// .subscribe-item__btn
 
 	&__btn {
 		font-weight: 500;
-		padding: 1.3rem 3rem;
+		padding: 1.3rem var(--offset-ls);
 	}
 }

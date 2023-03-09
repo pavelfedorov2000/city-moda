@@ -1,37 +1,37 @@
 .order-success-table {
-    &__body {
-        padding: 3rem;
-        border: 0.1rem solid var(--line-color);
-        border-top: none;
+	&__body {
+		padding: var(--offset-ls);
+		border: 0.1rem solid var(--line-color);
+		border-top: none;
 
-        @media (max-width: 500px) {
-            padding: 1.5rem;
-        }
-    }
+		@media (max-width: 500px) {
+			padding: 1.5rem;
+		}
+	}
 
-    &__title {
-        margin-bottom: 2.5rem;
-    }
+	&__title {
+		margin-bottom: 2.5rem;
+	}
 
-    &__products {
-        display: grid;
-        gap: 2.7rem var(--gap);
+	&__products {
+		display: grid;
+		gap: 2.7rem var(--gap);
 
-        @media (max-width: 1024px) {
-            gap: 3rem;
-        }
+		@media (max-width: 1024px) {
+			gap: var(--offset-ls);
+		}
 
-        @media (min-width: 768px) {
-            grid-template-columns: repeat(2, 1fr);
-        }
+		@media (min-width: 768px) {
+			grid-template-columns: repeat(2, 1fr);
+		}
 
-        @media (min-width: 1025px) {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
+		@media (min-width: 1025px) {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
 }
 
 .order-status {
-    font-weight: 500;
-    color: var(--red);
+	font-weight: 500;
+	color: var(--red);
 }

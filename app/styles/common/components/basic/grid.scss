@@ -1,0 +1,36 @@
+.wrapper {
+	@extend %flex-col;
+	position: relative;
+	min-height: 100vh;
+	overflow-x: hidden;
+}
+
+.container {
+	width: calc(var(--container-width) + var(--container-padding) * 2);
+	max-width: 100%;
+	padding: 0 var(--container-padding);
+	margin: 0 auto;
+}
+
+.grid {
+	display: grid;
+	gap: var(--gap);
+
+	@media (min-width: 768px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 1024px) {
+		gap: var(--offset-ls);
+	}
+
+	&--items {
+		&-xl {
+			&_4 {
+				@media (min-width: 1025px) {
+					grid-template-columns: repeat(4, 1fr);
+				}
+			}
+		}
+	}
+}

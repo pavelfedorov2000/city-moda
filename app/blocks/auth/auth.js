@@ -17,35 +17,6 @@ app.auth = {
             }
         });
 
-        // Логика задизейбленной кнопки
-        /* $('#password-recovery input, #password-change input').on('input', function () {
-            const $input = $(this);
-            const inputVal = $input.val();
-            const $form = $input.closest('form');
-            const $submitBtn = $form.find('button[type="submit"]');
-
-            if (inputVal !== '') {
-                $submitBtn.prop('disabled', false);
-            } else {
-                $submitBtn.prop('disabled', true);
-            }
-        });
-
-        // Логика задизейбленной кнопки
-        $('#password-change input[type=password]').on('input', function () {
-            const $input = $(this);
-            const inputVal = $input.val();
-            const $form = $input.closest('form');
-            const $inputs = $form.find('input');
-            const $submitBtn = $form.find('button[type="submit"]');
-
-            if (inputVal !== '' && $inputs.val() !== '') {
-                $submitBtn.prop('disabled', false);
-            } else {
-                $submitBtn.prop('disabled', true);
-            }
-        }); */
-
         // password input visibility toggle
         $('.pass-btn').on('click', function () {
             const $passBtn = $(this);

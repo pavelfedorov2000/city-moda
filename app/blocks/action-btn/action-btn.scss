@@ -1,20 +1,16 @@
-.action-header {
+.action-btn {
 	@extend %text-16;
 	@extend %vertical-align;
 	font-weight: 600;
 	transition: $transition color;
 
-	svg {
-		flex-shrink: 0;
+	.icon {
 		margin-right: 0.6rem;
-		width: 1.6rem;
-		height: 1.6rem;
 		fill: var(--dark);
-		transition: $transition fill;
 
 		@media (max-width: 1024px) {
-			width: 2rem;
-			height: 2rem;
+			width: var(--icon-size_ms);
+			height: var(--icon-size_ms);
 		}
 
 		@media (max-width: 1024px) {
@@ -22,16 +18,11 @@
 		}
 	}
 
-	img {
-		flex-shrink: 0;
-		margin-right: 0.6rem;
-	}
-
 	@media (any-hover: hover) {
 		&:hover {
 			color: var(--gray);
 
-			svg {
+			.icon {
 				fill: var(--gray);
 			}
 		}

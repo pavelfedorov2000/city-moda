@@ -2,7 +2,6 @@ app.select = {
     name: 'select',
     description: 'your script description',
     init() {
-        // Селект
         $('.select__title').on('click', function () {
             const $selectTitle = $(this);
             const $selectContent = $selectTitle.closest('.select').find('.select__content');

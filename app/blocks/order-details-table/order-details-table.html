@@ -1,47 +1,50 @@
 <@@if(context.successOrder){header}@@if(!context.successOrder){div} class="order-details-table">
-    <div class="order-details-table__item">
-        <div class="order-details-table__item-title">Заказ:</div>
-        <p>№RU125487-985471</p>
-        <p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
-    </div>
-    <div class="order-details-table__item">
-        <div class="order-details-table__item-title">Получатель:</div>
-        <p>Иванова Иванка</p>
-        <p>post@mail.ru</p>
-        <p>+7 (999) 999-99-99 </p>
-        <p>г.Санкт-Петербург</p>
-    </div>
-    <div class="order-details-table__item">
-        <div class="order-details-table__item-title">Доставка:</div>
-        <p>В пункт выдачи </p>
-        <p>Адрес</p>
-    </div>
-    <div class="order-details-table__item">
-        <div class="order-details-table__item-title">Оплата:</div>
-        <p>Картой онлайн</p>
-    </div>
-    @@if(context.successOrder){
-    <div class="order-details-table__item">
-        <div>
-            <div class="order-details-table__item-title">
-                Итого:
-                <span>42 540 ₽</span>
-            </div>
-            <span class="order-status">Не оплачен</span>
-        </div>
-    </div>
-    }
-    <div class="order-details-table__item">
-        @@if(!context.successOrder){
-        <div class="order-details-table__item-wrap">
-            <div class="order-details-table__item-title">
-                Итого:
-                <span>42 540 ₽</span>
-            </div>
-            <span class="order-status">Не оплачен</span>
-        </div>
-        }
-        <a href="#"
-           class="btn order-details-table__btn">Оплатить</a>
-    </div>
+	<div class="order-details-table__item">
+		<div class="order-details-table__item-title">Заказ:</div>
+		<p>№RU125487-985471</p>
+		<p>от <time datetime="2021-11-24">24 ноября 2021</time></p>
+	</div>
+	<div class="order-details-table__item">
+		<div class="order-details-table__item-title">Получатель:</div>
+		<p>Иванова Иванка</p>
+		<p>post@mail.ru</p>
+		<p>+7 (999) 999-99-99 </p>
+		<p>г.Санкт-Петербург</p>
+	</div>
+	<div class="order-details-table__item">
+		<div class="order-details-table__item-title">Доставка:</div>
+		<p>В пункт выдачи </p>
+		<p>Адрес</p>
+	</div>
+	<div class="order-details-table__item">
+		<div class="order-details-table__item-title">Оплата:</div>
+		<p>Картой онлайн</p>
+	</div>
+	@@if(context.successOrder){
+	<div class="order-details-table__item">
+		<div>
+			<div class="order-details-table__item-title">
+				Итого:
+				<span>42 540 ₽</span>
+			</div>
+			<span class="order-status">Не оплачен</span>
+		</div>
+	</div>
+	}
+	<div class="order-details-table__item">
+		@@if(!context.successOrder){
+		<div class="order-details-table__item-wrap">
+			<div class="order-details-table__item-title">
+				Итого:
+				<span>42 540 ₽</span>
+			</div>
+			<span class="order-status">Не оплачен</span>
+		</div>
+		}
+		@@include('blocks/button/button.html', {
+		"href": "#",
+		"class": "order-details-table__btn",
+		"text": "Оплатить"
+		})
+	</div>
 </@@if(context.successOrder){header}@@if(!context.successOrder){div}>

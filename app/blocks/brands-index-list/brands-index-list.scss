@@ -1,7 +1,7 @@
 .brands-index-list {
 	display: flex;
-	margin-left: -1rem;
-	margin-right: 1rem;
+	margin-left: -var(--offset-xs);
+	margin-right: var(--offset-xs);
 
 	&::-webkit-scrollbar {
 		-webkit-appearance: none;
@@ -10,7 +10,7 @@
 
 	@media (max-width: 1024px) {
 		overflow-x: auto;
-		padding-bottom: 3rem;
+		padding-bottom: var(--offset-ls);
 	}
 
 	// .brands-index-list__item
@@ -19,7 +19,7 @@
 		@extend %text-16;
 		font-weight: 500;
 		white-space: nowrap;
-		padding: 0 1rem;
+		@include padding-x(var(--offset-xs));
 
 		&.active {
 			color: var(--green);

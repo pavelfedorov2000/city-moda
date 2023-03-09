@@ -17,7 +17,7 @@
 
 	&__item {
 		&:not(:last-child) {
-			margin-bottom: 3rem;
+			margin-bottom: var(--offset-ls);
 		}
 	}
 
@@ -27,7 +27,7 @@
 		font-weight: 600;
 
 		&:not(:last-child) {
-			margin-bottom: 1.6rem;
+			margin-bottom: var(--offset);
 		}
 
 		@media (any-hover: hover) {
@@ -49,8 +49,8 @@
 		transition: $transition transform;
 
 		svg {
-			width: 1.4rem;
-			height: 1.4rem;
+			width: var(--icon-size_sm);
+			height: var(--icon-size_sm);
 			opacity: 0;
 			fill: var(--dark);
 			transition: $transition opacity;
@@ -89,8 +89,8 @@
 
 	&__sublist {
 		display: none;
-		padding-left: 2rem;
-		padding-bottom: 1.2rem;
+		padding-left: var(--offset-ms);
+		padding-bottom: var(--offset-s);
 	}
 
 	&__sublist-title {
@@ -107,13 +107,13 @@
 		}
 
 		&:not(:last-child) {
-			margin-bottom: 1.2rem;
+			margin-bottom: var(--offset-s);
 		}
 	}
 
 	&__sublist-item {
 		&:not(:last-child) {
-			margin-bottom: 1.2rem;
+			margin-bottom: var(--offset-s);
 		}
 	}
 

@@ -1,26 +1,22 @@
 .back-link {
-    $this: &;
+	$this: &;
 
-    display: inline-flex;
-    align-items: flex-start;
-    color: var(--green);
+	display: inline-flex;
+	align-items: flex-start;
+	color: var(--green);
 
-    &__arrow {
-        flex-shrink: 0;
-        margin-right: 0.8rem;
-        width: 2rem;
-        height: 2rem;
-        fill: var(--green);
-        transition: $transition fill;
-    }
+	&__arrow {
+		margin-right: var(--offset-xxs);
+		fill: var(--green);
+	}
 
-    @media (any-hover: hover) {
-        &:hover {
-            color: var(--green-second);
+	@media (any-hover: hover) {
+		&:hover {
+			color: var(--green-second);
 
-            #{$this}__arrow {
-                fill: var(--green-second);
-            }
-        }
-    }
+			#{$this}__arrow {
+				fill: var(--green-second);
+			}
+		}
+	}
 }

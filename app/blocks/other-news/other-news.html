@@ -1,13 +1,11 @@
 <aside class="other-news">
-    <div class="container">
-        <div class="other-news__top">
-            <h2 class="title">Другие новости и акции</h2>
-            @@include('blocks/slider-arrows/slider-arrows.html')
-        </div>
-        <div class="swiper other-news-slider">
-            <ul class="swiper-wrapper">
-                @@loop('blocks/blog-item/blog-item.html', "../resources/assets/other-news.json")
-            </ul>
-        </div>
-    </div>
+	<div class="section-top">
+		<h2 class="title">Другие новости и акции</h2>
+		@@include('blocks/slider-arrows/slider-arrows.html')
+	</div>
+	<div class="swiper other-news-slider">
+		<ul class="swiper-wrapper">
+			@@loop('blocks/blog-item/blog-item.html', "../resources/assets/other-news.json")
+		</ul>
+	</div>
 </aside>

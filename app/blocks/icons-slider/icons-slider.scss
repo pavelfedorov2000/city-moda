@@ -2,7 +2,7 @@
 	// .icons-slider__item
 
 	&__item {
-		@include row-grid(1.6rem);
+		@include row-grid(var(--offset));
 		justify-items: center;
 		width: 12.8rem;
 		margin-right: var(--gap);

@@ -1,62 +1,61 @@
 .sale-item {
-    position: relative;
-    // .sale-item__img
+	position: relative;
+	// .sale-item__img
 
-    &__img {
-        position: relative;
-        display: block;
-        height: 42rem;
-        overflow: hidden;
+	&__img {
+		margin-bottom: var(--offset-s);
+		position: relative;
+		display: block;
+		height: 42rem;
+		overflow: hidden;
 
-        img {
-            @extend %cover;
-            transition: transform 0.8s linear;
-            transform: translateZ(0);
-        }
+		img {
+			@extend %cover;
+			transition: transform 0.8s linear;
+			transform: translateZ(0);
+		}
 
-        @media (any-hover: hover) {
-            &:hover {
-                img {
-                    transform: scale(1.1);
-                }
-            }
-        }
+		@media (any-hover: hover) {
+			&:hover {
+				img {
+					transform: scale(1.1);
+				}
+			}
+		}
+	}
 
-        margin-bottom: 1.2rem;
-    }
+	&__discount {
+		@extend %text-40;
+		font-weight: 500;
+		text-transform: uppercase;
+		color: #fff;
+		position: absolute;
+		top: 2.5rem;
+		left: 2.5rem;
 
-    &__discount {
-        @extend %text-40;
-        font-weight: 500;
-        text-transform: uppercase;
-        color: #fff;
-        position: absolute;
-        top: 2.5rem;
-        left: 2.5rem;
+		@media (max-width: 500px) {
+			top: 1.5rem;
+			left: 1.5rem;
+		}
+	}
 
-        @media (max-width: 500px) {
-            top: 1.5rem;
-            left: 1.5rem;
-        }
-    }
+	&__content {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
 
-    &__content {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-    }
+	// .sale-item__title
 
-    // .sale-item__title
+	&__title {
+		@extend %text-20;
+		font-weight: 500;
+	}
 
-    &__title {
-        @extend %text-20;
-        font-weight: 500;
-    }
+	// .sale-item__descr
 
-    // .sale-item__descr
-
-    &__descr {
-        @extend %text-16;
-        color: var(--gray);
-    }
+	&__descr {
+		@extend %text-16;
+		color: var(--gray);
+	}
 }

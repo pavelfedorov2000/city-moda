@@ -15,7 +15,7 @@
 		padding: 4rem 0;
 
 		@media (max-width: 500px) {
-			padding: 2rem 0 3rem;
+			padding: var(--offset-ms) 0 var(--offset-ls);
 		}
 	}
 
@@ -92,7 +92,7 @@
 
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 1rem;
+			gap: var(--offset-xs);
 		}
 
 		@media (min-width: 768px) {
@@ -231,10 +231,10 @@
 		@extend %text-13;
 		text-transform: uppercase;
 		font-weight: 600;
-		margin-bottom: 3rem;
+		margin-bottom: var(--offset-ls);
 
 		@media (max-width: 767px) {
-			margin-bottom: 2rem;
+			margin-bottom: var(--offset-ms);
 		}
 
 		&:nth-of-type(2) {
@@ -245,7 +245,7 @@
 	}
 
 	&__list {
-		@include margin-y(-0.8rem);
+		@include margin-y(calc(var(--offset-xxs) * (-1)));
 
 		@media(max-width: 767px) {
 			@include margin-y(-0.6rem);
@@ -261,7 +261,7 @@
 	// .footer__list-link
 
 	&__list-link {
-		@include padding-y(0.8rem);
+		@include padding-y(var(--offset-xxs));
 		@extend %text-13;
 		color: #000;
 		display: block;
@@ -279,7 +279,7 @@
 		}
 
 		@media (max-width: 767px) {
-			margin-top: -1rem;
+			margin-top: calc(var(--offset-xs) * (-1));
 		}
 	}
 
@@ -308,7 +308,7 @@
 		}
 
 		@media (max-width: 767px) {
-			gap: 3rem;
+			gap: var(--offset-ls);
 		}
 	}
 

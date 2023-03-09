@@ -2,20 +2,17 @@
 	$this: &;
 
 	@extend %flex-center;
+	@include round(7rem);
 	position: fixed;
 	right: calc(46 * 100vw / 1920);
 	bottom: 5rem;
 	z-index: 100;
-	width: 7rem;
-	height: 7rem;
-	border-radius: 50%;
 	border: 0.1rem solid var(--dark-gray);
 	transition: $transition all;
-	opacity: 0;
-	pointer-events: none;
+	@include hide();
 
 	@media (max-width: 1024px) {
-		right: 1.6rem;
+		right: var(--container-padding);
 	}
 
 	@media (max-width: 767px) {
@@ -24,8 +21,7 @@
 	}
 
 	&.active {
-		opacity: 1;
-		pointer-events: all;
+		@include show();
 	}
 
 	&.in-footer {
@@ -39,14 +35,14 @@
 	// .pageup__arrow
 
 	&__arrow {
-		width: 3rem;
-		height: 3rem;
+		width: var(--icon-size_ls);
+		height: var(--icon-size_ls);
 		fill: var(--dark-gray);
 		transition: $transition fill;
 
 		@media (max-width: 767px) {
-			width: 2rem;
-			height: 2rem;
+			width: var(--icon-size_ms);
+			height: var(--icon-size_ms);
 		}
 	}
 

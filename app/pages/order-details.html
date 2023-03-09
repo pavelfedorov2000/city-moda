@@ -1,41 +1,41 @@
 @@include("blocks/head/head.html", {"title": "Детали заказа"})
 @@include("blocks/head/no-js.html")
 <div class="wrapper">
-    @@include("blocks/header/header.html")
-    @@include("blocks/burger/burger.html")
-    <main class="page profile-page">
-        <div class="container">
-            @@include('blocks/breadcrumbs/breadcrumbs.html', {
-            "prevPage": "Мои заказы",
-            "currentPage": "Подробнее о заказе"
-            })
+	@@include("blocks/header/header.html")
+	@@include("blocks/burger/burger.html")
+	<main class="page profile-page">
+		<div class="container">
+			@@include('blocks/breadcrumbs/breadcrumbs.html', {
+			"prevPage": "Мои заказы",
+			"currentPage": "Подробнее о заказе"
+			})
 
-            <div class="profile-page__top">
-                <h1 class="title page__title">Профиль</h1>
-                @@include('blocks/back-link/back-link.html')
-            </div>
+			<div class="profile-page__top">
+				<div class="title page__title">Профиль</div>
+				@@include('blocks/back-link/back-link.html')
+			</div>
 
-            <div class="profile-page__inner">
-                <nav class="page-nav">
-                    <ul class="page-nav__list">
-                        @@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
-                    </ul>
-                </nav>
-                <div class="profile-page__content">
-                    @@include('blocks/order-details/order-details.html')
-                </div>
-            </div>
-        </div>
-    </main>
-    @@include("blocks/footer/footer.html")
-    @@include("blocks/pageup/pageup.html")
-    <div class="overlay">
-        @@include("blocks/auth/auth.html")
-        @@include("blocks/popup/password-recovery.html")
-        @@include("blocks/drop-basket/drop-basket.html")
-    </div>
-    @@include("blocks/popup/discount-popup.html")
-    @@include("blocks/region-popup/region-popup.html")
+			<div class="profile-page__inner">
+				<nav class="page-nav">
+					<ul class="page-nav__list">
+						@@loop("blocks/page-nav/page-nav__link.html", "../resources/assets/orders-nav.json")
+					</ul>
+				</nav>
+				<div class="profile-page__content">
+					@@include('blocks/order-details/order-details.html')
+				</div>
+			</div>
+		</div>
+	</main>
+	@@include("blocks/footer/footer.html")
+	@@include("blocks/pageup/pageup.html")
+	<div class="overlay">
+		@@include("blocks/auth/auth.html")
+		@@include("blocks/popup/password-recovery.html")
+		@@include("blocks/drop-basket/drop-basket.html")
+	</div>
+	@@include("blocks/popup/discount-popup.html")
+	@@include("blocks/region-popup/region-popup.html")
 </div>
 @@include("blocks/link/link.html")
 <script src="./assets/libs/js/sticky-sidebar.min.js"></script>
